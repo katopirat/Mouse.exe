@@ -6,44 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(58, 92)
 
-<<<<<<< HEAD
 [node name="Node2D" type="CharacterBody2D" unique_id=1646158579]
-=======
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
-size = Vector2(132, 131)
-
-[node name="Node2D" type="Node2D" unique_id=1524664585]
-position = Vector2(273, 141)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1278694213]
->>>>>>> origin/vašek-start
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
 shape = SubResource("RectangleShape2D_w8sno")
 
-<<<<<<< HEAD
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317440229]
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
 scale = Vector2(0.35745537, 0.36617374)
 texture = ExtResource("2_onrkg")
-=======
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1317440229]
-position = Vector2(1, 0)
-scale = Vector2(0.640625, 1)
-texture = ExtResource("1_4flbx")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1979689266]
-position = Vector2(3, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=59345362]
-position = Vector2(11, 238)
-scale = Vector2(8.68, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1868302511]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_3v8a5")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=957633763]
-texture = ExtResource("1_4flbx")
->>>>>>> origin/vašek-start

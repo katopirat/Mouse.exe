@@ -24,7 +24,6 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
-<<<<<<< HEAD
 [input]
 
 up={
@@ -48,8 +47,6 @@ right={
 ]
 }
 
-=======
->>>>>>> origin/vašek-start
 [physics]
 
 3d/physics_engine="Jolt Physics"
