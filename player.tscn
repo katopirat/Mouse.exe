@@ -1,35 +1,18 @@
 [gd_scene format=3 uid="uid://c6co7ev10r666"]
 
-[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://crpaho7ogudbn" path="res://character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://ce41tasjb3hxq" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bqbw00dhth0oq" path="res://assets/images/computer-mouse-on-isolated-transparent-background-png.webp" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
-size = Vector2(85, 131)
+size = Vector2(58, 92)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
-size = Vector2(132, 131)
-
-[node name="Node2D" type="Node2D" unique_id=1524664585]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1278694213]
+[node name="Node2D" type="CharacterBody2D" unique_id=1646158579]
 script = ExtResource("1_onrkg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=439912866]
-position = Vector2(1.5, -0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
 shape = SubResource("RectangleShape2D_w8sno")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1317440229]
-position = Vector2(1, 0)
-scale = Vector2(0.640625, 1)
-texture = ExtResource("1_4flbx")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=59345362]
-position = Vector2(167, 679)
-scale = Vector2(8.68, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1868302511]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_3v8a5")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=957633763]
-texture = ExtResource("1_4flbx")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317440229]
+position = Vector2(-3.8146973e-06, 3.8146973e-06)
+scale = Vector2(0.35745537, 0.36617374)
+texture = ExtResource("2_onrkg")
