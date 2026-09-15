@@ -30,6 +30,7 @@ offset_bottom = 256.0
 color = Color(0.186459, 0.18645903, 0.18645903, 1)
 
 [node name="Cursor" type="CharacterBody2D" parent="." unique_id=929380522]
+z_index = 20
 position = Vector2(4, 2)
 scale = Vector2(1.1017417, 0.99504834)
 script = ExtResource("1_fa1fk")
