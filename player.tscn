@@ -12,7 +12,25 @@ script = ExtResource("1_onrkg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
 shape = SubResource("RectangleShape2D_w8sno")
 
+<<<<<<< HEAD
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1317440229]
+position = Vector2(108.99999, 116)
+scale = Vector2(0.640625, 1)
+texture = ExtResource("1_4flbx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=59345362]
+position = Vector2(167, 679)
+scale = Vector2(8.68, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1868302511]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3v8a5")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=957633763]
+texture = ExtResource("1_4flbx")
+=======
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317440229]
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
 scale = Vector2(0.35745537, 0.36617374)
 texture = ExtResource("2_onrkg")
+>>>>>>> ccd4523df1945d241624f06b8c9fa5b3518d33e0
