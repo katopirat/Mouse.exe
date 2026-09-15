@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bq31ecpemxsdw"]
+
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
+[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
+size = Vector2(420, 22.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xvhx"]
+size = Vector2(420, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jclro"]
+size = Vector2(22, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tni7"]
+size = Vector2(47, 303)
+
+[node name="Monitor" type="Node2D" unique_id=831704774]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1157114063]
+offset_right = 419.0
+offset_bottom = 256.0
+color = Color(0.186459, 0.18645903, 0.18645903, 1)
+
+[node name="cursor" type="CharacterBody2D" parent="." unique_id=929380522]
+position = Vector2(4, 2)
+scale = Vector2(1.1017417, 0.99504834)
+script = ExtResource("1_fa1fk")
+
+[node name="Sprite2D" type="Sprite2D" parent="cursor" unique_id=150483435]
+position = Vector2(7, 12)
+scale = Vector2(0.052734375, 0.052734375)
+texture = ExtResource("1_qh22o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cursor" unique_id=1167709603]
+shape = SubResource("RectangleShape2D_iopsf")
+
+[node name="borders" type="StaticBody2D" parent="." unique_id=467704397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders" unique_id=19206856]
+position = Vector2(210, -10.875)
+shape = SubResource("RectangleShape2D_gyjbk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders" unique_id=372004912]
+position = Vector2(209, 271.5)
+shape = SubResource("RectangleShape2D_4xvhx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="borders" unique_id=450316690]
+position = Vector2(-10, 127)
+shape = SubResource("RectangleShape2D_jclro")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="borders" unique_id=1230590277]
+position = Vector2(443.5, 129.5)
+shape = SubResource("RectangleShape2D_1tni7")
