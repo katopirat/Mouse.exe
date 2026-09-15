@@ -2,11 +2,7 @@ extends CharacterBody2D
 
 
 
-
-const SPEED = 100.0
-
-
-func _physics_process(delta: float) -> void:
-	var direction := Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
+const SPEED = 50.0
+func _on_moved_mouse(dir) -> void:
+	velocity = dir*SPEED
 	move_and_slide()
