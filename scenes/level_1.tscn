@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
 [ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
 
 [node name="Node2D" type="Node2D" unique_id=659635860]
 
@@ -12,9 +13,11 @@ offset_right = 574.0
 offset_bottom = 326.0
 texture = ExtResource("2_bswci")
 
-[node name="Node2D" parent="." unique_id=1524664585 instance=ExtResource("1_014kd")]
+[node name="Player" parent="." unique_id=1524664585 instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
 
-[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=846273898]
-position_smoothing_enabled = true
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
+
+[node name="Monitor" parent="Player" unique_id=831704774 instance=ExtResource("3_rus8k")]
+position = Vector2(-576, -323)
