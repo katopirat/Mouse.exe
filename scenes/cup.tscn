@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jlb10ujlqvvk"]
+
+[ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="1_vafus"]
+
+[node name="cup" type="Node2D" unique_id=200577205]
+scale = Vector2(0.66986096, 0.66986096)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=724010911]
+position = Vector2(-33, -33)
+scale = Vector2(3.6875, 3.6875)
+
+[node name="Hrnicek" type="Sprite2D" parent="StaticBody2D" unique_id=1876613642]
+z_index = 4
+texture = ExtResource("1_vafus")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=506854012]
+polygon = PackedVector2Array(-12.745763, 17.355932, -8.135592, 22.23729, -0.5423727, 23.864407, 5.694916, 23.864407, 11.661017, 21.966103, 16.81356, 17.898306, 16.81356, 9.22034, 14.372882, 6.779661, 7.5932207, 4.8813562, -0.8135586, 4.8813562, -7.050847, 7.050848, -11.661017, 9.22034, -13.01695, 14.372882, -17.627117, 13.01695, -19.796608, 12.745763, -21.152542, 13.01695, -21.152542, 14.101696, -20.610168, 14.644068, -19.796608, 15.186441)
