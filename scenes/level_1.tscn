@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://c12n3sy7ndyok"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://df825e0tpc1af" path="res://assets/images/computer2.png" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
+[ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="4_4nkto"]
 [ext_resource type="Texture2D" uid="uid://cyku5qm2pf1lg" path="res://assets/images/desk and mousedesk.png" id="4_5xbjy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
-size = Vector2(129, 124)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fcfvj"]
+radius = 54.0
+height = 114.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -71,6 +74,13 @@ position_smoothing_speed = 4.5
 z_index = 100
 position = Vector2(-576, -323)
 
+[node name="ColorRect" parent="Player/Monitor" index="0" unique_id=585337726]
+offset_left = -30.09372
+offset_top = -24.0
+offset_right = 451.10156
+offset_bottom = 270.0
+texture = ExtResource("3_5xbjy")
+
 [node name="Cursor" parent="Player/Monitor" index="1" unique_id=929380522]
 collision_layer = 2
 collision_mask = 2
@@ -79,15 +89,25 @@ collision_mask = 2
 collision_layer = 2
 collision_mask = 2
 
+[node name="CollisionShape2D2" parent="Player/Monitor/Borders" index="1" unique_id=372004912]
+position = Vector2(208, 250)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2039851167]
 z_index = -2
 position = Vector2(215, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=230782256]
-position = Vector2(-0.5, 2)
-shape = SubResource("RectangleShape2D_w8sno")
+position = Vector2(-25, 3)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_fcfvj")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1936738683]
+
+[node name="Hrnicek" type="Sprite2D" parent="StaticBody2D" unique_id=1346257681]
+z_index = 4
+position = Vector2(-33, -33)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("4_4nkto")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=157974211]
 z_index = -1
