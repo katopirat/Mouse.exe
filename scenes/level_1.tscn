@@ -1,17 +1,65 @@
 [gd_scene format=3 uid="uid://c12n3sy7ndyok"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
-[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
+[ext_resource type="Texture2D" uid="uid://cyku5qm2pf1lg" path="res://assets/images/desk and mousedesk.png" id="4_5xbjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(129, 124)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
+texture = ExtResource("4_5xbjy")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_w8sno"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_4nkto")
 
 [node name="Node2D" type="Node2D" unique_id=659635860]
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=61096416]
-offset_left = -577.0
-offset_top = -321.0
-offset_right = 574.0
-offset_bottom = 326.0
-texture = ExtResource("2_bswci")
 
 [node name="Player" parent="." unique_id=1524664585 instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
@@ -20,4 +68,34 @@ position = Vector2(-1, 2)
 position_smoothing_speed = 4.5
 
 [node name="Monitor" parent="Player" unique_id=831704774 instance=ExtResource("3_rus8k")]
+z_index = 100
 position = Vector2(-576, -323)
+
+[node name="Cursor" parent="Player/Monitor" index="1" unique_id=929380522]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Borders" parent="Player/Monitor" index="2" unique_id=467704397]
+collision_layer = 2
+collision_mask = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2039851167]
+z_index = -2
+position = Vector2(215, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=230782256]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_w8sno")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1936738683]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=157974211]
+z_index = -1
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_w8sno")
+format = 2
+layer_0/tile_data = PackedInt32Array(1769463, 1, 0, 196605, 1, 0, 131069, 1, 0, 131068, 1, 0, 196604, 1, 0, 196606, 65537, 0, 131070, 1, 0, 196607, 1, 0, 131071, 65537, 0, 65532, 65537, 0, 65533, 65537, 0, 65534, 65537, 0, 65535, 65537, 0)
+
+[connection signal="moved_mouse" from="Player" to="Player/Monitor/Cursor" method="_on_player_moved_mouse"]
+
+[editable path="Player/Monitor"]
