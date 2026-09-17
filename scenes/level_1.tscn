@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://c12n3sy7ndyok"]
 
+[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scenes/level_1.gd" id="1_7gny6"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
+[ext_resource type="AudioStream" uid="uid://btyc1lq4aqjbx" path="res://soundtrack1.2.mp3" id="2_2aecg"]
 [ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="2_2y5yt"]
 [ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="3_2os1m"]
-[ext_resource type="Texture2D" uid="uid://df825e0tpc1af" path="res://assets/images/computer2.png" id="3_5xbjy"]
+[ext_resource type="AudioStream" uid="uid://bich7xnfh8jqb" path="res://soundtrack2.2.mp3" id="3_6dial"]
 [ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="4_4nkto"]
 [ext_resource type="Texture2D" uid="uid://5mvbriv6tpte" path="res://assets/images/mys(right-click).png" id="4_go7sj"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="5_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://cwco0k82l1gcu" path="res://assets/images/computerdisplay.png" id="6_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
@@ -121,6 +124,8 @@ terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Node2D" type="Node2D" unique_id=659635860]
+script = ExtResource("1_7gny6")
+playlist = Array[AudioStream]([ExtResource("2_2aecg"), ExtResource("3_6dial")])
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
@@ -138,16 +143,30 @@ position = Vector2(-576, -323)
 [node name="MonitorBackground" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="0" unique_id=585337726]
 offset_left = -30.09372
 offset_top = -24.0
-offset_right = 451.10156
-offset_bottom = 270.0
-texture = ExtResource("3_5xbjy")
+offset_right = 493.65628
+offset_bottom = 296.0
+texture = ExtResource("6_2y5yt")
 
-[node name="Borders" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="1" unique_id=467704397]
+[node name="Borders" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="2" unique_id=467704397]
 z_index = 25
 collision_layer = 2
 collision_mask = 2
 
-[node name="Cursor" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="2" unique_id=929380522]
+[node name="CollisionShape2D" parent="Player/Monitor/Computer/Borders" index="0" unique_id=19206856]
+scale = Vector2(1.16, 1)
+
+[node name="CollisionShape2D2" parent="Player/Monitor/Computer/Borders" index="1" unique_id=372004912]
+position = Vector2(209, 267.5)
+scale = Vector2(1.1200012, 1)
+
+[node name="CollisionShape2D3" parent="Player/Monitor/Computer/Borders" index="2" unique_id=450316690]
+position = Vector2(-17, 127)
+
+[node name="CollisionShape2D4" parent="Player/Monitor/Computer/Borders" index="3" unique_id=1230590277]
+position = Vector2(432.5, 128.5)
+
+[node name="Cursor" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="3" unique_id=929380522]
+position = Vector2(273, 110.000015)
 collision_mask = 2
 
 [node name="Obstacles" type="StaticBody2D" parent="." unique_id=2039851167]
@@ -186,6 +205,10 @@ position = Vector2(868, -440)
 collision_layer = 1
 collision_mask = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
+volume_db = -15.746
+
 [connection signal="moved_mouse" from="Player" to="Player/Monitor/Computer/Cursor" method="_on_player_moved_mouse"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 
 [editable path="Player/Monitor"]
