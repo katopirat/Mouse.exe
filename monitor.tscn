@@ -3,12 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://c1y80uva2c1fs" path="res://assets/images/windows xp.png" id="1_6dhw4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
-[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer_frame.png" id="2_dsjqh"]
+[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_dsjqh"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
 [ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
-[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="6_0wofj"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="6_7qsf4"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="6_mjpe0"]
+[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_n6pra"]
+[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_guvov"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_6naae"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_guvov"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -26,7 +29,26 @@ size = Vector2(21, 259)
 size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
-size = Vector2(7.6666718, 5.333333)
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6naae")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_guvov")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7qsf4"]
 radius = 9.0
@@ -94,38 +116,41 @@ script = ExtResource("6_7qsf4")
 [node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=1741014233]
 position = Vector2(152, 47)
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/TopBar" unique_id=1579876696]
-position = Vector2(-10.875007, 3.0090876)
-scale = Vector2(0.7949218, 0.12485806)
-texture = ExtResource("6_0wofj")
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/TopBar" unique_id=798852782]
+position = Vector2(-16.816341, 4.147223)
+scale = Vector2(1.5247535, 1.4999428)
+texture = ExtResource("6_n6pra")
+offset = Vector2(-0.075, -0.265)
 
 [node name="Background" type="Node2D" parent="Computer/Window" unique_id=2025436295]
 position = Vector2(151, 89)
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Background" unique_id=135931980]
-position = Vector2(0, 1.7500026)
-scale = Vector2(1, 0.5273437)
-texture = ExtResource("6_0wofj")
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Background" unique_id=1496796252]
+position = Vector2(-9.418182, 10.249992)
+scale = Vector2(1.5181818, 1.5181818)
+texture = ExtResource("7_guvov")
 
 [node name="XButton" type="Area2D" parent="Computer/Window" unique_id=1015272555]
 z_index = 1
-position = Vector2(202, 50)
+position = Vector2(184, 50.999992)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("6_mjpe0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/XButton" unique_id=222612322]
-position = Vector2(0.5, 0)
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_d35y6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/XButton" unique_id=864471973]
-position = Vector2(0.25000095, -0.083333254)
-scale = Vector2(0.06380208, 0.042968746)
-texture = ExtResource("6_0wofj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Window/XButton" unique_id=960822882]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_iopsf")
+offset = Vector2(0.275, -0.19)
 
 [node name="Button" type="Area2D" parent="Computer/Window" unique_id=930908104]
 z_index = 1
-position = Vector2(154, 88)
+position = Vector2(141, 101.999985)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("3_xk0nc")

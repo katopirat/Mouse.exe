@@ -1,14 +1,17 @@
 extends Area2D
 var cursor_inside = false
 
+
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == "Cursor":
 		cursor_inside = true
+		$AnimatedSprite2D.play("hovered")
  
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Cursor":
 		cursor_inside = false
+		$AnimatedSprite2D.play("default")
 
 func _input(event):
 	
