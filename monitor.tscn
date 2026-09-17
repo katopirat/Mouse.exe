@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
 [ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
-size = Vector2(1, 1)
+[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="6_0wofj"]
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="6_7qsf4"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="6_mjpe0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -21,58 +21,113 @@ size = Vector2(22, 254)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tni7"]
 size = Vector2(21, 259)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
+size = Vector2(7.6666718, 5.333333)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7qsf4"]
+radius = 9.0
 
 [node name="Monitor" type="Node2D" unique_id=831704774]
 
-[node name="ColorRect" type="TextureRect" parent="." unique_id=585337726]
+[node name="Computer" type="Node2D" parent="." unique_id=1439863440]
+position = Vector2(17, 17)
+
+[node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=585337726]
 offset_right = 419.0
 offset_bottom = 256.0
 texture = ExtResource("1_6dhw4")
 
-[node name="Cursor" type="CharacterBody2D" parent="." unique_id=929380522]
+[node name="Borders" type="StaticBody2D" parent="Computer" unique_id=467704397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Borders" unique_id=19206856]
+position = Vector2(210, -10.875)
+shape = SubResource("RectangleShape2D_gyjbk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer/Borders" unique_id=372004912]
+position = Vector2(209, 271.5)
+shape = SubResource("RectangleShape2D_4xvhx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Computer/Borders" unique_id=450316690]
+position = Vector2(-10, 127)
+shape = SubResource("RectangleShape2D_jclro")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Computer/Borders" unique_id=1230590277]
+position = Vector2(430.5, 128.5)
+shape = SubResource("RectangleShape2D_1tni7")
+
+[node name="Cursor" type="CharacterBody2D" parent="Computer" unique_id=929380522]
 z_index = 20
 position = Vector2(4, 2)
 scale = Vector2(1.1017417, 0.99504834)
+collision_layer = 2
 script = ExtResource("1_fa1fk")
 
-[node name="Sprite2D" type="Sprite2D" parent="Cursor" unique_id=150483435]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=1167709603]
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_iopsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Cursor" unique_id=150483435]
 position = Vector2(7, 12)
 scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("1_qh22o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor" unique_id=1167709603]
-shape = SubResource("RectangleShape2D_iopsf")
+[node name="Window" type="Node2D" parent="Computer" unique_id=1313157565]
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(1, 1.0000001)
+script = ExtResource("6_7qsf4")
 
-[node name="Borders" type="StaticBody2D" parent="." unique_id=467704397]
+[node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=1741014233]
+position = Vector2(152, 47)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders" unique_id=19206856]
-position = Vector2(210, -10.875)
-shape = SubResource("RectangleShape2D_gyjbk")
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/TopBar" unique_id=1579876696]
+position = Vector2(-10.875007, 3.0090876)
+scale = Vector2(0.7949218, 0.12485806)
+texture = ExtResource("6_0wofj")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders" unique_id=372004912]
-position = Vector2(209, 271.5)
-shape = SubResource("RectangleShape2D_4xvhx")
+[node name="Background" type="Node2D" parent="Computer/Window" unique_id=2025436295]
+position = Vector2(151, 89)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders" unique_id=450316690]
-position = Vector2(-10, 127)
-shape = SubResource("RectangleShape2D_jclro")
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Background" unique_id=135931980]
+position = Vector2(0, 1.7500026)
+scale = Vector2(1, 0.5273437)
+texture = ExtResource("6_0wofj")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders" unique_id=1230590277]
-position = Vector2(430.5, 128.5)
-shape = SubResource("RectangleShape2D_1tni7")
+[node name="XButton" type="Area2D" parent="Computer/Window" unique_id=1015272555]
+z_index = 1
+position = Vector2(202, 50)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("6_mjpe0")
 
-[node name="Button" type="Area2D" parent="." unique_id=365643194]
-position = Vector2(57, 40)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/XButton" unique_id=222612322]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_d35y6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/XButton" unique_id=864471973]
+position = Vector2(0.25000095, -0.083333254)
+scale = Vector2(0.06380208, 0.042968746)
+texture = ExtResource("6_0wofj")
+
+[node name="Button" type="Area2D" parent="Computer/Window" unique_id=930908104]
+z_index = 1
+position = Vector2(154, 88)
+scale = Vector2(3, 3)
+collision_mask = 2
 script = ExtResource("3_xk0nc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=1190357176]
-shape = SubResource("RectangleShape2D_w8sno")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/Button" unique_id=1190357176]
+position = Vector2(0.33333334, -1)
+shape = SubResource("CircleShape2D_7qsf4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=70065892]
-position = Vector2(5.9604645e-08, 5.9604645e-08)
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Button" unique_id=70065892]
+position = Vector2(6.3578295e-07, 0)
 scale = Vector2(0.0390625, 0.0390625)
 texture = ExtResource("4_6dhw4")
 
-[connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
-[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
+[connection signal="body_entered" from="Computer/Window/Button" to="Computer/Window/Button" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Window/Button" to="Computer/Window/Button" method="_on_body_exited"]

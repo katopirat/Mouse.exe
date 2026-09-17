@@ -1,7 +1,5 @@
 extends Area2D
-signal pressed
 var cursor_inside = false
-var is_pressed = true 
 
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
@@ -15,12 +13,6 @@ func _on_body_exited(body: Node2D) -> void:
 func _input(event):
 	
 	if cursor_inside and event.is_action_pressed("click"):
-		print("a")
-		if is_pressed:
-			$Sprite2D.modulate = Color(1,0,0)
-			is_pressed = false
-		else:
-			emit_signal("pressed")
-			$Sprite2D.modulate = Color(1,1,1)
-			is_pressed = true
+		print("clicked x")
+		get_parent().queue_free()
 		
