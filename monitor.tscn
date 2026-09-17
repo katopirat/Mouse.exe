@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bq31ecpemxsdw"]
+[gd_scene format=3 uid="uid://qf1n386k1yln"]
 
 [ext_resource type="Texture2D" uid="uid://c1y80uva2c1fs" path="res://assets/images/windows xp.png" id="1_6dhw4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
