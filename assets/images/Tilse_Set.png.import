@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dci4kol8an23i"
-path="res://.godot/imported/Tilse_Set.png-9b90374cd3fad8b3edfa60e8e9ee1f23.ctex"
+path="res://.godot/imported/Tilse_Set.png-01ffaf8d8856b4ea93719a5835521e44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilse_Set.png"
-dest_files=["res://.godot/imported/Tilse_Set.png-9b90374cd3fad8b3edfa60e8e9ee1f23.ctex"]
+source_file="res://assets/images/Tilse_Set.png"
+dest_files=["res://.godot/imported/Tilse_Set.png-01ffaf8d8856b4ea93719a5835521e44.ctex"]
 
 [params]
 

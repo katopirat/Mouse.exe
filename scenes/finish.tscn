@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c4q3wkp472773"]
+
+[ext_resource type="Script" uid="uid://df0pjkv6jhy22" path="res://scripts/finish.gd" id="1_07gpw"]
+[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="2_2pftv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(422, 380)
+
+[node name="finish" type="Area2D" unique_id=1389901689]
+collision_layer = 128
+collision_mask = 128
+priority = 1
+script = ExtResource("1_07gpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=616401476]
+light_mask = 128
+visibility_layer = 128
+position = Vector2(201, 180)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479916014]
+position = Vector2(202, 179)
+scale = Vector2(3.28125, 2.96875)
+texture = ExtResource("2_2pftv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

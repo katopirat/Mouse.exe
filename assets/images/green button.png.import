@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc51j8tlyedil"
-path="res://.godot/imported/50787-mouse-cursor.png-74caaa6471f52e127ba277275f2c6bb5.ctex"
+uid="uid://dy2auhoxxffg8"
+path="res://.godot/imported/green button.png-5cd9c20203edb76e187efc8f6a0b1cae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://50787-mouse-cursor.png"
-dest_files=["res://.godot/imported/50787-mouse-cursor.png-74caaa6471f52e127ba277275f2c6bb5.ctex"]
+source_file="res://assets/images/green button.png"
+dest_files=["res://.godot/imported/green button.png-5cd9c20203edb76e187efc8f6a0b1cae.ctex"]
 
 [params]
 
