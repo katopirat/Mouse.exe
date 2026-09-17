@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5mvbriv6tpte"
-path="res://.godot/imported/MyÅ¡(right-click).png-04fce6e5690417de21c85d4ad435121f.ctex"
+uid="uid://dc35dik8vgtdj"
+path="res://.godot/imported/mys(scrol).png-b1a396a1a6b58666f0bab84ed680a54c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/MyÅ¡(right-click).png"
-dest_files=["res://.godot/imported/MyÅ¡(right-click).png-04fce6e5690417de21c85d4ad435121f.ctex"]
+source_file="res://assets/images/mys(scrol).png"
+dest_files=["res://.godot/imported/mys(scrol).png-b1a396a1a6b58666f0bab84ed680a54c.ctex"]
 
 [params]
 

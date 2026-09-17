@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc35dik8vgtdj"
-path="res://.godot/imported/Myš(scrol).png-c4cb9fd2c70c950d2f4abdc7266b0f15.ctex"
+uid="uid://5mvbriv6tpte"
+path="res://.godot/imported/mys(right-click).png-946d3a0f9b7e7f938805709967f59e44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Myš(scrol).png"
-dest_files=["res://.godot/imported/Myš(scrol).png-c4cb9fd2c70c950d2f4abdc7266b0f15.ctex"]
+source_file="res://assets/images/mys(right-click).png"
+dest_files=["res://.godot/imported/mys(right-click).png-946d3a0f9b7e7f938805709967f59e44.ctex"]
 
 [params]
 

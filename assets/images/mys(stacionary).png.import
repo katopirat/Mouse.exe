@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch4yssgxv3it3"
-path="res://.godot/imported/myš(stacionary).png-b3303ffe9194c7b070f3cdaefbcb047a.ctex"
+path="res://.godot/imported/mys(stacionary).png-bf44a71e1f5ca4db8db79306b0518474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/myš(stacionary).png"
-dest_files=["res://.godot/imported/myš(stacionary).png-b3303ffe9194c7b070f3cdaefbcb047a.ctex"]
+source_file="res://assets/images/mys(stacionary).png"
+dest_files=["res://.godot/imported/mys(stacionary).png-bf44a71e1f5ca4db8db79306b0518474.ctex"]
 
 [params]
 

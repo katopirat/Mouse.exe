@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nmn8ck21r46h"
-path="res://.godot/imported/Myš¡(left-click).png-5a00d73de2fea2e4aafacebfeae051c6.ctex"
+uid="uid://ctu28rcac6ocy"
+path="res://.godot/imported/desk_tileset_32 (1).png-134edf924734df08c9fdbb662c7b8772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Myš¡(left-click).png"
-dest_files=["res://.godot/imported/Myš¡(left-click).png-5a00d73de2fea2e4aafacebfeae051c6.ctex"]
+source_file="res://assets/images/desk_tileset_32 (1).png"
+dest_files=["res://.godot/imported/desk_tileset_32 (1).png-134edf924734df08c9fdbb662c7b8772.ctex"]
 
 [params]
 

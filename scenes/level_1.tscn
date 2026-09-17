@@ -1,44 +1,132 @@
 [gd_scene format=3 uid="uid://c12n3sy7ndyok"]
 
-[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="2_2y5yt"]
+[ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="3_2os1m"]
 [ext_resource type="Texture2D" uid="uid://df825e0tpc1af" path="res://assets/images/computer2.png" id="3_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://scenes/monitor.tscn" id="3_rus8k"]
+[ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="4_4nkto"]
-[ext_resource type="Texture2D" uid="uid://cqjbsn0qw08ja" path="res://assets/images/tileset_table.png" id="5_4nkto"]
+[ext_resource type="Texture2D" uid="uid://5mvbriv6tpte" path="res://assets/images/mys(right-click).png" id="4_go7sj"]
+[ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="5_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
-texture = ExtResource("5_4nkto")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
+texture = ExtResource("5_fcfvj")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
 1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
 2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
 0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
 1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
 2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
 3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
 4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
 0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
 1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
 2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4nkto"]
 tile_size = Vector2i(32, 32)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "table0"
 terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
-sources/0 = SubResource("TileSetAtlasSource_fcfvj")
+sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Node2D" type="Node2D" unique_id=659635860]
 
-[node name="Player" parent="." unique_id=1524664585 instance=ExtResource("1_014kd")]
+[node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
+texture_idle = ExtResource("2_2y5yt")
+texture_left = ExtResource("3_2os1m")
+texture_right = ExtResource("4_go7sj")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
@@ -47,53 +135,57 @@ position_smoothing_speed = 4.5
 z_index = 100
 position = Vector2(-576, -323)
 
-[node name="ColorRect" parent="Player/Monitor" index="0" unique_id=585337726]
+[node name="MonitorBackground" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="0" unique_id=585337726]
 offset_left = -30.09372
 offset_top = -24.0
 offset_right = 451.10156
 offset_bottom = 270.0
 texture = ExtResource("3_5xbjy")
 
-[node name="Borders" parent="Player/Monitor" index="1" unique_id=467704397]
+[node name="Borders" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="1" unique_id=467704397]
 z_index = 25
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D2" parent="Player/Monitor/Borders" index="1" unique_id=372004912]
-position = Vector2(208, 250)
-
-[node name="Cursor" parent="Player/Monitor" index="2" unique_id=929380522]
-collision_layer = 2
+[node name="Cursor" parent="Player/Monitor/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="2" unique_id=929380522]
 collision_mask = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2039851167]
+[node name="Obstacles" type="StaticBody2D" parent="." unique_id=2039851167]
 z_index = -2
-position = Vector2(215, 2)
+position = Vector2(480, -90)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1936738683]
+[node name="Sprite2D" type="Sprite2D" parent="Obstacles" unique_id=1936738683]
 
-[node name="Hrnicek" type="Sprite2D" parent="StaticBody2D" unique_id=1346257681]
+[node name="Hrnicek" type="Sprite2D" parent="Obstacles" unique_id=1346257681]
 z_index = 4
 position = Vector2(-33, -33)
 scale = Vector2(3.6875, 3.6875)
 texture = ExtResource("4_4nkto")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1853259337]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacles" unique_id=1853259337]
 position = Vector2(-33, -33)
 scale = Vector2(3.6875, 3.6875)
 polygon = PackedVector2Array(-13.559322, -0.81355953, -26.305086, 6.2372875, -26.305086, 13.016949, -13.830509, 20.067797, -4, 25.2, 6.200001, 26, 17.599998, 21, 17.8983, 19.254238, 17.8983, -3.2542381)
 
+[node name="MousePad" type="Sprite2D" parent="Obstacles" unique_id=241632400]
+z_index = -2
+position = Vector2(-477, 92)
+scale = Vector2(2.53125, 2.53125)
+texture = ExtResource("5_pa8r4")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=157974211]
-z_index = -1
+z_index = -20
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_4nkto")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(1769463, 1, 0, -131078, 131072, 0, -131077, 131072, 0, -131076, 131072, 0, -131075, 131072, 0, -131074, 131072, 0, -131073, 131072, 0, -196608, 262144, 1, -196607, 262144, 1, -196606, 262144, 1, -196605, 262144, 1, -196604, 262144, 1, -196603, 131072, 0, -131067, 131072, 0, -131068, 65536, 0, -131069, 262144, 1, -131070, 262144, 1, -131071, 131072, 0, -131072, 131072, 1, -65537, 131072, 0, -65538, 131072, 0, -65539, 131072, 0, -65540, 131072, 0, -65541, 131072, 0, -65542, 131072, 0, -6, 131072, 0, -5, 131072, 0, -4, 131072, 0, -3, 131072, 0, -2, 131072, 0, -1, 262144, 1, -65536, 262144, 1, -65535, 262144, 1, -65534, 131072, 0, -65533, 131072, 0, -65532, 0, 0, -65531, 262144, 1, 5, 131072, 0, 4, 262144, 1, 3, 131072, 0, 2, 131072, 0, 1, 131072, 0, 0, 131072, 0, 65535, 131072, 0, 65534, 262144, 1, 65533, 262144, 1, 65532, 131072, 1, 65531, 65536, 0, 65530, 131072, 1, 131066, 262144, 1, 131067, 0, 0, 131068, 262144, 1, 131069, 262144, 1, 131070, 0, 0, 131071, 262144, 1, 65536, 262144, 1, 65537, 262144, 1, 65538, 262144, 1, 65539, 262144, 1, 65540, 262144, 1, 65541, 262144, 1, 131077, 131072, 0, 131076, 131072, 0, 131075, 131072, 0, 131074, 131072, 0, 131073, 65536, 0, 131072, 0, 1, 196607, 0, 1, 196603, 131072, 0, 196602, 131072, 0, 196604, 262144, 1, 196605, 0, 1, 196606, 0, 1, -196614, 131072, 0, -196613, 131072, 0, -196612, 131072, 0, -196611, 131072, 0, -196610, 131072, 0, -196609, 131072, 0, -262144, 262144, 1, -262143, 65536, 0, -262142, 0, 0, -262141, 131072, 0, -262140, 262144, 1, -262139, 131072, 0, -196615, 131072, 0, -131079, 131072, 0, -65543, 131072, 0, -7, 131072, 0, 131065, 131072, 0, 196601, 131072, 0, 65529, 65536, 1, 196614, 0, 2, 262136, 65536, 3, 262138, 131072, 3, 262139, 131072, 3, 262140, 196608, 3, 262141, 131072, 3, 262142, 131072, 3, 262143, 131072, 3, 196610, 196608, 3, 196611, 131072, 3, 196612, 196608, 3, 196613, 131072, 3, 196609, 131072, 3, 196608, 196608, 3, 262137, 196608, 3, -262152, 65536, 2, -327674, 262144, 2, -262151, 131072, 2, -262150, 131072, 2, -262149, 131072, 2, -262148, 131072, 2, -262147, 131072, 2, -262146, 131072, 2, -262145, 131072, 2, -327680, 131072, 2, -327679, 131072, 2, -327678, 131072, 1, -327677, 131072, 2, -327676, 131072, 2, -327675, 131072, 2, 131078, 196608, 1, 65542, 262144, 1, 6, 131072, 0, -65530, 196608, 1, -131066, 196608, 1, -196602, 65536, 0, -262138, 196608, 1, 196600, 196608, 1, 131064, 196608, 1, 65528, 196608, 1, -8, 196608, 1, -65544, 131072, 0, -131080, 262144, 1, -196616, 0, 0)
+layer_0/tile_data = PackedInt32Array(1769463, 1, 0, -131078, 1, 0, -131077, 196609, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 65537, 0, -196604, 196609, 0, -196603, 65537, 0, -131067, 65537, 0, -131068, 131073, 0, -131069, 131073, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -65541, 196609, 0, -65542, 65537, 0, -6, 131073, 0, -5, 1, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 65537, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 196609, 0, 5, 131073, 0, 4, 131073, 0, 3, 131073, 0, 2, 65537, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 65531, 1, 0, 65530, 196609, 0, 131066, 65537, 0, 131067, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 131077, 131073, 0, 131076, 1, 0, 131075, 1, 0, 131074, 196609, 0, 131073, 131073, 0, 131072, 131073, 0, 196607, 65537, 0, 196603, 1, 0, 196602, 196609, 0, 196604, 1, 0, 196605, 1, 0, 196606, 65537, 0, -196614, 131073, 0, -196613, 1, 0, -196612, 65537, 0, -196611, 65537, 0, -196610, 196609, 0, -196609, 65537, 0, -262144, 131073, 0, -262143, 131073, 0, -262142, 131073, 0, -262141, 131073, 0, -262140, 65537, 0, -262139, 65537, 0, -196615, 65537, 0, -131079, 1, 0, -65543, 196609, 0, -7, 131073, 0, 131065, 1, 0, 196601, 65537, 0, 65529, 131073, 0, 196614, 262145, 1, 262136, 196609, 1, 262138, 131073, 0, 262139, 65537, 0, 262140, 1, 0, 262141, 65537, 0, 262142, 1, 0, 262143, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196609, 1, 0, 196608, 65537, 0, 262137, 131073, 0, -262152, 1, 1, -327674, 131073, 1, -262151, 65537, 1, -262150, 65537, 1, -262149, 65537, 1, -262148, 65537, 1, -262147, 65537, 1, -262146, 65537, 1, -262145, 65537, 1, -327680, 65537, 1, -327679, 65537, 1, -327678, 65537, 1, -327677, 65537, 1, -327676, 65537, 1, -327675, 65537, 1, 131078, 262145, 1, 65542, 262145, 1, 6, 262145, 1, -65530, 262145, 1, -131066, 262145, 1, -196602, 262145, 1, -262138, 262145, 1, 196600, 196609, 1, 131064, 196609, 1, 65528, 196609, 1, -8, 196609, 1, -65544, 196609, 1, -131080, 196609, 1, -196616, 196609, 1, 327673, 65537, 2, 327672, 1, 2, 327674, 65537, 2, 327675, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 262144, 65537, 2, 262145, 65537, 2, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 131073, 2)
 
-[node name="finish" parent="." unique_id=1389901689 instance=ExtResource("6_fcfvj")]
+[node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("6_fcfvj")]
 position = Vector2(868, -440)
+collision_layer = 1
+collision_mask = 1
 
-[connection signal="moved_mouse" from="Player" to="Player/Monitor/Cursor" method="_on_player_moved_mouse"]
+[connection signal="moved_mouse" from="Player" to="Player/Monitor/Computer/Cursor" method="_on_player_moved_mouse"]
 
 [editable path="Player/Monitor"]

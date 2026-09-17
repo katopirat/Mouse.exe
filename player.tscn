@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6co7ev10r666"]
 
 [ext_resource type="Script" uid="uid://ce41tasjb3hxq" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/myš(stacionary).png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
 radius = 32.0
@@ -14,5 +14,7 @@ script = ExtResource("1_onrkg")
 shape = SubResource("CapsuleShape2D_rus8k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317440229]
-scale = Vector2(2.1395285, 2.1917117)
+scale = Vector2(2.0602858, 2.2571905)
 texture = ExtResource("2_onrkg")
+region_enabled = true
+region_rect = Rect2(7.027401, 0, 49.7376, 64)
