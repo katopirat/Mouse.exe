@@ -24,10 +24,6 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
-[global_group]
-
-player=""
-
 [input]
 
 up={
