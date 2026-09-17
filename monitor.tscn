@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1y80uva2c1fs" path="res://assets/images/windows xp.png" id="1_6dhw4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
+[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer_frame.png" id="2_dsjqh"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
 [ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
 [ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="6_0wofj"]
@@ -36,11 +37,22 @@ radius = 9.0
 position = Vector2(17, 17)
 
 [node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=585337726]
-offset_right = 419.0
-offset_bottom = 256.0
+offset_left = 28.0
+offset_top = 4.0
+offset_right = 456.82028
+offset_bottom = 266.0
 texture = ExtResource("1_6dhw4")
 
+[node name="MonitorBorder" type="TextureRect" parent="Computer" unique_id=1221211577]
+z_index = 11
+offset_left = -6.0
+offset_top = -24.0
+offset_right = 489.21362
+offset_bottom = 294.0
+texture = ExtResource("2_dsjqh")
+
 [node name="Borders" type="StaticBody2D" parent="Computer" unique_id=467704397]
+position = Vector2(32, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Borders" unique_id=19206856]
 position = Vector2(210, -10.875)
@@ -59,7 +71,7 @@ position = Vector2(430.5, 128.5)
 shape = SubResource("RectangleShape2D_1tni7")
 
 [node name="Cursor" type="CharacterBody2D" parent="Computer" unique_id=929380522]
-z_index = 20
+z_index = 10
 position = Vector2(4, 2)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
