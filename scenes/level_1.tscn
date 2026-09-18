@@ -3,13 +3,10 @@
 [ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scenes/level_1.gd" id="1_7gny6"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
 [ext_resource type="AudioStream" uid="uid://btyc1lq4aqjbx" path="res://soundtrack1.2.mp3" id="2_2aecg"]
-[ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="2_2y5yt"]
-[ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="3_2os1m"]
 [ext_resource type="AudioStream" uid="uid://bich7xnfh8jqb" path="res://soundtrack2.2.mp3" id="3_6dial"]
 [ext_resource type="PackedScene" uid="uid://bq31ecpemxsdw" path="res://monitor.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="4_4nkto"]
 [ext_resource type="AudioStream" uid="uid://w2r4n8x753tm" path="res://soundtrack3.1.mp3" id="4_7gny6"]
-[ext_resource type="Texture2D" uid="uid://5mvbriv6tpte" path="res://assets/images/mys(right-click).png" id="4_go7sj"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="5_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://cwco0k82l1gcu" path="res://assets/images/computerdisplay.png" id="6_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
@@ -125,7 +122,7 @@ terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
-size = Vector2(1381, 845.333)
+size = Vector2(1437, 882.37006)
 
 [node name="Node2D" type="Node2D" unique_id=659635860]
 script = ExtResource("1_7gny6")
@@ -133,9 +130,6 @@ playlist = Array[AudioStream]([ExtResource("2_2aecg"), ExtResource("3_6dial"), E
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
-texture_idle = ExtResource("2_2y5yt")
-texture_left = ExtResource("3_2os1m")
-texture_right = ExtResource("4_go7sj")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
@@ -201,8 +195,6 @@ layer_0/tile_data = PackedInt32Array(1769463, 1, 0, -131078, 1, 0, -131077, 1966
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("6_fcfvj")]
 z_index = -1
 position = Vector2(244, 32)
-collision_layer = 1
-collision_mask = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
 volume_db = -15.746
@@ -212,12 +204,13 @@ script = ExtResource("14_2aecg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=347262177]
 z_index = -21
-position = Vector2(-43.5, -18.480165)
+position = Vector2(-46.5, 1.5198555)
 scale = Vector2(1, 1.0800008)
 shape = SubResource("RectangleShape2D_iopsf")
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="body_exited" from="Floor" to="Floor" method="_on_body_exited"]
+[connection signal="player_fell" from="Floor" to="Player" method="_on_floor_player_fell"]
 
 [editable path="Player/Monitor"]
