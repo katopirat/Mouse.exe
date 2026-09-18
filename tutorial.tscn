@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://b17rahvlhugvg"]
+
+[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scenes/level_1.gd" id="1_bsk3x"]
+[ext_resource type="AudioStream" uid="uid://btyc1lq4aqjbx" path="res://soundtrack1.2.mp3" id="2_dl7dh"]
+[ext_resource type="AudioStream" uid="uid://bich7xnfh8jqb" path="res://soundtrack2.2.mp3" id="3_r4o0u"]
+[ext_resource type="AudioStream" uid="uid://w2r4n8x753tm" path="res://soundtrack3.1.mp3" id="4_k08xv"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_g52lx"]
+[ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="6_0lped"]
+[ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="7_dudfa"]
+[ext_resource type="Texture2D" uid="uid://5mvbriv6tpte" path="res://assets/images/mys(right-click).png" id="8_5gpbq"]
+[ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="11_53tq2"]
+[ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="12_4ods2"]
+[ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="13_0gmok"]
+[ext_resource type="Script" uid="uid://bghok2312i2nk" path="res://scenes/floor.gd" id="14_ns12n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
+texture = ExtResource("12_4ods2")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4nkto"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "table0"
+terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
+sources/1 = SubResource("TileSetAtlasSource_pa8r4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
+size = Vector2(720, 1106.4807)
+
+[node name="Node2D" type="Node2D" unique_id=659635860]
+position = Vector2(675, 294)
+script = ExtResource("1_bsk3x")
+playlist = Array[AudioStream]([ExtResource("2_dl7dh"), ExtResource("3_r4o0u"), ExtResource("4_k08xv")])
+
+[node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("5_g52lx")]
+position = Vector2(-68, 248)
+texture_idle = ExtResource("6_0lped")
+texture_left = ExtResource("7_dudfa")
+texture_right = ExtResource("8_5gpbq")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
+position_smoothing_speed = 4.5
+
+[node name="Hrnicek" type="StaticBody2D" parent="." unique_id=2039851167]
+z_index = -2
+position = Vector2(38, 20)
+
+[node name="Hrnicek" type="Sprite2D" parent="Hrnicek" unique_id=1346257681]
+z_index = 4
+position = Vector2(-33, -33)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("11_53tq2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hrnicek" unique_id=1853259337]
+position = Vector2(-33, -33)
+scale = Vector2(3.6875, 3.6875)
+polygon = PackedVector2Array(-13.559322, -0.81355953, -26.305086, 6.2372875, -26.305086, 13.016949, -13.830509, 20.067797, -4, 25.2, 6.200001, 26, 17.599998, 21, 17.8983, 19.254238, 17.8983, -3.2542381)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=157974211]
+z_index = -20
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_4nkto")
+rendering_quadrant_size = 26
+format = 2
+layer_0/tile_data = PackedInt32Array(1769463, 1, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 131073, 0, -131071, 196609, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 131073, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 196609, 0, 131068, 196609, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 65537, 0, 131073, 196609, 0, 131072, 131073, 0, 196607, 65537, 0, 196604, 1, 0, 196605, 1, 0, 196606, 65537, 0, -196612, 131073, 0, -196611, 65537, 0, -196610, 196609, 0, -196609, 65537, 0, -262144, 131073, 0, -262143, 131073, 0, 262140, 131073, 0, 262141, 65537, 0, 262142, 1, 0, 262143, 1, 0, 196609, 65537, 0, 196608, 65537, 0, -262148, 131073, 0, -262147, 1, 0, -262146, 131073, 0, -262145, 65537, 0, -327680, 196609, 0, -327679, 196609, 0, 262144, 65537, 2, 262145, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 262139, 196609, 1, 327675, 1, 2, 196603, 196609, 1, 131067, 196609, 1, 65531, 196609, 1, -5, 196609, 1, -65541, 196609, 1, -131077, 196609, 1, -196613, 196609, 1, -262149, 196609, 1, 196610, 262145, 1, 262146, 131073, 2, 131074, 262145, 1, 65538, 262145, 1, 2, 262145, 1, -65534, 262145, 1, -131070, 262145, 1, -196606, 262145, 1, -262142, 262145, 1, -327678, 262145, 1, -458756, 65537, 1, -393220, 1, 0, -327684, 65537, 0, -327683, 131073, 0, -327682, 1, 0, -327681, 196609, 0, -393216, 196609, 0, -393215, 196609, 0, -458751, 65537, 0, -524287, 65537, 1, -524288, 65537, 1, -458753, 65537, 1, -458754, 65537, 1, -458755, 65537, 1, -393219, 196609, 0, -393218, 196609, 0, -393217, 196609, 0, -458752, 131073, 0, -393214, 262145, 1, -458750, 262145, 1, -524286, 131073, 1, -327685, 196609, 1, -393221, 196609, 1, -458757, 1, 1)
+
+[node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("13_0gmok")]
+z_index = -1
+position = Vector2(-90, -586)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
+volume_db = -15.746
+
+[node name="Floor" type="Area2D" parent="." unique_id=1166038575]
+script = ExtResource("14_ns12n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=347262177]
+z_index = -21
+position = Vector2(-87, -159.5)
+scale = Vector2(1, 1.0800008)
+shape = SubResource("RectangleShape2D_iopsf")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="body_exited" from="Floor" to="Floor" method="_on_body_exited"]

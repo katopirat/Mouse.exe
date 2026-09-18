@@ -9,8 +9,6 @@ var current_track_index: int = 0
 func _ready() -> void:
 	if playlist.size() > 0:
 		play_track(current_track_index)
-	else:
-		push_warning("Playlist is empty! Drag some MP3s into the Inspector.")
 
 func play_track(index: int) -> void:
 	audio_player.stream = playlist[index]

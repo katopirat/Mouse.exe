@@ -7,21 +7,20 @@
 size = Vector2(322, 193)
 
 [node name="finish" type="Area2D" unique_id=1389901689]
-collision_layer = 128
-collision_mask = 128
 priority = 1
 script = ExtResource("1_07gpw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=616401476]
 light_mask = 128
 visibility_layer = 128
-position = Vector2(199, 173.5)
+position = Vector2(-16, -3)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479916014]
-position = Vector2(202, 179)
+position = Vector2(1.0000153, 1.5258789e-05)
 scale = Vector2(3.28125, 2.96875)
 texture = ExtResource("2_07gpw")
+offset = Vector2(-3.13, 0)
 region_enabled = true
 region_rect = Rect2(0, 0, 128, 96)
 
