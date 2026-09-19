@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cantjjqwty1g7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o5a4c"]
+load_path = "res://.godot/imported/Carpet.png-38e17142840baed2b44fa3aff48f2623.ctex"
+
+[node name="background" type="Sprite2D" unique_id=869839566]
+z_index = -3
+rotation = 1.5707992
+scale = Vector2(2.9999988, 2.9999988)
+texture = SubResource("CompressedTexture2D_o5a4c")

@@ -7,6 +7,7 @@
 size = Vector2(322, 193)
 
 [node name="finish" type="Area2D" unique_id=1389901689]
+position = Vector2(16, 3)
 priority = 1
 script = ExtResource("1_07gpw")
 
@@ -17,7 +18,7 @@ position = Vector2(-16, -3)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479916014]
-position = Vector2(1.0000153, 1.5258789e-05)
+position = Vector2(-7.9999847, -2)
 scale = Vector2(3.28125, 2.96875)
 texture = ExtResource("2_07gpw")
 offset = Vector2(-3.13, 0)

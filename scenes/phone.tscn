@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c1uiqnmv3dpvj"]
+
+[ext_resource type="Texture2D" uid="uid://bsysxur646s52" path="res://assets/images/ophone(orange).png" id="1_08mii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(48, 101)
+
+[node name="phone" type="StaticBody2D" unique_id=1009766919]
+scale = Vector2(1.2000002, 1.2000002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1451421039]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=422452739]
+position = Vector2(1.9073486e-06, 3.8146973e-06)
+scale = Vector2(1.7857144, 1.6904762)
+texture = ExtResource("1_08mii")
