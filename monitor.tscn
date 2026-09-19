@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bq31ecpemxsdw"]
 
-[ext_resource type="Texture2D" uid="uid://c1y80uva2c1fs" path="res://assets/images/windows xp.png" id="1_6dhw4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
+[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="1_guvov"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_dsjqh"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
-[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
+[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://assets/images/green button.png" id="4_6dhw4"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="6_7qsf4"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="6_mjpe0"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_n6pra"]
@@ -59,11 +59,11 @@ radius = 9.0
 position = Vector2(17, 17)
 
 [node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=585337726]
-offset_left = 28.0
+offset_left = 22.0
 offset_top = 4.0
-offset_right = 456.82028
+offset_right = 460.0
 offset_bottom = 266.0
-texture = ExtResource("1_6dhw4")
+texture = ExtResource("1_guvov")
 
 [node name="MonitorBorder" type="TextureRect" parent="Computer" unique_id=1221211577]
 z_index = 11
