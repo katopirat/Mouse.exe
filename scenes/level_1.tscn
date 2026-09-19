@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://w2r4n8x753tm" path="res://soundtrack3.1.mp3" id="4_7gny6"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="5_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="7_go7sj"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="11_go7sj"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/phone.tscn" id="12_7gny6"]
 [ext_resource type="Script" uid="uid://bghok2312i2nk" path="res://scenes/floor.gd" id="14_2aecg"]
@@ -184,6 +185,15 @@ position = Vector2(432.5, 128.5)
 position = Vector2(273, 110.000015)
 collision_mask = 2
 
+[node name="CollisionShape2D" parent="Player/Monitor/Computer/Window/Button" parent_id_path=PackedInt32Array(831704774, 930908104) index="0" unique_id=1190357176]
+position = Vector2(0.33332825, -1)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" parent="Player/Monitor/Computer/Window/Button" parent_id_path=PackedInt32Array(831704774, 930908104) index="1" unique_id=70065892]
+position = Vector2(0.33333588, -0.6666651)
+scale = Vector2(0.8484747, 0.84703135)
+texture = ExtResource("7_go7sj")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=157974211]
 z_index = -20
 scale = Vector2(3, 3)
@@ -219,7 +229,7 @@ shape = SubResource("RectangleShape2D_g2wqd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=347262177]
 z_index = -21
-position = Vector2(-46.5, 1.5198555)
+position = Vector2(-60, 15)
 scale = Vector2(1, 1.0800008)
 shape = SubResource("RectangleShape2D_iopsf")
 
