@@ -7,13 +7,12 @@ const z_index_under_desk = -25
 const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 
-@export var desk_tilemap: TileMap
-@export var distance_before_falling: float = 6.0
+@export var table_tilemap: TileMap
+@export var distance_before_falling: float = 0.0
 
 signal moved_mouse(dir)
 
 var can_move: bool = true
-
 
 func _physics_process(delta: float) -> void:
 	if not can_move:
@@ -53,11 +52,13 @@ func _check_edge() -> void:
 
 
 func _is_on_desk(point: Vector2) -> bool:
-	var cell = desk_tilemap.local_to_map(desk_tilemap.to_local(point))
-	var tile_data = desk_tilemap.get_cell_tile_data(0, cell)
-	if tile_data == null:
+
+	var cell = table_tilemap.local_to_map(table_tilemap.to_local(point))
+	var tile_data = table_tilemap.get_cell_tile_data(0, cell)
+	if tile_data != null and tile_data.get_custom_data("on_table"):
+		return true
+	else:
 		return false
-	return tile_data.get_custom_data("on_table")
 
 
 func _fall(direction: Vector2) -> void:
@@ -65,8 +66,7 @@ func _fall(direction: Vector2) -> void:
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.rotation = 0
 
-	if direction.y < 0:
-		z_index = z_index_under_desk
+	z_index = z_index_under_desk
 
 	$AnimatedSprite2D.play("fall")
 
@@ -75,3 +75,7 @@ func _fall(direction: Vector2) -> void:
 
 	await $AnimatedSprite2D.animation_finished
 	get_tree().reload_current_scene()
+
+
+func _on_table_table_changed(tilemap: Variant) -> void:
+	table_tilemap = tilemap

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_dsjqh"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
-[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://assets/images/green button.png" id="4_6dhw4"]
+[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="6_7qsf4"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="6_mjpe0"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_n6pra"]
@@ -59,9 +59,9 @@ radius = 9.0
 position = Vector2(17, 17)
 
 [node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=585337726]
-offset_left = 22.0
+offset_left = 17.0
 offset_top = 4.0
-offset_right = 460.0
+offset_right = 455.0
 offset_bottom = 266.0
 texture = ExtResource("1_guvov")
 
@@ -148,23 +148,23 @@ scale = Vector2(0.49398094, 0.49398094)
 sprite_frames = SubResource("SpriteFrames_iopsf")
 offset = Vector2(0.275, -0.19)
 
-[node name="Button" type="Area2D" parent="Computer/Window" unique_id=930908104]
+[node name="BridgeButton" type="Area2D" parent="Computer/Window" unique_id=930908104]
 z_index = 1
 position = Vector2(141, 101.999985)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("3_xk0nc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/Button" unique_id=1190357176]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/BridgeButton" unique_id=1190357176]
 position = Vector2(0.33333334, -1)
 shape = SubResource("CircleShape2D_7qsf4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Button" unique_id=70065892]
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/BridgeButton" unique_id=70065892]
 position = Vector2(6.3578295e-07, 0)
 scale = Vector2(0.0390625, 0.0390625)
 texture = ExtResource("4_6dhw4")
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
-[connection signal="body_entered" from="Computer/Window/Button" to="Computer/Window/Button" method="_on_body_entered"]
-[connection signal="body_exited" from="Computer/Window/Button" to="Computer/Window/Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]
