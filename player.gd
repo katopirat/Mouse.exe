@@ -1,41 +1,77 @@
 extends CharacterBody2D
 
 const SPEED = 250.0
-@onready var sprite = $Sprite2D
-
 const max_tilt = deg_to_rad(10)
 const tilt_speed = 8.0
+const z_index_under_desk = -25
+const fall_drop_distance = 30.0
+const fall_drop_duration = 0.4
+
+@export var desk_tilemap: TileMap
+@export var distance_before_falling: float = 6.0
 
 signal moved_mouse(dir)
-var can_move = true
+
+var can_move: bool = true
+
+
 func _physics_process(delta: float) -> void:
-	if can_move:
-		var target_tilt = 0.0
-		
-		if velocity.x < 0:
-			target_tilt = -max_tilt
-		elif velocity.x > 0:
-			target_tilt = max_tilt
-		var direction := Input.get_vector("left", "right", "up", "down")
-		velocity = direction * SPEED
-		$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation,target_tilt,delta * tilt_speed)
-		move_and_slide()
-		var moved_by = get_real_velocity() * delta
-		moved_mouse.emit(moved_by)
-		
-		update_texture()
-	
+	if not can_move:
+		return
+
+	var target_tilt = 0.0
+	if velocity.x < 0:
+		target_tilt = -max_tilt
+	elif velocity.x > 0:
+		target_tilt = max_tilt
+
+	var direction := Input.get_vector("left", "right", "up", "down")
+	velocity = direction * SPEED
+	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
+	move_and_slide()
+
+	var moved_by = get_real_velocity() * delta
+	moved_mouse.emit(moved_by)
+
+	update_texture()
+	_check_edge()
+
+
 func update_texture() -> void:
-	if can_move:
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			$AnimatedSprite2D.play("left_click")
-		#elif Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		#	sprite.texture = texture_right
-		else:
-			$AnimatedSprite2D.play("idle")
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		$AnimatedSprite2D.play("left_click")
+	else:
+		$AnimatedSprite2D.play("idle")
 
 
-func _on_floor_player_fell() -> void:
-	$AnimatedSprite2D.rotation = 0
-	$AnimatedSprite2D.play("fall")
+func _check_edge() -> void:
+	if velocity.length() < 1.0:
+		return
+	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
+	if not _is_on_desk(edge_check_point):
+		_fall(velocity.normalized())
+
+
+func _is_on_desk(point: Vector2) -> bool:
+	var cell = desk_tilemap.local_to_map(desk_tilemap.to_local(point))
+	var tile_data = desk_tilemap.get_cell_tile_data(0, cell)
+	if tile_data == null:
+		return false
+	return tile_data.get_custom_data("on_table")
+
+
+func _fall(direction: Vector2) -> void:
 	can_move = false
+	velocity = Vector2.ZERO
+	$AnimatedSprite2D.rotation = 0
+
+	if direction.y < 0:
+		z_index = z_index_under_desk
+
+	$AnimatedSprite2D.play("fall")
+
+	var fall_tween = create_tween()
+	fall_tween.tween_property(self, "position:y", position.y + fall_drop_distance, fall_drop_duration)
+
+	await $AnimatedSprite2D.animation_finished
+	get_tree().reload_current_scene()
