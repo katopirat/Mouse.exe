@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 250.0
+const SPEED = 350.0
 const max_tilt = deg_to_rad(10)
 const tilt_speed = 8.0
 const z_index_under_desk = -25
@@ -15,6 +15,9 @@ signal moved_mouse(dir)
 var can_move: bool = true
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
+		
 	if not can_move:
 		return
 

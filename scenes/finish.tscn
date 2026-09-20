@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="2_07gpw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
-size = Vector2(322, 193)
+size = Vector2(249, 131)
 
 [node name="finish" type="Area2D" unique_id=1389901689]
 position = Vector2(16, 3)
@@ -14,7 +14,7 @@ script = ExtResource("1_07gpw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=616401476]
 light_mask = 128
 visibility_layer = 128
-position = Vector2(-16, -3)
+position = Vector2(-17.5, -14.5)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479916014]

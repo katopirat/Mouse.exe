@@ -22,6 +22,6 @@ func _input(event):
 			pass
 		else:
 			open_bridge.emit()
-			$Sprite2D.modulate = Color(1.0, 0.0, 0.0, 1.0)
+			$AnimatedSprite2D.play("pressed")
 			is_pressed = true
 		

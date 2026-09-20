@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_dsjqh"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="3_xk0nc"]
-[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="4_6dhw4"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="6_7qsf4"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="6_mjpe0"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_n6pra"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_guvov"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_6naae"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_guvov"]
+[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_6naae"]
+[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_bco7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -50,8 +51,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7qsf4"]
-radius = 9.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2os1m"]
+radius = 7.333332
+height = 14.666664
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyjbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6naae")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_bco7d")
+}],
+"loop": 1,
+"name": &"pressed",
+"speed": 5.0
+}]
 
 [node name="Monitor" type="Node2D" unique_id=831704774]
 
@@ -156,13 +177,14 @@ collision_mask = 2
 script = ExtResource("3_xk0nc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/BridgeButton" unique_id=1190357176]
-position = Vector2(0.33333334, -1)
-shape = SubResource("CircleShape2D_7qsf4")
+position = Vector2(0.33333334, -2.3333328)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2os1m")
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/BridgeButton" unique_id=70065892]
-position = Vector2(6.3578295e-07, 0)
-scale = Vector2(0.0390625, 0.0390625)
-texture = ExtResource("4_6dhw4")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Window/BridgeButton" unique_id=358243242]
+position = Vector2(0.6666665, -1.3333335)
+scale = Vector2(0.8541666, 0.8541666)
+sprite_frames = SubResource("SpriteFrames_gyjbk")
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
