@@ -1,5 +1,4 @@
 extends Area2D
-signal pressed
 var cursor_inside = false
 var is_pressed = false
 

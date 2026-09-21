@@ -80,10 +80,10 @@ animations = [{
 position = Vector2(17, 17)
 
 [node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=1555825524]
-offset_left = 26.0
+offset_left = 16.312958
 offset_top = 4.0
-offset_right = 464.0
-offset_bottom = 266.0
+offset_right = 467.687
+offset_bottom = 274.0
 texture = ExtResource("1_thd5c")
 
 [node name="MonitorBorder" type="TextureRect" parent="Computer" unique_id=1595793568]
@@ -96,6 +96,8 @@ texture = ExtResource("2_xtobh")
 
 [node name="Borders" type="StaticBody2D" parent="Computer" unique_id=627878352]
 position = Vector2(32, 3)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Borders" unique_id=305933117]
 position = Vector2(210, -10.875)
@@ -118,7 +120,9 @@ z_index = 10
 position = Vector2(251, 139.00002)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_0a6f0")
+speed = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=197235665]
 scale = Vector2(1, 1.0000001)

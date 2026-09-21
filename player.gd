@@ -51,7 +51,7 @@ func _check_edge() -> void:
 		return
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):
-		_fall(velocity.normalized())
+		_fall()
 
 
 func _is_on_desk(point: Vector2) -> bool:
@@ -64,7 +64,7 @@ func _is_on_desk(point: Vector2) -> bool:
 		return false
 
 
-func _fall(direction: Vector2) -> void:
+func _fall() -> void:
 	can_move = false
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.rotation = 0

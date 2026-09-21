@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 
 
-const SPEED = 20.0
+@export var speed: float = 100.0
 
 
 func _on_player_moved_mouse(dir: Variant) -> void:
-	velocity = dir*SPEED
+	velocity = dir*speed
 	move_and_slide()
