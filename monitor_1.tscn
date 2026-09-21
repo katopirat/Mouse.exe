@@ -119,6 +119,7 @@ position = Vector2(4, 2)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 script = ExtResource("1_fa1fk")
+speed = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=1167709603]
 scale = Vector2(1, 1.0000001)
@@ -188,5 +189,6 @@ sprite_frames = SubResource("SpriteFrames_gyjbk")
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Computer/Window/XButton" to="Computer/Window" method="_on_x_button_closed"]
 [connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]

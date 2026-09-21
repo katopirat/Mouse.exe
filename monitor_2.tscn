@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="11_37ky3"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_f1tj1"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_oupev"]
+[ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://ad.gd" id="14_0a6f0"]
+[ext_resource type="Texture2D" uid="uid://bpqcengsoymj3" path="res://assets/ads/ad_m_mysi_96x48.png" id="15_dn6tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -73,6 +75,26 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_dn6tj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn6tj"]
+size = Vector2(1.4444437, 1.3888879)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xvhx"]
+size = Vector2(40.66667, 22.333328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jclro"]
+size = Vector2(4.9999924, 17.333332)
 
 [node name="monitor_2" type="Node2D" unique_id=683304094]
 
@@ -190,7 +212,52 @@ position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
 
+[node name="Ad" type="Area2D" parent="Computer" unique_id=1298482597]
+z_index = 1
+position = Vector2(141, 102)
+scale = Vector2(3, 3.0000005)
+collision_mask = 2
+script = ExtResource("14_0a6f0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad" unique_id=765156402]
+position = Vector2(1.3333321, -1.000001)
+scale = Vector2(0.47569442, 0.47569442)
+sprite_frames = SubResource("SpriteFrames_iopsf")
+
+[node name="XButtonAd" type="Area2D" parent="Computer/Ad" unique_id=1090636950]
+z_index = 1
+position = Vector2(17.666666, -4.999998)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("8_0iedy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad/XButtonAd" unique_id=268197725]
+position = Vector2(1.1157384, -1.4223119)
+scale = Vector2(0.18518463, 0.18518463)
+sprite_frames = SubResource("SpriteFrames_ps1uf")
+offset = Vector2(0.275, -0.19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad/XButtonAd" unique_id=847113696]
+position = Vector2(1.111112, -1.444444)
+shape = SubResource("RectangleShape2D_dn6tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad" unique_id=2051910429]
+position = Vector2(-1.3333282, -1.1666641)
+scale = Vector2(0.99999964, 0.9999996)
+shape = SubResource("RectangleShape2D_4xvhx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer/Ad" unique_id=578741970]
+position = Vector2(21.5, 1.3333321)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_jclro")
+
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Computer/Window/XButton" to="Computer/Window" method="_on_x_button_closed"]
 [connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]
+[connection signal="body_entered" from="Computer/Ad" to="Computer/Ad" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Ad" to="Computer/Ad" method="_on_body_exited"]
+[connection signal="body_entered" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Computer/Ad/XButtonAd" to="Computer/Ad" method="_on_x_button_ad_closed"]
