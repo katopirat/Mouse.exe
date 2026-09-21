@@ -74,7 +74,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Monitor" type="Node2D" unique_id=831704774]
+[node name="Monitor_1" type="Node2D" unique_id=831704774]
 
 [node name="Computer" type="Node2D" parent="." unique_id=1439863440]
 position = Vector2(17, 17)
