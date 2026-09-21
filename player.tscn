@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://walwr3j6bue7" path="res://assets/animations/mys(breaking)/sprite_2.png" id="4_b26j0"]
 [ext_resource type="Texture2D" uid="uid://b84gu8eotcgq1" path="res://assets/animations/mys(breaking)/sprite_3.png" id="5_n7ghd"]
+[ext_resource type="Script" uid="uid://ci8ocyd72pble" path="res://mouse_animation.gd" id="8_b26j0"]
+[ext_resource type="AudioStream" uid="uid://bpqu7hk6q6c52" path="res://assets/soundeffects/fall.wav" id="9_n7ghd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
 radius = 32.0
@@ -58,3 +60,7 @@ shape = SubResource("CapsuleShape2D_rus8k")
 scale = Vector2(2.0602858, 2.2571905)
 sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"fall"
+script = ExtResource("8_b26j0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=879465051]
+stream = ExtResource("9_n7ghd")
