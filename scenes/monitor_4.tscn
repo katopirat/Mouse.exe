@@ -134,8 +134,7 @@ scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("4_yluof")
 
 [node name="Window" type="Node2D" parent="Computer" unique_id=1658789405]
-position = Vector2(308, 86)
-scale = Vector2(0.5, 0.5)
+position = Vector2(247, 45)
 script = ExtResource("5_qkfqu")
 
 [node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=299562701]
