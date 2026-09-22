@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://de74n8ne4yhos"]
+
+[ext_resource type="Texture2D" uid="uid://cavso8cn5khu0" path="res://assets/images/os(levels1).png" id="1_x45eh"]
+[ext_resource type="Script" uid="uid://cpkm6os63l6d1" path="res://1.gd" id="2_ojyhc"]
+[ext_resource type="Script" uid="uid://bnogtjr523n4u" path="res://scenes/2.gd" id="3_ojyhc"]
+
+[node name="menu levels" type="Node2D" unique_id=1982524767]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1587739669]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1223.5999
+offset_bottom = 765.0
+texture = ExtResource("1_x45eh")
+
+[node name="1" type="Button" parent="." unique_id=891040578]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 90.0
+offset_bottom = 91.0
+script = ExtResource("2_ojyhc")
+
+[node name="2" type="Button" parent="." unique_id=511157780]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 97.0
+offset_top = 7.0
+offset_right = 181.0
+offset_bottom = 91.0
+script = ExtResource("3_ojyhc")
+
+[node name="3" type="Button" parent="." unique_id=933995294]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 190.0
+offset_top = 7.0
+offset_right = 274.0
+offset_bottom = 91.0
+
+[node name="4" type="Button" parent="." unique_id=1740467062]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 282.0
+offset_top = 5.0
+offset_right = 366.0
+offset_bottom = 89.0
+
+[node name="5" type="Button" parent="." unique_id=1153053922]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 373.0
+offset_top = 7.0
+offset_right = 457.0
+offset_bottom = 91.0
+
+[node name="6" type="Button" parent="." unique_id=1381910381]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 465.0
+offset_top = 7.0
+offset_right = 549.0
+offset_bottom = 91.0
+
+[node name="7" type="Button" parent="." unique_id=1784018019]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 557.0
+offset_top = 7.0
+offset_right = 641.0
+offset_bottom = 91.0
+
+[node name="8" type="Button" parent="." unique_id=215465638]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 649.0
+offset_top = 7.0
+offset_right = 733.0
+offset_bottom = 91.0
+
+[node name="9" type="Button" parent="." unique_id=2015918154]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 742.0
+offset_top = 7.0
+offset_right = 826.0
+offset_bottom = 91.0
+
+[node name="10" type="Button" parent="." unique_id=1655093135]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 6.0
+offset_top = 114.0
+offset_right = 90.0
+offset_bottom = 198.0
+
+[node name="11" type="Button" parent="." unique_id=1993793994]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 98.0
+offset_top = 114.0
+offset_right = 182.0
+offset_bottom = 198.0
+
+[node name="12" type="Button" parent="." unique_id=429868442]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 189.0
+offset_top = 114.0
+offset_right = 273.0
+offset_bottom = 198.0
+
+[node name="13" type="Button" parent="." unique_id=138824731]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 282.0
+offset_top = 114.0
+offset_right = 366.0
+offset_bottom = 198.0
+
+[node name="14" type="Button" parent="." unique_id=1836408038]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 374.0
+offset_top = 114.0
+offset_right = 458.0
+offset_bottom = 198.0
+
+[node name="15" type="Button" parent="." unique_id=1619321513]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 465.0
+offset_top = 114.0
+offset_right = 549.0
+offset_bottom = 198.0
+
+[node name="16" type="Button" parent="." unique_id=1343695077]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 557.0
+offset_top = 113.0
+offset_right = 641.0
+offset_bottom = 197.0
+
+[node name="17" type="Button" parent="." unique_id=623988298]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 650.0
+offset_top = 115.0
+offset_right = 734.0
+offset_bottom = 199.0
+
+[node name="18" type="Button" parent="." unique_id=953454691]
+modulate = Color(1, 1, 1, 0.7411765)
+self_modulate = Color(4.0059752, 4.0059752, 4.0059752, 0.65882355)
+offset_left = 741.0
+offset_top = 114.0
+offset_right = 825.0
+offset_bottom = 198.0
+
+[connection signal="pressed" from="1" to="1" method="_on_pressed"]
+[connection signal="pressed" from="2" to="2" method="_on_pressed"]
