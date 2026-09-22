@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mouse"
-run/main_scene="uid://bweivr530que7"
+run/main_scene="uid://bvy8613gojnwr"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://dr41svd5b4icd" path="res://monitor_2.tscn" id="7_bv48q"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="8_k22d5"]
+[ext_resource type="PackedScene" uid="uid://bvy8613gojnwr" path="res://scenes/level_3.tscn" id="9_172wr"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="9_k6a82"]
-[ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="10_1sb0y"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="11_vhnap"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/phone.tscn" id="12_vwfin"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scenes/table.gd" id="13_63d2t"]
@@ -109,18 +109,15 @@ texture_region_size = Vector2i(32, 32)
 0:2/0/terrain_set = 0
 0:2/0/terrains_peering_bit/top_side = 0
 0:2/0/terrains_peering_bit/top_right_corner = 0
-0:2/0/custom_data_0 = true
 1:2/0 = 0
 1:2/0/terrain_set = 0
 1:2/0/terrains_peering_bit/top_left_corner = 0
 1:2/0/terrains_peering_bit/top_side = 0
 1:2/0/terrains_peering_bit/top_right_corner = 0
-1:2/0/custom_data_0 = true
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/terrains_peering_bit/top_left_corner = 0
 2:2/0/terrains_peering_bit/top_side = 0
-2:2/0/custom_data_0 = true
 0:3/0 = 0
 0:3/0/custom_data_0 = true
 1:3/0 = 0
@@ -129,6 +126,7 @@ texture_region_size = Vector2i(32, 32)
 2:3/0/custom_data_0 = true
 0:4/0 = 0
 1:4/0 = 0
+3:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4nkto"]
 tile_size = Vector2i(32, 32)
@@ -139,7 +137,7 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
-[node name="Level1" type="Node2D" unique_id=659635860]
+[node name="Level2" type="Node2D" unique_id=659635860]
 script = ExtResource("1_g2hoc")
 playlist = Array[AudioStream]([ExtResource("2_fldb1"), ExtResource("3_guvtl"), ExtResource("4_igmy8")])
 
@@ -165,7 +163,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("9_k6a82")]
 z_index = -1
 position = Vector2(952, -189)
-next_scene = ExtResource("10_1sb0y")
+next_scene = ExtResource("9_172wr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
 volume_db = -15.746
