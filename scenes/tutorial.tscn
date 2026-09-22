@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c12n3sy7ndyok" path="res://scenes/level_1.tscn" id="8_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="9_cmspm"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scenes/table.gd" id="10_ikfo1"]
+[ext_resource type="Script" uid="uid://dgcm7dkk7i8r8" path="res://scenes/tut_text.gd" id="11_g2equ"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("6_wr8iv")
@@ -137,6 +138,9 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_w8sno"]
+radius = 245.05101
+
 [node name="Tutorial" type="Node2D" unique_id=659635860]
 script = ExtResource("1_0epgs")
 playlist = Array[AudioStream]([ExtResource("2_g2equ"), ExtResource("3_tbcdj"), ExtResource("4_ej4tf")])
@@ -178,5 +182,28 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -65541, 196609, 0, -65542, 65537, 0, -6, 131073, 0, -5, 1, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 65531, 1, 0, 65530, 196609, 0, 131066, 65537, 0, 131067, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 196603, 1, 0, 196602, 196609, 0, 196604, 1, 0, 196605, 1, 0, 196606, 65537, 0, -196614, 131073, 0, -196613, 1, 0, -196612, 65537, 0, -196611, 65537, 0, -196610, 196609, 0, 262138, 131073, 0, 262139, 65537, 0, 262140, 1, 0, 262141, 65537, 0, 262142, 1, 0, 327674, 65537, 2, 327675, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 262137, 196609, 1, 196601, 196609, 1, 131065, 196609, 1, 65529, 196609, 1, -7, 196609, 1, -65543, 196609, 1, -131079, 196609, 1, -196615, 196609, 1, -196609, 262145, 1, -131073, 262145, 1, -65537, 262145, 1, -1, 262145, 1, 65535, 262145, 1, 131071, 262145, 1, 196607, 262145, 1, 262143, 262145, 1, 327673, 1, 2, 327679, 131073, 2, -262151, 196609, 1, -327687, 196609, 1, -393223, 196609, 1, -458759, 196609, 1, -524295, 196609, 1, -262145, 262145, 1, -327681, 262145, 1, -393217, 262145, 1, -458753, 262145, 1, -524289, 262145, 1, -589825, 262145, 1, -589831, 196609, 1, -655366, 65537, 1, -655365, 65537, 1, -655364, 65537, 1, -655363, 65537, 1, -655362, 65537, 1, -655367, 1, 1, -655361, 131073, 1, -262150, 65537, 0, -327685, 65537, 0, -458756, 1, 0, -589829, 65537, 0, -589830, 65537, 0, -524291, 65537, 0, -589827, 65537, 0, -458754, 65537, 0, -393218, 65537, 0, -327683, 65537, 0, -262148, 131073, 0, -262147, 131073, 0, -524293, 131073, 0, -524292, 131073, 0, -393222, 131073, 0, -393221, 1, 0, -524290, 196609, 0, -589828, 196609, 0, -524294, 196609, 0, -262146, 196609, 0, -327684, 196609, 0, -262149, 1, 0, -327686, 1, 0, -458758, 1, 0, -327682, 1, 0, -589826, 1, 0, -458757, 1, 0, -458755, 1, 0, -393219, 1, 0, -393220, 1, 0)
 
+[node name="TutText" type="Area2D" parent="." unique_id=615391237]
+position = Vector2(707, 181)
+script = ExtResource("11_g2equ")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutText" unique_id=1739530665]
+shape = SubResource("CircleShape2D_w8sno")
+
+[node name="Label" type="Label" parent="TutText" unique_id=1563667568]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = 73.0
+offset_right = 321.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Get to the mouse pad"
+
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
+[connection signal="body_entered" from="TutText" to="TutText" method="_on_body_entered"]
+[connection signal="body_exited" from="TutText" to="TutText" method="_on_body_exited"]
