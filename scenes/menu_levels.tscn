@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://de74n8ne4yhos"]
 
-[ext_resource type="Script" uid="uid://dhhy8x05di5s2" path="res://scenes/menu_levels.gd" id="1_ojyhc"]
 [ext_resource type="Texture2D" uid="uid://cavso8cn5khu0" path="res://assets/images/os(levels1).png" id="1_x45eh"]
+[ext_resource type="Script" uid="uid://dhhy8x05di5s2" path="res://scripts/menu_levels.gd" id="2_x45eh"]
+[ext_resource type="PackedScene" uid="uid://c12n3sy7ndyok" path="res://scenes/level_1.tscn" id="3_icpav"]
+[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="4_tyxl4"]
+[ext_resource type="PackedScene" uid="uid://bvy8613gojnwr" path="res://scenes/level_3.tscn" id="5_q26hj"]
 
 [node name="menu levels" type="Node2D" unique_id=1982524767]
-script = ExtResource("1_ojyhc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1587739669]
 offset_left = -2.0
@@ -12,6 +14,7 @@ offset_top = -1.0
 offset_right = 1223.5999
 offset_bottom = 765.0
 texture = ExtResource("1_x45eh")
+metadata/_edit_use_anchors_ = true
 
 [node name="1" type="Button" parent="." unique_id=891040578]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -20,6 +23,8 @@ offset_left = 6.0
 offset_top = 7.0
 offset_right = 90.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
+scene = ExtResource("3_icpav")
 
 [node name="2" type="Button" parent="." unique_id=511157780]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -28,6 +33,8 @@ offset_left = 97.0
 offset_top = 7.0
 offset_right = 181.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
+scene = ExtResource("4_tyxl4")
 
 [node name="3" type="Button" parent="." unique_id=933995294]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -36,6 +43,8 @@ offset_left = 190.0
 offset_top = 7.0
 offset_right = 274.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
+scene = ExtResource("5_q26hj")
 
 [node name="4" type="Button" parent="." unique_id=1740467062]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -44,6 +53,7 @@ offset_left = 282.0
 offset_top = 5.0
 offset_right = 366.0
 offset_bottom = 89.0
+script = ExtResource("2_x45eh")
 
 [node name="5" type="Button" parent="." unique_id=1153053922]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -52,6 +62,7 @@ offset_left = 373.0
 offset_top = 7.0
 offset_right = 457.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
 
 [node name="6" type="Button" parent="." unique_id=1381910381]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -60,6 +71,7 @@ offset_left = 465.0
 offset_top = 7.0
 offset_right = 549.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
 
 [node name="7" type="Button" parent="." unique_id=1784018019]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -68,6 +80,7 @@ offset_left = 557.0
 offset_top = 7.0
 offset_right = 641.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
 
 [node name="8" type="Button" parent="." unique_id=215465638]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -76,6 +89,7 @@ offset_left = 649.0
 offset_top = 7.0
 offset_right = 733.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
 
 [node name="9" type="Button" parent="." unique_id=2015918154]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -84,6 +98,7 @@ offset_left = 742.0
 offset_top = 7.0
 offset_right = 826.0
 offset_bottom = 91.0
+script = ExtResource("2_x45eh")
 
 [node name="10" type="Button" parent="." unique_id=1655093135]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -92,6 +107,7 @@ offset_left = 6.0
 offset_top = 114.0
 offset_right = 90.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="11" type="Button" parent="." unique_id=1993793994]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -100,6 +116,7 @@ offset_left = 98.0
 offset_top = 114.0
 offset_right = 182.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="12" type="Button" parent="." unique_id=429868442]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -108,6 +125,7 @@ offset_left = 189.0
 offset_top = 114.0
 offset_right = 273.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="13" type="Button" parent="." unique_id=138824731]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -116,6 +134,7 @@ offset_left = 282.0
 offset_top = 114.0
 offset_right = 366.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="14" type="Button" parent="." unique_id=1836408038]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -124,6 +143,7 @@ offset_left = 374.0
 offset_top = 114.0
 offset_right = 458.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="15" type="Button" parent="." unique_id=1619321513]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -132,6 +152,7 @@ offset_left = 465.0
 offset_top = 114.0
 offset_right = 549.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
 [node name="16" type="Button" parent="." unique_id=1343695077]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -140,6 +161,7 @@ offset_left = 557.0
 offset_top = 113.0
 offset_right = 641.0
 offset_bottom = 197.0
+script = ExtResource("2_x45eh")
 
 [node name="17" type="Button" parent="." unique_id=623988298]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -148,6 +170,7 @@ offset_left = 650.0
 offset_top = 115.0
 offset_right = 734.0
 offset_bottom = 199.0
+script = ExtResource("2_x45eh")
 
 [node name="18" type="Button" parent="." unique_id=953454691]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -156,23 +179,9 @@ offset_left = 741.0
 offset_top = 114.0
 offset_right = 825.0
 offset_bottom = 198.0
+script = ExtResource("2_x45eh")
 
-[connection signal="pressed" from="1" to="." method="_on__pressed"]
 [connection signal="pressed" from="1" to="1" method="_on_pressed"]
-[connection signal="pressed" from="2" to="." method="_on_2_pressed"]
-[connection signal="pressed" from="2" to="2" method="_on_pressed"]
-[connection signal="pressed" from="3" to="." method="_on_3_pressed"]
-[connection signal="pressed" from="4" to="." method="_on_4_pressed"]
-[connection signal="pressed" from="5" to="." method="_on_5_pressed"]
-[connection signal="pressed" from="6" to="." method="_on_6_pressed"]
-[connection signal="pressed" from="7" to="." method="_on_7_pressed"]
-[connection signal="pressed" from="8" to="." method="_on_8_pressed"]
-[connection signal="pressed" from="9" to="." method="_on_9_pressed"]
-[connection signal="pressed" from="10" to="." method="_on_10_pressed"]
-[connection signal="pressed" from="11" to="." method="_on_11_pressed"]
-[connection signal="pressed" from="12" to="." method="_on_12_pressed"]
-[connection signal="pressed" from="13" to="." method="_on_13_pressed"]
-[connection signal="pressed" from="14" to="." method="_on_14_pressed"]
 [connection signal="pressed" from="15" to="." method="_on_15_pressed"]
 [connection signal="pressed" from="16" to="." method="_on_16_pressed"]
 [connection signal="pressed" from="17" to="." method="_on_17_pressed"]
