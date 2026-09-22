@@ -40,15 +40,13 @@ func _physics_process(delta: float) -> void:
 
 
 func update_texture() -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_pressed("click"):
 		$AnimatedSprite2D.play("left_click")
 	else:
 		$AnimatedSprite2D.play("idle")
 
 
 func _check_edge() -> void:
-	if velocity.length() < 1.0:
-		return
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):
 		_fall()
