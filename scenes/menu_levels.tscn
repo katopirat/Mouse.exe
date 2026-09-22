@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://de74n8ne4yhos"]
 
+[ext_resource type="Script" uid="uid://dhhy8x05di5s2" path="res://scenes/menu_levels.gd" id="1_ojyhc"]
 [ext_resource type="Texture2D" uid="uid://cavso8cn5khu0" path="res://assets/images/os(levels1).png" id="1_x45eh"]
-[ext_resource type="Script" uid="uid://cpkm6os63l6d1" path="res://1.gd" id="2_ojyhc"]
-[ext_resource type="Script" uid="uid://bnogtjr523n4u" path="res://scenes/2.gd" id="3_ojyhc"]
 
 [node name="menu levels" type="Node2D" unique_id=1982524767]
+script = ExtResource("1_ojyhc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1587739669]
 offset_left = -2.0
@@ -20,7 +20,6 @@ offset_left = 6.0
 offset_top = 7.0
 offset_right = 90.0
 offset_bottom = 91.0
-script = ExtResource("2_ojyhc")
 
 [node name="2" type="Button" parent="." unique_id=511157780]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -29,7 +28,6 @@ offset_left = 97.0
 offset_top = 7.0
 offset_right = 181.0
 offset_bottom = 91.0
-script = ExtResource("3_ojyhc")
 
 [node name="3" type="Button" parent="." unique_id=933995294]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -159,5 +157,23 @@ offset_top = 114.0
 offset_right = 825.0
 offset_bottom = 198.0
 
+[connection signal="pressed" from="1" to="." method="_on__pressed"]
 [connection signal="pressed" from="1" to="1" method="_on_pressed"]
+[connection signal="pressed" from="2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="2" to="2" method="_on_pressed"]
+[connection signal="pressed" from="3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="11" to="." method="_on_11_pressed"]
+[connection signal="pressed" from="12" to="." method="_on_12_pressed"]
+[connection signal="pressed" from="13" to="." method="_on_13_pressed"]
+[connection signal="pressed" from="14" to="." method="_on_14_pressed"]
+[connection signal="pressed" from="15" to="." method="_on_15_pressed"]
+[connection signal="pressed" from="16" to="." method="_on_16_pressed"]
+[connection signal="pressed" from="17" to="." method="_on_17_pressed"]
+[connection signal="pressed" from="18" to="." method="_on_18_pressed"]
