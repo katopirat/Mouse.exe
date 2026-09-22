@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scenes/bridge_button_lever.gd" id="11_ebakw"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_h10oe"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_5mse1"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="14_ikvqc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -188,6 +189,9 @@ shape = SubResource("CapsuleShape2D_61tt5")
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
+
+[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("14_ikvqc")]
+position = Vector2(254, 25)
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
