@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_oupev"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="14_0a6f0"]
 [ext_resource type="Texture2D" uid="uid://bpqcengsoymj3" path="res://assets/ads/ad_m_mysi_96x48.png" id="15_dn6tj"]
+[ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad.tscn" id="16_dn6tj"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="17_b15wo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -214,7 +216,7 @@ sprite_frames = SubResource("SpriteFrames_w2qjo")
 
 [node name="Ad" type="Area2D" parent="Computer" unique_id=1298482597]
 z_index = 1
-position = Vector2(141, 102)
+position = Vector2(188, 77)
 scale = Vector2(3, 3.0000005)
 collision_mask = 2
 script = ExtResource("14_0a6f0")
@@ -250,6 +252,18 @@ shape = SubResource("RectangleShape2D_4xvhx")
 position = Vector2(21.5, 1.3333321)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_jclro")
+
+[node name="ad" parent="Computer" unique_id=1511771645 instance=ExtResource("16_dn6tj")]
+position = Vector2(17, 17)
+
+[node name="ad2" parent="Computer" unique_id=1392792786 instance=ExtResource("16_dn6tj")]
+position = Vector2(-24, -39)
+
+[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("17_b15wo")]
+position = Vector2(13, -1)
+
+[node name="ad3" parent="." unique_id=481423033 instance=ExtResource("17_b15wo")]
+position = Vector2(90, 57)
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
