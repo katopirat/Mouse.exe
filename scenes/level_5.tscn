@@ -208,11 +208,17 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
+<<<<<<< Updated upstream
 [node name="Level5" type="Node2D" unique_id=659635860]
+=======
+[node name="Level6" type="Node2D" unique_id=659635860]
+script = ExtResource("1_e4ab4")
+playlist = Array[AudioStream]([ExtResource("2_xxvx7"), ExtResource("3_68hud"), ExtResource("4_jwrea")])
+>>>>>>> Stashed changes
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("5_ls1u8")]
 position = Vector2(730, 49)
-speed = 50.0
+speed = 400.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 zoom = Vector2(1.3, 1.3)

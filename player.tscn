@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c6co7ev10r666"]
 
 [ext_resource type="Script" uid="uid://ce41tasjb3hxq" path="res://scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bauwma2h8p587" path="res://assets/animations/mys(breaking)/sprite_0.png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cqhe7sj1ekhkh" path="res://assets/animations/mys(breaking)/sprite_1.png" id="3_dw050"]
 [ext_resource type="Texture2D" uid="uid://nmn8ck21r46h" path="res://assets/images/mys(left-click).png" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://walwr3j6bue7" path="res://assets/animations/mys(breaking)/sprite_2.png" id="4_b26j0"]
@@ -55,11 +55,6 @@ script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
 shape = SubResource("CapsuleShape2D_rus8k")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317440229]
-position = Vector2(0, -1)
-scale = Vector2(2.0224776, 2.0718062)
-texture = ExtResource("2_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1816263362]
 scale = Vector2(2.0602858, 2.2571905)

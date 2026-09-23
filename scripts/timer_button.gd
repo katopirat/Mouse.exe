@@ -1,10 +1,9 @@
 extends Area2D
-signal pressed
+signal open_bridge
 var cursor_inside = false
 var is_pressed = false 
 
-func _ready():
-	print("Skript tlacitka bezi!")
+
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == "Cursor":
@@ -22,7 +21,7 @@ func _input(event):
 			$Sprite2D.modulate = Color(1,0,0)
 			is_pressed = false
 		else:
-			emit_signal("pressed")
+			emit_signal("open_bridge")
 			$Sprite2D.modulate = Color(1,1,1)
 			is_pressed = true
 		
