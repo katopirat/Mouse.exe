@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c0b6pk0gfpmp5" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://bgvpegds6xa5t" path="res://assets/images/os(menu).png" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://c0hprc8vb4qmn" path="res://assets/images/play-button.png" id="2_vjb58"]
-[ext_resource type="AudioStream" uid="uid://rs6lkx17fik5" path="res://assets/soundtracks/menu_loop1.2.mp3" id="4_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://cny78jgx2i5lq" path="res://assets/soundtracks/menu_loop1.1.mp3" id="4_v86rl"]
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="5_v86rl"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="6_13sgg"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="7_i6lef"]
@@ -39,7 +39,7 @@ scale = Vector2(7.250001, 7.25)
 texture = ExtResource("2_vjb58")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=769634303]
-stream = ExtResource("4_mhnvy")
+stream = ExtResource("4_v86rl")
 autoplay = true
 parameters/looping = true
 
