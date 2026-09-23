@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://xp5fkphunrse"]
+
+[ext_resource type="Script" uid="uid://bwqnp0jcy4a2p" path="res://music.gd" id="1_khlsn"]
+[ext_resource type="AudioStream" uid="uid://dg3dug8585ojr" path="res://assets/soundtracks/soundtrack1.2.mp3" id="2_boywh"]
+[ext_resource type="AudioStream" uid="uid://do8gagdqifydy" path="res://assets/soundtracks/soundtrack2.2.mp3" id="3_gqg2j"]
+[ext_resource type="AudioStream" uid="uid://yklinnjq4db6" path="res://assets/soundtracks/soundtrack3.1.mp3" id="4_eh16a"]
+[ext_resource type="AudioStream" uid="uid://dsn12g2ieic1x" path="res://assets/soundtracks/soundtrack4.1.mp3" id="5_3hkwp"]
+
+[node name="Music" type="Node2D" unique_id=555201196]
+script = ExtResource("1_khlsn")
+playlist = Array[AudioStream]([ExtResource("2_boywh"), ExtResource("3_gqg2j"), ExtResource("4_eh16a"), ExtResource("5_3hkwp")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=338838359]
+volume_db = -15.746
