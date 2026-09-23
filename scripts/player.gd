@@ -6,16 +6,15 @@ const tilt_speed = 8.0
 const z_index_under_desk = -25
 const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
-
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = 0.0
+signal falling_now(fall: bool)
 
 signal moved_mouse(dir)
-
 var can_move: bool = true
 var god_mode: bool = false
 
-	
+
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
@@ -71,6 +70,7 @@ func _is_on_desk(point: Vector2) -> bool:
 
 
 func _fall() -> void:
+	falling_now.emit(true)
 	can_move = false
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.rotation = 0
