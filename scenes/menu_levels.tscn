@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="4_tyxl4"]
 [ext_resource type="PackedScene" uid="uid://bvy8613gojnwr" path="res://scenes/level_3.tscn" id="5_q26hj"]
 [ext_resource type="PackedScene" uid="uid://xj0nlg7whj7j" path="res://scenes/level_4.tscn" id="6_tyxl4"]
+[ext_resource type="PackedScene" uid="uid://vjyjnhlsh3kd" path="res://scenes/level_5.tscn" id="7_cgja3"]
+[ext_resource type="PackedScene" uid="uid://b035tqqwad4ne" path="res://scenes/level_6.tscn" id="7_q26hj"]
 
 [node name="menu levels" type="Node2D" unique_id=1982524767]
 
@@ -65,6 +67,7 @@ offset_top = 7.0
 offset_right = 457.0
 offset_bottom = 91.0
 script = ExtResource("2_x45eh")
+scene = ExtResource("7_cgja3")
 
 [node name="6" type="Button" parent="." unique_id=1381910381]
 modulate = Color(1, 1, 1, 0.7411765)
@@ -74,6 +77,7 @@ offset_top = 7.0
 offset_right = 549.0
 offset_bottom = 91.0
 script = ExtResource("2_x45eh")
+scene = ExtResource("7_q26hj")
 
 [node name="7" type="Button" parent="." unique_id=1784018019]
 modulate = Color(1, 1, 1, 0.7411765)
