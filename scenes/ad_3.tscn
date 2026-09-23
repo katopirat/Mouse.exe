@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://y17gn0u55f8j"]
+
+[ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="1_xrwxs"]
+[ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="2_5rerf"]
+[ext_resource type="Texture2D" uid="uid://bvfv5hyq54ps8" path="res://assets/ads/ram Ad.png" id="3_g5yk3"]
+[ext_resource type="Texture2D" uid="uid://5pobdkns3isv" path="res://assets/ads/orange ad.png" id="4_5rerf"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="4_ljobr"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="5_a6eul"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="6_i360f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvhoi"]
+atlas = ExtResource("2_5rerf")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvjil"]
+atlas = ExtResource("3_g5yk3")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gi5b"]
+atlas = ExtResource("4_5rerf")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy5dt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5rerf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvhoi")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvjil")
+}],
+"loop": 1,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gi5b")
+}],
+"loop": 1,
+"name": &"new_animation_2",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oug5g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_a6eul")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i360f")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it8gq"]
+size = Vector2(1.6666667, 1.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17eke"]
+size = Vector2(40.66667, 22.333328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjn2p"]
+size = Vector2(4.9999924, 17.333332)
+
+[node name="ad_3" type="Node2D" unique_id=651148235]
+
+[node name="Ad" type="Area2D" parent="." unique_id=1538124424]
+z_index = 1
+position = Vector2(141, 102)
+scale = Vector2(3, 3.0000005)
+collision_mask = 2
+script = ExtResource("1_xrwxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ad" unique_id=252142075]
+position = Vector2(1.3333321, -1.000001)
+scale = Vector2(0.7023611, 0.7023611)
+sprite_frames = SubResource("SpriteFrames_xy5dt")
+animation = &"new_animation_1"
+
+[node name="XButtonAd" type="Area2D" parent="Ad" unique_id=1878273600]
+z_index = 1
+position = Vector2(17.999998, -5.333331)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("4_ljobr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ad/XButtonAd" unique_id=1604872343]
+position = Vector2(1.1157384, -1.4223119)
+scale = Vector2(0.18518463, 0.18518463)
+sprite_frames = SubResource("SpriteFrames_oug5g")
+offset = Vector2(0.275, -0.19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ad/XButtonAd" unique_id=2047067868]
+position = Vector2(1.1666698, -1.4444437)
+shape = SubResource("RectangleShape2D_it8gq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ad" unique_id=2129597010]
+position = Vector2(-1.3333334, -1)
+scale = Vector2(0.99999964, 0.9999996)
+shape = SubResource("RectangleShape2D_17eke")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ad" unique_id=1401153297]
+position = Vector2(21.5, 1.3333321)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_bjn2p")
+
+[connection signal="body_entered" from="Ad" to="Ad" method="_on_body_entered"]
+[connection signal="body_exited" from="Ad" to="Ad" method="_on_body_exited"]
+[connection signal="body_entered" from="Ad/XButtonAd" to="Ad/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Ad/XButtonAd" to="Ad/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Ad/XButtonAd" to="Ad" method="_on_x_button_ad_closed"]

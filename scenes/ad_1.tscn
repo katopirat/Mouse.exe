@@ -1,19 +1,34 @@
 [gd_scene format=3 uid="uid://bwpr4j8cclbfq"]
 
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="1_6ngt6"]
-[ext_resource type="Texture2D" uid="uid://bpqcengsoymj3" path="res://assets/ads/ad_m_mysi_96x48.png" id="2_vvhoi"]
+[ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="2_6ngt6"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="3_ac0cy"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="4_y6450"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="5_ydwmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvhoi"]
+atlas = ExtResource("2_6ngt6")
+region = Rect2(0, 0, 96, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_puuh0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vvhoi")
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ngt6")
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvhoi")
+}],
+"loop": 1,
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -37,7 +52,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iigo"]
-size = Vector2(1.4444437, 1.3888879)
+size = Vector2(1.6666667, 1.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_okacl"]
 size = Vector2(40.66667, 22.333328)
@@ -46,6 +61,7 @@ size = Vector2(40.66667, 22.333328)
 size = Vector2(4.9999924, 17.333332)
 
 [node name="ad" type="Node2D" unique_id=1511771645]
+position = Vector2(-144, -104)
 
 [node name="Ad" type="Area2D" parent="." unique_id=1116653530]
 z_index = 1
@@ -58,10 +74,11 @@ script = ExtResource("1_6ngt6")
 position = Vector2(1.3333321, -1.000001)
 scale = Vector2(0.47569442, 0.47569442)
 sprite_frames = SubResource("SpriteFrames_puuh0")
+animation = &"new_animation"
 
 [node name="XButtonAd" type="Area2D" parent="Ad" unique_id=1587479208]
 z_index = 1
-position = Vector2(17.666666, -4.999998)
+position = Vector2(17.999998, -5.333331)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("3_ac0cy")
@@ -73,11 +90,11 @@ sprite_frames = SubResource("SpriteFrames_ufqsm")
 offset = Vector2(0.275, -0.19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad/XButtonAd" unique_id=1790084192]
-position = Vector2(1.111112, -1.444444)
+position = Vector2(1.1666698, -1.4444437)
 shape = SubResource("RectangleShape2D_6iigo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad" unique_id=627450289]
-position = Vector2(-1.3333282, -1.1666641)
+position = Vector2(-1.3333334, -1)
 scale = Vector2(0.99999964, 0.9999996)
 shape = SubResource("RectangleShape2D_okacl")
 
