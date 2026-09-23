@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b17rahvlhugvg"]
 
-[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scenes/level_1.gd" id="1_0epgs"]
+[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scripts/level_1.gd" id="1_0epgs"]
 [ext_resource type="AudioStream" uid="uid://dg3dug8585ojr" path="res://assets/soundtracks/soundtrack1.2.mp3" id="2_g2equ"]
 [ext_resource type="AudioStream" uid="uid://do8gagdqifydy" path="res://assets/soundtracks/soundtrack2.2.mp3" id="3_tbcdj"]
 [ext_resource type="AudioStream" uid="uid://yklinnjq4db6" path="res://assets/soundtracks/soundtrack3.1.mp3" id="4_ej4tf"]
@@ -9,8 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_e13mp"]
 [ext_resource type="PackedScene" uid="uid://c12n3sy7ndyok" path="res://scenes/level_1.tscn" id="8_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="9_cmspm"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scenes/table.gd" id="10_ikfo1"]
 [ext_resource type="Script" uid="uid://dgcm7dkk7i8r8" path="res://scenes/tut_text.gd" id="11_g2equ"]
+=======
+[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="10_ikfo1"]
+>>>>>>> d4472b6d34a38e62108fc0c1a81704f7ff7e6abd
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("6_wr8iv")

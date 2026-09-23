@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 350.0
+@export var speed: float = 350.0
 const max_tilt = deg_to_rad(10)
 const tilt_speed = 8.0
 const z_index_under_desk = -25
@@ -13,8 +13,13 @@ const fall_drop_duration = 0.4
 signal moved_mouse(dir)
 
 var can_move: bool = true
+var god_mode: bool = false
+
+	
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("godmode"):
+		god_mode = true
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 		
@@ -28,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		target_tilt = max_tilt
 
 	var direction := Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
+	velocity = direction * speed
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
 	move_and_slide()
 
@@ -36,19 +41,18 @@ func _physics_process(delta: float) -> void:
 	moved_mouse.emit(moved_by)
 
 	update_texture()
-	_check_edge()
+	if not god_mode:
+		_check_edge()
 
 
 func update_texture() -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_pressed("click"):
 		$AnimatedSprite2D.play("left_click")
 	else:
 		$AnimatedSprite2D.play("idle")
 
 
 func _check_edge() -> void:
-	if velocity.length() < 1.0:
-		return
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):
 		_fall()

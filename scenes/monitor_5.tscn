@@ -1,22 +1,18 @@
-[gd_scene format=3 uid="uid://dr41svd5b4icd"]
+[gd_scene format=3 uid="uid://3c37jdwj4ycm"]
 
-[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="1_thd5c"]
-[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_xtobh"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="3_0a6f0"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="4_dn6tj"]
-[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="5_b15wo"]
-[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_crr5n"]
-[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_1etto"]
-[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="8_0iedy"]
-[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_jl5ta"]
-[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_be2ox"]
-[ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="11_37ky3"]
-[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_f1tj1"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_oupev"]
-[ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="14_0a6f0"]
-[ext_resource type="Texture2D" uid="uid://bpqcengsoymj3" path="res://assets/ads/ad_m_mysi_96x48.png" id="15_dn6tj"]
-[ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad.tscn" id="16_dn6tj"]
-[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="17_b15wo"]
+[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="1_6oyjk"]
+[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_thnjg"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="3_gwnxa"]
+[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="4_lerjo"]
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="5_tgeaq"]
+[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_xg0lv"]
+[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_2ave2"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="8_4dexj"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_oq2ps"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_507do"]
+[ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scenes/bridge_button_lever.gd" id="11_ibpl7"]
+[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_pnvwk"]
+[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_o5axk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -40,7 +36,7 @@ size = Vector2(5.000004, 4.999997)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_jl5ta")
+"texture": ExtResource("9_oq2ps")
 }],
 "loop": 1,
 "name": &"default",
@@ -48,7 +44,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_be2ox")
+"texture": ExtResource("10_507do")
 }],
 "loop": 1,
 "name": &"hovered",
@@ -63,7 +59,7 @@ height = 14.666664
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_f1tj1")
+"texture": ExtResource("12_pnvwk")
 }],
 "loop": 1,
 "name": &"default",
@@ -71,34 +67,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_oupev")
+"texture": ExtResource("13_o5axk")
 }],
 "loop": 1,
 "name": &"pressed",
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_dn6tj")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn6tj"]
-size = Vector2(1.4444437, 1.3888879)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xvhx"]
-size = Vector2(40.66667, 22.333328)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jclro"]
-size = Vector2(4.9999924, 17.333332)
-
-[node name="monitor_2" type="Node2D" unique_id=683304094]
+[node name="Monitor_5" type="Node2D" unique_id=683304094]
 
 [node name="Computer" type="Node2D" parent="." unique_id=426668735]
 position = Vector2(17, 17)
@@ -108,7 +84,7 @@ offset_left = 16.312958
 offset_top = 4.0
 offset_right = 467.687
 offset_bottom = 274.0
-texture = ExtResource("1_thd5c")
+texture = ExtResource("1_6oyjk")
 
 [node name="MonitorBorder" type="TextureRect" parent="Computer" unique_id=1595793568]
 z_index = 11
@@ -116,7 +92,7 @@ offset_left = -6.0
 offset_top = -24.0
 offset_right = 489.21362
 offset_bottom = 294.0
-texture = ExtResource("2_xtobh")
+texture = ExtResource("2_thnjg")
 
 [node name="Borders" type="StaticBody2D" parent="Computer" unique_id=627878352]
 position = Vector2(32, 3)
@@ -136,17 +112,18 @@ position = Vector2(-10, 127)
 shape = SubResource("RectangleShape2D_r3qgb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Computer/Borders" unique_id=1666617494]
-position = Vector2(430.5, 128.5)
+position = Vector2(434.5, 128.5)
 shape = SubResource("RectangleShape2D_p8vl5")
 
 [node name="Cursor" type="CharacterBody2D" parent="Computer" unique_id=145601617]
 z_index = 10
-position = Vector2(251, 139.00002)
+position = Vector2(247, 129)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_0a6f0")
-speed = 20.0
+up_direction = Vector2(0, 1)
+script = ExtResource("3_gwnxa")
+speed = 3.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=197235665]
 scale = Vector2(1, 1.0000001)
@@ -155,12 +132,11 @@ shape = SubResource("RectangleShape2D_cq2xo")
 [node name="Sprite2D" type="Sprite2D" parent="Computer/Cursor" unique_id=2052527184]
 position = Vector2(7, 12)
 scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("4_dn6tj")
+texture = ExtResource("4_lerjo")
 
 [node name="Window" type="Node2D" parent="Computer" unique_id=1658789405]
-position = Vector2(0, -2.3841858e-07)
-scale = Vector2(1, 1.0000001)
-script = ExtResource("5_b15wo")
+position = Vector2(247, 45)
+script = ExtResource("5_tgeaq")
 
 [node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=299562701]
 position = Vector2(152, 47)
@@ -168,7 +144,7 @@ position = Vector2(152, 47)
 [node name="Sprite2D" type="Sprite2D" parent="Computer/Window/TopBar" unique_id=1884024187]
 position = Vector2(-16.816341, 4.147223)
 scale = Vector2(1.5247535, 1.4999428)
-texture = ExtResource("6_crr5n")
+texture = ExtResource("6_xg0lv")
 offset = Vector2(-0.075, -0.265)
 
 [node name="Background" type="Node2D" parent="Computer/Window" unique_id=155384492]
@@ -177,14 +153,14 @@ position = Vector2(151, 89)
 [node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Background" unique_id=1932621514]
 position = Vector2(-9.418182, 10.249992)
 scale = Vector2(1.5181818, 1.5181818)
-texture = ExtResource("7_1etto")
+texture = ExtResource("7_2ave2")
 
 [node name="XButton" type="Area2D" parent="Computer/Window" unique_id=924538594]
 z_index = 1
 position = Vector2(184, 50.999992)
 scale = Vector2(3, 3)
 collision_mask = 2
-script = ExtResource("8_0iedy")
+script = ExtResource("8_4dexj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/XButton" unique_id=1394919379]
 position = Vector2(-0.16667175, -0.16666603)
@@ -202,7 +178,7 @@ z_index = 1
 position = Vector2(141, 101.999985)
 scale = Vector2(3, 3)
 collision_mask = 2
-script = ExtResource("11_37ky3")
+script = ExtResource("11_ibpl7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/BridgeButton" unique_id=963399133]
 position = Vector2(0.33333334, -2.3333328)
@@ -214,64 +190,8 @@ position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
 
-[node name="Ad" type="Area2D" parent="Computer" unique_id=1298482597]
-z_index = 1
-position = Vector2(188, 77)
-scale = Vector2(3, 3.0000005)
-collision_mask = 2
-script = ExtResource("14_0a6f0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad" unique_id=765156402]
-position = Vector2(1.3333321, -1.000001)
-scale = Vector2(0.47569442, 0.47569442)
-sprite_frames = SubResource("SpriteFrames_iopsf")
-
-[node name="XButtonAd" type="Area2D" parent="Computer/Ad" unique_id=1090636950]
-z_index = 1
-position = Vector2(17.666666, -4.999998)
-scale = Vector2(3, 3)
-collision_mask = 2
-script = ExtResource("8_0iedy")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad/XButtonAd" unique_id=268197725]
-position = Vector2(1.1157384, -1.4223119)
-scale = Vector2(0.18518463, 0.18518463)
-sprite_frames = SubResource("SpriteFrames_ps1uf")
-offset = Vector2(0.275, -0.19)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad/XButtonAd" unique_id=847113696]
-position = Vector2(1.111112, -1.444444)
-shape = SubResource("RectangleShape2D_dn6tj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad" unique_id=2051910429]
-position = Vector2(-1.3333282, -1.1666641)
-scale = Vector2(0.99999964, 0.9999996)
-shape = SubResource("RectangleShape2D_4xvhx")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer/Ad" unique_id=578741970]
-position = Vector2(21.5, 1.3333321)
-scale = Vector2(0.9999997, 0.9999997)
-shape = SubResource("RectangleShape2D_jclro")
-
-[node name="ad" parent="Computer" unique_id=1511771645 instance=ExtResource("16_dn6tj")]
-position = Vector2(17, 17)
-
-[node name="ad2" parent="Computer" unique_id=1392792786 instance=ExtResource("16_dn6tj")]
-position = Vector2(-24, -39)
-
-[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("17_b15wo")]
-position = Vector2(13, -1)
-
-[node name="ad3" parent="." unique_id=481423033 instance=ExtResource("17_b15wo")]
-position = Vector2(90, 57)
-
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Computer/Window/XButton" to="Computer/Window" method="_on_x_button_closed"]
 [connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]
-[connection signal="body_entered" from="Computer/Ad" to="Computer/Ad" method="_on_body_entered"]
-[connection signal="body_exited" from="Computer/Ad" to="Computer/Ad" method="_on_body_exited"]
-[connection signal="body_entered" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_entered"]
-[connection signal="body_exited" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_exited"]
-[connection signal="closed" from="Computer/Ad/XButtonAd" to="Computer/Ad" method="_on_x_button_ad_closed"]

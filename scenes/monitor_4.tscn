@@ -4,15 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_ikvqc"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="3_obeyy"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="4_yluof"]
-[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://window.gd" id="5_qkfqu"]
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="5_qkfqu"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_htc3w"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_ba58m"]
-[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://x_button.gd" id="8_plw50"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="8_plw50"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_t2rvl"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_q7x8g"]
 [ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scenes/bridge_button_lever.gd" id="11_ebakw"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_h10oe"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_5mse1"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="14_ikvqc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -134,8 +135,7 @@ scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("4_yluof")
 
 [node name="Window" type="Node2D" parent="Computer" unique_id=1658789405]
-position = Vector2(308, 86)
-scale = Vector2(0.5, 0.5)
+position = Vector2(247, 45)
 script = ExtResource("5_qkfqu")
 
 [node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=299562701]
@@ -189,6 +189,9 @@ shape = SubResource("CapsuleShape2D_61tt5")
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
+
+[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("14_ikvqc")]
+position = Vector2(254, 25)
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]

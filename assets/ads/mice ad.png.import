@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpqcengsoymj3"
-path="res://.godot/imported/ad_m_mysi_96x48.png-8dcd5e3b6a70f910c5e941b448d0b674.ctex"
+uid="uid://dxexuv76587jw"
+path="res://.godot/imported/mice ad.png-7d47039c8435bd61ab3f751e608f77c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ads/ad_m_mysi_96x48.png"
-dest_files=["res://.godot/imported/ad_m_mysi_96x48.png-8dcd5e3b6a70f910c5e941b448d0b674.ctex"]
+source_file="res://assets/ads/mice ad.png"
+dest_files=["res://.godot/imported/mice ad.png-7d47039c8435bd61ab3f751e608f77c7.ctex"]
 
 [params]
 

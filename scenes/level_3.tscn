@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvy8613gojnwr"]
 
-[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scenes/level_1.gd" id="1_ax3dk"]
+[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scripts/level_1.gd" id="1_ax3dk"]
 [ext_resource type="AudioStream" uid="uid://dg3dug8585ojr" path="res://assets/soundtracks/soundtrack1.2.mp3" id="2_q2dsb"]
 [ext_resource type="AudioStream" uid="uid://do8gagdqifydy" path="res://assets/soundtracks/soundtrack2.2.mp3" id="3_p3r0x"]
 [ext_resource type="AudioStream" uid="uid://yklinnjq4db6" path="res://assets/soundtracks/soundtrack3.1.mp3" id="4_5xqnf"]
@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dbtqcqf1xjvwo" path="res://scenes/monitor_3.tscn" id="6_ax3dk"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_8uepa"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="8_q7pjq"]
-[ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="9_wa6ex"]
+[ext_resource type="PackedScene" uid="uid://xj0nlg7whj7j" path="res://scenes/level_4.tscn" id="9_ax3dk"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="10_sx8yt"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/phone.tscn" id="11_k5r18"]
-[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scenes/table.gd" id="12_w5nkq"]
+[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="12_w5nkq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("7_8uepa")
@@ -109,15 +109,18 @@ texture_region_size = Vector2i(32, 32)
 0:2/0/terrain_set = 0
 0:2/0/terrains_peering_bit/top_side = 0
 0:2/0/terrains_peering_bit/top_right_corner = 0
+0:2/0/custom_data_0 = true
 1:2/0 = 0
 1:2/0/terrain_set = 0
 1:2/0/terrains_peering_bit/top_left_corner = 0
 1:2/0/terrains_peering_bit/top_side = 0
 1:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0/custom_data_0 = true
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/terrains_peering_bit/top_left_corner = 0
 2:2/0/terrains_peering_bit/top_side = 0
+2:2/0/custom_data_0 = true
 0:3/0 = 0
 0:3/0/custom_data_0 = true
 1:3/0 = 0
@@ -164,7 +167,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("8_q7pjq")]
 z_index = -1
 position = Vector2(1770, 410)
-next_scene = ExtResource("9_wa6ex")
+next_scene = ExtResource("9_ax3dk")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
 volume_db = -15.746
