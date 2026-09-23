@@ -18,7 +18,9 @@ var god_mode: bool = false
 	
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("godmode"):
+	if Input.is_action_just_pressed("godmode") and god_mode:
+		god_mode = false 
+	elif Input.is_action_just_pressed("godmode") and not god_mode:
 		god_mode = true
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
