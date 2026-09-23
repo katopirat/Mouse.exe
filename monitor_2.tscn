@@ -13,8 +13,10 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="11_37ky3"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_f1tj1"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_oupev"]
+[ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="16_b15wo"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="16_dn6tj"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="17_b15wo"]
+[ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="17_crr5n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -205,6 +207,24 @@ position = Vector2(65, -18)
 
 [node name="ad4" parent="." unique_id=1344872642 instance=ExtResource("16_dn6tj")]
 position = Vector2(131, 28)
+
+[node name="ad_4" parent="." unique_id=19814729 instance=ExtResource("16_b15wo")]
+position = Vector2(104, 5)
+
+[node name="ad_3" parent="." unique_id=651148235 instance=ExtResource("17_crr5n")]
+position = Vector2(157, 72)
+
+[node name="ad_5" parent="." unique_id=50139118 instance=ExtResource("17_crr5n")]
+position = Vector2(41, 127)
+
+[node name="ad5" parent="." unique_id=383063068 instance=ExtResource("16_dn6tj")]
+position = Vector2(257, -41)
+
+[node name="ad6" parent="." unique_id=64329083 instance=ExtResource("17_b15wo")]
+position = Vector2(242, 112)
+
+[node name="ad_6" parent="." unique_id=2075723831 instance=ExtResource("16_b15wo")]
+position = Vector2(182, 141)
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
