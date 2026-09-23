@@ -14,13 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_t4jau"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_7e2h5"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_r7cvq"]
+[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_83tf8"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_dx64l"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_acdgk"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="16_kljjn"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_jh518"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="20_fqw3r"]
-[ext_resource type="Script" uid="uid://cyot3tpw7ivjr" path="res://scripts/table_level6.gd" id="25_5kl8g"]
+[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -62,6 +63,25 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61tt5"]
 radius = 7.333332
 height = 14.666664
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enqdf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jh518")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_83tf8")
+}],
+"loop": 1,
+"name": &"pressed",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvhoi"]
 atlas = ExtResource("20_fqw3r")
@@ -362,10 +382,10 @@ position = Vector2(0.33333334, -2.3333328)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_61tt5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/Window/BridgeButton" unique_id=274785424]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor/Computer/Window/BridgeButton" unique_id=2028174356]
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
-texture = ExtResource("17_jh518")
+sprite_frames = SubResource("SpriteFrames_enqdf")
 
 [node name="ad" type="Node2D" parent="Player/Monitor/Computer" unique_id=1511771645]
 position = Vector2(77.28564, -12.714268)
@@ -377,6 +397,8 @@ position = Vector2(141, 102)
 scale = Vector2(3, 3.0000005)
 collision_mask = 2
 script = ExtResource("19_kljjn")
+open_again = true
+open_again_seconds = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor/Computer/ad/Ad" unique_id=484762703]
 position = Vector2(1.3333321, -1.000001)
@@ -411,6 +433,16 @@ position = Vector2(52.04763, 1.7142925)
 scale = Vector2(1.1775924, 2.766194)
 shape = SubResource("RectangleShape2D_s8d16")
 
+[node name="Timer" type="Timer" parent="Player/Monitor/Computer/ad/Ad" unique_id=1002693850]
+one_shot = true
+
+[node name="Label" type="Label" parent="Player/Monitor/Computer/ad/Ad" unique_id=970398280]
+offset_left = 20.789017
+offset_top = 19.17582
+offset_right = 60.789017
+offset_bottom = 42.17582
+text = "aaa"
+
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
 scale = Vector2(3, 3)
@@ -433,7 +465,7 @@ rotation = 1.3476673
 scale = Vector2(2.66, 2.66)
 
 [node name="Table" type="Node2D" parent="." unique_id=1364222853]
-script = ExtResource("25_5kl8g")
+script = ExtResource("21_epfji")
 
 [node name="TileMap" type="TileMap" parent="Table" unique_id=157974211 groups=["table"]]
 z_index = -20
@@ -469,3 +501,5 @@ position = Vector2(1400, -434.99997)
 [connection signal="body_entered" from="Player/Monitor/Computer/ad/Ad/XButtonAd" to="Player/Monitor/Computer/ad/Ad/XButtonAd" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor/Computer/ad/Ad/XButtonAd" to="Player/Monitor/Computer/ad/Ad/XButtonAd" method="_on_body_exited"]
 [connection signal="closed" from="Player/Monitor/Computer/ad/Ad/XButtonAd" to="Player/Monitor/Computer/ad/Ad" method="_on_x_button_ad_closed"]
+[connection signal="timeout" from="Player/Monitor/Computer/ad/Ad/Timer" to="Player/Monitor/Computer/ad/Ad" method="_on_timer_timeout"]
+[connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]

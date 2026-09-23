@@ -61,7 +61,6 @@ func _check_edge() -> void:
 
 
 func _is_on_desk(point: Vector2) -> bool:
-
 	var cell = table_tilemap.local_to_map(table_tilemap.to_local(point))
 	var tile_data = table_tilemap.get_cell_tile_data(0, cell)
 	if tile_data != null and tile_data.get_custom_data("on_table"):

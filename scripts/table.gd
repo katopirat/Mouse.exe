@@ -18,7 +18,6 @@ func _on_bridge_button_open_bridge() -> void:
 		add_child(tilemap_2)
 		table_changed.emit(tilemap_2)
 
-
 func _on_bridge_button_close_bridge() -> void:
 	if tilemap_2.get_parent() != null:
 		remove_child(tilemap_2)
