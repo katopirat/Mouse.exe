@@ -11,11 +11,7 @@ config_version=5
 [application]
 
 config/name="mouse"
-<<<<<<< HEAD
 run/main_scene="uid://cq4gmmeq6o43x"
-=======
-run/main_scene="uid://vjyjnhlsh3kd"
->>>>>>> d4472b6d34a38e62108fc0c1a81704f7ff7e6abd
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

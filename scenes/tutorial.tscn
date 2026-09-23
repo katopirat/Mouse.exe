@@ -9,12 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_e13mp"]
 [ext_resource type="PackedScene" uid="uid://c12n3sy7ndyok" path="res://scenes/level_1.tscn" id="8_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="9_cmspm"]
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scenes/table.gd" id="10_ikfo1"]
-[ext_resource type="Script" uid="uid://dgcm7dkk7i8r8" path="res://scenes/tut_text.gd" id="11_g2equ"]
-=======
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="10_ikfo1"]
->>>>>>> d4472b6d34a38e62108fc0c1a81704f7ff7e6abd
+[ext_resource type="Script" uid="uid://dgcm7dkk7i8r8" path="res://scenes/tut_text.gd" id="11_g2equ"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("6_wr8iv")
