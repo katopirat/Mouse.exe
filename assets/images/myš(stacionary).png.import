@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1y80uva2c1fs"
-path="res://.godot/imported/windows xp.png-1ddeed604bd55d91f1588c1aa6ecb2ab.ctex"
+uid="uid://d3syi8sm0d8b2"
+path="res://.godot/imported/myš(stacionary).png-b3303ffe9194c7b070f3cdaefbcb047a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/windows xp.png"
-dest_files=["res://.godot/imported/windows xp.png-1ddeed604bd55d91f1588c1aa6ecb2ab.ctex"]
+source_file="res://assets/images/myš(stacionary).png"
+dest_files=["res://.godot/imported/myš(stacionary).png-b3303ffe9194c7b070f3cdaefbcb047a.ctex"]
 
 [params]
 

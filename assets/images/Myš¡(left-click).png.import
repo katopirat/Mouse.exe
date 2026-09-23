@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dci4kol8an23i"
-path="res://.godot/imported/Tilse_Set.png-9b90374cd3fad8b3edfa60e8e9ee1f23.ctex"
+uid="uid://g7ptwm61aaww"
+path="res://.godot/imported/Myš¡(left-click).png-5a00d73de2fea2e4aafacebfeae051c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilse_Set.png"
-dest_files=["res://.godot/imported/Tilse_Set.png-9b90374cd3fad8b3edfa60e8e9ee1f23.ctex"]
+source_file="res://assets/images/Myš¡(left-click).png"
+dest_files=["res://.godot/imported/Myš¡(left-click).png-5a00d73de2fea2e4aafacebfeae051c6.ctex"]
 
 [params]
 

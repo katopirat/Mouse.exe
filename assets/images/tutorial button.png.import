@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2gc1hu47ors"
-path="res://.godot/imported/počítač.png-ab4ff5b9187c0c9b6351b207601373be.ctex"
+uid="uid://dapigg7yf13l8"
+path="res://.godot/imported/tutorial button.png-f2688f0ac70004cdc425a4c0a8b25912.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/počítač.png"
-dest_files=["res://.godot/imported/počítač.png-ab4ff5b9187c0c9b6351b207601373be.ctex"]
+source_file="res://assets/images/tutorial button.png"
+dest_files=["res://.godot/imported/tutorial button.png-f2688f0ac70004cdc425a4c0a8b25912.ctex"]
 
 [params]
 
