@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://c0b6pk0gfpmp5" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://bgvpegds6xa5t" path="res://assets/images/os(menu).png" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://c0hprc8vb4qmn" path="res://assets/images/play-button.png" id="2_vjb58"]
-[ext_resource type="AudioStream" uid="uid://rs6lkx17fik5" path="res://assets/soundtracks/menu_loop1.2.mp3" id="4_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://cny78jgx2i5lq" path="res://assets/soundtracks/menu_loop1.1.mp3" id="4_v86rl"]
+[ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="5_v86rl"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="6_13sgg"]
+[ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="7_i6lef"]
 
 [node name="menu" type="Node2D" unique_id=148665112]
 script = ExtResource("1_con2f")
@@ -35,8 +38,20 @@ scale = Vector2(7.250001, 7.25)
 texture = ExtResource("2_vjb58")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=769634303]
-stream = ExtResource("4_mhnvy")
+stream = ExtResource("4_v86rl")
 autoplay = true
 parameters/looping = true
+
+[node name="ad_4" parent="." unique_id=19814729 instance=ExtResource("5_v86rl")]
+position = Vector2(-71, -230)
+scale = Vector2(2.6799998, 2.6799998)
+
+[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("6_13sgg")]
+position = Vector2(-902, -625)
+scale = Vector2(4.1600003, 4.1600003)
+
+[node name="ad_3" parent="." unique_id=651148235 instance=ExtResource("7_i6lef")]
+position = Vector2(-600, -216.00003)
+scale = Vector2(3.0799997, 3.0799997)
 
 [connection signal="pressed" from="Button" to="." method="_on_play_pressed"]

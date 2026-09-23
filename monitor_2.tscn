@@ -13,10 +13,10 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="11_37ky3"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_f1tj1"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_oupev"]
-[ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="14_0a6f0"]
-[ext_resource type="Texture2D" uid="uid://bpqcengsoymj3" path="res://assets/ads/ad_m_mysi_96x48.png" id="15_dn6tj"]
-[ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad.tscn" id="16_dn6tj"]
+[ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="16_b15wo"]
+[ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="16_dn6tj"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="17_b15wo"]
+[ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="17_crr5n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -77,26 +77,6 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_dn6tj")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn6tj"]
-size = Vector2(1.4444437, 1.3888879)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xvhx"]
-size = Vector2(40.66667, 22.333328)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jclro"]
-size = Vector2(4.9999924, 17.333332)
 
 [node name="monitor_2" type="Node2D" unique_id=683304094]
 
@@ -214,64 +194,40 @@ position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
 
-[node name="Ad" type="Area2D" parent="Computer" unique_id=1298482597]
-z_index = 1
-position = Vector2(188, 77)
-scale = Vector2(3, 3.0000005)
-collision_mask = 2
-script = ExtResource("14_0a6f0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad" unique_id=765156402]
-position = Vector2(1.3333321, -1.000001)
-scale = Vector2(0.47569442, 0.47569442)
-sprite_frames = SubResource("SpriteFrames_iopsf")
-
-[node name="XButtonAd" type="Area2D" parent="Computer/Ad" unique_id=1090636950]
-z_index = 1
-position = Vector2(17.666666, -4.999998)
-scale = Vector2(3, 3)
-collision_mask = 2
-script = ExtResource("8_0iedy")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Ad/XButtonAd" unique_id=268197725]
-position = Vector2(1.1157384, -1.4223119)
-scale = Vector2(0.18518463, 0.18518463)
-sprite_frames = SubResource("SpriteFrames_ps1uf")
-offset = Vector2(0.275, -0.19)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad/XButtonAd" unique_id=847113696]
-position = Vector2(1.111112, -1.444444)
-shape = SubResource("RectangleShape2D_dn6tj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Ad" unique_id=2051910429]
-position = Vector2(-1.3333282, -1.1666641)
-scale = Vector2(0.99999964, 0.9999996)
-shape = SubResource("RectangleShape2D_4xvhx")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer/Ad" unique_id=578741970]
-position = Vector2(21.5, 1.3333321)
-scale = Vector2(0.9999997, 0.9999997)
-shape = SubResource("RectangleShape2D_jclro")
-
-[node name="ad" parent="Computer" unique_id=1511771645 instance=ExtResource("16_dn6tj")]
-position = Vector2(17, 17)
-
-[node name="ad2" parent="Computer" unique_id=1392792786 instance=ExtResource("16_dn6tj")]
-position = Vector2(-24, -39)
-
 [node name="ad2" parent="." unique_id=272590773 instance=ExtResource("17_b15wo")]
-position = Vector2(13, -1)
+z_index = 1
+position = Vector2(3, 13)
 
 [node name="ad3" parent="." unique_id=481423033 instance=ExtResource("17_b15wo")]
-position = Vector2(90, 57)
+z_index = 1
+position = Vector2(81, 55)
+
+[node name="ad" parent="." unique_id=1511771645 instance=ExtResource("16_dn6tj")]
+position = Vector2(65, -18)
+
+[node name="ad4" parent="." unique_id=1344872642 instance=ExtResource("16_dn6tj")]
+position = Vector2(131, 28)
+
+[node name="ad_4" parent="." unique_id=19814729 instance=ExtResource("16_b15wo")]
+position = Vector2(104, 5)
+
+[node name="ad_3" parent="." unique_id=651148235 instance=ExtResource("17_crr5n")]
+position = Vector2(157, 72)
+
+[node name="ad_5" parent="." unique_id=50139118 instance=ExtResource("17_crr5n")]
+position = Vector2(41, 127)
+
+[node name="ad5" parent="." unique_id=383063068 instance=ExtResource("16_dn6tj")]
+position = Vector2(257, -41)
+
+[node name="ad6" parent="." unique_id=64329083 instance=ExtResource("17_b15wo")]
+position = Vector2(242, 112)
+
+[node name="ad_6" parent="." unique_id=2075723831 instance=ExtResource("16_b15wo")]
+position = Vector2(182, 141)
 
 [connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Computer/Window/XButton" to="Computer/Window" method="_on_x_button_closed"]
 [connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]
-[connection signal="body_entered" from="Computer/Ad" to="Computer/Ad" method="_on_body_entered"]
-[connection signal="body_exited" from="Computer/Ad" to="Computer/Ad" method="_on_body_exited"]
-[connection signal="body_entered" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_entered"]
-[connection signal="body_exited" from="Computer/Ad/XButtonAd" to="Computer/Ad/XButtonAd" method="_on_body_exited"]
-[connection signal="closed" from="Computer/Ad/XButtonAd" to="Computer/Ad" method="_on_x_button_ad_closed"]

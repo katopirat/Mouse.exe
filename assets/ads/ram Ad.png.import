@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds3a05e7ciwgu"
-path="res://.godot/imported/ad_m_orange_96x48.png-111583a9922fb6be2322aaab62ef0dca.ctex"
+uid="uid://bvfv5hyq54ps8"
+path="res://.godot/imported/ram Ad.png-7a6de67b5425c93991da2e94902f1f8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ads/ad_m_orange_96x48.png"
-dest_files=["res://.godot/imported/ad_m_orange_96x48.png-111583a9922fb6be2322aaab62ef0dca.ctex"]
+source_file="res://assets/ads/ram Ad.png"
+dest_files=["res://.godot/imported/ram Ad.png-7a6de67b5425c93991da2e94902f1f8a.ctex"]
 
 [params]
 

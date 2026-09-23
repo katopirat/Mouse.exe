@@ -189,7 +189,6 @@ position = Vector2(432.5, 128.5)
 [node name="Cursor" parent="Player/Monitor_1/Computer" parent_id_path=PackedInt32Array(831704774, 1439863440) index="3" unique_id=929380522]
 position = Vector2(273, 110.000015)
 collision_mask = 2
-SPEED = 20.0
 
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
@@ -235,7 +234,7 @@ position = Vector2(1962.0002, 44.000015)
 position = Vector2(691, -234)
 
 [node name="phone" parent="." unique_id=1009766919 instance=ExtResource("12_7gny6")]
-position = Vector2(-369.00003, -120.00001)
+position = Vector2(-409, -122.00001)
 rotation = 0.5071389
 scale = Vector2(2.66, 2.66)
 

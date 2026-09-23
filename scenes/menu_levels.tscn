@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="4_tyxl4"]
 [ext_resource type="PackedScene" uid="uid://bvy8613gojnwr" path="res://scenes/level_3.tscn" id="5_q26hj"]
 [ext_resource type="PackedScene" uid="uid://xj0nlg7whj7j" path="res://scenes/level_4.tscn" id="6_tyxl4"]
+[ext_resource type="AudioStream" uid="uid://cny78jgx2i5lq" path="res://assets/soundtracks/menu_loop1.1.mp3" id="7_q26hj"]
 
 [node name="menu levels" type="Node2D" unique_id=1982524767]
 
@@ -182,6 +183,11 @@ offset_top = 114.0
 offset_right = 825.0
 offset_bottom = 198.0
 script = ExtResource("2_x45eh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="18" unique_id=720584460]
+stream = ExtResource("7_q26hj")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="1" to="1" method="_on_pressed"]
 [connection signal="pressed" from="15" to="." method="_on_15_pressed"]
