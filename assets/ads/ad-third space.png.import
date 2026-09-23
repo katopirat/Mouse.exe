@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1y80uva2c1fs"
-path="res://.godot/imported/windows xp.png-1ddeed604bd55d91f1588c1aa6ecb2ab.ctex"
+uid="uid://dgrejspyemyje"
+path="res://.godot/imported/ad-third space.png-3f51bf2d4b1330f88b7a1d4e0973768e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/windows xp.png"
-dest_files=["res://.godot/imported/windows xp.png-1ddeed604bd55d91f1588c1aa6ecb2ab.ctex"]
+source_file="res://assets/ads/ad-third space.png"
+dest_files=["res://.godot/imported/ad-third space.png-3f51bf2d4b1330f88b7a1d4e0973768e.ctex"]
 
 [params]
 

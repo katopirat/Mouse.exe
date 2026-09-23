@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="5_v86rl"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="6_13sgg"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="7_i6lef"]
+[ext_resource type="PackedScene" uid="uid://dvbobqvlofy1q" path="res://scenes/ad_5.tscn" id="8_13sgg"]
 
 [node name="menu" type="Node2D" unique_id=148665112]
 script = ExtResource("1_con2f")
@@ -53,5 +54,10 @@ scale = Vector2(4.1600003, 4.1600003)
 [node name="ad_3" parent="." unique_id=651148235 instance=ExtResource("7_i6lef")]
 position = Vector2(-600, -216.00003)
 scale = Vector2(3.0799997, 3.0799997)
+
+[node name="ad_5" parent="." unique_id=1250378235 instance=ExtResource("8_13sgg")]
+z_index = 5
+position = Vector2(-388, -210)
+scale = Vector2(4.6800003, 4.6800003)
 
 [connection signal="pressed" from="Button" to="." method="_on_play_pressed"]
