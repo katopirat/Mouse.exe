@@ -1,9 +1,5 @@
 [gd_scene format=3 uid="uid://xj0nlg7whj7j"]
 
-[ext_resource type="Script" uid="uid://dlfv30y37e8ak" path="res://scripts/level_1.gd" id="1_7ewpb"]
-[ext_resource type="AudioStream" uid="uid://dg3dug8585ojr" path="res://assets/soundtracks/soundtrack1.2.mp3" id="2_py6g0"]
-[ext_resource type="AudioStream" uid="uid://do8gagdqifydy" path="res://assets/soundtracks/soundtrack2.2.mp3" id="3_g31h8"]
-[ext_resource type="AudioStream" uid="uid://yklinnjq4db6" path="res://assets/soundtracks/soundtrack3.1.mp3" id="4_hy5x3"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_dmmei"]
 [ext_resource type="PackedScene" uid="uid://d1h012ah48hkl" path="res://scenes/monitor_4.tscn" id="6_7ewpb"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_y88yj"]
@@ -140,8 +136,6 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Level4" type="Node2D" unique_id=659635860]
-script = ExtResource("1_7ewpb")
-playlist = Array[AudioStream]([ExtResource("2_py6g0"), ExtResource("3_g31h8"), ExtResource("4_hy5x3")])
 
 [node name="Player" parent="." unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_dmmei")]
 position = Vector2(8, 15)
@@ -169,9 +163,6 @@ z_index = -1
 position = Vector2(2391, -34)
 next_scene = ExtResource("9_q41qf")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071070308]
-volume_db = -15.746
-
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("10_s0ibv")]
 position = Vector2(361, -140)
 scale = Vector2(1, 1)
@@ -198,7 +189,6 @@ layer_0/tile_data = PackedInt32Array(-131069, 1, 1, -131068, 65537, 1, 4, 65537,
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_4/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="close_bridge" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_close_bridge"]
 [connection signal="open_bridge" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_open_bridge"]
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
 
 [editable path="Player/Monitor_4"]
