@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://d1h012ah48hkl"]
+
+[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="1_ebakw"]
+[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_ikvqc"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="3_obeyy"]
+[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="4_yluof"]
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="5_qkfqu"]
+[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_htc3w"]
+[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="7_ba58m"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="8_plw50"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="9_t2rvl"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="10_q7x8g"]
+[ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scenes/bridge_button_lever.gd" id="11_ebakw"]
+[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="12_h10oe"]
+[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="13_5mse1"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="14_ikvqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
+size = Vector2(420, 22.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
+size = Vector2(420, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qgb"]
+size = Vector2(22, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
+size = Vector2(21, 259)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io3pw"]
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ps1uf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_t2rvl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_q7x8g")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61tt5"]
+radius = 7.333332
+height = 14.666664
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2qjo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_h10oe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_5mse1")
+}],
+"loop": 1,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[node name="Monitor_4" type="Node2D" unique_id=683304094]
+
+[node name="Computer" type="Node2D" parent="." unique_id=426668735]
+position = Vector2(17, 17)
+
+[node name="MonitorBackground" type="TextureRect" parent="Computer" unique_id=1555825524]
+offset_left = 16.312958
+offset_top = 4.0
+offset_right = 467.687
+offset_bottom = 274.0
+texture = ExtResource("1_ebakw")
+
+[node name="MonitorBorder" type="TextureRect" parent="Computer" unique_id=1595793568]
+z_index = 11
+offset_left = -6.0
+offset_top = -24.0
+offset_right = 489.21362
+offset_bottom = 294.0
+texture = ExtResource("2_ikvqc")
+
+[node name="Borders" type="StaticBody2D" parent="Computer" unique_id=627878352]
+position = Vector2(32, 3)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Borders" unique_id=305933117]
+position = Vector2(210, -10.875)
+shape = SubResource("RectangleShape2D_dfkaw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer/Borders" unique_id=1660540070]
+position = Vector2(209, 271.5)
+shape = SubResource("RectangleShape2D_i8hxo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Computer/Borders" unique_id=1956463531]
+position = Vector2(-10, 127)
+shape = SubResource("RectangleShape2D_r3qgb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Computer/Borders" unique_id=1666617494]
+position = Vector2(430.5, 128.5)
+shape = SubResource("RectangleShape2D_p8vl5")
+
+[node name="Cursor" type="CharacterBody2D" parent="Computer" unique_id=145601617]
+z_index = 10
+position = Vector2(247, 129)
+scale = Vector2(1.1017417, 0.99504834)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_obeyy")
+speed = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=197235665]
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_cq2xo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Cursor" unique_id=2052527184]
+position = Vector2(7, 12)
+scale = Vector2(0.052734375, 0.052734375)
+texture = ExtResource("4_yluof")
+
+[node name="Window" type="Node2D" parent="Computer" unique_id=1658789405]
+position = Vector2(247, 45)
+script = ExtResource("5_qkfqu")
+
+[node name="TopBar" type="Node2D" parent="Computer/Window" unique_id=299562701]
+position = Vector2(152, 47)
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/TopBar" unique_id=1884024187]
+position = Vector2(-16.816341, 4.147223)
+scale = Vector2(1.5247535, 1.4999428)
+texture = ExtResource("6_htc3w")
+offset = Vector2(-0.075, -0.265)
+
+[node name="Background" type="Node2D" parent="Computer/Window" unique_id=155384492]
+position = Vector2(151, 89)
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/Window/Background" unique_id=1932621514]
+position = Vector2(-9.418182, 10.249992)
+scale = Vector2(1.5181818, 1.5181818)
+texture = ExtResource("7_ba58m")
+
+[node name="XButton" type="Area2D" parent="Computer/Window" unique_id=924538594]
+z_index = 1
+position = Vector2(184, 50.999992)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("8_plw50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/XButton" unique_id=1394919379]
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_io3pw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Window/XButton" unique_id=1828456112]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_ps1uf")
+offset = Vector2(0.275, -0.19)
+
+[node name="BridgeButton" type="Area2D" parent="Computer/Window" unique_id=1773590027]
+z_index = 1
+position = Vector2(141, 101.999985)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("11_ebakw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Window/BridgeButton" unique_id=963399133]
+position = Vector2(0.33333334, -2.3333328)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_61tt5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Computer/Window/BridgeButton" unique_id=323960686]
+position = Vector2(0.6666665, -1.3333335)
+scale = Vector2(0.8541666, 0.8541666)
+sprite_frames = SubResource("SpriteFrames_w2qjo")
+
+[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("14_ikvqc")]
+position = Vector2(254, 25)
+
+[connection signal="body_entered" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Window/XButton" to="Computer/Window/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Computer/Window/XButton" to="Computer/Window" method="_on_x_button_closed"]
+[connection signal="body_entered" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/Window/BridgeButton" to="Computer/Window/BridgeButton" method="_on_body_exited"]

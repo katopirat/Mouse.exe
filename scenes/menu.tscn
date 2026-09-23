@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cq4gmmeq6o43x"]
+
+[ext_resource type="Script" uid="uid://c0b6pk0gfpmp5" path="res://scripts/menu.gd" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://bgvpegds6xa5t" path="res://assets/images/os(menu).png" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://c0hprc8vb4qmn" path="res://assets/images/play-button.png" id="2_vjb58"]
+[ext_resource type="AudioStream" uid="uid://rs6lkx17fik5" path="res://assets/soundtracks/menu_loop1.2.mp3" id="4_mhnvy"]
+
+[node name="menu" type="Node2D" unique_id=148665112]
+script = ExtResource("1_con2f")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=454546369]
+position = Vector2(3, 3)
+scale = Vector2(6.680001, 6.680001)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1600483762]
+offset_left = -570.0
+offset_top = -321.0
+offset_right = -410.0
+offset_bottom = -221.0
+scale = Vector2(7.2000003, 7.2000003)
+texture = ExtResource("1_yqeox")
+
+[node name="Button" type="Button" parent="." unique_id=2009591693]
+self_modulate = Color(1, 1, 1, 0.6156863)
+z_index = 5
+offset_left = -166.0
+offset_top = -203.0
+offset_right = 246.0
+offset_bottom = -52.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=800932738]
+z_index = -1
+position = Vector2(150, 212)
+scale = Vector2(7.250001, 7.25)
+texture = ExtResource("2_vjb58")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=769634303]
+stream = ExtResource("4_mhnvy")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button" to="." method="_on_play_pressed"]

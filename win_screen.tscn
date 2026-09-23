@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cwio3r2ox7n2k"]
+
+[ext_resource type="AudioStream" uid="uid://dqwnlp3rlhbub" path="res://assets/soundtracks/soundtrack_peak.mp3" id="2_wmwda"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iopsf"]
+font_size = 80
+
+[node name="Node2D" type="Node2D" unique_id=1433401036]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1675076566]
+stream = ExtResource("2_wmwda")
+volume_db = -12.254
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=906509484]
+offset_left = 134.0
+offset_top = 68.0
+offset_right = 1283.0
+offset_bottom = 702.0
+theme_type_variation = &"HeaderLarge"
+text = "you won
+
+more comming soon..
+enjoy this fire song
+Made by GOD DOTS"
+label_settings = SubResource("LabelSettings_iopsf")
+uppercase = true
