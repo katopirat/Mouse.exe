@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_acdgk"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="16_kljjn"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_jh518"]
+[ext_resource type="PackedScene" uid="uid://cq4gmmeq6o43x" path="res://scenes/menu.tscn" id="19_enqdf"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="20_fqw3r"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
@@ -398,7 +399,7 @@ scale = Vector2(3, 3.0000005)
 collision_mask = 2
 script = ExtResource("19_kljjn")
 open_again = true
-open_again_seconds = 15.0
+open_again_seconds = 17.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor/Computer/ad/Ad" unique_id=484762703]
 position = Vector2(1.3333321, -1.000001)
@@ -455,6 +456,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("8_adfb8")]
 z_index = -1
 position = Vector2(-423, -888)
+next_scene = ExtResource("19_enqdf")
 
 [node name="cup2" parent="." unique_id=428504929 instance=ExtResource("10_epfji")]
 position = Vector2(379.9999, -343)
