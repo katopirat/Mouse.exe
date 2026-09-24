@@ -43,7 +43,6 @@ func _process(_delta: float) -> void:
 	if not open_again:
 		return
 	$Label.text = str(ceil($Timer.time_left))
-	print(str(ceil($Timer.time_left)))
 
 
 func _on_timer_timeout() -> void:
