@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_hnsmf"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_nossa"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="15_isj1j"]
+[ext_resource type="Texture2D" uid="uid://cqjbsn0qw08ja" path="res://assets/images/tileset_table.png" id="16_tblst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -82,7 +83,7 @@ animations = [{
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
-texture = ExtResource("5_fcfvj")
+texture = ExtResource("16_tblst")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -214,7 +215,7 @@ size = Vector2(759, 343.82678)
 size = Vector2(1437, 882.37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
-size = Vector2(302.75, 339.81458)"
+size = Vector2(302.75, 339.81458)
 
 [node name="Level1" type="Node2D" unique_id=659635860]
 
