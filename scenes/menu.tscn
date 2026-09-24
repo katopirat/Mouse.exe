@@ -3,13 +3,18 @@
 [ext_resource type="Script" uid="uid://c0b6pk0gfpmp5" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://bgvpegds6xa5t" path="res://assets/images/os(menu).png" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://c0hprc8vb4qmn" path="res://assets/images/play-button.png" id="2_vjb58"]
+[ext_resource type="Script" uid="uid://08go8lejcdbr" path="res://scenes/button_4.gd" id="4_i42df"]
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="5_v86rl"]
+[ext_resource type="Script" uid="uid://c47cduhsmgn1d" path="res://scenes/button_6.gd" id="6_7jp70"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="6_13sgg"]
+[ext_resource type="Script" uid="uid://c32hetfcuwc0b" path="res://scenes/button.gd" id="7_6cdou"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="7_i6lef"]
 [ext_resource type="PackedScene" uid="uid://dcfdgmxmcarup" path="res://scenes/ad_5.tscn" id="8_13sgg"]
 [ext_resource type="Texture2D" uid="uid://dapigg7yf13l8" path="res://assets/images/tutorial button.png" id="9_70i5f"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_mj5lg"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="11_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="11_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="12_6cdou"]
 
 [node name="menu" type="Node2D" unique_id=148665112]
 script = ExtResource("1_con2f")
@@ -43,22 +48,54 @@ texture = ExtResource("2_vjb58")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=769634303]
 autoplay = true
 
-[node name="ad_4" parent="." unique_id=19814729 instance=ExtResource("5_v86rl")]
-position = Vector2(-71, -230)
-scale = Vector2(2.6799998, 2.6799998)
+[node name="Button4" type="Button" parent="." unique_id=892058309]
+offset_left = 485.0
+offset_top = -51.999996
+offset_right = 493.0
+offset_bottom = -43.999996
+scale = Vector2(4.399917, 4.180503)
+script = ExtResource("4_i42df")
 
-[node name="ad2" parent="." unique_id=272590773 instance=ExtResource("6_13sgg")]
-position = Vector2(-902, -625)
-scale = Vector2(4.1600003, 4.1600003)
+[node name="ad_4" parent="Button4" unique_id=19814729 instance=ExtResource("5_v86rl")]
+position = Vector2(-121.13864, -42.81782)
+scale = Vector2(0.60910237, 0.6410712)
 
-[node name="ad_3" parent="." unique_id=651148235 instance=ExtResource("7_i6lef")]
-position = Vector2(-379.9999, -478)
-scale = Vector2(3.0799997, 3.0799997)
+[node name="Button6" type="Button" parent="." unique_id=1627060400]
+offset_left = -80.0
+offset_top = -343.0
+offset_right = -72.0
+offset_bottom = -335.0
+scale = Vector2(6.874947, 6.658821)
+script = ExtResource("6_7jp70")
 
-[node name="ad_5" parent="." unique_id=391030813 instance=ExtResource("8_13sgg")]
+[node name="ad2" parent="Button6" unique_id=272590773 instance=ExtResource("6_13sgg")]
+position = Vector2(-119.56457, -42.19966)
+scale = Vector2(0.6050956, 0.62473524)
+
+[node name="Button5" type="Button" parent="." unique_id=594626350]
+offset_left = 236.0
+offset_top = -265.99997
+offset_right = 244.0
+offset_bottom = -257.99997
+scale = Vector2(2.5465634, 2.5465634)
+script = ExtResource("7_6cdou")
+
+[node name="ad_3" parent="Button5" unique_id=651148235 instance=ExtResource("7_i6lef")]
+position = Vector2(-148.0769, -50.000004)
+scale = Vector2(0.74038446, 0.74038446)
+
+[node name="Button3" type="Button" parent="." unique_id=1100559963]
+offset_left = 511.0
+offset_top = 35.000004
+offset_right = 530.0
+offset_bottom = 55.46155
+scale = Vector2(3.945744, 3.4254353)
+script = ExtResource("7_6cdou")
+
+[node name="ad_5" parent="Button3" unique_id=391030813 instance=ExtResource("8_13sgg")]
 z_index = 9
-position = Vector2(-464, -262)
-scale = Vector2(4.96, 4.96)
+position = Vector2(-248.87578, -95.1704)
+scale = Vector2(1.2570509, 1.4479914)
 
 [node name="Button2" type="Button" parent="." unique_id=1900738276]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
@@ -86,5 +123,19 @@ position = Vector2(-323.00003, 77.25)
 scale = Vector2(7.0312505, 2.8090909)
 texture = ExtResource("11_mj5lg")
 
+[node name="Icon" type="Sprite2D" parent="." unique_id=852907917]
+position = Vector2(-559, 315)
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("11_ufwb2")
+
+[node name="RedX" type="Sprite2D" parent="." unique_id=563832219]
+position = Vector2(-550.25, 306.25)
+scale = Vector2(0.3888889, 0.3888889)
+texture = ExtResource("12_6cdou")
+
 [connection signal="pressed" from="Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_tut_button_2_pressed"]
