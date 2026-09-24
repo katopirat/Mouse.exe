@@ -278,6 +278,7 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(17, 17)
 
 [node name="MonitorBackground" type="TextureRect" parent="Player/Monitor/Computer" unique_id=1555825524]
+z_index = -4
 offset_left = 16.312958
 offset_top = 4.0
 offset_right = 467.687
@@ -394,8 +395,8 @@ scale = Vector2(1.1731074, 1.1731074)
 
 [node name="Ad" type="Area2D" parent="Player/Monitor/Computer/ad" unique_id=1116653530]
 z_index = 1
-position = Vector2(141, 102)
-scale = Vector2(3, 3.0000005)
+position = Vector2(131.51883, 115.687874)
+scale = Vector2(3.2435534, 3.2435539)
 collision_mask = 2
 script = ExtResource("19_kljjn")
 open_again = true
@@ -438,12 +439,34 @@ shape = SubResource("RectangleShape2D_s8d16")
 one_shot = true
 
 [node name="Label" type="Label" parent="Player/Monitor/Computer/ad/Ad" unique_id=970398280]
-visible = false
-offset_left = 20.789017
-offset_top = 19.17582
-offset_right = 60.789017
-offset_bottom = 42.17582
+z_index = -2
+offset_left = 13.482415
+offset_top = -20.604551
+offset_right = 53.482414
+offset_bottom = 2.3954487
+theme_override_colors/font_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
 text = "aaa"
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/ad/Ad/Label" unique_id=112319795]
+z_index = -1
+position = Vector2(15.019129, 8.524372)
+scale = Vector2(0.66543716, 0.4101547)
+texture = ExtResource("12_7e2h5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/ad/Ad/Label/Sprite2D" unique_id=1220067772]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/ad/Ad/Label/Sprite2D/Sprite2D" unique_id=456071130]
+
+[node name="TopBar" type="Sprite2D" parent="Player/Monitor/Computer/ad/Ad/Label/Sprite2D/Sprite2D/Sprite2D" unique_id=1469288284]
+position = Vector2(-0.7999878, -21.010132)
+scale = Vector2(1.1405004, -1.6321502)
+texture = ExtResource("11_t4jau")
+
+[node name="NormalX" type="Sprite2D" parent="Player/Monitor/Computer/ad/Ad/Label/Sprite2D/Sprite2D" unique_id=1107194729]
+z_index = 2
+position = Vector2(27.450384, -20.783295)
+scale = Vector2(1, 1.6537611)
+texture = ExtResource("14_dx64l")
 
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
