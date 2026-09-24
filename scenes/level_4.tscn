@@ -1,13 +1,86 @@
 [gd_scene format=3 uid="uid://xj0nlg7whj7j"]
 
+[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_s0ibv"]
+[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_kqmrt"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="4_u7ckc"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_dmmei"]
-[ext_resource type="PackedScene" uid="uid://d1h012ah48hkl" path="res://scenes/monitor_4.tscn" id="6_7ewpb"]
+[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_rg5ri"]
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_lp0k0"]
+[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_ifqri"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_y88yj"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="8_675ay"]
+[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_hxced"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="8_qsmat"]
 [ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="9_q41qf"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_sykev"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_11qgq"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="10_s0ibv"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_hgnpj"]
+[ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scripts/bridge_button_lever.gd" id="12_5g1ve"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="12_u7ckc"]
+[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_oiyts"]
+[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_eopq1"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="15_sn22s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
+size = Vector2(420, 22.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
+size = Vector2(420, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qgb"]
+size = Vector2(22, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
+size = Vector2(21, 259)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io3pw"]
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ps1uf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_11qgq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_hgnpj")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61tt5"]
+radius = 7.333332
+height = 14.666664
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2qjo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_oiyts")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_eopq1")
+}],
+"loop": 1,
+"name": &"pressed",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("7_y88yj")
@@ -147,9 +220,125 @@ position = Vector2(2, -1)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_speed = 4.5
 
-[node name="Monitor_4" parent="Player" unique_id=683304094 instance=ExtResource("6_7ewpb")]
+[node name="Monitor_4" type="Node2D" parent="Player" unique_id=683304094]
 z_index = 100
 position = Vector2(-575, -316)
+
+[node name="Computer" type="Node2D" parent="Player/Monitor_4" unique_id=426668735]
+position = Vector2(17, 17)
+
+[node name="MonitorBackground" type="TextureRect" parent="Player/Monitor_4/Computer" unique_id=1555825524]
+offset_left = 16.312958
+offset_top = 4.0
+offset_right = 467.687
+offset_bottom = 274.0
+texture = ExtResource("2_s0ibv")
+
+[node name="MonitorBorder" type="TextureRect" parent="Player/Monitor_4/Computer" unique_id=1595793568]
+z_index = 11
+offset_left = -6.0
+offset_top = -24.0
+offset_right = 489.21362
+offset_bottom = 294.0
+texture = ExtResource("3_kqmrt")
+
+[node name="Borders" type="StaticBody2D" parent="Player/Monitor_4/Computer" unique_id=627878352]
+position = Vector2(32, 3)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Borders" unique_id=305933117]
+position = Vector2(210, -10.875)
+shape = SubResource("RectangleShape2D_dfkaw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Borders" unique_id=1660540070]
+position = Vector2(209, 271.5)
+shape = SubResource("RectangleShape2D_i8hxo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Borders" unique_id=1956463531]
+position = Vector2(-10, 127)
+shape = SubResource("RectangleShape2D_r3qgb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Borders" unique_id=1666617494]
+position = Vector2(430.5, 128.5)
+shape = SubResource("RectangleShape2D_p8vl5")
+
+[node name="Cursor" type="CharacterBody2D" parent="Player/Monitor_4/Computer" unique_id=145601617]
+z_index = 10
+position = Vector2(247, 129)
+scale = Vector2(1.1017417, 0.99504834)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_u7ckc")
+speed = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Cursor" unique_id=197235665]
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_cq2xo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_4/Computer/Cursor" unique_id=2052527184]
+position = Vector2(7, 12)
+scale = Vector2(0.052734375, 0.052734375)
+texture = ExtResource("5_rg5ri")
+
+[node name="Window" type="Node2D" parent="Player/Monitor_4/Computer" unique_id=1658789405]
+position = Vector2(247, 45)
+script = ExtResource("6_lp0k0")
+
+[node name="TopBar" type="Node2D" parent="Player/Monitor_4/Computer/Window" unique_id=299562701]
+position = Vector2(152, 47)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_4/Computer/Window/TopBar" unique_id=1884024187]
+position = Vector2(-16.816341, 4.147223)
+scale = Vector2(1.5247535, 1.4999428)
+texture = ExtResource("7_ifqri")
+offset = Vector2(-0.075, -0.265)
+
+[node name="Background" type="Node2D" parent="Player/Monitor_4/Computer/Window" unique_id=155384492]
+position = Vector2(151, 89)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_4/Computer/Window/Background" unique_id=1932621514]
+position = Vector2(-9.418182, 10.249992)
+scale = Vector2(1.5181818, 1.5181818)
+texture = ExtResource("8_hxced")
+
+[node name="XButton" type="Area2D" parent="Player/Monitor_4/Computer/Window" unique_id=924538594]
+z_index = 1
+position = Vector2(184, 50.999992)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("9_sykev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Window/XButton" unique_id=1394919379]
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_io3pw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_4/Computer/Window/XButton" unique_id=1828456112]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_ps1uf")
+offset = Vector2(0.275, -0.19)
+
+[node name="BridgeButton" type="Area2D" parent="Player/Monitor_4/Computer/Window" unique_id=1773590027]
+z_index = 1
+position = Vector2(141, 101.999985)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("12_5g1ve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_4/Computer/Window/BridgeButton" unique_id=963399133]
+position = Vector2(0.33333334, -2.3333328)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_61tt5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_4/Computer/Window/BridgeButton" unique_id=323960686]
+position = Vector2(0.6666665, -1.3333335)
+scale = Vector2(0.8541666, 0.8541666)
+sprite_frames = SubResource("SpriteFrames_w2qjo")
+
+[node name="ad2" parent="Player/Monitor_4" unique_id=272590773 instance=ExtResource("15_sn22s")]
+position = Vector2(254, 25)
 
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
@@ -168,8 +357,12 @@ next_scene = ExtResource("9_q41qf")
 position = Vector2(361, -140)
 scale = Vector2(1, 1)
 
-[node name="Table" type="Node2D" parent="." unique_id=1364222853]
+[node name="Table" type="Node2D" parent="." unique_id=1364222853 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("12_u7ckc")
+tilemap_1 = NodePath("TileMap")
+tilemap_2 = NodePath("TileMap2")
+tilemap_dotted_1 = NodePath("TileMapDotted")
+tilemap_dotted_2 = NodePath("TileMapDotted2")
 
 [node name="TileMap" type="TileMap" parent="Table" unique_id=157974211 groups=["table"]]
 z_index = -20
@@ -179,6 +372,14 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-65537, 1, 1, -1, 196609, 1, 65535, 196609, 1, 131071, 1, 2, -131072, 65537, 1, -131071, 65537, 1, -131070, 65537, 1, -131069, 65537, 1, -131068, 131073, 1, -65532, 262145, 1, 4, 262145, 1, 65540, 131073, 2, 65536, 65537, 2, 65537, 65537, 2, 65538, 65537, 2, 65539, 65537, 2, -65536, 65537, 0, -65535, 65537, 0, -65534, 65537, 0, -65533, 65537, 0, 3, 65537, 0, 2, 65537, 0, 1, 65537, 0, 0, 65537, 0, -131065, 1, 1, -65529, 196609, 1, 7, 196609, 1, 65543, 1, 2, -131064, 65537, 1, -65528, 65537, 0, 8, 65537, 0, 65544, 65537, 2, -131063, 65537, 1, -65527, 65537, 0, 9, 65537, 0, 65545, 65537, 2, -131062, 65537, 1, -65526, 65537, 0, 10, 65537, 0, 65546, 65537, 2, -131061, 65537, 1, -65525, 65537, 0, 11, 65537, 0, 65547, 65537, 2, -131060, 131073, 1, -65524, 262145, 1, 12, 262145, 1, 65548, 131073, 2, -131057, 1, 1, -65521, 196609, 1, 15, 196609, 1, 65551, 1, 2, -131056, 65537, 1, -65520, 65537, 0, 16, 65537, 0, 65552, 65537, 2, -131055, 65537, 1, -65519, 65537, 0, 17, 65537, 0, 65553, 65537, 2, -131054, 65537, 1, -65518, 65537, 0, 18, 65537, 0, 65554, 65537, 2, -131053, 65537, 1, -65517, 65537, 0, 19, 65537, 0, 65555, 65537, 2, -131052, 65537, 1, -65516, 65537, 0, 20, 65537, 0, 65556, 65537, 2, -131051, 65537, 1, -65515, 65537, 0, 21, 65537, 0, 65557, 65537, 2, -131050, 65537, 1, -65514, 65537, 0, 22, 65537, 0, 65558, 65537, 2, -131049, 65537, 1, -65513, 65537, 0, 23, 65537, 0, 65559, 65537, 2, -131048, 65537, 1, -65512, 65537, 0, 24, 65537, 0, 65560, 65537, 2, -131047, 65537, 1, -65511, 65537, 0, 25, 65537, 0, 65561, 65537, 2, -131046, 131073, 1, -65510, 262145, 1, 26, 262145, 1, 65562, 131073, 2)
 
+[node name="TileMapDotted" type="TileMap" parent="Table" unique_id=153922663 groups=["table"]]
+z_index = -19
+scale = Vector2(3, 3)
+tile_set = ExtResource("8_qsmat")
+rendering_quadrant_size = 26
+format = 2
+layer_0/tile_data = PackedInt32Array(-131069, 196609, 2, -131065, 262145, 2, -131056, 327681, 2, -131061, 196609, 2, -65528, 327681, 1, 8, 327681, 1, -65520, 327681, 1, 16, 327681, 1, -65525, 327681, 4, 11, 327681, 4, -65533, 327681, 4, 3, 327681, 4, 65539, 196609, 3, 65544, 327681, 3, 65540, 262145, 3, 65541, 262145, 3, 65542, 262145, 3, 65543, 262145, 3, -131064, 327681, 2, -131068, 262145, 2, -131067, 262145, 2, -131066, 262145, 2, -131060, 262145, 2, -131059, 262145, 2, -131058, 262145, 2, -131057, 262145, 2, 65547, 196609, 3, 65552, 327681, 3, 65548, 262145, 3, 65549, 262145, 3, 65550, 262145, 3, 65551, 262145, 3, -131051, 196609, 2, -131046, 327681, 2, 65558, 262145, 3, 65559, 262145, 3, 65560, 262145, 3, 65561, 262145, 3, -131050, 262145, 2, -131049, 262145, 2, -131048, 262145, 2, -131047, 262145, 2, 65557, 196609, 3, 65562, 327681, 3, -65510, 327681, 1, -65515, 327681, 4, 21, 327681, 4, 26, 327681, 1)
+
 [node name="TileMap2" type="TileMap" parent="Table" unique_id=1562841799 groups=["table"]]
 z_index = -20
 scale = Vector2(3, 3)
@@ -187,9 +388,20 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-131069, 1, 1, -131068, 65537, 1, 4, 65537, 0, 65540, 65537, 2, 65539, 1, 2, 3, 196609, 1, -65533, 196609, 1, -65532, 65537, 0, -131067, 65537, 1, -65531, 65537, 0, 5, 65537, 0, 65541, 65537, 2, -131066, 65537, 1, -65530, 65537, 0, 6, 65537, 0, 65542, 65537, 2, -131065, 65537, 1, -65529, 65537, 0, 7, 65537, 0, 65543, 65537, 2, -131064, 131073, 1, -65528, 262145, 1, 8, 262145, 1, 65544, 131073, 2, -131061, 1, 1, -65525, 196609, 1, 11, 196609, 1, 65547, 1, 2, -131060, 65537, 1, -65524, 65537, 0, 12, 65537, 0, 65548, 65537, 2, -131059, 65537, 1, -65523, 65537, 0, 13, 65537, 0, 65549, 65537, 2, -131058, 65537, 1, -65522, 65537, 0, 14, 65537, 0, 65550, 65537, 2, -131057, 65537, 1, -65521, 65537, 0, 15, 65537, 0, 65551, 65537, 2, -131056, 131073, 1, -65520, 262145, 1, 16, 262145, 1, 65552, 131073, 2, -131051, 1, 1, -65515, 196609, 1, 21, 196609, 1, 65557, 1, 2, -131050, 65537, 1, -65514, 65537, 0, 22, 65537, 0, 65558, 65537, 2, -131049, 65537, 1, -65513, 65537, 0, 23, 65537, 0, 65559, 65537, 2, -131048, 65537, 1, -65512, 65537, 0, 24, 65537, 0, 65560, 65537, 2, -131047, 65537, 1, -65511, 65537, 0, 25, 65537, 0, 65561, 65537, 2, -131046, 131073, 1, -65510, 262145, 1, 26, 262145, 1, 65562, 131073, 2)
 
+[node name="TileMapDotted2" type="TileMap" parent="Table" unique_id=1883674275 groups=["table"]]
+z_index = -20
+scale = Vector2(3, 3)
+tile_set = ExtResource("8_qsmat")
+rendering_quadrant_size = 26
+format = 2
+layer_0/tile_data = PackedInt32Array(-65537, 196609, 2, -131072, 262145, 2, -131071, 262145, 2, -131070, 262145, 2, -131069, 262145, 2, -131068, 327681, 2, -65532, 327681, 1, -1, 327681, 4, 131071, 196609, 3, 65540, 327681, 3, 65536, 262145, 3, 65537, 262145, 3, 65538, 262145, 3, 65539, 262145, 3, 4, 327681, 1, 65535, 327681, 4, -131065, 196609, 2, -65529, 327681, 4, 7, 327681, 4, 65543, 196609, 3, -131064, 262145, 2, 65544, 262145, 3, -131063, 262145, 2, 65545, 262145, 3, -131062, 262145, 2, 65546, 262145, 3, -131061, 262145, 2, 65547, 262145, 3, -131060, 327681, 2, -65524, 327681, 1, 12, 327681, 1, 65548, 327681, 3, -131057, 196609, 2, -65521, 327681, 4, 15, 327681, 4, 65551, 196609, 3, -131056, 262145, 2, 65552, 262145, 3, -131055, 262145, 2, 65553, 262145, 3, -131054, 262145, 2, 65554, 262145, 3, -131053, 262145, 2, 65555, 262145, 3, -131052, 262145, 2, -131051, 262145, 2, -131050, 262145, 2, -131049, 262145, 2, -131048, 262145, 2, -131047, 262145, 2, 65556, 262145, 3, 65557, 262145, 3, 65558, 262145, 3, 65559, 262145, 3, 65560, 262145, 3, 65561, 262145, 3, 65562, 327681, 3, 26, 327681, 1, -65510, 327681, 1, -131046, 327681, 2)
+
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_4/Computer/Cursor" method="_on_player_moved_mouse"]
+[connection signal="body_entered" from="Player/Monitor_4/Computer/Window/XButton" to="Player/Monitor_4/Computer/Window/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_4/Computer/Window/XButton" to="Player/Monitor_4/Computer/Window/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Player/Monitor_4/Computer/Window/XButton" to="Player/Monitor_4/Computer/Window" method="_on_x_button_closed"]
+[connection signal="body_entered" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Player/Monitor_4/Computer/Window/BridgeButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Player/Monitor_4/Computer/Window/BridgeButton" method="_on_body_exited"]
 [connection signal="close_bridge" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_close_bridge"]
 [connection signal="open_bridge" from="Player/Monitor_4/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_open_bridge"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
-
-[editable path="Player/Monitor_4"]

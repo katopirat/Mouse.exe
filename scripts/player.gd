@@ -85,5 +85,6 @@ func _fall() -> void:
 	get_tree().reload_current_scene()
 
 
-func _on_table_table_changed(tilemap: Variant) -> void:
+func _on_table_table_changed(tilemap: TileMap) -> void:
+	print(tilemap)
 	table_tilemap = tilemap
