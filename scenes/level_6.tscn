@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="8_adfb8"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="8_kljjn"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_fqw3r"]
-[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="9_j7y2l"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="10_epfji"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_rd5uj"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/phone.tscn" id="11_83tf8"]
@@ -456,7 +455,6 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("8_adfb8")]
 z_index = -1
 position = Vector2(-423, -888)
-next_scene = ExtResource("9_j7y2l")
 
 [node name="cup2" parent="." unique_id=428504929 instance=ExtResource("10_epfji")]
 position = Vector2(379.9999, -343)
