@@ -11,10 +11,12 @@ const fall_drop_duration = 0.4
 signal falling_now(fall: bool)
 
 signal moved_mouse(dir)
-var can_move: bool = true
 var god_mode: bool = false
 
 
+
+func _ready() -> void:
+	Global.player_can_move = true
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
@@ -24,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 		
-	if not can_move:
+	if not Global.player_can_move:
 		return
 
 	var target_tilt = 0.0
@@ -70,7 +72,7 @@ func _is_on_desk(point: Vector2) -> bool:
 
 func _fall() -> void:
 	falling_now.emit(true)
-	can_move = false
+	Global.player_can_move = false
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.rotation = 0
 

@@ -16,7 +16,7 @@ func _on_body_exited(body: Node2D) -> void:
 		cursor_inside = false
 
 func _input(event):
-	if cursor_inside and event.is_action_pressed("click"):
+	if cursor_inside and event.is_action_pressed("click") and Global.player_can_move:
 		get_tree().reload_current_scene()
 
 func _on_x_button_ad_closed() -> void:

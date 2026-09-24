@@ -13,3 +13,5 @@ playlist = Array[AudioStream]([ExtResource("2_boywh"), ExtResource("3_gqg2j"), E
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=338838359]
 volume_db = -15.746
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
