@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b6ptev6bt0603"]
+
+[ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://assets/images/green button.png" id="1_km8c4"]
+[ext_resource type="Script" uid="uid://ccumd2c2b8nk8" path="res://scenes/physical_button.gd" id="1_x2n1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(121, 116)
+
+[node name="PhysicalButton" type="Area2D" unique_id=128993679]
+script = ExtResource("1_x2n1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1362982040]
+position = Vector2(-4, 8.999998)
+scale = Vector2(0.261, 0.261)
+texture = ExtResource("1_km8c4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1154128332]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_w8sno")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
