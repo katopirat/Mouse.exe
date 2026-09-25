@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_63d2t"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_va6c3"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="4_pc3at"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement (2).gd" id="4_pc3at"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_bgibu"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_wdtqu"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_73m23"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_3buw8"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="11_vhnap"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="12_vwfin"]
-[ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="12_vwjju"]
+[ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="12_vwjju"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="13_63d2t"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_rur20"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_srjk8"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="17_qku3a"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="18_xc1pa"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_63d2t"]
+[ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="26_va6c3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -427,6 +428,10 @@ tile_set = ExtResource("25_63d2t")
 rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 65537, 0, -196604, 196609, 0, -196603, 65537, 0, -131067, 131073, 0, -131068, 131073, 0, -131069, 131073, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 65537, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 65537, 0, 5, 262145, 1, 4, 131073, 0, 3, 131073, 0, 2, 65537, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, -196612, 65537, 1, -196611, 65537, 1, -196610, 65537, 1, -196609, 65537, 1, -262144, 65537, 1, -262143, 65537, 1, -262142, 65537, 1, -262141, 65537, 1, -262140, 65537, 1, -262139, 65537, 1, 65541, 262145, 1, 196604, 65537, 2, 196605, 65537, 2, 196606, 65537, 2, 196607, 65537, 2, 131072, 65537, 2, 131073, 65537, 2, 131074, 65537, 2, 131075, 65537, 2, 131076, 65537, 2, 131077, 131073, 2, 65536, 1, 0, -65541, 196609, 0, -131077, 196609, 0, -196613, 65537, 1, 196603, 65537, 2, 131067, 1, 0, 65531, 1, 0, -5, 1, 0, -196614, 65537, 1, -131078, 196609, 0, -65542, 196609, 0, -6, 1, 0, 65530, 1, 0, 131066, 1, 0, 196602, 65537, 2, -196615, 1, 1, -131079, 196609, 1, -65543, 196609, 1, -7, 196609, 1, 65529, 196609, 1, 131065, 196609, 1, 196601, 1, 2, -262138, 65537, 1, -262137, 65537, 1, -262136, 65537, 1, -262135, 65537, 1, -262134, 65537, 1, -262133, 65537, 1, 6, 65537, 2, 7, 65537, 2, -196602, 65537, 0, -196601, 65537, 0, -196600, 65537, 0, -196599, 65537, 0, -196598, 65537, 0, -196597, 196609, 1, -131066, 196609, 0, -131065, 131073, 0, -131064, 131073, 0, -131063, 131073, 0, -131062, 131073, 0, -131061, 196609, 1, 10, 65537, 2, 9, 65537, 2, 8, 65537, 2, -65530, 196609, 0, -65529, 65537, 0, -65528, 65537, 0, -65525, 65537, 0, -65524, 262145, 1, -131060, 262145, 1, -196596, 262145, 1, -262132, 131073, 1, 12, 131073, 2, 11, 65537, 2, -65526, 65537, 0, -65527, 65537, 0)
+
+[node name="book" parent="." unique_id=762146673 instance=ExtResource("26_va6c3")]
+position = Vector2(-566, 84)
+rotation = -0.5114416
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_2/Computer/Window/XButton" to="Player/Monitor_2/Computer/Window/XButton" method="_on_body_entered"]

@@ -13,7 +13,6 @@ config_version=5
 config/name="mouse"
 run/main_scene="uid://cq4gmmeq6o43x"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
 
 [autoload]
 

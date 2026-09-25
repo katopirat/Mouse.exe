@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bxjge7m4u0ofn"]
 
-[ext_resource type="Texture2D" uid="uid://c1y80uva2c1fs" path="res://assets/images/windows xp.png" id="1_6dhw4"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="1_fa1fk"]
+[ext_resource type="Texture2D" path="res://assets/images/windows xp.png" id="1_6dhw4"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement (2).gd" id="1_fa1fk"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="1_qh22o"]
-[ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://button.gd" id="4_spe5c"]
+[ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="4_spe5c"]
 [ext_resource type="Texture2D" uid="uid://dy2auhoxxffg8" path="res://green button.png" id="5_spe5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
