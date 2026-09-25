@@ -13,7 +13,7 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="8_qsmat"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_sykev"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_11qgq"]
-[ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/cup.tscn" id="10_s0ibv"]
+[ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="10_s0ibv"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_hgnpj"]
 [ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scripts/bridge_button_lever.gd" id="12_5g1ve"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="12_u7ckc"]
