@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://doop5ltffjk3d"]
+
+[node name="DinoCactus" type="Area2D" unique_id=144871686]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506923486]

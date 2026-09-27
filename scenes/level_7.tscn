@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_e7ajn"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_xkbpl"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_tcxil"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://cursor_movement.gd" id="4_1lha2"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_1lha2"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_mouq0"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_hq5o0"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_uthiy"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_6pum2"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_dn5to"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_btgtd"]
+[ext_resource type="Script" uid="uid://dnbd0lpyo3mg1" path="res://scripts/dino.gd" id="12_8c7da"]
+[ext_resource type="Texture2D" uid="uid://lrn1w2r47vra" path="res://assets/images/dino/dino_sheet_96x24.png" id="12_bktsf"]
 [ext_resource type="Texture2D" uid="uid://bjywhmemo015c" path="res://assets/images/dino/ground_128x12.png" id="12_g3jes"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="17_yc74b"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="18_40lyo"]
@@ -59,7 +61,52 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2urvg"]
+size = Vector2(16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c7da"]
+atlas = ExtResource("12_bktsf")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7ajn"]
+atlas = ExtResource("12_bktsf")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkbpl"]
+atlas = ExtResource("12_bktsf")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcxil"]
+atlas = ExtResource("12_bktsf")
+region = Rect2(48, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_w8sno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c7da")
+}],
+"loop": 1,
+"name": &"died",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7ajn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkbpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcxil")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(269, 30)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("17_yc74b")
@@ -295,20 +342,37 @@ scale = Vector2(0.49398094, 0.49398094)
 sprite_frames = SubResource("SpriteFrames_ps1uf")
 offset = Vector2(0.275, -0.19)
 
-[node name="DinoGame" type="Node" parent="Player/Monitor/Computer/Window" unique_id=80731969]
+[node name="DinoGame" type="Node2D" parent="Player/Monitor/Computer/Window" unique_id=1635143432]
 
 [node name="Dino" type="CharacterBody2D" parent="Player/Monitor/Computer/Window/DinoGame" unique_id=235398545]
+z_index = 110
+position = Vector2(-8.571428, 115.71428)
+scale = Vector2(1.9142997, 1.9142997)
+script = ExtResource("12_8c7da")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor/Computer/Window/DinoGame/Dino" unique_id=235945584]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_2urvg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor/Computer/Window/DinoGame/Dino" unique_id=516406583]
+position = Vector2(-4, -1)
+scale = Vector2(1.1666666, 1.1666666)
 sprite_frames = SubResource("SpriteFrames_w8sno")
+animation = &"run"
+frame_progress = 0.91795546
 
-[node name="Ground128x12" type="Sprite2D" parent="Player/Monitor/Computer/Window/DinoGame" unique_id=882990645]
+[node name="Ground" type="StaticBody2D" parent="Player/Monitor/Computer/Window/DinoGame" unique_id=1104379537]
+position = Vector2(144.2857, 184.2857)
+scale = Vector2(1.4700778, 1.4700778)
+
+[node name="Ground128x12" type="Sprite2D" parent="Player/Monitor/Computer/Window/DinoGame/Ground" unique_id=882990645]
 z_index = 110
-position = Vector2(-967, -300)
 scale = Vector2(2.0833333, 2.0833333)
 texture = ExtResource("12_g3jes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor/Computer/Window/DinoGame/Ground" unique_id=644531784]
+position = Vector2(-2.861023e-06, 0.9717741)
+shape = SubResource("RectangleShape2D_w8sno")
 
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
