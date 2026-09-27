@@ -84,9 +84,12 @@ func _fall() -> void:
 	fall_tween.tween_property(self, "position:y", position.y + fall_drop_distance, fall_drop_duration)
 
 	await $AnimatedSprite2D.animation_finished
-	get_tree().reload_current_scene()
+	die()
 
 
 func _on_table_table_changed(tilemap: TileMap) -> void:
 	print(tilemap)
 	table_tilemap = tilemap
+
+func die():
+	get_tree().reload_current_scene()

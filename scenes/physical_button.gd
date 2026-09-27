@@ -6,10 +6,6 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered) # Replace with function body.
 	body_exited.connect(_on_body_exited)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 
 
 

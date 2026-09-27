@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://63qttnhu2wnb"]
+
+[ext_resource type="Script" uid="uid://b7nrhsmkkt26c" path="res://scenes/dino_game/dino_cactus.gd" id="1_b5b3y"]
+[ext_resource type="Texture2D" uid="uid://c68cvcm72a7ej" path="res://assets/images/dino/cactus_small_1.png" id="2_b5b3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(10, 19.5)
+
+[node name="DinoCactus" type="Area2D" unique_id=144871686]
+z_index = 110
+scale = Vector2(2, 2)
+script = ExtResource("1_b5b3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506923486]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_w8sno")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=584909941]
+position = Vector2(-0.5, -10)
+texture = ExtResource("2_b5b3y")
