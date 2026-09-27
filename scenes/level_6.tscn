@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="16_kljjn"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_jh518"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
-[ext_resource type="PackedScene" uid="uid://3dqb7f5ff2vd" path="res://scenes/level_8.tscn" id="19_lgfmy"]
+[ext_resource type="PackedScene" uid="uid://bwn3jdabkn3as" path="res://scenes/level_7.tscn" id="19_lgfmy"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="20_fqw3r"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_enqdf"]
