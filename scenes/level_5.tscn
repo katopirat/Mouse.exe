@@ -385,7 +385,6 @@ tilemap_dotted_1 = NodePath("TileMapDotted")
 tilemap_dotted_2 = NodePath("TileMapDotted2")
 
 [node name="TileMap" type="TileMap" parent="Table" unique_id=157974211 groups=["table"]]
-visible = false
 z_index = -20
 position = Vector2(-1, 0)
 scale = Vector2(3, 3)
