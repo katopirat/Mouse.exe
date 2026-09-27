@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="1_6oyjk"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="2_thnjg"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement (2).gd" id="3_gwnxa"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="3_gwnxa"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="4_lerjo"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="5_tgeaq"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="6_xg0lv"]
@@ -123,7 +123,6 @@ collision_layer = 2
 collision_mask = 2
 up_direction = Vector2(0, 1)
 script = ExtResource("3_gwnxa")
-speed = 3.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Cursor" unique_id=197235665]
 scale = Vector2(1, 1.0000001)
