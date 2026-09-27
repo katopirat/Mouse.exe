@@ -344,6 +344,7 @@ scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("11_1ixal")
+speed = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=456736891]
 scale = Vector2(1, 1.0000001)
@@ -393,23 +394,6 @@ position = Vector2(-0.358764, 0.025942773)
 scale = Vector2(0.49398094, 0.49398094)
 sprite_frames = SubResource("SpriteFrames_xy3pj")
 offset = Vector2(0.275, -0.19)
-
-[node name="BridgeButton" type="Area2D" parent="Node2D/Player/Monitor_2/Computer/Window" unique_id=946575096]
-z_index = 1
-position = Vector2(141, 101.999985)
-scale = Vector2(2.9599993, 2.9599993)
-collision_mask = 2
-script = ExtResource("19_2qt1u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" unique_id=1190104988]
-position = Vector2(0.33333334, -2.3333328)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_nb8fk")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" unique_id=1609081661]
-position = Vector2(0.6666665, -1.3333335)
-scale = Vector2(0.8541666, 0.8541666)
-sprite_frames = SubResource("SpriteFrames_liol0")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1603334625]
 position = Vector2(24.999939, 130.99998)
@@ -469,7 +453,7 @@ scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_liol0")
 
 [node name="ad_3" parent="Node2D/Player/Monitor_2/Computer" unique_id=651148235 instance=ExtResource("25_88t1x")]
-position = Vector2(234, -45)
+position = Vector2(236, -53)
 
 [node name="ad_5" parent="Node2D/Player/Monitor_2/Computer" unique_id=391030813 instance=ExtResource("20_xixk7")]
 position = Vector2(-50, 69)
@@ -483,6 +467,18 @@ position = Vector2(53, -45)
 
 [node name="ad_6" parent="Node2D/Player/Monitor_2/Computer" unique_id=1869677919 instance=ExtResource("20_xixk7")]
 position = Vector2(232, 124)
+
+[node name="book" parent="Node2D/Player/Monitor_2/Computer" unique_id=650874171 instance=ExtResource("1_b522y")]
+position = Vector2(806, 562)
+
+[node name="cup" parent="Node2D/Player/Monitor_2/Computer" unique_id=747248252 instance=ExtResource("5_d2dd6")]
+position = Vector2(743, 1597)
+
+[node name="cup2" parent="Node2D/Player/Monitor_2/Computer" unique_id=1662465649 instance=ExtResource("5_d2dd6")]
+position = Vector2(925, 1714)
+
+[node name="cup3" parent="Node2D/Player/Monitor_2/Computer" unique_id=828917626 instance=ExtResource("5_d2dd6")]
+position = Vector2(1059, 1588)
 
 [node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=86316684]
 z_index = -30
@@ -498,9 +494,6 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window/XButton" to="Node2D/Player/Monitor_2/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window/XButton" to="Node2D/Player/Monitor_2/Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Node2D/Player/Monitor_2/Computer/Window/XButton" to="Node2D/Player/Monitor_2/Computer/Window" method="_on_x_button_closed"]
-[connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" method="_on_body_exited"]
-[connection signal="open_bridge" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window2/XButton" to="Node2D/Player/Monitor_2/Computer/Window2/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window2/XButton" to="Node2D/Player/Monitor_2/Computer/Window2/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Node2D/Player/Monitor_2/Computer/Window2/XButton" to="Node2D/Player/Monitor_2/Computer/Window2" method="_on_x_button_closed"]
