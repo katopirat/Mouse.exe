@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_5kl8g"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_ymwnx"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="8_adfb8"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement (2).gd" id="8_kljjn"]
+[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_kljjn"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_fqw3r"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="10_epfji"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_rd5uj"]
@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_acdgk"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="16_kljjn"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_jh518"]
-[ext_resource type="PackedScene" uid="uid://cq4gmmeq6o43x" path="res://scenes/menu.tscn" id="19_enqdf"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
+[ext_resource type="PackedScene" uid="uid://3dqb7f5ff2vd" path="res://scenes/level_8.tscn" id="19_lgfmy"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="20_fqw3r"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_enqdf"]
@@ -480,7 +480,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("8_adfb8")]
 z_index = -1
 position = Vector2(-423, -888)
-next_scene = ExtResource("19_enqdf")
+next_scene = ExtResource("19_lgfmy")
 
 [node name="cup2" parent="." unique_id=428504929 instance=ExtResource("10_epfji")]
 position = Vector2(379.9999, -343)
