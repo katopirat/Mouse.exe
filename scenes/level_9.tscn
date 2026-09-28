@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_xqj3w"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_lq6po"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="4_nttaj"]
+[ext_resource type="PackedScene" uid="uid://1io1o76t2fr4" path="res://scenes/level_10.tscn" id="6_314y7"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="6_fdyb3"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_xuraf"]
-[ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="8_qdumd"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="9_0dv5q"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="10_lq1qy"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="11_hgrlv"]
@@ -83,7 +83,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58vhh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ybmx"]
 texture = ExtResource("27_lyw3c")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -205,7 +205,7 @@ terrain_set_0/terrain_0/name = "table0"
 terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
-sources/1 = SubResource("TileSetAtlasSource_58vhh")
+sources/1 = SubResource("TileSetAtlasSource_8ybmx")
 
 [node name="level_9" type="Node2D" unique_id=1152663234]
 
@@ -259,7 +259,7 @@ position = Vector2(252, -162)
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("7_xuraf")]
 z_index = -1
 position = Vector2(548, -31)
-next_scene = ExtResource("8_qdumd")
+next_scene = ExtResource("6_314y7")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("9_0dv5q")]
 position = Vector2(-1, 2)
