@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="5_r3ni7"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_1mtuf"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="8_8y71b"]
-[ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="8_anvbo"]
+[ext_resource type="PackedScene" uid="uid://dh8fhu3ubcbq6" path="res://scenes/level_9.tscn" id="8_anvbo"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="9_uhk61"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="10_qhcnf"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="11_1ixal"]
@@ -88,7 +88,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ntqq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c7c4w"]
 texture = ExtResource("26_i147u")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -210,7 +210,7 @@ terrain_set_0/terrain_0/name = "table0"
 terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
-sources/1 = SubResource("TileSetAtlasSource_2ntqq")
+sources/1 = SubResource("TileSetAtlasSource_c7c4w")
 
 [node name="Node2D" type="Node2D" unique_id=348459230]
 
