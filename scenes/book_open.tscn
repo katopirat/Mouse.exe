@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cjp28pxbkutmv"]
+
+[ext_resource type="Texture2D" uid="uid://b3rmotvckwk2y" path="res://assets/images/book open.png" id="1_vqm7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(506, 338)
+
+[node name="book_open" type="Node2D" unique_id=1220220180]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=90064130]
+position = Vector2(191, -137)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2118976583]
+position = Vector2(-190.08002, 132)
+scale = Vector2(3.6400003, 3.64)
+texture = ExtResource("1_vqm7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=30256835]
+position = Vector2(-190, 137)
+shape = SubResource("RectangleShape2D_adpup")
