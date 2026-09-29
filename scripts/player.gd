@@ -8,18 +8,17 @@ const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = 0.0
-@export var finish_scene: PackedScene
+@onready var finish: Area2D = $"../Finish"
 signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
 var god_mode: bool = false
 @onready var finish_scene_animation = false
 @onready var finish_pos: Vector2
-signal animation_finished()
-
+signal animation_finished
 func _ready() -> void:
 	Global.player_can_move = true
-	
+	finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
@@ -37,16 +36,18 @@ func _physics_process(delta: float) -> void:
 				target_tilt = -max_tilt
 			elif velocity.x > 0:
 				target_tilt = max_tilt
-
+			
 			var direction := global_position.direction_to(finish_pos)
-			velocity = direction * speed
+			if global_position.distance_to(finish_pos)<10:
+				velocity = direction * 0
+			else:
+				velocity = direction*200
 			$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
 			move_and_slide()
-			if global_position.distance_to(finish_pos) < 10:
-				print(global_position.distance_to(finish_pos), "f")
+			if global_position.distance_to(finish_pos) < 10 and $AnimatedSprite2D.rotation<5:
 				emit_signal("animation_finished")
+				
 			
-		else:
 			return
 
 	var target_tilt = 0.0
