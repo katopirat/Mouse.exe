@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dapigg7yf13l8" path="res://assets/images/tutorial button.png" id="9_70i5f"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_mj5lg"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="11_mj5lg"]
-[ext_resource type="Texture2D" uid="uid://djk8r6cwf4spg" path="res://icon.svg" id="11_ufwb2"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="12_6cdou"]
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="15_7jp70"]
 
 [node name="menu" type="Node2D" unique_id=148665112]
 script = ExtResource("1_con2f")
@@ -126,12 +126,13 @@ texture = ExtResource("11_mj5lg")
 [node name="Icon" type="Sprite2D" parent="." unique_id=852907917]
 position = Vector2(-559, 315)
 scale = Vector2(0.171875, 0.171875)
-texture = ExtResource("11_ufwb2")
 
 [node name="RedX" type="Sprite2D" parent="." unique_id=563832219]
 position = Vector2(-550.25, 306.25)
 scale = Vector2(0.3888889, 0.3888889)
 texture = ExtResource("12_6cdou")
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("15_7jp70")]
 
 [connection signal="pressed" from="Button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
