@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="17_l6je1"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="18_cin7o"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="19_fe7ll"]
+[ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="19_uv3yh"]
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="20_jhdh4"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="21_cronh"]
 
@@ -375,6 +376,10 @@ shape = SubResource("CapsuleShape2D_yrtbf")
 position = Vector2(0.5181311, -1.5341523)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_dme7w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=1551028910]
+stream = ExtResource("19_uv3yh")
+volume_db = -16.845
 
 [node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=978546668]
 z_index = -30

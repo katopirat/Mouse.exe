@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="16_gxp3h"]
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="17_qku3a"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="18_xc1pa"]
+[ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="22_pc3at"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_63d2t"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="26_va6c3"]
 
@@ -393,6 +394,10 @@ shape = SubResource("CapsuleShape2D_61tt5")
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_w2qjo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" unique_id=771008623]
+stream = ExtResource("22_pc3at")
+volume_db = -16.845
 
 [node name="ad2" parent="Node2D/Player/Monitor_2" unique_id=272590773 instance=ExtResource("15_0na3t")]
 z_index = 1
