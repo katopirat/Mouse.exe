@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_enqdf"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="24_lgfmy"]
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="25_5kl8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -537,6 +538,8 @@ position = Vector2(1400, -434.99997)
 
 [node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("24_lgfmy")]
 position = Vector2(411, 3)
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("25_5kl8g")]
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor/Computer/Window/XButton" to="Player/Monitor/Computer/Window/XButton" method="_on_body_entered"]

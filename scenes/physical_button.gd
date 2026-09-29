@@ -9,7 +9,6 @@ func _ready() -> void:
 
 
 
-
 func _on_body_exited(body: Node2D) -> void:
 	print(body.name)
 	modulate = Color(1,1, 1, 1.0)

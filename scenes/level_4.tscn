@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://xj0nlg7whj7j"]
 
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_u7ckc"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_s0ibv"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_kqmrt"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_u7ckc"]
@@ -211,6 +212,8 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Level4" type="Node2D" unique_id=659635860]
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("1_u7ckc")]
 
 [node name="Player" parent="." unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_dmmei")]
 position = Vector2(8, 15)
