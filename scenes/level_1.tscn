@@ -283,6 +283,9 @@ layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076,
 
 [node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("22_tr1x6")]
 
+[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
+metadata/_edit_use_anchors_ = true
+
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]
@@ -292,3 +295,5 @@ layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076,
 [connection signal="open_bridge" from="Player/Monitor_1/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_open_bridge"]
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
+
+[editable path="CanvasLayer"]

@@ -16,10 +16,12 @@ var god_mode: bool = false
 @onready var finish_scene_animation = false
 @onready var finish_pos: Vector2
 signal animation_finished
+@onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 func _ready() -> void:
 	Global.player_can_move = true
 	finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
-
+	if shader_animation:
+		shader_animation.play("screen_open")
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
@@ -45,10 +47,13 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
 			move_and_slide()
 			if global_position.distance_to(finish_pos) < 10 and $AnimatedSprite2D.rotation<5:
+				if shader_animation:
+					shader_animation.play("close_screen")
+					await shader_animation.animation_finished
 				emit_signal("animation_finished")
 				
 			
-			return
+		return
 
 	var target_tilt = 0.0
 	if velocity.x < 0:

@@ -4,12 +4,127 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w8sno"]
 shader = ExtResource("1_4ikbi")
-shader_parameter/scanline_strength = 0.12
+shader_parameter/scanline_strength = 0.250000011875
 shader_parameter/curvature = 0.0400000019
-shader_parameter/vignette_strength = 0.25
-shader_parameter/aberration = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/aberration = 0.0015
 shader_parameter/noise_strength = 0.03
 shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_4ikbi"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.15, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.03, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.0015, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_yyda8"]
+resource_name = "close_screen"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 50, -0.3, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.8666667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.1, 0, 0, 0.14444445, 0.06666667, 1, -0.14444445, 0.005, 0, 0),
+"times": PackedFloat32Array(0, 0.8666667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.0015, -0.25, 0, 0.25, 0, 0.05, -0.14444445, 0.00025, 0, 0),
+"times": PackedFloat32Array(0, 0.8666667)
+}
+
+[sub_resource type="Animation" id="Animation_wygpf"]
+resource_name = "screen_open"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0, 0, -0.16111112, 1.6666667, 0, 0),
+"times": PackedFloat32Array(0, 0.96666664)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.16666667, 0.005, 0, 0, 0, -0.15, 0.16666669, 0, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.05, 0, 0, 0.1388889, 0.00025, 0.0015, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8666667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wygpf"]
+_data = {
+&"RESET": SubResource("Animation_4ikbi"),
+&"close_screen": SubResource("Animation_yyda8"),
+&"screen_open": SubResource("Animation_wygpf")
+}
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1370691632]
 
@@ -21,3 +136,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="AnimationTree" type="AnimationPlayer" parent="." unique_id=927830465]
+libraries/ = SubResource("AnimationLibrary_wygpf")
