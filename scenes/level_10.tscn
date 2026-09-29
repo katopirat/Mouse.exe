@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_rap3s"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_7o6cb"]
+[ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="4_uv3yh"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="5_fgiyy"]
-[ext_resource type="PackedScene" uid="uid://cwio3r2ox7n2k" path="res://win_screen.tscn" id="6_opx15"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="7_jgarw"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="8_guwt3"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="9_atjs7"]
@@ -81,7 +81,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3oodw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rap3s"]
 texture = ExtResource("21_cronh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -203,7 +203,7 @@ terrain_set_0/terrain_0/name = "table0"
 terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
-sources/1 = SubResource("TileSetAtlasSource_3oodw")
+sources/1 = SubResource("TileSetAtlasSource_rap3s")
 
 [node name="level_10" type="Node2D" unique_id=1880271457]
 
@@ -250,7 +250,7 @@ layer_0/tile_data = PackedInt32Array(65538, 65537, 1, 65539, 65537, 1, 65540, 65
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("5_fgiyy")]
 z_index = -1
 position = Vector2(1314, 149)
-next_scene = ExtResource("6_opx15")
+next_scene = ExtResource("4_uv3yh")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("7_jgarw")]
 position = Vector2(-1, 2)

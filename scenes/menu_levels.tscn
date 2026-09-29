@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://14ufq2vuf3rv" path="res://assets/images/arrow.png" id="9_xxrqb"]
 [ext_resource type="PackedScene" uid="uid://dh8fhu3ubcbq6" path="res://scenes/level_9.tscn" id="11_w3x0p"]
 [ext_resource type="PackedScene" uid="uid://1io1o76t2fr4" path="res://scenes/level_10.tscn" id="12_4h531"]
+[ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="13_bmi8d"]
 
 [node name="menu levels" type="Node2D" unique_id=1982524767]
 
@@ -133,6 +134,7 @@ offset_top = 114.0
 offset_right = 182.0
 offset_bottom = 198.0
 script = ExtResource("2_x45eh")
+scene = ExtResource("13_bmi8d")
 
 [node name="12" type="Button" parent="." unique_id=429868442]
 modulate = Color(1, 1, 1, 0.7411765)
