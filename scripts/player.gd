@@ -8,6 +8,7 @@ const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = 0.0
+@export var finish_scene: PackedScene
 signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
@@ -17,6 +18,7 @@ var god_mode: bool = false
 
 func _ready() -> void:
 	Global.player_can_move = true
+	
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
@@ -54,7 +56,11 @@ func update_texture() -> void:
 	else:
 		$AnimatedSprite2D.play("idle")
 
-
+func get_mouse_to_finish() -> void:
+	var finish = finish_scene.instantiate()
+	while global_position.distance_to(finish.global_position) < 1:
+		pass
+		
 func _check_edge() -> void:
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):

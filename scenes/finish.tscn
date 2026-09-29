@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df0pjkv6jhy22" path="res://scripts/finish.gd" id="1_07gpw"]
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="2_07gpw"]
+[ext_resource type="AudioStream" uid="uid://b0hnvdmd65d8b" path="res://assets/soundeffects/end_sound.wav" id="3_2pftv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
 size = Vector2(249, 131)
@@ -25,4 +26,9 @@ offset = Vector2(-3.13, 0)
 region_enabled = true
 region_rect = Rect2(0, 0, 128, 96)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=5567388]
+stream = ExtResource("3_2pftv")
+volume_db = 0.366
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
