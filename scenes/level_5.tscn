@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://b035tqqwad4ne" path="res://scenes/level_6.tscn" id="21_u1mn7"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="22_j5pwc"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_u1mn7"]
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_cijsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -419,6 +420,8 @@ tile_set = ExtResource("25_u1mn7")
 rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-65528, 196609, 0, 8, 262145, 1, 65544, 262145, 1, 327688, 65537, 1, 131080, 196609, 1, -917496, 65537, 1, 393224, 65537, 2, 196616, 1, 2, -131064, 262145, 1, -196600, 262145, 1, -262136, 262145, 1, -327672, 262145, 1, -393208, 262145, 1, -458744, 262145, 1, -524280, 262145, 1, -589816, 262145, 1, -655352, 262145, 1, -720888, 262145, 1, -786424, 262145, 1, -851960, 262145, 1)
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("26_cijsf")]
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_5/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_5/Computer/Window/XButton" to="Player/Monitor_5/Computer/Window/XButton" method="_on_body_entered"]
