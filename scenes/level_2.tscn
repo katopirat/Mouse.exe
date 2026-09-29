@@ -426,9 +426,9 @@ position = Vector2(242, 112)
 [node name="ad_6" parent="Node2D/Player/Monitor_2" unique_id=2075723831 instance=ExtResource("17_qku3a")]
 position = Vector2(182, 141)
 
-[node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=1086584400]
+[node name="Ground" type="TileMap" parent="Node2D" unique_id=1086584400]
 z_index = -30
-position = Vector2(1, -2)
+position = Vector2(1, 1)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_4nkto")
 rendering_quadrant_size = 26
