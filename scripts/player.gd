@@ -9,7 +9,7 @@ const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = 0.0
 signal falling_now(fall: bool)
-
+@onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
 var god_mode: bool = false
 
@@ -71,6 +71,7 @@ func _is_on_desk(point: Vector2) -> bool:
 
 
 func _fall() -> void:
+	faling_sound.play()
 	falling_now.emit(true)
 	Global.player_can_move = false
 	velocity = Vector2.ZERO

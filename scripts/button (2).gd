@@ -1,7 +1,7 @@
 extends Area2D
 var cursor_inside = false
 var is_pressed = false
-
+@onready var sound_player:AudioStreamPlayer = $AudioStreamPlayer
 signal open_bridge()
 
 func _on_body_entered(body: Node2D) -> void:
@@ -21,6 +21,7 @@ func _input(event):
 			pass
 		else:
 			open_bridge.emit()
+			sound_player.play()
 			$AnimatedSprite2D.play("pressed")
 			is_pressed = true
 		
