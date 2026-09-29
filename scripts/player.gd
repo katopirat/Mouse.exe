@@ -13,8 +13,9 @@ signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
 var god_mode: bool = false
-
-
+@onready var finish_scene_animation = false
+@onready var finish_pos: Vector2
+signal animation_finished()
 
 func _ready() -> void:
 	Global.player_can_move = true
@@ -29,7 +30,24 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 		
 	if not Global.player_can_move:
-		return
+		if finish_scene_animation:
+			print("scene")
+			var target_tilt = 0.0
+			if velocity.x < 0:
+				target_tilt = -max_tilt
+			elif velocity.x > 0:
+				target_tilt = max_tilt
+
+			var direction := global_position.direction_to(finish_pos)
+			velocity = direction * speed
+			$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
+			move_and_slide()
+			if global_position.distance_to(finish_pos) < 10:
+				print(global_position.distance_to(finish_pos), "f")
+				emit_signal("animation_finished")
+			
+		else:
+			return
 
 	var target_tilt = 0.0
 	if velocity.x < 0:
@@ -56,10 +74,9 @@ func update_texture() -> void:
 	else:
 		$AnimatedSprite2D.play("idle")
 
-func get_mouse_to_finish() -> void:
-	var finish = finish_scene.instantiate()
-	while global_position.distance_to(finish.global_position) < 1:
-		pass
+func _on_finish_get_mouse_to_finish(pos:Vector2) -> void:
+	finish_scene_animation = true
+	finish_pos = pos
 		
 func _check_edge() -> void:
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling

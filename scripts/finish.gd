@@ -3,7 +3,8 @@ extends Area2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var sound_effect: AudioStreamPlayer = $AudioStreamPlayer
 @export var next_scene: PackedScene
-
+signal get_mouse_to_finish(pos: Vector2)
+signal animation_finished
 func level_completed():
 	print(next_scene)
 	if next_scene:
@@ -15,5 +16,14 @@ func _on_body_entered(body: Node2D) -> void:
 		print ("you are in finish")
 		Global.player_can_move = false
 		sound_effect.play()
-		await sound_effect.finished
+		get_mouse_to_finish.emit(global_position)
+		await body.animation_finished
+		print('called')
 		level_completed()
+
+
+
+
+
+func _on_player_animation_finished() -> void:
+	pass # Replace with function body.
