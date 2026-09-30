@@ -4,9 +4,9 @@ uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
 uniform float scanline_strength : hint_range(0.0, 1.0) = 0.12;
 uniform float curvature : hint_range(0.0, 0.5) = 0.08;
-uniform float vignette_strength : hint_range(0.0, 1.0) = 0.25;
-uniform float aberration : hint_range(0.0, 0.01) = 0.0015;
-uniform float noise_strength : hint_range(0.0, 0.2) = 0.03;
+uniform float vignette_strength : hint_range(0.0, 50.0) = 0.25;
+uniform float aberration : hint_range(0.0, 0.03) = 0.0015;
+uniform float noise_strength : hint_range(0.0, 1.0) = 0.1;
 uniform vec4 tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 
 float rand(vec2 co) {
@@ -30,7 +30,7 @@ void fragment() {
 		float b = texture(SCREEN_TEXTURE, screen_uv - vec2(aberration, 0.0)).b;
 		vec3 col = vec3(r, g, b);
 
-		float scanline = sin(UV.y * 800.0) * 0.5 + 0.5;
+		float scanline = sin(UV.y * 800.0 - TIME * 5.0) * 0.5 + 0.5;
 		col *= 1.0 - scanline_strength * scanline;
 
 		float vignette = 1.0 - vignette_strength * r2;

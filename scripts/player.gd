@@ -8,18 +8,20 @@ const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = 0.0
-@export var finish_scene: PackedScene
+@onready var finish: Area2D = $"../Finish"
 signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
 var god_mode: bool = false
-
-
-
+@onready var finish_scene_animation = false
+@onready var finish_pos: Vector2
+signal animation_finished
+@onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 func _ready() -> void:
 	Global.player_can_move = true
-	
-
+	finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
+	if shader_animation:
+		shader_animation.play("screen_open")
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
@@ -29,6 +31,28 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 		
 	if not Global.player_can_move:
+		if finish_scene_animation:
+			print("scene")
+			var target_tilt = 0.0
+			if velocity.x < 0:
+				target_tilt = -max_tilt
+			elif velocity.x > 0:
+				target_tilt = max_tilt
+			
+			var direction := global_position.direction_to(finish_pos)
+			if global_position.distance_to(finish_pos)<10:
+				velocity = direction * 0
+			else:
+				velocity = direction*200
+			$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
+			move_and_slide()
+			if global_position.distance_to(finish_pos) < 10 and $AnimatedSprite2D.rotation<5:
+				if shader_animation:
+					shader_animation.play("close_screen")
+					await shader_animation.animation_finished
+				emit_signal("animation_finished")
+				
+			
 		return
 
 	var target_tilt = 0.0
@@ -56,10 +80,9 @@ func update_texture() -> void:
 	else:
 		$AnimatedSprite2D.play("idle")
 
-func get_mouse_to_finish() -> void:
-	var finish = finish_scene.instantiate()
-	while global_position.distance_to(finish.global_position) < 1:
-		pass
+func _on_finish_get_mouse_to_finish(pos:Vector2) -> void:
+	finish_scene_animation = true
+	finish_pos = pos
 		
 func _check_edge() -> void:
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
