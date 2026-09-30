@@ -2,7 +2,7 @@ extends Area2D
 
 @export var open_again: bool = false
 @export var open_again_seconds: float = 8.0
-
+@onready var shader_animation:AnimationPlayer = $"../../../../CanvasLayer/AnimationTree"
 var cursor_inside = false
 
 func _ready() -> void:
@@ -17,7 +17,13 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _input(event):
 	if cursor_inside and event.is_action_pressed("click") and Global.player_can_move:
-		get_tree().reload_current_scene()
+		if shader_animation:
+			shader_animation.play("glitch_close")
+			
+			await shader_animation.animation_finished
+			print("ani f")
+		if get_tree():
+			get_tree().reload_current_scene()
 
 func _on_x_button_ad_closed() -> void:
 	if open_again:

@@ -220,3 +220,5 @@ texture = ExtResource("9_xxrqb")
 [connection signal="pressed" from="17" to="." method="_on_17_pressed"]
 [connection signal="pressed" from="18" to="." method="_on_18_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+
+[editable path="CanvasLayer"]

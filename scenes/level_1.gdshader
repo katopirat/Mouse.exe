@@ -3,10 +3,10 @@ shader_type canvas_item;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
 uniform float scanline_strength : hint_range(0.0, 1.0) = 0.12;
-uniform float curvature : hint_range(0.0, 0.5) = 0.08;
+uniform float curvature : hint_range(0.0, 0.5) = 0.04;
 uniform float vignette_strength : hint_range(0.0, 50.0) = 0.25;
-uniform float aberration : hint_range(0.0, 0.03) = 0.0015;
-uniform float noise_strength : hint_range(0.0, 1.0) = 0.1;
+uniform float aberration : hint_range(0.0, 0.5) = 0.0015;
+uniform float noise_strength : hint_range(0.0, 10.0) = 0.1;
 uniform vec4 tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 
 float rand(vec2 co) {
