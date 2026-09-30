@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_83tf8"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_dx64l"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_acdgk"]
+[ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="15_kljjn"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="16_kljjn"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_jh518"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
@@ -390,6 +391,10 @@ shape = SubResource("CapsuleShape2D_61tt5")
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_enqdf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Monitor/Computer/Window/BridgeButton" unique_id=708145169]
+stream = ExtResource("15_kljjn")
+volume_db = -16.845
 
 [node name="ad" type="Node2D" parent="Player/Monitor/Computer" unique_id=1511771645]
 position = Vector2(77.28564, -12.714268)

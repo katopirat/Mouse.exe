@@ -114,6 +114,9 @@ func _fall() -> void:
 	fall_tween.tween_property(self, "position:y", position.y + fall_drop_distance, fall_drop_duration)
 
 	await $AnimatedSprite2D.animation_finished
+	if shader_animation:
+		shader_animation.play("close_screen")
+		await shader_animation.animation_finished
 	die()
 
 
