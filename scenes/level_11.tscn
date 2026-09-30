@@ -112,6 +112,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(48, 518)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatableBody2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(666, -31.000004)]
+}
 
 [sub_resource type="Animation" id="Animation_y36u2"]
 resource_name = "new_animation"
@@ -121,7 +133,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("AnimatableBody2D:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.033333335, 1.0333333, 2.0333333, 3.0333333),
@@ -133,13 +145,25 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("AnimatableBody2D2:position")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.033333335, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(48, 530.8833), Vector2(48, 1301)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatableBody2D3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.26666668, 1, 1.7666667, 2.5, 3.2666667, 3.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(666, -31.000004), Vector2(755.00006, -157), Vector2(843.99994, -29), Vector2(914, -152), Vector2(1011.99994, -37), Vector2(763.99994, -153.99998)]
 }
 
 [sub_resource type="Animation" id="Animation_memuk"]
@@ -333,11 +357,11 @@ scale = Vector2(3, 3)
 tile_set = ExtResource("2_t3i73")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(917500, 1, 1, 983036, 1, 2, 983037, 65537, 2, 983038, 65537, 2, 983039, 65537, 2, 917504, 65537, 2, 917501, 65537, 1, 917502, 65537, 1, 917503, 65537, 1, 851968, 262145, 1, 786432, 262145, 0, 720896, 262145, 0, 655360, 262145, 0, 655359, 1, 1, 720895, 1, 2, 524288, 262145, 0, 458752, 262145, 0, 393216, 262145, 0, 458751, 1, 2, 393215, 196609, 1, 327680, 262145, 1, 327679, 196609, 1, 262144, 262145, 1, 262143, 196609, 1, 196608, 262145, 1, 196607, 196609, 1, 131072, 262145, 1, 131071, 196609, 1, 65536, 262145, 1, 65535, 196609, 1, 0, 262145, 1, -1, 196609, 1, -65536, 1, 0, -65537, 1, 1, -131072, 65537, 1, 1, 1, 2, 2, 65537, 2, 3, 65537, 2, 4, 65537, 2, 5, 65537, 2, 6, 65537, 2, 7, 65537, 2, 8, 131073, 2, -131071, 65537, 1, -131070, 65537, 1, -131069, 65537, 1, -131068, 65537, 1, -131067, 65537, 1, -131066, 65537, 1, -131065, 65537, 1, -131064, 65537, 1, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -196599, 1, 1, -196595, 131073, 1, 65549, 131073, 2, 65545, 1, 2, 65546, 65537, 2, 65547, 65537, 2, 65548, 65537, 2, 9, 196609, 1, 13, 262145, 1, -65523, 262145, 1, -131059, 262145, 1, -196596, 65537, 1, -196597, 65537, 1, -196598, 65537, 1, -65525, 1, 0, -131061, 1, 0, -131062, 1, 0, -131063, 1, 0, -65527, 1, 0, -65526, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, -65524, 1, 0, -131060, 1, 0, 589824, 262145, 1)
+layer_0/tile_data = PackedInt32Array(917500, 1, 1, 983036, 1, 2, 983037, 65537, 2, 983038, 65537, 2, 983039, 65537, 2, 917504, 65537, 2, 917501, 65537, 1, 917502, 65537, 1, 917503, 65537, 1, 851968, 262145, 1, 786432, 262145, 0, 720896, 262145, 0, 655360, 262145, 0, 655359, 1, 1, 720895, 1, 2, 524288, 262145, 0, 458752, 262145, 0, 393216, 262145, 0, 458751, 1, 2, 393215, 196609, 1, 327680, 262145, 1, 327679, 196609, 1, 262144, 262145, 1, 262143, 196609, 1, 196608, 262145, 1, 196607, 196609, 1, 131072, 262145, 1, 131071, 196609, 1, 65536, 262145, 1, 65535, 196609, 1, 0, 262145, 1, -1, 196609, 1, -65537, 1, 1, -131072, 65537, 1, 1, 1, 2, 2, 65537, 2, 3, 65537, 2, 4, 65537, 2, 5, 65537, 2, 6, 65537, 2, 7, 65537, 2, 8, 65537, 2, -131071, 65537, 1, -131070, 65537, 1, -131069, 65537, 1, -131068, 65537, 1, -131067, 65537, 1, -131066, 65537, 1, -131065, 65537, 1, -131064, 65537, 1, 589824, 262145, 1, -131061, 65537, 1, -65528, 1, 0, -65529, 1, 0, -65530, 1, 0, -65531, 1, 0, -65532, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, -65536, 1, 0, -65525, 1, 0, -131063, 65537, 1, -131062, 65537, 1, -131060, 65537, 1, -65527, 1, 0, -65526, 1, 0, -65524, 1, 0, 9, 65537, 2, 10, 65537, 2, 11, 65537, 2, 12, 131073, 2, -131059, 1, 0, -65523, 1, 0, -65522, 1, 0, -131058, 1, 0, -131057, 1, 0, -65521, 1, 0, -131056, 1, 0, -65520, 1, 0, -131055, 262145, 1, -65519, 262145, 1, -196595, 1, 1, -196591, 131073, 1, -196592, 65537, 1, -196593, 65537, 1, -196594, 65537, 1, 17, 262145, 1, 13, 196609, 1, 65549, 1, 2, 65550, 65537, 2, 65551, 65537, 2, 65552, 65537, 2, 65553, 131073, 2, 15, 1, 0, 14, 1, 0, 16, 1, 0)
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("3_y36u2")]
 z_index = -1
-position = Vector2(1125, -83)
+position = Vector2(1502, -88)
 next_scene = ExtResource("4_memuk")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_k8idr")]
@@ -496,6 +520,19 @@ texture = ExtResource("3_t3i73")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D2" unique_id=978169146]
 position = Vector2(0, -0.88330066)
+shape = SubResource("RectangleShape2D_k8idr")
+
+[node name="AnimatableBody2D3" type="AnimatableBody2D" parent="." unique_id=1805712276]
+position = Vector2(666, -31.000004)
+rotation = 1.5843849
+scale = Vector2(1.0000007, 1.0000007)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D3" unique_id=105990382]
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("3_t3i73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D3" unique_id=182641116]
+position = Vector2(-1.5258778e-05, -2.999999)
 shape = SubResource("RectangleShape2D_k8idr")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=132210548]
