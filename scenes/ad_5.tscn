@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="4_hl1dg"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="5_xw11k"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="6_fj56r"]
+[ext_resource type="AudioStream" uid="uid://ditkvkn3hftsa" path="res://assets/soundeffects/ad_sound2.wav" id="7_6r7qd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvhoi"]
 atlas = ExtResource("2_6r7qd")
@@ -114,6 +115,9 @@ shape = SubResource("RectangleShape2D_aegk1")
 position = Vector2(21.5, 1.3333321)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_f2pmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ad" unique_id=314968705]
+stream = ExtResource("7_6r7qd")
 
 [connection signal="body_entered" from="Ad" to="Ad" method="_on_body_entered"]
 [connection signal="body_exited" from="Ad" to="Ad" method="_on_body_exited"]

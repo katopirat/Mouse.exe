@@ -3,7 +3,9 @@ extends Area2D
 @export var open_again: bool = false
 @export var open_again_seconds: float = 8.0
 @onready var shader_animation:AnimationPlayer = $"../../../../CanvasLayer/AnimationTree"
+@onready var click_ad_audio: AudioStreamPlayer = $AudioStreamPlayer
 var cursor_inside = false
+
 
 func _ready() -> void:
 	print("open_again")
@@ -17,6 +19,8 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _input(event):
 	if cursor_inside and event.is_action_pressed("click") and Global.player_can_move:
+		Global.player_can_move = false
+		click_ad_audio.play()
 		if shader_animation:
 			shader_animation.play("glitch_close")
 			
