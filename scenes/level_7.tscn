@@ -108,6 +108,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(269, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
+size = Vector2(30, 228.57144)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa8r4"]
 texture = ExtResource("17_yc74b")
 texture_region_size = Vector2i(32, 32)
@@ -394,6 +397,13 @@ offset_bottom = 24.428572
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "11/67"
 horizontal_alignment = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Player/Monitor/Computer/Window/DinoGame" unique_id=689663276]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor/Computer/Window/DinoGame/StaticBody2D" unique_id=966483962]
+position = Vector2(-59.285645, 99.99994)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3v8a5")
 
 [node name="Ground" type="TileMap" parent="." unique_id=1086584400]
 z_index = -30
