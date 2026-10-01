@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dxctdbs68cp8a"
+path="res://.godot/imported/mouse_os_font.fnt-1f3b0928b9f7bd483248b4f77db757f7.fontdata"
+
+[deps]
+
+source_file="res://mouse_os/font/mouse_os_font.fnt"
+dest_files=["res://.godot/imported/mouse_os_font.fnt-1f3b0928b9f7bd483248b4f77db757f7.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

@@ -4,11 +4,14 @@ extends Area2D
 @onready var sound_effect: AudioStreamPlayer = $AudioStreamPlayer
 @export var next_scene: PackedScene
 signal get_mouse_to_finish(pos: Vector2)
+
 func level_completed():
 	print(next_scene)
+	GameState.finish_level()           
 	if next_scene:
-		print("b")
 		get_tree().change_scene_to_packed(next_scene)
+	else:
+		GameState.go_to_menu()          
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

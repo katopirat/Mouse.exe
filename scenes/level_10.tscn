@@ -255,7 +255,9 @@ next_scene = ExtResource("4_uv3yh")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("7_jgarw")]
 position = Vector2(-1, 2)
+speed = 350.0
 table_tilemap = NodePath("../Table/TileMap")
+distance_before_falling = -20.0
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=1491153760]
 position_smoothing_speed = 4.5

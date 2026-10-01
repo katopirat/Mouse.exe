@@ -8,7 +8,9 @@ const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = -20
-@onready var finish: Area2D = $"../Finish"
+
+var finish: Area2D = null
+
 signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
 signal moved_mouse(dir)
@@ -17,9 +19,16 @@ var god_mode: bool = false
 @onready var finish_pos: Vector2
 signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
+
 func _ready() -> void:
 	Global.player_can_move = true
-	finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
+	if has_node("../Finish"):
+		finish = get_node("../Finish")
+		finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
+	else:
+		print("skibidi warning : no finish")
+		finish = null
+
 	if shader_animation:
 		shader_animation.play("screen_open")
 func _physics_process(delta: float) -> void:
