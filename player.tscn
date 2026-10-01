@@ -13,11 +13,12 @@
 [ext_resource type="Script" uid="uid://ci8ocyd72pble" path="res://scripts/mouse_animation.gd" id="8_b26j0"]
 [ext_resource type="Texture2D" uid="uid://c073wrr8xwreb" path="res://assets/animations/mys(breaking)/Myš8.png" id="9_7ahtn"]
 [ext_resource type="Texture2D" uid="uid://dbngp7d8dsb42" path="res://assets/animations/mys(breaking)/myš07.png" id="9_dx0e4"]
-[ext_resource type="AudioStream" uid="uid://bpqu7hk6q6c52" path="res://assets/soundeffects/fall.wav" id="9_n7ghd"]
+[ext_resource type="AudioStream" uid="uid://qel2ewsq76wc" path="res://assets/soundeffects/fall.wav" id="9_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://fhbfcrarl8mb" path="res://assets/animations/mys(breaking)/Myš9.png" id="10_7lmhl"]
 [ext_resource type="Texture2D" uid="uid://c7ggfvlsk7it1" path="res://assets/animations/mys(breaking)/myš08.png" id="10_jm5j8"]
 [ext_resource type="AudioStream" uid="uid://c4jaq2wo2gltj" path="res://assets/soundeffects/falling.wav" id="10_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="12_7hik5"]
+[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="19_pylmc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
 radius = 32.0
@@ -87,6 +88,14 @@ animations = [{
 script = ExtResource("1_onrkg")
 speed = null
 distance_before_falling = null
+
+[node name="ESC" parent="." unique_id=210250306 instance=ExtResource("19_pylmc")]
+top_level = true
+z_index = 999
+offset_left = -588.0
+offset_top = -291.0
+offset_right = -1740.0
+offset_bottom = -939.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
 shape = SubResource("CapsuleShape2D_rus8k")

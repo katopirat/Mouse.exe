@@ -5,26 +5,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41q4j"]
 size = Vector2(68, 107)
 
-[sub_resource type="Animation" id="Animation_41q4j"]
-resource_name = "new_animation"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatableBody2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5j3r"]
-_data = {
-&"new_animation": SubResource("Animation_41q4j")
-}
-
 [node name="myš zla" type="Node2D" unique_id=278762966]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=383415985]
@@ -36,6 +16,3 @@ texture = ExtResource("1_41q4j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1703131130]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_41q4j")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1973910878]
-libraries/ = SubResource("AnimationLibrary_a5j3r")

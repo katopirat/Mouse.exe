@@ -31,6 +31,8 @@ func _ready() -> void:
 
 	if shader_animation:
 		shader_animation.play("screen_open")
+		await shader_animation.animation_finished
+		shader_animation.play("RESET")
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
