@@ -22,6 +22,8 @@ func _ready() -> void:
 	finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
 	if shader_animation:
 		shader_animation.play("screen_open")
+		await shader_animation.animation_finished
+		shader_animation.play("RESET")
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
