@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_nossa"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="15_isj1j"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_tr1x6"]
+[ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_d5akn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -288,6 +289,10 @@ layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076,
 
 [node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
 metadata/_edit_use_anchors_ = true
+
+[node name="book_open" parent="." unique_id=1220220180 instance=ExtResource("23_d5akn")]
+position = Vector2(-508, 231)
+rotation = 0.18982886
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]

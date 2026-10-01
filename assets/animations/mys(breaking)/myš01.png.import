@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdr3ms3no6ber"
-path="res://.godot/imported/Myš1.png-f952e863045a2483583ab7a160ea69a5.ctex"
+uid="uid://d03qjri4rjl6l"
+path="res://.godot/imported/myš01.png-1d76386e6b657dbbe79bbd0a283411bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animations/mys(breaking)/Myš1.png"
-dest_files=["res://.godot/imported/Myš1.png-f952e863045a2483583ab7a160ea69a5.ctex"]
+source_file="res://assets/animations/mys(breaking)/myš01.png"
+dest_files=["res://.godot/imported/myš01.png-1d76386e6b657dbbe79bbd0a283411bb.ctex"]
 
 [params]
 
