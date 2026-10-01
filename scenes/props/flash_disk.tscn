@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://gh5mw6orqtrf"]
+
+[ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="1_5nabq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2wqd"]
+size = Vector2(16, 42)
+
+[node name="Flash disk" type="Node2D" unique_id=368840973]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1073091210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1802082712]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_g2wqd")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1501121549]
+texture = ExtResource("1_5nabq")

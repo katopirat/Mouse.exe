@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b17rahvlhugvg"]
 
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_ckvwl"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_0hilk"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="6_wr8iv"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_e13mp"]
@@ -139,15 +140,20 @@ radius = 245.05101
 
 [node name="Tutorial" type="Node2D" unique_id=659635860]
 
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("1_ckvwl")]
+
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("5_0hilk")]
 position = Vector2(713, 487)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
 
-[node name="Ground" type="TileMap" parent="." unique_id=1086584400]
-z_index = -30
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=542139049]
 scale = Vector2(3, 3)
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="Ground" type="TileMap" parent="Parallax2D" unique_id=1086584400]
+z_index = -30
 tile_set = SubResource("TileSet_4nkto")
 rendering_quadrant_size = 26
 format = 2

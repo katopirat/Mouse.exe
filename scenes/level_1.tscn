@@ -219,9 +219,12 @@ position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
 
-[node name="Ground" type="TileMap" parent="." unique_id=1086584400]
-z_index = -30
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="Ground" type="TileMap" parent="Parallax2D" unique_id=1086584400]
+z_index = -30
 tile_set = ExtResource("15_isj1j")
 rendering_quadrant_size = 26
 format = 2

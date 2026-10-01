@@ -486,9 +486,12 @@ position = Vector2(1059, 1588)
 [node name="book" parent="Node2D" unique_id=650874171 instance=ExtResource("1_b522y")]
 position = Vector2(252, 274)
 
-[node name="Ground" type="TileMap" parent="Node2D" unique_id=86316684]
-z_index = -30
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=1107296765]
 scale = Vector2(3, 3)
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="Ground" type="TileMap" parent="Node2D/Parallax2D" unique_id=86316684]
+z_index = -30
 tile_set = SubResource("TileSet_yw1vd")
 rendering_quadrant_size = 26
 format = 2
