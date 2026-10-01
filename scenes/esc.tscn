@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bme1rmnixy75w"]
+
+[ext_resource type="Script" uid="uid://b6eg6mlqqeawu" path="res://esc.gd" id="1_kwv5o"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="2_htsag"]
+[ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
+
+[node name="ESC" type="Control" unique_id=210250306]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -592.0
+offset_top = -283.0
+offset_right = -592.0
+offset_bottom = -283.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kwv5o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=591494249]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 151.0
+offset_right = 464.0
+offset_bottom = 217.0
+scale = Vector2(5.5199995, 5.5199995)
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=318677982]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_htsag")
+text = "MENU"
+script = ExtResource("3_j52a2")
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1619068738]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_htsag")
+text = "SKIBIDY"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
