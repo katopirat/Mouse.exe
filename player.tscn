@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhf1cbi4vddkg" path="res://assets/animations/mys(breaking)/Myš7.png" id="8_5tmop"]
 [ext_resource type="Script" uid="uid://ci8ocyd72pble" path="res://scripts/mouse_animation.gd" id="8_b26j0"]
 [ext_resource type="Texture2D" uid="uid://c073wrr8xwreb" path="res://assets/animations/mys(breaking)/Myš8.png" id="9_7ahtn"]
-[ext_resource type="AudioStream" uid="uid://bpqu7hk6q6c52" path="res://assets/soundeffects/fall.wav" id="9_n7ghd"]
+[ext_resource type="AudioStream" uid="uid://qel2ewsq76wc" path="res://assets/soundeffects/fall.wav" id="9_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://fhbfcrarl8mb" path="res://assets/animations/mys(breaking)/Myš9.png" id="10_7lmhl"]
 [ext_resource type="AudioStream" uid="uid://c4jaq2wo2gltj" path="res://assets/soundeffects/falling.wav" id="10_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://bcdb14epyhehe" path="res://assets/animations/mys(breaking)/Myš¡(stacionary)old.png" id="11_dx0e4"]
@@ -87,6 +87,7 @@ script = ExtResource("8_b26j0")
 
 [node name="AudioStreamPlayerFall" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=879465051]
 stream = ExtResource("9_n7ghd")
+volume_db = -11.167
 
 [node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
 stream = ExtResource("10_n7ghd")
