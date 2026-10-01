@@ -88,7 +88,7 @@ animations = [{
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
 speed = 350.0
-distance_before_falling = 0.0
+distance_before_falling = -20.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
