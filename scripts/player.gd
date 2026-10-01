@@ -7,7 +7,7 @@ const z_index_under_desk = -25
 const fall_drop_distance = 30.0
 const fall_drop_duration = 0.4
 @export var table_tilemap: TileMap
-@export var distance_before_falling: float = 0.0
+@export var distance_before_falling: float = -20
 @onready var finish: Area2D = $"../Finish"
 signal falling_now(fall: bool)
 @onready var faling_sound: AudioStreamPlayer = $AudioStreamPlayerFalling
