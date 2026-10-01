@@ -99,6 +99,7 @@ script = ExtResource("8_b26j0")
 
 [node name="AudioStreamPlayerFall" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=879465051]
 stream = ExtResource("9_n7ghd")
+volume_db = -11.167
 
 [node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
 stream = ExtResource("10_n7ghd")

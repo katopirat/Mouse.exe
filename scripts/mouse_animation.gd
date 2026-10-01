@@ -7,5 +7,5 @@ func _ready() -> void:
 	frame_changed.connect(_on_frame_changed)
 
 func _on_frame_changed() -> void:
-	if animation == "fall" and frame == 3:
+	if animation == "fall" and frame == 7:
 		sound_player.play()
