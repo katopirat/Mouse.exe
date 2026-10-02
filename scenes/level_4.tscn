@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_u7ckc"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_s0ibv"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_kqmrt"]
+[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="3_rg5ri"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_u7ckc"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_dmmei"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_rg5ri"]
@@ -223,6 +224,8 @@ table_tilemap = NodePath("../Table/TileMap")
 position = Vector2(2, -1)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_speed = 4.5
+
+[node name="ESC" parent="Player/Camera2D" unique_id=210250306 instance=ExtResource("3_rg5ri")]
 
 [node name="Monitor_4" type="Node2D" parent="Player" unique_id=683304094]
 z_index = 100

@@ -9,10 +9,10 @@ size = Vector2(68, 107)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=383415985]
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=744530705]
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("1_41q4j")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1703131130]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_41q4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=744530705]
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("1_41q4j")
