@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b035tqqwad4ne"]
 
+[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="2_rd5uj"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_5fwrv"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_lgfmy"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_5kl8g"]
@@ -272,6 +273,8 @@ position = Vector2(-558, -142)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
+
+[node name="ESC" parent="Player/Camera2D" unique_id=210250306 instance=ExtResource("2_rd5uj")]
 
 [node name="Monitor" type="Node2D" parent="Player" unique_id=683304094]
 z_index = 100
