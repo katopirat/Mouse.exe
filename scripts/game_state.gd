@@ -9,9 +9,9 @@ var levels = [
 	{"name": "Another spaggety?!", "scene": "res://scenes/level_5.tscn"},
 	{"name": "Clickbate ad", "scene": "res://scenes/level_6.tscn"},
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
-	{"name": "No name idk plssssssssssssssssssssssssssss", "scene": "res://scenes/level_8.tscn"},
+	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
-	{"name": "No name idk plssssssssssssssssssssssssssss", "scene": "res://scenes/level_10.tscn"},
+	{"name": "magic table", "scene": "res://scenes/level_10.tscn"},
 	{"name": "magic mice", "scene": "res://scenes/level_11.tscn"},
 ]
 

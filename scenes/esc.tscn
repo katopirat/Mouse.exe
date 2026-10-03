@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b6eg6mlqqeawu" path="res://esc.gd" id="1_kwv5o"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="2_htsag"]
 [ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
+[ext_resource type="PackedScene" uid="uid://d4b8dqjrbejty" path="res://scenes/menu_2.tscn" id="4_k1bfx"]
 
 [node name="ESC" type="Control" unique_id=210250306]
 process_mode = 3
@@ -33,6 +34,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
 text = "MENU"
 script = ExtResource("3_j52a2")
+menu_scene = ExtResource("4_k1bfx")
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1619068738]
 texture_filter = 1
