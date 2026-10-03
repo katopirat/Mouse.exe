@@ -4,6 +4,9 @@ extends Node2D
 
 #Different style playlists
 @export var chill_playlist: Array[AudioStream] = []
+@export var dramatic_playlist: Array[AudioStream] = []
+@export var other_playlist: Array[AudioStream] = []
+
 
 @export_enum("chill", "dramatic") var current_style: String = 'chill'
 
@@ -15,6 +18,11 @@ func get_playlist(style: String):
 	
 	if style == 'chill':
 		return chill_playlist
+	elif style == 'dramatic':
+		return dramatic_playlist
+	else:
+		return other_playlist 
+	
 		
 func _ready() -> void:
 	randomize()
