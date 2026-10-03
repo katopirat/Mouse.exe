@@ -223,6 +223,11 @@ position = Vector2(2, -1)
 position_smoothing_speed = 4.5
 
 [node name="ESC" parent="Player/Camera2D" unique_id=210250306 instance=ExtResource("2_bk4f1")]
+offset_left = 331.0
+offset_top = -211.0
+offset_right = 331.0
+offset_bottom = -211.0
+metadata/_edit_use_anchors_ = true
 
 [node name="monitor_3" type="Node2D" parent="Player" unique_id=683304094]
 z_index = 100

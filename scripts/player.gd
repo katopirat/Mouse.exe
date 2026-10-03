@@ -20,6 +20,8 @@ var god_mode: bool = false
 signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 @onready var col_shape = $CollisionShape2DFall.shape
+@onready var particles = $CPUParticles2D
+
 func _ready() -> void:
 	Global.player_can_move = true
 	if has_node("../Finish"):
@@ -33,6 +35,7 @@ func _ready() -> void:
 		shader_animation.play("screen_open")
 		await shader_animation.animation_finished
 		shader_animation.play("RESET")
+		
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
@@ -50,19 +53,27 @@ func _physics_process(delta: float) -> void:
 				target_tilt = max_tilt
 			
 			var direction := global_position.direction_to(finish_pos)
-			if global_position.distance_to(finish_pos)<10:
+			if global_position.distance_to(finish_pos) < 10:
 				velocity = direction * 0
 			else:
-				velocity = direction*200
+				velocity = direction * 200
 			$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
+			
+			# Pohyb v cíli
 			move_and_slide()
-			if global_position.distance_to(finish_pos) < 10 and $AnimatedSprite2D.rotation<5:
+			
+			# Částice při nárazu v cílové animaci
+			if get_slide_collision_count() > 0:
+				var colision = get_slide_collision(0)
+				particles.global_rotation = colision.get_normal().angle() # OPRAVENO: Přidáno .angle()
+				if not particles.emitting:
+					particles.emitting = true
+			
+			if global_position.distance_to(finish_pos) < 10 and $AnimatedSprite2D.rotation < 5:
 				if shader_animation:
 					shader_animation.play("close_screen")
 					await shader_animation.animation_finished
 				emit_signal("animation_finished")
-				
-			
 		return
 
 	var target_tilt = 0.0
@@ -74,7 +85,15 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
+	
 	move_and_slide()
+
+	if get_slide_collision_count() > 0:
+		var colision = get_slide_collision(0)
+		particles.global_rotation = colision.get_normal().angle() 
+		if not particles.emitting:
+			pass
+		particles.emitting = true
 
 	var moved_by = get_real_velocity() * delta
 	moved_mouse.emit(moved_by)
@@ -83,22 +102,20 @@ func _physics_process(delta: float) -> void:
 	if not god_mode:
 		_check_edge()
 
-
 func update_texture() -> void:
 	if Input.is_action_pressed("click"):
 		$AnimatedSprite2D.play("left_click")
 	else:
 		$AnimatedSprite2D.play("idle")
+
 func _check_edge() -> void:
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):
 		_fall()
-func _on_finish_get_mouse_to_finish(pos:Vector2) -> void:
+
+func _on_finish_get_mouse_to_finish(pos: Vector2) -> void:
 	finish_scene_animation = true
 	finish_pos = pos
-		
-
-
 
 func _is_on_desk(point: Vector2) -> bool:
 	var sample_points = [
@@ -114,7 +131,6 @@ func _is_on_desk(point: Vector2) -> bool:
 		if tile_data != null and tile_data.get_custom_data("on_table"):
 			return true
 	return false
-
 
 func _fall() -> void:
 	faling_sound.play()
@@ -135,7 +151,6 @@ func _fall() -> void:
 		shader_animation.play("close_screen")
 		await shader_animation.animation_finished
 	die()
-
 
 func _on_table_table_changed(tilemap: TileMap) -> void:
 	table_tilemap = tilemap

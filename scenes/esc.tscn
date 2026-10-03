@@ -1,23 +1,254 @@
 [gd_scene format=3 uid="uid://bme1rmnixy75w"]
 
 [ext_resource type="Script" uid="uid://b6eg6mlqqeawu" path="res://esc.gd" id="1_kwv5o"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_sixpf"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="2_htsag"]
 [ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
-[ext_resource type="PackedScene" uid="uid://d4b8dqjrbejty" path="res://scenes/menu_2.tscn" id="4_k1bfx"]
+
+[sub_resource type="Animation" id="Animation_sixpf"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/curvature")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/aberration")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../CanvasLayer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_agtwc"]
+resource_name = "fade_in"
+length = 1.011
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/curvature")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.9350000444125]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/aberration")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.03333334, 0.13333334, 0.26666668, 0.7),
+"transitions": PackedFloat32Array(1, 4.1410527, 36.758354, 0.4204478, 1.4640859),
+"update": 0,
+"values": [0.0, 0.1970000093575, 0.0070000003325, 0.0550000026125, 0.3450000163875]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.40400001919]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../CanvasLayer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.011),
+"transitions": PackedFloat32Array(15.454959, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_15q80"]
+_data = {
+&"RESET": SubResource("Animation_sixpf"),
+&"fade_in": SubResource("Animation_agtwc")
+}
+
+[sub_resource type="Shader" id="Shader_5hs24"]
+code = "shader_type canvas_item;
+
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+
+uniform float scanline_strength : hint_range(0.0, 1.0) = 0.12;
+uniform float curvature : hint_range(0.0, 0.5) = 0.04;
+uniform float vignette_strength : hint_range(0.0, 50.0) = 0.25;
+uniform float aberration : hint_range(0.0, 0.5) = 0.0015;
+uniform float noise_strength : hint_range(0.0, 10.0) = 0.1;
+uniform vec4 tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+
+float rand(vec2 co) {
+	return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void fragment() {
+	// lokální souřadnice v rámci obdélníku monitoru (0-1)
+	vec2 centered = UV * 2.0 - 1.0;
+	float r2 = dot(centered, centered);
+	vec2 warp_offset = centered * curvature * r2 * 0.5;
+
+	if (UV.x + warp_offset.x < 0.0 || UV.x + warp_offset.x > 1.0 || UV.y + warp_offset.y < 0.0 || UV.y + warp_offset.y > 1.0) {
+		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
+	} else {
+		// vzorkuje se ze skutečné obrazovkové pozice, ne z lokálního UV
+		vec2 screen_uv = SCREEN_UV + warp_offset;
+
+		float r = texture(SCREEN_TEXTURE, screen_uv + vec2(aberration, 0.0)).r;
+		float g = texture(SCREEN_TEXTURE, screen_uv).g;
+		float b = texture(SCREEN_TEXTURE, screen_uv - vec2(aberration, 0.0)).b;
+		vec3 col = vec3(r, g, b);
+
+		float scanline = sin(UV.y * 800.0 - TIME * 5.0) * 0.5 + 0.5;
+		col *= 1.0 - scanline_strength * scanline;
+
+		float vignette = 1.0 - vignette_strength * r2;
+		col *= vignette;
+
+		float n = rand(UV + vec2(TIME * 0.001, 0.0));
+		col += (n - 0.5) * noise_strength;
+
+		col *= tint.rgb;
+
+		COLOR = vec4(col, 1.0);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2wukj"]
+shader = SubResource("Shader_5hs24")
+shader_parameter/scanline_strength = 0.0
+shader_parameter/curvature = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/aberration = 0.0
+shader_parameter/noise_strength = 0.0
+shader_parameter/tint = Color(1, 1, 1, 1)
 
 [node name="ESC" type="Control" unique_id=210250306]
 process_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=337021617]
+root_node = NodePath("ColorRect")
+libraries/ = SubResource("AnimationLibrary_15q80")
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=1638561431]
+visible = false
+material = SubResource("ShaderMaterial_2wukj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.18039216)
+
+[node name="CanvasLayer" type="Control" parent="." unique_id=1143439753]
+visible = false
 top_level = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -592.0
-offset_top = -283.0
-offset_right = -592.0
-offset_bottom = -283.0
+offset_left = -8232.0
+offset_top = 6340.0
+offset_right = -8232.0
+offset_bottom = 6340.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_sixpf")
 script = ExtResource("1_kwv5o")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=591494249]
@@ -34,12 +265,13 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
 text = "MENU"
 script = ExtResource("3_j52a2")
-menu_scene = ExtResource("4_k1bfx")
+menu_scene_path = "res://scenes/menu_2.tscn"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1619068738]
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
-text = "SKIBIDY"
+text = "BACK"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="CanvasLayer" method="_on_button_2_pressed"]

@@ -28,7 +28,10 @@ size = Vector2(21, 259)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
 
-[node name="Level1" type="Node2D" unique_id=659635860]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(502.14786, 313.59772)
+
+[node name="Menu" type="Node2D" unique_id=659635860]
 
 [node name="Monitor_1" type="Node2D" parent="." unique_id=831704774]
 z_index = 100
@@ -144,11 +147,15 @@ offset_top = 99.04034
 offset_right = 206.89742
 offset_bottom = 115.019165
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Monitor_1" unique_id=1553120702]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/StaticBody2D" unique_id=1226680098]
+position = Vector2(241.07382, 146.79883)
+shape = SubResource("RectangleShape2D_w8sno")
+
 [node name="Player" parent="." unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("1_mv33c")]
 position = Vector2(158, 149)
-speed = 350.0
 table_tilemap = NodePath("../Table/TileMap")
-distance_before_falling = -20.0
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

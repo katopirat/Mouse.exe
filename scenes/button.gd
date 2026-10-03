@@ -1,5 +1,5 @@
 extends Button
-@export var menu_scene : PackedScene
+@export var menu_scene_path : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_packed(menu_scene)
+	get_tree().change_scene_to_file(menu_scene_path)
