@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="12_7hik5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
-radius = 27.0
-height = 88.0
+radius = 31.0
+height = 104.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
@@ -83,6 +83,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
+radius = 17.0
+height = 56.0
+
 [node name="Node2D" type="CharacterBody2D" unique_id=1646158579]
 script = ExtResource("1_onrkg")
 
@@ -101,3 +105,6 @@ volume_db = -11.167
 
 [node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
 stream = ExtResource("10_n7ghd")
+
+[node name="CollisionShape2DFall" type="CollisionShape2D" parent="." unique_id=699902764]
+shape = SubResource("CapsuleShape2D_iopsf")
