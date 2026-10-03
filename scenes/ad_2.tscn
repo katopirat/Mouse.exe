@@ -50,13 +50,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk1x0"]
-size = Vector2(1.4444437, 1.3888879)
+size = Vector2(1.5000005, 1.4722216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ug3"]
-size = Vector2(40.66667, 22.333328)
+size = Vector2(40.66667, 22.666672)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58hpb"]
-size = Vector2(4.9999924, 17.333332)
+size = Vector2(4.9999924, 17.666664)
 
 [node name="ad2" type="Node2D" unique_id=272590773]
 
@@ -75,7 +75,7 @@ animation = &"new_animation"
 
 [node name="XButtonAd" type="Area2D" parent="Ad" unique_id=361209545]
 z_index = 1
-position = Vector2(17.666666, -4.999998)
+position = Vector2(18.333332, -5.999998)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("4_0htpy")
@@ -84,20 +84,21 @@ script = ExtResource("4_0htpy")
 position = Vector2(1.1157384, -1.4223119)
 scale = Vector2(0.18518463, 0.18518463)
 sprite_frames = SubResource("SpriteFrames_xrwtw")
-offset = Vector2(0.275, -0.19)
+offset = Vector2(-0.22, -0.14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad/XButtonAd" unique_id=419992551]
-position = Vector2(1.111112, -1.444444)
+position = Vector2(1.081, -1.454)
+scale = Vector2(1.101, 1.11)
 shape = SubResource("RectangleShape2D_jk1x0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad" unique_id=1297504784]
-position = Vector2(-1.3333282, -1.1666641)
-scale = Vector2(0.99999964, 0.9999996)
+position = Vector2(-1.3333282, -1.3333359)
+scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_o1ug3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ad" unique_id=1086069822]
-position = Vector2(21.5, 1.3333321)
-scale = Vector2(0.9999997, 0.9999997)
+position = Vector2(21.499996, 1.1666641)
+scale = Vector2(0.99999964, 0.9999995)
 shape = SubResource("RectangleShape2D_58hpb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ad" unique_id=974453871]

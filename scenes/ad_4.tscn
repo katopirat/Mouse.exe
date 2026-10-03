@@ -85,7 +85,7 @@ size = Vector2(1.6666667, 1.625)
 size = Vector2(40.66667, 22.333328)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjn2p"]
-size = Vector2(4.9999924, 17.333332)
+size = Vector2(4.9999924, 16.999998)
 
 [node name="ad_4" type="Node2D" unique_id=19814729]
 
@@ -125,8 +125,8 @@ scale = Vector2(0.99999964, 0.9999996)
 shape = SubResource("RectangleShape2D_17eke")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ad" unique_id=1360303296]
-position = Vector2(21.5, 1.3333321)
-scale = Vector2(0.9999997, 0.9999997)
+position = Vector2(21.499996, 1.5)
+scale = Vector2(0.99999964, 0.9999996)
 shape = SubResource("RectangleShape2D_bjn2p")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ad" unique_id=1665671934]

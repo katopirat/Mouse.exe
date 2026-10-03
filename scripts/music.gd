@@ -2,10 +2,20 @@ extends Node2D
 
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
-@export var playlist: Array[AudioStream] = []
+#Different style playlists
+@export var chill_playlist: Array[AudioStream] = []
+
+@export_enum("chill", "dramatic") var current_style: String = 'chill'
+
+@onready var playlist: Array[AudioStream] = chill_playlist
 @onready var songs_len: int = playlist.size()
 @onready var current_track_index: int = randi_range(0, songs_len-1)
-
+	
+func get_playlist(style: String):
+	
+	if style == 'chill':
+		return chill_playlist
+		
 func _ready() -> void:
 	randomize()
 	

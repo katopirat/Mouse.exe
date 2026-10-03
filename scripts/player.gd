@@ -19,7 +19,7 @@ var god_mode: bool = false
 @onready var finish_pos: Vector2
 signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
-
+@onready var col_shape = $CollisionShape2D.shape
 func _ready() -> void:
 	Global.player_can_move = true
 	if has_node("../Finish"):
@@ -43,7 +43,6 @@ func _physics_process(delta: float) -> void:
 		
 	if not Global.player_can_move:
 		if finish_scene_animation:
-			print("scene")
 			var target_tilt = 0.0
 			if velocity.x < 0:
 				target_tilt = -max_tilt
@@ -90,24 +89,31 @@ func update_texture() -> void:
 		$AnimatedSprite2D.play("left_click")
 	else:
 		$AnimatedSprite2D.play("idle")
-
-func _on_finish_get_mouse_to_finish(pos:Vector2) -> void:
-	finish_scene_animation = true
-	finish_pos = pos
-		
 func _check_edge() -> void:
 	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
 	if not _is_on_desk(edge_check_point):
 		_fall()
+func _on_finish_get_mouse_to_finish(pos:Vector2) -> void:
+	finish_scene_animation = true
+	finish_pos = pos
+		
+
 
 
 func _is_on_desk(point: Vector2) -> bool:
-	var cell = table_tilemap.local_to_map(table_tilemap.to_local(point))
-	var tile_data = table_tilemap.get_cell_tile_data(0, cell)
-	if tile_data != null and tile_data.get_custom_data("on_table"):
-		return true
-	else:
-		return false
+	var sample_points = [
+						Vector2(0, col_shape.height/2), 
+						Vector2(0,-col_shape.height/2), 
+						Vector2(col_shape.radius/2, 0), 
+						Vector2(-col_shape.radius/2, 0), 
+						Vector2(0, 0)
+						]
+	for offest in sample_points:
+		var cell = table_tilemap.local_to_map(table_tilemap.to_local(point+offest))
+		var tile_data = table_tilemap.get_cell_tile_data(0, cell)
+		if tile_data != null and tile_data.get_custom_data("on_table"):
+			return true
+	return false
 
 
 func _fall() -> void:
@@ -132,7 +138,6 @@ func _fall() -> void:
 
 
 func _on_table_table_changed(tilemap: TileMap) -> void:
-	print(tilemap)
 	table_tilemap = tilemap
 
 func die():
