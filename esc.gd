@@ -1,19 +1,33 @@
 extends Control
-
+@onready var shader_anim: AnimationPlayer = $"../AnimationPlayer"
 func _ready():
 	visible = false
+	$"../AnimationPlayer/ColorRect".visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 func pouse():
 	var tung_tung_sahur = !get_tree().paused
-	get_tree().paused = tung_tung_sahur
-	visible = tung_tung_sahur
+	
 	if tung_tung_sahur == true:
+		
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+		$"../AnimationPlayer/ColorRect".visible = true
+		shader_anim.play("fade_in")
+		await shader_anim.animation_finished
+		
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+		shader_anim.play_backwards("fade_in")
+		await shader_anim.animation_finished
+		$"../AnimationPlayer/ColorRect".visible = false
+	
+	get_tree().paused = tung_tung_sahur
+	visible = tung_tung_sahur
+	
 func _input(event:InputEvent):
 
 
-	if event.is_action_pressed("esc"):
+	if event.is_action_pressed("esc") and get_tree().current_scene.name != "Menu":
 		pouse()
 		
