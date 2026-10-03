@@ -16,8 +16,13 @@ var levels = [
 ]
 
 var unlocked = 1
+var done = [] 
+var best_times = {}
 
-
+func _ready() -> void:
+	for i in levels.size():
+		best_times[i] = null
+		
 func go_to_level(i):
 	var path = levels[i]["scene"]
 	if ResourceLoader.exists(path):
@@ -25,14 +30,21 @@ func go_to_level(i):
 		return true
 	return false
 
-
 func go_to_menu():
 	get_tree().call_deferred("change_scene_to_file", "res://levels/level_00_menu.tscn")
 
 
-func finish_level():
+func finish_level(final_time):
 	var path = get_tree().current_scene.scene_file_path
 	for i in levels.size():
 		if levels[i]["scene"] == path:
+			if not done.has(i):
+				done.append(i)
 			if unlocked < i + 2:
 				unlocked = i + 2
+			if best_times[i] == null or final_time < best_times[i]:
+				best_times[i] = final_time
+				print("new record "+str(best_times[i]))
+
+func get_best_time(level):
+	return best_times[level]

@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_oggk4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_7chbu"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_e7128"]
-[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="10_oggk4"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_tbml5"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_ks4jm"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_ga27j"]
@@ -596,12 +595,6 @@ position_smoothing_speed = 4.5
 [node name="Monitor_2" type="Node2D" parent="Node2D/Player" unique_id=2101057578]
 z_index = 100
 position = Vector2(-570, -307)
-
-[node name="ESC2" parent="Node2D/Player/Monitor_2" unique_id=210250306 instance=ExtResource("10_oggk4")]
-offset_left = -22.0
-offset_top = 24.0
-offset_right = -22.0
-offset_bottom = 24.0
 
 [node name="Computer" type="Node2D" parent="Node2D/Player/Monitor_2" unique_id=245956929]
 position = Vector2(17, 17)

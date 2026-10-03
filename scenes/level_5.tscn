@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://vjyjnhlsh3kd"]
 
-[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="2_mnrma"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_ls1u8"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_5kbkd"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_csif5"]
@@ -220,8 +219,6 @@ speed = 400.0
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 zoom = Vector2(1.3, 1.3)
 position_smoothing_speed = 4.5
-
-[node name="ESC" parent="Player/Camera2D" unique_id=210250306 instance=ExtResource("2_mnrma")]
 
 [node name="Monitor_5" type="Node2D" parent="Player" unique_id=683304094]
 z_index = 100

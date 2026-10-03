@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="5_a6ogu"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="6_l3e2e"]
-[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="7_2pqar"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="8_xwjhl"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="9_ol700"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="10_6pw23"]
@@ -317,12 +316,6 @@ table_tilemap = NodePath("../Table/TileMap")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=1824927294]
 position_smoothing_speed = 4.5
-
-[node name="ESC" parent="Node2D/Player/Camera2D" unique_id=210250306 instance=ExtResource("7_2pqar")]
-offset_left = -588.0
-offset_top = -329.0
-offset_right = -588.0
-offset_bottom = -329.0
 
 [node name="Monitor_2" type="Node2D" parent="Node2D/Player" unique_id=1516173099]
 z_index = 100

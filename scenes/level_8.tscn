@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="9_uhk61"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="10_qhcnf"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="11_1ixal"]
-[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="12_ejjw3"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="12_sg0sc"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="13_0thth"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="14_mavsd"]
@@ -335,14 +334,10 @@ next_scene = ExtResource("8_anvbo")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("8_8y71b")]
 position = Vector2(-1, 2)
-speed = 350.0
 table_tilemap = NodePath("../Table/TileMap")
-distance_before_falling = -20.0
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=799251173]
 position_smoothing_speed = 4.5
-
-[node name="ESC" parent="Node2D/Player/Camera2D" unique_id=210250306 instance=ExtResource("12_ejjw3")]
 
 [node name="Monitor_2" type="Node2D" parent="Node2D/Player" unique_id=1323728709]
 z_index = 100
