@@ -5,39 +5,41 @@
 [ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
 [ext_resource type="PackedScene" uid="uid://d4b8dqjrbejty" path="res://scenes/menu_2.tscn" id="4_k1bfx"]
 
-[node name="ESC" type="CanvasLayer" unique_id=1428324152]
+[node name="ESC" type="Control" unique_id=210250306]
 process_mode = 3
-
-[node name="CanvasLayer" type="Control" parent="." unique_id=1143439753]
+top_level = true
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -592.0
+offset_top = -283.0
+offset_right = -592.0
+offset_bottom = -283.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kwv5o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=591494249]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=591494249]
 layout_mode = 0
-offset_left = -200.0
-offset_top = -132.0
-offset_right = -128.0
-offset_bottom = -66.0
+offset_left = 392.0
+offset_top = 151.0
+offset_right = 464.0
+offset_bottom = 217.0
 scale = Vector2(5.5199995, 5.5199995)
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=318677982]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=318677982]
+texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
 text = "MENU"
 script = ExtResource("3_j52a2")
 menu_scene = ExtResource("4_k1bfx")
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1619068738]
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1619068738]
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
 text = "SKIBIDY"
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
