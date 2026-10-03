@@ -21,6 +21,7 @@ signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 @onready var col_shape = $CollisionShape2D.shape
 func _ready() -> void:
+	
 	Global.player_can_move = true
 	if has_node("../Finish"):
 		finish = get_node("../Finish")

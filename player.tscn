@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ggfvlsk7it1" path="res://assets/animations/mys(breaking)/myš08.png" id="10_jm5j8"]
 [ext_resource type="AudioStream" uid="uid://c4jaq2wo2gltj" path="res://assets/soundeffects/falling.wav" id="10_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="12_7hik5"]
+[ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="19_pylmc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
 radius = 27.0
@@ -101,3 +102,7 @@ volume_db = -11.167
 
 [node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
 stream = ExtResource("10_n7ghd")
+
+[node name="ESC" parent="." unique_id=210250306 instance=ExtResource("19_pylmc")]
+size_flags_horizontal = 3
+size_flags_vertical = 3
