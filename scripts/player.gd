@@ -4,8 +4,8 @@ extends CharacterBody2D
 const max_tilt = deg_to_rad(10)
 const tilt_speed = 8.0
 const z_index_under_desk = -25
-const fall_drop_distance = 30.0
-const fall_drop_duration = 0.4
+const fall_drop_distance = 60.0
+const fall_drop_duration = 0.5
 @export var table_tilemap: TileMap
 @export var distance_before_falling: float = -20
 
@@ -19,7 +19,7 @@ var god_mode: bool = false
 @onready var finish_pos: Vector2
 signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
-@onready var col_shape = $CollisionShape2D.shape
+@onready var col_shape = $CollisionShape2DFall.shape
 @onready var particles = $CPUParticles2D
 
 func _ready() -> void:
@@ -136,15 +136,15 @@ func _fall() -> void:
 	faling_sound.play()
 	falling_now.emit(true)
 	Global.player_can_move = false
-	velocity = Vector2.ZERO
-	$AnimatedSprite2D.rotation = 0
+	
+
 
 	z_index = z_index_under_desk
 
 	$AnimatedSprite2D.play("fall")
 
 	var fall_tween = create_tween()
-	fall_tween.tween_property(self, "position:y", position.y + fall_drop_distance, fall_drop_duration)
+	fall_tween.tween_property($AnimatedSprite2D, "position:y", $AnimatedSprite2D.position.y + fall_drop_distance, fall_drop_duration)
 
 	await $AnimatedSprite2D.animation_finished
 	if shader_animation:
