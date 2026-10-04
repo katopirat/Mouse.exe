@@ -1,12 +1,23 @@
 [gd_scene format=3 uid="uid://cwio3r2ox7n2k"]
 
 [ext_resource type="Script" uid="uid://cocsyu21sp1f7" path="res://win_screen.gd" id="1_l2arl"]
+[ext_resource type="Texture2D" uid="uid://db7226o3lf5kq" path="res://logo-god-dots.png" id="2_wmwda"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iopsf"]
 font_size = 80
 
 [node name="Node2D" type="Node2D" unique_id=1433401036]
 script = ExtResource("1_l2arl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1765822278]
+offset_right = 1176.0
+offset_bottom = 669.0
+color = Color(0.0627451, 0.12941177, 0.18039216, 1)
+
+[node name="LogoGodDots" type="Sprite2D" parent="." unique_id=685020007]
+position = Vector2(964.00006, 158.00003)
+scale = Vector2(0.3015625, 0.30156252)
+texture = ExtResource("2_wmwda")
 
 [node name="Label" type="Label" parent="." unique_id=906509484]
 offset_left = 134.0
