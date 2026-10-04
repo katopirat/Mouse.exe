@@ -238,10 +238,10 @@ tracks/4/path = NodePath("../Node2D/ColorRect:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 2.0666666, 9.409049, 10.9499035),
+"times": PackedFloat32Array(0, 1, 3.3, 9.409049, 10.9499035),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.34509805), Color(0, 0, 0, 0.56078434), Color(0, 0, 0, 0.52156866), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.34509805), Color(0, 0, 0, 0.85490197), Color(0, 0, 0, 0.52156866), Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -499,9 +499,15 @@ libraries/ = SubResource("AnimationLibrary_5tmop")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1859.0
+offset_top = -2153.0
+offset_right = 1773.0
+offset_bottom = 864.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.9098039)
 
 [node name="space" type="CPUParticles2D" parent="Node2D" unique_id=641808965]
 emitting = false
@@ -609,7 +615,8 @@ scale_amount_max = 0.11
 color_ramp = SubResource("Gradient_07y4b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1293134352]
-position = Vector2(1, -250)
+position = Vector2(1, -655)
+scale = Vector2(1, 2.62)
 texture = SubResource("GradientTexture2D_kpjyq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D" unique_id=146668934]
