@@ -10,9 +10,9 @@ extends Node2D
 @export var menu_playlist: Array[AudioStream] = []
 
 
-@export_enum("chill", "dramatic") var current_style: String = 'chill'
+@export_enum("chill", "dramatic", "menu") var current_style: String = 'menu'
 
-@onready var playlist: Array[AudioStream] = chill_playlist
+@onready var playlist: Array[AudioStream] = menu_playlist
 @onready var songs_len: int = playlist.size()
 @onready var current_track_index: int = randi_range(0, songs_len-1)
 	
