@@ -438,7 +438,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(65535, 262145, 1, -1, 262145, 1, -65537, 262145, 1, 65534, 196609, 0, -2, 65537, 0, -65538, 65537, 0, 65533, 196609, 0, -3, 196609, 0, -65539, 196609, 0, 65532, 131073, 0, -4, 1, 0, -65540, 1, 0, 65531, 1, 0, -5, 131073, 0, -65541, 65537, 0, -6, 65537, 0, -65542, 131073, 0, -7, 196609, 1, -65543, 196609, 1, 65530, 65537, 0, 65529, 196609, 1, -131074, 131073, 0, -196610, 65537, 1, -131075, 65537, 0, -196611, 65537, 1, -131076, 65537, 0, -196612, 65537, 1, -131077, 131073, 0, -196613, 65537, 1, -131078, 1, 0, -196614, 65537, 1, -131079, 196609, 1, -196615, 1, 1, 131066, 65537, 2, 131065, 1, 2, 131067, 65537, 2, 131068, 65537, 2, 131069, 65537, 2, 131070, 65537, 2, 131071, 131073, 2, -196609, 131073, 1, -131073, 262145, 1)
 
 [node name="TileMapDotted" type="TileMap" parent="Table" unique_id=548330687 groups=["table"]]
-visible = false
 z_index = -19
 position = Vector2(-1, 0)
 scale = Vector2(3, 3)
@@ -448,7 +447,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-327683, 327681, 1, -327687, 327681, 4, -393223, 327681, 4, -393219, 327681, 1)
 
 [node name="TileMapDotted2" type="TileMap" parent="Table" unique_id=1618143999 groups=["table"]]
-visible = false
 z_index = -19
 position = Vector2(-1, 0)
 scale = Vector2(3, 3)
@@ -457,7 +455,6 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Table" unique_id=133424084 groups=["table"]]
-visible = false
 z_index = -20
 position = Vector2(-1, 0)
 scale = Vector2(3, 3)
@@ -481,3 +478,4 @@ position = Vector2(-334, -111)
 [connection signal="closed" from="Player/Monitor/Computer/Window/XButton" to="Player/Monitor/Computer/Window" method="_on_x_button_closed"]
 [connection signal="visibility_changed" from="Player/Monitor/Computer/Window/DinoGame" to="Player/Monitor/Computer/Window/DinoGame" method="_on_visibility_changed"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
+[connection signal="start_dino_game" from="Physical_button" to="Player/Monitor/Computer/Window/DinoGame" method="start_game"]

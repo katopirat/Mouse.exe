@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_fqw3r"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="10_epfji"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_rd5uj"]
-[ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="11_83tf8"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_t4jau"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_7e2h5"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_r7cvq"]
@@ -498,11 +497,6 @@ next_scene = ExtResource("19_lgfmy")
 [node name="cup2" parent="." unique_id=428504929 instance=ExtResource("10_epfji")]
 position = Vector2(379.9999, -343)
 
-[node name="phone" parent="." unique_id=1009766919 instance=ExtResource("11_83tf8")]
-position = Vector2(1396.0001, -4.999962)
-rotation = 1.3476673
-scale = Vector2(2.66, 2.66)
-
 [node name="Table" type="Node2D" parent="." unique_id=1364222853 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("21_epfji")
 tilemap_1 = NodePath("TileMap")
@@ -552,6 +546,9 @@ position = Vector2(1400, -434.99997)
 position = Vector2(411, 3)
 
 [node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("25_5kl8g")]
+
+[node name="Keyboard2" parent="." unique_id=2035932070 instance=ExtResource("24_lgfmy")]
+position = Vector2(1427, 17)
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor/Computer/Window/XButton" to="Player/Monitor/Computer/Window/XButton" method="_on_body_entered"]

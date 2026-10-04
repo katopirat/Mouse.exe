@@ -7,7 +7,6 @@ const z_index_under_desk = -25
 const fall_drop_distance = 60.0
 const fall_drop_duration = 0.5
 @export var table_tilemap: TileMap
-@export var distance_before_falling: float = -20
 
 var finish: Area2D = null
 
@@ -23,7 +22,7 @@ signal animation_finished
 @onready var particles = $CPUParticles2D
 
 func _ready() -> void:
-	Global.player_can_move = true
+	
 	if has_node("../Finish"):
 		finish = get_node("../Finish")
 		finish.get_mouse_to_finish.connect(_on_finish_get_mouse_to_finish)
@@ -35,13 +34,17 @@ func _ready() -> void:
 		shader_animation.play("screen_open")
 		await shader_animation.animation_finished
 		shader_animation.play("RESET")
-		
+	Global.player_can_move = true
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode:
 		god_mode = false 
 	elif Input.is_action_just_pressed("godmode") and not god_mode:
 		god_mode = true
 	if Input.is_action_just_pressed("reset"):
+		Global.player_can_move = false
+		if shader_animation:
+			shader_animation.play("close_screen")
+			await shader_animation.animation_finished
 		get_tree().reload_current_scene()
 		
 	if not Global.player_can_move:
@@ -65,7 +68,7 @@ func _physics_process(delta: float) -> void:
 			# Částice při nárazu v cílové animaci
 			if get_slide_collision_count() > 0:
 				var colision = get_slide_collision(0)
-				particles.global_rotation = colision.get_normal().angle() # OPRAVENO: Přidáno .angle()
+				particles.global_rotation = colision.get_normal().angle()
 				if not particles.emitting:
 					particles.emitting = true
 			
@@ -81,7 +84,6 @@ func _physics_process(delta: float) -> void:
 		target_tilt = -max_tilt
 	elif velocity.x > 0:
 		target_tilt = max_tilt
-
 	var direction := Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
@@ -109,7 +111,7 @@ func update_texture() -> void:
 		$AnimatedSprite2D.play("idle")
 
 func _check_edge() -> void:
-	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
+	var edge_check_point = global_position
 	if not _is_on_desk(edge_check_point):
 		_fall()
 

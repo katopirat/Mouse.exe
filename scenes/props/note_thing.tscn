@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://du26mi400j41t"]
+
+[ext_resource type="Texture2D" uid="uid://biv50ie5tw5xu" path="res://assets/images/Notethingi.png" id="1_4oqrd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8ld0"]
+size = Vector2(119, 82)
+
+[node name="note thing" type="Node2D" unique_id=234277861]
+position = Vector2(-57, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=607125628]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1118086530]
+position = Vector2(58.5, 20)
+shape = SubResource("RectangleShape2D_k8ld0")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2056821867]
+position = Vector2(55, 8)
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("1_4oqrd")

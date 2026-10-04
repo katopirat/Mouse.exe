@@ -271,7 +271,7 @@ menu_scene_path = "res://scenes/menu_2.tscn"
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
-text = "BACK"
+text = "RESUME"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="CanvasLayer" method="_on_button_2_pressed"]
