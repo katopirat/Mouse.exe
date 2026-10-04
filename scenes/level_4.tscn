@@ -14,7 +14,6 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="8_qsmat"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_sykev"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_11qgq"]
-[ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="10_s0ibv"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_hgnpj"]
 [ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scripts/bridge_button_lever.gd" id="12_5g1ve"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="12_u7ckc"]
@@ -23,6 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="15_kqmrt"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="15_sn22s"]
 [ext_resource type="PackedScene" uid="uid://vjyjnhlsh3kd" path="res://scenes/level_5.tscn" id="18_s0ibv"]
+[ext_resource type="PackedScene" uid="uid://du26mi400j41t" path="res://scenes/props/note_thing.tscn" id="23_u7ckc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -363,10 +363,6 @@ z_index = -1
 position = Vector2(2391, -34)
 next_scene = ExtResource("18_s0ibv")
 
-[node name="cup" parent="." unique_id=200577205 instance=ExtResource("10_s0ibv")]
-position = Vector2(361, -140)
-scale = Vector2(1, 1)
-
 [node name="Table" type="Node2D" parent="." unique_id=1364222853 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("12_u7ckc")
 tilemap_1 = NodePath("TileMap")
@@ -405,6 +401,10 @@ tile_set = ExtResource("8_qsmat")
 rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-65537, 196609, 2, -131072, 262145, 2, -131071, 262145, 2, -131070, 262145, 2, -131069, 262145, 2, -131068, 327681, 2, -65532, 327681, 1, -1, 327681, 4, 131071, 196609, 3, 65540, 327681, 3, 65536, 262145, 3, 65537, 262145, 3, 65538, 262145, 3, 65539, 262145, 3, 4, 327681, 1, 65535, 327681, 4, -131065, 196609, 2, -65529, 327681, 4, 7, 327681, 4, 65543, 196609, 3, -131064, 262145, 2, 65544, 262145, 3, -131063, 262145, 2, 65545, 262145, 3, -131062, 262145, 2, 65546, 262145, 3, -131061, 262145, 2, 65547, 262145, 3, -131060, 327681, 2, -65524, 327681, 1, 12, 327681, 1, 65548, 327681, 3, -131057, 196609, 2, -65521, 327681, 4, 15, 327681, 4, 65551, 196609, 3, -131056, 262145, 2, 65552, 262145, 3, -131055, 262145, 2, 65553, 262145, 3, -131054, 262145, 2, 65554, 262145, 3, -131053, 262145, 2, 65555, 262145, 3, -131052, 262145, 2, -131051, 262145, 2, -131050, 262145, 2, -131049, 262145, 2, -131048, 262145, 2, -131047, 262145, 2, 65556, 262145, 3, 65557, 262145, 3, 65558, 262145, 3, 65559, 262145, 3, 65560, 262145, 3, 65561, 262145, 3, 65562, 327681, 3, 26, 327681, 1, -65510, 327681, 1, -131046, 327681, 2)
+
+[node name="note thing" parent="Table" unique_id=234277861 instance=ExtResource("23_u7ckc")]
+position = Vector2(170, -158)
+rotation = 0.2947455
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_4/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_4/Computer/Window/XButton" to="Player/Monitor_4/Computer/Window/XButton" method="_on_body_entered"]
