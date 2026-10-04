@@ -44,7 +44,7 @@ func play_track(index: int) -> void:
 func _on_audio_stream_player_finished() -> void:
 	var new_track_index = current_track_index
 	while new_track_index == current_track_index:
-		new_track_index = randi_range(0, songs_len-1)
+		new_track_index = randi_range(0, playlist.size()-1)
 		if playlist.size() == 1:
 			break
 	current_track_index = new_track_index
