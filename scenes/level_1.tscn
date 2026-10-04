@@ -97,8 +97,6 @@ position = Vector2(-1, 2)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position_smoothing_speed = 4.5
 
-[node name="ESC" parent="Player/Camera2D" unique_id=210250306 instance=ExtResource("2_wbtxt")]
-
 [node name="Monitor_1" type="Node2D" parent="Player" unique_id=831704774]
 z_index = 100
 position = Vector2(-576, -323)

@@ -24,6 +24,8 @@ func pouse():
 		visible = tung_tung_sahur
 	
 	get_tree().paused = tung_tung_sahur
+	#$"/root/Music".get_tree().paused = false
+	
 
 
 func _input(event:InputEvent):
