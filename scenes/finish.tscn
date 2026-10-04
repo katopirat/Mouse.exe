@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://b0hnvdmd65d8b" path="res://assets/soundeffects/end_sound.wav" id="3_2pftv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
-size = Vector2(374, 232)
+size = Vector2(299, 151)
 
 [node name="finish" type="Area2D" unique_id=1389901689]
 position = Vector2(16, 3)
@@ -15,7 +15,7 @@ script = ExtResource("1_07gpw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=616401476]
 light_mask = 128
 visibility_layer = 128
-position = Vector2(-13, -4)
+position = Vector2(-15.5, -7.5)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479916014]
