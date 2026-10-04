@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d4b8dqjrbejty"]
 
+[ext_resource type="Script" uid="uid://cbjj3xr1ihmxc" path="res://scenes/menu_2.gd" id="1_5glwp"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_b7gx1"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_mv33c"]
 [ext_resource type="Texture2D" uid="uid://mqqj6g8d17gx" path="res://mouse_os/screen/wallpaper_208x118.png" id="2_7u8lc"]
@@ -34,6 +35,7 @@ size = Vector2(1, 1)
 size = Vector2(502.14786, 313.59772)
 
 [node name="Menu" type="Node2D" unique_id=659635860]
+script = ExtResource("1_5glwp")
 
 [node name="Monitor_1" type="Node2D" parent="." unique_id=831704774]
 z_index = 100

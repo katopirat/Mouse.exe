@@ -43,7 +43,8 @@ func _process(delta: float) -> void:
 func _on_level_pressed(i):
 	if not GameState.go_to_level(i):
 		info.text = "LEVEL " + str(i + 1) + " NOT BUILT YET"
-
+	else:
+		Global.music_style = "chill"
 func _on_button_hover(i):
 	info.text = str(i + 1) + " " + GameState.levels[i]["name"]
 	best_time.text = "BEST: " + str(GameState.best_times[i])

@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cwio3r2ox7n2k"]
 
+[ext_resource type="Script" uid="uid://cocsyu21sp1f7" path="res://win_screen.gd" id="1_l2arl"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_iopsf"]
 font_size = 80
 
 [node name="Node2D" type="Node2D" unique_id=1433401036]
+script = ExtResource("1_l2arl")
 
 [node name="Label" type="Label" parent="." unique_id=906509484]
 offset_left = 134.0
