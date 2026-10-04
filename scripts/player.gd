@@ -43,7 +43,10 @@ func _physics_process(delta: float) -> void:
 		Global.player_can_move = false
 		$Node2D.visible = true
 		$Node2D/AnimationPlayer.play("god_mode")
-		await animation_finished
+		
+		await $Node2D/AnimationPlayer.animation_finished
+		$Node2D/AnimationPlayer.play("RESET") 
+		Global.player_can_move = true
 	if Input.is_action_just_pressed("reset"):
 		Global.player_can_move = false
 		if shader_animation:
