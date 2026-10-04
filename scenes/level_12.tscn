@@ -457,6 +457,8 @@ libraries/ = SubResource("AnimationLibrary_1kpsa")
 autoplay = &"move3"
 speed_scale = 1.116
 
+[node name="Shader_visuals" parent="." unique_id=1370691632 instance=ExtResource("22_icsfv")]
+
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]

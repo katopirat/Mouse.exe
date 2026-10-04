@@ -13,17 +13,20 @@ func pouse():
 		visible = tung_tung_sahur
 		$"../AnimationPlayer/ColorRect".visible = true
 		shader_anim.play("fade_in")
+		get_tree().paused = tung_tung_sahur
 		await shader_anim.animation_finished
 		
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
 		shader_anim.play_backwards("fade_in")
+		get_tree().paused = tung_tung_sahur
 		await shader_anim.animation_finished
+		
 		$"../AnimationPlayer/ColorRect".visible = false
 		visible = tung_tung_sahur
 	
-	get_tree().paused = tung_tung_sahur
+	
 	#$"/root/Music".get_tree().paused = false
 	
 
