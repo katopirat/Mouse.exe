@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ce41tasjb3hxq" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dc35dik8vgtdj" path="res://assets/images/mys(scrol).png" id="2_b26j0"]
+[ext_resource type="AudioStream" uid="uid://i50r4gjd822f" path="res://assets/soundeffects/floraphonic-heavenly-choir-transition-1-reverb-189875.mp3" id="2_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://d03qjri4rjl6l" path="res://assets/animations/mys(breaking)/myš01.png" id="3_q13i1"]
 [ext_resource type="Texture2D" uid="uid://cq3w866cenpgm" path="res://assets/animations/mys(breaking)/myš02.png" id="4_pylmc"]
 [ext_resource type="Texture2D" uid="uid://ch4yssgxv3it3" path="res://assets/images/mys(stacionary).png" id="5_n7ghd"]
@@ -19,80 +20,6 @@
 [ext_resource type="AudioStream" uid="uid://c4jaq2wo2gltj" path="res://assets/soundeffects/falling.wav" id="10_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="12_7hik5"]
 [ext_resource type="PackedScene" uid="uid://bme1rmnixy75w" path="res://scenes/esc.tscn" id="19_pylmc"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
-radius = 31.0
-height = 104.0
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_so6io"]
-
-[sub_resource type="Gradient" id="Gradient_w8sno"]
-interpolation_mode = 2
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_b26j0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_q13i1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_pylmc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_pbfsw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_5tmop")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_7ahtn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_7lmhl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_dx0e4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_jm5j8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_7ahtn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_7hik5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_7lmhl")
-}],
-"loop": 0,
-"name": &"fall",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_n7ghd")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_nvl01")
-}],
-"loop": 1,
-"name": &"left_click",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
-radius = 22.0
-height = 62.0
 
 [sub_resource type="Animation" id="Animation_pylmc"]
 length = 0.001
@@ -240,10 +167,22 @@ tracks/11/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Node2D/AudioStreamPlayer2D:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_pbfsw"]
 resource_name = "god_mode"
-length = 11.0
+length = 10.133333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -263,10 +202,10 @@ tracks/1/path = NodePath("../AnimatedSprite2D:scale")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 1.9333333),
-"transitions": PackedFloat32Array(1, 1, 0.5547848),
+"times": PackedFloat32Array(0, 1, 1.9333333, 7.4333334, 10.133333),
+"transitions": PackedFloat32Array(1, 1, 0.5547848, 1, 1),
 "update": 0,
-"values": [Vector2(2.0602858, 2.2571905), Vector2(2.0602858, 2.2571905), Vector2(3.265, 3.561)]
+"values": [Vector2(2.0602858, 2.2571905), Vector2(2.0602858, 2.2571905), Vector2(3.265, 3.561), Vector2(3.265, 3.561), Vector2(2.06, 2.247)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -275,7 +214,7 @@ tracks/2/path = NodePath("../Node2D/Sprite2D:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 1.8333334),
+"times": PackedFloat32Array(0, 2.1666667, 4.266667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -311,10 +250,10 @@ tracks/5/path = NodePath("../Node2D/lift:emitting")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.43333334, 2.1333334, 10.097516),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.1333334, 10.097516),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false, false]
+"values": [true, false, false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -383,10 +322,22 @@ tracks/11/path = NodePath("../Node2D:visible")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.033333335),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true, false]
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Node2D/AudioStreamPlayer2D:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.03278414),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5tmop"]
@@ -458,51 +409,84 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_dx0e4")
 height = 500
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
+radius = 31.0
+height = 104.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_so6io"]
+
+[sub_resource type="Gradient" id="Gradient_w8sno"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b26j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7lmhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dx0e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7hik5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7lmhl")
+}],
+"loop": 0,
+"name": &"fall",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n7ghd")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nvl01")
+}],
+"loop": 1,
+"name": &"left_click",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
+radius = 22.0
+height = 62.0
+
 [node name="Node2D" type="CharacterBody2D" unique_id=1646158579]
 script = ExtResource("1_onrkg")
 
 [node name="GodLayer" type="CanvasLayer" parent="." unique_id=2015793617]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
-shape = SubResource("CapsuleShape2D_rus8k")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=874497148]
-emitting = false
-amount = 15
-texture = SubResource("CanvasTexture_so6io")
-lifetime = 0.6
-one_shot = true
-speed_scale = 2.0
-explosiveness = 1.0
-emission_shape = 3
-emission_rect_extents = Vector2(0.52, 14.22)
-spread = 73.85
-gravity = Vector2(0, -200)
-initial_velocity_min = 100.0
-initial_velocity_max = 200.0
-angular_velocity_max = 720.0
-angle_max = 360.0
-scale_amount_min = 4.0
-scale_amount_max = 5.0
-color_ramp = SubResource("Gradient_w8sno")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1816263362]
-scale = Vector2(2.0602858, 2.2571905)
-sprite_frames = SubResource("SpriteFrames_hqtel")
-animation = &"fall"
-script = ExtResource("8_b26j0")
-
-[node name="AudioStreamPlayerFall" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=879465051]
-stream = ExtResource("9_n7ghd")
-volume_db = -11.167
-
-[node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
-stream = ExtResource("10_n7ghd")
-
-[node name="ESC" parent="." unique_id=210250306 instance=ExtResource("19_pylmc")]
-
-[node name="CollisionShape2DFall" type="CollisionShape2D" parent="." unique_id=699902764]
-shape = SubResource("CapsuleShape2D_iopsf")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=432633299]
 visible = false
@@ -596,8 +580,8 @@ scale_amount_max = 0.5
 color_ramp = SubResource("Gradient_kpjyq")
 
 [node name="lift" type="CPUParticles2D" parent="Node2D" unique_id=362196936]
-amount = 50
-lifetime = 3.0
+amount = 100
+lifetime = 5.0
 emission_shape = 3
 emission_rect_extents = Vector2(22, 8)
 direction = Vector2(0, -1)
@@ -605,7 +589,8 @@ spread = 12.0
 gravity = Vector2(0, -14)
 initial_velocity_min = 6.0
 initial_velocity_max = 18.0
-scale_amount_max = 2.0
+scale_amount_min = 3.0
+scale_amount_max = 4.0
 color_ramp = SubResource("Gradient_2bi32")
 
 [node name="ring" type="CPUParticles2D" parent="Node2D" unique_id=1121247802]
@@ -626,3 +611,47 @@ color_ramp = SubResource("Gradient_07y4b")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1293134352]
 position = Vector2(1, -250)
 texture = SubResource("GradientTexture2D_kpjyq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D" unique_id=146668934]
+stream = ExtResource("2_pbfsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439912866]
+shape = SubResource("CapsuleShape2D_rus8k")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=874497148]
+emitting = false
+amount = 15
+texture = SubResource("CanvasTexture_so6io")
+lifetime = 0.6
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(0.52, 14.22)
+spread = 73.85
+gravity = Vector2(0, -200)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+angular_velocity_max = 720.0
+angle_max = 360.0
+scale_amount_min = 4.0
+scale_amount_max = 5.0
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1816263362]
+scale = Vector2(2.0602858, 2.2571905)
+sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"fall"
+script = ExtResource("8_b26j0")
+
+[node name="AudioStreamPlayerFall" type="AudioStreamPlayer" parent="AnimatedSprite2D" unique_id=879465051]
+stream = ExtResource("9_n7ghd")
+volume_db = -11.167
+
+[node name="AudioStreamPlayerFalling" type="AudioStreamPlayer" parent="." unique_id=324050130]
+stream = ExtResource("10_n7ghd")
+
+[node name="ESC" parent="." unique_id=210250306 instance=ExtResource("19_pylmc")]
+
+[node name="CollisionShape2DFall" type="CollisionShape2D" parent="." unique_id=699902764]
+shape = SubResource("CapsuleShape2D_iopsf")
