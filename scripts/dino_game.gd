@@ -13,17 +13,13 @@ const CACTUSES: Array[PackedScene] = [
 
 var score: int = 0
 
-func _ready() -> void:
-	timer.timeout.connect(_on_spawn_timer_timeout)
-	_update_score_ui()
 	
-func _on_visibility_changed() -> void:
-	if label == null:
-		return
-	if visible:
-		start_game()
+	
+
 
 func start_game() -> void:
+	timer.timeout.connect(_on_spawn_timer_timeout)
+	_update_score_ui()
 	score = 0
 	_update_score_ui()
 	timer.wait_time = randf_range(1.2, 2.5)

@@ -7,7 +7,6 @@ const z_index_under_desk = -25
 const fall_drop_distance = 60.0
 const fall_drop_duration = 0.5
 @export var table_tilemap: TileMap
-@export var distance_before_falling: float = -20
 
 var finish: Area2D = null
 
@@ -109,7 +108,7 @@ func update_texture() -> void:
 		$AnimatedSprite2D.play("idle")
 
 func _check_edge() -> void:
-	var edge_check_point = global_position + velocity.normalized() * distance_before_falling
+	var edge_check_point = global_position
 	if not _is_on_desk(edge_check_point):
 		_fall()
 

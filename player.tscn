@@ -91,8 +91,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
-radius = 17.0
-height = 56.0
+radius = 22.0
+height = 62.0
 
 [node name="Node2D" type="CharacterBody2D" unique_id=1646158579]
 script = ExtResource("1_onrkg")
