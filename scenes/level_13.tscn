@@ -261,8 +261,8 @@ position_smoothing_speed = 4.5
 [node name="level namnam" parent="Node2D/Player" unique_id=1104132345 instance=ExtResource("8_bln4u")]
 
 [node name="RichTextLabel" parent="Node2D/Player/level namnam" index="0" unique_id=320285636]
-offset_top = -411.0
-offset_bottom = -244.0
+offset_top = -291.0
+offset_bottom = -124.0
 
 [node name="Computer" type="Node2D" parent="Node2D/Player" unique_id=1915320576]
 z_index = 20
@@ -307,7 +307,7 @@ scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("11_speed")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Computer" unique_id=1891468850]
-position = Vector2(207.00002, 203)
+position = Vector2(387, 96)
 scale = Vector2(0.36247355, 0.36247358)
 script = ExtResource("12_cucgj")
 
