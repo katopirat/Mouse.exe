@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c0q1icvjbgx71"]
+
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="1_pw61v"]
+[ext_resource type="Texture2D" uid="uid://d3bb5jn7xhrt5" path="res://assets/images/window irl.png" id="2_3hrr4"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="3_f1p0n"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="4_peyp7"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="5_4nvau"]
+[ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="6_f1hfr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg0y8"]
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6ql2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_peyp7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4nvau")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[node name="closable phone" type="Node2D" unique_id=412273207]
+
+[node name="Window2" type="Node2D" parent="." unique_id=520382774]
+position = Vector2(154.66122, 153.98178)
+scale = Vector2(0.24280688, 0.2428069)
+script = ExtResource("1_pw61v")
+
+[node name="Background" type="Node2D" parent="Window2" unique_id=1763680335]
+position = Vector2(-632.8536, -741.2547)
+scale = Vector2(4.375774, 9.751068)
+
+[node name="Sprite2D" type="Sprite2D" parent="Window2/Background" unique_id=29890919]
+modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
+position = Vector2(-5.647243, 9.291992)
+scale = Vector2(1.8381703, 1.3688924)
+texture = ExtResource("2_3hrr4")
+
+[node name="XButton" type="Area2D" parent="Window2" unique_id=1418694557]
+z_index = 1
+position = Vector2(-521.6542, -951.2982)
+scale = Vector2(19.803478, 19.803478)
+collision_mask = 2
+script = ExtResource("3_f1p0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Window2/XButton" unique_id=229553365]
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_mg0y8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Window2/XButton" unique_id=1936148889]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_k6ql2")
+offset = Vector2(0.275, -0.19)
+
+[node name="phone" parent="Window2" unique_id=1009766919 instance=ExtResource("6_f1hfr")]
+position = Vector2(-711.1051, -617.69977)
+scale = Vector2(6.26012, 6.26012)
+
+[connection signal="body_entered" from="Window2/XButton" to="Window2/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Window2/XButton" to="Window2/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Window2/XButton" to="Window2" method="_on_x_button_closed"]
