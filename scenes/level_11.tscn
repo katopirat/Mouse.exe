@@ -439,9 +439,6 @@ sources/1 = SubResource("TileSetAtlasSource_0miim")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1317391677]
 
-[node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("1_y36u2")]
-visible = false
-
 [node name="Table" type="Node2D" parent="Node2D" unique_id=1368680074 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("1_sqvo0")
 tilemap_1 = NodePath("TileMap")
