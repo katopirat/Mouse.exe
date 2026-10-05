@@ -6,6 +6,7 @@
 size = Vector2(550, 214)
 
 [node name="Keyboard" type="StaticBody2D" unique_id=1763995382]
+position = Vector2(548, 191)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=937774858]
 position = Vector2(-30, -13)

@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://b8iq5y16xp5x1"]
 
+[ext_resource type="Script" uid="uid://chrjylgvc8hyq" path="res://scripts/shadow_maker.gd" id="1_dh7dh"]
 [ext_resource type="Texture2D" uid="uid://dxpknr328en3c" path="res://assets/images/book.png" id="1_s0fqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
 size = Vector2(263, 259.83673)
 
 [node name="book" type="Node2D" unique_id=762146673]
+position = Vector2(556, 277)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1093419006]
+script = ExtResource("1_dh7dh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1860014368]
 position = Vector2(-0.5, -11.999996)
