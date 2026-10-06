@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dftsgksdufe66"]
+
+[ext_resource type="Texture2D" uid="uid://fxmn5g7stihr" path="res://assets/images/Chocolate_White.png" id="1_8oqx0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em8h4"]
+size = Vector2(45, 29)
+
+[node name="chocolate-rare" type="Node2D" unique_id=1422220658]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=755472382]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=848981524]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_em8h4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1218603983]
+scale = Vector2(3, 3)
+texture = ExtResource("1_8oqx0")

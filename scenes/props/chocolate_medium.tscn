@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dm2h2audkfaot"]
+
+[ext_resource type="Texture2D" uid="uid://dr3h1kimcv3i" path="res://assets/images/Chocolate_Dark.png" id="1_v3f05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(45, 29)
+
+[node name="Chocolate-medium" type="Node2D" unique_id=1042436815]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=107908705]
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1756970250]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=818610813]
+texture = ExtResource("1_v3f05")

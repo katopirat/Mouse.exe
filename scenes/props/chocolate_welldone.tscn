@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dr65gv2si14i1"]
+
+[ext_resource type="Texture2D" uid="uid://bb2iyt1xr5u1i" path="res://assets/images/Chocolate_DarkDark.png" id="1_emhct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em8h4"]
+size = Vector2(45, 29)
+
+[node name="chocolate-Welldone" type="Node2D" unique_id=1831690069]
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=566233581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=662173318]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_em8h4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=347116060]
+texture = ExtResource("1_emhct")
