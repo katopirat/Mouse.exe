@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_gwmeb"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_u3011"]
-[ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="5_a6ogu"]
+[ext_resource type="PackedScene" uid="uid://ch24j2qyo3qy5" path="res://scenes/level_14.tscn" id="6_bln4u"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="6_l3e2e"]
 [ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_bln4u"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="8_xwjhl"]
@@ -27,6 +27,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60ky0"]
 size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bln4u"]
+size = Vector2(21, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bbo"]
 size = Vector2(5.000004, 4.999997)
@@ -73,7 +76,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bypac"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsaad"]
 texture = ExtResource("22_rdatf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -195,7 +198,7 @@ terrain_set_0/terrain_0/name = "table0"
 terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
 custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
-sources/1 = SubResource("TileSetAtlasSource_bypac")
+sources/1 = SubResource("TileSetAtlasSource_jsaad")
 
 [node name="level_13" type="Node2D" unique_id=1216671198]
 
@@ -249,7 +252,7 @@ rotation = 1.5692885
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("4_no5be")]
 z_index = -1
 position = Vector2(1222, 9)
-next_scene = ExtResource("5_a6ogu")
+next_scene = ExtResource("6_bln4u")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("6_l3e2e")]
 position = Vector2(-1, 2)
@@ -259,10 +262,6 @@ table_tilemap = NodePath("../Table/TileMap")
 position_smoothing_speed = 4.5
 
 [node name="level namnam" parent="Node2D/Player" unique_id=1104132345 instance=ExtResource("8_bln4u")]
-
-[node name="RichTextLabel" parent="Node2D/Player/level namnam" index="0" unique_id=320285636]
-offset_top = -291.0
-offset_bottom = -124.0
 
 [node name="Computer" type="Node2D" parent="Node2D/Player" unique_id=1915320576]
 z_index = 20
@@ -305,6 +304,16 @@ shape = SubResource("RectangleShape2D_60ky0")
 position = Vector2(7, 12)
 scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("11_speed")
+
+[node name="Borders2" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=1811675636]
+position = Vector2(265.57138, 132.09795)
+scale = Vector2(1.0767453, 0.9724726)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders2" unique_id=643985841]
+position = Vector2(186.14304, -0.10070801)
+shape = SubResource("RectangleShape2D_bln4u")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Computer" unique_id=1891468850]
 position = Vector2(387, 96)
