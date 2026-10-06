@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bl7vji8cusp7n"]
+
+[ext_resource type="Texture2D" uid="uid://baqbjky6clww" path="res://assets/images/pencil.png" id="1_fx2cc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(52.94477, 21.211931)
+
+[node name="pencil" type="Node2D" unique_id=1455917210]
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1250593575]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=682466342]
+position = Vector2(1.4999987, 0.60547626)
+scale = Vector2(0.8499422, 0.24566136)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1430038596]
+position = Vector2(1, 1)
+texture = ExtResource("1_fx2cc")

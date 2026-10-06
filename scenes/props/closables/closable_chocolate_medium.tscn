@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://7i2dy5ff6ntr"]
+
+[ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="1_euw2u"]
+[ext_resource type="Texture2D" uid="uid://d3bb5jn7xhrt5" path="res://assets/images/window irl.png" id="2_3vymd"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="3_8n36h"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="4_y8kj7"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="5_6jjnq"]
+[ext_resource type="PackedScene" uid="uid://dm2h2audkfaot" path="res://scenes/props/chocolate_medium.tscn" id="6_uwk3r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bx8d"]
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p1aeb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_y8kj7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6jjnq")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[node name="closable chocolate-medium" type="Node2D" unique_id=350026296]
+
+[node name="Window2" type="Node2D" parent="." unique_id=1108380239]
+position = Vector2(154.66122, 153.98178)
+scale = Vector2(0.24280688, 0.2428069)
+script = ExtResource("1_euw2u")
+
+[node name="Background" type="Node2D" parent="Window2" unique_id=658283284]
+position = Vector2(-632.85364, -737.1363)
+scale = Vector2(5.2832456, 7.9389267)
+
+[node name="Sprite2D" type="Sprite2D" parent="Window2/Background" unique_id=370158448]
+modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
+position = Vector2(8.574937, 8.819138)
+scale = Vector2(2.2494295, 1.0346881)
+texture = ExtResource("2_3vymd")
+
+[node name="XButton" type="Area2D" parent="Window2" unique_id=468143195]
+z_index = 1
+position = Vector2(-361.03275, -840.0988)
+scale = Vector2(17.8266, 17.8266)
+collision_mask = 2
+script = ExtResource("3_8n36h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Window2/XButton" unique_id=1371354358]
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_7bx8d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Window2/XButton" unique_id=632525604]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_p1aeb")
+offset = Vector2(0.275, -0.19)
+
+[node name="Chocolate-medium" parent="Window2" unique_id=1042436815 instance=ExtResource("6_uwk3r")]
+position = Vector2(-636.97217, -634.1738)
+scale = Vector2(4.1184993, 4.1184993)
+
+[connection signal="body_entered" from="Window2/XButton" to="Window2/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Window2/XButton" to="Window2/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Window2/XButton" to="Window2" method="_on_x_button_closed"]
