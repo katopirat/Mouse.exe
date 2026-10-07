@@ -19,11 +19,11 @@
 [ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="16_8x383"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
 [ext_resource type="Texture2D" uid="uid://d15vc4wecui80" path="res://docs/index.apple-touch-icon.png" id="17_xjpm5"]
-[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="18_e6333"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="18_lgjvf"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="19_ytuoh"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="20_xif5a"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_4hemd"]
+[ext_resource type="PackedScene" uid="uid://c83m2j65e2ov0" path="res://scenes/level_13.tscn" id="21_uyp4e"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_icsfv"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_ciel5"]
 [ext_resource type="Texture2D" uid="uid://55l6stqtfnbd" path="res://assets/images/Myš¡orange.png" id="26_lgjvf"]
@@ -365,7 +365,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("17_bfqui")]
 z_index = -1
 position = Vector2(1800, 231)
-next_scene = ExtResource("18_e6333")
+next_scene = ExtResource("21_uyp4e")
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("19_ytuoh")]
 position = Vector2(236, 59.999992)

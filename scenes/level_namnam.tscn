@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bjnmfys4ewm0g"]
+
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="1_x5vxs"]
+
+[sub_resource type="Animation" id="Animation_x5vxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -411)]
+}
+
+[sub_resource type="Animation" id="Animation_bndlm"]
+resource_name = "level namnam"
+length = 5.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ypru"]
+_data = {
+&"RESET": SubResource("Animation_x5vxs"),
+&"level namnam": SubResource("Animation_bndlm")
+}
+
+[node name="level namnam" type="CanvasLayer" unique_id=1104132345]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=320285636]
+offset_left = -408.0
+offset_top = -411.0
+offset_right = 425.0
+offset_bottom = -244.0
+theme_override_fonts/normal_font = ExtResource("1_x5vxs")
+theme_override_font_sizes/normal_font_size = 57
+text = "Test"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=545871978]
+libraries/ = SubResource("AnimationLibrary_4ypru")
+autoplay = &"level namnam"

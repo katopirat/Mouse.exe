@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_wbtxt"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_x2fux"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_s7g0b"]
-[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="9_go7sj"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_k8ld0"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="11_2os1m"]
@@ -25,6 +24,7 @@
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="18_k8ld0"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="19_mbb35"]
+[ext_resource type="PackedScene" uid="uid://5gb1okib3o5i" path="res://scenes/tutorial_how_to_close_ad.tscn" id="21_mmfjm"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_d5akn"]
 
@@ -279,7 +279,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("6_fcfvj")]
 z_index = -1
 position = Vector2(1800, 231)
-next_scene = ExtResource("9_go7sj")
+next_scene = ExtResource("21_mmfjm")
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("11_go7sj")]
 position = Vector2(1962.0002, 44.000015)

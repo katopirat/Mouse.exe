@@ -13,6 +13,8 @@ var levels = [
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
 	{"name": "magic table", "scene": "res://scenes/level_10.tscn"},
 	{"name": "magic mice", "scene": "res://scenes/level_11.tscn"},
+	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
+	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 ]
 
 var unlocked = 1
