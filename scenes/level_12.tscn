@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
 [ext_resource type="Texture2D" uid="uid://d15vc4wecui80" path="res://docs/index.apple-touch-icon.png" id="17_xjpm5"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="18_lgjvf"]
+[ext_resource type="Script" uid="uid://cuohduu73wi4o" path="res://scenes/bitcoin_graph.gd" id="19_ml6xs"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="19_ytuoh"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="20_xif5a"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_4hemd"]
@@ -351,6 +352,22 @@ offset_bottom = 7.0
 theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
+[node name="Control" type="Control" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=390493339]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -170.0
+offset_top = -54.0
+offset_right = 128.0
+offset_bottom = 47.99997
+script = ExtResource("19_ml6xs")
+
+[node name="GraphLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=1965910289]
+points = PackedVector2Array(8, 40)
+width = 2.0
+
+[node name="ValueLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=420319567]
+width = 1.0
+
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(0.7, 0.7)
@@ -406,7 +423,6 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Table" unique_id=1942280196 groups=["table"]]
-visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("16_6qqoh")
@@ -483,6 +499,7 @@ speed_scale = 1.116
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/BuyButton" to="Player/Monitor_1/Computer/Window/BuyButton" method="_on_body_exited"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/SellButton" to="Player/Monitor_1/Computer/Window/SellButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/SellButton" to="Player/Monitor_1/Computer/Window/SellButton" method="_on_body_exited"]
+[connection signal="bitcoin_price_changed" from="Player/Monitor_1/Computer/Window/Graph" to="Player/Monitor_1/Computer/Window/Graph/Control" method="_on_graph_bitcoin_price_changed"]
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
 
