@@ -5,6 +5,7 @@ extends Area2D
 @export var next_scene: PackedScene
 @onready var player:CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 
+
 signal get_mouse_to_finish(pos: Vector2)
 var level_time = 0
 var timer_start = 0

@@ -331,7 +331,8 @@ collision_mask = 2
 script = ExtResource("4_pc3at")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=197235665]
-scale = Vector2(1, 1.0000001)
+position = Vector2(-0.638, -0.21)
+scale = Vector2(-0.165, -0.165)
 shape = SubResource("RectangleShape2D_cq2xo")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=2052527184]

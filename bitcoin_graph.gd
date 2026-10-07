@@ -10,6 +10,7 @@ extends Node2D
 @onready var bitcoin_bought:float = 0.0
 @onready var player_money: float = 500.0
 @onready var max_change: float = 0.2
+@onready var how_much_multi: float = 0.50
 var time_accumulated: float = 0.0
 func _ready() -> void:
 	randomize()
@@ -28,9 +29,17 @@ func _process(delta: float) -> void:
 		
 func _on_buy_button_buy_bitcoin():
 	bitcoin_price_label.text = "buy"
-	bitcoin_bought += player_money/bitcoin_price
-	player_money = 0.0
+	if how_much_multi < 0:
+		how_much_multi = 0.50
+	elif not how_much_multi == 1.00:
+		how_much_multi += 0.25
+	bitcoin_bought += (player_money*how_much_multi)/bitcoin_price
+	player_money -= how_much_multi*player_money
 func _on_sell_button_buy_bitcoin():
 	bitcoin_price_label.text = "sell"
-	player_money += bitcoin_bought*bitcoin_price
-	bitcoin_bought = 0.0
+	if how_much_multi > 0:
+		how_much_multi = -0.5
+	elif not how_much_multi == -1.00:
+		how_much_multi -= 0.25
+	player_money += bitcoin_bought*bitcoin_price*(-how_much_multi)
+	bitcoin_bought -= bitcoin_bought*(-how_much_multi)

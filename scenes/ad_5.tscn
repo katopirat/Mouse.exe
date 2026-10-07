@@ -69,7 +69,7 @@ animations = [{
 size = Vector2(1.6666667, 1.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aegk1"]
-size = Vector2(40.66667, 22.333328)
+size = Vector2(40.333344, 22.333328)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2pmh"]
 size = Vector2(4.9999924, 16.999998)
@@ -107,8 +107,8 @@ position = Vector2(1.1666698, -1.4444437)
 shape = SubResource("RectangleShape2D_ffwql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad" unique_id=1736018618]
-position = Vector2(-1.3333334, -1)
-scale = Vector2(0.99999964, 0.9999996)
+position = Vector2(-1.5, -1)
+scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_aegk1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ad" unique_id=1294691126]
