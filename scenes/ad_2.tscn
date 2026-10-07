@@ -53,10 +53,10 @@ animations = [{
 size = Vector2(1.5000005, 1.4722216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ug3"]
-size = Vector2(40.66667, 22.666672)
+size = Vector2(40.33334, 22.666672)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58hpb"]
-size = Vector2(4.9999924, 17.666664)
+size = Vector2(4.9999924, 17.33333)
 
 [node name="ad2" type="Node2D" unique_id=272590773]
 
@@ -92,13 +92,13 @@ scale = Vector2(1.101, 1.11)
 shape = SubResource("RectangleShape2D_jk1x0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ad" unique_id=1297504784]
-position = Vector2(-1.3333282, -1.3333359)
-scale = Vector2(0.99999964, 0.99999946)
+position = Vector2(-1.4999886, -1.3333359)
+scale = Vector2(0.99999964, 0.99999934)
 shape = SubResource("RectangleShape2D_o1ug3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ad" unique_id=1086069822]
-position = Vector2(21.499996, 1.1666641)
-scale = Vector2(0.99999964, 0.9999995)
+position = Vector2(21.499996, 1.3333282)
+scale = Vector2(0.99999964, 0.99999934)
 shape = SubResource("RectangleShape2D_58hpb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ad" unique_id=974453871]
