@@ -18,7 +18,6 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="12_iw4em"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_hnsmf"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_so66j"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_nossa"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="15_isj1j"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="18_k8ld0"]
@@ -81,7 +80,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_nossa")
+"texture": null
 }],
 "loop": 1,
 "name": &"pressed",
@@ -204,6 +203,7 @@ offset = Vector2(0.275, -0.19)
 [node name="BridgeButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=930908104]
 z_index = 1
 position = Vector2(141, 101.999985)
+rotation = -0.006775311
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("12_iw4em")
