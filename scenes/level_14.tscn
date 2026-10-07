@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cbilg0lwl7vjs" path="res://scenes/level_15.tscn" id="7_jj35q"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="7_ortew"]
 [ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_5cqvy"]
-[ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="9_6tdor"]
-[ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="10_brq0t"]
+[ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="10_jj35q"]
+[ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="11_jj35q"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="11_qag05"]
 [ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="12_jvo0a"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="23_pe6q5"]
@@ -334,7 +334,7 @@ offset_left = 16.312958
 offset_top = 4.0
 offset_right = 467.687
 offset_bottom = 274.0
-texture = ExtResource("9_6tdor")
+texture = ExtResource("10_jj35q")
 
 [node name="MonitorBorder" type="TextureRect" parent="Node2D/Player/Computer" unique_id=747918080]
 z_index = 11
@@ -342,7 +342,7 @@ offset_left = -6.0
 offset_top = -24.0
 offset_right = 489.21362
 offset_bottom = 294.0
-texture = ExtResource("10_brq0t")
+texture = ExtResource("11_jj35q")
 
 [node name="Borders" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=220186320]
 position = Vector2(32, 3)
