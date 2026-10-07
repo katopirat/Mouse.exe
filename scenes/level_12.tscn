@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://dl05ndlp1nwt6" path="res://bitcoin_button.gd" id="12_kg3h7"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_0m4om"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="14_hjbbt"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="15_gvjkd"]
+[ext_resource type="Texture2D" path="res://assets/images/button-re.png" id="15_gvjkd"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_6qqoh"]
 [ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="16_8x383"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
