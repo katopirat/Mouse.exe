@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_wdtqu"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_73m23"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_45kkt"]
+[ext_resource type="PackedScene" uid="uid://b8e3y5osvx8u" path="res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn" id="7_bgibu"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="8_k22d5"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_taw0e"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_7egwj"]
-[ext_resource type="PackedScene" uid="uid://bvy8613gojnwr" path="res://scenes/level_3.tscn" id="9_172wr"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="9_k6a82"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_nquw4"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_3buw8"]
@@ -270,12 +270,11 @@ position = Vector2(187.00006, -285)
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("9_k6a82")]
 z_index = -1
 position = Vector2(952, -189)
-next_scene = ExtResource("9_172wr")
+next_scene = ExtResource("7_bgibu")
 
 [node name="Player" parent="Node2D" unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_wdtqu")]
 position = Vector2(-1, 2)
 table_tilemap = NodePath("../Table/TileMap")
-distance_before_falling = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=846273898]
 position_smoothing_speed = 4.5
