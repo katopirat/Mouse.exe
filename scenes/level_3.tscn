@@ -361,6 +361,7 @@ next_scene = ExtResource("9_ax3dk")
 
 [node name="book" parent="." unique_id=762146673 instance=ExtResource("19_w5nkq")]
 position = Vector2(2080, 395)
+scale = Vector2(1.24, 1.24)
 
 [node name="Table" type="Node2D" parent="." unique_id=1364222853 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("12_w5nkq")

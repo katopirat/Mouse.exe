@@ -3,16 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://cdds0oknqgker" path="res://assets/images/keyboard.png" id="1_gymtw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
-size = Vector2(550, 214)
+size = Vector2(475, 184)
 
 [node name="Keyboard" type="StaticBody2D" unique_id=1763995382]
 position = Vector2(548, 191)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=937774858]
-position = Vector2(-30, -13)
+position = Vector2(-31.5, -13)
 shape = SubResource("RectangleShape2D_w8sno")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1993030207]
 position = Vector2(-30, -12)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 texture = ExtResource("1_gymtw")
