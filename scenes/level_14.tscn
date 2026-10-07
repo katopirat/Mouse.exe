@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmjw1o73a5fbf" path="res://scenes/props/closables/closable_cup.tscn" id="3_m0j2u"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_lhiqy"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="5_6poyl"]
-[ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="6_lkf18"]
+[ext_resource type="PackedScene" uid="uid://cbilg0lwl7vjs" path="res://scenes/level_15.tscn" id="7_jj35q"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="7_ortew"]
 [ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_5cqvy"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="9_6tdor"]
@@ -275,7 +275,7 @@ scale = Vector2(3, 3)
 tile_set = ExtResource("2_m72ve")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(-65538, 1, 1, -131072, 65537, 1, -65537, 65537, 1, -2, 196609, 1, 65534, 196609, 1, 65535, 1, 0, -1, 1, 0, -65536, 1, 0, 0, 1, 0, 9, 262145, 1, -65527, 262145, 1, -131063, 131073, 1, -131064, 65537, 1, -131065, 65537, 1, -131066, 65537, 1, -131067, 65537, 1, -131068, 65537, 1, -131069, 65537, 1, -131070, 65537, 1, -131071, 65537, 1, 3, 1, 0, -65533, 1, 0, -65534, 1, 0, -65535, 1, 0, 1, 1, 0, 2, 1, 0, 4, 1, 0, -65532, 1, 0, -65531, 1, 0, 5, 1, 0, 6, 1, 0, -65530, 1, 0, -65529, 1, 0, 7, 1, 0, 8, 1, 0, -65528, 1, 0, 131070, 1, 2, 131071, 65537, 2, 65536, 65537, 2, 65537, 65537, 2, 65538, 65537, 2, 65539, 65537, 2, 65540, 65537, 2, 65541, 65537, 2, 65542, 65537, 2, 65543, 65537, 2, 65544, 65537, 2, 65545, 131073, 2)
+layer_0/tile_data = PackedInt32Array(-65538, 1, 1, -131072, 65537, 1, -65537, 65537, 1, -2, 196609, 1, 65534, 196609, 1, 65535, 1, 0, -1, 1, 0, -65536, 1, 0, 0, 1, 0, 9, 262145, 1, -65527, 262145, 1, -131063, 131073, 1, -131064, 65537, 1, -131065, 65537, 1, -131066, 65537, 1, -131067, 1, 1, -131069, 131073, 1, -131070, 65537, 1, -131071, 65537, 1, 3, 1, 0, -65533, 262145, 1, -65534, 1, 0, -65535, 1, 0, 1, 1, 0, 2, 1, 0, 4, 65537, 1, -65531, 196609, 1, 5, 1, 0, 6, 1, 0, -65530, 1, 0, -65529, 1, 0, 7, 1, 0, 8, 1, 0, -65528, 1, 0, 131070, 1, 2, 131071, 65537, 2, 65536, 65537, 2, 65537, 65537, 2, 65538, 65537, 2, 65539, 65537, 2, 65540, 65537, 2, 65541, 65537, 2, 65542, 65537, 2, 65543, 65537, 2, 65544, 65537, 2, 65545, 131073, 2)
 
 [node name="Dark-chocolate" type="TileMap" parent="Node2D/Table" unique_id=1575165336]
 scale = Vector2(3, 3)
@@ -314,7 +314,7 @@ rotation = 1.5692885
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("5_6poyl")]
 z_index = -1
 position = Vector2(750, -43)
-next_scene = ExtResource("6_lkf18")
+next_scene = ExtResource("7_jj35q")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("7_ortew")]
 position = Vector2(-1, 2)
@@ -401,14 +401,14 @@ z_index = 1
 position = Vector2(157, -142)
 
 [node name="ad_3" parent="Node2D" unique_id=651148235 instance=ExtResource("28_brq0t")]
-position = Vector2(40, -469)
+position = Vector2(31, -482)
 scale = Vector2(4.3855796, 4.3855796)
 
 [node name="closable phone" parent="." unique_id=412273207 instance=ExtResource("29_qag05")]
 position = Vector2(322, 13)
 
 [node name="closable book" parent="." unique_id=888231878 instance=ExtResource("30_jvo0a")]
-position = Vector2(552, -67)
+position = Vector2(511, -75.99994)
 rotation = 0.14549206
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]

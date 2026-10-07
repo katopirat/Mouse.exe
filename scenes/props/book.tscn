@@ -14,10 +14,10 @@ script = ExtResource("1_dh7dh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1860014368]
 position = Vector2(-0.5, -11.999996)
-scale = Vector2(1, 1.3700912)
+scale = Vector2(0.73, 1)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1787661358]
 position = Vector2(1, -15)
-scale = Vector2(3.7433336, 3.7433333)
+scale = Vector2(3, 3)
 texture = ExtResource("1_s0fqw")

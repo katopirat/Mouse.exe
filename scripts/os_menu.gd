@@ -1,6 +1,6 @@
 extends Control
 
-@onready var grid = $Window/VBoxContainer/GridContainer
+@onready var grid = $Window/VBoxContainer/HBoxContainer2/GridContainer
 @onready var info = $Window/VBoxContainer/HBoxContainer/Info
 @onready var best_time = $Window/VBoxContainer/HBoxContainer/BestTime
 @onready var time_label = %Time
@@ -8,21 +8,9 @@ extends Control
 
 var timer_start = 0
 var p_position: Vector2
-
+var site = 0
 func _ready():
-	for i in GameState.levels.size():
-		var button = Button.new()
-		button.custom_minimum_size = Vector2(28, 16)
-		button.text = str(i + 1)
-		if i >= GameState.unlocked:
-			button.text = "-"
-			button.disabled = true
-		button.pressed.connect(_on_level_pressed.bind(i))
-		button.mouse_entered.connect(_on_button_hover.bind(i))
-		if GameState.done.has(i):
-			button.theme_type_variation = "ButtonGreen"
-		grid.add_child(button)
-	
+	level_menu_refresh()
 	p_position = player.position
 
 func _process(delta: float) -> void:
@@ -48,3 +36,41 @@ func _on_level_pressed(i):
 func _on_button_hover(i):
 	info.text = str(i + 1) + " " + GameState.levels[i]["name"]
 	best_time.text = "BEST: " + str(GameState.best_times[i])
+	
+var next_disabled = false
+var previous_disabled = false
+func level_menu_refresh():
+	if (site + 1) * 12 >= GameState.levels.size():
+		$Window/VBoxContainer/HBoxContainer2/Button_next.disabled = true
+	else:
+		$Window/VBoxContainer/HBoxContainer2/Button_next.disabled = false
+	if  site <=0:
+		$Window/VBoxContainer/HBoxContainer2/Button_previous.disabled = true
+	else:
+		$Window/VBoxContainer/HBoxContainer2/Button_previous.disabled = false
+
+	for child in grid.get_children():
+		child.queue_free()
+
+	for i in range(site * 10,min((site+1) * 12,GameState.levels.size())):
+		var button = Button.new()
+		button.custom_minimum_size = Vector2(28, 16)
+		button.text = str(i + 1)
+		if i >= GameState.unlocked:
+			button.text = "-"
+			button.disabled = true
+		button.pressed.connect(_on_level_pressed.bind(i))
+		button.mouse_entered.connect(_on_button_hover.bind(i))
+		if GameState.done.has(i):
+			button.theme_type_variation = "ButtonGreen"
+		grid.add_child(button)
+
+
+func _on_button_next_pressed() -> void:
+	site += 1
+	level_menu_refresh()
+
+
+func _on_button_previous_pressed() -> void:
+	site -= 1
+	level_menu_refresh()

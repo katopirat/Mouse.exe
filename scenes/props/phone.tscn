@@ -3,16 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://bsysxur646s52" path="res://assets/images/ophone(orange).png" id="1_08mii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
-size = Vector2(48, 101)
+size = Vector2(49.65789, 104.94736)
 
 [node name="phone" type="StaticBody2D" unique_id=1009766919]
 scale = Vector2(1.5200002, 1.5200002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1451421039]
-position = Vector2(0, -0.5)
+position = Vector2(0.8289451, 1.4736785)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=422452739]
 position = Vector2(1.9073486e-06, 3.8146973e-06)
-scale = Vector2(1.7857144, 1.6904762)
+scale = Vector2(2, 1.892)
 texture = ExtResource("1_08mii")

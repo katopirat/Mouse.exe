@@ -134,9 +134,26 @@ layout_mode = 2
 theme_type_variation = &"LabelTitle"
 text = " LEVELS"
 
-[node name="GridContainer" type="GridContainer" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer" unique_id=1953319030]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer" unique_id=1463712835]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2" unique_id=1953319030]
 layout_mode = 2
 columns = 4
+
+[node name="Button_previous" type="Button" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2" unique_id=275686696]
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "<
+"
+
+[node name="Button_next" type="Button" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2" unique_id=383264169]
+custom_maximum_size = Vector2(-1, 11)
+layout_mode = 2
+size_flags_horizontal = 8
+text = ">
+"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer" unique_id=661699679]
 layout_mode = 2
@@ -234,6 +251,8 @@ position = Vector2(-16, -20)
 zoom = Vector2(0.7, 0.7)
 position_smoothing_speed = 4.5
 
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
 [connection signal="moved_mouse" from="Player" to="Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 
 [editable path="CanvasLayer"]

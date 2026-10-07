@@ -32,6 +32,7 @@ polygon = PackedVector2Array(-12.745763, 17.355932, -8.135592, 22.23729, -0.5423
 z_index = 10
 position = Vector2(-26.871244, -89.57082)
 scale = Vector2(1.0000001, 1.0000001)
+emitting = false
 amount = 12
 texture = SubResource("CanvasTexture_w8sno")
 lifetime = 2.0
