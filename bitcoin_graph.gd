@@ -11,6 +11,7 @@ extends Node2D
 @onready var player_money: float = 500.0
 @onready var max_change: float = 0.2
 @onready var how_much_multi: float = 0.50
+signal bitcoin_price_changed(new_value: float)
 var time_accumulated: float = 0.0
 func _ready() -> void:
 	randomize()
@@ -24,6 +25,7 @@ func _process(delta: float) -> void:
 	if time_accumulated >= time_between_change:
 		bitcoin_price = int(randf_range(1+max_change, 1-max_change)*bitcoin_price)
 		bitcoin_price_label.text = str(bitcoin_price)
+		bitcoin_price_changed.emit(bitcoin_price)
 		print(bitcoin_price)
 		time_accumulated -= 1
 		

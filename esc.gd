@@ -20,8 +20,8 @@ func pouse():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
 		shader_anim.play_backwards("fade_in")
-		get_tree().paused = tung_tung_sahur
 		await shader_anim.animation_finished
+		get_tree().paused = tung_tung_sahur
 		
 		$"../AnimationPlayer/ColorRect".visible = false
 		visible = tung_tung_sahur
