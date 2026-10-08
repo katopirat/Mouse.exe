@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_gwmeb"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_u3011"]
+[ext_resource type="PackedScene" uid="uid://ch24j2qyo3qy5" path="res://scenes/level_14.tscn" id="6_jsaad"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="6_l3e2e"]
 [ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_bln4u"]
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="9_jsaad"]
@@ -18,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="17_oqxgu"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="18_aa4om"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="19_ombym"]
-[ext_resource type="Texture2D" path="res://assets/images/button-re.png" id="20_x1cva"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_x1cva"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="21_j8o5j"]
 [ext_resource type="PackedScene" uid="uid://dmjw1o73a5fbf" path="res://scenes/props/closables/closable_cup.tscn" id="21_u3011"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="22_rdatf"]
@@ -252,7 +253,7 @@ rotation = 1.5692885
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("4_no5be")]
 z_index = -1
 position = Vector2(1222, 9)
-next_scene = null
+next_scene = ExtResource("6_jsaad")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("6_l3e2e")]
 position = Vector2(-1, 2)
