@@ -4,7 +4,6 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_gwmeb"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_u3011"]
-[ext_resource type="PackedScene" uid="uid://dk6va4x4mnefr" path="res://scenes/level_12.tscn" id="6_bln4u"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="6_l3e2e"]
 [ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_bln4u"]
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="9_jsaad"]
@@ -253,7 +252,7 @@ rotation = 1.5692885
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("4_no5be")]
 z_index = -1
 position = Vector2(1222, 9)
-next_scene = ExtResource("6_bln4u")
+next_scene = null
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("6_l3e2e")]
 position = Vector2(-1, 2)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc51j8tlyedil"
-path="res://.godot/imported/50787-mouse-cursor.png-74caaa6471f52e127ba277275f2c6bb5.ctex"
+uid="uid://bsdgui2n38mw4"
+path="res://.godot/imported/button-re.png-0fc4a24963dfd43e84c0d86921256d64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://50787-mouse-cursor.png"
-dest_files=["res://.godot/imported/50787-mouse-cursor.png-74caaa6471f52e127ba277275f2c6bb5.ctex"]
+source_file="res://assets/images/button-re.png"
+dest_files=["res://.godot/imported/button-re.png-0fc4a24963dfd43e84c0d86921256d64.ctex"]
 
 [params]
 
