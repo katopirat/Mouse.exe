@@ -42,13 +42,13 @@ scale = Vector2(12.626256, 22.436039)
 
 [node name="Sprite2D" type="Sprite2D" parent="Window2/Background" unique_id=912375496]
 modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
-position = Vector2(-3.8976982, 8.300365)
-scale = Vector2(1.9409944, 1.4046987)
+position = Vector2(-3.2093012, 8.07357)
+scale = Vector2(1.6462166, 1.1358161)
 texture = ExtResource("2_y2kgw")
 
 [node name="XButton" type="Area2D" parent="Window2" unique_id=1561237201]
 z_index = 1
-position = Vector2(1797.061, -996.6018)
+position = Vector2(1721.5327, -844.2923)
 scale = Vector2(28.864178, 28.864178)
 collision_mask = 2
 script = ExtResource("3_4siww")

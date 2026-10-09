@@ -42,8 +42,8 @@ scale = Vector2(4.375774, 9.751068)
 
 [node name="Sprite2D" type="Sprite2D" parent="Window2/Background" unique_id=29890919]
 modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
-position = Vector2(-5.647243, 9.291992)
-scale = Vector2(1.8381703, 1.3688924)
+position = Vector2(-10.119887, 12.459724)
+scale = Vector2(1.9779404, 1.4980719)
 texture = ExtResource("2_3hrr4")
 
 [node name="XButton" type="Area2D" parent="Window2" unique_id=1418694557]

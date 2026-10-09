@@ -13,12 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_udfdp"]
 [ext_resource type="Script" uid="uid://dl05ndlp1nwt6" path="res://bitcoin_button.gd" id="12_kg3h7"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_0m4om"]
-[ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="14_hjbbt"]
-[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="15_gvjkd"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_6qqoh"]
 [ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="16_8x383"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
-[ext_resource type="Texture2D" uid="uid://d15vc4wecui80" path="res://docs/index.apple-touch-icon.png" id="17_xjpm5"]
+[ext_resource type="Texture2D" uid="uid://wrtemwe0dkxb" path="res://assets/images/buy.png" id="17_wd513"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="18_lgjvf"]
 [ext_resource type="Script" uid="uid://cuohduu73wi4o" path="res://scenes/bitcoin_graph.gd" id="19_ml6xs"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="19_ytuoh"]
@@ -68,15 +66,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2os1m"]
-radius = 7.333332
-height = 14.666664
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mabuh"]
+size = Vector2(12.999992, 24.000008)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gyjbk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_hjbbt")
+"texture": ExtResource("17_wd513")
 }],
 "loop": 1,
 "name": &"default",
@@ -84,18 +81,21 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_gvjkd")
+"texture": ExtResource("17_wd513")
 }],
 "loop": 1,
 "name": &"pressed",
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csjg2"]
+size = Vector2(12.500006, 23.499985)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4xvhx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_xjpm5")
+"texture": ExtResource("17_wd513")
 }],
 "loop": 1,
 "name": &"default",
@@ -292,12 +292,12 @@ stream = ExtResource("13_0m4om")
 volume_db = -16.479
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=1190357176]
-position = Vector2(0.33333334, -2.3333328)
+position = Vector2(0, -2.5)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_2os1m")
+shape = SubResource("RectangleShape2D_mabuh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=358243242]
-position = Vector2(0.6666665, -1.3333335)
+position = Vector2(-5.185604e-06, -8.000004)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
 
@@ -314,22 +314,25 @@ stream = ExtResource("13_0m4om")
 volume_db = -16.479
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=1433456523]
-position = Vector2(0.33333334, -2.3333328)
+position = Vector2(0.25, -2.2500076)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_2os1m")
+shape = SubResource("RectangleShape2D_csjg2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=1660819025]
-position = Vector2(0.6666665, -1.3333335)
+modulate = Color(2.40685, 0, 2.40685, 1)
+position = Vector2(0.49999475, -7.9999967)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
+animation = &"pressed"
 
 [node name="Graph" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1299777739]
 position = Vector2(261, 123.999985)
 script = ExtResource("16_8x383")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=2060489886]
-position = Vector2(-57, -14.000008)
-scale = Vector2(1.4333333, 0.73333335)
+modulate = Color(0, 0.44494635, 1.0845727, 1)
+position = Vector2(-58.99999, -72.499985)
+scale = Vector2(9.499999, 11.906247)
 sprite_frames = SubResource("SpriteFrames_4xvhx")
 
 [node name="LabelBitcoinPrice" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1201008074]

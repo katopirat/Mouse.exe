@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4rwn3i16xi38"]
+
+[ext_resource type="Texture2D" uid="uid://ltgpy5pa1u2r" path="res://assets/images/svetr.png" id="1_aiwps"]
+
+[node name="Svetr" type="Node2D" unique_id=459601429]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1968157547]
+z_index = -23
+scale = Vector2(3, 3)
+texture = ExtResource("1_aiwps")

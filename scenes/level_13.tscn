@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="17_oqxgu"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="18_aa4om"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="19_ombym"]
-[ext_resource type="Texture2D" path="res://assets/images/button-re.png" id="20_x1cva"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_x1cva"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="21_j8o5j"]
 [ext_resource type="PackedScene" uid="uid://dmjw1o73a5fbf" path="res://scenes/props/closables/closable_cup.tscn" id="21_u3011"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="22_rdatf"]
@@ -252,7 +252,6 @@ rotation = 1.5692885
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("4_no5be")]
 z_index = -1
 position = Vector2(1222, 9)
-next_scene = null
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("6_l3e2e")]
 position = Vector2(-1, 2)
@@ -376,10 +375,12 @@ sprite_frames = SubResource("SpriteFrames_yqwrw")
 stream = ExtResource("21_j8o5j")
 volume_db = -16.845
 
-[node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=1574324078]
-z_index = -30
-position = Vector2(1, -2)
+[node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=1858624222]
 scale = Vector2(3, 3)
+scroll_scale = Vector2(1.7, 1.7)
+
+[node name="Ground" type="TileMap" parent="Node2D/Player/Parallax2D" unique_id=1574324078]
+z_index = -30
 tile_set = SubResource("TileSet_6bckx")
 rendering_quadrant_size = 26
 format = 2
