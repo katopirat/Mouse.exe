@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://dl05ndlp1nwt6" path="res://bitcoin_button.gd" id="12_kg3h7"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_0m4om"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="14_hjbbt"]
-[ext_resource type="Texture2D" path="res://assets/images/button-re.png" id="15_gvjkd"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="15_gvjkd"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_6qqoh"]
 [ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="16_8x383"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
@@ -22,12 +22,14 @@
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="18_lgjvf"]
 [ext_resource type="Script" uid="uid://cuohduu73wi4o" path="res://scenes/bitcoin_graph.gd" id="19_ml6xs"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="19_ytuoh"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="20_3rfc7"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="20_xif5a"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_4hemd"]
 [ext_resource type="PackedScene" uid="uid://c83m2j65e2ov0" path="res://scenes/level_13.tscn" id="21_uyp4e"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_icsfv"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_ciel5"]
 [ext_resource type="Texture2D" uid="uid://55l6stqtfnbd" path="res://assets/images/Myš¡orange.png" id="26_lgjvf"]
+[ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="28_wd513"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -163,14 +165,16 @@ _data = {
 [node name="Level12" type="Node2D" unique_id=659635860]
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_jjgao")]
-position = Vector2(-7, -204)
+position = Vector2(-63, -108)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
+position = Vector2(0, -82)
+zoom = Vector2(1.215, 1.215)
 position_smoothing_speed = 4.5
 
 [node name="Monitor_1" type="Node2D" parent="Player" unique_id=831704774]
 z_index = 100
-position = Vector2(-576, -323)
+position = Vector2(-501, -357)
 
 [node name="Computer" type="Node2D" parent="Player/Monitor_1" unique_id=1439863440]
 position = Vector2(17, 17)
@@ -217,12 +221,12 @@ shape = SubResource("RectangleShape2D_1tni7")
 
 [node name="Cursor" type="CharacterBody2D" parent="Player/Monitor_1/Computer" unique_id=929380522]
 z_index = 10
-position = Vector2(272, 165.00003)
+position = Vector2(213, 166.99998)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_lgjvf")
-speed = 10.0
+speed = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=1167709603]
 scale = Vector2(1, 1.0000001)
@@ -244,8 +248,8 @@ position = Vector2(329, 3.0000057)
 scale = Vector2(6, 1.23)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/TopBar" unique_id=798852782]
-position = Vector2(-16.08349, 11.382125)
-scale = Vector2(1.109091, 1.4999428)
+position = Vector2(-22.183413, 11.382129)
+scale = Vector2(0.887879, 1.4999428)
 texture = ExtResource("7_lh1sk")
 offset = Vector2(-0.075, -0.265)
 
@@ -253,13 +257,13 @@ offset = Vector2(-0.075, -0.265)
 position = Vector2(151, 89)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Background" unique_id=1496796252]
-position = Vector2(90.000015, 40.5)
-scale = Vector2(6, 4.054)
+position = Vector2(53.00002, 40.5)
+scale = Vector2(4.84375, 4.054)
 texture = ExtResource("8_ub55g")
 
 [node name="XButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=1015272555]
 z_index = 1
-position = Vector2(423, 17)
+position = Vector2(350, 17)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("9_76a1a")
@@ -299,7 +303,7 @@ sprite_frames = SubResource("SpriteFrames_gyjbk")
 
 [node name="SellButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=1589643266]
 z_index = 1
-position = Vector2(372, 201.99997)
+position = Vector2(284, 201.99997)
 scale = Vector2(2, 2)
 collision_mask = 2
 script = ExtResource("12_kg3h7")
@@ -324,8 +328,8 @@ position = Vector2(261, 123.999985)
 script = ExtResource("16_8x383")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=2060489886]
-position = Vector2(-18.5, -14.000008)
-scale = Vector2(1.6944444, 0.73333335)
+position = Vector2(-57, -14.000008)
+scale = Vector2(1.4333333, 0.73333335)
 sprite_frames = SubResource("SpriteFrames_4xvhx")
 
 [node name="LabelBitcoinPrice" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1201008074]
@@ -339,8 +343,8 @@ text = "start"
 [node name="LabelBitcoin" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=839979167]
 offset_left = 25.0
 offset_top = -70.0
-offset_right = 124.0
-offset_bottom = 7.0
+offset_right = 71.0
+offset_bottom = -53.0
 theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
@@ -357,7 +361,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = -170.0
 offset_top = -54.0
-offset_right = 128.0
+offset_right = 29.0
 offset_bottom = 47.99997
 script = ExtResource("19_ml6xs")
 
@@ -367,6 +371,16 @@ width = 2.0
 
 [node name="ValueLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=420319567]
 width = 1.0
+
+[node name="ValueLineLabel" type="Label" parent="Player/Monitor_1/Computer/Window/Graph/Control/ValueLine2D" unique_id=246699499]
+visible = false
+offset_left = 203.0
+offset_top = 6.999999
+offset_right = 232.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 10
+text = "start"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
@@ -388,7 +402,7 @@ next_scene = ExtResource("21_uyp4e")
 position = Vector2(236, 59.999992)
 
 [node name="phone" parent="." unique_id=1009766919 instance=ExtResource("20_xif5a")]
-position = Vector2(-462.99997, 206)
+position = Vector2(-476.99997, 248)
 rotation = 0.5109837
 scale = Vector2(2.3760793, 2.3760793)
 
@@ -416,6 +430,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-131065, 196609, 3, -131064, 262145, 3, -131063, 262145, 3, -131059, 262145, 3, -131058, 262145, 3, -131057, 327681, 3, -196601, 327681, 4, -262137, 327681, 4, -327673, 196609, 2, -327672, 262145, 2, -327671, 262145, 2, -327666, 262145, 2, -327665, 327681, 2, -327670, 262145, 2, -327669, 262145, 2, -131062, 262145, 3, -131061, 262145, 3, -131060, 262145, 3, -327668, 262145, 2, -327667, 262145, 2, -196593, 327681, 1, -262129, 327681, 1)
 
 [node name="TileMapDotted2" type="TileMap" parent="Table" unique_id=1439316664 groups=["table"]]
+visible = false
 z_index = -19
 scale = Vector2(3, 3)
 tile_set = ExtResource("16_6qqoh")
@@ -423,6 +438,7 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Table" unique_id=1942280196 groups=["table"]]
+visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("16_6qqoh")
@@ -431,8 +447,12 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 65537, 0, -196604, 196609, 0, -196603, 65537, 0, -131067, 65537, 0, -131068, 131073, 0, -131069, 131073, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -65541, 196609, 0, -65542, 65537, 0, -6, 131073, 0, -5, 1, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 65537, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 196609, 0, 5, 131073, 0, 4, 131073, 0, 3, 131073, 0, 2, 65537, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 65531, 1, 0, 65530, 196609, 0, 131066, 65537, 0, 131067, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 131077, 131073, 0, 131076, 1, 0, 131075, 1, 0, 131074, 196609, 0, 131073, 131073, 0, 131072, 131073, 0, 196607, 65537, 0, 196603, 1, 0, 196602, 196609, 0, 196604, 1, 0, 196605, 1, 0, 196606, 65537, 0, -196614, 131073, 0, -196613, 1, 0, -196612, 65537, 0, -196611, 65537, 0, -196610, 196609, 0, -196609, 65537, 0, -262144, 131073, 0, -262143, 131073, 0, -262142, 131073, 0, -262141, 131073, 0, -262140, 65537, 0, -262139, 65537, 0, -196615, 65537, 0, -131079, 1, 0, -65543, 196609, 0, -7, 131073, 0, 131065, 1, 0, 196601, 65537, 0, 65529, 131073, 0, 196614, 262145, 1, 262136, 65537, 0, 262138, 131073, 0, 262139, 65537, 0, 262140, 1, 0, 262141, 65537, 0, 262142, 1, 0, 262143, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196609, 1, 0, 196608, 65537, 0, 262137, 131073, 0, -262152, 65537, 1, -327674, 65537, 1, -262151, 65537, 1, -262150, 65537, 1, -262149, 65537, 1, -262148, 65537, 1, -262147, 65537, 1, -262146, 65537, 1, -262145, 65537, 1, -327680, 65537, 1, -327679, 65537, 1, -327678, 65537, 1, -327677, 65537, 1, -327676, 65537, 1, -327675, 65537, 1, 131078, 262145, 1, 65542, 262145, 1, 6, 262145, 1, -65530, 262145, 1, -131066, 262145, 1, -196602, 196609, 0, -262138, 1, 0, 196600, 65537, 0, 131064, 65537, 0, 65528, 65537, 0, -8, 65537, 0, -65544, 65537, 0, -131080, 65537, 0, -196616, 65537, 0, 262144, 65537, 2, 262145, 65537, 2, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 131073, 2, 327673, 65537, 2, 327674, 65537, 2, 327675, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 327672, 65537, 2, -131065, 1, 2, -131064, 65537, 2, -131063, 65537, 2, -131059, 65537, 2, -131058, 65537, 2, -131057, 131073, 2, -196601, 1, 0, -196600, 1, 0, -196599, 65537, 0, -196595, 131073, 0, -196594, 1, 0, -196593, 1, 0, -262129, 131073, 0, -262130, 131073, 0, -262131, 131073, 0, -262135, 65537, 0, -262136, 1, 0, -262137, 65537, 0, -327673, 65537, 1, -327672, 65537, 1, -327671, 65537, 1, -327667, 65537, 1, -327666, 65537, 1, -327665, 65537, 1, -327664, 65537, 1, -262128, 1, 0, -196592, 65537, 0, -131056, 196609, 1, -65520, 196609, 1, 16, 196609, 1, 65552, 196609, 1, 131088, 196609, 1, 196624, 196609, 1, 196625, 1, 0, 196626, 1, 0, 196627, 65537, 0, 196628, 262145, 1, 131092, 262145, 1, 65556, 262145, 1, 20, 262145, 1, -65516, 262145, 1, -131052, 262145, 1, -196588, 262145, 1, -262124, 262145, 1, -327660, 131073, 1, -327661, 65537, 1, -327662, 65537, 1, -327663, 65537, 1, -262127, 1, 0, -196591, 196609, 0, -131055, 1, 0, -65519, 65537, 0, 17, 1, 0, 65553, 196609, 0, 131089, 1, 0, 131090, 65537, 0, 131091, 65537, 0, 19, 1, 0, 65555, 131073, 0, 65554, 131073, 0, 18, 65537, 0, -65518, 1, 0, -65517, 196609, 0, -131053, 131073, 0, -196589, 65537, 0, -196590, 65537, 0, -262126, 1, 0, -262125, 1, 0, -131054, 1, 0, 262164, 131073, 2, 262163, 65537, 2, 262162, 65537, 2, 262161, 65537, 2, 262160, 1, 2, -327670, 65537, 1, -327669, 65537, 1, -327668, 65537, 1, -131062, 65537, 2, -131061, 65537, 2, -131060, 65537, 2, -262134, 65537, 0, -262133, 65537, 0, -262132, 131073, 0, -196596, 131073, 0, -196597, 65537, 0, -196598, 196609, 0, -262156, 1, 1, -196620, 196609, 1, -131084, 196609, 1, -65548, 196609, 1, -12, 196609, 1, 65524, 196609, 1, 131060, 196609, 1, 196596, 196609, 1, 262132, 196609, 1, 327668, 1, 2, -262155, 65537, 1, -196619, 131073, 0, -131083, 1, 0, -65547, 1, 0, -11, 131073, 0, 65525, 131073, 0, 131061, 1, 0, 196597, 65537, 0, 262133, 131073, 0, 327669, 65537, 2, -262154, 65537, 1, -196618, 131073, 0, -131082, 1, 0, -65546, 1, 0, -10, 131073, 0, 65526, 131073, 0, 131062, 1, 0, 196598, 65537, 0, 262134, 131073, 0, 327670, 65537, 2, -262153, 65537, 1, -196617, 65537, 0, -131081, 1, 0, -65545, 1, 0, -9, 131073, 0, 65527, 131073, 0, 131063, 1, 0, 196599, 65537, 0, 262135, 131073, 0, 327671, 65537, 2)
 
 [node name="book_open" parent="." unique_id=1220220180 instance=ExtResource("23_ciel5")]
-position = Vector2(-392.99997, -295)
+position = Vector2(-392.99997, -330)
 rotation = 0.04719321
+
+[node name="pencil" parent="." unique_id=1455917210 instance=ExtResource("28_wd513")]
+position = Vector2(-936, -330)
+rotation = -0.56365436
 
 [node name="CanvasLayer" parent="." unique_id=1262815348 instance=ExtResource("22_icsfv")]
 visible = false

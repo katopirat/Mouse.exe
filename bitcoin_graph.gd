@@ -18,6 +18,7 @@ func _ready() -> void:
 
 	buy_button.buy_bitcoin.connect(_on_buy_button_buy_bitcoin)
 	sell_button.sell_bitcoin.connect(_on_sell_button_buy_bitcoin)
+	bitcoin_price_changed.emit(starting_price)
 func _process(delta: float) -> void:
 	money_label.text = str(round(player_money))
 	bitcoin_label.text = str(snapped(bitcoin_bought, 0.01))
