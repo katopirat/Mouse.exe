@@ -16,6 +16,7 @@ var levels = [
 	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
 	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
+	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
 ]
 
 var unlocked = 1

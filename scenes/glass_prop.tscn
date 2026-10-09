@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dx44yg8f7ndag"]
+
+[ext_resource type="Script" uid="uid://cy3oovx8eihes" path="res://scripts/glass_prop.gd" id="1_eagej"]
+[ext_resource type="Texture2D" uid="uid://beoj24x7ji6tw" path="res://assets/images/glass_156x54.png" id="1_j1jdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(138, 35)
+
+[node name="GlassProp" type="Area2D" unique_id=993030729]
+script = ExtResource("1_eagej")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=228265985]
+texture = ExtResource("1_j1jdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=817100529]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_w8sno")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
