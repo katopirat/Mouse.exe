@@ -301,6 +301,16 @@ position = Vector2(-5.185604e-06, -8.000004)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
 
+[node name="Label" type="Label" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=1519858283]
+z_index = 1
+offset_left = 72.0
+offset_top = -6.0
+offset_right = 95.0
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 10
+text = "sell"
+
 [node name="SellButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=1589643266]
 z_index = 1
 position = Vector2(284, 201.99997)
@@ -324,6 +334,15 @@ position = Vector2(0.49999475, -7.9999967)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
 animation = &"pressed"
+
+[node name="Label" type="Label" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=644003571]
+offset_left = -90.0
+offset_top = -6.0
+offset_right = -72.0
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 10
+text = "buy"
 
 [node name="Graph" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1299777739]
 position = Vector2(261, 123.999985)
@@ -365,22 +384,24 @@ anchors_preset = 0
 offset_left = -170.0
 offset_top = -54.0
 offset_right = 29.0
-offset_bottom = 47.99997
+offset_bottom = 35.0
 script = ExtResource("19_ml6xs")
 
 [node name="GraphLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=1965910289]
+visible = false
 points = PackedVector2Array(8, 40)
 width = 2.0
 
 [node name="ValueLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=420319567]
+position = Vector2(0, 11.999998)
 width = 1.0
 
 [node name="ValueLineLabel" type="Label" parent="Player/Monitor_1/Computer/Window/Graph/Control/ValueLine2D" unique_id=246699499]
 visible = false
 offset_left = 203.0
-offset_top = 6.999999
+offset_top = 1.9999995
 offset_right = 232.0
-offset_bottom = 17.0
+offset_bottom = 12.0
 theme_override_fonts/font = ExtResource("20_3rfc7")
 theme_override_font_sizes/font_size = 10
 text = "start"

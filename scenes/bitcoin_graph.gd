@@ -9,6 +9,7 @@ extends Control
 @onready var last_y: float = 0.0
 @onready var min_text_distance: float = 30
 @onready var last_max_val: int = 1000
+@onready var price_lines: Array[Line2D] = []
 func _ready() -> void:
 	
 	update_graph()
@@ -26,10 +27,12 @@ func add_value(new_value: float) -> void:
 
 func update_graph() -> void:
 	if data_points.is_empty():
-		line_2d.clear_points()
+		for l in price_lines:
+			l.clear_points()
 		return
 
-	line_2d.clear_points()
+	for l in price_lines:
+		l.clear_points()
 
 	var graph_width: float = size.x
 	var graph_height: float = size.y
@@ -45,14 +48,26 @@ func update_graph() -> void:
 	last_max_val = max_value
 	var total_points: int = data_points.size()
 	var x_step: float = graph_width / (total_points - 1) if total_points > 1 else graph_width
-
-	for i in range(total_points):
+	price_lines = []
+	for i in range(total_points-1):
+		price_lines.append(line_2d.duplicate())
+		add_child(price_lines[-1])
 		var x_pos: float = i * x_step
 		
 		var y_ratio: float = data_points[i] / max_value
 		var y_pos: float = graph_height - (y_ratio * graph_height)
 		
-		line_2d.add_point(Vector2(x_pos, y_pos))
+		price_lines[-1].add_point(Vector2(x_pos, y_pos))
+		x_pos = (i+1) * x_step
+		var y_ratio_after = data_points[i+1] / max_value
+		var y_pos_after = graph_height - (y_ratio * graph_height)
+		price_lines[-1].add_point(Vector2(x_pos, y_pos_after))
+		if y_pos_after < y_pos:
+			
+			price_lines[-1].default_color = Color(1.0, 0.0, 0.0, 1.0)
+		else:
+			price_lines[-1].default_color = Color(0.0, 1.0, 0.0, 1.0)
+		price_lines[-1].visible = true
 
 	var last_y = data_points[-1]
 	for c in value_lines:

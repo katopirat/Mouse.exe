@@ -31,7 +31,6 @@ func _process(delta: float) -> void:
 		time_accumulated -= 1
 		
 func _on_buy_button_buy_bitcoin():
-	bitcoin_price_label.text = "buy"
 	if how_much_multi < 0:
 		how_much_multi = 0.50
 	elif not how_much_multi == 1.00:
@@ -39,7 +38,6 @@ func _on_buy_button_buy_bitcoin():
 	bitcoin_bought += (player_money*how_much_multi)/bitcoin_price
 	player_money -= how_much_multi*player_money
 func _on_sell_button_buy_bitcoin():
-	bitcoin_price_label.text = "sell"
 	if how_much_multi > 0:
 		how_much_multi = -0.5
 	elif not how_much_multi == -1.00:
