@@ -9,7 +9,7 @@ extends Node2D
 @onready var bitcoin_price: int = starting_price
 @onready var bitcoin_bought:float = 0.0
 @onready var player_money: float = 500.0
-@onready var max_change: float = 0.2
+@onready var max_change: float = 0.05
 @onready var how_much_multi: float = 0.50
 signal bitcoin_price_changed(new_value: float)
 var time_accumulated: float = 0.0
@@ -24,16 +24,17 @@ func _process(delta: float) -> void:
 	bitcoin_label.text = str(snapped(bitcoin_bought, 0.01))
 	time_accumulated += delta
 	if time_accumulated >= time_between_change:
-		bitcoin_price = max(10, int(randf_range(1 - max_change, 1 + max_change) * bitcoin_price)) # toto taky
-		
-		var stara = bitcoin_price
+		var stara = bitcoin_price 
+		bitcoin_price = max(10, int(randf_range(1 - max_change, 1 + max_change) * bitcoin_price))
+		bitcoin_price += int((starting_price - bitcoin_price) * 0.02)
+
 		bitcoin_price_label.text = str(bitcoin_price)
 		if bitcoin_price > stara:
 			bitcoin_price_label.modulate = Color.GREEN
 		else:
 			bitcoin_price_label.modulate = Color.RED
 		create_tween().tween_property(bitcoin_price_label, "modulate", Color.WHITE, 0.4)
-		
+
 		bitcoin_price_changed.emit(bitcoin_price)
 		print(bitcoin_price)
 		time_accumulated -= time_between_change #sorry toto jsem upravil aby to bylo hezci 

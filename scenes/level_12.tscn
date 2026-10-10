@@ -362,10 +362,11 @@ scale = Vector2(9.499999, 11.906247)
 sprite_frames = SubResource("SpriteFrames_4xvhx")
 
 [node name="LabelBitcoinPrice" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1201008074]
-offset_left = -134.0
+offset_left = -185.0
 offset_top = -70.0
-offset_right = -56.0
+offset_right = -107.0
 offset_bottom = -47.00003
+theme_override_colors/font_color = Color(1, 1, 0.5529412, 1)
 theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
@@ -378,10 +379,9 @@ theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
 [node name="LabelMoney" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1306320870]
-offset_left = -51.0
-offset_top = -70.0
-offset_right = 48.0
-offset_bottom = 7.0
+offset_left = -99.0
+offset_top = -69.0
+offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
@@ -411,6 +411,36 @@ offset_bottom = 12.0
 theme_override_fonts/font = ExtResource("20_3rfc7")
 theme_override_font_sizes/font_size = 10
 text = "start"
+
+[node name="Label" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1839547543]
+offset_left = -184.0
+offset_top = -81.99999
+offset_right = -138.0
+offset_bottom = -58.999992
+theme_override_colors/font_color = Color(0.6939149, 0.830124, 0.65961224, 1)
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 12
+text = "Price"
+
+[node name="Label2" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=559970367]
+offset_left = -99.0
+offset_top = -80.99999
+offset_right = -53.0
+offset_bottom = -57.999992
+theme_override_colors/font_color = Color(0.6939149, 0.830124, 0.65961224, 1)
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 12
+text = "Money"
+
+[node name="Label3" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1244876226]
+offset_left = 25.0
+offset_top = -80.99999
+offset_right = 71.0
+offset_bottom = -57.999992
+theme_override_colors/font_color = Color(0.6939149, 0.830124, 0.65961224, 1)
+theme_override_fonts/font = ExtResource("20_3rfc7")
+theme_override_font_sizes/font_size = 12
+text = "BTC"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

@@ -10,8 +10,8 @@ extends Control
 @onready var min_text_distance: float = 30
 @onready var last_max_val: int = 1000
 @onready var price_lines: Array[Line2D] = []
+
 func _ready() -> void:
-	
 	update_graph()
 	
 	
