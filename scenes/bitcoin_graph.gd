@@ -2,14 +2,16 @@ extends Control
 
 @onready var line_2d: Line2D = $GraphLine2D
 @onready var value_line_og: Line2D = $ValueLine2D
-@export var max_data_points: int = 20
+@export var max_data_points: int = 50
 @export var line_space: float = 500.0
 @onready var data_points: Array[float] = []
 @onready var value_lines: Array[Line2D] = [] 
 @onready var last_y: float = 0.0
-@onready var min_text_distance: float = 30
+@onready var min_text_distance: float = 50
+@onready var min_val_line_distance: float = 10
 @onready var last_max_val: int = 1000
 @onready var price_lines: Array[Line2D] = []
+@onready var last_button: float = 0.0
 func _ready() -> void:
 	
 	update_graph()
@@ -19,10 +21,7 @@ func _ready() -> void:
 func add_value(new_value: float) -> void:
 	data_points.append(new_value)
 	data_points = data_points.slice(-max_data_points)
-	if len(data_points) < max_data_points:
-		for r in range(max_data_points-len(data_points)):
-			data_points.append(data_points[-1])
-		last_max_val = data_points.max()
+	
 	update_graph()
 
 func update_graph() -> void:
@@ -39,12 +38,17 @@ func update_graph() -> void:
 
 	var max_value: float = data_points.max()
 	var min_value: float = data_points.min()
-	if max_value - min_value < 50:
-		max_value = min_value + 50
-		
-	last_max_val = max_value
+	
+	var last_y = data_points[-1]
+	
+	if max_value-last_y < 300:
+		max_value = last_y + 300
+	if last_y-min_value < 300:
+		min_value = last_y - 300
+	if min_value < graph_height:
+		min_value = graph_height
 	var total_points: int = data_points.size()
-	var x_step: float = graph_width / (total_points - 1) if total_points > 1 else graph_width
+	var x_step: float = graph_width / max_data_points
 	price_lines = []
 	for i in range(total_points-1):
 		price_lines.append(line_2d.duplicate())
@@ -67,7 +71,7 @@ func update_graph() -> void:
 			price_lines[-1].default_color = Color(0.0, 1.0, 0.0, 1.0)
 		price_lines[-1].visible = true
 
-	var last_y = data_points[-1]
+	
 	for c in value_lines:
 		c.queue_free()
 	var all_value_lines_y = []
@@ -81,10 +85,9 @@ func update_graph() -> void:
 		var y_pos: float = graph_height - (((line_val - min_value) / (max_value - min_value)) * graph_height)
 		value_lines[-1].add_point(Vector2(0, y_pos))
 		value_lines[-1].add_point(Vector2(graph_width, y_pos))
-		var value_label: Label = value_lines[-1].get_node("ValueLineLabel")
-		value_label.text = str(int(line_val))
+		var value_label: Label = $LabelBitcoinPrice
+		
 		value_label.position.y = y_pos
-		value_label.visible = true
 		all_value_lines_y.append(y_pos)
 	if max_value:
 		var line_val = max_value
@@ -92,40 +95,68 @@ func update_graph() -> void:
 		value_lines.append(new_val_line)
 		add_child(new_val_line)
 		var y_pos: float = graph_height - (((line_val - min_value) / (max_value - min_value)) * graph_height)
-		value_lines[-1].add_point(Vector2(0, y_pos))
-		value_lines[-1].add_point(Vector2(graph_width, y_pos))
+		if abs(last_y) > min_val_line_distance:
+			value_lines[-1].add_point(Vector2(0, y_pos))
+			value_lines[-1].add_point(Vector2(graph_width, y_pos))
+			all_value_lines_y.append(y_pos)
 		var value_label: Label = value_lines[-1].get_node("ValueLineLabel")
-		if abs(last_y) > min_text_distance:	
+		if abs(last_y-line_val) > min_text_distance:	
 			value_label.text = str(int(line_val))
 			value_label.position.y = y_pos
 			value_label.visible = true
-			all_value_lines_y.append(y_pos)
+			
 		else:
 			value_label.visible = false
-		
-	for i in range(5):
-		var line_val = min_value + (max_value - min_value) * i / 4.0
+	if min_value:
+		var line_val = min_value
 		var new_val_line = value_line_og.duplicate()
 		value_lines.append(new_val_line)
 		add_child(new_val_line)
 		var y_pos: float = graph_height - (((line_val - min_value) / (max_value - min_value)) * graph_height)
-		value_lines[-1].add_point(Vector2(0, y_pos))
-		value_lines[-1].add_point(Vector2(graph_width, y_pos))
-		var min_distance = 10000
-		for dist in all_value_lines_y:
-			if abs(y_pos-dist) < min_distance:
-				min_distance = abs(y_pos-dist)
+		if abs(last_y) > min_val_line_distance:
+			value_lines[-1].add_point(Vector2(0, y_pos))
+			value_lines[-1].add_point(Vector2(graph_width, y_pos))
+			all_value_lines_y.append(y_pos)
 		var value_label: Label = value_lines[-1].get_node("ValueLineLabel")
-		if min_distance > min_text_distance:
-			value_label.text = str(line_val)
+		if abs(last_y-line_val) > min_text_distance:	
+			value_label.text = str(int(line_val))
 			value_label.position.y = y_pos
 			value_label.visible = true
-			all_value_lines_y.append(y_pos)
+			
 		else:
 			value_label.visible = false
+	if last_button != 0:
+		var line_val = 0
+		var line_color = Color.WHITE
+		if last_button > 0:
+			line_val = last_button
+			line_color = Color.GREEN
+		else:
+			line_val = -last_button
+			line_color = Color.RED
+		if line_val < max_value and line_val > min_value:
+			var new_val_line = value_line_og.duplicate()
+			value_lines.append(new_val_line)
+			add_child(new_val_line)
+			var y_pos: float = graph_height - (((line_val - min_value) / (max_value - min_value)) * graph_height)
+			value_lines[-1].add_point(Vector2(0, y_pos))
+			value_lines[-1].add_point(Vector2(graph_width, y_pos))
+			value_lines[-1].default_color = line_color
+			var value_label: Label = value_lines[-1].get_node("ValueLineLabel")
+		
+		
 		
 		
 		
 		
 func _on_graph_bitcoin_price_changed(new_value: float) -> void:
 	add_value(new_value)
+
+
+func _on_graph_bought_bitcoin(price: float) -> void:
+	last_button = price
+	update_graph()
+
+func _on_graph_sold_bitcoin(price: float) -> void:
+	last_button = -price
+	update_graph()
