@@ -24,11 +24,19 @@ func _process(delta: float) -> void:
 	bitcoin_label.text = str(snapped(bitcoin_bought, 0.01))
 	time_accumulated += delta
 	if time_accumulated >= time_between_change:
-		bitcoin_price = int(randf_range(1+max_change, 1-max_change)*bitcoin_price)
+		bitcoin_price = max(10, int(randf_range(1 - max_change, 1 + max_change) * bitcoin_price)) # toto taky
+		
+		var stara = bitcoin_price
 		bitcoin_price_label.text = str(bitcoin_price)
+		if bitcoin_price > stara:
+			bitcoin_price_label.modulate = Color.GREEN
+		else:
+			bitcoin_price_label.modulate = Color.RED
+		create_tween().tween_property(bitcoin_price_label, "modulate", Color.WHITE, 0.4)
+		
 		bitcoin_price_changed.emit(bitcoin_price)
 		print(bitcoin_price)
-		time_accumulated -= 1
+		time_accumulated -= time_between_change #sorry toto jsem upravil aby to bylo hezci 
 		
 func _on_buy_button_buy_bitcoin():
 	if how_much_multi < 0:

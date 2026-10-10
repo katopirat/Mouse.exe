@@ -364,8 +364,8 @@ sprite_frames = SubResource("SpriteFrames_4xvhx")
 [node name="LabelBitcoinPrice" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1201008074]
 offset_left = -134.0
 offset_top = -70.0
-offset_right = -35.0
-offset_bottom = 7.0
+offset_right = -56.0
+offset_bottom = -47.00003
 theme_override_fonts/font = ExtResource("18_lgjvf")
 text = "start"
 
@@ -396,7 +396,6 @@ script = ExtResource("19_ml6xs")
 
 [node name="GraphLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=1965910289]
 visible = false
-points = PackedVector2Array(8, 40)
 width = 2.0
 
 [node name="ValueLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=420319567]
