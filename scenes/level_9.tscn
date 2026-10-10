@@ -27,16 +27,16 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="27_lyw3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa5g2"]
-size = Vector2(420, 22.25)
+size = Vector2(420, 33.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4boh"]
-size = Vector2(420, 31)
+size = Vector2(420, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qx4qr"]
-size = Vector2(22, 254)
+size = Vector2(27, 254)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5uyx"]
-size = Vector2(21, 259)
+size = Vector2(28, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gxa1"]
 size = Vector2(1, 1)
@@ -250,19 +250,23 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=786050387]
-position = Vector2(210, -10.875)
+position = Vector2(210, -16.375)
+scale = Vector2(1.0902163, 1)
 shape = SubResource("RectangleShape2D_sa5g2")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=480841311]
-position = Vector2(209, 271.5)
+position = Vector2(209, 273)
+scale = Vector2(1.16, 1)
 shape = SubResource("RectangleShape2D_e4boh")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=2012179677]
-position = Vector2(-10, 127)
+position = Vector2(-12.5, 127)
+scale = Vector2(1, 1.1600006)
 shape = SubResource("RectangleShape2D_qx4qr")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=2053262577]
-position = Vector2(430.5, 128.5)
+position = Vector2(434, 128.5)
+scale = Vector2(1, 1.16)
 shape = SubResource("RectangleShape2D_g5uyx")
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Computer" unique_id=1730657914]
