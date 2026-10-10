@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_isj1j"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_so66j"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_tr1x6"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_d5akn"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_k8ld0"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="6_mbb35"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_wbtxt"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_x2fux"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_s7g0b"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_hnsmf"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_so66j"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="15_isj1j"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="16_mmfjm"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="18_k8ld0"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="19_mbb35"]
@@ -142,7 +144,7 @@ shape = SubResource("RectangleShape2D_jclro")
 position = Vector2(432.5, 128.5)
 shape = SubResource("RectangleShape2D_1tni7")
 
-[node name="Cursor" type="CharacterBody2D" parent="Player/Monitor_1/Computer" unique_id=929380522]
+[node name="Cursor" type="CharacterBody2D" parent="Player/Monitor_1/Computer" unique_id=929380522 groups=["cursor"]]
 z_index = 10
 position = Vector2(273, 110.000015)
 scale = Vector2(1.1017417, 0.99504834)
@@ -155,10 +157,16 @@ speed = 15.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_iopsf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=150483435]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("5_d5akn")
+[node name="Arrow" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=150483435]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("5_k8ld0")
+
+[node name="Hand" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=800037123]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("6_mbb35")
 
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
 position = Vector2(0, -2.3841858e-07)
@@ -245,6 +253,7 @@ offset_right = 95.45454
 offset_bottom = 0.45453644
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("16_mmfjm")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor_1/Os/PanelContainer" unique_id=677184590]
 layout_mode = 2

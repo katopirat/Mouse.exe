@@ -52,7 +52,7 @@ func level_menu_refresh():
 	for child in grid.get_children():
 		child.queue_free()
 
-	for i in range(site * 10,min((site+1) * 12,GameState.levels.size())):
+	for i in range(site * 12,min((site+1) * 12,GameState.levels.size())):
 		var button = Button.new()
 		button.custom_minimum_size = Vector2(28, 16)
 		button.text = str(i + 1)

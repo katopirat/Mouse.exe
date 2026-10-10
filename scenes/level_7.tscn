@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_xkbpl"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_tcxil"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_1lha2"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_mouq0"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_e7ajn"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_hq5o0"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="6_xkbpl"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_uthiy"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_ykoec"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_6pum2"]
@@ -301,10 +302,16 @@ speed = 3.5
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_cq2xo")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=2052527184]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("5_mouq0")
+[node name="Arrow" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=145556835]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("5_e7ajn")
+
+[node name="Hand" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=1820907032]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("6_xkbpl")
 
 [node name="Window" type="Node2D" parent="Player/Monitor/Computer" unique_id=1658789405 node_paths=PackedStringArray("physical_button")]
 position = Vector2(95.8571, 38.714294)

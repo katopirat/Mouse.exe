@@ -7,11 +7,15 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Cursor":
 		cursor_inside = true
 		$AnimatedSprite2D.play("hovered")
+		if body.has_method("set_click_mode"):
+			body.set_click_mode("hand")
  
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Cursor":
 		cursor_inside = false
 		$AnimatedSprite2D.play("default")
+		if body.has_method("set_click_mode"):
+			body.set_click_mode("arrow")
 
 func _input(event):
 	

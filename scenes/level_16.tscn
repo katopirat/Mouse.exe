@@ -6,9 +6,10 @@
 [ext_resource type="Script" uid="uid://be0afpgx626nc" path="res://scenes/question_mark_bubble.gd" id="3_20hhy"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_qe6x4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_3skca"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_o022h"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_plmi6"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="7_20hhy"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_fio3l"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="8_qe6x4"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_yhmun"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_2myq3"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_2ce8y"]
@@ -194,10 +195,16 @@ speed = 15.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_iopsf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=150483435]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("5_o022h")
+[node name="Arrow" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=158219985]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("7_20hhy")
+
+[node name="Hand" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=1434447032]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("8_qe6x4")
 
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
 position = Vector2(349.99997, 115)

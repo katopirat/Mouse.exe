@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_63d2t"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_va6c3"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_pc3at"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="5_bgibu"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_wdtqu"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_73m23"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_45kkt"]
@@ -15,11 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="10_nquw4"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_3buw8"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="11_vhnap"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="12_73m23"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="12_vwfin"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="12_vwjju"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="13_45kkt"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="13_63d2t"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_rur20"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_srjk8"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="14_srjk8"]
 [ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="15_0na3t"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="16_gxp3h"]
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="17_qku3a"]
@@ -335,10 +336,16 @@ position = Vector2(-0.638, -0.21)
 scale = Vector2(-0.165, -0.165)
 shape = SubResource("RectangleShape2D_cq2xo")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=2052527184]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("5_bgibu")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1110841854]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("12_73m23")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1120698474]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("13_45kkt")
 
 [node name="Window" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1658789405]
 position = Vector2(0, -2.3841858e-07)

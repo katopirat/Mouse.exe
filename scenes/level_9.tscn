@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_xqj3w"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_lq6po"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="4_nttaj"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_csrax"]
 [ext_resource type="PackedScene" uid="uid://1io1o76t2fr4" path="res://scenes/level_10.tscn" id="6_314y7"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="6_c5wkq"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="6_fdyb3"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_xuraf"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="9_0dv5q"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="10_lq1qy"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="11_hgrlv"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="12_ltkux"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="13_cu0tp"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="14_ym17a"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="15_jwqgb"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="16_qeri5"]
@@ -20,7 +21,7 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="20_3pwyc"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="21_8ybmx"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="21_o60ts"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="22_qbhuv"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="22_qbhuv"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_fi6co"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="25_5ojqg"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="27_lyw3c"]
@@ -277,10 +278,16 @@ speed = 150.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_2gxa1")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1170370745]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("13_cu0tp")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=681120967]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("5_csrax")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1925557025]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("6_c5wkq")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Computer" unique_id=1594028311]
 position = Vector2(-12.999985, 150)

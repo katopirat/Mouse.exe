@@ -12,10 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://dk6va4x4mnefr" path="res://scenes/level_12.tscn" id="7_k8idr"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_oggk4"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_7chbu"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_e7128"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_tbml5"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_ks4jm"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="12_7360d"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_ga27j"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="13_oggk4"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_sqh6y"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_fl50g"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_xxxg0"]
@@ -644,10 +645,16 @@ speed = 4.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_aih2x")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=2091260616]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("9_e7128")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1113021572]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("12_7360d")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1986373123]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("13_oggk4")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1696999064]
 position = Vector2(134.00002, 76)

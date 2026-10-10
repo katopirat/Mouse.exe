@@ -12,7 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="10_jj35q"]
 [ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="11_jj35q"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="11_qag05"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="12_jvo0a"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="13_8podf"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="14_63543"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="23_pe6q5"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_bxgrk"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="25_ortew"]
@@ -362,10 +363,16 @@ speed = 70.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_h548m")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=749833361]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("12_jvo0a")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=416927277]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("13_8podf")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=396091665]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("14_63543")
 
 [node name="Borders2" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=2016532110]
 position = Vector2(265.57138, 132.09795)

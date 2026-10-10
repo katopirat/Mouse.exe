@@ -9,9 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="8_56lex"]
 [ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="9_56lex"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="9_aq0ia"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="10_d30gl"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="11_1a1e2"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="11_dukng"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="12_4foh8"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="12_wgy5m"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="13_j723m"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="14_ofmoa"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="15_uvpr8"]
@@ -296,10 +297,16 @@ speed = 30.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_gxtvc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1013911362]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("10_d30gl")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1079547648]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("11_1a1e2")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1927449451]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("12_wgy5m")
 
 [node name="Borders2" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=1930698082]
 position = Vector2(265.57138, 132.09795)

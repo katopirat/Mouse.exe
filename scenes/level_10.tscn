@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="7_jgarw"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="8_guwt3"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="9_atjs7"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="10_akcom"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="10_nf7pg"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="11_3y5qg"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="11_cg1jc"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="12_5sae1"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="13_av4wb"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="14_3kbcw"]
@@ -19,7 +20,7 @@
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="18_cin7o"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="19_fe7ll"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="19_uv3yh"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="20_jhdh4"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_jhdh4"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="21_cronh"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="21_rap3s"]
 
@@ -375,10 +376,16 @@ speed = 10.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_osxpf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1467526680]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("11_3y5qg")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1008831863]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("10_akcom")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1242030351]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("11_cg1jc")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Computer" unique_id=2061124831]
 position = Vector2(207.00002, 203)

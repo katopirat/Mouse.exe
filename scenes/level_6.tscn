@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://b035tqqwad4ne"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_5fwrv"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_fqw3r"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_lgfmy"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="6_rd5uj"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_5kl8g"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="7_ymwnx"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="8_adfb8"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_kljjn"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_fqw3r"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="10_epfji"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_rd5uj"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_t4jau"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_7e2h5"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_r7cvq"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="14_83tf8"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="14_83tf8"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_dx64l"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_acdgk"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="15_kljjn"]
@@ -331,10 +332,16 @@ speed = 3.5
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_cq2xo")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=2052527184]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("9_fqw3r")
+[node name="Arrow" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=1047878369]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("5_fqw3r")
+
+[node name="Hand" type="Sprite2D" parent="Player/Monitor/Computer/Cursor" unique_id=1425572231]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("6_rd5uj")
 
 [node name="Window" type="Node2D" parent="Player/Monitor/Computer" unique_id=1658789405]
 position = Vector2(-52.714325, 47.285725)
