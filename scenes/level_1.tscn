@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="13_hnsmf"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_so66j"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="15_isj1j"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="16_mbb35"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="16_mmfjm"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="18_k8ld0"]
@@ -82,7 +83,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("16_mbb35")
 }],
 "loop": 1,
 "name": &"pressed",
@@ -229,6 +230,7 @@ shape = SubResource("CapsuleShape2D_2os1m")
 position = Vector2(0.6666665, -1.3333335)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_gyjbk")
+animation = &"pressed"
 
 [node name="Os" type="Control" parent="Player/Monitor_1" unique_id=169068971]
 layout_mode = 3

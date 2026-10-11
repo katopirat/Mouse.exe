@@ -158,13 +158,14 @@ func _fall() -> void:
 	fall_tween.tween_property($AnimatedSprite2D, "position:y", $AnimatedSprite2D.position.y + fall_drop_distance, fall_drop_duration)
 
 	await $AnimatedSprite2D.animation_finished
-	if shader_animation:
-		shader_animation.play("close_screen")
-		await shader_animation.animation_finished
 	die()
 
 func _on_table_table_changed(tilemap: TileMap) -> void:
 	table_tilemap = tilemap
 
 func die():
+	if $AudioStreamPlayer:
+		$AudioStreamPlayer.play()
+	$"../CanvasLayer/AnimationTree".play("close_screen")
+	await $"../CanvasLayer/AnimationTree".animation_finished
 	get_tree().reload_current_scene()

@@ -12,7 +12,7 @@ const CACTUSES: Array[PackedScene] = [
 @onready var timer: Timer = $Timer
 
 var score: int = 0
-
+signal open_bridge()
 	
 	
 
@@ -35,10 +35,12 @@ func _on_spawn_timer_timeout() -> void:
 	
 
 func _on_cactus_passed() -> void:
+	$AudioStreamPlayer.play()
 	score += 1
 	_update_score_ui()
 
 func _update_score_ui() -> void:
 	label.text = str(score) + "/10"
 	if score >= 10:
-		$"../../../../../Finish".level_completed()
+		open_bridge.emit()
+		$"..".queue_free()

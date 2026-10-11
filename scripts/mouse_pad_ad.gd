@@ -7,7 +7,7 @@ extends Area2D
 @onready var buy_ad_audio: AudioStreamPlayer = $AudioStreamPlayer2
 @onready var finish: Area2D = $"../../../../Finish"
 @onready var money_have: float = 0
-@onready var mousepad_cost: float = 2000.0
+@onready var mousepad_cost: float = 1999.0
 signal ad_bought(price: float)
 var cursor_inside = false
 
@@ -30,6 +30,7 @@ func _input(event):
 	if cursor_inside and event.is_action_pressed("click") and Global.player_can_move:
 		if money_have >= mousepad_cost:
 			buy_ad_audio.play()
+			await buy_ad_audio.finished
 			ad_bought.emit(mousepad_cost)
 			$"../../../..".add_child(finish)
 			$"../../../../Table/TileMapDotted".visible = false

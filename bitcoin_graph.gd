@@ -9,7 +9,7 @@ extends Node2D
 @onready var bitcoin_price: int = starting_price
 @onready var bitcoin_bought:float = 0.25
 @onready var player_money: float = 500.0
-@onready var max_change: float = 0.11
+@onready var max_change: float = 0.12
 @onready var min_change: float = -0.1
 @onready var how_much_multi: float = 0.50
 @onready var stara = starting_price

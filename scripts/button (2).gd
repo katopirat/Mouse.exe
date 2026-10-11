@@ -4,6 +4,8 @@ var is_pressed = false
 @onready var sound_player:AudioStreamPlayer = $AudioStreamPlayer
 signal open_bridge()
 
+func _ready() -> void:
+	$AnimatedSprite2D.play('default')
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == "Cursor":

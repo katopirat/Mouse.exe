@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="7_cuee2"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="8_mbchn"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="9_kvxec"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="10_ufpj1"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="10_yanis"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="11_bwjsp"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="11_lwb83"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="12_2hoxi"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="13_iheqk"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="14_c7en3"]
@@ -18,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="16_vrnxo"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="17_g1rox"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="18_8ax51"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="19_et0ej"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="19_et0ej"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="20_0us5a"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="23_16awh"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_qsjsx"]
@@ -35,7 +36,7 @@ size = Vector2(22, 254)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vamft"]
 size = Vector2(21, 259)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_psrd1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ukg8"]
@@ -331,7 +332,7 @@ shape = SubResource("RectangleShape2D_pgsjj")
 position = Vector2(430.5, 128.5)
 shape = SubResource("RectangleShape2D_vamft")
 
-[node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1395938626]
+[node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1795685923 groups=["cursor"]]
 z_index = 10
 position = Vector2(251, 139.00002)
 scale = Vector2(1.1017417, 0.99504834)
@@ -340,14 +341,20 @@ collision_mask = 2
 script = ExtResource("9_kvxec")
 speed = 8.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1281347726]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=521167539]
 scale = Vector2(1, 1.0000001)
-shape = SubResource("RectangleShape2D_psrd1")
+shape = SubResource("RectangleShape2D_iopsf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1297691712]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("10_ufpj1")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=11642157]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("10_yanis")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1483281120]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("11_lwb83")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1221388860]
 position = Vector2(190, 197)
