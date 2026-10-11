@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://x7ww0cleaeix"]
 
-[ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="1_0cvxw"]
 [ext_resource type="Script" uid="uid://s05ifrwbvq05" path="res://scripts/emo_boss_intro.gd" id="1_c0rdk"]
+[ext_resource type="PackedScene" uid="uid://doapoiwfumucm" path="res://scenes/level_17.tscn" id="2_c0rdk"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="2_f6l5q"]
 [ext_resource type="Texture2D" uid="uid://bgd8no4xilav0" path="res://assets/images/emo/emo-1.png.png" id="2_kl521"]
 [ext_resource type="Script" uid="uid://dlmnanai1pmg0" path="res://scenes/boss_emo_intro.gd" id="3_60f7s"]
@@ -26,13 +26,14 @@
 [ext_resource type="Texture2D" uid="uid://dqxelu4570xb2" path="res://assets/images/emo/emo/emo26.png" id="21_7qao6"]
 [ext_resource type="Texture2D" uid="uid://bs0no3p7mve3a" path="res://assets/images/emo/emo/emo01.png" id="22_c74fh"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="24_3hfpi"]
+[ext_resource type="Texture2D" uid="uid://ci51oqpppqhp6" path="res://scenes/Snímek obrazovky z 2026-10-11 15-57-50.png" id="26_c0rdk"]
 
 [sub_resource type="Animation" id="Animation_vom3w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect2:color")
+tracks/0/path = NodePath("CanvasLayer/Control/ColorRect2:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -44,7 +45,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect2:position")
+tracks/1/path = NodePath("CanvasLayer/Control/ColorRect2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -56,7 +57,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/2/path = NodePath("CanvasLayer/Control/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -68,7 +69,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer/Sprite2D/GPUParticles2D:emitting")
+tracks/3/path = NodePath("CanvasLayer/Control/Sprite2D/GPUParticles2D:emitting")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -80,75 +81,99 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:shake_intensity")
+tracks/4/path = NodePath("CanvasLayer/Control/Sprite2D/Sprite2D:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"update": 1,
+"values": [true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AnimationPlayer/Sprite2D/Sprite2D:visible")
+tracks/5/path = NodePath("CanvasLayer/Control/Sprite2D:animation_play")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": ["default"]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("AnimationPlayer/Sprite2D:animation_play")
+tracks/6/path = NodePath("CanvasLayer/Control/Sprite2D:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["default"]
+"update": 0,
+"values": [Vector2(6.015625, 6.015625)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("AnimationPlayer/Sprite2D:scale")
+tracks/7/path = NodePath("CanvasLayer/Control/Label:text")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(6.015625, 6.015625)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AnimationPlayer/Label:text")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["E-M0
 The BOSS"]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath(".:modulate")
+tracks/9/path = NodePath("CanvasLayer:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Control:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:shake")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_stccd"]
@@ -157,7 +182,7 @@ length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect2:color")
+tracks/0/path = NodePath("CanvasLayer/Control/ColorRect2:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -169,7 +194,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect2:position")
+tracks/1/path = NodePath("CanvasLayer/Control/ColorRect2:position")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -181,19 +206,19 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/2/path = NodePath("CanvasLayer/Control/Sprite2D:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.75, 1.2666667),
-"transitions": PackedFloat32Array(1, 1, 4.756816),
+"times": PackedFloat32Array(0, 0.75, 1.24),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(558, -727), Vector2(558, -727), Vector2(550, 313)]
+"values": [Vector2(558, -727), Vector2(558, -727), Vector2(613.00006, 309.00003)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer/Sprite2D/GPUParticles2D:emitting")
+tracks/3/path = NodePath("CanvasLayer/Control/Sprite2D/GPUParticles2D:emitting")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -205,81 +230,105 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:shake_intensity")
+tracks/4/path = NodePath("CanvasLayer/Control/Sprite2D/Sprite2D:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.2666667, 1.6333333),
-"transitions": PackedFloat32Array(15.999994, 0.4999999, 1),
-"update": 0,
-"values": [0.0, 40.0, 0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("AnimationPlayer/Sprite2D/Sprite2D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0, 2.0666666, 2.5666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("AnimationPlayer/Sprite2D:animation_play")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Control/Sprite2D:animation_play")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0, 3.04),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": ["default", "angry"]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AnimationPlayer/Sprite2D:scale")
-tracks/7/interp = 2
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Control/Sprite2D:scale")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 3.05, 4.13),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(6.015625, 6.015625), Vector2(6.015625, 6.015625), Vector2(7.836, 7.836)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("AnimationPlayer/Label:text")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Control/Label:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0, 3.57, 3.75, 3.92, 4.06, 4.18, 4.33, 4.46, 4.58, 4.7, 4.8, 4.88),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["", "E", "E-", "E-M", "E-M0", "E-M0
-T", "E-M0
-Th", "E-M0
-The", "E-M0
-The B", "E-M0
-The BO", "E-M0
-The BOS", "E-M0
+"values": ["", "E", "E.", "E.M.", "E.M.O.", "E.M.O.
+T", "E.M.O.
+Th", "E.M.O.
+The", "E.M.O.
+The B", "E.M.O.
+The BO", "E.M.O.
+The BOS", "E.M.O.
 The BOSS"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath(".:modulate")
+tracks/9/path = NodePath("CanvasLayer:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Control:modulate")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6.1266665, 6.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:shake")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 40]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f6l5q"]
@@ -289,28 +338,20 @@ _data = {
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xt0ub"]
-load_path = "res://.godot/imported/emo01.png-372997c9235bd93da524ae0a4b7d14e2.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3b0qs"]
-load_path = "res://.godot/imported/emo02.png-2dda40c8f8b19e62bed9a1493084d4e4.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u3cmv"]
-load_path = "res://.godot/imported/emo03.png-f2db1bc5e6a249022bc1f1cd2e76cd22.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hp0or"]
-load_path = "res://.godot/imported/emo04.png-ad5fa442eb43d4cb8acb68baff7750a1.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gns13"]
-load_path = "res://.godot/imported/emo05.png-fbd9a8aa55293a962e45ac1550ee3439.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_12jpy"]
-load_path = "res://.godot/imported/emo06.png-d7187ee9c3fd8fd1f888d60d658a0c7e.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qvkxr"]
-load_path = "res://.godot/imported/emo07.png-54730749f0715a7cec6c15d07a107b7f.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mnx14"]
-load_path = "res://.godot/imported/emo08.png-848f93b0ac28a86fb4353c5f9282c126.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w8sno"]
 animations = [{
@@ -442,15 +483,33 @@ animations = [{
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_c0rdk")
+next = ExtResource("2_c0rdk")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1987132087]
-position = Vector2(575, 322)
-script = ExtResource("1_0cvxw")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1775272]
+visible = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1259870357]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=938884418]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_c0rdk")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1364888628]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control" unique_id=1259870357]
+root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_f6l5q")
 
-[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=1981121744]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1981121744]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -458,38 +517,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="AnimationPlayer" unique_id=47603263]
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control" unique_id=47603263]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -468.0
 offset_top = 195.0
-offset_right = 321.67212
-offset_bottom = 1142.4814
+offset_right = 1193.0679
+offset_bottom = 2431.0352
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.7853982
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer" unique_id=1203072783]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1203072783]
 position = Vector2(558, -727)
 scale = Vector2(6.015625, 6.015625)
 texture = ExtResource("2_kl521")
 script = ExtResource("3_60f7s")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="AnimationPlayer/Sprite2D" unique_id=1291198574]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/Sprite2D" unique_id=1291198574]
 position = Vector2(-4.4883122, -7.812985)
 sprite_frames = SubResource("SpriteFrames_w8sno")
 animation = &"blink"
 frame = 8
 frame_progress = 1.0
 
-[node name="GPUParticles2D" type="CPUParticles2D" parent="AnimationPlayer/Sprite2D" unique_id=1462156740]
+[node name="GPUParticles2D" type="CPUParticles2D" parent="CanvasLayer/Control/Sprite2D" unique_id=1462156740]
 position = Vector2(-0.56475306, 23.455667)
 scale = Vector2(0.16623376, 0.16623376)
 emitting = false
 amount = 100
-lifetime = 10.0
+lifetime = 4.0
 one_shot = true
 explosiveness = 1.0
 emission_shape = 3
@@ -502,11 +562,12 @@ scale_amount_min = 9.15
 scale_amount_max = 9.85
 color = Color(0.34744078, 0.40120083, 0.54081595, 1)
 
-[node name="Label" type="Label" parent="AnimationPlayer" unique_id=351353052]
-offset_left = 438.99997
-offset_top = 522.0
-offset_right = 478.99997
-offset_bottom = 545.0
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=351353052]
+layout_mode = 0
+offset_left = 477.99997
+offset_top = 519.0
+offset_right = 518.0
+offset_bottom = 542.0
 scale = Vector2(6.550875, 6.550875)
 theme = ExtResource("24_3hfpi")
 theme_override_colors/font_color = Color(1, 1, 1, 1)

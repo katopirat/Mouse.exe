@@ -7,6 +7,7 @@ const z_index_under_desk = -25
 const fall_drop_distance = 60.0
 const fall_drop_duration = 0.5
 @export var table_tilemap: TileMap
+var is_dying: bool = false
 
 var finish: Area2D = null
 
@@ -52,12 +53,13 @@ func _physics_process(delta: float) -> void:
 	if god_mode and not Global.player_can_move and not $Node2D/AnimationPlayer.is_playing():
 		$Node2D/AnimationPlayer.play("RESET") 
 		Global.player_can_move = true
-	if Input.is_action_just_pressed("reset"):
+	if Input.is_action_just_pressed("reset") and not is_dying:
+		is_dying = true
+		set_physics_process(false)
 		Global.player_can_move = false
-		if shader_animation:
-			shader_animation.play("close_screen")
-			await shader_animation.animation_finished
-		get_tree().reload_current_scene()
+		die()
+		return
+
 		
 	if not Global.player_can_move:
 		if finish_scene_animation:
@@ -144,11 +146,14 @@ func _is_on_desk(point: Vector2) -> bool:
 	return false
 
 func _fall() -> void:
+	if is_dying:
+		return
+	is_dying = true
+	set_physics_process(false)
+
 	faling_sound.play()
 	falling_now.emit(true)
 	Global.player_can_move = false
-	
-
 
 	z_index = z_index_under_desk
 
@@ -160,12 +165,17 @@ func _fall() -> void:
 	await $AnimatedSprite2D.animation_finished
 	die()
 
+
 func _on_table_table_changed(tilemap: TileMap) -> void:
 	table_tilemap = tilemap
 
 func die():
+	if not is_inside_tree():
+		return
 	if $AudioStreamPlayer:
 		$AudioStreamPlayer.play()
-	$"../CanvasLayer/AnimationTree".play("close_screen")
-	await $"../CanvasLayer/AnimationTree".animation_finished
-	get_tree().reload_current_scene()
+	if shader_animation:
+		shader_animation.play("close_screen")
+		await shader_animation.animation_finished
+	if is_inside_tree() and get_tree():
+		get_tree().reload_current_scene()

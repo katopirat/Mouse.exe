@@ -528,7 +528,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("17_bfqui")]
 z_index = -1
-position = Vector2(488, -334)
+position = Vector2(455, -336)
 next_scene = ExtResource("21_uyp4e")
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("19_ytuoh")]
