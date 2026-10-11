@@ -284,28 +284,28 @@ tile_set = ExtResource("2_7o6cb")
 rendering_quadrant_size = 26
 format = 2
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Node2D/Table" unique_id=728960582]
-position = Vector2(1019, -909)
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Table/AnimatableBody2D" unique_id=1160356818]
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("3_7o6cb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/AnimatableBody2D" unique_id=1720859558]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_7o6cb")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Table/AnimatableBody2D" unique_id=1573574528]
-libraries/ = SubResource("AnimationLibrary_fgiyy")
-autoplay = &"move"
-
 [node name="TileMap2" type="TileMap" parent="Node2D/Table" unique_id=1506139550 groups=["table"]]
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("2_7o6cb")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(65538, 65537, 1, 65539, 65537, 1, 65540, 65537, 1, 65541, 65537, 1, 65542, 65537, 1, 65543, 65537, 1, 65544, 65537, 1, 65545, 65537, 1, 65546, 65537, 1, 131074, 65537, 2, 131075, 65537, 2, 131076, 65537, 2, 131077, 65537, 2, 131078, 65537, 2, 131079, 65537, 2, 131080, 65537, 2, 131081, 65537, 2, 131082, 131073, 2, 65547, 1, 0, 11, 1, 1, 12, 65537, 1, 13, 65537, 1, 14, 65537, 1, 15, 131073, 1, 65551, 262145, 1, 131087, 262145, 1, 196623, 131073, 2, 196622, 65537, 2, 196621, 65537, 2, 196620, 65537, 2, 196619, 1, 2, 131083, 196609, 1, 65537, 1, 1, 131073, 1, 2, 458751, 1, 1, 524287, 196609, 1, 589823, 1, 2, 524288, 65537, 2, 524289, 65537, 2, 524290, 65537, 2, 524291, 65537, 2, 524292, 65537, 2, 524293, 65537, 2, 524294, 65537, 2, 524295, 65537, 2, 524296, 65537, 2, 524297, 65537, 2, 524298, 65537, 2, 524299, 131073, 2, 393227, 131073, 1, 393216, 65537, 1, 393217, 65537, 1, 393218, 65537, 1, 393219, 65537, 1, 393220, 65537, 1, 393221, 65537, 1, 393222, 65537, 1, 393223, 65537, 1, 393224, 65537, 1, 393225, 65537, 1, 393226, 65537, 1, 458763, 262145, 1, 458762, 1, 0, 458761, 1, 0, 458760, 1, 0, 458759, 1, 0, 458758, 1, 0, 458757, 1, 0, 458756, 1, 0, 458755, 1, 0, 458754, 1, 0, 458753, 1, 0, 458752, 1, 0)
+layer_0/tile_data = PackedInt32Array(65538, 65537, 1, 65539, 65537, 1, 65540, 65537, 1, 65541, 65537, 1, 65542, 65537, 1, 65543, 65537, 1, 65544, 65537, 1, 65545, 65537, 1, 65546, 65537, 1, 131074, 65537, 2, 131075, 65537, 2, 131076, 65537, 2, 131077, 65537, 2, 131078, 65537, 2, 131079, 65537, 2, 131080, 65537, 2, 131081, 65537, 2, 131082, 131073, 2, 65547, 1, 0, 11, 1, 1, 12, 65537, 1, 13, 65537, 1, 14, 65537, 1, 15, 131073, 1, 65551, 262145, 1, 131087, 262145, 1, 196623, 131073, 2, 196622, 65537, 2, 196621, 65537, 2, 196620, 65537, 2, 196619, 1, 2, 131083, 196609, 1, 65537, 1, 1, 131073, 1, 2, 458751, 1, 1, 524287, 196609, 1, 589823, 1, 2, 524288, 65537, 2, 524289, 65537, 2, 524290, 65537, 2, 524291, 65537, 2, 524292, 65537, 2, 524293, 65537, 2, 524294, 65537, 2, 524295, 65537, 2, 524296, 65537, 2, 524297, 65537, 2, 524298, 65537, 2, 524299, 131073, 2, 393227, 131073, 1, 393216, 65537, 1, 393217, 65537, 1, 393218, 65537, 1, 393219, 65537, 1, 393220, 65537, 1, 393221, 65537, 1, 393222, 65537, 1, 393223, 65537, 1, 393224, 65537, 1, 393225, 65537, 1, 393226, 65537, 1, 458763, 262145, 1, 458762, 1, 0, 458761, 1, 0, 458760, 1, 0, 458759, 1, 0, 458758, 1, 0, 458757, 1, 0, 458756, 1, 0, 458755, 1, 0, 458754, 1, 0, 458753, 1, 0, 458752, 1, 0, 65548, 65537, 0, 65549, 65537, 0, 65550, 65537, 0, 131086, 65537, 0, 131085, 65537, 0, 131084, 65537, 0)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Node2D" unique_id=728960582]
+position = Vector2(1019, -909)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/AnimatableBody2D" unique_id=1160356818]
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("3_7o6cb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/AnimatableBody2D" unique_id=1720859558]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_7o6cb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/AnimatableBody2D" unique_id=1573574528]
+libraries/ = SubResource("AnimationLibrary_fgiyy")
+autoplay = &"move"
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("5_fgiyy")]
 z_index = -1

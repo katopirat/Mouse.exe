@@ -9,16 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_r6k7u"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_fegt7"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_1utl1"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="9_eepeu"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="10_p7kxp"]
+[ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="10_u1lcp"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="11_efn3u"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="11_r6k7u"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="12_a8njs"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_le4nj"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_mihgp"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_52a46"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="16_46djl"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_elui3"]
-[ext_resource type="Texture2D" uid="uid://c102dvqnlx3ff" path="res://assets/images/button-re.png" id="18_7o7bj"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="18_7o7bj"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="19_4qqhd"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="20_evv46"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="20_rvhqr"]
@@ -37,7 +38,7 @@ size = Vector2(22, 254)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyfd0"]
 size = Vector2(21, 259)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gerp2"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mtif"]
@@ -333,7 +334,7 @@ shape = SubResource("RectangleShape2D_tkt66")
 position = Vector2(430.5, 128.5)
 shape = SubResource("RectangleShape2D_jyfd0")
 
-[node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=353723825]
+[node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1114478614 groups=["cursor"]]
 z_index = 10
 position = Vector2(251, 139.00002)
 scale = Vector2(1.1017417, 0.99504834)
@@ -342,14 +343,20 @@ collision_mask = 2
 script = ExtResource("8_1utl1")
 speed = 50.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1217149403]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=2005258112]
 scale = Vector2(1, 1.0000001)
-shape = SubResource("RectangleShape2D_gerp2")
+shape = SubResource("RectangleShape2D_iopsf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=550284979]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("9_eepeu")
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1106150071]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("10_u1lcp")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=514518449]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("11_r6k7u")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1695820381]
 position = Vector2(-20.000004, 44)

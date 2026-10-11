@@ -8,6 +8,7 @@ extends Node2D
 @export var other_playlist: Array[AudioStream] = []
 @export var ending_playlist: Array[AudioStream] = []
 @export var menu_playlist: Array[AudioStream] = []
+@export var boss_playlist: Array[AudioStream] = []
 
 
 @export_enum("chill", "dramatic", "menu") var current_style: String = 'menu'
