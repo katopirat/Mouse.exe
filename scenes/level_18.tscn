@@ -16,12 +16,6 @@
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="14_w4o6d"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="15_ooxp7"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="16_m46yo"]
-[ext_resource type="Script" uid="uid://dl05ndlp1nwt6" path="res://bitcoin_button.gd" id="17_86uy7"]
-[ext_resource type="Texture2D" uid="uid://wrtemwe0dkxb" path="res://assets/images/buy.png" id="18_8th1t"]
-[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="19_iy0bo"]
-[ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="20_xnaos"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="21_j6eju"]
-[ext_resource type="Script" uid="uid://cuohduu73wi4o" path="res://scenes/bitcoin_graph.gd" id="22_gp0sv"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_ga1vk"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="24_0cg4g"]
 [ext_resource type="PackedScene" uid="uid://c83m2j65e2ov0" path="res://scenes/level_13.tscn" id="25_fwokv"]
@@ -122,42 +116,6 @@ animations = [{
 }],
 "loop": 1,
 "name": &"hovered",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mabuh"]
-size = Vector2(12.999992, 24.000008)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gyjbk"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_8th1t")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_8th1t")
-}],
-"loop": 1,
-"name": &"pressed",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_csjg2"]
-size = Vector2(12.500006, 23.499985)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4xvhx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_8th1t")
-}],
-"loop": 1,
-"name": &"default",
 "speed": 5.0
 }]
 
@@ -390,131 +348,6 @@ scale = Vector2(0.6763404, 0.62344414)
 sprite_frames = SubResource("SpriteFrames_iopsf")
 offset = Vector2(0.275, -0.19)
 
-[node name="BuyButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=930908104]
-z_index = 1
-position = Vector2(120, 201.99998)
-scale = Vector2(2, 2)
-collision_mask = 2
-script = ExtResource("17_86uy7")
-button_type = "Buy"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=1058284823]
-stream = ExtResource("8_uyvn7")
-volume_db = -16.479
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=1190357176]
-position = Vector2(0, -2.5)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_mabuh")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=358243242]
-position = Vector2(-5.185604e-06, -8.000004)
-scale = Vector2(0.8541666, 0.8541666)
-sprite_frames = SubResource("SpriteFrames_gyjbk")
-
-[node name="Label" type="Label" parent="Player/Monitor_1/Computer/Window/BuyButton" unique_id=1519858283]
-z_index = 1
-offset_left = 72.0
-offset_top = -6.0
-offset_right = 95.0
-offset_bottom = 4.0
-theme_override_fonts/font = ExtResource("19_iy0bo")
-theme_override_font_sizes/font_size = 10
-text = "sell"
-
-[node name="SellButton" type="Area2D" parent="Player/Monitor_1/Computer/Window" unique_id=1589643266]
-z_index = 1
-position = Vector2(284, 201.99997)
-scale = Vector2(2, 2)
-collision_mask = 2
-script = ExtResource("17_86uy7")
-button_type = "Sell"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=1860125059]
-stream = ExtResource("8_uyvn7")
-volume_db = -16.479
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=1433456523]
-position = Vector2(0.25, -2.2500076)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_csjg2")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=1660819025]
-modulate = Color(2.40685, 0, 2.40685, 1)
-position = Vector2(0.49999475, -7.9999967)
-scale = Vector2(0.8541666, 0.8541666)
-sprite_frames = SubResource("SpriteFrames_gyjbk")
-animation = &"pressed"
-
-[node name="Label" type="Label" parent="Player/Monitor_1/Computer/Window/SellButton" unique_id=644003571]
-offset_left = -90.0
-offset_top = -6.0
-offset_right = -72.0
-offset_bottom = 4.0
-theme_override_fonts/font = ExtResource("19_iy0bo")
-theme_override_font_sizes/font_size = 10
-text = "buy"
-
-[node name="Graph" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1299777739]
-position = Vector2(261, 123.999985)
-script = ExtResource("20_xnaos")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=2060489886]
-modulate = Color(0, 0.44494635, 1.0845727, 1)
-position = Vector2(-58.99999, -72.499985)
-scale = Vector2(9.499999, 11.906247)
-sprite_frames = SubResource("SpriteFrames_4xvhx")
-
-[node name="LabelBitcoin" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=839979167]
-offset_left = -94.0
-offset_top = -70.0
-offset_right = -48.0
-offset_bottom = -53.0
-theme_override_fonts/font = ExtResource("21_j6eju")
-text = "start"
-
-[node name="LabelMoney" type="Label" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=1306320870]
-offset_left = -163.0
-offset_top = -70.0
-offset_right = -64.0
-offset_bottom = 7.0
-theme_override_fonts/font = ExtResource("21_j6eju")
-text = "start"
-
-[node name="Control" type="Control" parent="Player/Monitor_1/Computer/Window/Graph" unique_id=390493339]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -170.0
-offset_top = -54.0
-offset_right = 29.0
-offset_bottom = 48.0
-script = ExtResource("22_gp0sv")
-
-[node name="LabelBitcoinPrice" type="Label" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=1201008074]
-layout_mode = 0
-offset_left = 203.0
-offset_top = 3.999998
-offset_right = 281.0
-offset_bottom = 26.999968
-theme_override_fonts/font = ExtResource("21_j6eju")
-text = "start"
-
-[node name="GraphLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=1965910289]
-width = 2.0
-
-[node name="ValueLine2D" type="Line2D" parent="Player/Monitor_1/Computer/Window/Graph/Control" unique_id=420319567]
-width = 1.0
-
-[node name="ValueLineLabel" type="Label" parent="Player/Monitor_1/Computer/Window/Graph/Control/ValueLine2D" unique_id=246699499]
-visible = false
-offset_left = 203.0
-offset_top = 36.999996
-offset_right = 232.0
-offset_bottom = 46.999996
-theme_override_fonts/font = ExtResource("19_iy0bo")
-theme_override_font_sizes/font_size = 10
-text = "start"
-
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(0.7, 0.7)
@@ -638,10 +471,7 @@ libraries/ = SubResource("AnimationLibrary_1kpsa")
 autoplay = &"move3"
 speed_scale = 1.116
 
-[node name="Shader_visuals" parent="." unique_id=1370691632 instance=ExtResource("31_84sml")]
-
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
-[connection signal="ad_bought" from="Player/Monitor_1/Computer/MousePadAd" to="Player/Monitor_1/Computer/Window/Graph" method="_on_mouse_pad_ad_ad_bought"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/MousePadAd" to="Player/Monitor_1/Computer/MousePadAd" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/MousePadAd" to="Player/Monitor_1/Computer/MousePadAd" method="_on_body_exited"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/MousePadAd/XButtonAd" to="Player/Monitor_1/Computer/MousePadAd/XButtonAd" method="_on_body_entered"]
@@ -650,14 +480,6 @@ speed_scale = 1.116
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window" method="_on_x_button_closed"]
-[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/BuyButton" to="Player/Monitor_1/Computer/Window/BuyButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/BuyButton" to="Player/Monitor_1/Computer/Window/BuyButton" method="_on_body_exited"]
-[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/SellButton" to="Player/Monitor_1/Computer/Window/SellButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/SellButton" to="Player/Monitor_1/Computer/Window/SellButton" method="_on_body_exited"]
-[connection signal="bitcoin_price_changed" from="Player/Monitor_1/Computer/Window/Graph" to="Player/Monitor_1/Computer/Window/Graph/Control" method="_on_graph_bitcoin_price_changed"]
-[connection signal="bought_bitcoin" from="Player/Monitor_1/Computer/Window/Graph" to="Player/Monitor_1/Computer/Window/Graph/Control" method="_on_graph_bought_bitcoin"]
-[connection signal="money_to_spend" from="Player/Monitor_1/Computer/Window/Graph" to="Player/Monitor_1/Computer/MousePadAd" method="_on_graph_money_to_spend"]
-[connection signal="sold_bitcoin" from="Player/Monitor_1/Computer/Window/Graph" to="Player/Monitor_1/Computer/Window/Graph/Control" method="_on_graph_sold_bitcoin"]
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
 
