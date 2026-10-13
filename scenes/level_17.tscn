@@ -443,7 +443,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 14.0333, 15.1),
+"times": PackedFloat32Array(0, 1.5, 14.5, 15.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1, -183), Vector2(1, -183), Vector2(1, 6710), Vector2(1, 6910)]
@@ -665,7 +665,7 @@ shape = SubResource("RectangleShape2D_ja7yn")
 disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/AnimatableBody2D/Area2D" unique_id=2056817357]
-position = Vector2(52.03388, -33.875)
+position = Vector2(51.75, -7.250002)
 rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_dkvxk")
@@ -698,7 +698,6 @@ rotation = 1.6117632
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("3_nefd8")]
 z_index = -1
 position = Vector2(1222, 9)
-next_scene = null
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_mx5ul")]
 position = Vector2(0, -5)

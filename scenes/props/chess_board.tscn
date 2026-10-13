@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://o5hs7quxi5f"]
+
+[ext_resource type="Texture2D" uid="uid://crimtbbpfkrdl" path="res://assets/images/chess/chess board.png" id="1_77xln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(204, 208)
+
+[node name="chess board" type="Node2D" unique_id=1519207098]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1919422427]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2031385402]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1209947123]
+scale = Vector2(3, 3)
+texture = ExtResource("1_77xln")
