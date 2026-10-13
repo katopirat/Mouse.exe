@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dsn12g2ieic1x" path="res://assets/soundtracks/soundtrack4.1.mp3" id="5_3hkwp"]
 [ext_resource type="AudioStream" uid="uid://dqwnlp3rlhbub" path="res://assets/soundtracks/soundtrack_peak.mp3" id="7_eh16a"]
 [ext_resource type="AudioStream" uid="uid://blkrcjnwof2ui" path="res://assets/soundtracks/soundtrack7.1.mp3" id="8_3hkwp"]
+[ext_resource type="AudioStream" uid="uid://ynd6wanwij65" path="res://assets/soundtracks/soundtrack5.1.mp3" id="8_eh16a"]
 [ext_resource type="AudioStream" uid="uid://cny78jgx2i5lq" path="res://assets/soundtracks/menu_loop1.1.mp3" id="9_3hkwp"]
 
 [sub_resource type="AudioStreamMP3" id="AudioStreamMP3_gqg2j"]
@@ -21,7 +22,7 @@ dramatic_playlist = Array[AudioStream]([ExtResource("5_3hkwp")])
 other_playlist = Array[AudioStream]([SubResource("AudioStreamMP3_gqg2j"), SubResource("AudioStreamMP3_eh16a")])
 ending_playlist = Array[AudioStream]([ExtResource("7_eh16a"), ExtResource("8_3hkwp")])
 menu_playlist = Array[AudioStream]([ExtResource("9_3hkwp")])
-boss_playlist = Array[AudioStream]([ExtResource("8_3hkwp")])
+boss_playlist = Array[AudioStream]([ExtResource("8_eh16a")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=338838359]
 volume_db = -15.746

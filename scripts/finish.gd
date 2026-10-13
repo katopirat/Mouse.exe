@@ -13,8 +13,7 @@ var p_position: Vector2
 
 
 func level_completed():
-	print(next_scene)
-	GameState.finish_level((Time.get_ticks_msec() - timer_start) / 1000.0)  
+	print(next_scene)  
 	if next_scene:
 		get_tree().change_scene_to_packed(next_scene)
 	else:
@@ -24,6 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print ("you are in finish")
 		Global.player_can_move = false
+		GameState.finish_level((Time.get_ticks_msec() - timer_start) / 1000.0)
 		sound_effect.play()
 		get_mouse_to_finish.emit(global_position)
 		await body.animation_finished

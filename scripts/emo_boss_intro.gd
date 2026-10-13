@@ -1,6 +1,7 @@
 extends Control
 @export var shake = 0
 @export var next : PackedScene
+@onready var shader_animation = $Shader_visuals/AnimationTree
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$CanvasLayer.visible = false 
@@ -17,9 +18,11 @@ func _process(delta: float) -> void:
 
 
 func intro_play():
+	shader_animation.play("screen_open")
 	$CanvasLayer/Control/Label.text = ""
 	$CanvasLayer.visible = true 
 	await get_tree().create_timer(1.5).timeout
+	Global.music_style = "boss"
 	$CanvasLayer/Control/AnimationPlayer.play("intro")
 	await $CanvasLayer/Control/AnimationPlayer.animation_finished
 	get_tree().change_scene_to_packed(next)

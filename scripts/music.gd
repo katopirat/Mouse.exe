@@ -11,14 +11,14 @@ extends Node2D
 @export var boss_playlist: Array[AudioStream] = []
 
 
-@export_enum("chill", "dramatic", "menu") var current_style: String = 'menu'
+@export_enum("chill", "dramatic", "menu", "boss") var current_style: String = 'menu'
+
 
 @onready var playlist: Array[AudioStream] = menu_playlist
 @onready var songs_len: int = playlist.size()
 @onready var current_track_index: int = randi_range(0, songs_len-1)
 	
 func get_playlist(style: String):
-	
 	if style == 'chill':
 		return chill_playlist
 	elif style == 'dramatic':
@@ -27,9 +27,11 @@ func get_playlist(style: String):
 		return ending_playlist
 	elif style == 'menu':
 		return menu_playlist
+	elif style == 'boss':
+		return boss_playlist
 	else:
-		return other_playlist 
-	
+		return other_playlist
+
 		
 func _ready() -> void:
 	randomize()
@@ -51,10 +53,18 @@ func _on_audio_stream_player_finished() -> void:
 	current_track_index = new_track_index
 	
 	play_track(current_track_index)
+	
+func play_boss_track(index: int) -> void:
+	audio_player.stream = playlist[index]
+	audio_player.play()
+	print("Now playing track index: ", index)
+	
+
 func _process(delta: float) -> void:
 	if Global.music_style != current_style:
 		current_style = Global.music_style
-		current_track_index = randi_range(0, songs_len-1)
-		songs_len = playlist.size()
 		playlist = get_playlist(current_style)
-		play_track(current_track_index)
+		songs_len = playlist.size()
+		if songs_len > 0:
+			current_track_index = randi_range(0, songs_len - 1)
+			play_track(current_track_index)
