@@ -13,7 +13,9 @@
 [ext_resource type="Script" uid="uid://knfadn6habki" path="res://scenes/sub_viewport_container.gd" id="13_ipins"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="14_w4o6d"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="15_ooxp7"]
+[ext_resource type="Texture2D" uid="uid://14ufq2vuf3rv" path="res://assets/images/arrow.png" id="15_xwf3u"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="16_m46yo"]
+[ext_resource type="Script" uid="uid://dos5bogypxvr7" path="res://scripts/arrow_button.gd" id="16_nlodx"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_ga1vk"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="28_yw3uf"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="31_84sml"]
@@ -54,6 +56,9 @@ animations = [{
 "name": &"hovered",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qu8p"]
+size = Vector2(16, 16)
 
 [node name="Level18" type="Node2D" unique_id=659635860]
 
@@ -197,6 +202,53 @@ size = Vector2i(280, 175)
 render_target_update_mode = 4
 
 [node name="Level18,5" parent="Player/Monitor_1/Computer/Window/SubViewportContainer/SubViewport" unique_id=1325456975 instance=ExtResource("13_86l27")]
+
+[node name="Controls" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1697800064]
+position = Vector2(112, 199.99997)
+
+[node name="UpArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=647776021]
+position = Vector2(12, -26.999985)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+script = ExtResource("16_nlodx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/UpArrow" unique_id=95551743]
+texture = ExtResource("15_xwf3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/UpArrow" unique_id=308425400]
+shape = SubResource("RectangleShape2D_7qu8p")
+
+[node name="DownArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=957248999]
+position = Vector2(12, 7.0000005)
+rotation = -1.5707964
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/DownArrow" unique_id=840108943]
+texture = ExtResource("15_xwf3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/DownArrow" unique_id=93572735]
+shape = SubResource("RectangleShape2D_7qu8p")
+
+[node name="LeftArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=2026222282]
+position = Vector2(-22, 7)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/LeftArrow" unique_id=2050082704]
+texture = ExtResource("15_xwf3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/LeftArrow" unique_id=29261540]
+shape = SubResource("RectangleShape2D_7qu8p")
+
+[node name="RightArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=2046477113]
+position = Vector2(46, 7)
+rotation = 3.1415927
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/RightArrow" unique_id=450620858]
+texture = ExtResource("15_xwf3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/RightArrow" unique_id=1211565369]
+shape = SubResource("RectangleShape2D_7qu8p")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

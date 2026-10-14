@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csq5qjol3q5ce"]
 
-[ext_resource type="Script" uid="uid://ce41tasjb3hxq" path="res://scripts/player.gd" id="1_fpas6"]
+[ext_resource type="Script" uid="uid://ckqm4ygf4upi3" path="res://scripts/player_level18.gd" id="1_rcunu"]
 [ext_resource type="Texture2D" uid="uid://dc35dik8vgtdj" path="res://assets/images/mys(scrol).png" id="2_gjp5e"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_raub8"]
 [ext_resource type="Texture2D" uid="uid://d03qjri4rjl6l" path="res://assets/animations/mys(breaking)/myš01.png" id="3_vs8jf"]
@@ -185,7 +185,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1524664585 groups=["player"]]
 position = Vector2(-1, 2)
-script = ExtResource("1_fpas6")
+script = ExtResource("1_rcunu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=439912866]
 shape = SubResource("CapsuleShape2D_rus8k")
