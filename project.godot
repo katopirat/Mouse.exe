@@ -22,8 +22,7 @@ GameState="*uid://bybcjaitqb88x"
 
 [display]
 
-window/size/mode=2
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor_plugins]

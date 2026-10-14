@@ -46,7 +46,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_caqqn"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 10.0,
 "texture": ExtResource("3_0lsg1")
 }, {
 "duration": 5.0,
@@ -98,10 +98,10 @@ animations = [{
 "texture": ExtResource("16_3pk2l")
 }, {
 "duration": 3.0,
-"texture": ExtResource("17_nua04")
+"texture": ExtResource("16_3pk2l")
 }, {
 "duration": 3.0,
-"texture": ExtResource("16_3pk2l")
+"texture": ExtResource("17_nua04")
 }, {
 "duration": 3.0,
 "texture": ExtResource("17_nua04")
@@ -646,8 +646,7 @@ scale = Vector2(4, 4)
 z_index = 39
 sprite_frames = SubResource("SpriteFrames_caqqn")
 autoplay = "default"
-frame = 16
-frame_progress = 0.382884
+frame_progress = 0.6165554
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/AnimatableBody2D" unique_id=1765292427]
 position = Vector2(-0.25, -2)
