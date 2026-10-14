@@ -29,12 +29,12 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="28_lvqnx"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_ubewm"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(54.990814, 114.61908)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8sno"]
 radius = 8.494274
 height = 33.2097
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
-size = Vector2(49.65789, 104.94736)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_w8sno"]
 
@@ -55,7 +55,7 @@ size = Vector2(432, 31)
 size = Vector2(22, 254)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
-size = Vector2(21, 259)
+size = Vector2(21, 287)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
 size = Vector2(1, 1)
@@ -247,7 +247,7 @@ scale = Vector2(2.66, 2.66)
 collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/phone" unique_id=1451421039]
-position = Vector2(0.8289451, 1.4736785)
+position = Vector2(0.21910095, -1.1137238)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_adpup")
 
@@ -299,7 +299,7 @@ position = Vector2(143.99998, -97.999985)
 scale = Vector2(0.66986096, 0.66986096)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D/cup" unique_id=724010911]
-position = Vector2(-33, -33)
+position = Vector2(165.70604, -103.00648)
 scale = Vector2(3.6875, 3.6875)
 collision_layer = 5
 script = ExtResource("5_4uoi6")
@@ -307,11 +307,6 @@ script = ExtResource("5_4uoi6")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/cup/StaticBody2D" unique_id=1876613642]
 z_index = 4
 texture = ExtResource("6_xwshr")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cup/StaticBody2D" unique_id=506854012]
-position = Vector2(-7.479022, 14.320052)
-rotation = 0.022840401
-polygon = PackedVector2Array(-0.9855685, 7.750164, 6.607651, 9.377281, 12.84494, 9.377281, 18.81104, 7.478977, 23.963585, 3.4111805, 23.963585, -5.2667856, 21.522905, -7.707464, 14.743244, -9.605769, 6.3364654, -9.605769, 0.09917688, -7.4362774, -4.5109935, -5.2667856)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/cup/StaticBody2D" unique_id=1084107948]
 position = Vector2(1.2571993, 15.021744)
@@ -392,7 +387,7 @@ position = Vector2(-10, 127)
 shape = SubResource("RectangleShape2D_r3qgb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1666617494]
-position = Vector2(430.5, 128.5)
+position = Vector2(430.5, 142.5)
 shape = SubResource("RectangleShape2D_p8vl5")
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=145601617]
@@ -490,8 +485,9 @@ script = ExtResource("24_c137b")
 [node name="Line2D" type="Line2D" parent="Node2D/Player/Cable" unique_id=321492742]
 texture_filter = 1
 position = Vector2(-1, -50)
-width = 5.0
+width = 2.0
 default_color = Color(0, 0, 0, 1)
+antialiased = true
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=1311915624]
 scale = Vector2(3, 3)
@@ -522,6 +518,47 @@ texture = ExtResource("27_4uoi6")
 [node name="CableStart" type="Node2D" parent="Node2D/Socket" unique_id=1097406032]
 unique_name_in_owner = true
 position = Vector2(0, -21)
+
+[node name="cup2" type="Node2D" parent="Node2D" unique_id=1937833286]
+position = Vector2(9.999939, 15.000046)
+scale = Vector2(0.66986096, 0.66986096)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/cup2" unique_id=580359828]
+position = Vector2(165.70604, -103.00648)
+scale = Vector2(3.6875, 3.6875)
+collision_layer = 5
+script = ExtResource("5_4uoi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/cup2/StaticBody2D" unique_id=107892462]
+z_index = 4
+texture = ExtResource("6_xwshr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/cup2/StaticBody2D" unique_id=791990163]
+position = Vector2(1.2571993, 15.021744)
+rotation = -1.5794911
+shape = SubResource("CapsuleShape2D_w8sno")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/cup2" unique_id=594917005]
+z_index = 10
+position = Vector2(-26.871244, -89.57082)
+scale = Vector2(1.0000001, 1.0000001)
+emitting = false
+amount = 12
+texture = SubResource("CanvasTexture_w8sno")
+lifetime = 2.0
+speed_scale = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(40, 20)
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+scale_amount_min = 2.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_3v8a5")
+color = Color(0.8295754, 0.7405223, 0.66673946, 1)
+color_ramp = SubResource("Gradient_so6io")
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]
