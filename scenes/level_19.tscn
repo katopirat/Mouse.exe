@@ -29,6 +29,10 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="28_lvqnx"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_ubewm"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8sno"]
+radius = 8.494274
+height = 33.2097
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_w8sno"]
 
 [sub_resource type="Curve" id="Curve_3v8a5"]
@@ -39,10 +43,10 @@ point_count = 3
 colors = PackedColorArray(0.34898522, 0.09899867, 0, 1, 1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
-size = Vector2(420, 22.25)
+size = Vector2(439, 22.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
-size = Vector2(420, 31)
+size = Vector2(432, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qgb"]
 size = Vector2(22, 254)
@@ -293,7 +297,12 @@ texture = ExtResource("6_xwshr")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cup/StaticBody2D" unique_id=506854012]
 position = Vector2(-7.479022, 14.320052)
 rotation = 0.022840401
-polygon = PackedVector2Array(-10.235561, 2.5554771, -0.9855685, 7.750164, 6.607651, 9.377281, 12.84494, 9.377281, 18.81104, 7.478977, 23.963585, 3.4111805, 23.963585, -5.2667856, 21.522905, -7.707464, 14.743244, -9.605769, 6.3364654, -9.605769, 0.09917688, -7.4362774, -4.5109935, -5.2667856, -9.886303, 0.11782837)
+polygon = PackedVector2Array(-0.9855685, 7.750164, 6.607651, 9.377281, 12.84494, 9.377281, 18.81104, 7.478977, 23.963585, 3.4111805, 23.963585, -5.2667856, 21.522905, -7.707464, 14.743244, -9.605769, 6.3364654, -9.605769, 0.09917688, -7.4362774, -4.5109935, -5.2667856)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/cup/StaticBody2D" unique_id=1084107948]
+position = Vector2(1.2571993, 15.021744)
+rotation = -1.5794911
+shape = SubResource("CapsuleShape2D_w8sno")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/cup" unique_id=1879280339]
 z_index = 10
@@ -357,11 +366,11 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=305933117]
-position = Vector2(210, -10.875)
+position = Vector2(219.5, -10.875)
 shape = SubResource("RectangleShape2D_dfkaw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1660540070]
-position = Vector2(209, 271.5)
+position = Vector2(215, 271.5)
 shape = SubResource("RectangleShape2D_i8hxo")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1956463531]
@@ -465,6 +474,7 @@ position = Vector2(0, -51)
 script = ExtResource("24_c137b")
 
 [node name="Line2D" type="Line2D" parent="Node2D/Player/Cable" unique_id=321492742]
+texture_filter = 1
 position = Vector2(-1, -50)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
