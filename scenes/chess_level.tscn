@@ -3,11 +3,16 @@
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_0okrb"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_ehtmd"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="3_fgrsy"]
+[ext_resource type="Texture2D" uid="uid://bgf1w2x6xe8xf" path="res://assets/images/chess/pawn black.png" id="4_5p60n"]
 [ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="4_mieky"]
+[ext_resource type="Texture2D" uid="uid://h1acpakjrsvd" path="res://assets/images/chess/Rook black.png" id="5_7o7yg"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_rircv"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_5p60n"]
+[ext_resource type="Texture2D" uid="uid://ckxqnavqfca11" path="res://assets/images/chess/king black.png" id="6_37vw7"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_7o7yg"]
+[ext_resource type="Texture2D" uid="uid://2njusuk01tr1" path="res://assets/images/chess/king white.png" id="7_lcgma"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="8_37vw7"]
+[ext_resource type="Texture2D" uid="uid://c2hkp3s7oj8xw" path="res://assets/images/chess/horse white.png" id="8_jry1k"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="9_lcgma"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="10_jry1k"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="11_5fxf4"]
@@ -252,6 +257,44 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-196613, 1, 1, -131077, 196609, 1, -65541, 196609, 1, -5, 1, 0, 65531, 196609, 1, 131067, 196609, 1, 196603, 196609, 1, 262139, 196609, 1, -196612, 65537, 1, -131076, 1, 0, -65540, 1, 0, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, -196611, 65537, 1, -131075, 1, 0, -65539, 1, 0, -3, 1, 0, 65533, 1, 0, 131069, 1, 0, 196605, 1, 0, 262141, 1, 0, -196610, 65537, 1, -131074, 1, 0, -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, -196609, 65537, 1, -131073, 1, 0, -65537, 1, 0, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, 196607, 1, 0, 262143, 1, 0, -262144, 65537, 1, -196608, 1, 0, -131072, 1, 0, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, -262143, 65537, 1, -196607, 1, 0, -131071, 1, 0, -65535, 1, 0, 1, 1, 0, 65537, 1, 0, 131073, 1, 0, 196609, 1, 0, -262142, 65537, 1, -196606, 1, 0, -131070, 1, 0, -65534, 1, 0, 2, 1, 0, 65538, 1, 0, 131074, 1, 0, 196610, 1, 0, -262141, 65537, 1, -196605, 1, 0, -131069, 1, 0, -65533, 1, 0, 3, 1, 0, 65539, 1, 0, 131075, 1, 0, 196611, 1, 0, -262140, 65537, 1, -196604, 1, 0, -131068, 1, 0, -65532, 1, 0, 4, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, -262139, 65537, 1, -196603, 1, 0, -131067, 1, 0, -65531, 1, 0, 5, 1, 0, 65541, 1, 0, 131077, 1, 0, 196613, 1, 0, -262138, 65537, 1, -196602, 1, 0, -131066, 1, 0, -65530, 1, 0, 6, 1, 0, 65542, 1, 0, 131078, 1, 0, 196614, 1, 0, -262137, 65537, 1, -196601, 1, 0, -131065, 1, 0, -65529, 1, 0, 7, 1, 0, 65543, 1, 0, 131079, 1, 0, 196615, 1, 0, -262136, 65537, 1, -196600, 1, 0, -131064, 1, 0, -65528, 1, 0, 8, 1, 0, 65544, 1, 0, 131080, 1, 0, 196616, 1, 0, -262135, 65537, 1, -196599, 1, 0, -131063, 1, 0, -65527, 1, 0, 9, 1, 0, 65545, 1, 0, 131081, 1, 0, 196617, 1, 0, -262134, 65537, 1, -196598, 1, 0, -131062, 1, 0, -65526, 1, 0, 10, 1, 0, 65546, 1, 0, 131082, 1, 0, 196618, 1, 0, -262133, 65537, 1, -196597, 1, 0, -131061, 1, 0, -65525, 1, 0, 11, 1, 0, 65547, 1, 0, 131083, 1, 0, 196619, 1, 0, -262132, 131073, 1, -196596, 262145, 1, -131060, 262145, 1, -65524, 262145, 1, 12, 262145, 1, 65548, 262145, 1, 131084, 262145, 1, 196620, 262145, 1, 262156, 131073, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 262144, 65537, 2, 262145, 65537, 2, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 65537, 2, 262151, 65537, 2, 262152, 65537, 2, 262153, 65537, 2, 262154, 65537, 2, 262155, 65537, 2, 327675, 1, 2, -9, 1, 0, 65527, 1, 0, -8, 1, 0, 65528, 262145, 1, -131080, 262145, 1, -65544, 262145, 1, 131064, 262145, 1, 196600, 131073, 2, 196597, 65537, 2, 196598, 65537, 2, 196599, 65537, 2, 196596, 1, 2, -131084, 196609, 1, -65548, 196609, 1, -12, 196609, 1, 65524, 196609, 1, 131060, 196609, 1, -196620, 1, 1, -196616, 131073, 1, -196619, 65537, 1, -196618, 65537, 1, -196617, 65537, 1, -11, 1, 0, -65547, 1, 0, -131083, 1, 0, -131082, 1, 0, -65546, 1, 0, -10, 1, 0, 65526, 1, 0, 65525, 1, 0, 131061, 1, 0, 131062, 1, 0, 131063, 1, 0, -65545, 1, 0, -131081, 1, 0, -7, 65537, 1, -6, 65537, 1, 65529, 1, 2, 65530, 131073, 2)
 
+[node name="chess board" parent="Node2D" unique_id=1519207098 instance=ExtResource("12_3wub2")]
+position = Vector2(222, -1.999999)
+scale = Vector2(1.1017417, 0.99504834)
+
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess board" unique_id=198232438]
+position = Vector2(-87.13475, -63.313515)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("4_5p60n")
+
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess board" unique_id=1017709520]
+position = Vector2(-62.628098, -63.313507)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("4_5p60n")
+
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess board" unique_id=1422666115]
+position = Vector2(-62.628098, -87.43294)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("5_7o7yg")
+
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess board" unique_id=1077020073]
+position = Vector2(-87.13475, -87.43293)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_37vw7")
+
+[node name="KingWhite" type="Sprite2D" parent="Node2D/chess board" unique_id=800051752]
+position = Vector2(80.78119, 81.403076)
+scale = Vector2(3, 3)
+texture = ExtResource("7_lcgma")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess board" unique_id=1659343600]
+position = Vector2(-15.430115, -15.074646)
+scale = Vector2(3, 3)
+texture = ExtResource("8_jry1k")
+
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("3_fgrsy")]
 z_index = -1
 position = Vector2(-958.99994, -71.99999)
@@ -299,12 +342,12 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D" unique_id=42973594]
 z_index = 10
-position = Vector2(-298, -168.00006)
+position = Vector2(221, -6.000001)
 scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("9_lcgma")
-speed = 10.0
+speed = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cursor" unique_id=771203771]
 scale = Vector2(1, 1.0000001)
@@ -320,9 +363,6 @@ visible = false
 position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("11_5fxf4")
-
-[node name="chess board" parent="Node2D/Cursor" unique_id=1519207098 instance=ExtResource("12_3wub2")]
-position = Vector2(794.1971, 156.77637)
 
 [node name="BridgeButton" type="Area2D" parent="Node2D" unique_id=142474621]
 z_index = 1
@@ -346,7 +386,7 @@ stream = ExtResource("16_bsh3j")
 volume_db = -16.845
 
 [node name="Borders" type="StaticBody2D" parent="Node2D" unique_id=123904590]
-position = Vector2(445, -134)
+position = Vector2(85, -126)
 scale = Vector2(0.64, 1)
 collision_layer = 2
 collision_mask = 2

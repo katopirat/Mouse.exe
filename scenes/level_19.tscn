@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rksv1y3lxf8m"]
 
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="1_xwshr"]
-[ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="2_2jv7e"]
+[ext_resource type="Texture2D" uid="uid://bsysxur646s52" path="res://assets/images/ophone(orange).png" id="2_4uoi6"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="3_b48o4"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_jxuy7"]
 [ext_resource type="Script" uid="uid://chrjylgvc8hyq" path="res://scripts/shadow_maker.gd" id="5_4uoi6"]
@@ -28,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="27_4uoi6"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="28_lvqnx"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_ubewm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(49.65789, 104.94736)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_w8sno"]
 
@@ -233,10 +236,21 @@ size = Vector2(16, 42)
 position = Vector2(-566, 84)
 rotation = -0.5114416
 
-[node name="phone" parent="Node2D" unique_id=1009766919 instance=ExtResource("2_2jv7e")]
+[node name="phone" type="StaticBody2D" parent="Node2D" unique_id=1009766919]
 position = Vector2(406.99997, 7.9999924)
 rotation = 0.5071389
 scale = Vector2(2.66, 2.66)
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/phone" unique_id=1451421039]
+position = Vector2(0.8289451, 1.4736785)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/phone" unique_id=422452739]
+position = Vector2(1.9073486e-06, 3.8146973e-06)
+scale = Vector2(2, 1.892)
+texture = ExtResource("2_4uoi6")
 
 [node name="Table" type="Node2D" parent="Node2D" unique_id=1364222853 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("3_b48o4")
