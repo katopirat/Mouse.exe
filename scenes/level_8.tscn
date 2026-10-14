@@ -34,16 +34,16 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="28_c7c4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f008l"]
-size = Vector2(420, 22.25)
+size = Vector2(455, 22.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0qc2"]
-size = Vector2(420, 31)
+size = Vector2(446, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0mw2"]
-size = Vector2(22, 254)
+size = Vector2(22, 279)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vrtf"]
-size = Vector2(21, 259)
+size = Vector2(21, 287)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw4mk"]
 size = Vector2(1, 1)
@@ -368,19 +368,19 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1547863569]
-position = Vector2(210, -10.875)
+position = Vector2(209.5, -10.875)
 shape = SubResource("RectangleShape2D_f008l")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1544326918]
-position = Vector2(209, 271.5)
+position = Vector2(213, 271.5)
 shape = SubResource("RectangleShape2D_b0qc2")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1705667432]
-position = Vector2(-10, 127)
+position = Vector2(-10, 127.5)
 shape = SubResource("RectangleShape2D_n0mw2")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=265072964]
-position = Vector2(430.5, 128.5)
+position = Vector2(430.5, 129.5)
 shape = SubResource("RectangleShape2D_2vrtf")
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1313890286]

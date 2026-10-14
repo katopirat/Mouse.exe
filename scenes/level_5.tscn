@@ -29,16 +29,16 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_cijsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
-size = Vector2(420, 22.25)
+size = Vector2(426.7143, 22.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
-size = Vector2(420, 31)
+size = Vector2(428.57144, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qgb"]
-size = Vector2(22, 254)
+size = Vector2(22, 309.99997)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
-size = Vector2(21, 259)
+size = Vector2(21, 308.57147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
 size = Vector2(1, 1)
@@ -250,19 +250,23 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_5/Computer/Borders" unique_id=305933117]
-position = Vector2(210, -10.875)
+position = Vector2(213.35712, -10.875)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_dfkaw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/Monitor_5/Computer/Borders" unique_id=1660540070]
-position = Vector2(209, 271.5)
+position = Vector2(209.57147, 271.5)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_i8hxo")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/Monitor_5/Computer/Borders" unique_id=1956463531]
-position = Vector2(-10, 127)
+position = Vector2(-10, 132.14282)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_r3qgb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Player/Monitor_5/Computer/Borders" unique_id=1666617494]
-position = Vector2(434.5, 128.5)
+position = Vector2(434.49994, 132.85715)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_p8vl5")
 
 [node name="Cursor" type="CharacterBody2D" parent="Player/Monitor_5/Computer" unique_id=145601617]
