@@ -20,7 +20,6 @@ func _on_body_exited(body: Node2D) -> void:
 			body.set_click_mode("arrow")
 
 func _input(event):
-	print(event)
 	if cursor_inside and event.is_action_pressed("click"):
 		print("a")
 		if is_pressed:
