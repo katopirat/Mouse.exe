@@ -30,6 +30,7 @@
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="21_0jslw"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="22_ig6ki"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="23_msiyf"]
+[ext_resource type="Texture2D" uid="uid://d3bb5jn7xhrt5" path="res://assets/images/window irl.png" id="31_lcgma"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37vw7"]
 animations = [{
@@ -237,7 +238,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="chess level" type="Node2D" unique_id=1884408580]
+[node name="level_20" type="Node2D" unique_id=1884408580]
 position = Vector2(-2, 0)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1095735772]
@@ -273,7 +274,6 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Node2D/Table" unique_id=1286077920 groups=["table"]]
-visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("2_ehtmd")
@@ -289,15 +289,15 @@ collision_mask = 2
 script = ExtResource("3_37vw7")
 
 [node name="XButtonAd" type="Area2D" parent="Node2D/chess1" unique_id=1192603492]
-z_index = 1
+z_index = 2
 position = Vector2(17.999998, -5.333331)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("21_0jslw")
 
 [node name="chess board" parent="Node2D/chess1/XButtonAd" unique_id=1519207098 instance=ExtResource("12_3wub2")]
-position = Vector2(-21.66667, -9.555554)
-scale = Vector2(0.11111112, 0.11111109)
+position = Vector2(-20.759, -8.4)
+scale = Vector2(0.120044276, 0.12004425)
 
 [node name="BishopBlack" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=198232438]
 position = Vector2(-87.13475, -63.313515)
@@ -340,13 +340,13 @@ sprite_frames = SubResource("SpriteFrames_37vw7")
 offset = Vector2(0.275, -0.19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/chess1/XButtonAd" unique_id=640433370]
-position = Vector2(-23.293541, -11.215089)
+position = Vector2(-22.473473, -10.448867)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_jry1k")
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/chess1" unique_id=82933874]
-position = Vector2(-60.312256, -54.769505)
-scale = Vector2(0.9999998, 0.9999997)
+position = Vector2(-58.7995, -53.429535)
+scale = Vector2(1.1210196, 1.1210195)
 polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/chess1" unique_id=134528137]
@@ -445,137 +445,181 @@ shape = SubResource("RectangleShape2D_hq53p")
 
 [node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("17_80b4p")]
 
-[node name="Window2" type="Node2D" parent="." unique_id=1250257673]
-position = Vector2(99, 62)
+[node name="Window2" type="Node2D" parent="Node2D" unique_id=1250257673]
+position = Vector2(164, 70)
 scale = Vector2(0.36247355, 0.36247358)
 script = ExtResource("18_h10bw")
 
-[node name="TopBar" type="Node2D" parent="Window2" unique_id=188089353]
+[node name="TopBar" type="Node2D" parent="Node2D/Window2" unique_id=188089353]
 position = Vector2(152, 47)
 
-[node name="Sprite2D" type="Sprite2D" parent="Window2/TopBar" unique_id=2042494949]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Window2/TopBar" unique_id=2042494949]
 position = Vector2(-16.816341, 4.147223)
 scale = Vector2(1.5247535, 1.4999428)
 texture = ExtResource("19_jt548")
 offset = Vector2(-0.075, -0.265)
 
-[node name="Background" type="Node2D" parent="Window2" unique_id=1494186380]
+[node name="Background" type="Node2D" parent="Node2D/Window2" unique_id=1494186380]
 position = Vector2(151, 89)
 
-[node name="Sprite2D" type="Sprite2D" parent="Window2/Background" unique_id=1483510860]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Window2/Background" unique_id=1483510860]
 position = Vector2(-9.418182, 10.249992)
 scale = Vector2(1.5181818, 1.5181818)
 texture = ExtResource("20_22cp3")
 
-[node name="XButton" type="Area2D" parent="Window2" unique_id=66943469]
+[node name="XButton" type="Area2D" parent="Node2D/Window2" unique_id=66943469]
 z_index = 1
 position = Vector2(184, 50.999992)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("21_0jslw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Window2/XButton" unique_id=1334074544]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Window2/XButton" unique_id=1334074544]
 position = Vector2(-0.16667175, -0.16666603)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_ws4a3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Window2/XButton" unique_id=352188302]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Window2/XButton" unique_id=352188302]
 position = Vector2(-0.358764, 0.025942773)
 scale = Vector2(0.49398094, 0.49398094)
 sprite_frames = SubResource("SpriteFrames_repdu")
 offset = Vector2(0.275, -0.19)
 
-[node name="BridgeButton" type="Area2D" parent="Window2" unique_id=142474621]
+[node name="BridgeButton" type="Area2D" parent="Node2D/Window2" unique_id=142474621]
 z_index = 1
 position = Vector2(140.69989, 104.835236)
 scale = Vector2(2.9599993, 2.959999)
 collision_mask = 2
 script = ExtResource("13_ejqod")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Window2/BridgeButton" unique_id=20416479]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Window2/BridgeButton" unique_id=20416479]
 position = Vector2(0.33333334, -2.3333328)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_m7end")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Window2/BridgeButton" unique_id=363380912]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Window2/BridgeButton" unique_id=363380912]
 position = Vector2(0.5181311, -1.5341523)
 scale = Vector2(0.8541666, 0.8541666)
 sprite_frames = SubResource("SpriteFrames_ahtwf")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Window2/BridgeButton" unique_id=2033437985]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Window2/BridgeButton" unique_id=2033437985]
 stream = ExtResource("16_bsh3j")
 volume_db = -16.845
 
-[node name="chess1" type="Area2D" parent="." unique_id=551721581]
+[node name="chess2" type="Area2D" parent="Node2D" unique_id=551721581]
 z_index = 1
 position = Vector2(401, 118)
 scale = Vector2(3.594169, 3.246108)
 collision_mask = 2
 script = ExtResource("3_37vw7")
 
-[node name="XButtonAd" type="Area2D" parent="chess1" unique_id=1142932807]
+[node name="XButtonAd" type="Area2D" parent="Node2D/chess2" unique_id=1142932807]
 z_index = 1
 position = Vector2(17.999998, -5.333331)
 scale = Vector2(3, 3)
 collision_mask = 2
 script = ExtResource("21_0jslw")
 
-[node name="chess board" parent="chess1/XButtonAd" unique_id=1750352480 instance=ExtResource("12_3wub2")]
+[node name="chess board" parent="Node2D/chess2/XButtonAd" unique_id=1750352480 instance=ExtResource("12_3wub2")]
 position = Vector2(-21.66667, -9.555554)
 scale = Vector2(0.11111112, 0.11111109)
 
-[node name="BishopBlack" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=311737279]
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=311737279]
 position = Vector2(-87.13475, -63.313515)
 rotation = 3.1395597
 scale = Vector2(3, 3)
 texture = ExtResource("4_5p60n")
 
-[node name="BishopBlack2" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=1937309135]
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1937309135]
 position = Vector2(-62.628098, -63.313507)
 rotation = 3.1395597
 scale = Vector2(3, 3)
 texture = ExtResource("4_5p60n")
 
-[node name="BishopBlack3" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=1801199664]
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1801199664]
 position = Vector2(-62.628098, -87.43294)
 rotation = 3.1395597
 scale = Vector2(3, 3)
 texture = ExtResource("5_7o7yg")
 
-[node name="BishopBlack4" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=2100755107]
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=2100755107]
 position = Vector2(-87.13475, -87.43293)
 rotation = 3.1395597
 scale = Vector2(3, 3)
 texture = ExtResource("6_37vw7")
 
-[node name="KingWhite" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=1488652003]
+[node name="KingWhite" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1488652003]
 position = Vector2(80.78119, 81.403076)
 scale = Vector2(3, 3)
 texture = ExtResource("7_lcgma")
 
-[node name="HorseWhite" type="Sprite2D" parent="chess1/XButtonAd/chess board" unique_id=288306243]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=252536060]
+modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
+position = Vector2(-13.416739, -15.3713455)
+scale = Vector2(0.4753202, 0.46037412)
+texture = ExtResource("31_lcgma")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=288306243]
 position = Vector2(-15.430115, -15.074646)
 scale = Vector2(3, 3)
 texture = ExtResource("8_jry1k")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="chess1/XButtonAd" unique_id=1475541353]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/chess2/XButtonAd" unique_id=1475541353]
 position = Vector2(1115.2201, -409.42438)
 scale = Vector2(0.18518463, 0.18518463)
 sprite_frames = SubResource("SpriteFrames_37vw7")
 offset = Vector2(0.275, -0.19)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chess1/XButtonAd" unique_id=186541586]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/chess2/XButtonAd" unique_id=186541586]
 position = Vector2(-26.032438, -16.603207)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_jry1k")
 
-[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="chess1" unique_id=1342811871]
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/chess2" unique_id=1342811871]
 position = Vector2(8206.069, -3438.2712)
 scale = Vector2(0.9999998, 0.9999997)
 polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="chess1" unique_id=1063684405]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/chess2" unique_id=1063684405]
 stream = ExtResource("11_lcgma")
+
+[node name="chess board2" parent="Node2D" unique_id=575644643 instance=ExtResource("12_3wub2")]
+position = Vector2(232.07402, 7.632347)
+scale = Vector2(1.1980565, 1.0820358)
+
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess board2" unique_id=1511916119]
+position = Vector2(-87.13475, -63.313515)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("4_5p60n")
+
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess board2" unique_id=288021674]
+position = Vector2(-62.628098, -63.313507)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("4_5p60n")
+
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess board2" unique_id=1889971442]
+position = Vector2(-62.628098, -87.43294)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("5_7o7yg")
+
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess board2" unique_id=741160968]
+position = Vector2(-87.13475, -87.43293)
+rotation = 4.722459
+scale = Vector2(3, 3)
+texture = ExtResource("6_37vw7")
+
+[node name="KingWhite" type="Sprite2D" parent="Node2D/chess board2" unique_id=1752160095]
+position = Vector2(80.78119, 81.403076)
+scale = Vector2(3, 3)
+texture = ExtResource("7_lcgma")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess board2" unique_id=831475761]
+position = Vector2(-39.291992, -63.42891)
+scale = Vector2(3, 3)
+texture = ExtResource("8_jry1k")
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="body_entered" from="Node2D/chess1" to="Node2D/chess1" method="_on_body_entered"]
@@ -584,14 +628,14 @@ stream = ExtResource("11_lcgma")
 [connection signal="body_exited" from="Node2D/chess1/XButtonAd" to="Node2D/chess1/XButtonAd" method="_on_body_exited"]
 [connection signal="closed" from="Node2D/chess1/XButtonAd" to="Node2D/chess1" method="_on_x_button_ad_closed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Cursor" method="_on_player_moved_mouse"]
-[connection signal="body_entered" from="Window2/XButton" to="Window2/XButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Window2/XButton" to="Window2/XButton" method="_on_body_exited"]
-[connection signal="closed" from="Window2/XButton" to="Window2" method="_on_x_button_closed"]
-[connection signal="body_entered" from="Window2/BridgeButton" to="Window2/BridgeButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Window2/BridgeButton" to="Window2/BridgeButton" method="_on_body_exited"]
-[connection signal="open_bridge" from="Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
-[connection signal="body_entered" from="chess1" to="chess1" method="_on_body_entered"]
-[connection signal="body_exited" from="chess1" to="chess1" method="_on_body_exited"]
-[connection signal="body_entered" from="chess1/XButtonAd" to="chess1/XButtonAd" method="_on_body_entered"]
-[connection signal="body_exited" from="chess1/XButtonAd" to="chess1/XButtonAd" method="_on_body_exited"]
-[connection signal="closed" from="chess1/XButtonAd" to="chess1" method="_on_x_button_ad_closed"]
+[connection signal="body_entered" from="Node2D/Window2/XButton" to="Node2D/Window2/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Window2/XButton" to="Node2D/Window2/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/Window2/XButton" to="Node2D/Window2" method="_on_x_button_closed"]
+[connection signal="body_entered" from="Node2D/Window2/BridgeButton" to="Node2D/Window2/BridgeButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Window2/BridgeButton" to="Node2D/Window2/BridgeButton" method="_on_body_exited"]
+[connection signal="open_bridge" from="Node2D/Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
+[connection signal="body_entered" from="Node2D/chess2" to="Node2D/chess2" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/chess2" to="Node2D/chess2" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D/chess2/XButtonAd" to="Node2D/chess2/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/chess2/XButtonAd" to="Node2D/chess2/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/chess2/XButtonAd" to="Node2D/chess2" method="_on_x_button_ad_closed"]

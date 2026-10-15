@@ -318,7 +318,7 @@ position = Vector2(750, -43)
 next_scene = ExtResource("7_jj35q")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("7_ortew")]
-position = Vector2(-1, 2)
+position = Vector2(-14, 1)
 table_tilemap = NodePath("../Table/TileMap")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=51124213]
@@ -384,10 +384,12 @@ collision_mask = 2
 position = Vector2(186.14304, -0.10070801)
 shape = SubResource("RectangleShape2D_7rc0n")
 
-[node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=611727879]
-z_index = -30
-position = Vector2(1, -2)
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=799899898]
 scale = Vector2(3, 3)
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="Ground" type="TileMap" parent="Node2D/Parallax2D" unique_id=611727879]
+z_index = -30
 tile_set = SubResource("TileSet_ecsbo")
 rendering_quadrant_size = 26
 format = 2
