@@ -18,13 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_sbc0t"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_wgn3r"]
 [ext_resource type="Script" uid="uid://cnt4y8gnrpfj2" path="res://scripts/bridge_button_lever.gd" id="16_p5exd"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_j5pwc"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="17_uucwl"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="18_l4icv"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="18_nrec3"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="19_cijsf"]
-[ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="20_mnrma"]
-[ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="21_mnrma"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="19_u88kh"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="20_jrosa"]
 [ext_resource type="PackedScene" uid="uid://b035tqqwad4ne" path="res://scenes/level_6.tscn" id="21_u1mn7"]
-[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="22_j5pwc"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_u1mn7"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_cijsf"]
 
@@ -355,15 +356,49 @@ sprite_frames = SubResource("SpriteFrames_w2qjo")
 position = Vector2(198.71436, -39.857132)
 scale = Vector2(0.7, 0.7)
 
-[node name="ad_3" parent="Player/Monitor_5" unique_id=651148235 instance=ExtResource("20_mnrma")]
-position = Vector2(-21.428524, 135.71428)
+[node name="Os" type="Control" parent="Player/Monitor_5" unique_id=964259777]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("17_j5pwc")
 
-[node name="ad_4" parent="Player/Monitor_5" unique_id=19814729 instance=ExtResource("21_mnrma")]
-position = Vector2(254.28574, 29.999998)
-scale = Vector2(0.6, 0.6)
+[node name="PanelContainer" type="PanelContainer" parent="Player/Monitor_5/Os" unique_id=1878897130]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("18_nrec3")
 
-[node name="ad2" parent="Player/Monitor_5" unique_id=272590773 instance=ExtResource("22_j5pwc")]
-position = Vector2(54.285755, 21.42857)
+[node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor_5/Os/PanelContainer" unique_id=928485881]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Player/Monitor_5/Os/PanelContainer/HBoxContainer2" unique_id=1803701213]
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+texture_normal = ExtResource("19_u88kh")
+texture_pressed = ExtResource("20_jrosa")
+
+[node name="Panel" type="PanelContainer" parent="Player/Monitor_5/Os/PanelContainer/HBoxContainer2" unique_id=1975863375]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Player/Monitor_5/Os/PanelContainer/HBoxContainer2/Panel" unique_id=1076937173]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=962240162]
 scale = Vector2(3, 3)

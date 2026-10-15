@@ -23,8 +23,12 @@
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="19_kljjn"]
 [ext_resource type="PackedScene" uid="uid://bwn3jdabkn3as" path="res://scenes/level_7.tscn" id="19_lgfmy"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="20_fqw3r"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="20_r7cvq"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="21_dx64l"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_acdgk"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_enqdf"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_tpdgj"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="24_lgfmy"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="25_5kl8g"]
 
@@ -488,6 +492,50 @@ z_index = 2
 position = Vector2(27.450384, -20.783295)
 scale = Vector2(1, 1.6537611)
 texture = ExtResource("14_dx64l")
+
+[node name="Os" type="Control" parent="Player/Monitor" unique_id=491266116]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("20_r7cvq")
+
+[node name="PanelContainer" type="PanelContainer" parent="Player/Monitor/Os" unique_id=1262368495]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("21_dx64l")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor/Os/PanelContainer" unique_id=1350891634]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Player/Monitor/Os/PanelContainer/HBoxContainer2" unique_id=814122177]
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+texture_normal = ExtResource("22_acdgk")
+texture_pressed = ExtResource("23_tpdgj")
+
+[node name="Panel" type="PanelContainer" parent="Player/Monitor/Os/PanelContainer/HBoxContainer2" unique_id=1607630207]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Player/Monitor/Os/PanelContainer/HBoxContainer2/Panel" unique_id=1374748587]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1187793774]
 scale = Vector2(3, 3)
