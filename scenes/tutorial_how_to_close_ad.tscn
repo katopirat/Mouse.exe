@@ -25,6 +25,10 @@
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="20_rvhqr"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="21_hl2gu"]
 [ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="21_x7ojj"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="24_eepeu"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="25_p7kxp"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="26_efn3u"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="27_a8njs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2iv2s"]
 size = Vector2(420, 22.25)
@@ -426,6 +430,50 @@ scale = Vector2(1.7875308, 1.7875309)
 [node name="ad_4" parent="Node2D/Player/Monitor_2/Computer" unique_id=19814729 instance=ExtResource("21_x7ojj")]
 position = Vector2(-100, -58.024933)
 scale = Vector2(2.07124, 2.0712402)
+
+[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=484385557]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("24_eepeu")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=1201251924]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("25_p7kxp")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=1320935088]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=686696437]
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+texture_normal = ExtResource("26_efn3u")
+texture_pressed = ExtResource("27_a8njs")
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1209831107]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=553312461]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=61094815]
 scale = Vector2(3, 3)

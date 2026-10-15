@@ -32,6 +32,10 @@
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="25_88t1x"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="26_i147u"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="28_c7c4w"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="31_2sc2n"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="32_dbbmr"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="33_dlrgu"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="34_jx77r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f008l"]
 size = Vector2(455, 22.25)
@@ -522,7 +526,7 @@ position = Vector2(119, 49)
 position = Vector2(53, -45)
 
 [node name="ad_6" parent="Node2D/Player/Monitor_2/Computer" unique_id=1869677919 instance=ExtResource("20_xixk7")]
-position = Vector2(232, 124)
+position = Vector2(235, 67)
 
 [node name="cup" parent="Node2D/Player/Monitor_2/Computer" unique_id=747248252 instance=ExtResource("5_d2dd6")]
 position = Vector2(743, 1597)
@@ -532,6 +536,50 @@ position = Vector2(925, 1714)
 
 [node name="cup3" parent="Node2D/Player/Monitor_2/Computer" unique_id=828917626 instance=ExtResource("5_d2dd6")]
 position = Vector2(1059, 1588)
+
+[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=1289469771]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("31_2sc2n")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=243774245]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("32_dbbmr")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=393013656]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1300038622]
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+texture_normal = ExtResource("33_dlrgu")
+texture_pressed = ExtResource("34_jx77r")
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=841850210]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=58282217]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="book" parent="Node2D" unique_id=650874171 instance=ExtResource("1_b522y")]
 position = Vector2(252, 274)
