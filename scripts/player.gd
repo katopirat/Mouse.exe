@@ -95,6 +95,7 @@ func _physics_process(delta: float) -> void:
 		target_tilt = -max_tilt
 	elif velocity.x > 0:
 		target_tilt = max_tilt
+	
 	var direction := Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)

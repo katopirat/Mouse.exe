@@ -13,7 +13,6 @@ var cursor_inside = false
 
 func _ready() -> void:
 	$"../../../..".remove_child.call_deferred(finish)
-	print("open_again")
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Cursor":

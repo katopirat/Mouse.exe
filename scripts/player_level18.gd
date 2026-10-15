@@ -21,7 +21,8 @@ signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 @onready var col_shape = $CollisionShape2DFall.shape
 @onready var particles = $CPUParticles2D
-
+@onready var target_dir: Vector2 = Vector2.ZERO
+@onready var mouse_button_pressed = false
 func _ready() -> void:
 	
 	if has_node("../Finish"):
@@ -36,6 +37,23 @@ func _ready() -> void:
 		await shader_animation.animation_finished
 		shader_animation.play("RESET")
 	Global.player_can_move = true
+func _input(event: InputEvent) -> void:
+	if event is InputEventAction:
+		if event.is_action("button_click") and event.pressed:
+			mouse_button_pressed = true
+		elif mouse_button_pressed:
+			mouse_button_pressed = false
+			
+		if event.is_action("button_left"):
+			target_dir.x = -1.0 if event.pressed else 0.0
+		elif event.is_action("button_right"):
+			target_dir.x = 1.0 if event.pressed else 0.0
+		elif event.is_action("button_up"):
+			target_dir.y = -1.0 if event.pressed else 0.0
+		elif event.is_action("button_down"):
+			target_dir.y = 1.0 if event.pressed else 0.0
+			
+		target_dir = target_dir.normalized()
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode and Global.player_can_move:
 		god_mode = false
@@ -95,8 +113,8 @@ func _physics_process(delta: float) -> void:
 		target_tilt = -max_tilt
 	elif velocity.x > 0:
 		target_tilt = max_tilt
-	var direction := Vector2(0, 0)
-	velocity = direction * speed
+	
+	velocity = target_dir * speed
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
 	
 	move_and_slide()
@@ -116,7 +134,7 @@ func _physics_process(delta: float) -> void:
 		_check_edge()
 
 func update_texture() -> void:
-	if Input.is_action_pressed("click"):
+	if mouse_button_pressed:
 		$AnimatedSprite2D.play("left_click")
 	else:
 		$AnimatedSprite2D.play("idle")

@@ -23,7 +23,6 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _process(_delta: float) -> void:
 	if cursor_inside and Input.is_action_just_pressed("click"):
-		print("a")
 		if is_pressed:
 			pass
 		else:

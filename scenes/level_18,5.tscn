@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="8_vpu2g"]
 [ext_resource type="Texture2D" uid="uid://dbngp7d8dsb42" path="res://assets/animations/mys(breaking)/myš07.png" id="9_3x0rx"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="9_t8nro"]
-[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="10_02ing"]
 [ext_resource type="Texture2D" uid="uid://c7ggfvlsk7it1" path="res://assets/animations/mys(breaking)/myš08.png" id="10_j5sp2"]
 [ext_resource type="Texture2D" uid="uid://c073wrr8xwreb" path="res://assets/animations/mys(breaking)/Myš8.png" id="11_ls6fo"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="11_n3h6g"]
@@ -42,10 +41,11 @@
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="25_quwi0"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="26_8imu8"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="27_3x0rx"]
+[ext_resource type="Script" uid="uid://co0eidexb3do8" path="res://scripts/x_button_level18.gd" id="27_rcunu"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="28_j5sp2"]
-[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_ls6fo"]
-[ext_resource type="Script" uid="uid://cds36iruplq0g" path="res://scenes/bridge_button_in_game.gd" id="30_rcunu"]
-[ext_resource type="PackedScene" uid="uid://d4b8dqjrbejty" path="res://scenes/menu_2.tscn" id="40_rcunu"]
+[ext_resource type="Script" uid="uid://dec1ygixl8fqa" path="res://scripts/bridge_button_level18.gd" id="30_fpas6"]
+[ext_resource type="PackedScene" uid="uid://rksv1y3lxf8m" path="res://scenes/level_19.tscn" id="40_rcunu"]
+[ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="46_rcunu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rus8k"]
 radius = 31.0
@@ -181,6 +181,242 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8sno"]
+shader = ExtResource("46_rcunu")
+shader_parameter/scanline_strength = 0.12
+shader_parameter/curvature = 0.0230000010925
+shader_parameter/vignette_strength = 0.0
+shader_parameter/aberration = 0.001
+shader_parameter/noise_strength = 0.03
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_4ikbi"]
+length = 0.001
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.001, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.03, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_yyda8"]
+resource_name = "close_screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0015, -0.25, 0, 0.25, 0, 0.05, -0.14444445, 0.00025, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.1, 0, 0, 0.14444445, 0.06666667, 1, -0.14444445, 0.005, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 50, -0.3, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+
+[sub_resource type="Animation" id="Animation_m7ht0"]
+resource_name = "glitch_close"
+length = 0.73333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.11111167, 0, 50, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.46666667, 0.66667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.15555556, 0.02, 1, -0.25, 0, 0.25, 0, 0.12, -0.061111107, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.1, -0.25, 0, 0.25, 0, 10, -0.1388889, 0.016666668, 0, 0, 0, -0.02222222, 1.6666667, 0, 0),
+"times": PackedFloat32Array(0.23333333, 0.5, 0.6333333)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.36666667, 0.43333334, 0.56666666, 0.66667, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0015, 0.5, 0.3150000149625, 0.102000004845, 0.1090000051775, 0.162000007695, 0.4750000225625, 0.4750000225625, 0.0150000007125]
+}
+
+[sub_resource type="Animation" id="Animation_wygpf"]
+resource_name = "screen_open"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.05, 0, 0, 0.1388889, 0.00025, 0.0015, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.16666667, 0.005, 0, 0, 0, -0.15, 0.16666669, 0, 0),
+"times": PackedFloat32Array(0, 0.40000004)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0, 0, -0.16111112, 1.6666667, 0, 0),
+"times": PackedFloat32Array(0, 0.40000004)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wygpf"]
+_data = {
+&"RESET": SubResource("Animation_4ikbi"),
+&"close_screen": SubResource("Animation_yyda8"),
+&"glitch_close": SubResource("Animation_m7ht0"),
+&"screen_open": SubResource("Animation_wygpf")
+}
+
 [node name="Level18,5" type="Node2D" unique_id=659635860]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1524664585 groups=["player"]]
@@ -304,8 +540,8 @@ scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("6_ylw21")
 
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
-position = Vector2(0, -2.3841858e-07)
-scale = Vector2(1, 1.0000001)
+position = Vector2(-44, -30)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("7_ef6ms")
 
 [node name="TopBar" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1741014233]
@@ -330,7 +566,7 @@ z_index = 1
 position = Vector2(184, 50.999992)
 scale = Vector2(3, 3)
 collision_mask = 2
-script = ExtResource("10_02ing")
+script = ExtResource("27_rcunu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/XButton" unique_id=222612322]
 position = Vector2(-0.16667175, -0.16666603)
@@ -349,7 +585,7 @@ position = Vector2(141, 101.999985)
 rotation = -0.006775311
 scale = Vector2(3, 3)
 collision_mask = 2
-script = ExtResource("30_rcunu")
+script = ExtResource("30_fpas6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Monitor_1/Computer/Window/BridgeButton" unique_id=1058284823]
 stream = ExtResource("14_20bbh")
@@ -482,10 +718,20 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 65537, 0, -196604, 196609, 0, -196603, 65537, 0, -131067, 65537, 0, -131068, 131073, 0, -131069, 131073, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -65541, 196609, 0, -65542, 65537, 0, -6, 131073, 0, -5, 1, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 65537, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 196609, 0, 5, 131073, 0, 4, 131073, 0, 3, 131073, 0, 2, 65537, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 65531, 1, 0, 65530, 196609, 0, 131066, 65537, 0, 131067, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 131077, 131073, 0, 131076, 1, 0, 131075, 1, 0, 131074, 196609, 0, 131073, 131073, 0, 131072, 131073, 0, 196607, 65537, 0, 196603, 1, 0, 196602, 196609, 0, 196604, 1, 0, 196605, 1, 0, 196606, 65537, 0, -196614, 131073, 0, -196613, 1, 0, -196612, 65537, 0, -196611, 65537, 0, -196610, 196609, 0, -196609, 65537, 0, -262144, 131073, 0, -262143, 131073, 0, -262142, 131073, 0, -262141, 131073, 0, -262140, 65537, 0, -262139, 65537, 0, -196615, 65537, 0, -131079, 1, 0, -65543, 196609, 0, -7, 131073, 0, 131065, 1, 0, 196601, 65537, 0, 65529, 131073, 0, 196614, 262145, 1, 262136, 196609, 1, 262138, 131073, 0, 262139, 65537, 0, 262140, 1, 0, 262141, 65537, 0, 262142, 1, 0, 262143, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196609, 1, 0, 196608, 65537, 0, 262137, 131073, 0, -262152, 1, 1, -327674, 65537, 1, -262151, 65537, 1, -262150, 65537, 1, -262149, 65537, 1, -262148, 65537, 1, -262147, 65537, 1, -262146, 65537, 1, -262145, 65537, 1, -327680, 65537, 1, -327679, 65537, 1, -327678, 65537, 1, -327677, 65537, 1, -327676, 65537, 1, -327675, 65537, 1, 131078, 262145, 1, 65542, 262145, 1, 6, 262145, 1, -65530, 262145, 1, -131066, 262145, 1, -196602, 65537, 0, -262138, 65537, 0, 196600, 196609, 1, 131064, 196609, 1, 65528, 196609, 1, -8, 196609, 1, -65544, 196609, 1, -131080, 196609, 1, -196616, 196609, 1, 262144, 65537, 2, 262145, 65537, 2, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 131073, 2, 327673, 65537, 2, 327674, 65537, 2, 327675, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 327672, 1, 2, -131065, 1, 2, -131064, 65537, 2, -131063, 65537, 2, -131059, 65537, 2, -131058, 65537, 2, -131057, 131073, 2, -196601, 1, 0, -196600, 1, 0, -196599, 65537, 0, -196595, 131073, 0, -196594, 1, 0, -196593, 1, 0, -262129, 131073, 0, -262130, 131073, 0, -262131, 131073, 0, -262135, 65537, 0, -262136, 1, 0, -262137, 65537, 0, -327673, 65537, 1, -327672, 65537, 1, -327671, 65537, 1, -327667, 65537, 1, -327666, 65537, 1, -327665, 65537, 1, -327664, 65537, 1, -262128, 1, 0, -196592, 65537, 0, -131056, 196609, 1, -65520, 196609, 1, 16, 196609, 1, 65552, 196609, 1, 131088, 196609, 1, 196624, 196609, 1, 196625, 1, 0, 196626, 1, 0, 196627, 65537, 0, 196628, 262145, 1, 131092, 262145, 1, 65556, 262145, 1, 20, 262145, 1, -65516, 262145, 1, -131052, 262145, 1, -196588, 262145, 1, -262124, 262145, 1, -327660, 131073, 1, -327661, 65537, 1, -327662, 65537, 1, -327663, 65537, 1, -262127, 1, 0, -196591, 196609, 0, -131055, 1, 0, -65519, 65537, 0, 17, 1, 0, 65553, 196609, 0, 131089, 1, 0, 131090, 65537, 0, 131091, 65537, 0, 19, 1, 0, 65555, 131073, 0, 65554, 131073, 0, 18, 65537, 0, -65518, 1, 0, -65517, 196609, 0, -131053, 131073, 0, -196589, 65537, 0, -196590, 65537, 0, -262126, 1, 0, -262125, 1, 0, -131054, 1, 0, 262164, 131073, 2, 262163, 65537, 2, 262162, 65537, 2, 262161, 65537, 2, 262160, 1, 2, -327670, 65537, 1, -327669, 65537, 1, -327668, 65537, 1, -131062, 65537, 2, -131061, 65537, 2, -131060, 65537, 2, -262134, 65537, 0, -262133, 65537, 0, -262132, 131073, 0, -196596, 131073, 0, -196597, 65537, 0, -196598, 196609, 0)
 
-[node name="CanvasLayer" parent="." unique_id=1262815348 instance=ExtResource("29_ls6fo")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1262815348]
 
-[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2100473344]
+material = SubResource("ShaderMaterial_w8sno")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimationTree" type="AnimationPlayer" parent="CanvasLayer" unique_id=927830465]
+libraries/ = SubResource("AnimationLibrary_wygpf")
 
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
@@ -496,5 +742,3 @@ metadata/_edit_use_anchors_ = true
 [connection signal="open_bridge" from="Player/Monitor_1/Computer/Window/BridgeButton" to="Table" method="_on_bridge_button_open_bridge"]
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
-
-[editable path="CanvasLayer"]

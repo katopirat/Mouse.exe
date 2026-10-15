@@ -10,13 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="12_komgy"]
 [ext_resource type="PackedScene" uid="uid://csq5qjol3q5ce" path="res://scenes/level_18,5.tscn" id="13_86l27"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="13_hhenw"]
-[ext_resource type="Script" uid="uid://knfadn6habki" path="res://scenes/sub_viewport_container.gd" id="13_ipins"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="14_w4o6d"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="15_ooxp7"]
 [ext_resource type="Texture2D" uid="uid://14ufq2vuf3rv" path="res://assets/images/arrow.png" id="15_xwf3u"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="16_m46yo"]
 [ext_resource type="Script" uid="uid://dos5bogypxvr7" path="res://scripts/arrow_button.gd" id="16_nlodx"]
+[ext_resource type="Script" uid="uid://d0ws0ikkm68qd" path="res://scripts/click_button.gd" id="16_uh8v0"]
+[ext_resource type="Texture2D" uid="uid://7q0m0b8uemvk" path="res://assets/images/cursor_button.png" id="17_nlodx"]
+[ext_resource type="Script" uid="uid://c38dtxvwgekb3" path="res://scripts/mouse_game_file.gd" id="18_86l27"]
+[ext_resource type="Texture2D" uid="uid://bfrk8dnbyfrdt" path="res://assets/images/mouse_game_icon_clicked.png" id="19_jox2a"]
+[ext_resource type="Texture2D" uid="uid://dt2op6vg6jc2p" path="res://assets/images/mouse_game_icon.png" id="20_xaonq"]
+[ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="21_x5ea0"]
+[ext_resource type="PackedScene" uid="uid://bht5lml1qpyru" path="res://scenes/ad_2.tscn" id="22_o6m6h"]
+[ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="23_b7mf4"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_ga1vk"]
+[ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="24_jyei2"]
+[ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="25_ge4yt"]
+[ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="26_sntue"]
+[ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="27_x5ea0"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="28_yw3uf"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="31_84sml"]
 
@@ -60,10 +71,33 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qu8p"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qti7j"]
+size = Vector2(16.8, 22.000008)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyjbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_jox2a")
+}],
+"loop": 1,
+"name": &"clicked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xaonq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level18" type="Node2D" unique_id=659635860]
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_b7mf4")]
-position = Vector2(-63, -108)
+position = Vector2(973, 16)
+speed = 500.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
 position = Vector2(0, -82)
@@ -124,7 +158,7 @@ scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("11_vnmuh")
-speed = 6.0
+speed = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=1167709603]
 scale = Vector2(1, 1.0000001)
@@ -188,29 +222,29 @@ offset_left = 64.0
 offset_top = 52.000015
 offset_right = 344.0
 offset_bottom = 227.99995
-mouse_behavior_recursive = 2
+mouse_force_pass_scroll_events = false
 stretch = true
 mouse_target = true
-script = ExtResource("13_ipins")
 
 [node name="SubViewport" type="SubViewport" parent="Player/Monitor_1/Computer/Window/SubViewportContainer" unique_id=1835766537]
 handle_input_locally = false
-physics_object_picking = true
-physics_object_picking_sort = true
-physics_object_picking_first_only = true
 size = Vector2i(280, 175)
 render_target_update_mode = 4
 
 [node name="Level18,5" parent="Player/Monitor_1/Computer/Window/SubViewportContainer/SubViewport" unique_id=1325456975 instance=ExtResource("13_86l27")]
 
 [node name="Controls" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=1697800064]
-position = Vector2(112, 199.99997)
+position = Vector2(105, 179.99997)
+scale = Vector2(0.7, 0.7)
 
-[node name="UpArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=647776021]
+[node name="UpArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1757439712]
 position = Vector2(12, -26.999985)
 rotation = 1.5707964
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("16_nlodx")
+control_event = "button_up"
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/UpArrow" unique_id=95551743]
 texture = ExtResource("15_xwf3u")
@@ -218,10 +252,14 @@ texture = ExtResource("15_xwf3u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/UpArrow" unique_id=308425400]
 shape = SubResource("RectangleShape2D_7qu8p")
 
-[node name="DownArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=957248999]
-position = Vector2(12, 7.0000005)
+[node name="DownArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=124543561]
+position = Vector2(12, 40.999996)
 rotation = -1.5707964
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("16_nlodx")
+control_event = "button_down"
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/DownArrow" unique_id=840108943]
 texture = ExtResource("15_xwf3u")
@@ -229,9 +267,13 @@ texture = ExtResource("15_xwf3u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/DownArrow" unique_id=93572735]
 shape = SubResource("RectangleShape2D_7qu8p")
 
-[node name="LeftArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=2026222282]
+[node name="LeftArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1447266280]
 position = Vector2(-22, 7)
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("16_nlodx")
+control_event = "button_left"
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/LeftArrow" unique_id=2050082704]
 texture = ExtResource("15_xwf3u")
@@ -239,16 +281,58 @@ texture = ExtResource("15_xwf3u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/LeftArrow" unique_id=29261540]
 shape = SubResource("RectangleShape2D_7qu8p")
 
-[node name="RightArrow" type="StaticBody2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=2046477113]
+[node name="RightArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1011473020]
 position = Vector2(46, 7)
 rotation = 3.1415927
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("16_nlodx")
+control_event = "button_right"
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/RightArrow" unique_id=450620858]
 texture = ExtResource("15_xwf3u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/RightArrow" unique_id=1211565369]
 shape = SubResource("RectangleShape2D_7qu8p")
+
+[node name="ClickButton" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=948909182]
+position = Vector2(12, 7)
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("16_uh8v0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/Controls/ClickButton" unique_id=350024997]
+texture = ExtResource("17_nlodx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/Controls/ClickButton" unique_id=1820733242]
+shape = SubResource("RectangleShape2D_7qu8p")
+
+[node name="Area2D" type="Area2D" parent="Player/Monitor_1/Computer" unique_id=201450314]
+position = Vector2(408, 187)
+scale = Vector2(2.5, 2.5)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("18_86l27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Area2D" unique_id=1138310391]
+position = Vector2(0, 0.19999695)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_qti7j")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Player/Monitor_1/Computer/Area2D" unique_id=1403341271]
+sprite_frames = SubResource("SpriteFrames_gyjbk")
+animation = &"clicked"
+
+[node name="ad" parent="Player/Monitor_1/Computer" unique_id=1511771645 instance=ExtResource("21_x5ea0")]
+position = Vector2(238, 92)
+
+[node name="ad2" parent="Player/Monitor_1/Computer" unique_id=272590773 instance=ExtResource("22_o6m6h")]
+position = Vector2(62, -31)
+
+[node name="ad_3" parent="Player/Monitor_1/Computer" unique_id=651148235 instance=ExtResource("23_b7mf4")]
+position = Vector2(-15, 85)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
@@ -272,7 +356,7 @@ scale = Vector2(3, 3)
 tile_set = ExtResource("23_ga1vk")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(-131078, 1, 0, -131077, 196609, 0, -131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -131067, 1, 0, -131068, 1, 0, -131069, 1, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -65541, 196609, 0, -65542, 65537, 0, -6, 131073, 0, -5, 1, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, 5, 1, 0, 4, 1, 0, 3, 1, 0, 2, 1, 0, 1, 1, 0, 0, 1, 0, 65535, 196609, 0, 65534, 65537, 0, 65533, 65537, 0, 65532, 1, 0, 65531, 1, 0, 65530, 196609, 0, 131066, 65537, 0, 131067, 1, 0, 131068, 1, 0, 131069, 196609, 0, 65536, 65537, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 196609, 0, 131073, 131073, 0, 131072, 196609, 0, 196603, 1, 0, 196602, 196609, 0, 196604, 1, 0, 196605, 1, 0, -196614, 131073, 0, -196613, 1, 0, -196612, 65537, 0, -196611, 65537, 0, -196610, 196609, 0, -196609, 65537, 0, -262144, 131073, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -196615, 65537, 0, -131079, 1, 0, -65543, 196609, 0, -7, 131073, 0, 131065, 1, 0, 196601, 65537, 0, 65529, 131073, 0, 196614, 1, 0, 262136, 65537, 0, 262138, 131073, 0, 262139, 65537, 0, 262140, 1, 0, 262141, 65537, 0, 262142, 1, 0, 262143, 65537, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196609, 1, 0, 196608, 65537, 0, 262137, 131073, 0, -262152, 65537, 1, -327674, 1, 0, -262151, 65537, 1, -262150, 65537, 1, -262149, 65537, 1, -262148, 65537, 1, -262147, 65537, 1, -262146, 65537, 1, -262145, 65537, 1, -327680, 65537, 1, -327679, 1, 0, -327678, 1, 0, -327677, 1, 0, -327676, 1, 0, -327675, 1, 0, 131078, 1, 0, 65542, 1, 0, 6, 1, 0, -65530, 1, 0, -131066, 1, 0, -196602, 1, 0, -262138, 1, 0, 196600, 65537, 0, 131064, 65537, 0, 65528, 65537, 0, -8, 65537, 0, -65544, 65537, 0, -131080, 65537, 0, -196616, 65537, 0, 262144, 65537, 2, 262145, 1, 0, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 65537, 2, 327673, 65537, 2, 327674, 65537, 2, 327675, 65537, 2, 327676, 65537, 2, 327677, 65537, 2, 327678, 65537, 2, 327679, 65537, 2, 327672, 65537, 2, -262156, 1, 1, -196620, 196609, 1, -131084, 196609, 1, -65548, 196609, 1, -12, 196609, 1, 65524, 196609, 1, 131060, 196609, 1, 196596, 196609, 1, 262132, 196609, 1, 327668, 1, 2, -262155, 65537, 1, -196619, 131073, 0, -131083, 1, 0, -65547, 1, 0, -11, 131073, 0, 65525, 131073, 0, 131061, 1, 0, 196597, 65537, 0, -262154, 65537, 1, -196618, 131073, 0, -131082, 1, 0, -65546, 1, 0, -10, 131073, 0, 65526, 131073, 0, 131062, 1, 0, 196598, 65537, 0, -262153, 65537, 1, -196617, 65537, 0, -131081, 1, 0, -65545, 1, 0, -9, 131073, 0, 65527, 131073, 0, 131063, 1, 0, 196599, 65537, 0, 327669, 65537, 2, 327670, 65537, 2, 327671, 65537, 2, 262133, 131073, 0, 262134, 131073, 0, 262135, 131073, 0, 131070, 65537, 0, 131071, 65537, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 65537, 2, 262158, 65537, 2, 262159, 65537, 2, 262160, 65537, 2, 262161, 65537, 2, 262162, 65537, 2, 262163, 65537, 2, 262164, 65537, 2, 65556, 262145, 1, 65553, 1, 0, 65554, 65537, 0, 65555, 65537, 0, 131092, 262145, 1, 196628, 262145, 1, 196615, 1, 0, 196616, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 196617, 1, 0, 196618, 1, 0, 131082, 1, 0, 131083, 1, 0, 196621, 1, 0, 131087, 196609, 0, 196619, 65537, 0, 196620, 65537, 0, 131084, 1, 0, 131085, 65537, 0, 196622, 131073, 0, 196623, 131073, 0, 196624, 131073, 0, 196625, 131073, 0, 131086, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 131091, 1, 0, 196627, 1, 0, 196626, 1, 0, 17, 1, 0, -65519, 1, 0, -131055, 1, 0, -196591, 1, 0, -262127, 1, 0, -327663, 1, 0, -327660, 131073, 1, -327662, 65537, 1, -327661, 65537, 1, -262124, 262145, 1, -196588, 262145, 1, -131052, 262145, 1, -65516, 1, 0, 20, 262145, 1, 19, 1, 0, -65517, 1, 0, -131053, 1, 0, -131054, 1, 0, -65518, 1, 0, -196590, 65537, 0, -262126, 1, 0, -262125, 65537, 0, 18, 65537, 0, -196589, 1, 0, 196606, 1, 0, 196607, 65537, 0, 16, 1, 0, -327673, 1, 0, -262136, 1, 0, -262135, 1, 0, -196598, 1, 0, -327672, 1, 0, -262134, 1, 0, -196597, 1, 0, -196596, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, 15, 1, 0, 14, 1, 0, 13, 1, 0, 12, 1, 0, 11, 1, 0, 10, 1, 0, 9, 1, 0, 8, 1, 0, -65528, 1, 0, -65529, 1, 0, -131065, 1, 0, -196601, 1, 0, -262137, 1, 0, -327671, 1, 0, -327670, 1, 0, -327669, 1, 0, -262132, 1, 0, -262131, 1, 0, -327668, 1, 0, -262130, 1, 0, -196593, 1, 0, -65524, 1, 0, -327667, 1, 0, -327666, 1, 0, -196594, 1, 0, -327665, 1, 0, -327664, 1, 0, -262128, 1, 0, -196592, 1, 0, -131056, 1, 0, -131064, 1, 0, -131063, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -262133, 1, 0, -196595, 1, 0, -262129, 1, 0, -131057, 1, 0, -196600, 1, 0, -131062, 1, 0, 327686, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, -196599, 1, 0, -131061, 1, 0, -65523, 1, 0, 7, 1, 0)
+layer_0/tile_data = PackedInt32Array(-131073, 196609, 1, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -131067, 1, 0, -131068, 1, 0, -131069, 1, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 196609, 1, -1, 196609, 1, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, 5, 1, 0, 4, 1, 0, 3, 1, 0, 2, 1, 0, 1, 1, 0, 0, 1, 0, 65535, 196609, 1, 65536, 65537, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 196609, 0, 131073, 131073, 0, 131072, 196609, 0, -196609, 196609, 1, -262144, 131073, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, 196614, 1, 0, 262143, 196609, 1, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196609, 1, 0, 196608, 65537, 0, -327674, 65537, 1, -262145, 1, 1, -327680, 65537, 1, -327679, 65537, 1, -327678, 65537, 1, -327677, 65537, 1, -327676, 65537, 1, -327675, 65537, 1, 131078, 1, 0, 65542, 1, 0, 6, 1, 0, -65530, 1, 0, -131066, 1, 0, -196602, 1, 0, -262138, 1, 0, 262144, 65537, 2, 262146, 65537, 2, 262147, 65537, 2, 262148, 65537, 2, 262149, 65537, 2, 262150, 65537, 2, 327679, 1, 2, 131071, 196609, 1, 65543, 1, 0, 65544, 1, 0, 65545, 131073, 0, 65546, 131073, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 196609, 0, 65552, 1, 0, 262158, 65537, 2, 262159, 65537, 2, 262160, 65537, 2, 262161, 65537, 2, 262162, 65537, 2, 262163, 65537, 2, 262164, 65537, 2, 65556, 262145, 1, 65553, 1, 0, 65554, 65537, 0, 65555, 65537, 0, 131092, 262145, 1, 196628, 262145, 1, 196615, 1, 0, 196616, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 196617, 1, 0, 196618, 1, 0, 131082, 1, 0, 131083, 131073, 0, 196621, 1, 0, 131087, 196609, 0, 196619, 65537, 0, 196620, 65537, 0, 131084, 1, 0, 131085, 65537, 0, 196622, 131073, 0, 196623, 131073, 0, 196624, 131073, 0, 196625, 131073, 0, 131086, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 131091, 1, 0, 196627, 1, 0, 196626, 1, 0, 17, 1, 0, -65519, 1, 0, -131055, 1, 0, -196591, 1, 0, -262127, 1, 0, -327663, 65537, 1, -327660, 131073, 1, -327662, 65537, 1, -327661, 65537, 1, -262124, 262145, 1, -196588, 262145, 1, -131052, 262145, 1, -65516, 262145, 1, 20, 262145, 1, 19, 1, 0, -65517, 1, 0, -131053, 1, 0, -131054, 1, 0, -65518, 1, 0, -196590, 1, 0, -262126, 1, 0, -262125, 65537, 0, 18, 65537, 0, -196589, 1, 0, 196607, 196609, 1, 16, 1, 0, -327673, 65537, 1, -262136, 1, 0, -262135, 1, 0, -196598, 1, 0, -327672, 65537, 1, -262134, 1, 0, -196597, 65537, 0, -196596, 1, 0, -131060, 65537, 0, -131059, 1, 0, -131058, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, 15, 1, 0, 14, 1, 0, 13, 1, 0, 12, 1, 0, 11, 1, 0, 10, 1, 0, 9, 1, 0, 8, 1, 0, -65528, 1, 0, -65529, 1, 0, -131065, 1, 0, -196601, 1, 0, -262137, 1, 0, -327671, 65537, 1, -327670, 65537, 1, -327669, 65537, 1, -262132, 131073, 0, -262131, 131073, 0, -327668, 65537, 1, -262130, 131073, 0, -196593, 1, 0, -65524, 65537, 0, -327667, 65537, 1, -327666, 65537, 1, -196594, 1, 0, -327665, 65537, 1, -327664, 65537, 1, -262128, 1, 0, -196592, 1, 0, -131056, 196609, 0, -131064, 1, 0, -131063, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 65537, 0, -262133, 131073, 0, -196595, 1, 0, -262129, 1, 0, -131057, 1, 0, -196600, 1, 0, -131062, 1, 0, -196599, 1, 0, -131061, 65537, 0, -65523, 65537, 0, 7, 1, 0, 262145, 65537, 2, 262151, 65537, 2, 262152, 65537, 2, 262153, 65537, 2, 262154, 65537, 2, 262155, 65537, 2, 262156, 65537, 2, 262157, 65537, 2)
 
 [node name="TileMap2" type="TileMap" parent="Table" unique_id=1985758016 groups=["table"]]
 visible = false
@@ -302,10 +386,36 @@ format = 2
 [node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
 metadata/_edit_use_anchors_ = true
 
+[node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("24_jyei2")]
+position = Vector2(939, 203)
+
+[node name="book_open" parent="." unique_id=1220220180 instance=ExtResource("25_ge4yt")]
+position = Vector2(1671, -258)
+rotation = 0.14277592
+
+[node name="phone" parent="." unique_id=1009766919 instance=ExtResource("26_sntue")]
+position = Vector2(54.999985, -341)
+rotation = 0.87193966
+
+[node name="cup" parent="." unique_id=200577205 instance=ExtResource("27_x5ea0")]
+position = Vector2(1055, -391)
+
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window" method="_on_x_button_closed"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/Controls/UpArrow" to="Player/Monitor_1/Computer/Window/Controls/UpArrow" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/Controls/UpArrow" to="Player/Monitor_1/Computer/Window/Controls/UpArrow" method="_on_body_exited"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/Controls/DownArrow" to="Player/Monitor_1/Computer/Window/Controls/DownArrow" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/Controls/DownArrow" to="Player/Monitor_1/Computer/Window/Controls/DownArrow" method="_on_body_exited"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/Controls/LeftArrow" to="Player/Monitor_1/Computer/Window/Controls/LeftArrow" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/Controls/LeftArrow" to="Player/Monitor_1/Computer/Window/Controls/LeftArrow" method="_on_body_exited"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/Controls/RightArrow" to="Player/Monitor_1/Computer/Window/Controls/RightArrow" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/Controls/RightArrow" to="Player/Monitor_1/Computer/Window/Controls/RightArrow" method="_on_body_exited"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Window/Controls/ClickButton" to="Player/Monitor_1/Computer/Window/Controls/ClickButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Window/Controls/ClickButton" to="Player/Monitor_1/Computer/Window/Controls/ClickButton" method="_on_body_exited"]
+[connection signal="body_entered" from="Player/Monitor_1/Computer/Area2D" to="Player/Monitor_1/Computer/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/Monitor_1/Computer/Area2D" to="Player/Monitor_1/Computer/Area2D" method="_on_body_exited"]
 [connection signal="table_changed" from="Table" to="Player" method="_on_table_table_changed"]
 
 [editable path="CanvasLayer"]
