@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://bflv184f16auf" path="res://scenes/props/closables/closable_book_open.tscn" id="32_7lnr8"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="33_qbq2j"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="34_o4dak"]
+[ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="45_xufdy"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="46_su7v7"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="47_8ibj7"]
@@ -1194,6 +1195,7 @@ position = Vector2(-2137, 6082)
 z_index = -1
 position = Vector2(-3454, 6212)
 rotation = 1.5799395
+next_scene = ExtResource("36_su7v7")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_mx5ul")]
 position = Vector2(0, -5)
@@ -1236,8 +1238,6 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 131073, 3, -131
 position = Vector2(-128.33334, 64.00001)
 rotation = -0.46358427
 scale = Vector2(0.33333334, 0.33333334)
-
-[node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("22_kjga0")]
 
 [node name="closable book" parent="." unique_id=888231878 instance=ExtResource("29_x47nb")]
 position = Vector2(-4, 1683)
