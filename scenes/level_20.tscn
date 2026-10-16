@@ -273,8 +273,8 @@ position = Vector2(324, -249)
 
 [node name="chess1" type="Area2D" parent="Node2D" unique_id=792778879]
 z_index = 1
-position = Vector2(377.34558, 99.494934)
-scale = Vector2(3.305225, 2.9851456)
+position = Vector2(379, 99)
+scale = Vector2(3.322, 3)
 collision_mask = 2
 script = ExtResource("3_b2sfm")
 
