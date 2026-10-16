@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="33_qbq2j"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="34_o4dak"]
 [ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="42_8ibj7"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="45_xufdy"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="46_su7v7"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="47_8ibj7"]
@@ -926,6 +927,67 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_3pk2l")
 
+[sub_resource type="Animation" id="Animation_x5vxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -411)]
+}
+
+[sub_resource type="Animation" id="Animation_bndlm"]
+resource_name = "level namnam"
+length = 5.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ucdd"]
+_data = {
+&"RESET": SubResource("Animation_x5vxs"),
+&"level namnam": SubResource("Animation_bndlm")
+}
+
 [node name="Node2D" type="Node2D" unique_id=1869736530]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1878903171]
@@ -1238,6 +1300,27 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 131073, 3, -131
 position = Vector2(-128.33334, 64.00001)
 rotation = -0.46358427
 scale = Vector2(0.33333334, 0.33333334)
+
+[node name="level namnam" type="CanvasLayer" parent="Node2D/Player" unique_id=1852714306]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=394390764]
+top_level = true
+z_index = 999
+offset_left = -408.0
+offset_top = -291.0
+offset_right = 425.0
+offset_bottom = -124.0
+theme_override_fonts/normal_font = ExtResource("42_8ibj7")
+theme_override_font_sizes/normal_font_size = 57
+text = "The Button"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=793020872]
+root_node = NodePath("../../level namnam")
+libraries/ = SubResource("AnimationLibrary_6ucdd")
+autoplay = &"level namnam"
 
 [node name="closable book" parent="." unique_id=888231878 instance=ExtResource("29_x47nb")]
 position = Vector2(-4, 1683)

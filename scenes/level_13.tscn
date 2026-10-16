@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dmjw1o73a5fbf" path="res://scenes/props/closables/closable_cup.tscn" id="21_u3011"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="22_rdatf"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_xb0mn"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="24_tmh8v"]
 [ext_resource type="PackedScene" uid="uid://dm2h2audkfaot" path="res://scenes/props/chocolate_medium.tscn" id="25_jsaad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60ky0"]
@@ -77,6 +78,67 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_x5vxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -411)]
+}
+
+[sub_resource type="Animation" id="Animation_bndlm"]
+resource_name = "level namnam"
+length = 5.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlefd"]
+_data = {
+&"RESET": SubResource("Animation_x5vxs"),
+&"level namnam": SubResource("Animation_bndlm")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsaad"]
 texture = ExtResource("22_rdatf")
@@ -383,6 +445,27 @@ sprite_frames = SubResource("SpriteFrames_yqwrw")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=1354981892]
 stream = ExtResource("21_j8o5j")
 volume_db = -16.845
+
+[node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=1869877978]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=1946848639]
+top_level = true
+z_index = 999
+offset_left = -408.0
+offset_top = -411.0
+offset_right = 425.0
+offset_bottom = -244.0
+theme_override_fonts/normal_font = ExtResource("24_tmh8v")
+theme_override_font_sizes/normal_font_size = 57
+text = "cursor on the run"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=1032103994]
+root_node = NodePath("../../Computer/level namnam")
+libraries/ = SubResource("AnimationLibrary_jlefd")
+autoplay = &"level namnam"
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=1858624222]
 scale = Vector2(3, 3)
