@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cbilg0lwl7vjs"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_1a1e2"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_56lex"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_j6adn"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="3_1a1e2"]
 [ext_resource type="PackedScene" uid="uid://jbqqt8ljqagy" path="res://scenes/level_16.tscn" id="5_1a1e2"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_52qqw"]
-[ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="6_ni8k1"]
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="8_56lex"]
 [ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="9_56lex"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="9_aq0ia"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://7i2dy5ff6ntr" path="res://scenes/props/closables/closable_chocolate_medium.tscn" id="21_qp30a"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="22_e8jfj"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_p3pim"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="23_wgy5m"]
 [ext_resource type="PackedScene" uid="uid://b4rwn3i16xi38" path="res://scenes/props/svetr.tscn" id="24_j6adn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxtvc"]
@@ -81,67 +80,6 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
-
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_52qqw"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56lex"]
 texture = ExtResource("22_e8jfj")
@@ -269,6 +207,8 @@ sources/1 = SubResource("TileSetAtlasSource_56lex")
 
 [node name="level 15" type="Node2D" unique_id=780817958]
 
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_1a1e2")]
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1245480727]
 
 [node name="Table" type="Node2D" parent="Node2D" unique_id=1843067470 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
@@ -323,8 +263,6 @@ table_tilemap = NodePath("../Table/TileMap")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=1373852486]
 position_smoothing_speed = 4.5
-
-[node name="level namnam" parent="Node2D/Player" unique_id=1104132345 instance=ExtResource("6_ni8k1")]
 
 [node name="Computer" type="Node2D" parent="Node2D/Player" unique_id=1135043397]
 z_index = 20
@@ -459,27 +397,6 @@ sprite_frames = SubResource("SpriteFrames_hevo6")
 stream = ExtResource("20_q7b67")
 volume_db = -16.845
 
-[node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=729896341]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=1563233817]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -291.0
-offset_right = 425.0
-offset_bottom = -124.0
-theme_override_fonts/normal_font = ExtResource("23_wgy5m")
-theme_override_font_sizes/normal_font_size = 57
-text = "The Button again"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=494214200]
-root_node = NodePath("../../Computer/level namnam")
-libraries/ = SubResource("AnimationLibrary_52qqw")
-autoplay = &"level namnam"
-
 [node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=796886385]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(1.7, 1.7)
@@ -508,5 +425,3 @@ scale = Vector2(0.3333333, 0.3333333)
 [connection signal="body_entered" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Player/Computer/Window2/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Player/Computer/Window2/BridgeButton" method="_on_body_exited"]
 [connection signal="open_bridge" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
-
-[editable path="Node2D/Player/level namnam"]

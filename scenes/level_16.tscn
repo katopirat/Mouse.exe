@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://jbqqt8ljqagy"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_32tvy"]
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_qe6x4"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_20hhy"]
 [ext_resource type="Texture2D" uid="uid://b6kywtbeb8txr" path="res://assets/images/bubble__.png" id="2_32tvy"]
 [ext_resource type="Script" uid="uid://be0afpgx626nc" path="res://scripts/question_mark_bubble.gd" id="3_20hhy"]
@@ -23,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="17_d3k1n"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="18_r60lq"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="19_0hj2h"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="21_qe6x4"]
 [ext_resource type="PackedScene" uid="uid://x7ww0cleaeix" path="res://scenes/emo_boss_intro.tscn" id="23_20hhy"]
 [ext_resource type="PackedScene" uid="uid://ph0e27lay2uk" path="res://scenes/props/bookshelf.tscn" id="23_or256"]
 [ext_resource type="PackedScene" uid="uid://dx44yg8f7ndag" path="res://scenes/glass_prop.tscn" id="24_35t4f"]
@@ -123,68 +123,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3skca"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
-
 [node name="Level1" type="Node2D" unique_id=659635860]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_qe6x4")]
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_32tvy")]
 position = Vector2(-1, 2)
@@ -399,25 +340,6 @@ layout_mode = 2
 text = "19:33"
 
 [node name="level namnam" type="CanvasLayer" parent="Player/Monitor_1" unique_id=1677054362]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Player" unique_id=973160766]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -291.0
-offset_right = 425.0
-offset_bottom = -124.0
-theme_override_fonts/normal_font = ExtResource("21_qe6x4")
-theme_override_font_sizes/normal_font_size = 57
-text = "glass on the table"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/RichTextLabel" unique_id=1279469416]
-root_node = NodePath("../../Monitor_1/level namnam")
-libraries/ = SubResource("AnimationLibrary_3skca")
-autoplay = &"level namnam"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://kywdslc2lkl4"]
+
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="1_qtgpa"]
+[ext_resource type="Script" uid="uid://c8dil0tg2q4d4" path="res://scenes/level_title_text.gd" id="2_xiyl4"]
+
+[sub_resource type="Animation" id="Animation_x5vxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TitleLevelText/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TitleLevelText/RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -291)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -291)]
+}
+
+[sub_resource type="Animation" id="Animation_bndlm"]
+resource_name = "level namnam"
+length = 6.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TitleLevelText/RichTextLabel:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.35000023, 1.0833336, 4.5833335, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TitleLevelText/RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.30833316, 2.9, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible_ratio")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.35000032, 1.0833337, 4.5833335, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3284565, 2.9201233, 5.020123),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kn0t"]
+_data = {
+&"RESET": SubResource("Animation_x5vxs"),
+&"level namnam": SubResource("Animation_bndlm")
+}
+
+[node name="TitleLevelText" type="CanvasLayer" unique_id=1017485206]
+layer = 0
+offset = Vector2(576, 291)
+transform = Transform2D(1, 0, 0, 1, 576, 291)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=135546207]
+z_index = 999
+offset_left = -408.0
+offset_top = -291.0
+offset_right = 433.89
+offset_bottom = -124.0
+theme_override_fonts/normal_font = ExtResource("1_qtgpa")
+theme_override_font_sizes/normal_font_size = 57
+text = "Adsadad"
+horizontal_alignment = 1
+script = ExtResource("2_xiyl4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel" unique_id=2049144324]
+libraries/ = SubResource("AnimationLibrary_5kn0t")
+autoplay = &"level namnam"

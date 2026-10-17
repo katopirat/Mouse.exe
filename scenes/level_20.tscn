@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddjg2do80rodm"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_88wjc"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_p4stj"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_enolg"]
 [ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="3_b2sfm"]
@@ -225,6 +226,8 @@ animations = [{
 
 [node name="level_20" type="Node2D" unique_id=1884408580]
 position = Vector2(-2, 0)
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_88wjc")]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1095735772]
 

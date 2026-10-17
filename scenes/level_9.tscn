@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dh8fhu3ubcbq6"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_c5wkq"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_xqj3w"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_lq6po"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="4_nttaj"]
@@ -17,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="15_jwqgb"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="16_qeri5"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="17_1hi5k"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="18_c5wkq"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="18_ugej1"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="19_lgnqi"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="20_3pwyc"]
@@ -90,67 +90,6 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
-
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xqj3w"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ybmx"]
 texture = ExtResource("27_lyw3c")
@@ -277,6 +216,9 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_8ybmx")
 
 [node name="level_9" type="Node2D" unique_id=1152663234]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_c5wkq")]
+layer = 588
 
 [node name="Node2D" type="Node2D" parent="." unique_id=911558402]
 
@@ -500,25 +442,6 @@ position = Vector2(-121, 12)
 scale = Vector2(1.839998, 1.839998)
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=381043443]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=487475515]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -411.0
-offset_right = 425.0
-offset_bottom = -244.0
-theme_override_fonts/normal_font = ExtResource("18_c5wkq")
-theme_override_font_sizes/normal_font_size = 57
-text = "sensitivity"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=1488151281]
-root_node = NodePath("../../Computer/level namnam")
-libraries/ = SubResource("AnimationLibrary_xqj3w")
-autoplay = &"level namnam"
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=747471745]
 scale = Vector2(3, 3)

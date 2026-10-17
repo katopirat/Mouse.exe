@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ch24j2qyo3qy5"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_63543"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_g5jdy"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_m72ve"]
 [ext_resource type="Texture2D" uid="uid://dptv5rw23r68w" path="res://assets/images/desk_tileset_Dark.png" id="3_jj35q"]
@@ -8,13 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="5_6poyl"]
 [ext_resource type="PackedScene" uid="uid://cbilg0lwl7vjs" path="res://scenes/level_15.tscn" id="7_jj35q"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="7_ortew"]
-[ext_resource type="PackedScene" uid="uid://bjnmfys4ewm0g" path="res://scenes/level_namnam.tscn" id="8_5cqvy"]
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="10_jj35q"]
 [ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="11_jj35q"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="11_qag05"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="13_8podf"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="14_63543"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="15_63543"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="15_g5jdy"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="23_pe6q5"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_bxgrk"]
@@ -139,67 +138,6 @@ size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7rc0n"]
 size = Vector2(21, 259)
-
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g5jdy"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w3s6g"]
 texture = ExtResource("23_pe6q5")
@@ -327,6 +265,8 @@ sources/1 = SubResource("TileSetAtlasSource_w3s6g")
 
 [node name="level_14" type="Node2D" unique_id=840158765]
 
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_63543")]
+
 [node name="Node2D" type="Node2D" parent="." unique_id=315879690]
 
 [node name="Table" type="Node2D" parent="Node2D" unique_id=1729185351 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
@@ -390,8 +330,6 @@ table_tilemap = NodePath("../Table/TileMap")
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=51124213]
 position_smoothing_speed = 4.5
 
-[node name="level namnam" parent="Node2D/Player" unique_id=1104132345 instance=ExtResource("8_5cqvy")]
-
 [node name="Computer" type="Node2D" parent="Node2D/Player" unique_id=1958090416]
 z_index = 20
 position = Vector2(-553, -290)
@@ -423,7 +361,7 @@ scale = Vector2(1.1017417, 0.99504834)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("11_qag05")
-speed = 70.0
+speed = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Cursor" unique_id=418199407]
 scale = Vector2(1, 1.0000001)
@@ -466,25 +404,6 @@ shape = SubResource("RectangleShape2D_7rc0n")
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=1302153650]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=135248869]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -411.0
-offset_right = 425.0
-offset_bottom = -244.0
-theme_override_fonts/normal_font = ExtResource("15_63543")
-theme_override_font_sizes/normal_font_size = 57
-text = "the ads are getting real"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=785096803]
-root_node = NodePath("../../Computer/level namnam")
-libraries/ = SubResource("AnimationLibrary_g5jdy")
-autoplay = &"level namnam"
-
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=799899898]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(0.7, 0.7)
@@ -523,5 +442,3 @@ rotation = 0.14549206
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]
-
-[editable path="Node2D/Player/level namnam"]

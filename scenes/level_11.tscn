@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://drqa4hynqm7te"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_7chbu"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_sqvo0"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_y36u2"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_t3i73"]
@@ -27,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="20_wjk4y"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="23_k8idr"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="23_oggk4"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="25_7chbu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7360d"]
 size = Vector2(68, 107)
@@ -317,67 +317,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ks4jm"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0miim"]
 texture = ExtResource("20_wjk4y")
 texture_region_size = Vector2i(32, 32)
@@ -503,6 +442,8 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_0miim")
 
 [node name="level_11" type="Node2D" unique_id=1760396467]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_7chbu")]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1317391677]
 
@@ -802,25 +743,6 @@ stream = ExtResource("19_t03q5")
 volume_db = -16.845
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Monitor_2/Computer" unique_id=1814335524]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player/Monitor_2" unique_id=285657127]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -411.0
-offset_right = 425.0
-offset_bottom = -244.0
-theme_override_fonts/normal_font = ExtResource("25_7chbu")
-theme_override_font_sizes/normal_font_size = 57
-text = "Magic Mice"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/Monitor_2/RichTextLabel" unique_id=2061520657]
-root_node = NodePath("../../Computer/level namnam")
-libraries/ = SubResource("AnimationLibrary_ks4jm")
-autoplay = &"level namnam"
 
 [node name="ad" parent="Node2D/Player/Monitor_2" unique_id=1511771645 instance=ExtResource("23_k8idr")]
 position = Vector2(-0.99999607, -18)

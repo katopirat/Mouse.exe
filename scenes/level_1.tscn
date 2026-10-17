@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c12n3sy7ndyok"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_iw4em"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_isj1j"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_so66j"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_tr1x6"]
@@ -30,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_d5akn"]
 [ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="24_iw4em"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="26_mmfjm"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="30_iw4em"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -95,68 +95,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_x5vxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-408, -411)]
-}
-
-[sub_resource type="Animation" id="Animation_bndlm"]
-resource_name = "level namnam"
-length = 5.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../RichTextLabel:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ypru"]
-_data = {
-&"RESET": SubResource("Animation_x5vxs"),
-&"level namnam": SubResource("Animation_bndlm")
-}
-
 [node name="Level1" type="Node2D" unique_id=659635860]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_iw4em")]
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("1_014kd")]
 position = Vector2(-1, 2)
@@ -357,25 +298,6 @@ theme_type_variation = &"PanelSunken"
 unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Player" unique_id=320285636]
-top_level = true
-z_index = 999
-offset_left = -408.0
-offset_top = -411.0
-offset_right = 425.0
-offset_bottom = -244.0
-theme_override_fonts/normal_font = ExtResource("30_iw4em")
-theme_override_font_sizes/normal_font_size = 57
-text = "The Button"
-horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/RichTextLabel" unique_id=545871978]
-root_node = NodePath("../../Monitor_1/level namnam")
-libraries/ = SubResource("AnimationLibrary_4ypru")
-autoplay = &"level namnam"
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

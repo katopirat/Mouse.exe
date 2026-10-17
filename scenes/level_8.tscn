@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3dqb7f5ff2vd"]
 
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="1_b522y"]
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_dbbmr"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="2_r3ni7"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="3_78sad"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_0f7b7"]
@@ -226,6 +227,9 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_cmloh")
 
 [node name="Node2D" type="Node2D" unique_id=348459230]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_dbbmr")]
+layer = 1000
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1074599659]
 

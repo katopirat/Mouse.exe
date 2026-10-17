@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_2qxhe"]
 [ext_resource type="Script" uid="uid://mtetff4l4wuo" path="res://scripts/emo_boss_scene.gd" id="1_njopo"]
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_q4a6e"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_lh432"]
 [ext_resource type="Texture2D" uid="uid://cpdlcwkis35xe" path="res://assets/animations/EMO/Emo(sleep).png" id="3_0lsg1"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="3_nefd8"]
 [ext_resource type="Texture2D" uid="uid://bxtomfc0a5efr" path="res://assets/animations/EMO/Emo(loading)1.png" id="4_nps32"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_mx5ul"]
 [ext_resource type="Texture2D" uid="uid://dgwaxpqrackbr" path="res://assets/animations/EMO/Emo(loading)2.png" id="5_shh0f"]
+[ext_resource type="Script" uid="uid://bt86284h1i4rv" path="res://scripts/emo_shake.gd" id="6_6ucdd"]
 [ext_resource type="Texture2D" uid="uid://cinearfgntrhl" path="res://assets/animations/EMO/Emo(loading)3.png" id="6_8c4iq"]
 [ext_resource type="Texture2D" uid="uid://qe7o0budkp1m" path="res://assets/animations/EMO/Emo(loading)4.png" id="7_ljo5k"]
 [ext_resource type="Texture2D" uid="uid://b5hb6j5dc4b58" path="res://assets/animations/EMO/Emo(loading)6.png" id="8_cwmml"]
@@ -47,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="41_6ucdd"]
 [ext_resource type="AudioStream" uid="uid://dede1puu1i438" path="res://assets/soundeffects/ad_sound.wav" id="43_8ibj7"]
+[ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="38_8ibj7"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="45_xufdy"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="46_su7v7"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="47_8ibj7"]
@@ -445,6 +448,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, -183)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Left:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Right:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_mx5ul"]
 resource_name = "movee"
@@ -456,10 +483,34 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 14.5, 15.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 14.5, 15.1, 16.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, -183), Vector2(1, -183), Vector2(1, 6710), Vector2(1, 6910)]
+"values": [Vector2(1, -183), Vector2(1, -183), Vector2(1, 6710), Vector2(1, 6910), Vector2(1, 7910)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Left:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Right:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwnst"]
@@ -473,6 +524,9 @@ size = Vector2(5.888172, 25.425404)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkvxk"]
 size = Vector2(11.936967, 56.68109)
+
+[sub_resource type="Gradient" id="Gradient_w8sno"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xufdy"]
 animations = [{
@@ -933,6 +987,8 @@ sources/1 = SubResource("TileSetAtlasSource_3pk2l")
 
 [node name="Node2D" type="Node2D" unique_id=1869736530]
 
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_q4a6e")]
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1878903171]
 script = ExtResource("1_njopo")
 
@@ -983,12 +1039,12 @@ rotation = -1.5670459
 [node name="emo" type="AnimatableBody2D" parent="Node2D/Table" unique_id=1834977049]
 position = Vector2(1, -183)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo" unique_id=1202584594]
 z_index = 39
 sprite_frames = SubResource("SpriteFrames_caqqn")
 autoplay = "default"
-frame_progress = 0.6165554
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/emo" unique_id=1765292427]
 position = Vector2(-0.25, -2)
@@ -1015,9 +1071,41 @@ rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_dkvxk")
 
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo" unique_id=728834055]
+position = Vector2(-14.25, 10.25)
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo" unique_id=700706667]
+position = Vector2(15, 10.25)
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
 [node name="emo2" type="AnimatableBody2D" parent="Node2D/Table" unique_id=1513822343]
 position = Vector2(-770, 3836)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo2" unique_id=1725613122]
 z_index = 39
@@ -1044,9 +1132,43 @@ rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1449267668]
+position = Vector2(-14.25, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1870344982]
+position = Vector2(15, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
 [node name="emo3" type="AnimatableBody2D" parent="Node2D/Table" unique_id=2058644778]
 position = Vector2(-1340, 3841)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo3" unique_id=1052518525]
 z_index = 39
@@ -1073,9 +1195,43 @@ rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo3" unique_id=1012803913]
+position = Vector2(-14.25, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo3" unique_id=857597916]
+position = Vector2(15, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
 [node name="emo4" type="AnimatableBody2D" parent="Node2D/Table" unique_id=781743926]
 position = Vector2(-1919, 3836)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo4" unique_id=1942396307]
 z_index = 39
@@ -1102,9 +1258,43 @@ rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo4" unique_id=627237931]
+position = Vector2(-14.25, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo4" unique_id=122757085]
+position = Vector2(15, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
 [node name="emo5" type="AnimatableBody2D" parent="Node2D/Table" unique_id=762810207]
 position = Vector2(-2496, 3853)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo5" unique_id=277910711]
 z_index = 39
@@ -1131,9 +1321,43 @@ rotation = -3.1415925
 scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo5" unique_id=558788959]
+position = Vector2(-14.25, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo5" unique_id=436883683]
+position = Vector2(15, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
 [node name="emo6" type="AnimatableBody2D" parent="Node2D/Table" unique_id=1872783224]
 position = Vector2(-3072, 3860)
 scale = Vector2(4, 4)
+script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo6" unique_id=302553619]
 z_index = 39
@@ -1164,6 +1388,39 @@ shape = SubResource("RectangleShape2D_su7v7")
 libraries/ = SubResource("AnimationLibrary_q4a6e")
 autoplay = &"new emo"
 speed_scale = 0.8
+
+[node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo6" unique_id=1736643623]
+position = Vector2(-14.25, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
+
+[node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo6" unique_id=1607724000]
+position = Vector2(15, 10.25)
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 81.2
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.74063677, 0.5073742, 0.29239395, 1)
+color_ramp = SubResource("Gradient_w8sno")
 
 [node name="cup2" parent="Node2D/Table" unique_id=662713352 instance=ExtResource("26_668xn")]
 position = Vector2(328, 4450)
@@ -1211,6 +1468,7 @@ table_tilemap = NodePath("../Table/TileMap")
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=987912738]
 zoom = Vector2(0.8, 0.8)
 position_smoothing_speed = 4.5
+script = ExtResource("38_8ibj7")
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player" unique_id=2040589639]
 z_index = 10

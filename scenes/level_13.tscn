@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c83m2j65e2ov0"]
 
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_asgju"]
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_jlefd"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_gwmeb"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_u3011"]
@@ -269,6 +270,8 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_jsaad")
 
 [node name="level_13" type="Node2D" unique_id=1216671198]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_jlefd")]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1373499116]
 

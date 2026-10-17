@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://vjyjnhlsh3kd"]
 
+[ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_nrec3"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_ls1u8"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_mnrma"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_5kbkd"]
@@ -217,6 +218,8 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Level5" type="Node2D" unique_id=659635860]
+
+[node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_nrec3")]
 
 [node name="Player" parent="." unique_id=1524664585 groups=["player"] instance=ExtResource("5_ls1u8")]
 position = Vector2(730, 49)
