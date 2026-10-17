@@ -23,12 +23,10 @@ func _on_player_moved_mouse(dir: Variant) -> void:
 	velocity = dir * speed
 	move_and_slide()
 	var overlapping_areas: Array[Area2D] = $Hitbox.get_overlapping_areas()
-	print(overlapping_areas)
 	var highest_click = null
 	for b in overlapping_areas:
 		if highest_click == null or b.is_greater_than(highest_click):
 			highest_click = b
-	print(highest_click)
 	Global.highest_clickable_body = highest_click
 func set_click_mode(mode) -> void:
 	if has_node("Arrow") and has_node("Hand") and has_node("Dont"):

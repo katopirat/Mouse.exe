@@ -172,6 +172,7 @@ func _on_table_table_changed(tilemap: TileMap) -> void:
 
 func die():
 	print("dying")
+	Global.player_can_move = false
 	if not is_inside_tree():
 		print('r')
 		return

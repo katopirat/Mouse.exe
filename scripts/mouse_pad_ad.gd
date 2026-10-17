@@ -13,6 +13,7 @@ var cursor_inside = false
 
 func _ready() -> void:
 	$"../../../..".remove_child.call_deferred(finish)
+	add_to_group("ads")
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Cursor":
@@ -36,6 +37,7 @@ func _input(event):
 			$".".queue_free()
 		else:
 			click_ad_audio.play()
+
 func _on_x_button_ad_closed() -> void:
 	if open_again:
 		
@@ -57,10 +59,17 @@ func hide_ad_for_skibidi_seconnds() -> void:
 
 
 func _process(_delta: float) -> void:
+	if money_have >= mousepad_cost and is_in_group('ads'):
+		remove_from_group("ads")
+		add_to_group("clickable")
+	elif money_have < mousepad_cost and is_in_group("clickable"):
+		remove_from_group("clickable")
+		add_to_group("ads")
 	if not open_again:
 		return
 	$Label.text = str(ceil($Timer.time_left))
-
+	
+		
 
 func _on_timer_timeout() -> void:
 	$AnimatedSprite2D.visible = true
