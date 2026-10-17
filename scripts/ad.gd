@@ -8,7 +8,7 @@ var cursor_inside = false
 
 
 func _ready() -> void:
-	print("open_again")
+	add_to_group("ads")
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Cursor":

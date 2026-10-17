@@ -45,6 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="33_qbq2j"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="34_o4dak"]
 [ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
+[ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="41_6ucdd"]
+[ext_resource type="AudioStream" uid="uid://dede1puu1i438" path="res://assets/soundeffects/ad_sound.wav" id="43_8ibj7"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="45_xufdy"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="46_su7v7"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="47_8ibj7"]
@@ -1194,6 +1196,8 @@ position = Vector2(-1776, 6050)
 [node name="book" parent="Node2D/Table" unique_id=762146673 instance=ExtResource("34_o4dak")]
 position = Vector2(-2137, 6082)
 
+[node name="CanvasLayer" parent="Node2D" unique_id=1412613663 instance=ExtResource("22_kjga0")]
+
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("3_nefd8")]
 z_index = -1
 position = Vector2(-3454, 6212)
@@ -1234,6 +1238,12 @@ rotation = 3.1415927
 scale = Vector2(0.165, 0.16500002)
 shape = SubResource("RectangleShape2D_8ibj7")
 
+[node name="Dont" type="Sprite2D" parent="Node2D/Player/Cursor" unique_id=1756907779]
+visible = false
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(1.5703857, 1.5703857)
+texture = ExtResource("41_6ucdd")
+
 [node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=1880118116]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(1.7, 1.7)
@@ -1249,6 +1259,9 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 131073, 3, -131
 position = Vector2(-128.33334, 64.00001)
 rotation = -0.46358427
 scale = Vector2(0.33333334, 0.33333334)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player" unique_id=904005100]
+stream = ExtResource("43_8ibj7")
 
 [node name="closable book" parent="." unique_id=888231878 instance=ExtResource("29_x47nb")]
 position = Vector2(-4, 1683)
@@ -1270,8 +1283,6 @@ rotation = 0.4136576
 
 [node name="closable cup" parent="." unique_id=1500824594 instance=ExtResource("20_85fob")]
 position = Vector2(-2, 3987)
-
-[node name="Shader_visuals" parent="." unique_id=1412613663 instance=ExtResource("22_kjga0")]
 
 [node name="closable book open" parent="." unique_id=1219112106 instance=ExtResource("32_7lnr8")]
 position = Vector2(-1120.0001, 6629.0005)
@@ -1343,4 +1354,4 @@ scale = Vector2(3.199961, 3)
 [connection signal="body_entered" from="Node2D/Table/emo6/Area2D" to="Node2D/Table/emo6/Area2D" method="_on_body_entered"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Cursor" method="_on_player_moved_mouse"]
 
-[editable path="Shader_visuals"]
+[editable path="Node2D/CanvasLayer"]

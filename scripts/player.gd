@@ -171,7 +171,9 @@ func _on_table_table_changed(tilemap: TileMap) -> void:
 	table_tilemap = tilemap
 
 func die():
+	print("dying")
 	if not is_inside_tree():
+		print('r')
 		return
 	if $AudioStreamPlayer:
 		$AudioStreamPlayer.play()

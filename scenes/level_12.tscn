@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="11_udfdp"]
 [ext_resource type="Script" uid="uid://dl05ndlp1nwt6" path="res://bitcoin_button.gd" id="12_kg3h7"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="13_0m4om"]
+[ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="14_cbqc3"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_6qqoh"]
 [ext_resource type="Script" uid="uid://d2lptn23i230m" path="res://bitcoin_graph.gd" id="16_8x383"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_bfqui"]
@@ -420,6 +421,12 @@ position = Vector2(-0.6380005, -0.20999146)
 rotation = 3.1415927
 scale = Vector2(0.165, 0.16500002)
 shape = SubResource("RectangleShape2D_6e4so")
+
+[node name="Dont" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=234781293]
+visible = false
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(1.5703857, 1.5703857)
+texture = ExtResource("14_cbqc3")
 
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
 position = Vector2(0, -2.3841858e-07)

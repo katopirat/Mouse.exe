@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="6_mbb35"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_wbtxt"]
+[ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="7_hnsmf"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_x2fux"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="8_s7g0b"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="9_mmfjm"]
@@ -233,6 +234,12 @@ visible = false
 position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("6_mbb35")
+
+[node name="Dont" type="Sprite2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=382104492]
+visible = false
+position = Vector2(-5.00679e-06, -1.8119812e-05)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("7_hnsmf")
 
 [node name="Hitbox" type="Area2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=599616896]
 
