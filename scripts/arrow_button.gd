@@ -4,7 +4,8 @@ extends Area2D
 @onready var viewport = $"../../SubViewportContainer/SubViewport"
 @export_enum("button_right", "button_left", "button_up", "button_down") var control_event: String
 
-
+func _ready() -> void:
+	add_to_group("clickable")
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == "Cursor":
@@ -16,7 +17,7 @@ func _on_body_exited(body: Node2D) -> void:
 		cursor_inside = false
 		
 func _process(delta: float) -> void:
-	if cursor_inside and Input.is_action_pressed("click") and Global.player_can_move:
+	if cursor_inside and Input.is_action_pressed("click") and Global.player_can_move and self == Global.highest_clickable_body:
 		if not pressed:
 			pressed = true
 			push_move_action(pressed)
