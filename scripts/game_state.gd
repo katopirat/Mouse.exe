@@ -13,12 +13,16 @@ var levels = [
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
 	{"name": "magic table", "scene": "res://scenes/level_10.tscn"},
 	{"name": "magic mice", "scene": "res://scenes/level_11.tscn"},
+	{"name": "mice coin", "scene": "res://scenes/level_12.tscn"},
 	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
 	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
 	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
+	{"name": "EMO the boss", "scene": "res://scenes/level_17.tscn"},
+	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},
+	{"name": "blue thooth OFF", "scene": "res://scenes/level_19.tscn"},
+	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
 ]
-
 var unlocked = 1
 var done = [] 
 var best_times = {}

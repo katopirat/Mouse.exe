@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_jhdh4"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="21_cronh"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="21_rap3s"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="22_cg1jc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6cb"]
 size = Vector2(68, 107)
@@ -125,6 +126,67 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_x5vxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-408, -411)]
+}
+
+[sub_resource type="Animation" id="Animation_bndlm"]
+resource_name = "level namnam"
+length = 5.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../RichTextLabel:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 4.5666666, 5.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-408, -291), Vector2(-408, -291), Vector2(-408, -1453)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_opx15"]
+_data = {
+&"RESET": SubResource("Animation_x5vxs"),
+&"level namnam": SubResource("Animation_bndlm")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rap3s"]
 texture = ExtResource("21_cronh")
@@ -447,6 +509,27 @@ sprite_frames = SubResource("SpriteFrames_dme7w")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=1551028910]
 stream = ExtResource("19_uv3yh")
 volume_db = -16.845
+
+[node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=139958229]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=802223938]
+top_level = true
+z_index = 999
+offset_left = -408.0
+offset_top = -411.0
+offset_right = 425.0
+offset_bottom = -244.0
+theme_override_fonts/normal_font = ExtResource("22_cg1jc")
+theme_override_font_sizes/normal_font_size = 57
+text = "sensitivity"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player/RichTextLabel" unique_id=2060083908]
+root_node = NodePath("../../Computer/level namnam")
+libraries/ = SubResource("AnimationLibrary_opx15")
+autoplay = &"level namnam"
 
 [node name="Ground" type="TileMap" parent="Node2D/Player" unique_id=978546668]
 z_index = -30
