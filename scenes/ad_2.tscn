@@ -74,7 +74,6 @@ sprite_frames = SubResource("SpriteFrames_ubba7")
 animation = &"new_animation"
 
 [node name="XButtonAd" type="Area2D" parent="Ad" unique_id=361209545]
-z_index = 1
 position = Vector2(18.333332, -5.999998)
 scale = Vector2(3, 3)
 collision_mask = 2

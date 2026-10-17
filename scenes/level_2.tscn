@@ -332,7 +332,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-131076, 1, 0, -131075, 131073, 0, -131074, 196609, 0, -131073, 131073, 0, -196608, 65537, 0, -196607, 65537, 0, -196606, 1, 0, -196605, 65537, 0, -196604, 196609, 0, -196603, 65537, 0, -131067, 131073, 0, -131068, 131073, 0, -131069, 131073, 0, -131070, 131073, 0, -131071, 131073, 0, -131072, 65537, 0, -65537, 65537, 0, -65538, 65537, 0, -65539, 1, 0, -65540, 65537, 0, -4, 65537, 0, -3, 131073, 0, -2, 1, 0, -1, 1, 0, -65536, 1, 0, -65535, 65537, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 65537, 0, 5, 262145, 1, 4, 131073, 0, 3, 131073, 0, 2, 65537, 0, 1, 65537, 0, 0, 1, 0, 65535, 196609, 0, 65534, 1, 0, 65533, 65537, 0, 65532, 1, 0, 131068, 1, 0, 131069, 65537, 0, 131070, 1, 0, 131071, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, -196612, 65537, 1, -196611, 65537, 1, -196610, 65537, 1, -196609, 65537, 1, -262144, 65537, 1, -262143, 65537, 1, -262142, 65537, 1, -262141, 65537, 1, -262140, 65537, 1, -262139, 65537, 1, 65541, 262145, 1, 196604, 65537, 2, 196605, 65537, 2, 196606, 65537, 2, 196607, 65537, 2, 131072, 65537, 2, 131073, 65537, 2, 131074, 65537, 2, 131075, 65537, 2, 131076, 65537, 2, 131077, 131073, 2, 65536, 1, 0, -65541, 196609, 0, -131077, 196609, 0, -196613, 65537, 1, 196603, 65537, 2, 131067, 1, 0, 65531, 1, 0, -5, 1, 0, -196614, 65537, 1, -131078, 196609, 0, -65542, 196609, 0, -6, 1, 0, 65530, 1, 0, 131066, 1, 0, 196602, 65537, 2, -196615, 1, 1, -131079, 196609, 1, -65543, 196609, 1, -7, 196609, 1, 65529, 196609, 1, 131065, 196609, 1, 196601, 1, 2, -262138, 65537, 1, -262137, 65537, 1, -262136, 65537, 1, -262135, 65537, 1, -262134, 65537, 1, -262133, 65537, 1, 6, 65537, 2, 7, 65537, 2, -196602, 65537, 0, -196601, 65537, 0, -196600, 65537, 0, -196599, 65537, 0, -196598, 65537, 0, -196597, 196609, 1, -131066, 196609, 0, -131065, 131073, 0, -131064, 131073, 0, -131063, 131073, 0, -131062, 131073, 0, -131061, 196609, 1, 10, 65537, 2, 9, 65537, 2, 8, 65537, 2, -65530, 196609, 0, -65529, 65537, 0, -65528, 65537, 0, -65525, 65537, 0, -65524, 262145, 1, -131060, 262145, 1, -196596, 262145, 1, -262132, 131073, 1, 12, 131073, 2, 11, 65537, 2, -65526, 65537, 0, -65527, 65537, 0)
 
 [node name="cup" parent="Node2D" unique_id=200577205 instance=ExtResource("11_vhnap")]
-position = Vector2(187.00006, -285)
+position = Vector2(209.99998, -318)
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("9_k6a82")]
 z_index = -1
@@ -397,11 +397,6 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_pc3at")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=197235665]
-position = Vector2(-0.638, -0.21)
-scale = Vector2(-0.165, -0.165)
-shape = SubResource("RectangleShape2D_cq2xo")
-
 [node name="Arrow" type="Sprite2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1110841854]
 position = Vector2(9.076538, 13.064672)
 scale = Vector2(1.7121677, 1.7121677)
@@ -412,6 +407,20 @@ visible = false
 position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("13_45kkt")
+
+[node name="Hitbox" type="Area2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=314107734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor/Hitbox" unique_id=197235665]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_cq2xo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Cursor" unique_id=1541034660]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_cq2xo")
 
 [node name="Window" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=1658789405]
 position = Vector2(0, -2.3841858e-07)
@@ -474,25 +483,23 @@ sprite_frames = SubResource("SpriteFrames_w2qjo")
 stream = ExtResource("22_pc3at")
 volume_db = -16.845
 
-[node name="ad2" parent="Node2D/Player/Monitor_2" unique_id=272590773 instance=ExtResource("15_0na3t")]
-z_index = 1
-position = Vector2(3, 13)
+[node name="ad" parent="Node2D/Player/Monitor_2/Computer" unique_id=1511771645 instance=ExtResource("16_gxp3h")]
+position = Vector2(48, -35)
 
-[node name="ad3" parent="Node2D/Player/Monitor_2" unique_id=481423033 instance=ExtResource("15_0na3t")]
-z_index = 1
-position = Vector2(81, 55)
+[node name="ad3" parent="Node2D/Player/Monitor_2/Computer" unique_id=481423033 instance=ExtResource("15_0na3t")]
+position = Vector2(64, 38)
 
-[node name="ad" parent="Node2D/Player/Monitor_2" unique_id=1511771645 instance=ExtResource("16_gxp3h")]
-position = Vector2(65, -18)
+[node name="ad4" parent="Node2D/Player/Monitor_2/Computer" unique_id=1344872642 instance=ExtResource("16_gxp3h")]
+position = Vector2(114, 11)
 
-[node name="ad4" parent="Node2D/Player/Monitor_2" unique_id=1344872642 instance=ExtResource("16_gxp3h")]
-position = Vector2(131, 28)
+[node name="ad_3" parent="Node2D/Player/Monitor_2/Computer" unique_id=651148235 instance=ExtResource("18_xc1pa")]
+position = Vector2(140, 55)
 
-[node name="ad_4" parent="Node2D/Player/Monitor_2" unique_id=19814729 instance=ExtResource("17_qku3a")]
-position = Vector2(104, 5)
+[node name="ad_4" parent="Node2D/Player/Monitor_2/Computer" unique_id=19814729 instance=ExtResource("17_qku3a")]
+position = Vector2(87, -12)
 
-[node name="ad_3" parent="Node2D/Player/Monitor_2" unique_id=651148235 instance=ExtResource("18_xc1pa")]
-position = Vector2(157, 72)
+[node name="ad2" parent="Node2D/Player/Monitor_2/Computer" unique_id=272590773 instance=ExtResource("15_0na3t")]
+position = Vector2(-14, -4)
 
 [node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=2135047017]
 layout_mode = 3
@@ -543,9 +550,9 @@ text = "19:33"
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/Player" unique_id=320285636]
 z_index = 999
 offset_left = -408.0
-offset_top = -291.0
+offset_top = -411.0
 offset_right = 425.0
-offset_bottom = -124.0
+offset_bottom = -244.0
 theme_override_fonts/normal_font = ExtResource("32_3buw8")
 theme_override_font_sizes/normal_font_size = 57
 text = "Ads"

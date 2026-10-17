@@ -25,9 +25,9 @@
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_mmfjm"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="18_k8ld0"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="19_mbb35"]
-[ext_resource type="PackedScene" uid="uid://5gb1okib3o5i" path="res://scenes/tutorial_how_to_close_ad.tscn" id="21_mmfjm"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_d5akn"]
+[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="24_iw4em"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="26_mmfjm"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="30_iw4em"]
 
@@ -44,6 +44,9 @@ size = Vector2(22, 254)
 size = Vector2(21, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw4em"]
 size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
@@ -231,6 +234,14 @@ position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("6_mbb35")
 
+[node name="Hitbox" type="Area2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=599616896]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Cursor/Hitbox" unique_id=1887081698]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_iw4em")
+
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
 position = Vector2(0, -2.3841858e-07)
 scale = Vector2(1, 1.0000001)
@@ -373,7 +384,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("6_fcfvj")]
 z_index = -1
 position = Vector2(1800, 231)
-next_scene = ExtResource("21_mmfjm")
+next_scene = ExtResource("24_iw4em")
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("11_go7sj")]
 position = Vector2(1962.0002, 44.000015)

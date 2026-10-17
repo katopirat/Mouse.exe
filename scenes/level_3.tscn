@@ -41,6 +41,9 @@ size = Vector2(21, 311)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
 size = Vector2(1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu3ic"]
+size = Vector2(1, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io3pw"]
 size = Vector2(5.000004, 4.999997)
 
@@ -350,6 +353,14 @@ visible = false
 position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("6_vv2vh")
+
+[node name="Hitbox" type="Area2D" parent="Player/monitor_3/Computer/Cursor" unique_id=192310592]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/monitor_3/Computer/Cursor/Hitbox" unique_id=330855358]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_wu3ic")
 
 [node name="Window" type="Node2D" parent="Player/monitor_3/Computer" unique_id=1658789405]
 position = Vector2(-3, 175)
