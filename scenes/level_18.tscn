@@ -47,6 +47,9 @@ size = Vector2(21, 259)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6m6h"]
+size = Vector2(1, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
 size = Vector2(5.000004, 4.999997)
 
@@ -237,6 +240,14 @@ position = Vector2(2.7229562, 9.044768)
 scale = Vector2(1.5703856, 1.5703856)
 texture = ExtResource("13_hhenw")
 
+[node name="Hitbox" type="Area2D" parent="Player/Monitor_1/Computer/Cursor" unique_id=298231640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Cursor/Hitbox" unique_id=1451873545]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_o6m6h")
+
 [node name="Window" type="Node2D" parent="Player/Monitor_1/Computer" unique_id=1313157565]
 position = Vector2(0, -2.3841858e-07)
 scale = Vector2(1, 1.0000001)
@@ -402,9 +413,9 @@ position = Vector2(-15, 85)
 top_level = true
 z_index = 999
 offset_left = -408.0
-offset_top = -291.0
+offset_top = -411.0
 offset_right = 425.0
-offset_bottom = -124.0
+offset_bottom = -244.0
 theme_override_fonts/normal_font = ExtResource("24_o6m6h")
 theme_override_font_sizes/normal_font_size = 57
 text = "Micerix"

@@ -802,6 +802,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfov6"]
 size = Vector2(1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ibj7"]
+size = Vector2(1, 1)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pk2l"]
 texture = ExtResource("21_cwmml")
 texture_region_size = Vector2i(32, 32)
@@ -1222,6 +1225,14 @@ shape = SubResource("RectangleShape2D_yfov6")
 position = Vector2(7, 12)
 scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("10_jpmhk")
+
+[node name="Hitbox" type="Area2D" parent="Node2D/Player/Cursor" unique_id=1078874407]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Cursor/Hitbox" unique_id=2140983757]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_8ibj7")
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=1880118116]
 scale = Vector2(3, 3)
