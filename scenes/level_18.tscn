@@ -259,10 +259,9 @@ position = Vector2(105, 179.99997)
 scale = Vector2(0.7, 0.7)
 
 [node name="UpArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1757439712]
-position = Vector2(12, -26.999985)
+position = Vector2(12.000061, -26.999985)
 rotation = 1.5707964
-scale = Vector2(2, 2)
-collision_layer = 2
+scale = Vector2(1.9999996, 1.9999996)
 collision_mask = 2
 script = ExtResource("16_nlodx")
 control_event = "button_up"
@@ -277,7 +276,6 @@ shape = SubResource("RectangleShape2D_7qu8p")
 position = Vector2(12, 40.999996)
 rotation = -1.5707964
 scale = Vector2(2, 2)
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("16_nlodx")
 control_event = "button_down"
@@ -291,7 +289,6 @@ shape = SubResource("RectangleShape2D_7qu8p")
 [node name="LeftArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1447266280]
 position = Vector2(-22, 7)
 scale = Vector2(2, 2)
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("16_nlodx")
 control_event = "button_left"
@@ -304,9 +301,8 @@ shape = SubResource("RectangleShape2D_7qu8p")
 
 [node name="RightArrow" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=1011473020]
 position = Vector2(46, 7)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(2, 2)
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("16_nlodx")
 control_event = "button_right"
@@ -320,7 +316,6 @@ shape = SubResource("RectangleShape2D_7qu8p")
 [node name="ClickButton" type="Area2D" parent="Player/Monitor_1/Computer/Window/Controls" unique_id=948909182]
 position = Vector2(12, 7)
 scale = Vector2(2, 2)
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("16_uh8v0")
 

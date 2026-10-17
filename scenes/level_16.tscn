@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="17_d3k1n"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="18_r60lq"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="19_0hj2h"]
+[ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="19_o022h"]
 [ext_resource type="PackedScene" uid="uid://x7ww0cleaeix" path="res://scenes/emo_boss_intro.tscn" id="23_20hhy"]
 [ext_resource type="PackedScene" uid="uid://ph0e27lay2uk" path="res://scenes/props/bookshelf.tscn" id="23_or256"]
 [ext_resource type="PackedScene" uid="uid://dx44yg8f7ndag" path="res://scenes/glass_prop.tscn" id="24_35t4f"]
@@ -116,7 +117,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("19_o022h")
 }],
 "loop": 1,
 "name": &"pressed",

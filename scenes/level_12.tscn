@@ -291,6 +291,7 @@ stream = SubResource("AudioStreamWAV_csjg2")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player/Monitor_1/Computer/MousePadAd" unique_id=617611568]
 stream = ExtResource("13_0m4om")
+volume_db = -8.538
 
 [node name="MonitorBackground" type="TextureRect" parent="Player/Monitor_1/Computer" unique_id=585337726]
 offset_left = 17.0
