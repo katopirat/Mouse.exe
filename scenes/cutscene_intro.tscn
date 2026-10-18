@@ -537,6 +537,14 @@ position = Vector2(-1, 2)
 scale = Vector2(3, 3)
 texture = ExtResource("5_rnhm2")
 
+[node name="Tail" type="Line2D" parent="Myš(stacionary)" unique_id=1997148798]
+position = Vector2(0, 20.666668)
+default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
+script = ExtResource("8_o86jq")
+
+[node name="TailStart" type="Node2D" parent="Myš(stacionary)/Tail" unique_id=211265860]
+position = Vector2(1.0162592e-05, 0)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1852984364]
 position = Vector2(-6, 98)
 rotation = -0.033161256
@@ -548,9 +556,13 @@ position = Vector2(-427.00003, -2)
 scale = Vector2(3, 3)
 texture = ExtResource("6_capye")
 
-[node name="Line2D" type="Line2D" parent="MyšReal" unique_id=1965554870]
+[node name="Tail" type="Line2D" parent="MyšReal" unique_id=1965554870]
 position = Vector2(0, 23.666668)
+default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
 script = ExtResource("8_o86jq")
+
+[node name="TailStart" type="Node2D" parent="MyšReal/Tail" unique_id=738527583]
+position = Vector2(0, -3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2109267178]
 root_node = NodePath("../Node2D/Table/TileMap")
