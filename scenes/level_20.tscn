@@ -37,6 +37,47 @@
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="30_xw8iq"]
 [ext_resource type="Texture2D" uid="uid://d3bb5jn7xhrt5" path="res://assets/images/window irl.png" id="31_ihl48"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3sk1"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llqww"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hm8v"]
+size = Vector2(420, 22.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djabs"]
+size = Vector2(420, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrabf"]
+size = Vector2(22, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq53p"]
+size = Vector2(21, 259)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7end"]
+radius = 7.333332
+height = 14.666664
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahtwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_r2xh0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_mavx5")
+}],
+"loop": 1,
+"name": &"pressed",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_37vw7"]
 animations = [{
 "frames": [{
@@ -183,47 +224,6 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_njye4")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3sk1"]
-size = Vector2(1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llqww"]
-size = Vector2(1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hm8v"]
-size = Vector2(420, 22.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_djabs"]
-size = Vector2(420, 31)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrabf"]
-size = Vector2(22, 254)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq53p"]
-size = Vector2(21, 259)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7end"]
-radius = 7.333332
-height = 14.666664
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ahtwf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("28_r2xh0")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_mavx5")
-}],
-"loop": 1,
-"name": &"pressed",
-"speed": 5.0
-}]
-
 [node name="level_20" type="Node2D" unique_id=1884408580]
 position = Vector2(-2, 0)
 
@@ -278,77 +278,6 @@ position = Vector2(-106.99994, 290.00003)
 [node name="note thing" parent="Node2D/Table" unique_id=234277861 instance=ExtResource("5_b6u0r")]
 position = Vector2(324, -249)
 
-[node name="chess1" type="Area2D" parent="Node2D" unique_id=792778879]
-z_index = 1
-position = Vector2(379, 99)
-scale = Vector2(3.322, 3)
-collision_mask = 2
-script = ExtResource("3_b2sfm")
-
-[node name="XButtonAd" type="Area2D" parent="Node2D/chess1" unique_id=1192603492]
-z_index = 2
-position = Vector2(17.999998, -5.333331)
-scale = Vector2(3, 3)
-collision_mask = 2
-script = ExtResource("4_llqww")
-
-[node name="chess board" parent="Node2D/chess1/XButtonAd" unique_id=1519207098 instance=ExtResource("5_88wjc")]
-position = Vector2(-20.759, -8.4)
-scale = Vector2(0.120044276, 0.12004425)
-
-[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=198232438]
-position = Vector2(-87.13475, -63.313515)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=1017709520]
-position = Vector2(-62.628098, -63.313507)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=1422666115]
-position = Vector2(-62.628098, -87.43294)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("7_wavj1")
-
-[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=1077020073]
-position = Vector2(-87.13475, -87.43293)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("8_kxdkr")
-
-[node name="KingWhite" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=800051752]
-position = Vector2(80.78119, 81.403076)
-scale = Vector2(3, 3)
-texture = ExtResource("9_r370t")
-
-[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess1/XButtonAd/chess board" unique_id=1659343600]
-position = Vector2(-15.430115, -15.074646)
-scale = Vector2(3, 3)
-texture = ExtResource("10_e7iwr")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/chess1/XButtonAd" unique_id=547849575]
-position = Vector2(1115.2201, -409.42438)
-scale = Vector2(0.18518463, 0.18518463)
-sprite_frames = SubResource("SpriteFrames_37vw7")
-offset = Vector2(0.275, -0.19)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/chess1/XButtonAd" unique_id=640433370]
-position = Vector2(-22.473473, -10.448867)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_jry1k")
-
-[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/chess1" unique_id=82933874]
-position = Vector2(-58.7995, -53.429535)
-scale = Vector2(1.1210196, 1.1210195)
-polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/chess1" unique_id=134528137]
-stream = ExtResource("13_jwm2x")
-
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("14_smtl8")]
 z_index = -1
 position = Vector2(-958.99994, -71.99999)
@@ -371,19 +300,310 @@ z_index = 20
 position = Vector2(-178, 3892)
 
 [node name="MonitorBackground" type="TextureRect" parent="Node2D/Player/Computer" unique_id=2016118665]
-offset_left = 16.312958
-offset_top = 4.0
-offset_right = 467.687
-offset_bottom = 274.0
+offset_left = 256.31296
+offset_top = -4005.0
+offset_right = 707.687
+offset_bottom = -3735.0
 texture = ExtResource("17_l50gi")
+metadata/_edit_use_anchors_ = true
 
 [node name="MonitorBorder" type="TextureRect" parent="Node2D/Player/Computer" unique_id=1987575771]
 z_index = 11
-offset_left = -6.0
-offset_top = -24.0
-offset_right = 489.21362
-offset_bottom = 294.0
+offset_left = 234.0
+offset_top = -4033.0
+offset_right = 729.2136
+offset_bottom = -3715.0
 texture = ExtResource("18_2q6vw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Computer" unique_id=42973594]
+z_index = 10
+position = Vector2(444, -3901)
+scale = Vector2(1.1017417, 0.99504834)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("20_rkc6e")
+speed = 30.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Cursor" unique_id=771203771]
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_e3sk1")
+
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1359624117]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
+texture = ExtResource("21_14nu3")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1744459323]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("22_25541")
+
+[node name="Hitbox" type="Area2D" parent="Node2D/Player/Computer/Cursor" unique_id=2146866028]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Cursor/Hitbox" unique_id=1789312344]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_llqww")
+
+[node name="Dont" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=748809889]
+visible = false
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(1.5703857, 1.5703857)
+texture = ExtResource("26_88wjc")
+
+[node name="Borders" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=123904590]
+position = Vector2(274, -4011)
+scale = Vector2(1.0000002, 1)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=1009249995]
+position = Vector2(210, -10.875)
+shape = SubResource("RectangleShape2D_1hm8v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=534468065]
+position = Vector2(209.37502, 268)
+shape = SubResource("RectangleShape2D_djabs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=2108194266]
+position = Vector2(-10, 127)
+shape = SubResource("RectangleShape2D_xrabf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Computer/Borders" unique_id=1556590028]
+position = Vector2(430.5, 128.5)
+shape = SubResource("RectangleShape2D_hq53p")
+
+[node name="Window2" type="Node2D" parent="Node2D/Player/Computer" unique_id=1250257673]
+position = Vector2(343, -3824)
+scale = Vector2(0.36247355, 0.36247358)
+script = ExtResource("24_vkk42")
+
+[node name="TopBar" type="Node2D" parent="Node2D/Player/Computer/Window2" unique_id=188089353]
+position = Vector2(152, 47)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Window2/TopBar" unique_id=2042494949]
+position = Vector2(-16.816341, 4.147223)
+scale = Vector2(1.5247535, 1.4999428)
+texture = ExtResource("25_tym5q")
+offset = Vector2(-0.075, -0.265)
+
+[node name="Background" type="Node2D" parent="Node2D/Player/Computer/Window2" unique_id=1494186380]
+position = Vector2(151, 89)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/Window2/Background" unique_id=1483510860]
+position = Vector2(-9.418182, 10.249992)
+scale = Vector2(1.5181818, 1.5181818)
+texture = ExtResource("26_qvt24")
+
+[node name="BridgeButton" type="Area2D" parent="Node2D/Player/Computer/Window2" unique_id=142474621]
+z_index = 1
+position = Vector2(143.45876, 82.76466)
+scale = Vector2(2.9599993, 2.959999)
+collision_mask = 2
+script = ExtResource("27_35bn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=20416479]
+position = Vector2(0.33333334, -2.3333328)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_m7end")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=363380912]
+position = Vector2(0.5181311, -1.5341523)
+scale = Vector2(0.8541666, 0.8541666)
+sprite_frames = SubResource("SpriteFrames_ahtwf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/Window2/BridgeButton" unique_id=2033437985]
+stream = ExtResource("30_xw8iq")
+volume_db = -16.845
+
+[node name="chess2" type="Area2D" parent="Node2D/Player/Computer" unique_id=551721581]
+z_index = 1
+position = Vector2(580, -3776)
+scale = Vector2(3.594169, 3.246108)
+collision_mask = 2
+script = ExtResource("3_b2sfm")
+
+[node name="XButtonAd" type="Area2D" parent="Node2D/Player/Computer/chess2" unique_id=1142932807]
+z_index = 1
+position = Vector2(17.999998, -5.333331)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("4_llqww")
+
+[node name="chess board" parent="Node2D/Player/Computer/chess2/XButtonAd" unique_id=1750352480 instance=ExtResource("5_88wjc")]
+position = Vector2(-21.66667, -9.555554)
+scale = Vector2(0.11111112, 0.11111109)
+
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=311737279]
+position = Vector2(-87.13475, -63.313515)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=1937309135]
+position = Vector2(-62.628098, -63.313507)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=1801199664]
+position = Vector2(-62.628098, -87.43294)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("7_wavj1")
+
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=2100755107]
+position = Vector2(-87.13475, -87.43293)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("8_kxdkr")
+
+[node name="KingWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=1488652003]
+position = Vector2(80.78119, 81.403076)
+scale = Vector2(3, 3)
+texture = ExtResource("9_r370t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=252536060]
+modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
+position = Vector2(-13.416739, -15.3713455)
+scale = Vector2(0.4753202, 0.46037412)
+texture = ExtResource("31_ihl48")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd/chess board" unique_id=288306243]
+position = Vector2(-15.430115, -15.074646)
+scale = Vector2(3, 3)
+texture = ExtResource("10_e7iwr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Player/Computer/chess2/XButtonAd" unique_id=1475541353]
+position = Vector2(1115.2201, -409.42438)
+scale = Vector2(0.18518463, 0.18518463)
+sprite_frames = SubResource("SpriteFrames_37vw7")
+offset = Vector2(0.275, -0.19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/chess2/XButtonAd" unique_id=186541586]
+position = Vector2(-26.032438, -16.603207)
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_jry1k")
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/Player/Computer/chess2" unique_id=1342811871]
+position = Vector2(8206.069, -3438.2712)
+scale = Vector2(0.9999998, 0.9999997)
+polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/chess2" unique_id=1063684405]
+stream = ExtResource("13_jwm2x")
+
+[node name="chess board2" parent="Node2D/Player/Computer" unique_id=575644643 instance=ExtResource("5_88wjc")]
+position = Vector2(411.07404, -3886.3677)
+scale = Vector2(1.1980565, 1.0820358)
+
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=1511916119]
+position = Vector2(-87.13475, -63.313515)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=288021674]
+position = Vector2(-62.628098, -63.313507)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=1889971442]
+position = Vector2(-62.628098, -87.43294)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("7_wavj1")
+
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=741160968]
+position = Vector2(-87.13475, -87.43293)
+rotation = 4.722459
+scale = Vector2(3, 3)
+texture = ExtResource("8_kxdkr")
+
+[node name="KingWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=1752160095]
+position = Vector2(80.78119, 81.403076)
+scale = Vector2(3, 3)
+texture = ExtResource("9_r370t")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess board2" unique_id=831475761]
+position = Vector2(-39.291992, -63.42891)
+scale = Vector2(3, 3)
+texture = ExtResource("10_e7iwr")
+
+[node name="chess1" type="Area2D" parent="Node2D/Player/Computer" unique_id=792778879]
+z_index = 1
+position = Vector2(558, -3795)
+scale = Vector2(3.322, 3)
+collision_mask = 2
+script = ExtResource("3_b2sfm")
+
+[node name="XButtonAd" type="Area2D" parent="Node2D/Player/Computer/chess1" unique_id=1192603492]
+z_index = 2
+position = Vector2(17.999998, -5.333331)
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("4_llqww")
+
+[node name="chess board" parent="Node2D/Player/Computer/chess1/XButtonAd" unique_id=1519207098 instance=ExtResource("5_88wjc")]
+position = Vector2(-20.759, -8.4)
+scale = Vector2(0.120044276, 0.12004425)
+
+[node name="BishopBlack" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=198232438]
+position = Vector2(-87.13475, -63.313515)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack2" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=1017709520]
+position = Vector2(-62.628098, -63.313507)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("6_b6u0r")
+
+[node name="BishopBlack3" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=1422666115]
+position = Vector2(-62.628098, -87.43294)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("7_wavj1")
+
+[node name="BishopBlack4" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=1077020073]
+position = Vector2(-87.13475, -87.43293)
+rotation = 3.1395597
+scale = Vector2(3, 3)
+texture = ExtResource("8_kxdkr")
+
+[node name="KingWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=800051752]
+position = Vector2(80.78119, 81.403076)
+scale = Vector2(3, 3)
+texture = ExtResource("9_r370t")
+
+[node name="HorseWhite" type="Sprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd/chess board" unique_id=1659343600]
+position = Vector2(-15.430115, -15.074646)
+scale = Vector2(3, 3)
+texture = ExtResource("10_e7iwr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Player/Computer/chess1/XButtonAd" unique_id=547849575]
+position = Vector2(1115.2201, -409.42438)
+scale = Vector2(0.18518463, 0.18518463)
+sprite_frames = SubResource("SpriteFrames_37vw7")
+offset = Vector2(0.275, -0.19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/chess1/XButtonAd" unique_id=640433370]
+position = Vector2(-22.473473, -10.448867)
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_jry1k")
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/Player/Computer/chess1" unique_id=82933874]
+position = Vector2(-58.7995, -53.429535)
+scale = Vector2(1.1210196, 1.1210195)
+polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Player/Computer/chess1" unique_id=134528137]
+stream = ExtResource("13_jwm2x")
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=2124425272]
 scale = Vector2(3, 3)
@@ -396,238 +616,20 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -131076, 65537, 3, -131075, 65537, 3, -131074, 65537, 3, -131073, 65537, 3, -196608, 65537, 3, -196607, 65537, 3, -196606, 65537, 3, -196605, 65537, 3, -196604, 65537, 3, -196603, 65537, 3, -131067, 65537, 3, -131068, 65537, 3, -131069, 65537, 3, -131070, 65537, 3, -131071, 65537, 3, -131072, 65537, 3, -65537, 65537, 3, -65538, 65537, 3, -65539, 65537, 3, -65540, 65537, 3, -65541, 65537, 3, -65542, 65537, 3, -6, 65537, 3, -5, 65537, 3, -4, 65537, 3, -3, 65537, 3, -2, 65537, 3, -1, 65537, 3, -65536, 65537, 3, -65535, 65537, 3, -65534, 65537, 3, -65533, 65537, 3, -65532, 65537, 3, -65531, 65537, 3, 5, 65537, 3, 4, 65537, 3, 3, 65537, 3, 2, 65537, 3, 1, 65537, 3, 0, 65537, 3, 65535, 65537, 3, 65534, 65537, 3, 65533, 65537, 3, 65532, 65537, 3, 65531, 65537, 3, 65530, 65537, 3, 131066, 65537, 3, 131067, 65537, 3, 131068, 65537, 3, 131069, 65537, 3, 131070, 65537, 3, 131071, 65537, 3, 65536, 65537, 3, 65537, 65537, 3, 65538, 65537, 3, 65539, 65537, 3, 65540, 65537, 3, 65541, 65537, 3, 131077, 65537, 3, 131076, 65537, 3, 131075, 65537, 3, 131074, 65537, 3, 131073, 65537, 3, 131072, 65537, 3, 196607, 65537, 3, 196603, 65537, 3, 196602, 65537, 3, 196604, 65537, 3, 196605, 65537, 3, 196606, 65537, 3, -196614, 65537, 3, -196613, 65537, 3, -196612, 65537, 3, -196611, 65537, 3, -196610, 65537, 3, -196609, 65537, 3, -262144, 65537, 3, -262143, 65537, 3, -262142, 65537, 3, -262141, 65537, 3, -262140, 65537, 3, -262139, 65537, 3, -196615, 65537, 3, -131079, 65537, 3, -65543, 65537, 3, -7, 65537, 3, 131065, 65537, 3, 196601, 65537, 3, 65529, 65537, 3, 196614, 65537, 3, 262136, 65537, 3, 262138, 65537, 3, 262139, 65537, 3, 262140, 65537, 3, 262141, 65537, 3, 262142, 65537, 3, 262143, 65537, 3, 196610, 65537, 3, 196611, 65537, 3, 196612, 65537, 3, 196613, 65537, 3, 196609, 65537, 3, 196608, 65537, 3, 262137, 65537, 3, -262152, 65537, 3, -327674, 65537, 3, -262151, 65537, 3, -262150, 65537, 3, -262149, 65537, 3, -262148, 65537, 3, -262147, 65537, 3, -262146, 65537, 3, -262145, 65537, 3, -327680, 65537, 3, -327679, 65537, 3, -327678, 65537, 3, -327677, 65537, 3, -327676, 65537, 3, -327675, 65537, 3, 131078, 65537, 3, 65542, 65537, 3, 6, 65537, 3, -65530, 65537, 3, -131066, 65537, 3, -196602, 65537, 3, -262138, 65537, 3, 196600, 65537, 3, 131064, 65537, 3, 65528, 65537, 3, -8, 65537, 3, -65544, 65537, 3, -131080, 65537, 3, -196616, 65537, 3, 262144, 65537, 3, 262145, 65537, 3, 262146, 65537, 3, 262147, 65537, 3, 262148, 65537, 3, 262149, 65537, 3, 262150, 65537, 3, 327673, 65537, 3, 327674, 65537, 3, 327675, 65537, 3, 327676, 65537, 3, 327677, 65537, 3, 327678, 65537, 3, 327679, 65537, 3, 327672, 65537, 3, -131065, 65537, 3, -131064, 65537, 3, -131063, 65537, 3, -196601, 65537, 3, -196600, 65537, 3, -196599, 65537, 3, -262135, 65537, 3, -262136, 65537, 3, -262137, 65537, 3, -327673, 65537, 3, -393226, 65537, 3, -327690, 65537, 3, -262154, 65537, 3, -196618, 65537, 3, -131082, 65537, 3, -65546, 65537, 3, -10, 65537, 3, 65526, 65537, 3, 131062, 65537, 3, 196598, 65537, 3, 262134, 65537, 3, 327670, 65537, 3, 393206, 65537, 3, 458742, 65537, 3, -393225, 65537, 3, -327689, 65537, 3, -262153, 65537, 3, -196617, 65537, 3, -131081, 65537, 3, -65545, 65537, 3, -9, 65537, 3, 65527, 65537, 3, 131063, 65537, 3, 196599, 65537, 3, 262135, 65537, 3, 327671, 65537, 3, 393207, 65537, 3, 458743, 65537, 3, -393224, 65537, 3, -327688, 65537, 3, 393208, 65537, 3, 458744, 65537, 3, -393223, 65537, 3, -327687, 65537, 3, 393209, 65537, 3, 458745, 65537, 3, -393222, 65537, 3, -327686, 65537, 3, 393210, 65537, 3, 458746, 65537, 3, -393221, 65537, 3, -327685, 65537, 3, 393211, 65537, 3, 458747, 65537, 3, -393220, 65537, 3, -327684, 65537, 3, 393212, 65537, 3, -393219, 65537, 3, -327683, 65537, 3, 393213, 65537, 3, -393218, 65537, 3, -327682, 65537, 3, 393214, 65537, 3, -393217, 65537, 3, -327681, 65537, 3, 393215, 65537, 3, -458752, 65537, 3, -393216, 65537, 3, 327680, 65537, 3, -458751, 65537, 3, -393215, 65537, 3, 327681, 65537, 3, -458750, 65537, 3, -393214, 65537, 3, 327682, 65537, 3, -458749, 65537, 3, -393213, 65537, 3, 327683, 65537, 3, -458748, 65537, 3, -393212, 65537, 3, 327684, 65537, 3, -458747, 65537, 3, -393211, 65537, 3, 327685, 65537, 3, -458746, 65537, 3, -393210, 65537, 3, 327686, 65537, 3, -458745, 65537, 3, -393209, 65537, 3, -65529, 65537, 3, 7, 65537, 3, 65543, 65537, 3, 131079, 65537, 3, 196615, 65537, 3, 262151, 65537, 3, 327687, 65537, 3, -458744, 65537, 3, -393208, 65537, 3, -65528, 65537, 3, 8, 65537, 3, 65544, 65537, 3, 131080, 65537, 3, 196616, 65537, 3, 262152, 65537, 3, 327688, 65537, 3, -458743, 65537, 3, -393207, 65537, 3, -65527, 65537, 3, 9, 65537, 3, 65545, 65537, 3, 131081, 65537, 3, 196617, 65537, 3, 262153, 65537, 3, 327689, 65537, 3, 393225, 65537, 3, -458742, 65537, 3, -393206, 65537, 3, -327670, 65537, 3, -262134, 65537, 3, -196598, 65537, 3, -131062, 65537, 3, -65526, 65537, 3, 10, 65537, 3, 65546, 65537, 3, 131082, 65537, 3, 196618, 65537, 3, 262154, 65537, 3, 327690, 65537, 3, 393226, 65537, 3, -327672, 65537, 3, -327671, 65537, 3, 393224, 65537, 3, 393223, 65537, 3, 458751, 65537, 3, 458750, 65537, 3, 458749, 65537, 3, 458748, 65537, 3, 393216, 65537, 3, 393217, 65537, 3, 393218, 65537, 3, 393219, 65537, 3, 393220, 65537, 3, 393221, 65537, 3, 393222, 65537, 3, -393233, 65537, 3, -327697, 65537, 3, -262161, 65537, 3, -196625, 65537, 3, -131089, 65537, 3, -65553, 65537, 3, -17, 65537, 3, 65519, 65537, 3, 131055, 65537, 3, 196591, 65537, 3, 262127, 65537, 3, 327663, 65537, 3, 393199, 65537, 3, 458735, 65537, 3, -393232, 65537, 3, -327696, 65537, 3, -262160, 65537, 3, -196624, 65537, 3, -131088, 65537, 3, -65552, 65537, 3, -16, 65537, 3, 65520, 65537, 3, 131056, 65537, 3, 196592, 65537, 3, 262128, 65537, 3, 327664, 65537, 3, 393200, 65537, 3, 458736, 65537, 3, -393231, 65537, 3, -327695, 65537, 3, -262159, 65537, 3, -196623, 65537, 3, -131087, 65537, 3, -65551, 65537, 3, -15, 65537, 3, 65521, 65537, 3, 131057, 65537, 3, 196593, 65537, 3, 262129, 65537, 3, 327665, 65537, 3, 393201, 65537, 3, 458737, 65537, 3, -393230, 65537, 3, -327694, 65537, 3, -262158, 65537, 3, -196622, 65537, 3, -131086, 65537, 3, -65550, 65537, 3, -14, 65537, 3, 65522, 65537, 3, 131058, 65537, 3, 196594, 65537, 3, 262130, 65537, 3, 327666, 65537, 3, 393202, 65537, 3, 458738, 65537, 3, -393229, 65537, 3, -327693, 65537, 3, -262157, 65537, 3, -196621, 65537, 3, -131085, 65537, 3, -65549, 65537, 3, -13, 65537, 3, 65523, 65537, 3, 131059, 65537, 3, 196595, 65537, 3, 262131, 65537, 3, 327667, 65537, 3, 393203, 65537, 3, 458739, 65537, 3, -393228, 65537, 3, -327692, 65537, 3, -262156, 65537, 3, -196620, 65537, 3, -131084, 65537, 3, -65548, 65537, 3, -12, 65537, 3, 65524, 65537, 3, 131060, 65537, 3, 196596, 65537, 3, 262132, 65537, 3, 327668, 65537, 3, 393204, 65537, 3, 458740, 65537, 3, -393227, 65537, 3, -327691, 65537, 3, -262155, 65537, 3, -196619, 65537, 3, -131083, 65537, 3, -65547, 65537, 3, -11, 65537, 3, 65525, 65537, 3, 131061, 65537, 3, 196597, 65537, 3, 262133, 65537, 3, 327669, 65537, 3, 393205, 65537, 3, 458741, 65537, 3)
 
-[node name="Cursor" type="CharacterBody2D" parent="Node2D" unique_id=42973594]
-z_index = 10
-position = Vector2(265, -7)
-scale = Vector2(1.1017417, 0.99504834)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("20_rkc6e")
-speed = 30.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cursor" unique_id=771203771]
-scale = Vector2(1, 1.0000001)
-shape = SubResource("RectangleShape2D_e3sk1")
-
-[node name="Arrow" type="Sprite2D" parent="Node2D/Cursor" unique_id=1359624117]
-position = Vector2(9.076538, 13.064672)
-scale = Vector2(1.7121677, 1.7121677)
-texture = ExtResource("21_14nu3")
-
-[node name="Hand" type="Sprite2D" parent="Node2D/Cursor" unique_id=1744459323]
-visible = false
-position = Vector2(2.7229562, 9.044768)
-scale = Vector2(1.5703856, 1.5703856)
-texture = ExtResource("22_25541")
-
-[node name="Hitbox" type="Area2D" parent="Node2D/Cursor" unique_id=2146866028]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cursor/Hitbox" unique_id=1789312344]
-position = Vector2(-0.6380005, -0.20999146)
-rotation = 3.1415927
-scale = Vector2(0.165, 0.16500002)
-shape = SubResource("RectangleShape2D_llqww")
-
-[node name="Dont" type="Sprite2D" parent="Node2D/Cursor" unique_id=748809889]
-visible = false
-position = Vector2(0, -1.5258789e-05)
-scale = Vector2(1.5703857, 1.5703857)
-texture = ExtResource("26_88wjc")
-
-[node name="Borders" type="StaticBody2D" parent="Node2D" unique_id=123904590]
-position = Vector2(95, -117)
-scale = Vector2(0.64, 1)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Borders" unique_id=1009249995]
-position = Vector2(210, -10.875)
-shape = SubResource("RectangleShape2D_1hm8v")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Borders" unique_id=534468065]
-position = Vector2(209.37502, 268)
-shape = SubResource("RectangleShape2D_djabs")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Borders" unique_id=2108194266]
-position = Vector2(-10, 127)
-shape = SubResource("RectangleShape2D_xrabf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Borders" unique_id=1556590028]
-position = Vector2(430.5, 128.5)
-shape = SubResource("RectangleShape2D_hq53p")
-
-[node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("23_y0bsh")]
-
-[node name="Window2" type="Node2D" parent="Node2D" unique_id=1250257673]
-position = Vector2(164, 70)
-scale = Vector2(0.36247355, 0.36247358)
-script = ExtResource("24_vkk42")
-
-[node name="TopBar" type="Node2D" parent="Node2D/Window2" unique_id=188089353]
-position = Vector2(152, 47)
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Window2/TopBar" unique_id=2042494949]
-position = Vector2(-16.816341, 4.147223)
-scale = Vector2(1.5247535, 1.4999428)
-texture = ExtResource("25_tym5q")
-offset = Vector2(-0.075, -0.265)
-
-[node name="Background" type="Node2D" parent="Node2D/Window2" unique_id=1494186380]
-position = Vector2(151, 89)
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Window2/Background" unique_id=1483510860]
-position = Vector2(-9.418182, 10.249992)
-scale = Vector2(1.5181818, 1.5181818)
-texture = ExtResource("26_qvt24")
-
-[node name="BridgeButton" type="Area2D" parent="Node2D/Window2" unique_id=142474621]
-z_index = 1
-position = Vector2(143.45876, 82.76466)
-scale = Vector2(2.9599993, 2.959999)
-collision_mask = 2
-script = ExtResource("27_35bn8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Window2/BridgeButton" unique_id=20416479]
-position = Vector2(0.33333334, -2.3333328)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_m7end")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Window2/BridgeButton" unique_id=363380912]
-position = Vector2(0.5181311, -1.5341523)
-scale = Vector2(0.8541666, 0.8541666)
-sprite_frames = SubResource("SpriteFrames_ahtwf")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Window2/BridgeButton" unique_id=2033437985]
-stream = ExtResource("30_xw8iq")
-volume_db = -16.845
-
-[node name="chess2" type="Area2D" parent="Node2D" unique_id=551721581]
-z_index = 1
-position = Vector2(401, 118)
-scale = Vector2(3.594169, 3.246108)
-collision_mask = 2
-script = ExtResource("3_b2sfm")
-
-[node name="XButtonAd" type="Area2D" parent="Node2D/chess2" unique_id=1142932807]
-z_index = 1
-position = Vector2(17.999998, -5.333331)
-scale = Vector2(3, 3)
-collision_mask = 2
-script = ExtResource("4_llqww")
-
-[node name="chess board" parent="Node2D/chess2/XButtonAd" unique_id=1750352480 instance=ExtResource("5_88wjc")]
-position = Vector2(-21.66667, -9.555554)
-scale = Vector2(0.11111112, 0.11111109)
-
-[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=311737279]
-position = Vector2(-87.13475, -63.313515)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1937309135]
-position = Vector2(-62.628098, -63.313507)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1801199664]
-position = Vector2(-62.628098, -87.43294)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("7_wavj1")
-
-[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=2100755107]
-position = Vector2(-87.13475, -87.43293)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("8_kxdkr")
-
-[node name="KingWhite" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=1488652003]
-position = Vector2(80.78119, 81.403076)
-scale = Vector2(3, 3)
-texture = ExtResource("9_r370t")
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=252536060]
-modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
-position = Vector2(-13.416739, -15.3713455)
-scale = Vector2(0.4753202, 0.46037412)
-texture = ExtResource("31_ihl48")
-
-[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess2/XButtonAd/chess board" unique_id=288306243]
-position = Vector2(-15.430115, -15.074646)
-scale = Vector2(3, 3)
-texture = ExtResource("10_e7iwr")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/chess2/XButtonAd" unique_id=1475541353]
-position = Vector2(1115.2201, -409.42438)
-scale = Vector2(0.18518463, 0.18518463)
-sprite_frames = SubResource("SpriteFrames_37vw7")
-offset = Vector2(0.275, -0.19)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/chess2/XButtonAd" unique_id=186541586]
-position = Vector2(-26.032438, -16.603207)
-scale = Vector2(0.99999994, 1)
-shape = SubResource("RectangleShape2D_jry1k")
-
-[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D/chess2" unique_id=1342811871]
-position = Vector2(8206.069, -3438.2712)
-scale = Vector2(0.9999998, 0.9999997)
-polygon = PackedVector2Array(-19.968391, -12.394703, -20.573494, 52.25878, 44.777584, 51.92379, 45.080135, -12.729694, 30.255123, 1.6749668, 12.404598, 19.764542, 4.23571, 19.764542, 4.23571, 11.7247305, 12.404598, 11.7247305, 12.404598, 19.764542, 44.777584, -13.06469)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/chess2" unique_id=1063684405]
-stream = ExtResource("13_jwm2x")
-
-[node name="chess board2" parent="Node2D" unique_id=575644643 instance=ExtResource("5_88wjc")]
-position = Vector2(232.07402, 7.632347)
-scale = Vector2(1.1980565, 1.0820358)
-
-[node name="BishopBlack" type="Sprite2D" parent="Node2D/chess board2" unique_id=1511916119]
-position = Vector2(-87.13475, -63.313515)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack2" type="Sprite2D" parent="Node2D/chess board2" unique_id=288021674]
-position = Vector2(-62.628098, -63.313507)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("6_b6u0r")
-
-[node name="BishopBlack3" type="Sprite2D" parent="Node2D/chess board2" unique_id=1889971442]
-position = Vector2(-62.628098, -87.43294)
-rotation = 3.1395597
-scale = Vector2(3, 3)
-texture = ExtResource("7_wavj1")
-
-[node name="BishopBlack4" type="Sprite2D" parent="Node2D/chess board2" unique_id=741160968]
-position = Vector2(-87.13475, -87.43293)
-rotation = 4.722459
-scale = Vector2(3, 3)
-texture = ExtResource("8_kxdkr")
-
-[node name="KingWhite" type="Sprite2D" parent="Node2D/chess board2" unique_id=1752160095]
-position = Vector2(80.78119, 81.403076)
-scale = Vector2(3, 3)
-texture = ExtResource("9_r370t")
-
-[node name="HorseWhite" type="Sprite2D" parent="Node2D/chess board2" unique_id=831475761]
-position = Vector2(-39.291992, -63.42891)
-scale = Vector2(3, 3)
-texture = ExtResource("10_e7iwr")
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("23_y0bsh")]
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
-[connection signal="body_entered" from="Node2D/chess1" to="Node2D/chess1" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/chess1" to="Node2D/chess1" method="_on_body_exited"]
-[connection signal="body_entered" from="Node2D/chess1/XButtonAd" to="Node2D/chess1/XButtonAd" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/chess1/XButtonAd" to="Node2D/chess1/XButtonAd" method="_on_body_exited"]
-[connection signal="closed" from="Node2D/chess1/XButtonAd" to="Node2D/chess1" method="_on_x_button_ad_closed"]
-[connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Cursor" method="_on_player_moved_mouse"]
-[connection signal="body_entered" from="Node2D/Window2/BridgeButton" to="Node2D/Window2/BridgeButton" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/Window2/BridgeButton" to="Node2D/Window2/BridgeButton" method="_on_body_exited"]
-[connection signal="open_bridge" from="Node2D/Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
-[connection signal="body_entered" from="Node2D/chess2" to="Node2D/chess2" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/chess2" to="Node2D/chess2" method="_on_body_exited"]
-[connection signal="body_entered" from="Node2D/chess2/XButtonAd" to="Node2D/chess2/XButtonAd" method="_on_body_entered"]
-[connection signal="body_exited" from="Node2D/chess2/XButtonAd" to="Node2D/chess2/XButtonAd" method="_on_body_exited"]
-[connection signal="closed" from="Node2D/chess2/XButtonAd" to="Node2D/chess2" method="_on_x_button_ad_closed"]
+[connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]
+[connection signal="body_entered" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Player/Computer/Window2/BridgeButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Player/Computer/Window2/BridgeButton" method="_on_body_exited"]
+[connection signal="open_bridge" from="Node2D/Player/Computer/Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
+[connection signal="body_entered" from="Node2D/Player/Computer/chess2" to="Node2D/Player/Computer/chess2" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Player/Computer/chess2" to="Node2D/Player/Computer/chess2" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D/Player/Computer/chess2/XButtonAd" to="Node2D/Player/Computer/chess2/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Player/Computer/chess2/XButtonAd" to="Node2D/Player/Computer/chess2/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/Player/Computer/chess2/XButtonAd" to="Node2D/Player/Computer/chess2" method="_on_x_button_ad_closed"]
+[connection signal="body_entered" from="Node2D/Player/Computer/chess1" to="Node2D/Player/Computer/chess1" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Player/Computer/chess1" to="Node2D/Player/Computer/chess1" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D/Player/Computer/chess1/XButtonAd" to="Node2D/Player/Computer/chess1/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Player/Computer/chess1/XButtonAd" to="Node2D/Player/Computer/chess1/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/Player/Computer/chess1/XButtonAd" to="Node2D/Player/Computer/chess1" method="_on_x_button_ad_closed"]
