@@ -32,6 +32,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _ready() -> void:
 	p_position = player.position
+	
 
 func _process(delta: float) -> void:
 	if timer_start == 0:
