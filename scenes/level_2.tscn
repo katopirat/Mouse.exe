@@ -515,6 +515,9 @@ sprite_frames = SubResource("SpriteFrames_w2qjo")
 stream = ExtResource("22_pc3at")
 volume_db = -16.845
 
+[node name="ad_4" parent="Node2D/Player/Monitor_2/Computer" unique_id=19814729 instance=ExtResource("17_qku3a")]
+position = Vector2(125, -21)
+
 [node name="ad" parent="Node2D/Player/Monitor_2/Computer" unique_id=1511771645 instance=ExtResource("16_gxp3h")]
 position = Vector2(48, -35)
 
@@ -526,9 +529,6 @@ position = Vector2(114, 11)
 
 [node name="ad_3" parent="Node2D/Player/Monitor_2/Computer" unique_id=651148235 instance=ExtResource("18_xc1pa")]
 position = Vector2(140, 55)
-
-[node name="ad_4" parent="Node2D/Player/Monitor_2/Computer" unique_id=19814729 instance=ExtResource("17_qku3a")]
-position = Vector2(87, -12)
 
 [node name="ad2" parent="Node2D/Player/Monitor_2/Computer" unique_id=272590773 instance=ExtResource("15_0na3t")]
 position = Vector2(-14, -4)
