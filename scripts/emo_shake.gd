@@ -4,7 +4,6 @@ extends AnimatableBody2D
 var shake 
 
 @onready var asprite = $AnimatedSprite2D
-# TADY CHYBĚLO @onready! Teď už to bude fungovat správně:
 @onready var sf = asprite.sprite_frames
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +26,7 @@ func _process(delta: float) -> void:
 	
 	
 	if start == 1:
-		shake = (500 - global_position.distance_to(camera.global_position))/30
+		shake = (800 - global_position.distance_to(camera.global_position))/80
+		print(shake)
 		if shake >= 0:
 			camera.start_shake(shake,10)
