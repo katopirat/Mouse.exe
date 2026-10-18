@@ -1,5 +1,5 @@
 extends Line2D
-@onready var start = $TailStart
+@onready var start = $"../../MyšReal/TailStart"
 @export var max_length = 170
 @export var spacing = 6.0
 func _ready() -> void:
