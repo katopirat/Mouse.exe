@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="4_2lp4q"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="5_rnhm2"]
 [ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="6_capye"]
+[ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_o86jq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lp4q"]
 texture = ExtResource("2_o86jq")
@@ -458,6 +459,10 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(-427.00003, -2)
 scale = Vector2(3, 3)
 texture = ExtResource("6_capye")
+
+[node name="Line2D" type="Line2D" parent="MyšReal" unique_id=1965554870]
+position = Vector2(0, 23.666668)
+script = ExtResource("8_o86jq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2109267178]
 root_node = NodePath("../Node2D/Table/TileMap")
