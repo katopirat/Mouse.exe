@@ -4,6 +4,8 @@ extends Area2D
 @export var open_again_seconds: float = 8.0
 @onready var shader_animation:AnimationPlayer = $"../../../../../CanvasLayer/AnimationTree"
 @onready var click_ad_audio: AudioStreamPlayer = $AudioStreamPlayer
+@onready var col_shape1: CollisionShape2D = $CollisionShape2D
+@onready var col_shape2: CollisionShape2D = $CollisionShape2D2
 var cursor_inside = false
 
 
@@ -38,7 +40,11 @@ func _on_x_button_ad_closed() -> void:
 		queue_free()
 
 func hide_ad_for_skibidi_seconnds() -> void:
+	if is_in_group("ads"):
+		remove_from_group("ads")
 	$AnimatedSprite2D.visible = false
+	remove_child(col_shape1)
+	remove_child(col_shape2)
 	monitoring = false
 	monitorable = false
 	$XButtonAd.visible = false
@@ -57,6 +63,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	add_child(col_shape1)
+	add_child(col_shape2)
 	$AnimatedSprite2D.visible = true
 	monitoring = true
 	monitorable = true
@@ -64,3 +72,5 @@ func _on_timer_timeout() -> void:
 	$XButtonAd.monitoring = true
 	$XButtonAd.monitorable = true
 	$Label.visible = false
+	if not is_in_group("ads"):
+		add_to_group("ads")

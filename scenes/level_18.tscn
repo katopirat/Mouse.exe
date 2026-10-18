@@ -328,7 +328,6 @@ shape = SubResource("RectangleShape2D_7qu8p")
 [node name="Area2D" type="Area2D" parent="Player/Monitor_1/Computer" unique_id=201450314]
 position = Vector2(408, 187)
 scale = Vector2(2.5, 2.5)
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("18_86l27")
 
@@ -405,7 +404,7 @@ format = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("24_jyei2")]
-position = Vector2(939, 203)
+position = Vector2(939, 266)
 
 [node name="book_open" parent="." unique_id=1220220180 instance=ExtResource("25_ge4yt")]
 position = Vector2(1671, -258)

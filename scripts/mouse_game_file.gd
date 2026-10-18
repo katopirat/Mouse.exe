@@ -6,18 +6,14 @@ var is_pressed = 0
 func _ready() -> void:
 	$"..".remove_child.call_deferred(game_window)
 	$Sprite2D.play('default')
-func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
-	if body.name == "Cursor":
-		cursor_inside = true
-		if body.has_method("set_click_mode"):
-			body.set_click_mode("hand")
+	add_to_group("clickable")
+
  
-func _on_body_exited(body: Node2D) -> void:
-	if body.name == "Cursor":
+func _process(delta: float) -> void:
+	if self == Global.highest_clickable_body:
+		cursor_inside = true
+	else:
 		cursor_inside = false
-		if body.has_method("set_click_mode"):
-			body.set_click_mode("arrow")
 
 func _input(event):
 	if event.is_action_pressed("click"):

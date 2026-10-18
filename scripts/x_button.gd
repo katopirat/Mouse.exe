@@ -3,22 +3,16 @@ var cursor_inside = false
 signal closed()
 func _ready() -> void:
 	add_to_group("clickable")
-func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
-	if body.name == "Cursor":
-		cursor_inside = true
+func _process(delta: float) -> void:
+	if self == Global.highest_clickable_body:
 		$AnimatedSprite2D.play("hovered")
-	
- 
-func _on_body_exited(body: Node2D) -> void:
-	if body.name == "Cursor":
-		cursor_inside = false
+	else:
 		$AnimatedSprite2D.play("default")
 	
 
 func _input(event):
 	
-	if cursor_inside and event.is_action_pressed("click") and Global.player_can_move and self == Global.highest_clickable_body:
+	if event.is_action_pressed("click") and Global.player_can_move and self == Global.highest_clickable_body:
 		print("clicked x")
 		closed.emit()
 		
