@@ -75,10 +75,10 @@ animations = [{
 "duration": 5.0,
 "texture": ExtResource("3_0lsg1")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("4_nps32")
 }, {
-"duration": 3.0,
+"duration": 2.0,
 "texture": ExtResource("5_shh0f")
 }, {
 "duration": 1.0,
@@ -96,7 +96,7 @@ animations = [{
 "duration": 3.0,
 "texture": ExtResource("10_yfov6")
 }, {
-"duration": 3.0,
+"duration": 2.7,
 "texture": ExtResource("11_4ketw")
 }, {
 "duration": 2.0,
@@ -1147,13 +1147,14 @@ shape = SubResource("RectangleShape2D_dkvxk")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo" unique_id=728834055]
 position = Vector2(-14.25, 10.25)
-amount = 20
+rotation = -0.4299351
+amount = 70
 lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(30, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1163,7 +1164,8 @@ color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo" unique_id=700706667]
 position = Vector2(15, 10.25)
-amount = 20
+rotation = 0.4314594
+amount = 70
 lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
@@ -1207,7 +1209,7 @@ scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1449267668]
-position = Vector2(-14.25, 10.25)
+position = Vector2(-14.75, 22.25)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1224,7 +1226,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1870344982]
-position = Vector2(15, 10.25)
+position = Vector2(14.5, 22.25)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1464,7 +1466,7 @@ autoplay = &"new emo"
 speed_scale = 0.8
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo6" unique_id=1736643623]
-position = Vector2(-14.25, 10.25)
+position = Vector2(-14.5, 10.5)
 emitting = false
 amount = 20
 lifetime = 0.3
