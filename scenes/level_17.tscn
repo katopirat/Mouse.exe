@@ -47,9 +47,10 @@
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="33_qbq2j"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="34_o4dak"]
 [ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
+[ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="38_8ibj7"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="41_6ucdd"]
 [ext_resource type="AudioStream" uid="uid://dede1puu1i438" path="res://assets/soundeffects/ad_sound.wav" id="43_8ibj7"]
-[ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="38_8ibj7"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="45_4d12k"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="45_xufdy"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="46_su7v7"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="47_8ibj7"]
@@ -1483,7 +1484,7 @@ speed = 1.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_yfov6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Cursor" unique_id=1065302261]
+[node name="Arrow" type="Sprite2D" parent="Node2D/Player/Cursor" unique_id=1065302261]
 position = Vector2(7, 12)
 scale = Vector2(0.052734375, 0.052734375)
 texture = ExtResource("10_jpmhk")
@@ -1501,6 +1502,12 @@ visible = false
 position = Vector2(0, -1.5258789e-05)
 scale = Vector2(1.5703857, 1.5703857)
 texture = ExtResource("41_6ucdd")
+
+[node name="Hand" type="Sprite2D" parent="Node2D/Player/Cursor" unique_id=1302148033]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("45_4d12k")
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D/Player" unique_id=1880118116]
 scale = Vector2(3, 3)

@@ -425,20 +425,20 @@ position = Vector2(224, -331)
 z_index = 1
 position = Vector2(541, -332)
 
+[node name="closable phone" parent="Node2D" unique_id=412273207 instance=ExtResource("29_qag05")]
+position = Vector2(322, 13)
+
+[node name="closable book" parent="Node2D" unique_id=888231878 instance=ExtResource("30_jvo0a")]
+position = Vector2(511, -75.99994)
+rotation = 0.14549206
+scale = Vector2(0.99999994, 0.99999994)
+
 [node name="ad_4" parent="Node2D" unique_id=19814729 instance=ExtResource("27_6tdor")]
-z_index = 1
 position = Vector2(157, -142)
 
 [node name="ad_3" parent="Node2D" unique_id=651148235 instance=ExtResource("28_brq0t")]
 position = Vector2(31, -482)
 scale = Vector2(4.3855796, 4.3855796)
-
-[node name="closable phone" parent="." unique_id=412273207 instance=ExtResource("29_qag05")]
-position = Vector2(322, 13)
-
-[node name="closable book" parent="." unique_id=888231878 instance=ExtResource("30_jvo0a")]
-position = Vector2(511, -75.99994)
-rotation = 0.14549206
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]

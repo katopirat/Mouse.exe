@@ -90,7 +90,6 @@ size = Vector2(4.9999924, 16.999998)
 [node name="ad_4" type="Node2D" unique_id=19814729]
 
 [node name="Ad" type="Area2D" parent="." unique_id=1539056676]
-z_index = 1
 position = Vector2(141, 102)
 scale = Vector2(3, 3.0000005)
 collision_mask = 2
@@ -103,7 +102,6 @@ sprite_frames = SubResource("SpriteFrames_xy5dt")
 animation = &"new_animation_2"
 
 [node name="XButtonAd" type="Area2D" parent="Ad" unique_id=1236692433]
-z_index = 1
 position = Vector2(17.999998, -5.333331)
 scale = Vector2(3, 3)
 collision_mask = 2
