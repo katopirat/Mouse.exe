@@ -6,7 +6,7 @@ var levels = [
 	{"name": "Ads", "scene": "res://scenes/level_2.tscn"},
 	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn"},
 	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn"},
-	{"name": "Another spaggety?!", "scene": "res://scenes/level_5.tscn"},
+	{"name": "Another spaggeti?!", "scene": "res://scenes/level_5.tscn"},
 	{"name": "Clickbate ad", "scene": "res://scenes/level_6.tscn"},
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
 	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
