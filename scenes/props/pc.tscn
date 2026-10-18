@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bnmeckx34r7sk"]
+
+[ext_resource type="Texture2D" uid="uid://cqwftiofmvwve" path="res://assets/images/Pc black(1).png" id="1_0l0t2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(328, 535)
+
+[node name="pc" type="Node2D" unique_id=277305731]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=362016523]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=648211670]
+position = Vector2(-1, 180.5)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=130850173]
+scale = Vector2(3, 3)
+texture = ExtResource("1_0l0t2")
