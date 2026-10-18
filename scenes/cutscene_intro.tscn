@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="5_rnhm2"]
 [ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="6_capye"]
 [ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_o86jq"]
+[ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="9_2lp4q"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="9_rnhm2"]
+[ext_resource type="AudioStream" uid="uid://dvesijlmj21y7" path="res://assets/soundtracks/audiomass-output.mp3" id="10_rnhm2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lp4q"]
 texture = ExtResource("2_o86jq")
@@ -393,6 +396,91 @@ _data = {
 &"mouse_cutscene": SubResource("Animation_o86jq")
 }
 
+[sub_resource type="Animation" id="Animation_2lp4q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Mouse(talking):position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 593)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-792, 557)]
+}
+
+[sub_resource type="Animation" id="Animation_rnhm2"]
+resource_name = "talking"
+length = 5.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Mouse(talking):position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 593), Vector2(0, 593), Vector2(0, 1045)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-792, 557), Vector2(-792, 557), Vector2(-792, 1016)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_capye"]
+_data = {
+&"RESET": SubResource("Animation_2lp4q"),
+&"talking": SubResource("Animation_rnhm2")
+}
+
 [node name="cutscene intro" type="Node2D" unique_id=1500718359]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1401827104]
@@ -451,7 +539,7 @@ texture = ExtResource("5_rnhm2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1852984364]
 position = Vector2(-6, 98)
-rotation = -0.033298817
+rotation = -0.033161256
 scale = Vector2(0.99999994, 0.99999994)
 zoom = Vector2(0.5, 0.5)
 
@@ -468,3 +556,30 @@ script = ExtResource("8_o86jq")
 root_node = NodePath("../Node2D/Table/TileMap")
 libraries/ = SubResource("AnimationLibrary_2lp4q")
 autoplay = &"mouse_cutscene"
+
+[node name="Mouse(talking)" type="Sprite2D" parent="." unique_id=611235398]
+position = Vector2(0, 593)
+scale = Vector2(5, 5)
+texture = ExtResource("9_2lp4q")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2090337709]
+modulate = Color(0, 0, 0, 1)
+offset_left = -792.0
+offset_top = 557.0
+offset_right = -490.75885
+offset_bottom = 597.0001
+scale = Vector2(5.64, 5.64)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
+theme_override_fonts/normal_font = ExtResource("9_rnhm2")
+text = "This is the best day of my life!!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel" unique_id=1027407111]
+libraries/ = SubResource("AnimationLibrary_capye")
+autoplay = &"talking"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1118393993]
+position = Vector2(0, 7)
+stream = ExtResource("10_rnhm2")
+volume_db = 24.0
+pitch_scale = 2.24
+autoplay = true
