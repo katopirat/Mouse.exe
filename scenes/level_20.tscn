@@ -297,7 +297,7 @@ position = Vector2(-562, -210)
 
 [node name="Computer" type="Node2D" parent="Node2D/Player" unique_id=1938838543]
 z_index = 20
-position = Vector2(-178, 3892)
+position = Vector2(-810, 3708)
 
 [node name="MonitorBackground" type="TextureRect" parent="Node2D/Player/Computer" unique_id=2016118665]
 offset_left = 256.31296
