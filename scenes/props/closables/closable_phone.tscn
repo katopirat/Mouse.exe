@@ -46,8 +46,11 @@ position = Vector2(-10.119887, 12.459724)
 scale = Vector2(1.9779404, 1.4980719)
 texture = ExtResource("2_3hrr4")
 
+[node name="phone" parent="Window2" unique_id=1009766919 instance=ExtResource("6_f1hfr")]
+position = Vector2(-711.1051, -617.69977)
+scale = Vector2(6.26012, 6.2601204)
+
 [node name="XButton" type="Area2D" parent="Window2" unique_id=1418694557]
-z_index = 1
 position = Vector2(-521.6542, -951.2982)
 scale = Vector2(19.803478, 19.803478)
 collision_mask = 2
@@ -63,10 +66,6 @@ position = Vector2(-0.358764, 0.025942773)
 scale = Vector2(0.49398094, 0.49398094)
 sprite_frames = SubResource("SpriteFrames_k6ql2")
 offset = Vector2(0.275, -0.19)
-
-[node name="phone" parent="Window2" unique_id=1009766919 instance=ExtResource("6_f1hfr")]
-position = Vector2(-711.1051, -617.69977)
-scale = Vector2(6.26012, 6.26012)
 
 [connection signal="body_entered" from="Window2/XButton" to="Window2/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Window2/XButton" to="Window2/XButton" method="_on_body_exited"]

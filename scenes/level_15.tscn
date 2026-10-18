@@ -415,8 +415,6 @@ scale = Vector2(0.3333333, 0.3333333)
 
 [node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("23_p3pim")]
 
-[node name="Shader_visuals" parent="." unique_id=864127350 instance=ExtResource("23_p3pim")]
-
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Node2D/Player/Computer/Window2/XButton" to="Node2D/Player/Computer/Window2/XButton" method="_on_body_entered"]
