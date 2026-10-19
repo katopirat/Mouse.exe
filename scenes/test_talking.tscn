@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bidf8f1s2x6ph"]
+
+[ext_resource type="Script" uid="uid://bnjl70dtili5d" path="res://scripts/talking.gd" id="1_ud1fw"]
+[ext_resource type="AudioStream" uid="uid://xxi4up3ix064" path="res://assets/soundeffects/talking/a.mp3" id="2_lhao5"]
+[ext_resource type="AudioStream" uid="uid://bf34m5365hl4q" path="res://assets/soundeffects/talking/e.mp3" id="3_460jh"]
+[ext_resource type="AudioStream" uid="uid://ddbsicxame42v" path="res://assets/soundeffects/talking/i.mp3" id="4_iltso"]
+[ext_resource type="AudioStream" uid="uid://dyceytj7a3bcj" path="res://assets/soundeffects/talking/o.mp3" id="5_cwii7"]
+[ext_resource type="AudioStream" uid="uid://k7ecbpibttc8" path="res://assets/soundeffects/talking/u.mp3" id="6_6vk7y"]
+
+[node name="TestTalking" type="Node2D" unique_id=1706406202 node_paths=PackedStringArray("audio_player")]
+script = ExtResource("1_ud1fw")
+audio_player = NodePath("AudioStreamPlayer")
+phrase_to_play = "hello, how are you"
+sounds = Dictionary[String, AudioStream]({
+"a": ExtResource("2_lhao5"),
+"e": ExtResource("3_460jh"),
+"i": ExtResource("4_iltso"),
+"o": ExtResource("5_cwii7"),
+"u": ExtResource("6_6vk7y")
+})
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=716674558]
