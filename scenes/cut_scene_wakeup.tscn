@@ -20,9 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cfck4r8a2mbkf" path="res://assets/images/chess/horse black.png" id="13_olxnk"]
 [ext_resource type="Texture2D" uid="uid://bu1akmpu1c6fd" path="res://assets/images/chess/bishop black.png" id="14_qt5bh"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="14_shyib"]
-[ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="15_0jdkr"]
 [ext_resource type="Texture2D" uid="uid://ckxqnavqfca11" path="res://assets/images/chess/king black.png" id="15_vnr21"]
-[ext_resource type="Texture2D" uid="uid://g7scp6utmrvp" path="res://Cursor-PNG-Image-Background.png" id="16_bm5xe"]
 [ext_resource type="Texture2D" uid="uid://67qqporjdu7h" path="res://assets/images/chess/pawn white.png" id="16_yohx6"]
 [ext_resource type="Texture2D" uid="uid://b6hr7pxvq2vja" path="res://assets/images/chess/Rook white.png" id="17_pnhmg"]
 [ext_resource type="Texture2D" uid="uid://ce5xkb8blekxa" path="res://assets/images/chess/queen white.png" id="18_nl8fl"]
@@ -500,9 +498,6 @@ size = Vector2(22, 254)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
 size = Vector2(21, 259)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
-size = Vector2(1, 1)
-
 [node name="cut scene wakeup" type="Node2D" unique_id=1186576722]
 script = ExtResource("1_pwxsm")
 
@@ -857,20 +852,3 @@ shape = SubResource("RectangleShape2D_r3qgb")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="monitor_2/Computer/Borders" unique_id=1666617494]
 position = Vector2(430.5, 128.5)
 shape = SubResource("RectangleShape2D_p8vl5")
-
-[node name="Cursor" type="CharacterBody2D" parent="monitor_2/Computer" unique_id=145601617]
-z_index = 10
-position = Vector2(251, 139.00002)
-scale = Vector2(1.1017417, 0.99504834)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("15_0jdkr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="monitor_2/Computer/Cursor" unique_id=197235665]
-scale = Vector2(1, 1.0000001)
-shape = SubResource("RectangleShape2D_cq2xo")
-
-[node name="Sprite2D" type="Sprite2D" parent="monitor_2/Computer/Cursor" unique_id=2052527184]
-position = Vector2(7, 12)
-scale = Vector2(0.052734375, 0.052734375)
-texture = ExtResource("16_bm5xe")
