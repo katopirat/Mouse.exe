@@ -1,0 +1,665 @@
+[gd_scene format=3 uid="uid://bokloca73shg1"]
+
+[ext_resource type="Script" uid="uid://d13ah8mcrd21a" path="res://scenes/cutscene_intro.gd" id="1_nr8wp"]
+[ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="2_d2bti"]
+[ext_resource type="Texture2D" uid="uid://cw45q6k864h8c" path="res://assets/images/outside(tileset).png" id="3_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="4_flf07"]
+[ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="5_k73cj"]
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="6_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="7_fs4d3"]
+[ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="9_ei405"]
+[ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="10_e8dv2"]
+[ext_resource type="PackedScene" uid="uid://k0w0udh1ifdm" path="res://scenes/talking_window.tscn" id="11_2nhjh"]
+[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="12_bjha6"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="13_gt76g"]
+[ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="14_1fr6y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hxjc"]
+texture = ExtResource("3_ta5nu")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ebxd8"]
+texture = ExtResource("4_flf07")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0/custom_data_0 = true
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/custom_data_0 = true
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+3:1/0/custom_data_0 = true
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+4:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/custom_data_0 = true
+1:3/0 = 0
+1:3/0/custom_data_0 = true
+2:3/0 = 0
+2:3/0/custom_data_0 = true
+0:4/0 = 0
+1:4/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+5:1/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+4:0/0/custom_data_0 = true
+5:3/0 = 0
+5:4/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+2:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2u7jv"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "table0"
+terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
+custom_data_layer_0/name = "on_table"
+custom_data_layer_0/type = 1
+sources/1 = SubResource("TileSetAtlasSource_ebxd8")
+sources/0 = SubResource("TileSetAtlasSource_2hxjc")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24dk6"]
+texture = ExtResource("4_flf07")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0/custom_data_0 = true
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/custom_data_0 = true
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+3:1/0/custom_data_0 = true
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+4:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/custom_data_0 = true
+1:3/0 = 0
+1:3/0/custom_data_0 = true
+2:3/0 = 0
+2:3/0/custom_data_0 = true
+0:4/0 = 0
+1:4/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mryly"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "table0"
+terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
+custom_data_layer_0/name = "on_table"
+custom_data_layer_0/type = 1
+sources/1 = SubResource("TileSetAtlasSource_24dk6")
+
+[sub_resource type="Animation" id="Animation_ckgo4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Myš(stacionary):position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Myš(stacionary):rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../MyšReal:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-427.00003, -2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../MyšReal:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_o86jq"]
+resource_name = "mouse_cutscene"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Myš(stacionary):position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2, 3.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 2), Vector2(-496, -426), Vector2(-857.99994, 1.9999695), Vector2(-446.99994, 418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Myš(stacionary):rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2.0333333, 3.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -1.5548127, -3.1188607, -4.735977]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../MyšReal:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 2.1666667, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6.000002, 421), Vector2(-427.00003, -2), Vector2(-4, -372), Vector2(410, 9)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../MyšReal:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.2, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [4.7242217, 0.0, 1.592553, 3.1351533]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lp4q"]
+_data = {
+&"RESET": SubResource("Animation_ckgo4"),
+&"mouse_cutscene": SubResource("Animation_o86jq")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8sno"]
+texture = ExtResource("12_bjha6")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Animation" id="Animation_2lp4q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Mouse(talking):position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 593)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-792, 557)]
+}
+
+[sub_resource type="Animation" id="Animation_rnhm2"]
+resource_name = "talking"
+length = 5.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Mouse(talking):position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 593), Vector2(0, 593), Vector2(0, 1045)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-792, 557), Vector2(-792, 557), Vector2(-792, 1016)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_capye"]
+_data = {
+&"RESET": SubResource("Animation_2lp4q"),
+&"talking": SubResource("Animation_rnhm2")
+}
+
+[sub_resource type="Animation" id="Animation_4741w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bwl1n"]
+resource_name = "sound"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-256, 83712)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hi5j0"]
+_data = {
+&"RESET": SubResource("Animation_4741w"),
+&"sound": SubResource("Animation_bwl1n")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1627466421]
+
+[node name="cutscene intro" type="Node2D" parent="." unique_id=1500718359]
+script = ExtResource("1_nr8wp")
+
+[node name="Node2D" type="Node2D" parent="cutscene intro" unique_id=1401827104]
+
+[node name="Table" type="Node2D" parent="cutscene intro/Node2D" unique_id=1370744653 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
+script = ExtResource("2_d2bti")
+tilemap_1 = NodePath("TileMap")
+tilemap_2 = NodePath("TileMap2")
+tilemap_dotted_1 = NodePath("TileMapDotted")
+tilemap_dotted_2 = NodePath("TileMapDotted2")
+
+[node name="TileMap" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=686105550 groups=["table"]]
+z_index = -20
+position = Vector2(0, 1)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_2u7jv")
+rendering_quadrant_size = 26
+format = 2
+layer_0/tile_data = PackedInt32Array(-131076, 0, 1, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 131072, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, -262151, 65536, 0, -196615, 65536, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 65536, 0, 262139, 0, 0, 327675, 0, 0, -262148, 0, 0, -196612, 0, 0, 262140, 0, 0, 327676, 0, 0, -262147, 0, 0, -196611, 0, 0, 262141, 0, 0, 327677, 0, 0, -262146, 0, 0, -196610, 0, 0, 262142, 0, 0, 327678, 0, 0, -262145, 0, 0, -196609, 0, 0, 262143, 0, 0, 327679, 0, 0, -327680, 0, 0, -262144, 0, 0, 196608, 0, 0, 262144, 0, 0, -327679, 0, 0, -262143, 0, 0, 196609, 0, 0, 262145, 0, 0, -327678, 0, 0, -262142, 65536, 0, 196610, 0, 0, 262146, 0, 0, -327677, 0, 0, -262141, 0, 0, 196611, 0, 0, 262147, 0, 0, -327676, 0, 0, -262140, 0, 0, 196612, 0, 0, 262148, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 1, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, -327674, 65536, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 65536, 1, 65542, 65536, 2, 196614, 65536, 2, 262150, 65536, 2, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 131072, 1, 65543, 131072, 2, 196615, 131072, 2, 262151, 131072, 2, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 131072, 1, 65544, 131072, 2, 131080, 131072, 2, 196616, 131072, 2, 262152, 131072, 2, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 131072, 1, 65545, 131072, 2, 131081, 131072, 2, 196617, 131072, 2, 262153, 131072, 2, -524303, 0, 0, -458767, 0, 0, -393231, 0, 0, -327695, 0, 0, -262159, 0, 0, -196623, 0, 0, -131087, 0, 0, -65551, 0, 0, -15, 0, 0, 65521, 0, 0, 131057, 0, 0, 196593, 0, 0, 262129, 0, 0, 327665, 0, 0, 393201, 0, 0, 458737, 0, 0, 524273, 0, 0, -524302, 0, 0, -458766, 0, 0, -393230, 0, 0, -327694, 0, 0, -262158, 0, 0, -196622, 0, 0, -131086, 0, 0, -65550, 0, 0, -14, 0, 0, 65522, 0, 0, 131058, 0, 0, 196594, 0, 0, 262130, 0, 0, 327666, 0, 0, 393202, 0, 0, 458738, 0, 0, 524274, 0, 0, -524301, 0, 0, -458765, 0, 0, -393229, 0, 0, -327693, 0, 0, -262157, 0, 0, -196621, 0, 0, -131085, 0, 0, -65549, 0, 0, -13, 0, 0, 65523, 0, 0, 131059, 0, 0, 196595, 0, 0, 262131, 0, 0, 327667, 0, 0, 393203, 0, 0, 458739, 0, 0, 524275, 0, 0, -524300, 0, 0, -458764, 0, 0, -393228, 0, 0, -327692, 0, 0, -262156, 0, 0, -196620, 0, 0, -131084, 0, 0, -65548, 0, 0, -12, 0, 0, 65524, 0, 0, 131060, 0, 0, 196596, 0, 0, 262132, 0, 0, 327668, 0, 0, 393204, 0, 0, 458740, 0, 0, 524276, 0, 0, -524299, 0, 0, -458763, 0, 0, -393227, 0, 0, -327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, 458741, 0, 0, 524277, 0, 0, -524298, 0, 0, -458762, 0, 0, -393226, 0, 0, -327690, 65536, 0, -262154, 65536, 0, -196618, 65536, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 1, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, 458742, 0, 0, 524278, 0, 0, -524297, 0, 0, -458761, 0, 0, -393225, 65536, 0, -327689, 65536, 0, -262153, 65536, 0, -196617, 65536, 0, -131081, 65536, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, 458743, 0, 0, 524279, 0, 0, -524296, 0, 0, -458760, 0, 0, -393224, 65536, 0, -327688, 65536, 0, -262152, 65536, 0, -196616, 65536, 0, -131080, 65536, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 1, 393208, 0, 0, 458744, 0, 0, 524280, 0, 0, -524295, 0, 0, -458759, 0, 0, -393223, 65536, 0, -327687, 65536, 0, 393209, 0, 0, 458745, 0, 0, 524281, 0, 0, -524294, 0, 0, -458758, 0, 0, -393222, 0, 0, -327686, 0, 0, 393210, 0, 0, 458746, 0, 0, 524282, 0, 0, -524293, 0, 0, -458757, 0, 0, -393221, 0, 0, -327685, 0, 0, 393211, 0, 0, 458747, 0, 0, 524283, 0, 0, -524292, 0, 0, -458756, 0, 0, -393220, 0, 0, -327684, 0, 0, 393212, 0, 0, 458748, 0, 0, 524284, 0, 0, -524291, 0, 0, -458755, 0, 0, -393219, 0, 0, -327683, 0, 0, 393213, 0, 0, 458749, 0, 0, 524285, 0, 0, -524290, 0, 0, -458754, 0, 0, -393218, 0, 0, -327682, 0, 0, 393214, 0, 0, 458750, 0, 0, 524286, 0, 0, -524289, 0, 0, -458753, 0, 0, -393217, 0, 0, -327681, 0, 0, 393215, 0, 0, 458751, 0, 0, 524287, 0, 0, -589824, 0, 0, -524288, 0, 0, -458752, 0, 0, -393216, 0, 1, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, -589823, 0, 0, -524287, 0, 0, -458751, 0, 0, -393215, 0, 0, 327681, 0, 1, 393217, 0, 0, 458753, 0, 0, -589822, 0, 0, -524286, 0, 0, -458750, 0, 0, -393214, 0, 0, 327682, 0, 0, 393218, 0, 0, 458754, 0, 0, -589821, 0, 0, -524285, 0, 0, -458749, 0, 0, -393213, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 0, 0, -589820, 0, 0, -524284, 0, 0, -458748, 0, 0, -393212, 0, 0, 327684, 0, 0, 393220, 0, 0, 458756, 0, 0, -589819, 0, 0, -524283, 0, 0, -458747, 0, 0, -393211, 0, 0, -589818, 0, 0, -524282, 0, 0, -458746, 0, 0, -393210, 0, 0, 327686, 65536, 2, 393222, 65536, 2, 458758, 65536, 2, -589817, 0, 0, -524281, 0, 0, -458745, 0, 0, -393209, 0, 0, 327687, 131072, 2, 393223, 131072, 2, 458759, 131072, 2, -589816, 0, 0, -524280, 0, 0, -458744, 0, 0, -393208, 0, 0, 327688, 131072, 2, 393224, 131072, 2, 458760, 131072, 2, -589815, 0, 0, -524279, 0, 0, -458743, 0, 0, -393207, 0, 0, 327689, 131072, 2, 393225, 131072, 2, 458761, 131072, 2, -589814, 0, 0, -524278, 0, 0, -458742, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 131072, 1, 65546, 131072, 2, 131082, 131072, 2, 196618, 131072, 2, 262154, 131072, 2, 327690, 131072, 2, 393226, 131072, 2, 458762, 131072, 2, -589813, 0, 0, -524277, 0, 0, -458741, 0, 0, -393205, 0, 0, -327669, 0, 0, -262133, 0, 0, -196597, 0, 0, -131061, 0, 0, -65525, 0, 0, 11, 131072, 1, 65547, 131072, 2, 131083, 131072, 2, 196619, 131072, 2, 262155, 131072, 2, 327691, 131072, 2, 393227, 131072, 2, 458763, 131072, 2, -589812, 0, 0, -524276, 0, 0, -458740, 0, 0, -393204, 0, 0, -327668, 0, 0, -262132, 0, 0, -196596, 0, 0, -131060, 0, 0, -65524, 0, 0, 12, 131072, 1, 65548, 131072, 2, 131084, 131072, 2, 196620, 131072, 2, 262156, 131072, 2, 327692, 131072, 2, 393228, 131072, 2, 458764, 131072, 2, 458757, 131072, 0, 393221, 131072, 0, 327685, 131072, 0, 262149, 131072, 0, 196613, 131072, 0, 131077, 131072, 0, 131076, 131072, 0, 131078, 65536, 2, 131079, 131072, 2)
+
+[node name="TileMapDotted" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=1603219019 groups=["table"]]
+z_index = -20
+scale = Vector2(3, 3)
+tile_set = ExtResource("5_k73cj")
+rendering_quadrant_size = 26
+format = 2
+
+[node name="TileMapDotted2" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=605814715 groups=["table"]]
+z_index = -20
+scale = Vector2(3, 3)
+tile_set = ExtResource("5_k73cj")
+rendering_quadrant_size = 26
+format = 2
+
+[node name="TileMap2" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=1592141306 groups=["table"]]
+z_index = -20
+scale = Vector2(3, 3)
+tile_set = ExtResource("5_k73cj")
+rendering_quadrant_size = 26
+format = 2
+
+[node name="Ground" type="TileMap" parent="cutscene intro/Node2D" unique_id=253438703]
+z_index = -30
+position = Vector2(-1, 2)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_mryly")
+rendering_quadrant_size = 26
+format = 2
+
+[node name="CanvasLayer" parent="cutscene intro/Node2D" unique_id=1370691632 instance=ExtResource("6_rjqkl")]
+
+[node name="Myš(stacionary)" type="Sprite2D" parent="cutscene intro" unique_id=1451360831]
+position = Vector2(-1, 2)
+scale = Vector2(3, 3)
+texture = ExtResource("7_fs4d3")
+script = ExtResource("8_7vxoj")
+
+[node name="TailStart" type="Node2D" parent="cutscene intro/Myš(stacionary)" unique_id=211265860]
+position = Vector2(0.33333334, 10.333332)
+
+[node name="Tail" type="Line2D" parent="cutscene intro/Myš(stacionary)" unique_id=1997148798]
+z_index = -1
+position = Vector2(0, 20.666668)
+default_color = Color(0.11536538, 0.10558673, 0.098028876, 1)
+
+[node name="Camera2D" type="Camera2D" parent="cutscene intro" unique_id=1852984364]
+position = Vector2(-6, 98)
+rotation = -0.033161256
+scale = Vector2(0.99999994, 0.99999994)
+zoom = Vector2(0.5, 0.5)
+
+[node name="MyšReal" type="Sprite2D" parent="cutscene intro" unique_id=221164530]
+position = Vector2(-427.00003, -2)
+scale = Vector2(3, 3)
+texture = ExtResource("9_ei405")
+script = ExtResource("8_7vxoj")
+
+[node name="Tail" type="Line2D" parent="cutscene intro/MyšReal" unique_id=1965554870]
+z_index = -1
+position = Vector2(0, 23.666668)
+default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
+
+[node name="TailStart" type="Node2D" parent="cutscene intro/MyšReal" unique_id=738527583]
+position = Vector2(1.0172526e-05, 13.333332)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro" unique_id=2109267178]
+root_node = NodePath("../Node2D/Table/TileMap")
+libraries/ = SubResource("AnimationLibrary_2lp4q")
+autoplay = &"mouse_cutscene"
+
+[node name="Mouse(talking)" type="Sprite2D" parent="cutscene intro" unique_id=611235398]
+position = Vector2(0, 593)
+scale = Vector2(5, 5)
+texture = ExtResource("10_e8dv2")
+
+[node name="Control" parent="cutscene intro" unique_id=1903654249 instance=ExtResource("11_2nhjh")]
+
+[node name="Panel" type="Panel" parent="cutscene intro" unique_id=639040899]
+offset_left = -996.0
+offset_top = 509.0
+offset_right = -638.69366
+offset_bottom = 582.99524
+scale = Vector2(5.580646, 2.3242157)
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cutscene intro/Panel" unique_id=2090337709]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -792.0
+offset_top = 557.0
+offset_right = -731.7614
+offset_bottom = 575.0
+scale = Vector2(5.64, 5.64)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
+theme_override_fonts/normal_font = ExtResource("13_gt76g")
+theme_override_font_sizes/normal_font_size = 5
+text = "This is the best day of my life!!"
+fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/Panel/RichTextLabel" unique_id=1027407111]
+libraries/ = SubResource("AnimationLibrary_capye")
+autoplay = &"talking"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="cutscene intro" unique_id=479742584]
+stream = ExtResource("14_1fr6y")
+pitch_scale = 1.3
+autoplay = true
+max_distance = 134.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/AudioStreamPlayer2D" unique_id=1573162645]
+libraries/ = SubResource("AnimationLibrary_hi5j0")
+autoplay = &"sound"
