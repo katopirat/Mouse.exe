@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c6sptarvgqvxy"]
+
+[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="1_aomno"]
+[ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="2_mx1us"]
+[ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="2_y72n6"]
+[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="3_mx1us"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx0ec"]
+texture = ExtResource("1_aomno")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="Panel" type="PanelContainer" unique_id=1276989699]
+offset_right = 413.5722
+offset_bottom = 73.99524
+scale = Vector2(5.580646, 2.3242157)
+theme_override_styles/panel = SubResource("StyleBoxTexture_yx0ec")
+script = ExtResource("2_mx1us")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=183333996]
+layout_mode = 2
+
+[node name="Panel" type="TextureRect" parent="HBoxContainer" unique_id=635221579]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_y72n6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=1049216639]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
+theme_override_fonts/normal_font = ExtResource("3_mx1us")
+theme_override_font_sizes/normal_font_size = 16
+text = "ERROR! :("
+fit_content = true
