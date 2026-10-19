@@ -8,9 +8,10 @@
 [ext_resource type="AudioStream" uid="uid://k7ecbpibttc8" path="res://assets/soundeffects/talking/u.mp3" id="6_6vk7y"]
 
 [node name="TestTalking" type="Node2D" unique_id=1706406202 node_paths=PackedStringArray("audio_player")]
+rotation = -0.000953322
 script = ExtResource("1_ud1fw")
 audio_player = NodePath("AudioStreamPlayer")
-phrases_to_play = Array[String](["Hello.", "How are you doing?", "Fuck you!"])
+phrases_to_play = Array[String](["hello im am wery happy to see you", "How are you doing?", "Fuck you!"])
 sounds = Dictionary[String, AudioStream]({
 "a": ExtResource("2_lhao5"),
 "e": ExtResource("3_460jh"),
