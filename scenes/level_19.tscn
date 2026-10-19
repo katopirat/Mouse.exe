@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="28_lvqnx"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_ubewm"]
 [ext_resource type="Texture2D" uid="uid://biv50ie5tw5xu" path="res://assets/images/Notethingi.png" id="30_2jv7e"]
-[ext_resource type="PackedScene" uid="uid://bnmeckx34r7sk" path="res://scenes/props/pc.tscn" id="33_gp1fu"]
+[ext_resource type="Texture2D" uid="uid://cqwftiofmvwve" path="res://assets/images/Pc black(1).png" id="33_gp1fu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
 size = Vector2(54.990814, 114.61908)
@@ -245,6 +245,9 @@ size = Vector2(220, 296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8ld0"]
 size = Vector2(97, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m2dh"]
+size = Vector2(344.49304, 729.5149)
 
 [node name="Level2" type="Node2D" unique_id=659635860]
 
@@ -575,7 +578,8 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("29_ubewm")]
 
 [node name="Socket" type="Node2D" parent="Node2D" unique_id=368840973]
-position = Vector2(82, -410)
+visible = false
+position = Vector2(74, -428)
 rotation = 3.1415927
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Socket" unique_id=1073091210]
@@ -616,8 +620,8 @@ texture = ExtResource("28_4uoi6")
 position = Vector2(59, -36)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="note thing" unique_id=607125628]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 5
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="note thing/StaticBody2D" unique_id=1118086530]
 position = Vector2(57.5, 15)
@@ -628,8 +632,24 @@ position = Vector2(55, 8)
 scale = Vector2(3, 3)
 texture = ExtResource("30_2jv7e")
 
-[node name="pc" parent="." unique_id=277305731 instance=ExtResource("33_gp1fu")]
-position = Vector2(-1, -930)
+[node name="pc" type="Node2D" parent="." unique_id=277305731]
+z_index = -1
+position = Vector2(-1.999999, -817.00006)
+scale = Vector2(0.9376096, 0.9376096)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="pc" unique_id=362016523]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pc/StaticBody2D" unique_id=648211670]
+position = Vector2(2.6663418, 86.39026)
+shape = SubResource("RectangleShape2D_0m2dh")
+
+[node name="Sprite2D" type="Sprite2D" parent="pc/StaticBody2D" unique_id=130850173]
+scale = Vector2(3, 3)
+texture = ExtResource("33_gp1fu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pc/StaticBody2D" unique_id=1472977067]
+polygon = PackedVector2Array(-165.31401, 446.8812, -196.24373, 365.824, -201.57645, -251.7038, 206.90915, -251.7038, 203.70953, 360.4913, 165.31401, 449.01428)
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]

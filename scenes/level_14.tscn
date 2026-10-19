@@ -15,12 +15,19 @@
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="13_8podf"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="14_63543"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="15_g5jdy"]
+[ext_resource type="Script" uid="uid://7tfyx04eab4f" path="res://scripts/ad.gd" id="22_ortew"]
+[ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="23_5cqvy"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="23_pe6q5"]
+[ext_resource type="Texture2D" uid="uid://bvfv5hyq54ps8" path="res://assets/ads/ram Ad.png" id="24_6tdor"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_bxgrk"]
+[ext_resource type="Texture2D" uid="uid://5pobdkns3isv" path="res://assets/ads/orange ad.png" id="25_brq0t"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="25_ortew"]
 [ext_resource type="PackedScene" uid="uid://dcfdgmxmcarup" path="res://scenes/ad_5.tscn" id="26_5cqvy"]
-[ext_resource type="PackedScene" uid="uid://s2ho4drwx1ri" path="res://scenes/ad_4.tscn" id="27_6tdor"]
+[ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="26_qag05"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="27_jvo0a"]
 [ext_resource type="PackedScene" uid="uid://y17gn0u55f8j" path="res://scenes/ad_3.tscn" id="28_brq0t"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="28_q7o67"]
+[ext_resource type="AudioStream" uid="uid://ditkvkn3hftsa" path="res://assets/soundeffects/ad_sound2.wav" id="29_83c4s"]
 [ext_resource type="PackedScene" uid="uid://c0q1icvjbgx71" path="res://scenes/props/closables/closable_phone.tscn" id="29_qag05"]
 [ext_resource type="PackedScene" uid="uid://ckmbmu22vrcfn" path="res://scenes/props/closables/closable_book.tscn" id="30_jvo0a"]
 
@@ -263,6 +270,84 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_w3s6g")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvhoi"]
+atlas = ExtResource("23_5cqvy")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvjil"]
+atlas = ExtResource("24_6tdor")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gi5b"]
+atlas = ExtResource("25_brq0t")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy5dt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5cqvy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvhoi")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvjil")
+}],
+"loop": 1,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gi5b")
+}],
+"loop": 1,
+"name": &"new_animation_2",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oug5g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_jvo0a")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_q7o67")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it8gq"]
+size = Vector2(1.6666667, 1.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hovui"]
+size = Vector2(38.666664, 22.333328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i481w"]
+size = Vector2(6.6666603, 15.333334)
+
 [node name="level_14" type="Node2D" unique_id=840158765]
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_63543")]
@@ -433,8 +518,49 @@ position = Vector2(511, -75.99994)
 rotation = 0.14549206
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="ad_4" parent="Node2D" unique_id=19814729 instance=ExtResource("27_6tdor")]
+[node name="ad_4" type="Node2D" parent="Node2D" unique_id=19814729]
 position = Vector2(157, -142)
+
+[node name="Ad" type="Area2D" parent="Node2D/ad_4" unique_id=1539056676]
+position = Vector2(141, 102)
+scale = Vector2(3, 3.0000005)
+collision_mask = 2
+script = ExtResource("22_ortew")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/ad_4/Ad" unique_id=49894818]
+position = Vector2(1.3333321, -1.000001)
+scale = Vector2(0.47645882, 0.47569442)
+sprite_frames = SubResource("SpriteFrames_xy5dt")
+animation = &"new_animation_2"
+
+[node name="XButtonAd" type="Area2D" parent="Node2D/ad_4/Ad" unique_id=1236692433]
+position = Vector2(15.999998, -3.3333325)
+scale = Vector2(3.8060493, 3.8060493)
+collision_mask = 2
+script = ExtResource("26_qag05")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/ad_4/Ad/XButtonAd" unique_id=122309082]
+position = Vector2(1.1157384, -1.4223119)
+scale = Vector2(0.18518463, 0.18518463)
+sprite_frames = SubResource("SpriteFrames_oug5g")
+offset = Vector2(0.275, -0.19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ad_4/Ad/XButtonAd" unique_id=349311158]
+position = Vector2(1.1666698, -1.4444437)
+shape = SubResource("RectangleShape2D_it8gq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ad_4/Ad" unique_id=396641551]
+position = Vector2(-2.3333359, -1)
+scale = Vector2(0.99999964, 0.99999946)
+shape = SubResource("RectangleShape2D_hovui")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/ad_4/Ad" unique_id=1360303296]
+position = Vector2(20.666664, 2.3333302)
+scale = Vector2(0.99999964, 0.99999946)
+shape = SubResource("RectangleShape2D_i481w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/ad_4/Ad" unique_id=1665671934]
+stream = ExtResource("29_83c4s")
 
 [node name="ad_3" parent="Node2D" unique_id=651148235 instance=ExtResource("28_brq0t")]
 position = Vector2(31, -482)
@@ -442,3 +568,8 @@ scale = Vector2(4.3855796, 4.3855796)
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]
+[connection signal="body_entered" from="Node2D/ad_4/Ad" to="Node2D/ad_4/Ad" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/ad_4/Ad" to="Node2D/ad_4/Ad" method="_on_body_exited"]
+[connection signal="body_entered" from="Node2D/ad_4/Ad/XButtonAd" to="Node2D/ad_4/Ad/XButtonAd" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/ad_4/Ad/XButtonAd" to="Node2D/ad_4/Ad/XButtonAd" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/ad_4/Ad/XButtonAd" to="Node2D/ad_4/Ad" method="_on_x_button_ad_closed"]

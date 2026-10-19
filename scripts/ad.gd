@@ -4,8 +4,8 @@ extends Area2D
 @export var open_again_seconds: float = 8.0
 @onready var shader_animation:AnimationPlayer = $"../../../../../CanvasLayer/AnimationTree"
 @onready var click_ad_audio: AudioStreamPlayer = $AudioStreamPlayer
-@onready var col_shape1: CollisionShape2D = $CollisionShape2D
-@onready var col_shape2: CollisionShape2D = $CollisionShape2D2
+@onready var col_shape1 = $CollisionShape2D
+@onready var col_shape2 = $CollisionShape2D2
 var cursor_inside = false
 
 

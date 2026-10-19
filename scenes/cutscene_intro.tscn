@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_o86jq"]
 [ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="9_2lp4q"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="9_rnhm2"]
+[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="11_bwl1n"]
+[ext_resource type="PackedScene" uid="uid://k0w0udh1ifdm" path="res://scenes/talking_window.tscn" id="11_hi5j0"]
 [ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="12_4741w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lp4q"]
@@ -397,6 +399,13 @@ _data = {
 &"mouse_cutscene": SubResource("Animation_o86jq")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8sno"]
+texture = ExtResource("11_bwl1n")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
 [sub_resource type="Animation" id="Animation_2lp4q"]
 length = 0.001
 tracks/0/type = "value"
@@ -575,14 +584,15 @@ format = 2
 position = Vector2(-1, 2)
 scale = Vector2(3, 3)
 texture = ExtResource("5_rnhm2")
+script = ExtResource("8_o86jq")
 
 [node name="TailStart" type="Node2D" parent="Myš(stacionary)" unique_id=211265860]
-position = Vector2(1.0162592e-05, 20.666668)
+position = Vector2(0.33333334, 10.333332)
 
 [node name="Tail" type="Line2D" parent="Myš(stacionary)" unique_id=1997148798]
+z_index = -1
 position = Vector2(0, 20.666668)
-default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
-script = ExtResource("8_o86jq")
+default_color = Color(0.11536538, 0.10558673, 0.098028876, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1852984364]
 position = Vector2(-6, 98)
@@ -594,14 +604,15 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(-427.00003, -2)
 scale = Vector2(3, 3)
 texture = ExtResource("6_capye")
-
-[node name="Tail" type="Line2D" parent="MyšReal" unique_id=1965554870]
-position = Vector2(0, 23.666668)
-default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
 script = ExtResource("8_o86jq")
 
+[node name="Tail" type="Line2D" parent="MyšReal" unique_id=1965554870]
+z_index = -1
+position = Vector2(0, 23.666668)
+default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
+
 [node name="TailStart" type="Node2D" parent="MyšReal" unique_id=738527583]
-position = Vector2(0, 20.666666)
+position = Vector2(1.0172526e-05, 13.333332)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2109267178]
 root_node = NodePath("../Node2D/Table/TileMap")
@@ -613,18 +624,31 @@ position = Vector2(0, 593)
 scale = Vector2(5, 5)
 texture = ExtResource("9_2lp4q")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2090337709]
+[node name="Control" parent="." unique_id=1903654249 instance=ExtResource("11_hi5j0")]
+
+[node name="Panel" type="Panel" parent="." unique_id=639040899]
+offset_left = -996.0
+offset_top = 509.0
+offset_right = -638.69366
+offset_bottom = 582.99524
+scale = Vector2(5.580646, 2.3242157)
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=2090337709]
 modulate = Color(0, 0, 0, 1)
-offset_left = -792.0
-offset_top = 557.0
-offset_right = -490.75885
-offset_bottom = 597.0001
+layout_mode = 0
+offset_left = 53.04048
+offset_top = -58.084114
+offset_right = 113.27907
+offset_bottom = -40.084114
 scale = Vector2(5.64, 5.64)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
 theme_override_fonts/normal_font = ExtResource("9_rnhm2")
+theme_override_font_sizes/normal_font_size = 5
 text = "This is the best day of my life!!"
+fit_content = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel" unique_id=1027407111]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/RichTextLabel" unique_id=1027407111]
 libraries/ = SubResource("AnimationLibrary_capye")
 autoplay = &"talking"
 

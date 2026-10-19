@@ -273,5 +273,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_htsag")
 text = "RESUME"
 
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1922220845]
+layout_mode = 2
+text = "Quit Game"
+
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="CanvasLayer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button3" to="CanvasLayer" method="_on_button_3_pressed"]
