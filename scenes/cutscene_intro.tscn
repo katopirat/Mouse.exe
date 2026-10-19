@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_o86jq"]
 [ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="9_2lp4q"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="9_rnhm2"]
+[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="11_bwl1n"]
 [ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="12_4741w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lp4q"]
@@ -397,6 +398,13 @@ _data = {
 &"mouse_cutscene": SubResource("Animation_o86jq")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8sno"]
+texture = ExtResource("11_bwl1n")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
 [sub_resource type="Animation" id="Animation_2lp4q"]
 length = 0.001
 tracks/0/type = "value"
@@ -615,18 +623,28 @@ position = Vector2(0, 593)
 scale = Vector2(5, 5)
 texture = ExtResource("9_2lp4q")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2090337709]
+[node name="Panel" type="Panel" parent="." unique_id=639040899]
+offset_left = -996.0
+offset_top = 509.0
+offset_right = -638.69366
+offset_bottom = 582.99524
+scale = Vector2(5.580646, 2.3242157)
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=2090337709]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = -792.0
 offset_top = 557.0
 offset_right = -490.75885
-offset_bottom = 597.0001
+offset_bottom = 574.77484
 scale = Vector2(5.64, 5.64)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
 theme_override_fonts/normal_font = ExtResource("9_rnhm2")
 text = "This is the best day of my life!!"
+fit_content = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel" unique_id=1027407111]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/RichTextLabel" unique_id=1027407111]
 libraries/ = SubResource("AnimationLibrary_capye")
 autoplay = &"talking"
 
