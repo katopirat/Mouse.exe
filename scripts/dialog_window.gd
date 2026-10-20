@@ -56,6 +56,7 @@ func start_talk():
 		text_z += a
 		label.text = text_z
 		if a in waiting_time:
+			
 			$AudioStreamPlayer.stop()
 			await get_tree().create_timer(waiting_time[a]).timeout
 			$AudioStreamPlayer.play()
