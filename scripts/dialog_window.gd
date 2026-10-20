@@ -2,22 +2,27 @@ extends PanelContainer
 
 @export var text : String
 @export var icon : Texture2D
-@export var min_time : float = 0.015
-@export var max_time : float = 0.02
+@export var min_time : float = 0.02
+@export var max_time : float = 0.025
 @export var start : bool
 @onready var label = $HBoxContainer/RichTextLabel
 @export var click_to_close :bool
 @export var animated : bool
 
 signal window_closed
-# Called when the node enters the scene tree for the first time.
+
+@onready var waiting_time: Dictionary = {
+	",": 0.5,
+	".": 0.7,
+	"!": 0.7,
+	"?": 0.7
+}
 func _ready() -> void:
 	visible = false
 	
 	$HBoxContainer/Icon.texture = icon
 	
 var started = false
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if start :
 		start_talk()
@@ -43,11 +48,18 @@ func start_talk():
 		$AnimationPlayer.play()
 	
 	await $AnimationPlayer.animation_finished
-	$AudioStreamPlayer.play()
+	
 	var text_z :String
+	$AudioStreamPlayer.play()
 	for a in text :
-		await get_tree().create_timer(randf_range(min_time,max_time)).timeout
 		text_z += a
 		label.text = text_z
+		if a in waiting_time:
+			$AudioStreamPlayer.stop()
+			await get_tree().create_timer(waiting_time[a]).timeout
+			$AudioStreamPlayer.play()
+		else: 
+			await get_tree().create_timer(randf_range(min_time,max_time)).timeout
+		
 	$AudioStreamPlayer.stop()
 	
