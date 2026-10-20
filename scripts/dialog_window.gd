@@ -1,5 +1,5 @@
 extends PanelContainer
-
+@export var time_before_start:float =0
 @export var text : String
 @export var icon : Texture2D
 @export var min_time : float = 0.02
@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		window_closed.emit()
 
 func start_talk():
-	
+	await get_tree().create_timer(time_before_start).timeout
 	label.text = ""
 	modulate = Color(1.0, 1.0, 1.0, 0.0)
 	visible = true
