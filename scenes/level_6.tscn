@@ -75,8 +75,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_61tt5"]
-radius = 7.333332
-height = 14.666664
+radius = 9.714233
+height = 19.428467
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_enqdf"]
 animations = [{
@@ -433,6 +433,7 @@ stream = ExtResource("15_kljjn")
 volume_db = -16.845
 
 [node name="ad" type="Node2D" parent="Player/Monitor/Computer" unique_id=1511771645]
+visible = false
 position = Vector2(77.28564, -12.714268)
 scale = Vector2(1.1731074, 1.1731074)
 
