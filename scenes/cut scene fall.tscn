@@ -6,7 +6,10 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_queo0"]
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_40qg6"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="6_7sppi"]
+[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="7_cr2r5"]
 [ext_resource type="Texture2D" uid="uid://b2hm5hhdf2mkm" path="res://scenes/ground mini.png" id="7_qmtvd"]
+[ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="8_nvylm"]
+[ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="9_pyw4p"]
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="16_g8puj"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="22_pstul"]
 [ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="23_jqix3"]
@@ -182,6 +185,67 @@ metadata/_snap_count = 23
 
 [sub_resource type="Gradient" id="Gradient_jvbci"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx0ec"]
+texture = ExtResource("7_cr2r5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Animation" id="Animation_y72n6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y02g5"]
+resource_name = "show_fast"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mx1us"]
+resource_name = "show_slow"
+length = 0.73333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y02g5"]
+_data = {
+&"RESET": SubResource("Animation_y72n6"),
+&"show_fast": SubResource("Animation_y02g5"),
+&"show_slow": SubResource("Animation_mx1us")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o28wv"]
 texture = ExtResource("3_4uj5c")
@@ -598,43 +662,6 @@ _data = {
 &"talking": SubResource("Animation_rnhm2")
 }
 
-[sub_resource type="Animation" id="Animation_4741w"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_bwl1n"]
-resource_name = "sound"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.1, 2.6666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-256, 83712)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yqmw7"]
-_data = {
-&"RESET": SubResource("Animation_4741w"),
-&"sound": SubResource("Animation_bwl1n")
-}
-
 [sub_resource type="Animation" id="Animation_waxxo"]
 length = 0.001
 tracks/0/type = "value"
@@ -995,6 +1022,48 @@ scale_amount_curve = SubResource("Curve_adpup")
 color = Color(14.243845, 10.018106, 6.214941, 1)
 color_ramp = SubResource("Gradient_jvbci")
 
+[node name="DialogWindow" type="PanelContainer" parent="cutscene intro/Node2D/AnimatedSprite2D" unique_id=1276989699]
+offset_left = -113.63635
+offset_top = 82.727264
+offset_right = 144.36365
+offset_bottom = 149.74164
+scale = Vector2(0.87272686, 0.87272686)
+theme_override_styles/panel = SubResource("StyleBoxTexture_yx0ec")
+script = ExtResource("8_nvylm")
+time_before_start = 20.0
+text = "Oh no this cant be the floor!!"
+icon = ExtResource("9_pyw4p")
+start = true
+animated = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow" unique_id=183333996]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow/HBoxContainer" unique_id=635221579]
+custom_minimum_size = Vector2(-1, -1)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("9_pyw4p")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow/HBoxContainer" unique_id=1049216639]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
+theme_override_fonts/normal_font = ExtResource("24_kn7t3")
+theme_override_font_sizes/normal_font_size = 20
+text = "waiting or ERROR "
+fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow" unique_id=322966866]
+libraries/ = SubResource("AnimationLibrary_y02g5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow" unique_id=1094325227]
+stream = ExtResource("25_y8l5y")
+pitch_scale = 1.3
+
 [node name="Ground" type="TileMap" parent="cutscene intro/Node2D/AnimatedSprite2D" unique_id=1368855412]
 z_index = -30
 position = Vector2(-0.45454544, 0.9090909)
@@ -1032,16 +1101,6 @@ text = "Oh no! it was just a dream :("
 [node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/RichTextLabel" unique_id=1104714393]
 libraries/ = SubResource("AnimationLibrary_ftj14")
 autoplay = &"talking"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="cutscene intro" unique_id=494344891]
-stream = ExtResource("25_y8l5y")
-pitch_scale = 1.3
-autoplay = true
-max_distance = 134.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/AudioStreamPlayer2D" unique_id=749190522]
-libraries/ = SubResource("AnimationLibrary_yqmw7")
-autoplay = &"sound"
 
 [node name="HandLong" type="Sprite2D" parent="." unique_id=679580749]
 position = Vector2(569, 450)
