@@ -5,6 +5,10 @@ extends Control
 @onready var best_time = $Window/VBoxContainer/HBoxContainer/BestTime
 @onready var time_label = %Time
 @onready var player = $"../../../Player"
+@onready var button_next = $Window/VBoxContainer/HBoxContainer2/Button_next
+@onready var button_previous = $Window/VBoxContainer/HBoxContainer2/Button_previous
+@onready var button_next_hitbox = $Window/VBoxContainer/HBoxContainer2/Button_next/Hitbox
+@onready var button_previous_hitbox = $Window/VBoxContainer/HBoxContainer2/Button_previous/Hitbox
 
 var timer_start = 0
 var p_position: Vector2
@@ -12,7 +16,7 @@ var site = 0
 func _ready():
 	level_menu_refresh()
 	p_position = player.position
-
+	
 func _process(delta: float) -> void:
 	if timer_start == 0:
 		if player.position != p_position:
@@ -41,24 +45,44 @@ var next_disabled = false
 var previous_disabled = false
 func level_menu_refresh():
 	if (site + 1) * 12 >= GameState.levels.size():
-		$Window/VBoxContainer/HBoxContainer2/Button_next.disabled = true
+		button_next.disabled = true
+		if button_next_hitbox.is_in_group("clickable"):
+			button_next_hitbox.remove_from_group("clickable")
 	else:
-		$Window/VBoxContainer/HBoxContainer2/Button_next.disabled = false
+		button_next.disabled = false
+		if not button_next_hitbox.is_in_group("clickable"):
+			button_next_hitbox.add_to_group("clickable")
 	if  site <=0:
-		$Window/VBoxContainer/HBoxContainer2/Button_previous.disabled = true
+		button_previous.disabled = true
+		if button_previous_hitbox.is_in_group("clickable"):
+			button_previous_hitbox.remove_from_group("clickable")
 	else:
-		$Window/VBoxContainer/HBoxContainer2/Button_previous.disabled = false
-
+		button_previous.disabled = false
+		if not button_previous_hitbox.is_in_group("clickable"):
+			button_previous_hitbox.add_to_group("clickable")
 	for child in grid.get_children():
 		child.queue_free()
 
 	for i in range(site * 12,min((site+1) * 12,GameState.levels.size())):
 		var button = Button.new()
+		var button_hitbox: Area2D = Area2D.new()
+		button_hitbox.position = Vector2(14, 8)
+		var area_hitbox: CollisionShape2D = CollisionShape2D.new()
+		var area_shape = RectangleShape2D.new()
+		area_shape.size = Vector2(28, 16)
+		area_hitbox.shape = area_shape
+		button_hitbox.add_child(area_hitbox)
+		button.add_child(button_hitbox)
+		
+		
 		button.custom_minimum_size = Vector2(28, 16)
 		button.text = str(i + 1)
+		
 		if i >= GameState.unlocked:
 			button.text = "-"
 			button.disabled = true
+		else:
+			button_hitbox.add_to_group("clickable")
 		button.pressed.connect(_on_level_pressed.bind(i))
 		button.mouse_entered.connect(_on_button_hover.bind(i))
 		if GameState.done.has(i):
