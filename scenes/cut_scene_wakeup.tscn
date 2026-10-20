@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_jeagv"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="6_pkj4b"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="7_8vvum"]
-[ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="7_de330"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="7_ustj0"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="8_qnl0v"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="9_irtju"]
@@ -908,11 +907,6 @@ position = Vector2(-6, 98)
 rotation = -0.033161256
 scale = Vector2(0.99999994, 0.99999994)
 zoom = Vector2(0.5, 0.5)
-
-[node name="Mouse(talking)" type="Sprite2D" parent="cutscene intro" unique_id=611235398]
-position = Vector2(0, 593)
-scale = Vector2(5, 5)
-texture = ExtResource("7_de330")
 
 [node name="monitor_2" type="Node2D" parent="." unique_id=683304094]
 position = Vector2(-546, -556)
