@@ -104,4 +104,5 @@ libraries/ = SubResource("AnimationLibrary_y02g5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1094325227]
 stream = ExtResource("5_mx1us")
+volume_db = -16.811
 pitch_scale = 1.3
