@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="6_pkj4b"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="7_8vvum"]
 [ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="7_de330"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="8_8vvum"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="8_qnl0v"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="9_irtju"]
 [ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="10_pwxsm"]
@@ -27,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://2njusuk01tr1" path="res://assets/images/chess/king white.png" id="19_2gbaw"]
 [ext_resource type="Texture2D" uid="uid://bnyyb8ri4kgyt" path="res://assets/images/chess/bishop white.png" id="20_pjfnx"]
 [ext_resource type="Texture2D" uid="uid://c2hkp3s7oj8xw" path="res://assets/images/chess/horse white.png" id="21_2hhlj"]
-[ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="26_pwxsm"]
 [ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="29_irtju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f41so"]
@@ -365,128 +363,6 @@ _data = {
 &"mys2": SubResource("Animation_jfagb")
 }
 
-[sub_resource type="Animation" id="Animation_2lp4q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Mouse(talking):position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 593)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-792, 557)]
-}
-
-[sub_resource type="Animation" id="Animation_rnhm2"]
-resource_name = "talking"
-length = 5.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 2.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Mouse(talking):position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.766667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 593), Vector2(0, 593), Vector2(0, 1045)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.766667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-792, 557), Vector2(-792, 557), Vector2(-792, 1016)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_capye"]
-_data = {
-&"RESET": SubResource("Animation_2lp4q"),
-&"talking": SubResource("Animation_rnhm2")
-}
-
-[sub_resource type="Animation" id="Animation_4741w"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_bwl1n"]
-resource_name = "sound"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.1, 2.6666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-256, 83712)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqojm"]
-_data = {
-&"RESET": SubResource("Animation_4741w"),
-&"sound": SubResource("Animation_bwl1n")
-}
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
 
@@ -787,31 +663,6 @@ position = Vector2(0, 593)
 scale = Vector2(5, 5)
 texture = ExtResource("7_de330")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="cutscene intro" unique_id=2090337709]
-modulate = Color(0, 0, 0, 1)
-offset_left = -792.0
-offset_top = 557.0
-offset_right = -490.75885
-offset_bottom = 597.0001
-scale = Vector2(5.64, 5.64)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
-theme_override_fonts/normal_font = ExtResource("8_8vvum")
-text = "Oh no! it was just a dream :("
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/RichTextLabel" unique_id=1027407111]
-libraries/ = SubResource("AnimationLibrary_capye")
-autoplay = &"talking"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="cutscene intro" unique_id=450313646]
-stream = ExtResource("26_pwxsm")
-pitch_scale = 1.3
-autoplay = true
-max_distance = 134.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/AudioStreamPlayer2D" unique_id=693215766]
-libraries/ = SubResource("AnimationLibrary_eqojm")
-autoplay = &"sound"
-
 [node name="monitor_2" type="Node2D" parent="." unique_id=683304094]
 position = Vector2(-546, -556)
 
@@ -861,3 +712,4 @@ offset_top = 483.0
 offset_right = -536.5965
 offset_bottom = 537.0
 scale = Vector2(4.2875433, 4.2875433)
+text = "Oh no! it was just a dream :("
