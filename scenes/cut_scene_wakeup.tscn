@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://bnyyb8ri4kgyt" path="res://assets/images/chess/bishop white.png" id="20_pjfnx"]
 [ext_resource type="Texture2D" uid="uid://c2hkp3s7oj8xw" path="res://assets/images/chess/horse white.png" id="21_2hhlj"]
 [ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="26_pwxsm"]
+[ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="29_irtju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f41so"]
 texture = ExtResource("2_jeagv")
@@ -853,3 +854,10 @@ shape = SubResource("RectangleShape2D_r3qgb")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="monitor_2/Computer/Borders" unique_id=1666617494]
 position = Vector2(430.5, 128.5)
 shape = SubResource("RectangleShape2D_p8vl5")
+
+[node name="DialogWindow" parent="." unique_id=1276989699 instance=ExtResource("29_irtju")]
+offset_left = -997.0
+offset_top = 483.0
+offset_right = -536.5965
+offset_bottom = 537.0
+scale = Vector2(4.2875433, 4.2875433)

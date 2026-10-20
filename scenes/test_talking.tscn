@@ -11,7 +11,7 @@
 rotation = -0.000953322
 script = ExtResource("1_ud1fw")
 audio_player = NodePath("AudioStreamPlayer")
-phrases_to_play = Array[String]( ["hello im am wery happy to see you", "How are you doing?", "Fuck you!"] )
+phrases_to_play = Array[String](["hello im am wery happy to see you", "How are you doing?", "Fuck you!"])
 sounds = Dictionary[String, AudioStream]({
 "a": ExtResource("2_lhao5"),
 "e": ExtResource("3_460jh"),

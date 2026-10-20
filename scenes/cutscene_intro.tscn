@@ -489,7 +489,10 @@ autoplay = &"mouse_cutscene"
 [node name="DialogWindow" parent="." unique_id=1276989699 instance=ExtResource("11_capye")]
 offset_left = -1001.0
 offset_top = 494.0
-offset_right = -664.7163
-offset_bottom = 575.31775
+offset_right = -543.6498
+offset_bottom = 545.0
+scale = Vector2(4.3424053, 4.3424053)
 text = "This is the best day of my life"
 click_to_close = true
+
+[connection signal="window_closed" from="DialogWindow" to="." method="_on_dialog_window_window_closed"]

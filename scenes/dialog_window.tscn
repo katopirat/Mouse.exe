@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="2_mx1us"]
 [ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="2_y72n6"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="3_mx1us"]
+[ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="5_mx1us"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx0ec"]
 texture = ExtResource("1_aomno")
@@ -67,13 +68,12 @@ _data = {
 }
 
 [node name="DialogWindow" type="PanelContainer" unique_id=1276989699]
-offset_top = 100.0
-offset_right = 413.5722
-offset_bottom = 173.99515
-scale = Vector2(5.580646, 2.3242157)
+offset_top = 114.0
+offset_right = 258.0
+offset_bottom = 181.01437
 theme_override_styles/panel = SubResource("StyleBoxTexture_yx0ec")
 script = ExtResource("2_mx1us")
-text = "hello"
+text = "hello joajdojwdoija"
 icon = ExtResource("2_y72n6")
 start = true
 animated = true
@@ -82,20 +82,26 @@ animated = true
 layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=635221579]
-custom_minimum_size = Vector2(24, 24)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(-1, -1)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("2_y72n6")
+expand_mode = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=1049216639]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
 theme_override_fonts/normal_font = ExtResource("3_mx1us")
-theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/normal_font_size = 20
 text = "waiting or ERROR "
 fit_content = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=322966866]
 libraries/ = SubResource("AnimationLibrary_y02g5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1094325227]
+stream = ExtResource("5_mx1us")
+pitch_scale = 1.3

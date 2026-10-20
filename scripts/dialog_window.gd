@@ -9,6 +9,7 @@ extends PanelContainer
 @export var click_to_close :bool
 @export var animated : bool
 
+signal window_closed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
@@ -27,19 +28,26 @@ func _process(delta: float) -> void:
 			$AnimationPlayer.play_backwards("show_slow")
 		else:
 			$AnimationPlayer.play_backwards("show_fast")
+		$AudioStreamPlayer.stop()
+		window_closed.emit()
 
 func start_talk():
+	
 	label.text = ""
 	modulate = Color(1.0, 1.0, 1.0, 0.0)
 	visible = true
+	
 	if animated:
 		$AnimationPlayer.play("show_slow")
 	else:
 		$AnimationPlayer.play()
+	
 	await $AnimationPlayer.animation_finished
+	$AudioStreamPlayer.play()
 	var text_z :String
 	for a in text :
 		await get_tree().create_timer(randf_range(min_time,max_time)).timeout
 		text_z += a
 		label.text = text_z
-		
+	$AudioStreamPlayer.stop()
+	
