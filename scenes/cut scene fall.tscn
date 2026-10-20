@@ -763,7 +763,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_cdqsc"]
 resource_name = "hand"
-length = 34.833332
+length = 5.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -831,7 +831,7 @@ tracks/5/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Left:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 2, 34.7),
+"times": PackedFloat32Array(0, 2, 4.633333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -840,13 +840,13 @@ tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Ground:scale")
-tracks/6/interp = 1
+tracks/6/interp = 2
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(1.7333333, 34.7),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.8666667, 3.4333334, 4.233333, 4.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(3, 3), Vector2(10, 10)]
+"values": [Vector2(3, 3), Vector2(10, 10), Vector2(20, 20), Vector2(30, 30)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -855,10 +855,10 @@ tracks/7/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Ground:rotation
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(2.0333333, 34.7),
+"times": PackedFloat32Array(1.8333334, 4.866667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 59.69026041820607]
+"values": [0.0, 6.283185307179586]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vmkyj"]
@@ -929,8 +929,9 @@ scale = Vector2(0.45454544, 0.45454544)
 visible = false
 z_index = -1
 position = Vector2(0, 0.45454547)
-amount = 150
+amount = 250
 lifetime = 1.03
+speed_scale = 2.0
 randomness = 0.28
 lifetime_randomness = 0.18
 emission_shape = 6
@@ -953,8 +954,9 @@ color_ramp = SubResource("Gradient_jvbci")
 z_index = -1
 position = Vector2(-0.4545593, -0.9090904)
 rotation = -1.5572377
-amount = 150
+amount = 250
 lifetime = 1.03
+speed_scale = 2.0
 randomness = 0.28
 lifetime_randomness = 0.18
 emission_shape = 6
@@ -978,8 +980,9 @@ z_index = -1
 position = Vector2(-0.43601495, 1.3696874)
 rotation = -1.5674578
 scale = Vector2(0.9999999, 0.9999999)
-amount = 150
+amount = 250
 lifetime = 1.03
+speed_scale = 2.0
 randomness = 0.28
 lifetime_randomness = 0.18
 emission_shape = 6
@@ -1002,7 +1005,7 @@ color_ramp = SubResource("Gradient_jvbci")
 z_index = -1
 rotation = -1.6130044
 scale = Vector2(0.9999999, 0.9999999)
-amount = 150
+amount = 250
 lifetime = 1.03
 randomness = 0.28
 lifetime_randomness = 0.18
