@@ -9,11 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="5_rnhm2"]
 [ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="6_capye"]
 [ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="8_o86jq"]
-[ext_resource type="Texture2D" uid="uid://bidxaetnrlkyc" path="res://assets/images/mouse(talking).png" id="9_2lp4q"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="9_rnhm2"]
-[ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="11_bwl1n"]
-[ext_resource type="PackedScene" uid="uid://k0w0udh1ifdm" path="res://scenes/talking_window.tscn" id="11_hi5j0"]
-[ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="12_4741w"]
+[ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="11_capye"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lp4q"]
 texture = ExtResource("2_o86jq")
@@ -399,135 +395,6 @@ _data = {
 &"mouse_cutscene": SubResource("Animation_o86jq")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8sno"]
-texture = ExtResource("11_bwl1n")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
-
-[sub_resource type="Animation" id="Animation_2lp4q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Mouse(talking):position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 593)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-792, 557)]
-}
-
-[sub_resource type="Animation" id="Animation_rnhm2"]
-resource_name = "talking"
-length = 5.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 2.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Mouse(talking):position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.766667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 593), Vector2(0, 593), Vector2(0, 1045)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.766667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-792, 557), Vector2(-792, 557), Vector2(-792, 1016)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_capye"]
-_data = {
-&"RESET": SubResource("Animation_2lp4q"),
-&"talking": SubResource("Animation_rnhm2")
-}
-
-[sub_resource type="Animation" id="Animation_4741w"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_bwl1n"]
-resource_name = "sound"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.1, 2.6666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-256, 83712)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hi5j0"]
-_data = {
-&"RESET": SubResource("Animation_4741w"),
-&"sound": SubResource("Animation_bwl1n")
-}
-
 [node name="cutscene intro" type="Node2D" unique_id=1500718359]
 script = ExtResource("1_4741w")
 
@@ -619,45 +486,10 @@ root_node = NodePath("../Node2D/Table/TileMap")
 libraries/ = SubResource("AnimationLibrary_2lp4q")
 autoplay = &"mouse_cutscene"
 
-[node name="Mouse(talking)" type="Sprite2D" parent="." unique_id=611235398]
-position = Vector2(0, 593)
-scale = Vector2(5, 5)
-texture = ExtResource("9_2lp4q")
-
-[node name="Control" parent="." unique_id=1903654249 instance=ExtResource("11_hi5j0")]
-
-[node name="Panel" type="Panel" parent="." unique_id=639040899]
-offset_left = -996.0
-offset_top = 509.0
-offset_right = -638.69366
-offset_bottom = 582.99524
-scale = Vector2(5.580646, 2.3242157)
-theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=2090337709]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 53.04048
-offset_top = -58.084114
-offset_right = 113.27907
-offset_bottom = -40.084114
-scale = Vector2(5.64, 5.64)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
-theme_override_fonts/normal_font = ExtResource("9_rnhm2")
-theme_override_font_sizes/normal_font_size = 5
-text = "This is the best day of my life!!"
-fit_content = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/RichTextLabel" unique_id=1027407111]
-libraries/ = SubResource("AnimationLibrary_capye")
-autoplay = &"talking"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=479742584]
-stream = ExtResource("12_4741w")
-pitch_scale = 1.3
-autoplay = true
-max_distance = 134.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioStreamPlayer2D" unique_id=1573162645]
-libraries/ = SubResource("AnimationLibrary_hi5j0")
-autoplay = &"sound"
+[node name="DialogWindow" parent="." unique_id=1276989699 instance=ExtResource("11_capye")]
+offset_left = -1001.0
+offset_top = 494.0
+offset_right = -664.7163
+offset_bottom = 575.31775
+text = "This is the best day of my life"
+click_to_close = true

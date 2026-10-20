@@ -12,18 +12,78 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[node name="Panel" type="PanelContainer" unique_id=1276989699]
+[sub_resource type="Animation" id="Animation_y72n6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y02g5"]
+resource_name = "show_fast"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mx1us"]
+resource_name = "show_slow"
+length = 0.73333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y02g5"]
+_data = {
+&"RESET": SubResource("Animation_y72n6"),
+&"show_fast": SubResource("Animation_y02g5"),
+&"show_slow": SubResource("Animation_mx1us")
+}
+
+[node name="DialogWindow" type="PanelContainer" unique_id=1276989699]
+offset_top = 100.0
 offset_right = 413.5722
-offset_bottom = 73.99524
+offset_bottom = 173.99515
 scale = Vector2(5.580646, 2.3242157)
 theme_override_styles/panel = SubResource("StyleBoxTexture_yx0ec")
 script = ExtResource("2_mx1us")
+text = "hello"
+icon = ExtResource("2_y72n6")
+start = true
+animated = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=183333996]
 layout_mode = 2
 
-[node name="Panel" type="TextureRect" parent="HBoxContainer" unique_id=635221579]
-custom_minimum_size = Vector2(20, 20)
+[node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=635221579]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(60, 60)
 layout_mode = 2
 texture = ExtResource("2_y72n6")
 
@@ -34,5 +94,8 @@ size_flags_horizontal = 3
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.83137256)
 theme_override_fonts/normal_font = ExtResource("3_mx1us")
 theme_override_font_sizes/normal_font_size = 16
-text = "ERROR! :("
+text = "waiting or ERROR "
 fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=322966866]
+libraries/ = SubResource("AnimationLibrary_y02g5")
