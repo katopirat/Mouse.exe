@@ -29,11 +29,12 @@ func _process(delta: float) -> void:
 		start = false
 		started = true
 	if click_to_close and started == true and Input.is_action_just_pressed("dialog"):
+		$AudioStreamPlayer.stop()
 		if animated:
 			$AnimationPlayer.play_backwards("show_slow")
 		else:
 			$AnimationPlayer.play_backwards("show_fast")
-		$AudioStreamPlayer.stop()
+		
 		window_closed.emit()
 
 func start_talk():
