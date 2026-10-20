@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_4lxen"]
 [ext_resource type="Script" uid="uid://c1k71ngt80did" path="res://scripts/os_menu.gd" id="6_4lxen"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="7_bm2pj"]
+[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="7_gatg3"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="8_5glwp"]
+[ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="8_aa5x7"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="15_7lf2g"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_l7gj0"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_c8cdv"]
@@ -30,6 +32,12 @@ size = Vector2(21, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcikl"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
+size = Vector2(11.984121, 10.894657)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(502.14786, 313.59772)
@@ -168,10 +176,30 @@ speed = 70.0
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_iopsf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Monitor_1/Computer/Cursor" unique_id=150483435]
-position = Vector2(10.152287, 13.649587)
-scale = Vector2(1.8602428, 1.8602428)
+[node name="Arrow" type="Sprite2D" parent="Monitor_1/Computer/Cursor" unique_id=1757981818]
+position = Vector2(9.076538, 13.064672)
+scale = Vector2(1.7121677, 1.7121677)
 texture = ExtResource("5_4lxen")
+
+[node name="Hand" type="Sprite2D" parent="Monitor_1/Computer/Cursor" unique_id=516309406]
+visible = false
+position = Vector2(2.7229562, 9.044768)
+scale = Vector2(1.5703856, 1.5703856)
+texture = ExtResource("7_gatg3")
+
+[node name="Hitbox" type="Area2D" parent="Monitor_1/Computer/Cursor" unique_id=997229436]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Cursor/Hitbox" unique_id=2090727154]
+position = Vector2(-0.6380005, -0.20999146)
+rotation = 3.1415927
+scale = Vector2(0.165, 0.16500002)
+shape = SubResource("RectangleShape2D_jcikl")
+
+[node name="Dont" type="Sprite2D" parent="Monitor_1/Computer/Cursor" unique_id=1652907938]
+visible = false
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(1.5703857, 1.5703857)
+texture = ExtResource("8_aa5x7")
 
 [node name="Os_menu" type="Control" parent="Monitor_1/Computer" unique_id=1994069256]
 anchors_preset = 0
@@ -210,12 +238,26 @@ size_flags_horizontal = 10
 text = "<
 "
 
+[node name="Hitbox" type="Area2D" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" unique_id=1150532898]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous/Hitbox" unique_id=283711160]
+position = Vector2(6.0016327, 5.52092)
+shape = SubResource("RectangleShape2D_d35y6")
+
 [node name="Button_next" type="Button" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2" unique_id=383264169]
 custom_maximum_size = Vector2(-1, 11)
 layout_mode = 2
 size_flags_horizontal = 8
 text = ">
 "
+
+[node name="Hitbox" type="Area2D" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" unique_id=673299428]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next/Hitbox" unique_id=714035237]
+position = Vector2(6.0016327, 5.52092)
+shape = SubResource("RectangleShape2D_d35y6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Monitor_1/Computer/Os_menu/Window/VBoxContainer" unique_id=661699679]
 layout_mode = 2
