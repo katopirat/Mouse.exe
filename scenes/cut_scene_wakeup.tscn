@@ -957,7 +957,7 @@ offset_top = 466.0
 offset_right = -519.8813
 offset_bottom = 521.54016
 scale = Vector2(4.1771574, 4.1771574)
-text = "Oh no it was just a dream, I need to get there!"
+text = "Oh no it was just a dream, I need to get there! :("
 click_to_close = true
 
 [connection signal="window_closed" from="DialogWindow" to="." method="_on_dialog_window_window_closed"]
