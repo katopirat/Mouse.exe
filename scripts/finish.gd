@@ -13,14 +13,16 @@ var p_position: Vector2
 
 
 func level_completed():
+	var level = 0
 	for lvl in GameState.levels:
 		if lvl["scene"] == get_tree().current_scene.scene_file_path:
 			break
+			level = lvl
 		print(GameState.levels[8]["scene"])
 		print("a")
 	print(next_scene)  
-	if next_scene:
-		GameState.go_to_level()
+	if GameState.levels[level+1] != null:
+		GameState.go_to_level(level + 1)
 	else:
 		GameState.go_to_menu()          
 
