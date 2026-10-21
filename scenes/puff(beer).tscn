@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://br7ckvgudcubn"]
+
+[ext_resource type="Texture2D" uid="uid://b0gbol54ybkjj" path="res://assets/images/Puff(beer).png" id="1_vewrb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1hta"]
+size = Vector2(22, 49)
+
+[node name="puff(beer)" type="Node2D" unique_id=206520690]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1001021787]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1671641553]
+position = Vector2(-2, -11.5)
+shape = SubResource("RectangleShape2D_w1hta")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1823866904]
+position = Vector2(2, 0)
+texture = ExtResource("1_vewrb")
