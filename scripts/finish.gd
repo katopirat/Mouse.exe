@@ -20,10 +20,12 @@ func level_completed():
 		if GameState.levels[i]["scene"] == path:
 			level = i
 			break
-			
-	if level and level + 1 < GameState.levels.size():
+	print(level)
+	print(GameState.levels.size())
+	if level != null and level + 1 < GameState.levels.size():
 		GameState.go_to_level(level + 1)
 	else:
+		print("menu")
 		GameState.go_to_menu()
 
 

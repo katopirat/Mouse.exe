@@ -28,4 +28,5 @@ func _input(event):
 			sound_player.play()
 			$AnimatedSprite2D.play("pressed")
 			is_pressed = true
+			remove_from_group("clickable")
 		

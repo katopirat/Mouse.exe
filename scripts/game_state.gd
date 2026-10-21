@@ -1,4 +1,5 @@
 extends Node
+@onready var menu: PackedScene = preload("res://scenes/menu_2.tscn")
 
 var levels = [ 
 	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
@@ -10,7 +11,7 @@ var levels = [
 	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
 	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
-	{"name": "EMO the boss", "scene": "res://scenes/level_17.tscn"},
+	{"name": "EMO the boss", "scene": "res://scenes/emo_boss_intro.tscn"},
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
 	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
@@ -37,7 +38,7 @@ func go_to_level(i):
 	return false
 
 func go_to_menu():
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/menu2.tscn")
+	get_tree().call_deferred("change_scene_to_packed", menu)
 
 
 func finish_level(final_time):
