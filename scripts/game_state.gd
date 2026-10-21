@@ -39,7 +39,7 @@ func go_to_level(i):
 	return false
 
 func go_to_menu():
-	get_tree().call_deferred("change_scene_to_file", "res://levels/level_00_menu.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menu2.tscn")
 
 
 func finish_level(final_time):
@@ -53,6 +53,7 @@ func finish_level(final_time):
 			if best_times[i] == null or final_time < best_times[i]:
 				best_times[i] = final_time
 				print("new record "+str(best_times[i]))
+
 
 func get_best_time(level):
 	return best_times[level]

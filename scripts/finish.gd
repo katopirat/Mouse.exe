@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var sound_effect: AudioStreamPlayer = $AudioStreamPlayer
-@export var next_scene: PackedScene
+@export var next_scene: PackedScene 
 @onready var player:CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 
 
@@ -13,9 +13,14 @@ var p_position: Vector2
 
 
 func level_completed():
+	for lvl in GameState.levels:
+		if lvl["scene"] == get_tree().current_scene.scene_file_path:
+			break 
+		print(GameState.levels[8]["scene"])
+		print("a")
 	print(next_scene)  
 	if next_scene:
-		get_tree().change_scene_to_packed(next_scene)
+		#GameState.go_to_level(i)
 	else:
 		GameState.go_to_menu()          
 
@@ -38,3 +43,5 @@ func _process(delta: float) -> void:
 	if timer_start == 0:
 		if player.position != p_position:
 			timer_start = Time.get_ticks_msec()
+			
+			
