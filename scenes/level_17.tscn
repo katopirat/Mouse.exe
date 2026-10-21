@@ -76,16 +76,16 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_caqqn"]
 animations = [{
 "frames": [{
-"duration": 10.0,
+"duration": 7.0,
 "texture": ExtResource("3_0lsg1")
 }, {
-"duration": 5.0,
+"duration": 4.0,
 "texture": ExtResource("3_0lsg1")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_nps32")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("5_shh0f")
 }, {
 "duration": 1.0,
@@ -100,7 +100,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_kjga0")
 }, {
-"duration": 3.0,
+"duration": 1.0,
 "texture": ExtResource("10_yfov6")
 }, {
 "duration": 2.7,
@@ -1265,7 +1265,7 @@ scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1449267668]
-position = Vector2(-14.75, 22.25)
+position = Vector2(-14.75, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1273,7 +1273,7 @@ one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1282,7 +1282,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo2" unique_id=1870344982]
-position = Vector2(14.5, 22.25)
+position = Vector2(14.5, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1328,7 +1328,7 @@ scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo3" unique_id=1012803913]
-position = Vector2(-14.25, 10.25)
+position = Vector2(-14.25, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1336,7 +1336,7 @@ one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1345,7 +1345,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo3" unique_id=857597916]
-position = Vector2(15, 10.25)
+position = Vector2(15, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1391,7 +1391,7 @@ scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo4" unique_id=627237931]
-position = Vector2(-14.25, 10.25)
+position = Vector2(-14.25, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1399,7 +1399,7 @@ one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1408,7 +1408,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo4" unique_id=122757085]
-position = Vector2(15, 10.25)
+position = Vector2(15, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1454,7 +1454,7 @@ scale = Vector2(12.906775, 0.8071474)
 shape = SubResource("RectangleShape2D_su7v7")
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo5" unique_id=558788959]
-position = Vector2(-14.25, 10.25)
+position = Vector2(-14.25, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1462,7 +1462,7 @@ one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1471,7 +1471,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo5" unique_id=436883683]
-position = Vector2(15, 10.25)
+position = Vector2(15, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1522,7 +1522,7 @@ autoplay = &"new emo"
 speed_scale = 0.8
 
 [node name="Left" type="CPUParticles2D" parent="Node2D/Table/emo6" unique_id=1736643623]
-position = Vector2(-14.5, 10.5)
+position = Vector2(-14.5, 45)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1530,7 +1530,7 @@ one_shot = true
 explosiveness = 1.0
 direction = Vector2(-1, 0)
 spread = 90.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 10)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 10.0
@@ -1539,7 +1539,7 @@ color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
 [node name="Right" type="CPUParticles2D" parent="Node2D/Table/emo6" unique_id=1607724000]
-position = Vector2(15, 10.25)
+position = Vector2(15, 44.75)
 emitting = false
 amount = 20
 lifetime = 0.3
@@ -1558,22 +1558,22 @@ color_ramp = SubResource("Gradient_w8sno")
 position = Vector2(328, 4450)
 
 [node name="closable cup" parent="Node2D/Table" unique_id=2012991052 instance=ExtResource("20_85fob")]
-position = Vector2(-48, 5142)
+position = Vector2(-45, 5077)
 
 [node name="closable cup2" parent="Node2D/Table" unique_id=1312145221 instance=ExtResource("20_85fob")]
 position = Vector2(57, 5316)
 
 [node name="closable cup3" parent="Node2D/Table" unique_id=1435788593 instance=ExtResource("20_85fob")]
-position = Vector2(-43, 5458)
+position = Vector2(-40, 5513)
 
 [node name="closable cup4" parent="Node2D/Table" unique_id=850983189 instance=ExtResource("20_85fob")]
-position = Vector2(57, 5630)
+position = Vector2(56, 5679)
 
 [node name="closable cup5" parent="Node2D/Table" unique_id=1738641326 instance=ExtResource("20_85fob")]
-position = Vector2(-45, 5784)
+position = Vector2(-46, 5869)
 
 [node name="closable cup6" parent="Node2D/Table" unique_id=2003886077 instance=ExtResource("20_85fob")]
-position = Vector2(54, 5918)
+position = Vector2(54, 6012)
 
 [node name="Flash disk" parent="Node2D/Table" unique_id=368840973 instance=ExtResource("21_ej74s")]
 position = Vector2(-64, 6252)

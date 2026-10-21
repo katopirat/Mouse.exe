@@ -497,7 +497,7 @@ position = Vector2(236.00002, -16.999998)
 scale = Vector2(1.8800005, 1.8800005)
 
 [node name="cup" parent="Node2D/Table" unique_id=200577205 instance=ExtResource("4_nttaj")]
-position = Vector2(252, -162)
+position = Vector2(255.99998, -172)
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("7_xuraf")]
 z_index = -1
