@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://vx7kgmkph8n6"]
+
+[ext_resource type="Script" uid="uid://csmlw50ukynp3" path="res://ant_bad.gd" id="1_6ot77"]
+[ext_resource type="Texture2D" uid="uid://dyk61we88pkws" path="res://assets/images/ant(black).png" id="2_ujujg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w1hta"]
+height = 50.0
+
+[node name="ant" type="Node2D" unique_id=1929197966]
+
+[node name="ant_bad" type="CharacterBody2D" parent="." unique_id=501513001]
+script = ExtResource("1_6ot77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ant_bad" unique_id=1487831751]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_w1hta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ant_bad" unique_id=1814303099]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("2_ujujg")

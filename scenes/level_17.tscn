@@ -1585,6 +1585,10 @@ position = Vector2(-1776, 6050)
 [node name="book" parent="Node2D/Table" unique_id=762146673 instance=ExtResource("34_o4dak")]
 position = Vector2(-2137, 6082)
 
+[node name="closable keyboard" parent="Node2D/Table" unique_id=591607475 instance=ExtResource("30_o48br")]
+position = Vector2(4899, 9705)
+rotation = 1.0815457
+
 [node name="CanvasLayer" parent="Node2D" unique_id=1412613663 instance=ExtResource("22_kjga0")]
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("3_nefd8")]
@@ -1808,7 +1812,7 @@ position = Vector2(-19.999939, 2176)
 [node name="cup2" parent="." unique_id=1261601491 instance=ExtResource("26_668xn")]
 position = Vector2(64.00006, 2332)
 
-[node name="closable keyboard" type="Node2D" parent="." unique_id=591607475]
+[node name="closable keyboard" type="Node2D" parent="." unique_id=319404418]
 position = Vector2(11, 3396)
 rotation = 0.36680174
 
