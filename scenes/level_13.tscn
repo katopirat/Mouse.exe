@@ -5,11 +5,14 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_gwmeb"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="4_no5be"]
 [ext_resource type="PackedScene" uid="uid://gh5mw6orqtrf" path="res://scenes/props/flash_disk.tscn" id="4_u3011"]
+[ext_resource type="Texture2D" uid="uid://d3bb5jn7xhrt5" path="res://assets/images/window irl.png" id="5_3btt5"]
 [ext_resource type="PackedScene" uid="uid://ch24j2qyo3qy5" path="res://scenes/level_14.tscn" id="6_jlefd"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="6_l3e2e"]
+[ext_resource type="Script" uid="uid://chrjylgvc8hyq" path="res://scripts/shadow_maker.gd" id="9_i7lxn"]
 [ext_resource type="Texture2D" uid="uid://cq35038568bm" path="res://assets/images/os2(broken).png" id="9_jsaad"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="10_6pw23"]
 [ext_resource type="Texture2D" uid="uid://buxlqrl54sxrq" path="res://assets/images/computer frame(broken).png" id="10_jsaad"]
+[ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="10_xf0pl"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="11_jsaad"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="12_cucgj"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="12_elosv"]
@@ -23,10 +26,40 @@
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="19_ombym"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_x1cva"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="21_j8o5j"]
-[ext_resource type="PackedScene" uid="uid://dmjw1o73a5fbf" path="res://scenes/props/closables/closable_cup.tscn" id="21_u3011"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="22_rdatf"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_xb0mn"]
 [ext_resource type="PackedScene" uid="uid://dm2h2audkfaot" path="res://scenes/props/chocolate_medium.tscn" id="25_jsaad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2yd0"]
+size = Vector2(5.000004, 4.999997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lrtvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_p1k3d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_oqxgu")
+}],
+"loop": 1,
+"name": &"hovered",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_w8sno"]
+
+[sub_resource type="Curve" id="Curve_3v8a5"]
+_data = [Vector2(0, 0.0065789223), 0.0, 0.0, 0, 0, Vector2(0.4973822, 0.6644737), 1.2185005, 1.2185005, 0, 0, Vector2(0.97905767, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_so6io"]
+colors = PackedColorArray(0.34898522, 0.09899867, 0, 1, 1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60ky0"]
 size = Vector2(1, 1)
@@ -249,12 +282,85 @@ rendering_quadrant_size = 26
 format = 2
 layer_0/tile_data = PackedInt32Array(131071, 196609, 1, 65535, 196609, 1, -1, 196609, 1, -65537, 1, 1, -131072, 65537, 1, -131071, 65537, 1, -131070, 65537, 1, -131069, 65537, 1, -131068, 131073, 1, 4, 262145, 1, 65540, 262145, 1, 131076, 262145, 1, 131075, 1, 0, 131074, 1, 0, 131073, 1, 0, 131072, 1, 0, 65536, 1, 0, 0, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, 3, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 1, 1, 0, 2, 1, 0, 196607, 196609, 1, -65532, 1, 0, -65531, 65537, 1, -65530, 65537, 1, -65529, 65537, 1, -65528, 65537, 1, -65527, 65537, 1, -131062, 1, 1, -131061, 65537, 1, -131060, 65537, 1, -131059, 65537, 1, -131058, 131073, 1, -65522, 262145, 1, 14, 262145, 1, 65550, 262145, 1, 65549, 1, 0, 65548, 1, 0, 65547, 1, 0, 11, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, 13, 1, 0, 12, 1, 0, 65546, 196609, 1, 10, 196609, 1, 131082, 1, 2, 131083, 65537, 2, 131084, 65537, 2, 131085, 65537, 2, 131086, 131073, 2, 9, 131073, 2, 5, 1, 2, 6, 65537, 2, 7, 65537, 2, 8, 65537, 2, 196611, 65537, 2, 196610, 65537, 2, 196609, 65537, 2, 196608, 65537, 2, 262143, 1, 2, 196612, 131073, 2, -65526, 1, 0)
 
-[node name="closable cup" parent="Node2D/Table" unique_id=2012991052 instance=ExtResource("21_u3011")]
-position = Vector2(544, -77)
+[node name="closable cup" type="Node2D" parent="Node2D/Table" unique_id=2012991052]
+position = Vector2(581, -62)
 scale = Vector2(1.1600013, 1.1600013)
 
+[node name="Window2" type="Node2D" parent="Node2D/Table/closable cup" unique_id=1231413431]
+position = Vector2(154.66122, 153.98178)
+scale = Vector2(0.24280688, 0.2428069)
+script = ExtResource("12_cucgj")
+
+[node name="Background" type="Node2D" parent="Node2D/Table/closable cup/Window2" unique_id=544092813]
+position = Vector2(-632.85364, -737.1363)
+scale = Vector2(5.2832456, 7.9389267)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Table/closable cup/Window2/Background" unique_id=455111399]
+modulate = Color(1.4369954, 1.2317957, 1.4369954, 0.28235295)
+position = Vector2(-3.8976982, 8.300365)
+scale = Vector2(1.9409944, 1.4046987)
+texture = ExtResource("5_3btt5")
+
+[node name="XButton" type="Area2D" parent="Node2D/Table/closable cup/Window2" unique_id=1083907669]
+position = Vector2(-463.9952, -914.23175)
+scale = Vector2(19.803478, 19.803478)
+collision_mask = 2
+script = ExtResource("15_0w4mp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/closable cup/Window2/XButton" unique_id=914659830]
+position = Vector2(-0.16667175, -0.16666603)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_l2yd0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/closable cup/Window2/XButton" unique_id=996682219]
+position = Vector2(-0.358764, 0.025942773)
+scale = Vector2(0.49398094, 0.49398094)
+sprite_frames = SubResource("SpriteFrames_lrtvv")
+offset = Vector2(0.275, -0.19)
+
+[node name="cup" type="Node2D" parent="Node2D/Table/closable cup/Window2" unique_id=200577205]
+position = Vector2(-571.0762, -560.04083)
+scale = Vector2(2.758822, 2.758822)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Table/closable cup/Window2/cup" unique_id=724010911]
+position = Vector2(-33, -33)
+scale = Vector2(3.6875, 3.6875)
+collision_layer = 5
+script = ExtResource("9_i7lxn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Table/closable cup/Window2/cup/StaticBody2D" unique_id=1876613642]
+z_index = 4
+texture = ExtResource("10_xf0pl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Table/closable cup/Window2/cup/StaticBody2D" unique_id=506854012]
+position = Vector2(-7.479022, 14.320052)
+rotation = 0.022840401
+polygon = PackedVector2Array(-5.595739, 2.8688068, -0.9855685, 7.750164, 6.607651, 9.377281, 12.84494, 9.377281, 18.81104, 7.478977, 23.963585, 3.4111805, 23.963585, -5.2667856, 22.15599, -15.960182, 14.075287, -18.21922, 5.352585, -18.019955, -2.283554, -16.100058, -4.5109935, -5.2667856, -5.8669257, -0.11424351, -12.370209, -2.2551117, -13.93367, 0.21027756)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/Table/closable cup/Window2/cup" unique_id=1879280339]
+z_index = 10
+position = Vector2(-26.871244, -89.57082)
+scale = Vector2(1.0000001, 1.0000001)
+emitting = false
+amount = 12
+texture = SubResource("CanvasTexture_w8sno")
+lifetime = 2.0
+speed_scale = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(40, 20)
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+scale_amount_min = 2.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_3v8a5")
+color = Color(0.8295754, 0.7405223, 0.66673946, 1)
+color_ramp = SubResource("Gradient_so6io")
+
 [node name="Flash disk" parent="Node2D/Table" unique_id=368840973 instance=ExtResource("4_u3011")]
-position = Vector2(530, -88)
+position = Vector2(412, 101.99999)
 rotation = 1.5692885
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("4_no5be")]
@@ -421,6 +527,9 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 position = Vector2(252, 229)
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
+[connection signal="body_entered" from="Node2D/Table/closable cup/Window2/XButton" to="Node2D/Table/closable cup/Window2/XButton" method="_on_body_entered"]
+[connection signal="body_exited" from="Node2D/Table/closable cup/Window2/XButton" to="Node2D/Table/closable cup/Window2/XButton" method="_on_body_exited"]
+[connection signal="closed" from="Node2D/Table/closable cup/Window2/XButton" to="Node2D/Table/closable cup/Window2" method="_on_x_button_closed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Node2D/Player/Computer/Window2/XButton" to="Node2D/Player/Computer/Window2/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Computer/Window2/XButton" to="Node2D/Player/Computer/Window2/XButton" method="_on_body_exited"]

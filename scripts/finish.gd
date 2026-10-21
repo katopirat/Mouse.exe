@@ -15,13 +15,13 @@ var p_position: Vector2
 
 func level_completed():
 	var path = get_tree().current_scene.scene_file_path
-	var level = -1
+	var level = null
 	for i in range(GameState.levels.size()):
 		if GameState.levels[i]["scene"] == path:
 			level = i
 			break
 			
-	if level != -1 and level + 1 < GameState.levels.size():
+	if level and level + 1 < GameState.levels.size():
 		GameState.go_to_level(level + 1)
 	else:
 		GameState.go_to_menu()
