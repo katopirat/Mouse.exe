@@ -963,7 +963,11 @@ offset_top = 494.0
 offset_right = -543.6498
 offset_bottom = 545.0
 scale = Vector2(4.3424053, 4.3424053)
+<<<<<<< Updated upstream
 text = "This is the best day of my life!"
+=======
+text = "This is the best day of my life! ! ! ! !"
+>>>>>>> Stashed changes
 click_to_close = true
 
 [connection signal="window_closed" from="DialogWindow" to="." method="_on_dialog_window_window_closed"]
