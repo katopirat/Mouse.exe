@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_hsv71"]
 [ext_resource type="Script" uid="uid://c1u76q328jyi3" path="res://scenes/cut_scene_wakeup.gd" id="1_pwxsm"]
 [ext_resource type="Texture2D" uid="uid://cw45q6k864h8c" path="res://assets/images/outside(tileset).png" id="2_jeagv"]
+[ext_resource type="PackedScene" uid="uid://d4b8dqjrbejty" path="res://scenes/menu_2.tscn" id="2_ustj0"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="3_qpuhy"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_lqhis"]
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_jeagv"]
@@ -616,6 +617,7 @@ size = Vector2(21, 259)
 
 [node name="cut scene wakeup" type="Node2D" unique_id=1186576722]
 script = ExtResource("1_pwxsm")
+menu_scene = ExtResource("2_ustj0")
 
 [node name="cutscene intro" type="Node2D" parent="." unique_id=1500718359]
 
