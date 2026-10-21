@@ -20,7 +20,7 @@ func level_completed():
 		print("a")
 	print(next_scene)  
 	if next_scene:
-		GameState.go_to_level(i)
+		GameState.go_to_level()
 	else:
 		GameState.go_to_menu()          
 

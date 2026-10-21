@@ -8,7 +8,7 @@ extends PanelContainer
 @onready var label = $HBoxContainer/RichTextLabel
 @export var click_to_close :bool
 @export var animated : bool
-
+var closed = false
 signal window_closed
 
 @onready var waiting_time: Dictionary = {
@@ -28,7 +28,8 @@ func _process(delta: float) -> void:
 		start_talk()
 		start = false
 		started = true
-	if click_to_close and started == true and Input.is_action_just_pressed("dialog"):
+	if click_to_close and started == true and Input.is_action_just_pressed("dialog") and closed == false:
+		closed = true
 		$AudioStreamPlayer.stop()
 		if animated:
 			$AnimationPlayer.play_backwards("show_slow")
