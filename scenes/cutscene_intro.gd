@@ -1,9 +1,11 @@
 extends Node2D
 
+@export var next_animation: PackedScene
 
 func _on_dialog_window_window_closed() -> void:
 	$AnimationPlayer.play("fade_out")
 	
 	await $AnimationPlayer.animation_finished
-	get_tree().change_scene_to_file("res://scenes/cut_scene_wakeup.tscn")
+	if get_tree():
+		get_tree().change_scene_to_packed(next_animation)
 	

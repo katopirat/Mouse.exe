@@ -1,7 +1,6 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
+@export var menu_scene: PackedScene
 func _ready() -> void:
 	$"cutscene intro/Node2D/CanvasLayer/AnimationTree".play("screen_open")
 
@@ -14,4 +13,5 @@ func _process(delta: float) -> void:
 func _on_dialog_window_window_closed() -> void:
 	$"cutscene intro/Myš(stacionary)/AnimationPlayer".play("mys2")
 	await $"cutscene intro/Myš(stacionary)/AnimationPlayer".animation_finished
-	get_tree().change_scene_to_file("res://scenes/menu_2.tscn")
+	if get_tree():
+		get_tree().change_scene_to_packed(menu_scene)
