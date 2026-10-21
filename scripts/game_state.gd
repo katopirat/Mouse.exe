@@ -6,6 +6,10 @@ var levels = [
 	{"name": "Ads", "scene": "res://scenes/level_2.tscn"},
 	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn"},
 	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn"},
+	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
+	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
+	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
+	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
 	{"name": "Another spaggeti?!", "scene": "res://scenes/level_5.tscn"},
 	{"name": "Clickbate ad", "scene": "res://scenes/level_6.tscn"},
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
@@ -14,13 +18,9 @@ var levels = [
 	{"name": "magic table", "scene": "res://scenes/level_10.tscn"},
 	{"name": "magic mice", "scene": "res://scenes/level_11.tscn"},
 	{"name": "mice coin", "scene": "res://scenes/level_12.tscn"},
-	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
-	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
-	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
-	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
 	{"name": "EMO the boss", "scene": "res://scenes/level_17.tscn"},
 	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},
-	{"name": "blue thooth OFF", "scene": "res://scenes/level_19.tscn"},
+	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn"},
 	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
 ]
 var unlocked = 1
@@ -39,7 +39,7 @@ func go_to_level(i):
 	return false
 
 func go_to_menu():
-	get_tree().call_deferred("change_scene_to_file", "res://levels/level_00_menu.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/menu2.tscn")
 
 
 func finish_level(final_time):
@@ -53,6 +53,7 @@ func finish_level(final_time):
 			if best_times[i] == null or final_time < best_times[i]:
 				best_times[i] = final_time
 				print("new record "+str(best_times[i]))
+
 
 func get_best_time(level):
 	return best_times[level]
