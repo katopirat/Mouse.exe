@@ -10,8 +10,7 @@ var levels = [
 	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
 	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
-	{"name": "glass on the table", "scene": "res://scenes/level_16.tscn"},
-	{"name": "EMO the boss", "scene": "res://scenes/emo_boss_intro.tscn"},
+
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
 	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
