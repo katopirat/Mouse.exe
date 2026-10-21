@@ -76,16 +76,16 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_caqqn"]
 animations = [{
 "frames": [{
-"duration": 10.0,
+"duration": 7.0,
 "texture": ExtResource("3_0lsg1")
 }, {
-"duration": 5.0,
+"duration": 4.0,
 "texture": ExtResource("3_0lsg1")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_nps32")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("5_shh0f")
 }, {
 "duration": 1.0,
@@ -100,7 +100,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_kjga0")
 }, {
-"duration": 3.0,
+"duration": 1.0,
 "texture": ExtResource("10_yfov6")
 }, {
 "duration": 2.7,
@@ -1558,22 +1558,22 @@ color_ramp = SubResource("Gradient_w8sno")
 position = Vector2(328, 4450)
 
 [node name="closable cup" parent="Node2D/Table" unique_id=2012991052 instance=ExtResource("20_85fob")]
-position = Vector2(-48, 5142)
+position = Vector2(-45, 5077)
 
 [node name="closable cup2" parent="Node2D/Table" unique_id=1312145221 instance=ExtResource("20_85fob")]
 position = Vector2(57, 5316)
 
 [node name="closable cup3" parent="Node2D/Table" unique_id=1435788593 instance=ExtResource("20_85fob")]
-position = Vector2(-43, 5458)
+position = Vector2(-40, 5513)
 
 [node name="closable cup4" parent="Node2D/Table" unique_id=850983189 instance=ExtResource("20_85fob")]
-position = Vector2(57, 5630)
+position = Vector2(56, 5679)
 
 [node name="closable cup5" parent="Node2D/Table" unique_id=1738641326 instance=ExtResource("20_85fob")]
-position = Vector2(-45, 5784)
+position = Vector2(-46, 5869)
 
 [node name="closable cup6" parent="Node2D/Table" unique_id=2003886077 instance=ExtResource("20_85fob")]
-position = Vector2(54, 5918)
+position = Vector2(54, 6012)
 
 [node name="Flash disk" parent="Node2D/Table" unique_id=368840973 instance=ExtResource("21_ej74s")]
 position = Vector2(-64, 6252)
