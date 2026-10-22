@@ -13,7 +13,6 @@ func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	start()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -29,12 +28,14 @@ func funkce_ktera_dela_to_ze_ruka_placne_mys():
 	for i in 60 :
 		shadow.global_position = shadow.global_position.lerp(player.global_position, 0.1)
 		await get_tree().process_frame
+	await get_tree().create_timer(0.5).timeout
+	
 	shadow.modulate = Color(0.6, 0.0, 0.0)
 	hand.position = shadow.position + Vector2(0,501.0)
 	hand.visible = true
-	shadow.visible = false
-	camera.shake_intensity = 10
-	await get_tree().physics_framewd
+	shadow.visible = false 
+	camera.shake_intensity = 1000
+	await get_tree().physics_frame
 	await get_tree().physics_frame
 	for a in area.get_overlapping_bodies():
 		if a.is_in_group("player"):
