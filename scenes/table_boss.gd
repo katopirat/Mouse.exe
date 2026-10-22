@@ -8,7 +8,7 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-	hand.visible = false
+	hand 
 	shadow.visible = false
 	await get_tree().create_timer(1.0).timeout
 	start()
@@ -34,7 +34,7 @@ func funkce_ktera_dela_to_ze_ruka_placne_mys():
 	hand.position = shadow.position + Vector2(0,501.0)
 	hand.visible = true
 	shadow.visible = false 
-	camera.shake_intensity = 1000
+	camera.shake_intensity = 10
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	for a in area.get_overlapping_bodies():

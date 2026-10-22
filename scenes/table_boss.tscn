@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="28_t0uad"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="29_fh5q2"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="30_q7xoe"]
+[ext_resource type="Shader" uid="uid://c0cxi72bqvgrl" path="res://scenes/one_color.gdshader" id="31_83o4n"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="31_jnk8g"]
 
 [sub_resource type="Animation" id="Animation_x5vxs"]
@@ -276,6 +277,10 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_cnh78")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83o4n"]
+shader = ExtResource("31_83o4n")
+shader_parameter/color = Color(0, 0, 0, 1)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_w8sno"]
 radius = 127.00394
 
@@ -286,115 +291,6 @@ point_count = 3
 [sub_resource type="Gradient" id="Gradient_7dkxt"]
 offsets = PackedFloat32Array(0.006430868, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="Animation" id="Animation_q57ll"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-2, 501.00003)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3, 3)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CPUParticles2D:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("..:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_nisbn"]
-resource_name = "slap"
-length = 1.8666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1.0333333, 1.5333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 1076), Vector2(-2, 501.00003)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.0333333, 1.5333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(5.875, 5.8750005), Vector2(3, 3)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CPUParticles2D:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("..:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1.0333333, 1.5666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.38431373), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_83o4n"]
-_data = {
-&"RESET": SubResource("Animation_q57ll"),
-&"slap": SubResource("Animation_nisbn")
-}
 
 [node name="TableBoss" type="Node2D" unique_id=319544235]
 script = ExtResource("1_nisbn")
@@ -676,8 +572,17 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 
 [node name="CanvasLayer" parent="Node2D" unique_id=1370691632 instance=ExtResource("31_jnk8g")]
 
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1405804371]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 0.58400005)
+material = SubResource("ShaderMaterial_83o4n")
+scale = Vector2(6, 6)
+texture = ExtResource("28_t0uad")
+offset = Vector2(0, 165)
+
 [node name="Hand" type="Sprite2D" parent="." unique_id=2042481966]
-position = Vector2(-2, 501.00003)
+unique_name_in_owner = true
+position = Vector2(-3, 500)
 scale = Vector2(3, 3)
 texture = ExtResource("28_t0uad")
 
@@ -691,6 +596,7 @@ shape = SubResource("CircleShape2D_w8sno")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Hand/Area2D" unique_id=726422067]
 position = Vector2(4, 1081.9998)
+emitting = false
 amount = 50
 one_shot = true
 explosiveness = 1.0
@@ -705,15 +611,7 @@ scale_amount_curve = SubResource("Curve_pmkxd")
 color = Color(0.9725546, 0.4646889, 0.4314578, 0.54509807)
 color_ramp = SubResource("Gradient_7dkxt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand/Area2D" unique_id=1703966998]
-libraries/ = SubResource("AnimationLibrary_83o4n")
-autoplay = &"slap"
-
-[node name="Shadow" type="Sprite2D" parent="." unique_id=1405804371]
-modulate = Color(0, 0, 0, 0.47058824)
-scale = Vector2(6, 6)
-texture = ExtResource("28_t0uad")
-offset = Vector2(0, 165)
+[node name="Node2D2" type="Node2D" parent="." unique_id=1113017954]
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]
