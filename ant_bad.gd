@@ -7,7 +7,7 @@ extends CharacterBody2D
 const SPEED = 200.0
 
 func _physics_process(delta: float) -> void:
-	if global_position.distance_to(target.global_position)>20: 
+	if global_position.distance_to(target.global_position)>40: 
 		
 		var direction=(target.position-position).normalized()
 		velocity=direction * SPEED

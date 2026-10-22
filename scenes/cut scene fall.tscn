@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b2hm5hhdf2mkm" path="res://scenes/ground mini.png" id="7_qmtvd"]
 [ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="8_nvylm"]
 [ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="9_pyw4p"]
-[ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="12_cr2r5"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="12_nvylm"]
+[ext_resource type="Texture2D" uid="uid://c6a05digm6g48" path="res://assets/animations/EMO/floor2.png" id="14_cr2r5"]
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="16_g8puj"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="22_pstul"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="24_kn7t3"]
@@ -608,7 +608,6 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_o28wv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nvylm"]
-texture = ExtResource("12_cr2r5")
 texture_region_size = Vector2i(32, 32)
 2:1/0 = 0
 1:1/0 = 0
@@ -814,6 +813,15 @@ texture_region_size = Vector2i(320, 320)
 3:6/0 = 0
 4:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pyw4p"]
+texture = ExtResource("14_cr2r5")
+texture_region_size = Vector2i(32, 32)
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:4/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_jewk8"]
 tile_size = Vector2i(32, 32)
 terrain_set_0/mode = 0
@@ -823,6 +831,7 @@ custom_data_layer_0/name = "on_table"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_aicms")
 sources/0 = SubResource("TileSetAtlasSource_nvylm")
+sources/2 = SubResource("TileSetAtlasSource_pyw4p")
 
 [sub_resource type="Animation" id="Animation_waxxo"]
 length = 0.001

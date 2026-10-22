@@ -1159,6 +1159,32 @@ rotation = 1.5707964
 scale = Vector2(3, 3)
 texture = ExtResource("4_8fm3l")
 
+[node name="ant_bad2" type="CharacterBody2D" parent="." unique_id=1927296246]
+position = Vector2(-209, 4)
+script = ExtResource("3_rpsmx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ant_bad2" unique_id=522902195]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_w1hta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ant_bad2" unique_id=1599788650]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("4_8fm3l")
+
+[node name="ant_bad3" type="CharacterBody2D" parent="." unique_id=263668857]
+position = Vector2(-205, 114)
+script = ExtResource("3_rpsmx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ant_bad3" unique_id=2069818072]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_w1hta")
+
+[node name="Sprite2D" type="Sprite2D" parent="ant_bad3" unique_id=1202198121]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("4_8fm3l")
+
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window2/XButton" to="Node2D/Player/Monitor_2/Computer/Window2/XButton" method="_on_body_entered"]
