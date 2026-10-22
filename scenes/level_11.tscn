@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="20_wjk4y"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="23_k8idr"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="23_oggk4"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="28_tbml5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7360d"]
 size = Vector2(68, 107)
@@ -747,6 +748,9 @@ volume_db = -16.845
 [node name="ad" parent="Node2D/Player/Monitor_2" unique_id=1511771645 instance=ExtResource("23_k8idr")]
 position = Vector2(-0.99999607, -18)
 scale = Vector2(1.4775579, 1.5641149)
+
+[node name="Achievements" parent="Node2D/Player" unique_id=1807818859 instance=ExtResource("28_tbml5")]
+position = Vector2(-585, -315)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=132210548]
 scroll_scale = Vector2(0.7, 0.7)

@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="21_hgnpj"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="22_5g1ve"]
 [ext_resource type="PackedScene" uid="uid://du26mi400j41t" path="res://scenes/props/note_thing.tscn" id="23_u7ckc"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="25_5g1ve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -424,6 +425,9 @@ layout_mode = 2
 text = "19:33"
 
 [node name="level namnam" type="CanvasLayer" parent="Player/Monitor_4" unique_id=528727644]
+
+[node name="Achievements" parent="Player" unique_id=1807818859 instance=ExtResource("25_5g1ve")]
+position = Vector2(-438, -294)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=741724464]
 scale = Vector2(3, 3)

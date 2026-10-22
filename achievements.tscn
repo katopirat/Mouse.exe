@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://slff405mhfwr"]
 
+[ext_resource type="Script" uid="uid://dvgkolpfjbon" path="res://scripts/achievements.gd" id="1_bnact"]
 [ext_resource type="Script" uid="uid://dfcasgkrgnwjp" path="res://scripts/pop_up.gd" id="1_e00ml"]
-[ext_resource type="Texture2D" uid="uid://cf4uhlb2xq067" path="res://docs/index.icon.png" id="1_nr1wc"]
+[ext_resource type="Texture2D" uid="uid://s762vyoshire" path="res://assets/images/button-achivment.png" id="3_rvr50"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="4_rvr50"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nr1wc")
+"texture": ExtResource("3_rvr50")
 }],
 "loop": 1,
-"name": &"placeholder",
+"name": &"Button Masher",
 "speed": 5.0
 }]
 
@@ -52,15 +54,28 @@ _data = {
 }
 
 [node name="Achievements" type="Node2D" unique_id=1807818859]
+z_index = 100
+script = ExtResource("1_bnact")
 
 [node name="PopUp" type="Node2D" parent="." unique_id=557358361]
 position = Vector2(1336, 515)
 script = ExtResource("1_e00ml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PopUp" unique_id=201380666]
-scale = Vector2(1.9444444, 1)
+position = Vector2(-26.118149, -5.8749866)
+scale = Vector2(2.9499996, 2.9499996)
 sprite_frames = SubResource("SpriteFrames_iopsf")
-animation = &"placeholder"
+animation = &"Button Masher"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PopUp" unique_id=1454502647]
 libraries/ = SubResource("AnimationLibrary_u4g45")
+
+[node name="Label" type="Label" parent="PopUp" unique_id=1273757267]
+offset_left = -160.0
+offset_top = 94.0
+offset_right = 161.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("4_rvr50")
+theme_override_font_sizes/font_size = 30
+text = "achievement
+"

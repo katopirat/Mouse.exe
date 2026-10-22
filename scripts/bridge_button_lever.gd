@@ -1,7 +1,9 @@
 extends Area2D
 var cursor_inside = false
 var is_pressed = false
-
+@onready var achievement = $"../../../../Achievements"
+@onready var times_pressed: int = 0
+@onready var achievement_name: String = "Button Masher"
 signal open_bridge()
 signal close_bridge()
 func _ready() -> void:
@@ -25,8 +27,12 @@ func _input(event):
 			close_bridge.emit()
 			$AnimatedSprite2D.play("default")
 			is_pressed = false
+			times_pressed += 1
 		else:
 			open_bridge.emit()
 			$AnimatedSprite2D.play("pressed")
 			is_pressed = true
+			times_pressed += 1
+	if times_pressed >= 20 and achievement_name not in AchievementState.completed:
+		achievement.completed_achievement(achievement_name)
 		

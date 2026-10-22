@@ -1,11 +1,10 @@
 extends Node2D
+@onready var pop_up = $PopUp
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func completed_achievement(achievement_name: String) -> void:
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	if achievement_name not in AchievementState.completed:
+		print("completed: ", achievement_name)
+		AchievementState.completed.append(achievement_name)
+		pop_up.play_achievement(achievement_name)
