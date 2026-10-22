@@ -682,11 +682,11 @@ scale = Vector2(3, 3)
 texture = ExtResource("28_t0uad")
 
 [node name="Area2D" type="Area2D" parent="Hand" unique_id=1973364727]
-position = Vector2(0, -183.14891)
+position = Vector2(-0.6666667, -352.6667)
 scale = Vector2(0.17021276, 0.17021275)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hand/Area2D" unique_id=358774229]
-position = Vector2(4.9999995, 1070.9996)
+position = Vector2(5.875002, 1100.5835)
 shape = SubResource("CircleShape2D_w8sno")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Hand/Area2D" unique_id=726422067]
