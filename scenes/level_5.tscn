@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="19_u88kh"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="20_jrosa"]
 [ext_resource type="PackedScene" uid="uid://b035tqqwad4ne" path="res://scenes/level_6.tscn" id="21_u1mn7"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="23_jrosa"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_u1mn7"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_cijsf"]
 
@@ -420,6 +421,9 @@ theme_type_variation = &"PanelSunken"
 unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
+
+[node name="Achievements" parent="Player" unique_id=1807818859 instance=ExtResource("23_jrosa")]
+position = Vector2(-717, -401)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=962240162]
 scale = Vector2(3, 3)

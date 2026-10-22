@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s762vyoshire"
-path="res://.godot/imported/button-achivment.png-6fc35f0cc6308d358886f579efdbf5fe.ctex"
+uid="uid://chfo0rwam37y6"
+path="res://.godot/imported/tutorial_achivment.png.png-79253b020e70475741a89b4dadbd441b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/button-achivment.png"
-dest_files=["res://.godot/imported/button-achivment.png-6fc35f0cc6308d358886f579efdbf5fe.ctex"]
+source_file="res://assets/images/tutorial_achivment.png.png"
+dest_files=["res://.godot/imported/tutorial_achivment.png.png-79253b020e70475741a89b4dadbd441b.ctex"]
 
 [params]
 
