@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://slff405mhfwr"]
+
+[ext_resource type="Script" uid="uid://dfcasgkrgnwjp" path="res://scripts/pop_up.gd" id="1_e00ml"]
+[ext_resource type="Texture2D" uid="uid://cf4uhlb2xq067" path="res://docs/index.icon.png" id="1_nr1wc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nr1wc")
+}],
+"loop": 1,
+"name": &"placeholder",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_bnact"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1336, 515)]
+}
+
+[sub_resource type="Animation" id="Animation_rvr50"]
+resource_name = "pop_up"
+length = 0.56666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.11, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1336, 515), Vector2(1260, 515), Vector2(963, 515)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u4g45"]
+_data = {
+&"RESET": SubResource("Animation_bnact"),
+&"pop_up": SubResource("Animation_rvr50")
+}
+
+[node name="Achievements" type="Node2D" unique_id=1807818859]
+
+[node name="PopUp" type="Node2D" parent="." unique_id=557358361]
+position = Vector2(1336, 515)
+script = ExtResource("1_e00ml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PopUp" unique_id=201380666]
+scale = Vector2(1.9444444, 1)
+sprite_frames = SubResource("SpriteFrames_iopsf")
+animation = &"placeholder"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PopUp" unique_id=1454502647]
+libraries/ = SubResource("AnimationLibrary_u4g45")
