@@ -1,28 +1,29 @@
 [gd_scene format=3 uid="uid://uott3pkhyso3"]
 
 [ext_resource type="Script" uid="uid://bsd1sf6rbjd7u" path="res://scripts/disapearing.gd" id="1_atqul"]
-[ext_resource type="Texture2D" uid="uid://cf4uhlb2xq067" path="res://docs/index.icon.png" id="1_cbbnl"]
+[ext_resource type="Texture2D" uid="uid://ceu8kefwilhsy" path="res://assets/images/niceson.png" id="2_atqul"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_cbbnl")
+"texture": ExtResource("2_atqul")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
-size = Vector2(181, 182)
+[sub_resource type="CircleShape2D" id="CircleShape2D_haanl"]
+radius = 65.03076
 
 [node name="DisapearingPlaceholder" type="StaticBody2D" unique_id=1165169790]
+scale = Vector2(3, 3)
 script = ExtResource("1_atqul")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=763460745]
 sprite_frames = SubResource("SpriteFrames_iopsf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=384168989]
-position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_iopsf")
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_haanl")

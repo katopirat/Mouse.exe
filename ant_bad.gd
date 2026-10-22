@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var target : CharacterBody2D = $"../Node2D/Player"
+@onready var target : CharacterBody2D = $"../Player"
 
 
 
