@@ -21,6 +21,7 @@ signal animation_finished
 @onready var shader_animation:AnimationPlayer = $"../CanvasLayer/AnimationTree"
 @onready var col_shape = $CollisionShape2DFall.shape
 @onready var particles = $CPUParticles2D
+var push = Vector2(0,0)
 
 func _ready() -> void:
 	
@@ -37,6 +38,7 @@ func _ready() -> void:
 		shader_animation.play("RESET")
 	Global.player_can_move = true
 func _physics_process(delta: float) -> void:
+	push = push.move_toward(Vector2.ZERO, 3000 * delta)
 	if Input.is_action_just_pressed("godmode") and god_mode and Global.player_can_move:
 		god_mode = false
 		
@@ -97,7 +99,8 @@ func _physics_process(delta: float) -> void:
 		target_tilt = max_tilt
 	
 	var direction := Input.get_vector("left", "right", "up", "down")
-	velocity = direction * speed
+	velocity = direction * speed 
+	velocity = velocity + push
 	$AnimatedSprite2D.rotation = lerp_angle($AnimatedSprite2D.rotation, target_tilt, delta * tilt_speed)
 	
 	move_and_slide()
@@ -183,3 +186,6 @@ func die():
 		await shader_animation.animation_finished
 	if is_inside_tree() and get_tree():
 		get_tree().reload_current_scene()
+
+func knockback(i):
+	push = i * 6000
