@@ -422,7 +422,7 @@ text = "19:33"
 
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("23_iny2c")]
 z_index = -1
-position = Vector2(422, 19)
+position = Vector2(813, 34)
 next_scene = ExtResource("24_usoey")
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("25_mi7mt")]
