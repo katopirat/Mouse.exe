@@ -138,7 +138,7 @@ size = Vector2(5.888172, 25.425404)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb30c"]
 size = Vector2(11.936967, 56.68109)
 
-[node name="Level21" type="Node2D" unique_id=659635860]
+[node name="Ground" type="Node2D" unique_id=659635860]
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_df2us")]
 
