@@ -32,8 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="30_utt50"]
 [ext_resource type="PackedScene" uid="uid://uott3pkhyso3" path="res://scenes/props/disapearing_props_ground/disapearing_placeholder.tscn" id="31_64fmc"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="31_haanl"]
-[ext_resource type="Script" uid="uid://csmlw50ukynp3" path="res://ant_bad.gd" id="32_8o6f4"]
-[ext_resource type="Texture2D" uid="uid://dyk61we88pkws" path="res://assets/images/ant(black).png" id="33_5c77v"]
+[ext_resource type="Script" uid="uid://b2ju237oyi565" path="res://scenes/area_2d.gd" id="35_jirgc"]
+[ext_resource type="Script" uid="uid://bu2ysepnqo70y" path="res://ant_bad_16.gd" id="35_k3bdf"]
+[ext_resource type="Texture2D" uid="uid://bmumht585ruyk" path="res://assets/images/ant(red).png" id="36_jirgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -151,8 +152,18 @@ sources/1 = SubResource("TileSetAtlasSource_k3bdf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xe3em"]
 size = Vector2(2508.25, 180)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2fcfa"]
+friction = 0.0
+bounce = 0.05
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8eujr"]
 height = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3bdf"]
+size = Vector2(5.888172, 20.664469)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jirgc"]
+size = Vector2(11.936967, 6.1903305)
 
 [node name="Node2D" type="Node2D" unique_id=2030300510]
 
@@ -490,204 +501,13 @@ position = Vector2(-1140, -264.875)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xe3em")
 
-[node name="ant_bad" type="CharacterBody2D" parent="Level21" unique_id=262045249]
-position = Vector2(-15, 393)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad" unique_id=226848656]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad" unique_id=2120102502]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad2" type="CharacterBody2D" parent="Level21" unique_id=1391949283]
-position = Vector2(57, 393)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad2" unique_id=1231895086]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad2" unique_id=1385638708]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad3" type="CharacterBody2D" parent="Level21" unique_id=764026305]
-position = Vector2(-19, 345)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad3" unique_id=2074232008]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad3" unique_id=316654382]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad4" type="CharacterBody2D" parent="Level21" unique_id=1497676834]
-position = Vector2(53, 345)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad4" unique_id=1918533250]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad4" unique_id=270389934]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad5" type="CharacterBody2D" parent="Level21" unique_id=1517065397]
-position = Vector2(-20, 291)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad5" unique_id=682886866]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad5" unique_id=1758852871]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad6" type="CharacterBody2D" parent="Level21" unique_id=683724677]
-position = Vector2(52, 291)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad6" unique_id=667677228]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad6" unique_id=1162344550]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad7" type="CharacterBody2D" parent="Level21" unique_id=441426715]
-position = Vector2(-24, 243)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad7" unique_id=1874242291]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad7" unique_id=795603390]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad8" type="CharacterBody2D" parent="Level21" unique_id=864050274]
-position = Vector2(48, 243)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad8" unique_id=1242018298]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad8" unique_id=647699411]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad9" type="CharacterBody2D" parent="Level21" unique_id=921091175]
-position = Vector2(153, 389)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad9" unique_id=288060944]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad9" unique_id=2040490208]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad10" type="CharacterBody2D" parent="Level21" unique_id=410420491]
-position = Vector2(225, 389)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad10" unique_id=1228598367]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad10" unique_id=1044898582]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad11" type="CharacterBody2D" parent="Level21" unique_id=309908791]
-position = Vector2(149, 341)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad11" unique_id=636224415]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad11" unique_id=613863880]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad12" type="CharacterBody2D" parent="Level21" unique_id=769277856]
-position = Vector2(221, 341)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad12" unique_id=1787661210]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad12" unique_id=37416686]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad13" type="CharacterBody2D" parent="Level21" unique_id=2021463108]
-position = Vector2(148, 287)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad13" unique_id=1232048720]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad13" unique_id=699670302]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad14" type="CharacterBody2D" parent="Level21" unique_id=1148252404]
-position = Vector2(220, 287)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad14" unique_id=843522979]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad14" unique_id=208918110]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad15" type="CharacterBody2D" parent="Level21" unique_id=1135232676]
-position = Vector2(144, 239)
-script = ExtResource("32_8o6f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad15" unique_id=1702537168]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad15" unique_id=495610163]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
-
-[node name="ant_bad16" type="CharacterBody2D" parent="Level21" unique_id=960954526]
-position = Vector2(216, 239)
-script = ExtResource("32_8o6f4")
+[node name="ant_bad16" type="RigidBody2D" parent="Level21" unique_id=1762523729]
+position = Vector2(1024, -544)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_2fcfa")
+gravity_scale = 0.0
+inertia = 0.87
+script = ExtResource("35_k3bdf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad16" unique_id=1621437095]
 rotation = -1.5707964
@@ -696,7 +516,23 @@ shape = SubResource("CapsuleShape2D_8eujr")
 [node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad16" unique_id=1610488852]
 rotation = 1.5707964
 scale = Vector2(3, 3)
-texture = ExtResource("33_5c77v")
+texture = ExtResource("36_jirgc")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad16" unique_id=969533419]
+script = ExtResource("35_jirgc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad16/Area2D" unique_id=1044489234]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_k3bdf")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad16/Area2D" unique_id=2063081963]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_jirgc")
 
 [connection signal="moved_mouse" from="Level21/Player" to="Level21/Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Level21/Player/Monitor_1/Computer/Window/XButton" to="Level21/Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
@@ -712,5 +548,6 @@ texture = ExtResource("33_5c77v")
 [connection signal="body_exited" from="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" to="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" method="_on_body_exited"]
 [connection signal="close_obstacle" from="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" to="Level21/DisapearingPlaceholder2" method="_on_disapear_button_close_obstacle"]
 [connection signal="get_mouse_to_finish" from="Level21/Finish" to="Level21/Player" method="_on_finish_get_mouse_to_finish"]
+[connection signal="body_entered" from="Level21/ant_bad16/Area2D" to="Level21/ant_bad16/Area2D" method="_on_body_entered"]
 
 [editable path="Level21/CanvasLayer"]

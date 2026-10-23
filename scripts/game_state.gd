@@ -20,6 +20,8 @@ var levels = [
 	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},
 	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn"},
 	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
+	
+	{"name": "Just one ant", "scene": "res://scenes/level_22.tscn"},
 ]
 var unlocked = 1
 var done = [] 
