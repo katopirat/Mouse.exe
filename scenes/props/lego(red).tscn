@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bwou58xy0yuj7"]
+
+[ext_resource type="Texture2D" uid="uid://dqajn77bi8ufk" path="res://assets/images/lego(red).png" id="1_uo7q5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1hta"]
+size = Vector2(68, 52)
+
+[node name="lego(RED)" type="Node2D" unique_id=132692602]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2099627870]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=581233461]
+shape = SubResource("RectangleShape2D_w1hta")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=172985363]
+scale = Vector2(3, 3)
+texture = ExtResource("1_uo7q5")
