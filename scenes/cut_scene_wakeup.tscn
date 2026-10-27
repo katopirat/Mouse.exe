@@ -687,6 +687,7 @@ mouse_filter = 2
 
 [node name="AnimationTree" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=927830465]
 libraries/ = SubResource("AnimationLibrary_wygpf")
+autoplay = &"screen_open"
 
 [node name="Keyboard" parent="cutscene intro/Node2D" unique_id=1763995382 instance=ExtResource("7_8vvum")]
 position = Vector2(-187, 6)
@@ -961,5 +962,6 @@ offset_bottom = 521.54016
 scale = Vector2(4.1771574, 4.1771574)
 text = "Oh no it was just a dream, I need to get there! :("
 click_to_close = true
+wait_time = 5.0
 
 [connection signal="window_closed" from="DialogWindow" to="." method="_on_dialog_window_window_closed"]

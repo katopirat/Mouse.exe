@@ -10,6 +10,8 @@ extends PanelContainer
 @export var animated : bool
 var closed = false
 signal window_closed
+@onready var skip_animation = false
+@export var wait_time: float
 
 @onready var waiting_time: Dictionary = {
 	",": 0.5,
@@ -24,11 +26,13 @@ func _ready() -> void:
 	
 var started = false
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("dialog") and !skip_animation:
+		skip_animation = true
 	if start :
 		start_talk()
 		start = false
 		started = true
-	if click_to_close and started == true and Input.is_action_just_pressed("dialog") and closed == false:
+	if click_to_close and started == true and skip_animation and closed == false:
 		closed = true
 		$AudioStreamPlayer.stop()
 		if animated:
@@ -65,4 +69,7 @@ func start_talk():
 			await get_tree().create_timer(randf_range(min_time,max_time)).timeout
 		
 	$AudioStreamPlayer.stop()
+	if wait_time:
+		await get_tree().create_timer(wait_time).timeout
+		skip_animation = true
 	
