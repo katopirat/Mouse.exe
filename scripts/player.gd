@@ -36,7 +36,8 @@ func _ready() -> void:
 		shader_animation.play("screen_open")
 		await shader_animation.animation_finished
 		shader_animation.play("RESET")
-	Global.player_can_move = true
+	if not $AnimationPlayer:
+		Global.player_can_move = true
 func _physics_process(delta: float) -> void:
 	push = push.move_toward(Vector2.ZERO, 3000 * delta)
 	if Input.is_action_just_pressed("godmode") and god_mode and Global.player_can_move:

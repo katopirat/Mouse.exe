@@ -610,3 +610,4 @@ position_smoothing_speed = 4.5
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
 [connection signal="moved_mouse" from="Player" to="Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
+[connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
