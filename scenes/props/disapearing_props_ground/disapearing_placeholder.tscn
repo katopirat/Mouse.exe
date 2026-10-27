@@ -14,8 +14,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_haanl"]
-radius = 65.03076
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vcn3e"]
+radius = 10.666667
 
 [node name="DisapearingPlaceholder" type="StaticBody2D" unique_id=1165169790]
 scale = Vector2(3, 3)
@@ -25,5 +25,6 @@ script = ExtResource("1_atqul")
 sprite_frames = SubResource("SpriteFrames_iopsf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=384168989]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_haanl")
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(6.2613635, 4.0336175)
+shape = SubResource("CapsuleShape2D_vcn3e")

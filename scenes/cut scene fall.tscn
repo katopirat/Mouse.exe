@@ -365,9 +365,25 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.46666667)
 }
 
+[sub_resource type="Animation" id="Animation_cr2r5"]
+resource_name = "fall"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
 [sub_resource type="Animation" id="Animation_m7ht0"]
 resource_name = "glitch_close"
-length = 0.73333335
+length = 0.8333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -479,9 +495,224 @@ tracks/3/keys = {
 _data = {
 &"RESET": SubResource("Animation_4ikbi"),
 &"close_screen": SubResource("Animation_yyda8"),
+&"fall": SubResource("Animation_cr2r5"),
 &"glitch_close": SubResource("Animation_m7ht0"),
 &"screen_open": SubResource("Animation_wygpf")
 }
+
+[sub_resource type="Animation" id="Animation_sixpf"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/curvature")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/aberration")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../CanvasLayer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_agtwc"]
+resource_name = "fade_in"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.9, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/curvature")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.9),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.9, 3.1000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.9350000444125]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/aberration")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.9, 2.9333334, 3.0666666, 3.1666667, 3.6000001),
+"transitions": PackedFloat32Array(1, 4.1410527, 36.758354, 0.4204478, 1.4640859),
+"update": 0,
+"values": [0.0, 0.1970000093575, 0.0070000003325, 0.0550000026125, 0.3450000163875]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.9, 3.1000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.40400001919]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../CanvasLayer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.011),
+"transitions": PackedFloat32Array(15.454959, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvylm"]
+_data = {
+&"RESET": SubResource("Animation_sixpf"),
+&"fade_in": SubResource("Animation_agtwc")
+}
+
+[sub_resource type="Shader" id="Shader_5hs24"]
+code = "shader_type canvas_item;
+
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+
+uniform float scanline_strength : hint_range(0.0, 1.0) = 0.12;
+uniform float curvature : hint_range(0.0, 0.5) = 0.04;
+uniform float vignette_strength : hint_range(0.0, 50.0) = 0.25;
+uniform float aberration : hint_range(0.0, 0.5) = 0.0015;
+uniform float noise_strength : hint_range(0.0, 10.0) = 0.1;
+uniform vec4 tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+
+float rand(vec2 co) {
+	return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void fragment() {
+	// lokální souřadnice v rámci obdélníku monitoru (0-1)
+	vec2 centered = UV * 2.0 - 1.0;
+	float r2 = dot(centered, centered);
+	vec2 warp_offset = centered * curvature * r2 * 0.5;
+
+	if (UV.x + warp_offset.x < 0.0 || UV.x + warp_offset.x > 1.0 || UV.y + warp_offset.y < 0.0 || UV.y + warp_offset.y > 1.0) {
+		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
+	} else {
+		// vzorkuje se ze skutečné obrazovkové pozice, ne z lokálního UV
+		vec2 screen_uv = SCREEN_UV + warp_offset;
+
+		float r = texture(SCREEN_TEXTURE, screen_uv + vec2(aberration, 0.0)).r;
+		float g = texture(SCREEN_TEXTURE, screen_uv).g;
+		float b = texture(SCREEN_TEXTURE, screen_uv - vec2(aberration, 0.0)).b;
+		vec3 col = vec3(r, g, b);
+
+		float scanline = sin(UV.y * 800.0 - TIME * 5.0) * 0.5 + 0.5;
+		col *= 1.0 - scanline_strength * scanline;
+
+		float vignette = 1.0 - vignette_strength * r2;
+		col *= vignette;
+
+		float n = rand(UV + vec2(TIME * 0.001, 0.0));
+		col += (n - 0.5) * noise_strength;
+
+		col *= tint.rgb;
+
+		COLOR = vec4(col, 1.0);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vh4c0"]
+shader = SubResource("Shader_5hs24")
+shader_parameter/scanline_strength = 0.0
+shader_parameter/curvature = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/aberration = 0.0
+shader_parameter/noise_strength = 0.0
+shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o28wv"]
 texture = ExtResource("3_4uj5c")
@@ -957,6 +1188,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-65541, 65537, 1, -5, 1, 0, 65531, 1, 0, 131067, 1, 0, -65540, 65537, 1, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, -65539, 65537, 1, -3, 1, 0, 65533, 1, 0, 131069, 1, 0, -65538, 65537, 1, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, -65537, 65537, 1, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, -131072, 65537, 1, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, -131071, 65537, 1, -65535, 1, 0, 1, 1, 0, 65537, 1, 0, -131070, 65537, 1, -65534, 1, 0, 2, 1, 0, 65538, 1, 0, 131066, 196609, 0, 65530, 1, 0, -6, 1, 0, -65542, 65537, 1, -65544, 65537, 1, -8, 1, 0, 65528, 1, 0, 131064, 1, 0, -65543, 65537, 1, -7, 1, 0, 65529, 1, 0, 131065, 1, 0, 131074, 65537, 2, 131073, 65537, 2, 131072, 65537, 2, 196607, 65537, 2, 196606, 65537, 2, 196605, 65537, 2, 196604, 65537, 2, 196603, 65537, 2, 196602, 65537, 2, 196601, 65537, 2, 196600, 65537, 2, 196599, 65537, 2, 196598, 65537, 2, 196597, 65537, 2, 196596, 65537, 2, 196595, 65537, 2, 196594, 65537, 2, 196593, 65537, 2, 196592, 65537, 2, 196591, 1, 2, -65553, 1, 1, -65552, 65537, 1, -65551, 65537, 1, -65550, 65537, 1, -65549, 65537, 1, -65548, 65537, 1, -65547, 65537, 1, -65546, 65537, 1, -65545, 65537, 1, 131055, 196609, 1, 65519, 196609, 1, -17, 196609, 1, -9, 1, 0, -10, 1, 0, -11, 1, 0, -12, 1, 0, -13, 1, 0, -14, 1, 0, -15, 1, 0, -16, 1, 0, 65520, 1, 0, 65521, 1, 0, 131056, 1, 0, 131057, 1, 0, 65522, 1, 0, 65523, 1, 0, 131058, 1, 0, 131059, 1, 0, 131060, 1, 0, 131061, 1, 0, 65525, 1, 0, 131062, 1, 0, 65526, 1, 0, 65527, 1, 0, 131063, 1, 0, 65524, 1, 0, -131069, 131073, 1, -65533, 262145, 1, 3, 262145, 1, 65539, 262145, 1, 131075, 131073, 2)
 
 [node name="TileMapDotted" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=133169600 groups=["table"]]
+visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("4_queo0")
@@ -1073,7 +1305,27 @@ mouse_filter = 2
 [node name="AnimationTree" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=927830465]
 libraries/ = SubResource("AnimationLibrary_wygpf")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=1526712368]
+root_node = NodePath("ColorRect")
+libraries/ = SubResource("AnimationLibrary_nvylm")
+autoplay = &"fade_in"
+playback_auto_capture = false
+speed_scale = 1.5
+
+[node name="ColorRect" type="ColorRect" parent="cutscene intro/Node2D/CanvasLayer/AnimationPlayer" unique_id=189335927]
+material = SubResource("ShaderMaterial_vh4c0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.18039216)
+metadata/_edit_use_anchors_ = true
+
 [node name="Ground" type="TileMap" parent="cutscene intro" unique_id=1368855412]
+visible = false
 z_index = -30
 position = Vector2(-0.45454544, 0.9090909)
 scale = Vector2(3, 3)
