@@ -1,6 +1,6 @@
 extends Node
 @onready var menu: PackedScene = preload("res://scenes/menu_2.tscn")
-
+var boss = 0
 var levels = [ 
 	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
 	{"name": "The Button", "scene": "res://scenes/level_1.tscn"},
@@ -10,7 +10,9 @@ var levels = [
 	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
 	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
-
+	
+	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
+	
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
 	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
 	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
@@ -57,3 +59,4 @@ func finish_level(final_time):
 
 func get_best_time(level):
 	return best_times[level]
+	
