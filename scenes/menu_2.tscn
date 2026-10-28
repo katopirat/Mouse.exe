@@ -8,9 +8,7 @@
 [ext_resource type="Script" uid="uid://be47rc3mkudbx" path="res://scripts/os_cursor.gd" id="4_4lxen"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="5_4lxen"]
 [ext_resource type="Script" uid="uid://c1k71ngt80did" path="res://scripts/os_menu.gd" id="6_4lxen"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="7_bm2pj"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="7_gatg3"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="8_5glwp"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="8_aa5x7"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="16_gatg3"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_l7gj0"]
@@ -38,6 +36,9 @@ size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
 size = Vector2(11.984121, 10.894657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
+size = Vector2(58.104824, 11.257809)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(502.14786, 313.59772)
@@ -519,11 +520,16 @@ offset_bottom = 115.019165
 [node name="HBoxContainer" type="HBoxContainer" parent="Monitor_1/Computer/Os_menu/Taskbar" unique_id=625299808]
 layout_mode = 2
 
-[node name="Button" type="TextureButton" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=1890639864]
+[node name="Achievements" type="Button" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=631960395]
 layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("7_bm2pj")
-texture_pressed = ExtResource("8_5glwp")
+theme_type_variation = &"FlatButton"
+text = "Achievements"
+
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Achievements" unique_id=766256369 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Achievements/Area2D" unique_id=1491332637]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_3v8a5")
 
 [node name="Panel" type="PanelContainer" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=331787499]
 layout_mode = 2

@@ -40,7 +40,6 @@ func funkce_ktera_dela_to_ze_ruka_placne_mys():
 	shadow.visible = true
 	shadow.modulate = Color(0.0, 0.0, 0.0, 0.588)
 	shadow.material.set_shader_parameter("color",Color(0.0, 0.0, 0.0, 1.0))
-	
 	for i in 60 :
 		shadow.global_position = shadow.global_position.lerp(player.global_position, 0.1)
 		await get_tree().process_frame
@@ -57,9 +56,7 @@ func funkce_ktera_dela_to_ze_ruka_placne_mys():
 	tw.tween_property(hand,"scale",Vector2(3.0,3.0),0.1)
 	tw.tween_property(shadow,"scale",Vector2(2.0,2.0),0.1)
 	await get_tree().create_timer(0.1).timeout
-	
 	shadow.visible = false 
-	
 	camera.shake_intensity = 10
 	await get_tree().physics_frame
 	await get_tree().physics_frame
@@ -68,7 +65,7 @@ func funkce_ktera_dela_to_ze_ruka_placne_mys():
 			a.die()
 		print(a.name)
 	$Hand/StaticBody2D/CollisionShape2D.disabled = false
-			
+					
 	await get_tree().create_timer(2.0).timeout
 	hand.visible = false
 	$Hand/StaticBody2D/CollisionShape2D.disabled = true
