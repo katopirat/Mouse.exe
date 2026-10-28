@@ -31,6 +31,8 @@ func _process(delta: float) -> void:
 	money_to_spend.emit(player_money)
 	bitcoin_label.text = str(snapped(bitcoin_bought, 0.01)) + "B"
 	time_accumulated += delta
+	if player_money >= 5000:
+		$"../../../../Achievements".completed_achievement("Stonks!")
 	if time_accumulated >= time_between_change:
 		bitcoin_price = max(10, int(randf_range(1+min_change, 1+max_change) * bitcoin_price)) # toto taky - ok
 		

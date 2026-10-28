@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="22_icsfv"]
 [ext_resource type="Texture2D" uid="uid://cmnf37x18l31w" path="res://assets/images/mice-coin.png" id="23_6e4so"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="23_ciel5"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="26_j1fqf"]
 [ext_resource type="Texture2D" uid="uid://55l6stqtfnbd" path="res://assets/images/Myš¡orange.png" id="26_lgjvf"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="28_wd513"]
 
@@ -544,6 +545,9 @@ position = Vector2(203, 200)
 texture = ExtResource("23_6e4so")
 
 [node name="level namnam" type="CanvasLayer" parent="Player/Monitor_1/Computer" unique_id=2101524450]
+
+[node name="Achievements" parent="Player" unique_id=1807818859 instance=ExtResource("26_j1fqf")]
+position = Vector2(-658, -448)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)
