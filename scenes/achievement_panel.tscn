@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://hcg0w0cf5tt4"]
+
+[ext_resource type="Texture2D" uid="uid://0s8dopf7tdwc" path="res://achievements_textures/Button Masher.png" id="1_gun1d"]
+[ext_resource type="Script" uid="uid://dlcrtos1ccmfl" path="res://scenes/achievement_panel.gd" id="1_qwyrb"]
+[ext_resource type="Texture2D" uid="uid://d1ttk172spusb" path="res://docs/index.icon.png" id="2_qwyrb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8sno"]
+
+[node name="AchievementPanel" type="PanelContainer" unique_id=296331006]
+size_flags_horizontal = 3
+script = ExtResource("1_qwyrb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=433283527]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=407009379]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
+
+[node name="AchievemntIcon" type="TextureRect" parent="HBoxContainer/PanelContainer" unique_id=1009098519]
+modulate = Color(0.1728327, 0.17283267, 0.17283267, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_gun1d")
+expand_mode = 3
+
+[node name="Lock" type="TextureRect" parent="HBoxContainer/PanelContainer" unique_id=1368846292]
+modulate = Color(1, 1, 1, 0.49411765)
+layout_mode = 2
+texture = ExtResource("2_qwyrb")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=154897]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1533102927]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Button master"
+
+[node name="Description" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1144172257]
+layout_mode = 2
+theme_type_variation = &"LabelMuted"
+theme_override_font_sizes/font_size = 20
+text = "blahblah"

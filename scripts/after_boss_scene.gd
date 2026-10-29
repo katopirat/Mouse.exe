@@ -11,3 +11,7 @@ func _ready() -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	Global.player_can_move = true
+
+
+func _on_achievements_pressed() -> void:
+	pass # Replace with function body.
