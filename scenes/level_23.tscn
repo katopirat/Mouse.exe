@@ -15,7 +15,10 @@
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="13_w3d0a"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="14_8fccs"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="15_an2v5"]
+[ext_resource type="Script" uid="uid://d1jb8rhmvu4ww" path="res://scripts/cookie_clicker.gd" id="16_m7iwf"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="17_oqyvq"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="20_bbojh"]
+[ext_resource type="Script" uid="uid://d1rydww371j8h" path="res://scripts/upgrade.gd" id="20_x7fx0"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="21_q4jd7"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_mfknm"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_6v3yu"]
@@ -29,11 +32,15 @@
 [ext_resource type="Script" uid="uid://c2b8x1uk0iv1u" path="res://scripts/cookie.gd" id="31_kiae0"]
 [ext_resource type="Texture2D" uid="uid://d1ttk172spusb" path="res://docs/index.icon.png" id="31_x7fx0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhy8v"]
-size = Vector2(21, 259)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
+radius = 141.0
+height = 282.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(474.687, 295)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhy8v"]
+size = Vector2(21, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iopsf"]
 size = Vector2(1, 1)
@@ -62,6 +69,9 @@ animations = [{
 "name": &"hovered",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xvhx"]
+size = Vector2(75, 41)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xwac"]
 texture = ExtResource("27_1j7er")
@@ -160,11 +170,25 @@ sources/0 = SubResource("TileSetAtlasSource_6xwac")
 sources/1 = SubResource("TileSetAtlasSource_vcn3e")
 sources/2 = SubResource("TileSetAtlasSource_722ah")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
-radius = 141.0
-height = 282.0
-
 [node name="Level23" type="Node2D" unique_id=659635860]
+
+[node name="Cookie" type="Area2D" parent="." unique_id=1661023973]
+position = Vector2(-260, -94)
+collision_mask = 2
+script = ExtResource("31_kiae0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cookie" unique_id=468421828]
+position = Vector2(17.000008, 4.0000095)
+scale = Vector2(2.0625002, 1.8593751)
+texture = ExtResource("31_x7fx0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cookie" unique_id=679631983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie/StaticBody2D" unique_id=624916268]
+shape = SubResource("CapsuleShape2D_iopsf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie" unique_id=1267737456]
+shape = SubResource("CapsuleShape2D_iopsf")
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_oqyvq")]
 
@@ -182,6 +206,14 @@ position = Vector2(-576, -323)
 [node name="Computer" type="Node2D" parent="Player/Monitor_1" unique_id=1439863440]
 position = Vector2(17, 17)
 
+[node name="Area2D" type="Area2D" parent="Player/Monitor_1/Computer" unique_id=578214211]
+position = Vector2(16.312988, 4)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Area2D" unique_id=584016773]
+position = Vector2(227.3435, 137.5)
+shape = SubResource("RectangleShape2D_gyjbk")
+
 [node name="Borders" type="StaticBody2D" parent="Player/Monitor_1/Computer" unique_id=1379032280]
 position = Vector2(32, 3)
 collision_layer = 2
@@ -197,13 +229,6 @@ offset_top = 4.0
 offset_right = 467.68704
 offset_bottom = 274.0
 texture = ExtResource("4_rgtdq")
-
-[node name="Area2D" type="Area2D" parent="Player/Monitor_1/Computer/MonitorBackground" unique_id=578214211]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/MonitorBackground/Area2D" unique_id=584016773]
-position = Vector2(227.3435, 137.5)
-shape = SubResource("RectangleShape2D_gyjbk")
 
 [node name="MonitorBorder" type="TextureRect" parent="Player/Monitor_1/Computer" unique_id=827783977]
 z_index = 11
@@ -292,13 +317,51 @@ sprite_frames = SubResource("SpriteFrames_iopsf")
 offset = Vector2(0.275, -0.19)
 
 [node name="CookieClicker" type="Node2D" parent="Player/Monitor_1/Computer/Window" unique_id=123092255]
+script = ExtResource("16_m7iwf")
 
 [node name="MoneyLabel" type="Label" parent="Player/Monitor_1/Computer/Window/CookieClicker" unique_id=469894614]
 offset_left = 114.0
 offset_top = 74.99999
 offset_right = 154.0
 offset_bottom = 97.99999
+theme_override_fonts/font = ExtResource("17_oqyvq")
 text = "Money"
+
+[node name="CpsLabel" type="Label" parent="Player/Monitor_1/Computer/Window/CookieClicker" unique_id=521130011]
+offset_left = 176.0
+offset_top = 74.99999
+offset_right = 216.0
+offset_bottom = 97.99999
+theme_override_fonts/font = ExtResource("17_oqyvq")
+text = "cps"
+
+[node name="Upgrades" type="Node2D" parent="Player/Monitor_1/Computer/Window/CookieClicker" unique_id=886082461]
+
+[node name="ClickPower" type="Area2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades" unique_id=604172360 groups=["clickable"]]
+position = Vector2(123, 106.999985)
+script = ExtResource("20_x7fx0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/ClickPower" unique_id=1003358052]
+position = Vector2(27.5, 10.499998)
+shape = SubResource("RectangleShape2D_4xvhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/ClickPower" unique_id=591421220]
+position = Vector2(27.5, 10.499992)
+scale = Vector2(0.6484375, 0.33593753)
+texture = ExtResource("31_x7fx0")
+
+[node name="Autoclicker" type="Area2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades" unique_id=12924755 groups=["clickable"]]
+position = Vector2(123, 106.999985)
+script = ExtResource("20_x7fx0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/Autoclicker" unique_id=1915750594]
+position = Vector2(27.5, 10.499998)
+shape = SubResource("RectangleShape2D_4xvhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/Autoclicker" unique_id=1487953017]
+position = Vector2(27.5, 10.499992)
+scale = Vector2(0.6484375, 0.33593753)
+texture = ExtResource("31_x7fx0")
 
 [node name="level namnam" type="CanvasLayer" parent="Player/Monitor_1" unique_id=1104132345]
 
@@ -371,28 +434,13 @@ layer_0/tile_data = PackedInt32Array(-327682, 196609, 1, -262146, 196609, 1, -19
 position = Vector2(-220, -745)
 scale = Vector2(2.48, 2)
 
-[node name="Cookie" type="Area2D" parent="." unique_id=1661023973]
-position = Vector2(-260, -94)
-collision_mask = 2
-script = ExtResource("31_kiae0")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cookie" unique_id=468421828]
-position = Vector2(17.000008, 4.0000095)
-scale = Vector2(2.0625002, 1.8593751)
-texture = ExtResource("31_x7fx0")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Cookie" unique_id=679631983]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie/StaticBody2D" unique_id=624916268]
-shape = SubResource("CapsuleShape2D_iopsf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie" unique_id=1267737456]
-shape = SubResource("CapsuleShape2D_iopsf")
-
+[connection signal="cookie_clicked" from="Cookie" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_cookie_cookie_clicked"]
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]
 [connection signal="closed" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window" method="_on_x_button_closed"]
+[connection signal="upgrade" from="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/ClickPower" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_click_power_upgrade"]
+[connection signal="upgrade" from="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades/Autoclicker" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_autoclicker_upgrade"]
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 
 [editable path="CanvasLayer"]
