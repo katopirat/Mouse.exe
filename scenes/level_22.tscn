@@ -35,10 +35,12 @@
 [ext_resource type="PackedScene" uid="uid://bwou58xy0yuj7" path="res://scenes/props/lego(red).tscn" id="32_i0cjb"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="32_seooc"]
 [ext_resource type="Script" uid="uid://bu2ysepnqo70y" path="res://ant_bad_16.gd" id="33_cfjfq"]
-[ext_resource type="Texture2D" uid="uid://bmumht585ruyk" path="res://assets/images/ant(red).png" id="34_i0cjb"]
 [ext_resource type="Script" uid="uid://b2ju237oyi565" path="res://scenes/area_2d.gd" id="35_kvfg4"]
+[ext_resource type="PackedScene" uid="uid://o5hs7quxi5f" path="res://scenes/props/chess_board.tscn" id="35_y20oa"]
 [ext_resource type="PackedScene" uid="uid://br7ckvgudcubn" path="res://scenes/puff(beer).tscn" id="36_cfjfq"]
+[ext_resource type="Texture2D" uid="uid://dyk61we88pkws" path="res://assets/images/ant(black).png" id="37_y20oa"]
 [ext_resource type="PackedScene" uid="uid://y80g3d1ogld5" path="res://scenes/props/lego(blue).tscn" id="38_kvfg4"]
+[ext_resource type="PackedScene" uid="uid://du26mi400j41t" path="res://scenes/props/note_thing.tscn" id="41_ekn6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -522,11 +524,11 @@ rotation = -0.0009686947
 [node name="Walls" type="StaticBody2D" parent="Level21" unique_id=1667445927]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/Walls" unique_id=452634398]
-position = Vector2(198.75, 551)
+position = Vector2(196, 588)
 shape = SubResource("RectangleShape2D_xe3em")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/Walls" unique_id=879270955]
-position = Vector2(199, -704)
+position = Vector2(181, -683)
 shape = SubResource("RectangleShape2D_xe3em")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Level21/Walls" unique_id=961278206]
@@ -538,6 +540,9 @@ shape = SubResource("RectangleShape2D_xe3em")
 position = Vector2(-1140, -264.875)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xe3em")
+
+[node name="chess board" parent="Level21/Walls" unique_id=1519207098 instance=ExtResource("35_y20oa")]
+position = Vector2(1133, -370)
 
 [node name="ant_bad16" type="RigidBody2D" parent="Level21" unique_id=1762523729]
 position = Vector2(1024, -544)
@@ -553,7 +558,7 @@ shape = SubResource("CapsuleShape2D_8eujr")
 [node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad16" unique_id=1610488852]
 rotation = 1.5707964
 scale = Vector2(3, 3)
-texture = ExtResource("34_i0cjb")
+texture = ExtResource("37_y20oa")
 
 [node name="Area2D" type="Area2D" parent="Level21/ant_bad16" unique_id=969533419]
 script = ExtResource("35_kvfg4")
@@ -571,12 +576,50 @@ rotation = -3.1415925
 scale = Vector2(4.7315087, -4.4581966)
 shape = SubResource("RectangleShape2D_jirgc")
 
+[node name="ant_bad17" type="RigidBody2D" parent="Level21" unique_id=896361302]
+position = Vector2(1167, -521)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_2fcfa")
+gravity_scale = 0.0
+script = ExtResource("33_cfjfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad17" unique_id=1049637851]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_8eujr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad17" unique_id=225284293]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_y20oa")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad17" unique_id=1214915819]
+script = ExtResource("35_kvfg4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad17/Area2D" unique_id=1842165523]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_k3bdf")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad17/Area2D" unique_id=1835928763]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_jirgc")
+
 [node name="puff(beer)" parent="." unique_id=206520690 instance=ExtResource("36_cfjfq")]
 z_index = -1
 position = Vector2(-137, -455)
 
 [node name="lego(BLUE)" parent="." unique_id=813759164 instance=ExtResource("38_kvfg4")]
 position = Vector2(-860, 297)
+
+[node name="lego(BLUE)2" parent="." unique_id=627800426 instance=ExtResource("38_kvfg4")]
+position = Vector2(440, -453)
+
+[node name="note thing" parent="." unique_id=234277861 instance=ExtResource("41_ekn6h")]
+position = Vector2(-86, 144)
 
 [connection signal="moved_mouse" from="Level21/Player" to="Level21/Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Level21/Player/Monitor_1/Computer/Window/XButton" to="Level21/Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
@@ -593,5 +636,6 @@ position = Vector2(-860, 297)
 [connection signal="close_obstacle" from="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" to="Level21/DisapearingPlaceholder2" method="_on_disapear_button_close_obstacle"]
 [connection signal="get_mouse_to_finish" from="Level21/Finish" to="Level21/Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="body_entered" from="Level21/ant_bad16/Area2D" to="Level21/ant_bad16/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad17/Area2D" to="Level21/ant_bad17/Area2D" method="_on_body_entered"]
 
 [editable path="Level21/CanvasLayer"]
