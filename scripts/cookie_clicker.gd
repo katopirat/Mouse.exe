@@ -3,7 +3,7 @@ extends Node2D
 @onready var player_money: float = 0.0
 
 @onready var money_per_click: float = 0.05
-@onready var click_power_cost: float = 20.0
+@onready var click_power_cost: float = 10.0
 
 @onready var autoclicker_cps: float = 0
 @onready var autoclicker_cost: float = 1
@@ -48,8 +48,8 @@ func _on_click_power_upgrade() -> void:
 	if click_power_cost > player_money:
 		return
 	player_money -= click_power_cost
-	click_power_cost *= 2
-	money_per_click = snapped(money_per_click*1.5, 0.01)
+	click_power_cost = snapped(click_power_cost*1.8, 0.01)
+	money_per_click = snapped(money_per_click*2, 0.01)
 	$Upgrades/ClickPower/CostLabel.text = "$" + str(click_power_cost)
 	$Upgrades/ClickPower/ValueLabel.text = str(money_per_click) + " /click"
 
@@ -63,10 +63,8 @@ func _on_autoclicker_upgrade() -> void:
 		autoclicker_cps = 1
 		autoclicker(autoclicker_cps)
 	else:
-		print(autoclicker_cps)
-		print(floori(autoclicker_cps))
-		autoclicker_cps += floori(autoclicker_cps)*0.1
-		print(autoclicker_cps)
+		
+		autoclicker_cps += floori(autoclicker_cps)*0.25
 		
 	$Upgrades/Autoclicker/ValueLabel.text = str(autoclicker_cps) + " cps"
 	$Upgrades/Autoclicker/CostLabel.text = "$" + str(autoclicker_cost)
@@ -80,4 +78,4 @@ func autoclicker(cps: float):
 
 
 func _on_disapear_button_bought_button(price: int) -> void:
-	pass # Replace with function body.
+	player_money -= price
