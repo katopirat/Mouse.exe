@@ -28,9 +28,7 @@
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="20_r7cvq"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="21_dx64l"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="21_epfji"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_acdgk"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_enqdf"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_tpdgj"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="24_lgfmy"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="25_5kl8g"]
 
@@ -542,12 +540,6 @@ script = ExtResource("21_dx64l")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor/Os/PanelContainer" unique_id=1350891634]
 layout_mode = 2
-
-[node name="Button" type="TextureButton" parent="Player/Monitor/Os/PanelContainer/HBoxContainer2" unique_id=814122177]
-layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("22_acdgk")
-texture_pressed = ExtResource("23_tpdgj")
 
 [node name="Panel" type="PanelContainer" parent="Player/Monitor/Os/PanelContainer/HBoxContainer2" unique_id=1607630207]
 layout_mode = 2

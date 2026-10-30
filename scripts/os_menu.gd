@@ -77,7 +77,7 @@ func level_menu_refresh():
 		
 		button.custom_minimum_size = Vector2(28, 16)
 		button.text = str(i + 1)
-		
+
 		if i >= GameState.unlocked:
 			button.text = "-"
 			button.disabled = true

@@ -2,16 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_2alun"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="2_gsyel"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="3_vfy2i"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="4_e36i4"]
 [ext_resource type="Script" uid="uid://g7xbu6w4da5s" path="res://scripts/achievements_window.gd" id="5_wsyoc"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="6_bvkyb"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="7_evtm5"]
 [ext_resource type="PackedScene" uid="uid://hcg0w0cf5tt4" path="res://scenes/achievement_panel.tscn" id="8_pr4hh"]
 [ext_resource type="Script" uid="uid://dyl52k0ssdpqx" path="res://scripts/start_menu.gd" id="9_bvkyb"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
-size = Vector2(31.81818, 11.363636)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evtm5"]
 size = Vector2(58.104824, 11.257809)
@@ -43,18 +38,6 @@ script = ExtResource("2_gsyel")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer" unique_id=1148593156]
 layout_mode = 2
-
-[node name="Button" type="TextureButton" parent="PanelContainer/HBoxContainer2" unique_id=979579631]
-layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("3_vfy2i")
-texture_pressed = ExtResource("4_e36i4")
-
-[node name="Area2D" type="Area2D" parent="PanelContainer/HBoxContainer2/Button" unique_id=1365199718 groups=["clickable"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PanelContainer/HBoxContainer2/Button/Area2D" unique_id=1158835976]
-position = Vector2(14.72728, 4.5)
-shape = SubResource("RectangleShape2D_w8sno")
 
 [node name="Panel" type="PanelContainer" parent="PanelContainer/HBoxContainer2" unique_id=1898034301]
 layout_mode = 2
