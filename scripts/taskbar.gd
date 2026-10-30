@@ -1,11 +1,13 @@
 extends PanelContainer
 
 var timer_start = 0 
-@onready var player = $"../../.."
+var player 
 var p_position
+
 @onready var label = %Time
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	player = get_tree().get_nodes_in_group("player")[0]
 	p_position = player.position
 
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ks11jk3u6ykm"
-path="res://.godot/imported/strenght button.png-fdbd1560ca4b22f1413a0df86c68c293.ctex"
+uid="uid://cvq511ukrctbn"
+path="res://.godot/imported/wall_tile.png-b837d796c1e1fd2cda260d387e68b94b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/strenght button.png"
-dest_files=["res://.godot/imported/strenght button.png-fdbd1560ca4b22f1413a0df86c68c293.ctex"]
+source_file="res://assets/images/wall_tile.png"
+dest_files=["res://.godot/imported/wall_tile.png-b837d796c1e1fd2cda260d387e68b94b.ctex"]
 
 [params]
 
