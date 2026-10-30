@@ -15,5 +15,5 @@ shape = SubResource("RectangleShape2D_adpup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=422452739]
 position = Vector2(1.9073486e-06, 3.8146973e-06)
-scale = Vector2(2, 1.892)
+scale = Vector2(2, 2)
 texture = ExtResource("1_08mii")

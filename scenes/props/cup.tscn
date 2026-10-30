@@ -13,8 +13,7 @@ point_count = 3
 colors = PackedColorArray(0.34898522, 0.09899867, 0, 1, 1, 1, 1, 1)
 
 [node name="cup" type="Node2D" unique_id=200577205]
-position = Vector2(544.00006, 331.00003)
-scale = Vector2(0.66986096, 0.66986096)
+position = Vector2(23, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=724010911]
 position = Vector2(-33, -33)
