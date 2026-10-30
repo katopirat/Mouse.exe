@@ -31,10 +31,7 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="25_63d2t"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="26_va6c3"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="28_bgibu"]
-[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="28_nquw4"]
-[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="29_3buw8"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="30_vwjju"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="31_rur20"]
+[ext_resource type="PackedScene" uid="uid://diagbiobwh2v1" path="res://scenes/task_bar.tscn" id="31_nquw4"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="32_3buw8"]
 
 [sub_resource type="Animation" id="Animation_x5vxs"]
@@ -101,14 +98,14 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
-size = Vector2(436, 31)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3qgb"]
 size = Vector2(22, 254)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8vl5"]
 size = Vector2(21, 287)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8hxo"]
+size = Vector2(436, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq2xo"]
 size = Vector2(1, 1)
@@ -304,7 +301,7 @@ visible_ratio = 0.0
 script = ExtResource("2_vwjju")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TitleLevelText/RichTextLabel" unique_id=545871978]
-root_node = NodePath("../../../Node2D/Player/Monitor_2/level namnam")
+root_node = NodePath("")
 libraries/ = SubResource("AnimationLibrary_4ypru")
 autoplay = &"level namnam"
 
@@ -403,10 +400,6 @@ collision_mask = 2
 position = Vector2(210, -10.875)
 shape = SubResource("RectangleShape2D_dfkaw")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1660540070]
-position = Vector2(208, 271.5)
-shape = SubResource("RectangleShape2D_i8hxo")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1956463531]
 position = Vector2(-10, 127)
 shape = SubResource("RectangleShape2D_r3qgb")
@@ -414,6 +407,10 @@ shape = SubResource("RectangleShape2D_r3qgb")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1666617494]
 position = Vector2(430.5, 142.5)
 shape = SubResource("RectangleShape2D_p8vl5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Borders" unique_id=1660540070]
+position = Vector2(208, 271.5)
+shape = SubResource("RectangleShape2D_i8hxo")
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=145601617]
 z_index = 10
@@ -533,51 +530,7 @@ position = Vector2(140, 55)
 [node name="ad2" parent="Node2D/Player/Monitor_2/Computer" unique_id=272590773 instance=ExtResource("15_0na3t")]
 position = Vector2(-14, -4)
 
-[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=2135047017]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 47.0
-offset_top = 22.0
-offset_right = 241.54546
-offset_bottom = 135.18182
-scale = Vector2(2.2, 2.2)
-theme = ExtResource("28_nquw4")
-
-[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=2052825722]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -97.272736
-offset_top = -14.545464
-offset_right = 95.45454
-offset_bottom = 0.45453644
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("29_3buw8")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=1332779430]
-layout_mode = 2
-
-[node name="Button" type="TextureButton" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1887664933]
-layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("30_vwjju")
-texture_pressed = ExtResource("31_rur20")
-
-[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1282160918]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_type_variation = &"PanelSunken"
-
-[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=411107948]
-unique_name_in_owner = true
-layout_mode = 2
-text = "19:33"
-
-[node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Monitor_2" unique_id=1104132345]
+[node name="TaskBar" parent="Node2D/Player/Monitor_2" unique_id=1380241330 instance=ExtResource("31_nquw4")]
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=1311915624]
 scale = Vector2(3, 3)

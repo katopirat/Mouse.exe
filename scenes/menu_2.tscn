@@ -683,9 +683,9 @@ position_smoothing_speed = 4.5
 position = Vector2(439, -362)
 scale = Vector2(0.8950945, 0.8950945)
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2043018432]
+[node name="Achivements" type="CanvasLayer" parent="." unique_id=2043018432]
 
-[node name="Achievements_window" type="Control" parent="CanvasLayer2" unique_id=1573809372]
+[node name="Achievements_window" type="Control" parent="Achivements" unique_id=1573809372]
 unique_name_in_owner = true
 visible = false
 layout_mode = 3
@@ -695,7 +695,7 @@ offset_bottom = 40.0
 theme = ExtResource("1_b7gx1")
 script = ExtResource("20_mv33c")
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2/Achievements_window" unique_id=1617360719]
+[node name="PanelContainer" type="PanelContainer" parent="Achivements/Achievements_window" unique_id=1617360719]
 z_index = 100
 layout_mode = 0
 offset_left = 78.0
@@ -703,21 +703,21 @@ offset_top = 80.0
 offset_right = 1070.0
 offset_bottom = 551.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer" unique_id=882448106]
+[node name="VBoxContainer" type="VBoxContainer" parent="Achivements/Achievements_window/PanelContainer" unique_id=882448106]
 layout_mode = 2
 offset_transform_enabled = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer" unique_id=1913149651]
+[node name="HBoxContainer" type="HBoxContainer" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer" unique_id=1913149651]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=138371836]
+[node name="Label" type="Label" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=138371836]
 layout_mode = 2
 offset_transform_enabled = true
 theme_type_variation = &"LabelDesktop"
 theme_override_font_sizes/font_size = 40
 text = "Achivements"
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1625655118]
+[node name="TextureButton" type="TextureButton" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1625655118]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -728,15 +728,15 @@ texture_pressed = ExtResource("21_mv33c")
 texture_hover = ExtResource("22_d6yad")
 stretch_mode = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer" unique_id=1721030037]
+[node name="ScrollContainer" type="ScrollContainer" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer" unique_id=1721030037]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=441489313]
+[node name="VBoxContainer" type="VBoxContainer" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=441489313]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AchievementPanel" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
+[node name="AchievementPanel" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -749,7 +749,7 @@ size_flags_vertical = 3
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Settings" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_settings_pressed"]
 [connection signal="moved_mouse" from="Player" to="Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="button_down" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_texture_button_button_down"]
-[connection signal="pressed" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_button_pressed"]
+[connection signal="button_down" from="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achivements/Achievements_window" method="_on_texture_button_button_down"]
+[connection signal="pressed" from="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achivements/Achievements_window" method="_on_button_pressed"]
 
-[editable path="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
+[editable path="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]

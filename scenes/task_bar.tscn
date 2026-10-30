@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://diagbiobwh2v1"]
+
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_2alun"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="2_gsyel"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="3_vfy2i"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="4_e36i4"]
+[ext_resource type="Script" uid="uid://g7xbu6w4da5s" path="res://scripts/achievements_window.gd" id="5_wsyoc"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="6_bvkyb"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="7_evtm5"]
+[ext_resource type="PackedScene" uid="uid://hcg0w0cf5tt4" path="res://scenes/achievement_panel.tscn" id="8_pr4hh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
+size = Vector2(31.81818, 11.363636)
+
+[node name="Os" type="Control" unique_id=1380241330]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("1_2alun")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1105808355]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_gsyel")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer" unique_id=1148593156]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="PanelContainer/HBoxContainer2" unique_id=979579631]
+layout_mode = 2
+theme_type_variation = &"ButtonGreen"
+texture_normal = ExtResource("3_vfy2i")
+texture_pressed = ExtResource("4_e36i4")
+
+[node name="Area2D" type="Area2D" parent="PanelContainer/HBoxContainer2/Button" unique_id=1365199718 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanelContainer/HBoxContainer2/Button/Area2D" unique_id=1158835976]
+position = Vector2(14.72728, 4.5)
+shape = SubResource("RectangleShape2D_w8sno")
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/HBoxContainer2" unique_id=1898034301]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="PanelContainer/HBoxContainer2/Panel" unique_id=1742882305]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
+
+[node name="Achievements_window" type="Control" parent="." unique_id=407520601]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_2alun")
+script = ExtResource("5_wsyoc")
+
+[node name="PanelContainer" type="PanelContainer" parent="Achievements_window" unique_id=1149831291]
+z_index = 100
+layout_mode = 0
+offset_left = 78.0
+offset_top = 80.0
+offset_right = 1070.0
+offset_bottom = 551.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Achievements_window/PanelContainer" unique_id=1768824508]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Achievements_window/PanelContainer/VBoxContainer" unique_id=302902909]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=191878676]
+layout_mode = 2
+offset_transform_enabled = true
+theme_type_variation = &"LabelDesktop"
+theme_override_font_sizes/font_size = 40
+text = "Achivements"
+
+[node name="TextureButton" type="TextureButton" parent="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=706974526]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"ButtonRed"
+toggle_mode = true
+texture_normal = ExtResource("6_bvkyb")
+texture_pressed = ExtResource("6_bvkyb")
+texture_hover = ExtResource("7_evtm5")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Achievements_window/PanelContainer/VBoxContainer" unique_id=1319532638]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Achievements_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=48805900]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AchievementPanel" parent="Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("8_pr4hh")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="button_down" from="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achievements_window" method="_on_texture_button_button_down"]
+[connection signal="pressed" from="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achievements_window" method="_on_button_pressed"]
+
+[editable path="Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
