@@ -88,11 +88,12 @@ animation = &"Stonks!"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PopUp" unique_id=1454502647]
 libraries/ = SubResource("AnimationLibrary_u4g45")
 
-[node name="Label" type="Label" parent="PopUp" unique_id=1273757267]
+[node name="Label" type="RichTextLabel" parent="PopUp" unique_id=1550202654]
 offset_left = -160.0
 offset_top = 94.0
 offset_right = 295.0
 offset_bottom = 160.0
-theme_override_fonts/font = ExtResource("4_rvr50")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("4_rvr50")
 text = "the start of a journey"

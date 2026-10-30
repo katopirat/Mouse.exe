@@ -674,14 +674,14 @@ metadata/_edit_use_anchors_ = true
 libraries/ = SubResource("AnimationLibrary_wygpf")
 autoplay = &"screen_open"
 
-[node name="Keyboard" parent="CanvasLayer/AnimationTree" unique_id=1763995382 instance=ExtResource("20_wqtqy")]
-position = Vector2(439, -362)
-scale = Vector2(0.8950945, 0.8950945)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=846273898]
 position = Vector2(-16, -20)
 zoom = Vector2(0.7, 0.7)
 position_smoothing_speed = 4.5
+
+[node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("20_wqtqy")]
+position = Vector2(439, -362)
+scale = Vector2(0.8950945, 0.8950945)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2043018432]
 
@@ -734,9 +734,11 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=441489313]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="AchievementPanel" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
 layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
@@ -749,3 +751,5 @@ layout_mode = 2
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="button_down" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_button_pressed"]
+
+[editable path="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]

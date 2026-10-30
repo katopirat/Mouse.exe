@@ -28,6 +28,8 @@ var levels = [
 var unlocked = 1
 var done = [] 
 var best_times = {}
+var game_pausable = true
+
 
 func _ready() -> void:
 	for i in levels.size():

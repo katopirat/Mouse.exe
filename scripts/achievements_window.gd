@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func show_window():
+	GameState.game_pausable = false
 	visible = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	refresh()
@@ -26,6 +27,9 @@ func refresh():
 		print(a)
 		print(AchievementState.achievements[a])
 		
+		print(AchievementState.completed)
+		print(a)
+		print(a in AchievementState.completed)
 		var unlocked = a in AchievementState.completed
 		var achivemet_panel = achievemet_scene.instantiate()
 		s_container.add_child(achivemet_panel)
@@ -36,6 +40,6 @@ func refresh():
 
 
 func _on_texture_button_button_down() -> void:
-	print("pressed")
+	GameState.game_pausable = true
 	visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

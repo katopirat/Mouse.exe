@@ -14,6 +14,8 @@ func setup(title_text,description_text,unlocked,icon_path):
 	description.text = str(description_text)
 	if ResourceLoader.exists(icon_path):
 		icon.texture = load(icon_path)
+	if unlocked :
+		unlock()
 	
 
 
