@@ -191,7 +191,7 @@ position = Vector2(288, 576)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_w1hta")
 format = 2
-layer_0/tile_data = PackedInt32Array(327667, 0, 2, 327668, 65536, 3, 327669, 65536, 3, 327670, 65536, 3, 327671, 65536, 3, 327672, 65536, 3, 327673, 65536, 3, 327674, 65536, 3, 327675, 65536, 3, 327676, 65536, 3, 327677, 65536, 3, 327678, 65536, 3, 327679, 65536, 3, 262144, 65536, 3, 262145, 65536, 3, 262146, 65536, 3, 262147, 65536, 3, 262148, 65536, 3, 262149, 65536, 3, 262150, 65536, 3, 262151, 65536, 3, 262152, 196608, 2, 262131, 0, 2, 196595, 0, 2, 131059, 0, 2, 65523, 0, 2, -13, 0, 2, -65549, 0, 2, -131085, 0, 2, -196621, 0, 2, -262157, 0, 2, -327693, 0, 2, -393229, 0, 2, -458765, 0, 2, -524301, 0, 2, -589837, 0, 2, -655373, 0, 2, -720909, 0, 2, -786445, 0, 2, -851981, 0, 2, -917517, 0, 2, -983053, 0, 2, -1048589, 0, 2, -1114125, 0, 2, -1179661, 0, 2, -1245197, 0, 2, -1310733, 0, 2, -1376269, 0, 2, -1441805, 0, 2, -1507341, 0, 2, -1572877, 0, 2, -1638413, 0, 2, -1703949, 0, 2, -1769485, 0, 2, -1835021, 0, 2, -1900557, 0, 2, -1966093, 0, 2, -2031629, 0, 2, -2097165, 0, 2, -2162701, 0, 2, -2228237, 0, 2, -2293773, 0, 2, -2359309, 0, 2, -2424845, 0, 2, -2490381, 0, 2, -2555917, 0, 2, -2621453, 0, 2, -2686989, 0, 2, -2752525, 0, 2, -2818061, 0, 2, -2883597, 0, 2, -2949133, 0, 2, -3014669, 0, 2, -3080205, 0, 2, -3145741, 0, 2, -3211277, 0, 2, -3276813, 0, 2, -3342349, 0, 2, -3407885, 0, 2, -3473421, 0, 2, -3538957, 0, 2, -3604493, 0, 2, -3670029, 0, 2, -3735565, 0, 2, -3801101, 0, 2, -3866637, 0, 2, -3932173, 0, 2, -3997709, 0, 2, -4063245, 0, 2, -4128781, 0, 2, -4194317, 0, 2, -4259853, 0, 2, -4325389, 0, 2, -4390925, 0, 2, -4456461, 0, 2, -4521997, 0, 2, -4587533, 0, 2, -4653069, 0, 2, -4718605, 0, 2, -4784141, 0, 2, -4849677, 0, 2, -4915213, 0, 2, -4980749, 0, 2, -5046285, 0, 2, -5111821, 0, 2, -5177357, 0, 2, -5242893, 0, 2, -5308429, 0, 2, -5373965, 0, 2, -5439501, 0, 2, 196616, 196608, 2, 131080, 196608, 2, 65544, 196608, 2, 8, 196608, 2, -65528, 196608, 2, -131064, 196608, 2, -196600, 196608, 2, -262136, 196608, 2, -327672, 196608, 2, -393208, 196608, 2, -458744, 196608, 2, -524280, 196608, 2, -589816, 196608, 2, -655352, 196608, 2, -720888, 196608, 2, -786424, 196608, 2, -851960, 196608, 2, -917496, 196608, 2, -983032, 196608, 2, -1048568, 196608, 2, -1114104, 196608, 2, -1179640, 196608, 2, -1245176, 196608, 2, -1310712, 196608, 2, -1376248, 196608, 2, -1441784, 196608, 2, -1507320, 196608, 2, -1572856, 196608, 2, -1638392, 196608, 2, -1703928, 196608, 2, -1769464, 196608, 2, -1835000, 196608, 2, -1900536, 196608, 2, -1966072, 196608, 2, -2031608, 196608, 2, -2097144, 196608, 2, -2162680, 196608, 2, -2228216, 196608, 2, -2293752, 196608, 2, -2359288, 196608, 2, -2424824, 196608, 2, -2490360, 196608, 2, -2555896, 196608, 2, -2621432, 196608, 2, -2686968, 196608, 2, -2752504, 196608, 2, -2818040, 196608, 2, -2883576, 196608, 2, -2949112, 196608, 2, -3014648, 196608, 2, -3080184, 196608, 2, -3145720, 196608, 2, -3211256, 196608, 2, -3276792, 196608, 2, -3342328, 196608, 2, -3407864, 196608, 2, -3473400, 196608, 2, -3538936, 196608, 2, -3604472, 196608, 2, -3670008, 196608, 2, -3735544, 196608, 2, -3801080, 196608, 2, -3866616, 196608, 2, -3932152, 196608, 2, -3997688, 196608, 2, -4063224, 196608, 2, -4128760, 196608, 2, -4194296, 196608, 2, -4259832, 196608, 2, -4325368, 196608, 2, -4390904, 196608, 2, -4456440, 196608, 2, -4521976, 196608, 2, -4587512, 196608, 2, -4653048, 196608, 2, -4718584, 196608, 2, -4784120, 196608, 2, -4849656, 196608, 2, -4915192, 196608, 2, -4980728, 196608, 2, -5046264, 196608, 2, -5111800, 196608, 2, -5177336, 196608, 2, -5242872, 196608, 2, -5308408, 196608, 2, -5373944, 196608, 2, -5439480, 196608, 2, -5505016, 196608, 2, -5505017, 131072, 1, -5439481, 131072, 2, -5505018, 131072, 1, -5439482, 131072, 2, -5505019, 131072, 1, -5439483, 131072, 2, -5505020, 131072, 1, -5439484, 131072, 2, -5505021, 131072, 1, -5439485, 131072, 2, -5505022, 131072, 1, -5439486, 131072, 2, -5505023, 131072, 1, -5439487, 131072, 2, -5505024, 131072, 1, -5439488, 131072, 2, -5439489, 131072, 1, -5373953, 131072, 2, -5439490, 131072, 1, -5373954, 131072, 2, -5439491, 131072, 1, -5373955, 131072, 2, -5439492, 131072, 1, -5373956, 131072, 2, -5439493, 131072, 1, -5373957, 131072, 2, -5439494, 131072, 1, -5373958, 131072, 2, -5439495, 131072, 1, -5373959, 131072, 2, -5439496, 131072, 1, -5373960, 131072, 2, -5439497, 131072, 1, -5373961, 131072, 2, -5439498, 131072, 1, -5373962, 131072, 2, -5439499, 131072, 1, -5373963, 131072, 2, -5439500, 131072, 1, -5373964, 131072, 2, -5046284, 131072, 1, -4980748, 131072, 2, -5046283, 131072, 1, -4980747, 131072, 2, -5046282, 131072, 1, -4980746, 131072, 2, -5046281, 131072, 1, -4980745, 131072, 2, -5046280, 131072, 1, -4980744, 131072, 2, -5046279, 131072, 1, -4980743, 131072, 2, -5046278, 131072, 1, -4980742, 131072, 2, -5046273, 131072, 1, -4980737, 131072, 2, -5111808, 131072, 1, -5046272, 131072, 2, -5111807, 131072, 1, -5046271, 131072, 2, -5111806, 131072, 1, -5046270, 131072, 2, -5111805, 131072, 1, -5046269, 131072, 2, -5111804, 131072, 1, -5046268, 131072, 2, -5111803, 131072, 1, -5046267, 131072, 2, -5111802, 131072, 1, -5046266, 131072, 2, -5111801, 131072, 1, -5046265, 131072, 2, -4718604, 131072, 1, -4653068, 131072, 2, -4718603, 131072, 1, -4653067, 131072, 2, -4718602, 131072, 1, -4653066, 131072, 2, -4718601, 131072, 1, -4653065, 131072, 2, -4718600, 131072, 1, -4653064, 131072, 2, -4718599, 131072, 1, -4653063, 131072, 2, -4718598, 131072, 1, -4653062, 131072, 2, -4718597, 131072, 1, -4653061, 131072, 2, -4718596, 131072, 1, -4653060, 131072, 2, -4718595, 131072, 1, -4653059, 131072, 2, -4718594, 131072, 1, -4653058, 131072, 2, -4718593, 131072, 1, -4653057, 131072, 2, -4784128, 131072, 1, -4718592, 131072, 2, -4128761, 131072, 1, -4063225, 131072, 2, -4128762, 131072, 1, -4063226, 131072, 2, -4128763, 131072, 1, -4063227, 131072, 2, -4128764, 131072, 1, -4063228, 131072, 2, -4128765, 131072, 1, -4063229, 131072, 2, -4128766, 131072, 1, -4063230, 131072, 2, -4128767, 131072, 1, -4063231, 131072, 2, -4128768, 131072, 1, -4063232, 131072, 2, -4063233, 131072, 1, -3997697, 131072, 2, -4063234, 131072, 1, -3997698, 131072, 2, -4063235, 131072, 1, -3997699, 131072, 2, -4063236, 131072, 1, -3997700, 131072, 2, -4063237, 131072, 1, -3997701, 131072, 2, -4063238, 131072, 1, -3997702, 131072, 2, -4063239, 131072, 1, -3997703, 131072, 2, -4063240, 131072, 1, -3997704, 131072, 2, -720908, 131072, 1, -655372, 131072, 2, -720907, 131072, 1, -655371, 131072, 2, -720906, 131072, 1, -655370, 131072, 2, -720905, 131072, 1, -655369, 131072, 2, -720904, 131072, 1, -655368, 131072, 2, -720903, 131072, 1, -655367, 131072, 2, -786432, 131072, 1, -720896, 131072, 2, -786431, 131072, 1, -720895, 131072, 2, -786430, 131072, 1, -720894, 131072, 2, -786429, 131072, 1, -720893, 131072, 2, -786428, 131072, 1, -720892, 131072, 2, -786427, 131072, 1, -720891, 131072, 2, -786426, 131072, 1, -720890, 131072, 2, -786425, 131072, 1, -720889, 131072, 2)
+layer_0/tile_data = PackedInt32Array(327667, 0, 2, 327668, 65536, 3, 327669, 65536, 3, 327670, 65536, 3, 327671, 65536, 3, 327672, 65536, 3, 327673, 65536, 3, 327674, 65536, 3, 327675, 65536, 3, 327676, 65536, 3, 327677, 65536, 3, 327678, 65536, 3, 327679, 65536, 3, 262144, 65536, 3, 262145, 65536, 3, 262146, 65536, 3, 262147, 65536, 3, 262148, 65536, 3, 262149, 65536, 3, 262150, 65536, 3, 262151, 65536, 3, 262152, 196608, 2, 262131, 0, 2, 196595, 0, 2, 131059, 0, 2, 65523, 0, 2, -13, 0, 2, -65549, 0, 2, -131085, 0, 2, -196621, 0, 2, -262157, 0, 2, -327693, 0, 2, -393229, 0, 2, -458765, 0, 2, -524301, 0, 2, -589837, 0, 2, -655373, 0, 2, -720909, 0, 2, -786445, 0, 2, -851981, 0, 2, -917517, 0, 2, -983053, 0, 2, -1048589, 0, 2, -1114125, 0, 2, -1179661, 0, 2, -1245197, 0, 2, -1310733, 0, 2, -1376269, 0, 2, -1441805, 0, 2, -1507341, 0, 2, -1572877, 0, 2, -1638413, 0, 2, -1703949, 0, 2, -1769485, 0, 2, -1835021, 0, 2, -1900557, 0, 2, -1966093, 0, 2, -2031629, 0, 2, -2097165, 0, 2, -2162701, 0, 2, -2228237, 0, 2, -2293773, 0, 2, -2359309, 0, 2, -2424845, 0, 2, -2490381, 0, 2, -2555917, 0, 2, -2621453, 0, 2, -2686989, 0, 2, -2752525, 0, 2, -2818061, 0, 2, -2883597, 0, 2, -2949133, 0, 2, -3014669, 0, 2, -3080205, 0, 2, -3145741, 0, 2, -3211277, 0, 2, -3276813, 0, 2, -3342349, 0, 2, -3407885, 0, 2, -3473421, 0, 2, -3538957, 0, 2, -3604493, 0, 2, -3670029, 0, 2, -3735565, 0, 2, -3801101, 0, 2, -3866637, 0, 2, -3932173, 0, 2, -3997709, 0, 2, -4063245, 0, 2, -4128781, 0, 2, -4194317, 0, 2, -4259853, 0, 2, -4325389, 0, 2, -4390925, 0, 2, -4456461, 0, 2, -4521997, 0, 2, -4587533, 0, 2, -4653069, 0, 2, -4718605, 0, 2, -4784141, 0, 2, -4849677, 0, 2, -4915213, 0, 2, -4980749, 0, 2, -5046285, 0, 2, -5111821, 0, 2, -5177357, 0, 2, -5242893, 0, 2, -5308429, 0, 2, -5373965, 0, 2, -5439501, 0, 2, 196616, 196608, 2, 131080, 196608, 2, 65544, 196608, 2, 8, 196608, 2, -65528, 196608, 2, -131064, 196608, 2, -196600, 196608, 2, -262136, 196608, 2, -327672, 196608, 2, -393208, 196608, 2, -458744, 196608, 2, -524280, 196608, 2, -589816, 196608, 2, -655352, 196608, 2, -720888, 196608, 2, -786424, 196608, 2, -851960, 196608, 2, -917496, 196608, 2, -983032, 196608, 2, -1048568, 196608, 2, -1114104, 196608, 2, -1179640, 196608, 2, -1245176, 196608, 2, -1310712, 196608, 2, -1376248, 196608, 2, -1441784, 196608, 2, -1507320, 196608, 2, -1572856, 196608, 2, -1638392, 196608, 2, -1703928, 196608, 2, -1769464, 196608, 2, -1835000, 196608, 2, -1900536, 196608, 2, -1966072, 196608, 2, -2031608, 196608, 2, -2097144, 196608, 2, -2162680, 196608, 2, -2228216, 196608, 2, -2293752, 196608, 2, -2359288, 196608, 2, -2424824, 196608, 2, -2490360, 196608, 2, -2555896, 196608, 2, -2621432, 196608, 2, -2686968, 196608, 2, -2752504, 196608, 2, -2818040, 196608, 2, -2883576, 196608, 2, -2949112, 196608, 2, -3014648, 196608, 2, -3080184, 196608, 2, -3145720, 196608, 2, -3211256, 196608, 2, -3276792, 196608, 2, -3342328, 196608, 2, -3407864, 196608, 2, -3473400, 196608, 2, -3538936, 196608, 2, -3604472, 196608, 2, -3670008, 196608, 2, -3735544, 196608, 2, -3801080, 196608, 2, -3866616, 196608, 2, -3932152, 196608, 2, -3997688, 196608, 2, -4063224, 196608, 2, -4128760, 196608, 2, -4194296, 196608, 2, -4259832, 196608, 2, -4325368, 196608, 2, -4390904, 196608, 2, -4456440, 196608, 2, -4521976, 196608, 2, -4587512, 196608, 2, -4653048, 196608, 2, -4718584, 196608, 2, -4784120, 196608, 2, -4849656, 196608, 2, -4915192, 196608, 2, -4980728, 196608, 2, -5046264, 196608, 2, -5111800, 196608, 2, -5177336, 196608, 2, -5242872, 196608, 2, -5308408, 196608, 2, -5373944, 196608, 2, -5439480, 196608, 2, -5505016, 196608, 2, -5505017, 131072, 1, -5439481, 131072, 2, -5505018, 131072, 1, -5439482, 131072, 2, -5505019, 131072, 1, -5439483, 131072, 2, -5505020, 131072, 1, -5439484, 131072, 2, -5505021, 131072, 1, -5439485, 131072, 2, -5505022, 131072, 1, -5439486, 131072, 2, -5505023, 131072, 1, -5439487, 131072, 2, -5505024, 131072, 1, -5439488, 131072, 2, -5439489, 131072, 1, -5373953, 131072, 2, -5439490, 131072, 1, -5373954, 131072, 2, -5439491, 131072, 1, -5373955, 131072, 2, -5439492, 131072, 1, -5373956, 131072, 2, -5439493, 131072, 1, -5373957, 131072, 2, -5439494, 131072, 1, -5373958, 131072, 2, -5439495, 131072, 1, -5373959, 131072, 2, -5439496, 131072, 1, -5373960, 131072, 2, -5439497, 131072, 1, -5373961, 131072, 2, -5439498, 131072, 1, -5373962, 131072, 2, -5439499, 131072, 1, -5373963, 131072, 2, -5439500, 131072, 1, -5373964, 131072, 2, -5046284, 131072, 1, -4980748, 131072, 2, -5046283, 131072, 1, -4980747, 131072, 2, -5046282, 131072, 1, -4980746, 131072, 2, -5046281, 131072, 1, -4980745, 131072, 2, -5046280, 131072, 1, -4980744, 131072, 2, -5046279, 131072, 1, -4980743, 131072, 2, -5046278, 131072, 1, -4980742, 131072, 2, -5046273, 131072, 1, -4980737, 131072, 2, -5111808, 131072, 1, -5046272, 131072, 2, -5111807, 131072, 1, -5046271, 131072, 2, -5111806, 131072, 1, -5046270, 131072, 2, -5111805, 131072, 1, -5046269, 131072, 2, -5111804, 131072, 1, -5046268, 131072, 2, -5111803, 131072, 1, -5046267, 131072, 2, -5111802, 131072, 1, -5046266, 131072, 2, -5111801, 131072, 1, -5046265, 131072, 2, -4718604, 131072, 1, -4653068, 131072, 2, -4718603, 131072, 1, -4653067, 131072, 2, -4718602, 131072, 1, -4653066, 131072, 2, -4718601, 131072, 1, -4653065, 131072, 2, -4718600, 131072, 1, -4653064, 131072, 2, -4718599, 131072, 1, -4653063, 131072, 2, -4718598, 131072, 1, -4653062, 131072, 2, -4718597, 131072, 1, -4653061, 131072, 2, -4718596, 131072, 1, -4653060, 131072, 2, -4718595, 131072, 1, -4653059, 131072, 2, -4718594, 131072, 1, -4653058, 131072, 2, -4718593, 131072, 1, -4653057, 131072, 2, -4784128, 131072, 1, -4718592, 131072, 2, -4128761, 131072, 1, -4063225, 131072, 2, -4128762, 131072, 1, -4063226, 131072, 2, -4128763, 131072, 1, -4063227, 131072, 2, -4128766, 131072, 1, -4063230, 131072, 2, -4128767, 131072, 1, -4063231, 131072, 2, -4128768, 131072, 1, -4063232, 131072, 2, -4063233, 131072, 1, -3997697, 131072, 2, -4063234, 131072, 1, -3997698, 131072, 2, -4063235, 131072, 1, -3997699, 131072, 2, -4063236, 131072, 1, -3997700, 131072, 2, -4063237, 131072, 1, -3997701, 131072, 2, -4063238, 131072, 1, -3997702, 131072, 2, -4063239, 131072, 1, -3997703, 131072, 2, -4063240, 131072, 1, -3997704, 131072, 2, -720908, 131072, 1, -655372, 131072, 2, -720907, 131072, 1, -655371, 131072, 2, -720906, 131072, 1, -655370, 131072, 2, -720905, 131072, 1, -655369, 131072, 2, -720904, 131072, 1, -655368, 131072, 2, -786429, 131072, 1, -720893, 131072, 2, -786428, 131072, 1, -720892, 131072, 2, -786427, 131072, 1, -720891, 131072, 2, -786426, 131072, 1, -720890, 131072, 2, -786425, 131072, 1, -720889, 131072, 2)
 
 [node name="TileMap" type="TileMap" parent="Level21/Ground" unique_id=1631817368 groups=["table"]]
 z_index = -20
@@ -713,6 +713,518 @@ rotation = -3.1415925
 scale = Vector2(4.7315087, -4.4581966)
 shape = SubResource("RectangleShape2D_3llbw")
 
+[node name="ant_bad32" type="RigidBody2D" parent="Level21" unique_id=1521352201]
+position = Vector2(432, 576)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad32" unique_id=723419460]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad32" unique_id=173091812]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad32" unique_id=772389652]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad32/Area2D" unique_id=383714901]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad32/Area2D" unique_id=1824668372]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad33" type="RigidBody2D" parent="Level21" unique_id=1676372289]
+position = Vector2(88, 710)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad33" unique_id=184290915]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad33" unique_id=876057965]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad33" unique_id=1471687134]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad33/Area2D" unique_id=1571696805]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad33/Area2D" unique_id=1652101492]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad34" type="RigidBody2D" parent="Level21" unique_id=1707244444]
+position = Vector2(246, 484)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad34" unique_id=211760390]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad34" unique_id=981418322]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad34" unique_id=232309341]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad34/Area2D" unique_id=1595051562]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad34/Area2D" unique_id=536905575]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad35" type="RigidBody2D" parent="Level21" unique_id=317049784]
+position = Vector2(-98, 618)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad35" unique_id=155883545]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad35" unique_id=778766421]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad35" unique_id=393340970]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad35/Area2D" unique_id=643667814]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad35/Area2D" unique_id=753769745]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad36" type="RigidBody2D" parent="Level21" unique_id=591251155]
+position = Vector2(590, 576)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad36" unique_id=1004632575]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad36" unique_id=1873103562]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad36" unique_id=1234553160]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad36/Area2D" unique_id=840792103]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad36/Area2D" unique_id=1893384972]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad37" type="RigidBody2D" parent="Level21" unique_id=185899654]
+position = Vector2(246, 710)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad37" unique_id=254686955]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad37" unique_id=1793135051]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad37" unique_id=2085498017]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad37/Area2D" unique_id=1352688612]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad37/Area2D" unique_id=1977926132]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad38" type="RigidBody2D" parent="Level21" unique_id=262623347]
+position = Vector2(404, 484)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad38" unique_id=117339524]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad38" unique_id=2066357266]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad38" unique_id=1291439043]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad38/Area2D" unique_id=1502049528]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad38/Area2D" unique_id=1388897626]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad39" type="RigidBody2D" parent="Level21" unique_id=1526685115]
+position = Vector2(60, 618)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad39" unique_id=987047026]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad39" unique_id=1823455216]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad39" unique_id=1440230621]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad39/Area2D" unique_id=886174537]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad39/Area2D" unique_id=495765207]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad40" type="RigidBody2D" parent="Level21" unique_id=2137347760]
+position = Vector2(328, 710)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad40" unique_id=681980421]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad40" unique_id=666549011]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad40" unique_id=195315857]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad40/Area2D" unique_id=759620157]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad40/Area2D" unique_id=314427447]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad41" type="RigidBody2D" parent="Level21" unique_id=1106006286]
+position = Vector2(-16, 844)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad41" unique_id=1908638894]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad41" unique_id=54990152]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad41" unique_id=271538507]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad41/Area2D" unique_id=38749070]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad41/Area2D" unique_id=1091613731]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad42" type="RigidBody2D" parent="Level21" unique_id=826630476]
+position = Vector2(142, 618)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad42" unique_id=634175950]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad42" unique_id=1435472506]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad42" unique_id=534777452]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad42/Area2D" unique_id=1193470012]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad42/Area2D" unique_id=1470780972]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad43" type="RigidBody2D" parent="Level21" unique_id=258705123]
+position = Vector2(-202, 752)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad43" unique_id=1302398480]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad43" unique_id=1547960098]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad43" unique_id=2078927053]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad43/Area2D" unique_id=375841422]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad43/Area2D" unique_id=1866805673]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad44" type="RigidBody2D" parent="Level21" unique_id=374323336]
+position = Vector2(486, 710)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad44" unique_id=935153244]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad44" unique_id=1183901352]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad44" unique_id=1371684179]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad44/Area2D" unique_id=43030661]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad44/Area2D" unique_id=883067300]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad45" type="RigidBody2D" parent="Level21" unique_id=1569657529]
+position = Vector2(142, 844)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad45" unique_id=295048691]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad45" unique_id=1213249229]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad45" unique_id=1337072129]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad45/Area2D" unique_id=1809216849]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad45/Area2D" unique_id=144391506]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad46" type="RigidBody2D" parent="Level21" unique_id=499812398]
+position = Vector2(300, 618)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad46" unique_id=1645213347]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad46" unique_id=1439027530]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad46" unique_id=1770607450]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad46/Area2D" unique_id=829408245]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad46/Area2D" unique_id=1879063100]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
+[node name="ant_bad47" type="RigidBody2D" parent="Level21" unique_id=2066608435]
+position = Vector2(-44, 752)
+mass = 0.555
+physics_material_override = SubResource("PhysicsMaterial_aiu1a")
+gravity_scale = 0.0
+script = ExtResource("36_xbm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad47" unique_id=766053892]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_qqvdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad47" unique_id=1821283560]
+rotation = 1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("37_scj4c")
+
+[node name="Area2D" type="Area2D" parent="Level21/ant_bad47" unique_id=241461671]
+script = ExtResource("38_ym738")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad47/Area2D" unique_id=1424575344]
+position = Vector2(-0.625, 0.43615723)
+rotation = -3.1415925
+scale = Vector2(7.7698135, -1.3127697)
+shape = SubResource("RectangleShape2D_4flhq")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad47/Area2D" unique_id=1311061701]
+position = Vector2(1, -0.9999695)
+rotation = -3.1415925
+scale = Vector2(4.7315087, -4.4581966)
+shape = SubResource("RectangleShape2D_3llbw")
+
 [node name="BIG book" parent="." unique_id=821115738 instance=ExtResource("11_v7hvt")]
 position = Vector2(-76, -1100)
 rotation = 0.54817706
@@ -770,10 +1282,6 @@ position = Vector2(-481, -4774)
 position = Vector2(27.000244, -4431)
 rotation = 2.331266
 
-[node name="Keyboard2" parent="." unique_id=1688015464 instance=ExtResource("22_xma1c")]
-position = Vector2(-83, 302)
-rotation = 0.4945382
-
 [connection signal="get_mouse_to_finish" from="Level21/Finish" to="Level21/Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="body_entered" from="Level21/ant_bad16/Area2D" to="Level21/ant_bad16/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Level21/ant_bad17/Area2D" to="Level21/ant_bad17/Area2D" method="_on_body_entered"]
@@ -791,5 +1299,21 @@ rotation = 0.4945382
 [connection signal="body_entered" from="Level21/ant_bad29/Area2D" to="Level21/ant_bad29/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Level21/ant_bad30/Area2D" to="Level21/ant_bad30/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Level21/ant_bad31/Area2D" to="Level21/ant_bad31/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad32/Area2D" to="Level21/ant_bad32/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad33/Area2D" to="Level21/ant_bad33/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad34/Area2D" to="Level21/ant_bad34/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad35/Area2D" to="Level21/ant_bad35/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad36/Area2D" to="Level21/ant_bad36/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad37/Area2D" to="Level21/ant_bad37/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad38/Area2D" to="Level21/ant_bad38/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad39/Area2D" to="Level21/ant_bad39/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad40/Area2D" to="Level21/ant_bad40/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad41/Area2D" to="Level21/ant_bad41/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad42/Area2D" to="Level21/ant_bad42/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad43/Area2D" to="Level21/ant_bad43/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad44/Area2D" to="Level21/ant_bad44/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad45/Area2D" to="Level21/ant_bad45/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad46/Area2D" to="Level21/ant_bad46/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Level21/ant_bad47/Area2D" to="Level21/ant_bad47/Area2D" method="_on_body_entered"]
 
 [editable path="Level21/CanvasLayer"]
