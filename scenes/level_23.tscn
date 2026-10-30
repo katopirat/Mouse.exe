@@ -29,11 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_mfknm"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_6v3yu"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="24_7yy7y"]
-<<<<<<< Updated upstream
-=======
 [ext_resource type="Script" uid="uid://dm6ful57mas6y" path="res://scripts/disapear_button_cost.gd" id="24_akowo"]
-[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="25_7p34i"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_m71ky"]
 [ext_resource type="PackedScene" uid="uid://c1540ljr0mnwd" path="res://scenes/level_24.tscn" id="26_x7fx0"]
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="27_1j7er"]
@@ -549,14 +545,6 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
 
-<<<<<<< Updated upstream
-[node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("24_7yy7y")]
-z_index = -1
-position = Vector2(813, 34)
-next_scene = ExtResource("26_x7fx0")
-
-=======
->>>>>>> Stashed changes
 [node name="CanvasLayer" parent="." unique_id=1262815348 instance=ExtResource("26_m71ky")]
 
 [node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
@@ -579,7 +567,7 @@ layer_0/tile_data = PackedInt32Array(-393221, 65536, 2, -458757, 196608, 3, -524
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("24_7yy7y")]
 z_index = -1
 position = Vector2(-179, -1048)
-next_scene = ExtResource("25_7p34i")
+next_scene = ExtResource("26_x7fx0")
 
 [node name="DisapearingPlaceholder" parent="." unique_id=1135296595 instance=ExtResource("30_chljo")]
 position = Vector2(-183, -745)
