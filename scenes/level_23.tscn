@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_mfknm"]
 [ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_6v3yu"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="24_7yy7y"]
-[ext_resource type="PackedScene" uid="uid://bweivr530que7" path="res://scenes/level_2.tscn" id="25_7p34i"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_m71ky"]
+[ext_resource type="PackedScene" uid="uid://c1540ljr0mnwd" path="res://scenes/level_24.tscn" id="26_x7fx0"]
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="27_1j7er"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="28_gjme6"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="29_3lk6p"]
@@ -412,7 +412,7 @@ text = "19:33"
 [node name="Finish" parent="." unique_id=1389901689 instance=ExtResource("24_7yy7y")]
 z_index = -1
 position = Vector2(813, 34)
-next_scene = ExtResource("25_7p34i")
+next_scene = ExtResource("26_x7fx0")
 
 [node name="CanvasLayer" parent="." unique_id=1262815348 instance=ExtResource("26_m71ky")]
 
