@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvgkolpfjbon" path="res://scripts/achievements.gd" id="1_bnact"]
 [ext_resource type="Script" uid="uid://dfcasgkrgnwjp" path="res://scripts/pop_up.gd" id="1_e00ml"]
 [ext_resource type="Texture2D" uid="uid://0s8dopf7tdwc" path="res://achievements_textures/Button Masher.png" id="3_u4g45"]
-[ext_resource type="Texture2D" uid="uid://c8tpe2mtou8uh" path="res://assets/images/stonks_achivment.png" id="4_h64ow"]
+[ext_resource type="Texture2D" uid="uid://c8tpe2mtou8uh" path="res://achievements_textures/Stonks!.png" id="4_h64ow"]
 [ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="4_rvr50"]
 [ext_resource type="Texture2D" uid="uid://chfo0rwam37y6" path="res://achievements_textures/The Start Of a Journey.png" id="4_u4g45"]
 

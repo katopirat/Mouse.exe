@@ -18,6 +18,7 @@ func _on_restart_pressed() -> void:
 
 func _on_achievements_pressed() -> void:
 	%Achievements_window.show_window()
+	visible = false
 
 
 func _on_info_pressed() -> void:
@@ -30,3 +31,7 @@ func _on_settings_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	visible = !visible
+
+
+func _on_button_x_button_down() -> void:
+	pass # Replace with function body.
