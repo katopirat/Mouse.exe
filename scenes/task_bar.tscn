@@ -8,9 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="6_bvkyb"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="7_evtm5"]
 [ext_resource type="PackedScene" uid="uid://hcg0w0cf5tt4" path="res://scenes/achievement_panel.tscn" id="8_pr4hh"]
+[ext_resource type="Script" uid="uid://dyl52k0ssdpqx" path="res://scripts/start_menu.gd" id="9_bvkyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(31.81818, 11.363636)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evtm5"]
+size = Vector2(58.104824, 11.257809)
 
 [node name="Os" type="Control" unique_id=1380241330]
 layout_mode = 3
@@ -116,7 +120,67 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="StartMenu" type="PanelContainer" parent="." unique_id=712460708]
+visible = false
+layout_mode = 0
+offset_left = 13.335754
+offset_top = 30.767166
+offset_right = 67.80904
+offset_bottom = 100.12981
+script = ExtResource("9_bvkyb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenu" unique_id=1459726406]
+layout_mode = 2
+
+[node name="Achievements" type="Button" parent="StartMenu/VBoxContainer" unique_id=1252160810]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Achievements"
+
+[node name="Area2D" type="Area2D" parent="StartMenu/VBoxContainer/Achievements" unique_id=1631868374 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartMenu/VBoxContainer/Achievements/Area2D" unique_id=1361495319]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_evtm5")
+
+[node name="Restart" type="Button" parent="StartMenu/VBoxContainer" unique_id=945956969]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "respawn"
+
+[node name="Area2D" type="Area2D" parent="StartMenu/VBoxContainer/Restart" unique_id=861586205 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartMenu/VBoxContainer/Restart/Area2D" unique_id=138229875]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_evtm5")
+
+[node name="Info" type="Button" parent="StartMenu/VBoxContainer" unique_id=1350260314]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Credits"
+
+[node name="Area2D" type="Area2D" parent="StartMenu/VBoxContainer/Info" unique_id=1444288459 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartMenu/VBoxContainer/Info/Area2D" unique_id=678277687]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_evtm5")
+
+[node name="Settings" type="Button" parent="StartMenu/VBoxContainer" unique_id=1238608703]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Settings"
+
+[node name="Area2D" type="Area2D" parent="StartMenu/VBoxContainer/Settings" unique_id=561757066 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartMenu/VBoxContainer/Settings/Area2D" unique_id=2011921908]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_evtm5")
+
 [connection signal="button_down" from="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achievements_window" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="Achievements_window" method="_on_button_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Achievements" to="StartMenu" method="_on_achievements_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Restart" to="StartMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Info" to="StartMenu" method="_on_info_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Settings" to="StartMenu" method="_on_settings_pressed"]
 
 [editable path="Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
