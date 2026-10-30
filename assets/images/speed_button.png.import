@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvq511ukrctbn"
-path="res://.godot/imported/wall tie.png-32c20ac39aeff767d8bde0d8e9fe7d0d.ctex"
+uid="uid://lrvjlc8ehh76"
+path="res://.godot/imported/speed_button.png-4ab41d5bb68ad2c61bb4e1e7d6a8c25e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/wall tie.png"
-dest_files=["res://.godot/imported/wall tie.png-32c20ac39aeff767d8bde0d8e9fe7d0d.ctex"]
+source_file="res://assets/images/speed_button.png"
+dest_files=["res://.godot/imported/speed_button.png-4ab41d5bb68ad2c61bb4e1e7d6a8c25e.ctex"]
 
 [params]
 
