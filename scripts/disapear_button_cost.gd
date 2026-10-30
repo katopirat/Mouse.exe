@@ -5,6 +5,7 @@ var cost: int = 100
 @onready var sound_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready  var p_money: float
 signal close_obstacle()
+signal bought_button(price: float)
 
 func _ready() -> void:
 	$AnimatedSprite2D.play('default')

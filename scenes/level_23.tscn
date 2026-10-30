@@ -425,17 +425,20 @@ offset_top = 74.99999
 offset_right = 154.0
 offset_bottom = 97.99999
 theme_override_fonts/font = ExtResource("17_oqyvq")
+theme_override_font_sizes/font_size = 32
 text = "Money"
 
 [node name="CpsLabel" type="Label" parent="Player/Monitor_1/Computer/Window/CookieClicker" unique_id=521130011]
-offset_left = 176.0
+offset_left = 234.0
 offset_top = 74.99999
-offset_right = 216.0
-offset_bottom = 97.99999
+offset_right = 289.0
+offset_bottom = 106.99999
 theme_override_fonts/font = ExtResource("17_oqyvq")
+theme_override_font_sizes/font_size = 32
 text = "cps"
 
 [node name="Upgrades" type="Node2D" parent="Player/Monitor_1/Computer/Window/CookieClicker" unique_id=886082461]
+position = Vector2(0, 27.999996)
 
 [node name="ClickPower" type="Area2D" parent="Player/Monitor_1/Computer/Window/CookieClicker/Upgrades" unique_id=604172360 groups=["clickable"]]
 position = Vector2(298, 105.44)
@@ -620,6 +623,7 @@ text = "$100"
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="body_entered" from="DisapearButton" to="DisapearButton" method="_on_body_entered"]
 [connection signal="body_exited" from="DisapearButton" to="DisapearButton" method="_on_body_exited"]
+[connection signal="bought_button" from="DisapearButton" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_disapear_button_bought_button"]
 [connection signal="close_obstacle" from="DisapearButton" to="DisapearingPlaceholder" method="_on_disapear_button_close_obstacle"]
 
 [editable path="CanvasLayer"]
