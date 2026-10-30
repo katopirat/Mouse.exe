@@ -14,10 +14,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vcn3e"]
-radius = 65.66667
-height = 138.66667
-
 [node name="DisapearingPlaceholder" type="StaticBody2D" unique_id=1165169790]
 scale = Vector2(3, 3)
 script = ExtResource("1_atqul")
@@ -25,6 +21,5 @@ script = ExtResource("1_atqul")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=763460745]
 sprite_frames = SubResource("SpriteFrames_iopsf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=384168989]
-position = Vector2(0, 1.1920929e-07)
-shape = SubResource("CapsuleShape2D_vcn3e")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1257315177]
+polygon = PackedVector2Array(48, 51.666668, 65, 29, 63.333336, -12.333334, 56, -37.666668, 41, -56.333336, 1.3333334, -71.66667, -36, -58.333336, -55.333336, -39, -63.333336, 6.3333335, -59.333336, 39, -31.333334, 62.666668, -6.3333335, 70, 24, 67.333336)
