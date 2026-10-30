@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8tpe2mtou8uh"
-path="res://.godot/imported/stonks_achivment.png-3eb1d5c4448286d9602b995d6fee0e69.ctex"
+uid="uid://0s8dopf7tdwc"
+path="res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/stonks_achivment.png"
-dest_files=["res://.godot/imported/stonks_achivment.png-3eb1d5c4448286d9602b995d6fee0e69.ctex"]
+source_file="res://achievements_textures/Button Masher.png"
+dest_files=["res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"]
 
 [params]
 

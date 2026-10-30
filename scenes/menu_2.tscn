@@ -10,11 +10,19 @@
 [ext_resource type="Script" uid="uid://c1k71ngt80did" path="res://scripts/os_menu.gd" id="6_4lxen"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="7_gatg3"]
 [ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="8_aa5x7"]
+[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="10_gatg3"]
+[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="11_aa5x7"]
+[ext_resource type="Texture2D" uid="uid://28s4dqswaosy" path="res://mouse_os/ui/start_button_hover.png" id="12_aa5x7"]
+[ext_resource type="Script" uid="uid://dyl52k0ssdpqx" path="res://scripts/start_menu.gd" id="13_jcikl"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="16_gatg3"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="16_l7gj0"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="17_c8cdv"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="19_osjw0"]
+[ext_resource type="Script" uid="uid://g7xbu6w4da5s" path="res://scripts/achievements_window.gd" id="20_mv33c"]
 [ext_resource type="PackedScene" uid="uid://c2uxd7cjhng04" path="res://scenes/props/keyboard.tscn" id="20_wqtqy"]
+[ext_resource type="PackedScene" uid="uid://hcg0w0cf5tt4" path="res://scenes/achievement_panel.tscn" id="21_b7gx1"]
+[ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="21_mv33c"]
+[ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="22_d6yad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -36,6 +44,9 @@ size = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35y6"]
 size = Vector2(11.984121, 10.894657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so6io"]
+size = Vector2(32.320816, 10.094757)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
 size = Vector2(58.104824, 11.257809)
@@ -520,16 +531,19 @@ offset_bottom = 115.019165
 [node name="HBoxContainer" type="HBoxContainer" parent="Monitor_1/Computer/Os_menu/Taskbar" unique_id=625299808]
 layout_mode = 2
 
-[node name="Achievements" type="Button" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=631960395]
+[node name="Start" type="TextureButton" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=493980623 groups=["clickable"]]
+custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-theme_type_variation = &"FlatButton"
-text = "Achievements"
+texture_normal = ExtResource("10_gatg3")
+texture_pressed = ExtResource("11_aa5x7")
+texture_hover = ExtResource("12_aa5x7")
+stretch_mode = 0
 
-[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Achievements" unique_id=766256369 groups=["clickable"]]
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start" unique_id=1097986217 groups=["clickable"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Achievements/Area2D" unique_id=1491332637]
-position = Vector2(29.320847, 5.170994)
-shape = SubResource("RectangleShape2D_3v8a5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start/Area2D" unique_id=1024700497 groups=["clickable"]]
+position = Vector2(15.339371, 4.9526215)
+shape = SubResource("RectangleShape2D_so6io")
 
 [node name="Panel" type="PanelContainer" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=331787499]
 layout_mode = 2
@@ -541,10 +555,66 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
 
+[node name="StartMenu" type="PanelContainer" parent="Monitor_1/Computer/Os_menu" unique_id=857770394]
+visible = false
+layout_mode = 0
+offset_left = 13.335754
+offset_top = 30.767166
+offset_right = 67.80904
+offset_bottom = 100.12981
+script = ExtResource("13_jcikl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Monitor_1/Computer/Os_menu/StartMenu" unique_id=867599532]
+layout_mode = 2
+
+[node name="Achievements" type="Button" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer" unique_id=631960395]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Achievements"
+
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Achievements" unique_id=766256369 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Achievements/Area2D" unique_id=1491332637]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_3v8a5")
+
+[node name="Restart" type="Button" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer" unique_id=1775681178]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "respawn"
+
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Restart" unique_id=969998576 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Restart/Area2D" unique_id=578067321]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_3v8a5")
+
+[node name="Info" type="Button" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer" unique_id=46005109]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Credits"
+
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Info" unique_id=639735685 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Info/Area2D" unique_id=363599442]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_3v8a5")
+
+[node name="Settings" type="Button" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer" unique_id=535073806]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Settings"
+
+[node name="Area2D" type="Area2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Settings" unique_id=1352545007 groups=["clickable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Settings/Area2D" unique_id=2062711165]
+position = Vector2(29.320847, 5.170994)
+shape = SubResource("RectangleShape2D_3v8a5")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Monitor_1" unique_id=1553120702]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/StaticBody2D" unique_id=1226680098]
-position = Vector2(241.07382, 146.79883)
+position = Vector2(245.275, 119.84119)
 shape = SubResource("RectangleShape2D_w8sno")
 
 [node name="Player" parent="." unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("1_mv33c")]
@@ -604,7 +674,7 @@ metadata/_edit_use_anchors_ = true
 libraries/ = SubResource("AnimationLibrary_wygpf")
 autoplay = &"screen_open"
 
-[node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("20_wqtqy")]
+[node name="Keyboard" parent="CanvasLayer/AnimationTree" unique_id=1763995382 instance=ExtResource("20_wqtqy")]
 position = Vector2(439, -362)
 scale = Vector2(0.8950945, 0.8950945)
 
@@ -613,7 +683,69 @@ position = Vector2(-16, -20)
 zoom = Vector2(0.7, 0.7)
 position_smoothing_speed = 4.5
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2043018432]
+
+[node name="Achievements_window" type="Control" parent="CanvasLayer2" unique_id=1573809372]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_b7gx1")
+script = ExtResource("20_mv33c")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2/Achievements_window" unique_id=1617360719]
+z_index = 100
+layout_mode = 0
+offset_left = 78.0
+offset_top = 80.0
+offset_right = 1070.0
+offset_bottom = 551.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer" unique_id=882448106]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer" unique_id=1913149651]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=138371836]
+layout_mode = 2
+offset_transform_enabled = true
+theme_type_variation = &"LabelDesktop"
+theme_override_font_sizes/font_size = 40
+text = "Achivements"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1625655118]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"ButtonRed"
+toggle_mode = true
+texture_normal = ExtResource("21_mv33c")
+texture_pressed = ExtResource("21_mv33c")
+texture_hover = ExtResource("22_d6yad")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer" unique_id=1721030037]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=441489313]
+layout_mode = 2
+
+[node name="AchievementPanel" parent="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
+layout_mode = 2
+
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_start_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Achievements" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_achievements_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Restart" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Info" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_info_pressed"]
+[connection signal="pressed" from="Monitor_1/Computer/Os_menu/StartMenu/VBoxContainer/Settings" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_settings_pressed"]
 [connection signal="moved_mouse" from="Player" to="Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="button_down" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_texture_button_button_down"]
+[connection signal="pressed" from="CanvasLayer2/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/TextureButton" to="CanvasLayer2/Achievements_window" method="_on_button_pressed"]

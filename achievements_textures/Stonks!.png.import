@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0s8dopf7tdwc"
-path="res://.godot/imported/button_achivment.png-4f5789f9a72b1946d1e842457938ec45.ctex"
+uid="uid://c8tpe2mtou8uh"
+path="res://.godot/imported/Stonks!.png-96b402cdaa52eca9e8d11bcc4e49962b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/button_achivment.png"
-dest_files=["res://.godot/imported/button_achivment.png-4f5789f9a72b1946d1e842457938ec45.ctex"]
+source_file="res://achievements_textures/Stonks!.png"
+dest_files=["res://.godot/imported/Stonks!.png-96b402cdaa52eca9e8d11bcc4e49962b.ctex"]
 
 [params]
 
