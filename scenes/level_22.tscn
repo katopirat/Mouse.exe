@@ -105,7 +105,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wa8ue"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y20oa"]
 texture = ExtResource("30_6qwin")
 0:0/0 = 0
 1:0/0 = 0
@@ -132,7 +132,7 @@ texture = ExtResource("30_6qwin")
 4:3/0 = 0
 5:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3bdf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekn6h"]
 texture = ExtResource("31_lq7nu")
 texture_region_size = Vector2i(32, 32)
 6:2/0 = 0
@@ -150,7 +150,7 @@ texture_region_size = Vector2i(32, 32)
 3:2/0 = 0
 3:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohspp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlnpv"]
 texture = ExtResource("32_seooc")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -186,9 +186,9 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_sfk64"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_wa8ue")
-sources/1 = SubResource("TileSetAtlasSource_k3bdf")
-sources/2 = SubResource("TileSetAtlasSource_ohspp")
+sources/0 = SubResource("TileSetAtlasSource_y20oa")
+sources/1 = SubResource("TileSetAtlasSource_ekn6h")
+sources/2 = SubResource("TileSetAtlasSource_jlnpv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xe3em"]
 size = Vector2(2508.25, 180)
@@ -546,7 +546,7 @@ position = Vector2(1133, -370)
 
 [node name="ant_bad16" type="RigidBody2D" parent="Level21" unique_id=1762523729]
 position = Vector2(1024, -544)
-mass = 0.555
+mass = 0.755
 physics_material_override = SubResource("PhysicsMaterial_2fcfa")
 gravity_scale = 0.0
 script = ExtResource("33_cfjfq")
@@ -578,7 +578,7 @@ shape = SubResource("RectangleShape2D_jirgc")
 
 [node name="ant_bad17" type="RigidBody2D" parent="Level21" unique_id=896361302]
 position = Vector2(1167, -521)
-mass = 0.555
+mass = 0.755
 physics_material_override = SubResource("PhysicsMaterial_2fcfa")
 gravity_scale = 0.0
 script = ExtResource("33_cfjfq")
