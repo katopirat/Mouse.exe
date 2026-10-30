@@ -24,6 +24,8 @@ var levels = [
 	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
 	
 	{"name": "Just one ant", "scene": "res://scenes/level_22.tscn"},
+	{"name": "biscut clicker", "scene": "res://scenes/level_23.tscn"},
+	{"name": "just 1000 ants", "scene": "res://scenes/level_24.tscn"},
 ]
 var unlocked = 1
 var done = [] 
