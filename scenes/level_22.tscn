@@ -484,7 +484,6 @@ next_scene = ExtResource("25_ve0ln")
 
 [node name="cup2" parent="Level21" unique_id=428504929 instance=ExtResource("26_ty1vi")]
 position = Vector2(696, -242)
-scale = Vector2(1, 1)
 
 [node name="book_open" parent="Level21" unique_id=1220220180 instance=ExtResource("27_4p80b")]
 position = Vector2(-508, 231)
@@ -543,38 +542,6 @@ shape = SubResource("RectangleShape2D_xe3em")
 
 [node name="chess board" parent="Level21/Walls" unique_id=1519207098 instance=ExtResource("35_y20oa")]
 position = Vector2(1133, -370)
-
-[node name="ant_bad16" type="RigidBody2D" parent="Level21" unique_id=1762523729]
-position = Vector2(1024, -544)
-mass = 0.755
-physics_material_override = SubResource("PhysicsMaterial_2fcfa")
-gravity_scale = 0.0
-script = ExtResource("33_cfjfq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad16" unique_id=1621437095]
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_8eujr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level21/ant_bad16" unique_id=1610488852]
-rotation = 1.5707964
-scale = Vector2(3, 3)
-texture = ExtResource("37_y20oa")
-
-[node name="Area2D" type="Area2D" parent="Level21/ant_bad16" unique_id=969533419]
-script = ExtResource("35_kvfg4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level21/ant_bad16/Area2D" unique_id=1044489234]
-position = Vector2(-0.625, 0.43615723)
-rotation = -3.1415925
-scale = Vector2(7.7698135, -1.3127697)
-shape = SubResource("RectangleShape2D_k3bdf")
-disabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level21/ant_bad16/Area2D" unique_id=2063081963]
-position = Vector2(1, -0.9999695)
-rotation = -3.1415925
-scale = Vector2(4.7315087, -4.4581966)
-shape = SubResource("RectangleShape2D_jirgc")
 
 [node name="ant_bad17" type="RigidBody2D" parent="Level21" unique_id=896361302]
 position = Vector2(1167, -521)
@@ -635,7 +602,6 @@ position = Vector2(-86, 144)
 [connection signal="body_exited" from="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" to="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" method="_on_body_exited"]
 [connection signal="close_obstacle" from="Level21/Player/Monitor_1/Computer/Window2/DisapearButton" to="Level21/DisapearingPlaceholder2" method="_on_disapear_button_close_obstacle"]
 [connection signal="get_mouse_to_finish" from="Level21/Finish" to="Level21/Player" method="_on_finish_get_mouse_to_finish"]
-[connection signal="body_entered" from="Level21/ant_bad16/Area2D" to="Level21/ant_bad16/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Level21/ant_bad17/Area2D" to="Level21/ant_bad17/Area2D" method="_on_body_entered"]
 
 [editable path="Level21/CanvasLayer"]

@@ -166,7 +166,6 @@ size = Vector2(11.936967, 6.1903305)
 [node name="TitleLevelText" parent="Level21" unique_id=1017485206 instance=ExtResource("1_5puht")]
 
 [node name="Player" parent="Level21" unique_id=1646158579 groups=["player"] instance=ExtResource("2_b3uhy")]
-z_index = -4
 position = Vector2(-14, 2)
 script = ExtResource("3_4valo")
 
