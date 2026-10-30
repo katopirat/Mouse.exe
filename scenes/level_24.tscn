@@ -2254,7 +2254,7 @@ rotation = 0.54817706
 
 [node name="Bookshelf" parent="." unique_id=200050818 instance=ExtResource("13_j4kn2")]
 position = Vector2(-602, -400)
-rotation = 0.08761013
+rotation = -0.001870133
 scale = Vector2(2.9999998, 2.9999998)
 
 [node name="chess board" parent="." unique_id=1519207098 instance=ExtResource("14_tu6qq")]
@@ -2275,6 +2275,7 @@ scale = Vector2(2, 2)
 
 [node name="cup" parent="." unique_id=200577205 instance=ExtResource("18_ttfv7")]
 position = Vector2(410.00006, -2613)
+scale = Vector2(1, 1)
 
 [node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("22_xma1c")]
 position = Vector2(-21, -3726)
