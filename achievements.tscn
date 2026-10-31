@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8tpe2mtou8uh" path="res://achievements_textures/Stonks!.png" id="4_h64ow"]
 [ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="4_rvr50"]
 [ext_resource type="Texture2D" uid="uid://chfo0rwam37y6" path="res://achievements_textures/The Start Of a Journey.png" id="4_u4g45"]
+[ext_resource type="AudioStream" uid="uid://dg17gnr4gmi4f" path="res://assets/soundeffects/achivment.wav" id="7_2dvwe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iopsf"]
 animations = [{
@@ -97,3 +98,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/normal_font = ExtResource("4_rvr50")
 text = "the start of a journey"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=347720035]
+stream = ExtResource("7_2dvwe")
