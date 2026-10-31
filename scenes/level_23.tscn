@@ -295,6 +295,10 @@ position = Vector2(-476, -245)
 script = ExtResource("3_kiae0")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=846273898]
+limit_left = -100100
+limit_top = -200000
+limit_right = 100000
+limit_bottom = 500000
 position_smoothing_speed = 4.5
 
 [node name="Monitor_1" type="Node2D" parent="Player" unique_id=831704774]
