@@ -5,27 +5,28 @@ var levels = [
 	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
 	{"name": "The Button", "scene": "res://scenes/level_1.tscn"},
 	{"name": "Ads", "scene": "res://scenes/level_2.tscn"},
+	{"name": "Tutorial how to move mouse, but not the cursor when you're on the edge of the screen, so it stays in one place. It's very smart you know. Now you get it and your very smart too:]", "scene": "res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn"},
 	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn"},
 	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn"},
-	{"name": "cursor on the run", "scene": "res://scenes/level_13.tscn"},
-	{"name": "the ads are getting real", "scene": "res://scenes/level_14.tscn"},
-	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
-	
-	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
-	
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
 	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
-	{"name": "sensitivity", "scene": "res://scenes/level_9.tscn"},
-	{"name": "magic table", "scene": "res://scenes/level_10.tscn"},
-	{"name": "magic mice", "scene": "res://scenes/level_11.tscn"},
-	{"name": "mice coin", "scene": "res://scenes/level_12.tscn"},
+	{"name": "Sensitivity too high", "scene": "res://scenes/level_9.tscn"},
+	{"name": "Magic table", "scene": "res://scenes/level_10.tscn"},
+	{"name": "Magic mice", "scene": "res://scenes/level_11.tscn"},
+	{"name": "Cursor on the run", "scene": "res://scenes/level_13.tscn"},
+	{"name": "The ads are getting real", "scene": "res://scenes/level_14.tscn"},
+	{"name": "The button again?", "scene": "res://scenes/level_15.tscn"},
+	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
+	{"name": "Mice coin", "scene": "res://scenes/level_12.tscn"},
+	{"name": "Who would buy this table?", "scene": "res://scenes/level_5.tscn"},
 	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},
 	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn"},
-	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
 	
-	{"name": "Just one ant", "scene": "res://scenes/level_22.tscn"},
-	{"name": "biscut clicker", "scene": "res://scenes/level_23.tscn"},
-	{"name": "just 1000 ants", "scene": "res://scenes/level_24.tscn"},
+	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
+	{"name": "Just ONE ant", "scene": "res://scenes/level_22.tscn"},
+	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn"},
+	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn"}
+	
 ]
 var unlocked = 1
 var done = [] 
