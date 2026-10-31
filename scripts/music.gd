@@ -11,7 +11,7 @@ extends Node2D
 @export var boss_playlist: Array[AudioStream] = []
 
 
-@export_enum("chill", "dramatic", "menu", "boss") var current_style: String = 'menu'
+@export_enum("chill", "dramatic", "menu", "boss", "stop") var current_style: String = 'menu'
 
 
 @onready var playlist: Array[AudioStream] = menu_playlist
@@ -29,6 +29,8 @@ func get_playlist(style: String):
 		return menu_playlist
 	elif style == 'boss':
 		return boss_playlist
+	elif style == "stop":
+		return [] as Array[AudioStream]
 	else:
 		return other_playlist
 
@@ -68,3 +70,5 @@ func _process(delta: float) -> void:
 		if songs_len > 0:
 			current_track_index = randi_range(0, songs_len - 1)
 			play_track(current_track_index)
+		else:
+			audio_player.stop()
