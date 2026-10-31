@@ -18,7 +18,7 @@ var levels = [
 	{"name": "the button again?", "scene": "res://scenes/level_15.tscn"},
 	
 	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
-	
+
 	
 	{"name": "mice coin", "scene": "res://scenes/level_12.tscn"},
 	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},

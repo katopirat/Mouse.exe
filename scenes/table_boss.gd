@@ -10,14 +10,16 @@ extends Node2D
 @onready var fist1 = $Fist1
 @onready var fist2 = $Fist2
 
+
 var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	hand 
 	shadow.visible = false
-	await get_tree().create_timer(1.0).timeout
-	start()
+	await intro()
+
+	
 	
 
 
@@ -26,6 +28,7 @@ func _process(delta: float) -> void:
 	pass
 
 func start():
+	Global.music_style = "boss"
 	while true:
 		if randi_range(0,1) == 1:
 			await funkce_ktera_dela_to_ze_ruka_placne_mys()
@@ -114,3 +117,6 @@ func _on_area_1_body_entered(body: Node2D) -> void:
 func _on_area_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.knockback(Vector2(-1, 0))
+
+func intro():
+	pass
