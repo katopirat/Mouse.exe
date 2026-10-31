@@ -544,9 +544,11 @@ texture = ExtResource("5_rnhm2")
 script = ExtResource("8_o86jq")
 
 [node name="TailStart" type="Node2D" parent="Myš(stacionary)" unique_id=211265860]
+visible = false
 position = Vector2(0.33333334, 10.333332)
 
 [node name="Tail" type="Line2D" parent="Myš(stacionary)" unique_id=1997148798]
+visible = false
 z_index = -1
 position = Vector2(0, 20.666668)
 default_color = Color(0.11536538, 0.10558673, 0.098028876, 1)

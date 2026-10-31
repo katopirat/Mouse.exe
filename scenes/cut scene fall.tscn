@@ -250,6 +250,9 @@ _data = {
 &"show_slow": SubResource("Animation_mx1us")
 }
 
+[sub_resource type="Gradient" id="Gradient_vh4c0"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pyw4p"]
 shader = ExtResource("12_nvylm")
 shader_parameter/scanline_strength = 0.12
@@ -1036,6 +1039,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Vector2(1.9073486e-06, -0.45458984)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_cdqsc"]
 resource_name = "hand"
@@ -1184,6 +1199,18 @@ tracks/11/keys = {
 "update": 0,
 "values": []
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(4.633333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vmkyj"]
 _data = {
@@ -1228,7 +1255,7 @@ tracks/0/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.099999994, 4.366667),
+"times": PackedFloat32Array(0.099999994, 3.5666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(507, -1122), Vector2(507, -1927)]
@@ -1422,6 +1449,23 @@ libraries/ = SubResource("AnimationLibrary_y02g5")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="cutscene intro/Node2D/AnimatedSprite2D/DialogWindow" unique_id=1094325227]
 stream = ExtResource("25_y8l5y")
 pitch_scale = 1.3
+
+[node name="Right" type="CPUParticles2D" parent="cutscene intro/Node2D/AnimatedSprite2D" unique_id=353116053]
+z_index = -2
+position = Vector2(0.45454597, -3.8146973e-06)
+emitting = false
+amount = 50
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color = Color(0.4392157, 0.49019608, 0.52156866, 1)
+color_ramp = SubResource("Gradient_vh4c0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="cutscene intro/Node2D" unique_id=1370691632]
 

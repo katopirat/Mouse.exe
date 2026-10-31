@@ -7,3 +7,7 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.6).timeout
 	play_backwards("fade_in")
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
