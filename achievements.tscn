@@ -101,3 +101,4 @@ text = "the start of a journey"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=347720035]
 stream = ExtResource("7_2dvwe")
+volume_db = -11.64
