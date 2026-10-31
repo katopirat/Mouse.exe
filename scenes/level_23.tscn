@@ -26,8 +26,6 @@
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="21_q4jd7"]
 [ext_resource type="Texture2D" uid="uid://ks11jk3u6ykm" path="res://assets/images/strenght_button.png" id="21_rgtdq"]
 [ext_resource type="Texture2D" uid="uid://lrvjlc8ehh76" path="res://assets/images/speed_button.png" id="22_3nu3i"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="22_mfknm"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="23_6v3yu"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="24_7yy7y"]
 [ext_resource type="Script" uid="uid://dm6ful57mas6y" path="res://scripts/disapear_button_cost.gd" id="24_akowo"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="26_m71ky"]
@@ -531,12 +529,6 @@ script = ExtResource("21_q4jd7")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor_1/Os/PanelContainer" unique_id=677184590]
 layout_mode = 2
-
-[node name="Button" type="TextureButton" parent="Player/Monitor_1/Os/PanelContainer/HBoxContainer2" unique_id=199132391]
-layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("22_mfknm")
-texture_pressed = ExtResource("23_6v3yu")
 
 [node name="Panel" type="PanelContainer" parent="Player/Monitor_1/Os/PanelContainer/HBoxContainer2" unique_id=1333624039]
 layout_mode = 2
