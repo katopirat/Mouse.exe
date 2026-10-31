@@ -32,8 +32,6 @@
 [ext_resource type="AudioStream" uid="uid://qel2ewsq76wc" path="res://assets/soundeffects/fall.wav" id="17_q7fch"]
 [ext_resource type="AudioStream" uid="uid://c4jaq2wo2gltj" path="res://assets/soundeffects/falling.wav" id="18_dhgp7"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="18_rcunu"]
-[ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="19_fpas6"]
-[ext_resource type="Texture2D" uid="uid://cyo4ynh71ynvk" path="res://mouse_os/ui/start_button_pressed.png" id="20_gjp5e"]
 [ext_resource type="Script" uid="uid://b7haqjyw4cdx" path="res://scripts/cursor_movement18.gd" id="21_fpas6"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="21_vs8jf"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="22_vf0ej"]
@@ -646,12 +644,6 @@ script = ExtResource("18_rcunu")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Player/Monitor_1/Os/PanelContainer" unique_id=677184590]
 layout_mode = 2
-
-[node name="Button" type="TextureButton" parent="Player/Monitor_1/Os/PanelContainer/HBoxContainer2" unique_id=199132391]
-layout_mode = 2
-theme_type_variation = &"ButtonGreen"
-texture_normal = ExtResource("19_fpas6")
-texture_pressed = ExtResource("20_gjp5e")
 
 [node name="Panel" type="PanelContainer" parent="Player/Monitor_1/Os/PanelContainer/HBoxContainer2" unique_id=1333624039]
 layout_mode = 2

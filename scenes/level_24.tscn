@@ -9958,7 +9958,6 @@ scale = Vector2(2, 2)
 
 [node name="cup" parent="." unique_id=1365249055 instance=ExtResource("18_ttfv7")]
 position = Vector2(410.00006, -2613)
-scale = Vector2(1, 1)
 
 [node name="Keyboard" parent="." unique_id=1763995382 instance=ExtResource("22_xma1c")]
 position = Vector2(-21, -3726)
