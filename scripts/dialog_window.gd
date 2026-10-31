@@ -58,6 +58,8 @@ func start_talk():
 	var text_z :String
 	$AudioStreamPlayer.play()
 	for a in text :
+		if closed:
+			return
 		text_z += a
 		label.text = text_z
 		if a in waiting_time:
