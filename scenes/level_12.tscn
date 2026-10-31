@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_cbqc3"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="1_jjgao"]
+[ext_resource type="Script" uid="uid://bg7qwhhmh450h" path="res://scripts/level_12.gd" id="1_u7dyw"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_8x383"]
 [ext_resource type="Script" uid="uid://b73udjk3ote37" path="res://scripts/mouse_pad_ad.gd" id="2_mabuh"]
 [ext_resource type="Texture2D" uid="uid://dxexuv76587jw" path="res://assets/ads/mice ad.png" id="3_6e4so"]
@@ -229,6 +230,7 @@ _data = {
 }
 
 [node name="Level12" type="Node2D" unique_id=659635860]
+script = ExtResource("1_u7dyw")
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_cbqc3")]
 
