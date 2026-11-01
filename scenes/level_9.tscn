@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dh8fhu3ubcbq6"]
 
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_c5wkq"]
+[ext_resource type="Script" uid="uid://b6pf62o8rt62c" path="res://scripts/level_9.gd" id="1_lnajf"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_xqj3w"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_lq6po"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="4_nttaj"]
@@ -22,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="19_lgnqi"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="20_3pwyc"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="21_8ybmx"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="21_nttaj"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="21_o60ts"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="22_qbhuv"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_fi6co"]
@@ -69,8 +71,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_355ir"]
-radius = 8.207375
-height = 21.041199
+radius = 9.731262
+height = 26.220825
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hic8i"]
 animations = [{
@@ -216,6 +218,7 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_8ybmx")
 
 [node name="level_9" type="Node2D" unique_id=1152663234]
+script = ExtResource("1_lnajf")
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_c5wkq")]
 layer = 588
@@ -443,6 +446,9 @@ scale = Vector2(1.839998, 1.839998)
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Computer" unique_id=381043443]
 
+[node name="Achievements" parent="Node2D/Player" unique_id=1807818859 instance=ExtResource("21_nttaj")]
+position = Vector2(-578, -316)
+
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=747471745]
 scale = Vector2(3, 3)
 scroll_scale = Vector2(0.7, 0.7)
@@ -518,4 +524,5 @@ next_scene = ExtResource("6_314y7")
 [connection signal="closed" from="Node2D/Player/Computer/Window3/XButton" to="Node2D/Player/Computer/Window3" method="_on_x_button_closed"]
 [connection signal="body_entered" from="Node2D/Player/Computer/Window3/BridgeButton" to="Node2D/Player/Computer/Window3/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Computer/Window3/BridgeButton" to="Node2D/Player/Computer/Window3/BridgeButton" method="_on_body_exited"]
+[connection signal="open_bridge" from="Node2D/Player/Computer/Window3/BridgeButton" to="." method="_on_bridge_button_open_bridge"]
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]

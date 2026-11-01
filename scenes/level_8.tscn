@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="1_b522y"]
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_dbbmr"]
+[ext_resource type="Script" uid="uid://d3k0fqdt8ps3r" path="res://scripts/level_8.gd" id="1_dlrgu"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="2_r3ni7"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="3_78sad"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_0f7b7"]
@@ -36,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="28_c7c4w"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="31_2sc2n"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="32_dbbmr"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="36_jx77r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f008l"]
 size = Vector2(455, 22.25)
@@ -225,6 +227,7 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_cmloh")
 
 [node name="Node2D" type="Node2D" unique_id=348459230]
+script = ExtResource("1_dlrgu")
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_dbbmr")]
 layer = 1000
@@ -595,6 +598,9 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
 
+[node name="Achievements" parent="Node2D/Player" unique_id=1807818859 instance=ExtResource("36_jx77r")]
+position = Vector2(-582, -299)
+
 [node name="book" parent="Node2D" unique_id=650874171 instance=ExtResource("1_b522y")]
 position = Vector2(252, 274)
 
@@ -622,5 +628,7 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window2/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window2/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window2/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window2/BridgeButton" method="_on_body_exited"]
 [connection signal="open_bridge" from="Node2D/Player/Monitor_2/Computer/Window2/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad_3/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
 
+[editable path="Node2D/Player/Monitor_2/Computer/ad_3"]
 [editable path="Node2D/CanvasLayer"]

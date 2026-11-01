@@ -5,7 +5,7 @@ var levels = [
 	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
 	{"name": "The Button", "scene": "res://scenes/level_1.tscn"},
 	{"name": "Ads", "scene": "res://scenes/level_2.tscn"},
-	{"name": "Tutorial how to move mouse, but not the cursor when you're on the edge of the screen, so it stays in one place. It's very smart you know. Now you get it and your very smart too:]", "scene": "res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn"},
+	{"name": "Tutorial 2.0", "scene": "res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn"},
 	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn"},
 	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn"},
 	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},

@@ -57,8 +57,9 @@ func start_talk():
 	
 	var text_z :String
 	$AudioStreamPlayer.play()
-	for a in text :
+	for a in text:
 		if closed:
+			$AudioStreamPlayer.stop()
 			return
 		text_z += a
 		label.text = text_z

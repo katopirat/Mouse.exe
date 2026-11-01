@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bweivr530que7"]
 
+[ext_resource type="Script" uid="uid://caoskr1qdse7g" path="res://scripts/level_2.gd" id="1_vwjju"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="2_63d2t"]
 [ext_resource type="Script" uid="uid://c8dil0tg2q4d4" path="res://scenes/level_title_text.gd" id="2_vwjju"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_va6c3"]
@@ -33,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="28_bgibu"]
 [ext_resource type="PackedScene" uid="uid://diagbiobwh2v1" path="res://scenes/task_bar.tscn" id="31_nquw4"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="32_3buw8"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="35_rur20"]
 
 [sub_resource type="Animation" id="Animation_x5vxs"]
 length = 0.001
@@ -280,6 +282,7 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_va6c3")
 
 [node name="Level2" type="Node2D" unique_id=659635860]
+script = ExtResource("1_vwjju")
 
 [node name="TitleLevelText" type="CanvasLayer" parent="." unique_id=263904650]
 layer = 0
@@ -365,6 +368,9 @@ next_scene = ExtResource("7_bgibu")
 [node name="Player" parent="Node2D" unique_id=1524664585 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_wdtqu")]
 position = Vector2(-1, 2)
 table_tilemap = NodePath("../Table/TileMap")
+
+[node name="Achievements" parent="Node2D/Player" unique_id=1807818859 instance=ExtResource("35_rur20")]
+position = Vector2(-572, -310)
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=846273898]
 position_smoothing_speed = 4.5
@@ -553,5 +559,17 @@ layer_0/tile_data = PackedInt32Array(-131078, 65537, 3, -131077, 65537, 3, -1310
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" method="_on_body_exited"]
 [connection signal="open_bridge" from="Node2D/Player/Monitor_2/Computer/Window/BridgeButton" to="Node2D/Table" method="_on_bridge_button_open_bridge"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad_4/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad3/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad4/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad_3/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
+[connection signal="closed" from="Node2D/Player/Monitor_2/Computer/ad2/Ad/XButtonAd" to="." method="_on_x_button_ad_closed"]
 
+[editable path="Node2D/Player/Monitor_2/Computer/ad_4"]
+[editable path="Node2D/Player/Monitor_2/Computer/ad"]
+[editable path="Node2D/Player/Monitor_2/Computer/ad3"]
+[editable path="Node2D/Player/Monitor_2/Computer/ad4"]
+[editable path="Node2D/Player/Monitor_2/Computer/ad_3"]
+[editable path="Node2D/Player/Monitor_2/Computer/ad2"]
 [editable path="Node2D/CanvasLayer"]
