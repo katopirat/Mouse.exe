@@ -10,13 +10,16 @@ extends Node2D
 @onready var fist1 = $Fist1
 @onready var fist2 = $Fist2
 
+@onready var add_button = $Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Add_to_cart
+@onready var shop_list = $Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Label2
+
 
 var intro_process = 0
 var player
+var mouse_pads = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-	hand 
 	shadow.visible = false
 	await intro()
 
@@ -29,13 +32,18 @@ func _process(delta: float) -> void:
 	pass
 
 func start():
+	
 	Global.music_style = "boss"
-	while true:
+	await get_tree().create_timer(3)
+	change_button_position()
+	
+	while mouse_pads <= 20:
 		if randi_range(0,1) == 1:
 			await funkce_ktera_dela_to_ze_ruka_placne_mys()
 		else:
 			await punch()
 		await get_tree().create_timer(1.0).timeout
+
 		
 func funkce_ktera_dela_to_ze_ruka_placne_mys():
 	$Hand/StaticBody2D/CollisionShape2D.disabled = true
@@ -86,8 +94,8 @@ func  punch():
 	warning1.visible = true
 	warning2.visible = true
 	var t = create_tween().set_parallel()
-	t.tween_property(warning1,"modulate",Color(1.0, 0.0, 0.122, 0.784),0.7)
-	t.tween_property(warning2,"modulate",Color(1.0, 0.0, 0.122, 0.784),0.7)
+	t.tween_property(warning1,"modulate",Color(1.0, 0.0, 0.122, 0.784),1)
+	t.tween_property(warning2,"modulate",Color(1.0, 0.0, 0.122, 0.784),1)
 	await t.finished
 	await get_tree().create_timer(0.1).timeout
 	
@@ -121,12 +129,49 @@ func _on_area_2_body_entered(body: Node2D) -> void:
 
 
 func intro():
-	await get_tree().create_timer(1).timeout
+	if GameState.boss >= 2:
+		start()
+		return
+	add_button.position = Vector2(10000,1000)
+	add_button.visible = false
 	Global.player_can_move = false
-	$DialogWindow.start = true
-	await intro_process == 1
+	$Node2D/CanvasLayer/DialogWindow.start = true
+	await $Node2D/CanvasLayer/DialogWindow.window_closed
+	add_button.position = Vector2(152.0,104.0)
+	add_button.visible = true
+	await add_button.pressed
+	shop_list.text = "1/20"
 	
+	hand.visible = true
+	hand.position = player.global_position + Vector2(1000, 700)
+	var t = create_tween()
+	t.set_trans(Tween.TRANS_SINE)
+	t.set_ease(Tween.EASE_IN_OUT)
+	t.tween_property(hand, "global_position", player.global_position + Vector2(120, 501), 2)
+	$Node2D/CanvasLayer/DialogWindow.text = "HEY?! WHO IS BUYING THIS?"
+	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/hand_icon.png")
+	$Node2D/CanvasLayer/DialogWindow.start = true
+	await $Node2D/CanvasLayer/DialogWindow.window_closed
 	
+	$Node2D/CanvasLayer/DialogWindow.text = "I need to buy all the mousepads as quickly as possible!"
+	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/mouse_stacionary_small.png")
+	$Node2D/CanvasLayer/DialogWindow.start = true
+	await $Node2D/CanvasLayer/DialogWindow.window_closed
+	
+	var tw = create_tween()
+	tw.tween_property(hand, "global_position", player.global_position + Vector2(1000, 700), 2)
+	await  tw.finished
+	GameState.boss = 2
+	start()
 
-func _on_dialog_window_window_closed() -> void:
-	intro_process = 1
+func change_button_position():
+	while mouse_pads <= 20:
+		if randi_range(0,1) == 1:
+			add_button.position = Vector2(randf_range(145.0,321),randf_range(40,157))
+		else:
+			add_button.position = Vector2(randf_range(5.0,65.0),randf_range(142.0,158.0))
+		add_button.reset()
+		await add_button.pressed
+		
+		await get_tree().create_timer(0.1).timeout
+		

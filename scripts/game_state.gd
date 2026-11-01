@@ -16,6 +16,7 @@ var levels = [
 	{"name": "Cursor on the run", "scene": "res://scenes/level_13.tscn"},
 	{"name": "The ads are getting real", "scene": "res://scenes/level_14.tscn"},
 	{"name": "The button again?", "scene": "res://scenes/level_15.tscn"},
+	{"name": "Glass on the table?", "scene": "res://scenes/level_16.tscn"},
 	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
 	{"name": "Mice coin", "scene": "res://scenes/level_12.tscn"},
 	{"name": "Who would buy this table?", "scene": "res://scenes/level_5.tscn"},

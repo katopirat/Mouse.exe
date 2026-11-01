@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 	
 
 func start_talk():
+	$HBoxContainer/Icon.texture = icon  
 	closed = false
 	skip_animation = false
 	text_finished = false
