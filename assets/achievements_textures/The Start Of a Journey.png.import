@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chfo0rwam37y6"
-path="res://.godot/imported/The Start Of a Journey.png-3f467a874f5f0d40aa0f96a00fa025c0.ctex"
+path="res://.godot/imported/The Start Of a Journey.png-3643c0d2602774f74efe070d518f485d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://achievements_textures/The Start Of a Journey.png"
-dest_files=["res://.godot/imported/The Start Of a Journey.png-3f467a874f5f0d40aa0f96a00fa025c0.ctex"]
+source_file="res://assets/achievements_textures/The Start Of a Journey.png"
+dest_files=["res://.godot/imported/The Start Of a Journey.png-3643c0d2602774f74efe070d518f485d.ctex"]
 
 [params]
 

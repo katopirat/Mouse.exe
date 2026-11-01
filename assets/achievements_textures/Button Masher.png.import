@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0s8dopf7tdwc"
-path="res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"
+path="res://.godot/imported/Button Masher.png-9ce3a90a895269c821286267ec7daabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://achievements_textures/Button Masher.png"
-dest_files=["res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"]
+source_file="res://assets/achievements_textures/Button Masher.png"
+dest_files=["res://.godot/imported/Button Masher.png-9ce3a90a895269c821286267ec7daabe.ctex"]
 
 [params]
 
