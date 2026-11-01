@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_tdws8"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="2_n02k1"]
-[ext_resource type="Script" uid="uid://csmlw50ukynp3" path="res://ant_bad.gd" id="3_rpsmx"]
+[ext_resource type="Script" uid="uid://csmlw50ukynp3" path="res://scripts/ant_bad.gd" id="3_rpsmx"]
 [ext_resource type="Texture2D" uid="uid://dyk61we88pkws" path="res://assets/images/ant(black).png" id="4_8fm3l"]
 [ext_resource type="Texture2D" uid="uid://55l6stqtfnbd" path="res://assets/images/Myš¡orange.png" id="5_yklw3"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_xgbvu"]

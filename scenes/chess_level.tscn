@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bgf1w2x6xe8xf" path="res://assets/images/chess/pawn black.png" id="4_5p60n"]
 [ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="4_mieky"]
 [ext_resource type="Texture2D" uid="uid://h1acpakjrsvd" path="res://assets/images/chess/Rook black.png" id="5_7o7yg"]
-[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_rircv"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="5_rircv"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_5p60n"]
 [ext_resource type="Texture2D" uid="uid://ckxqnavqfca11" path="res://assets/images/chess/king black.png" id="6_37vw7"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_7o7yg"]

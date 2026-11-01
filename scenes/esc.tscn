@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bme1rmnixy75w"]
 
-[ext_resource type="Script" uid="uid://b6eg6mlqqeawu" path="res://esc.gd" id="1_kwv5o"]
+[ext_resource type="Script" uid="uid://b6eg6mlqqeawu" path="res://scripts/esc.gd" id="1_kwv5o"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_sixpf"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="2_htsag"]
 [ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
