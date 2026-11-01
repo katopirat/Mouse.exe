@@ -250,6 +250,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
+radius = 9.334244
+height = 23.670624
+
 [node name="Level23" type="Node2D" unique_id=659635860]
 
 [node name="GlassProp" parent="." unique_id=993030729 instance=ExtResource("27_3nu3i")]
@@ -607,6 +611,13 @@ offset_bottom = 27.140999
 theme_override_fonts/font = ExtResource("17_oqyvq")
 theme_override_font_sizes/font_size = 4
 text = "$100"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DisapearButton" unique_id=1182266140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DisapearButton/StaticBody2D" unique_id=1764250532]
+position = Vector2(1.0011063, -0.15988758)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_iopsf")
 
 [node name="Orange_Dos" parent="." unique_id=1106738139 instance=ExtResource("39_usum5")]
 position = Vector2(468.00003, -475.99997)
