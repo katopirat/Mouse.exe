@@ -38,6 +38,7 @@
 [ext_resource type="Script" uid="uid://c2b8x1uk0iv1u" path="res://scripts/cookie.gd" id="31_kiae0"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="35_2hg7u"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="36_akowo"]
+[ext_resource type="PackedScene" uid="uid://vtwt12s2ddj7" path="res://scenes/props/orange_dos.tscn" id="39_usum5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nu3i"]
 radius = 147.085
@@ -606,6 +607,10 @@ offset_bottom = 27.140999
 theme_override_fonts/font = ExtResource("17_oqyvq")
 theme_override_font_sizes/font_size = 4
 text = "$100"
+
+[node name="Orange_Dos" parent="." unique_id=1106738139 instance=ExtResource("39_usum5")]
+position = Vector2(468.00003, -475.99997)
+rotation = 0.34642518
 
 [connection signal="cookie_clicked" from="Cookie" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_cookie_cookie_clicked"]
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]

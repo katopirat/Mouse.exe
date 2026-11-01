@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://vtwt12s2ddj7"]
+
+[ext_resource type="Texture2D" uid="uid://y4y804lqq2vf" path="res://assets/images/ophone(orange)Dos.png" id="1_kyaj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
+size = Vector2(180, 129)
+
+[node name="Orange_Dos" type="Node2D" unique_id=1106738139]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1359644892]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1418950147]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_adpup")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=148327564]
+scale = Vector2(3, 3)
+texture = ExtResource("1_kyaj6")
