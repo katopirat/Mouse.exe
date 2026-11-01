@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_ckvwl"]
 [ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="3_nlqja"]
-[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_0hilk"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="5_0hilk"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="6_wr8iv"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="7_e13mp"]
 [ext_resource type="PackedScene" uid="uid://c12n3sy7ndyok" path="res://scenes/level_1.tscn" id="8_vrdqu"]
