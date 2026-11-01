@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dx44yg8f7ndag"]
 
 [ext_resource type="Script" uid="uid://cy3oovx8eihes" path="res://scripts/glass_prop.gd" id="1_eagej"]
-[ext_resource type="Texture2D" uid="uid://beoj24x7ji6tw" path="res://assets/images/glass_156x54.png" id="1_j1jdx"]
+[ext_resource type="Texture2D" uid="uid://beoj24x7ji6tw" path="res://assets/glass_156x54.png" id="1_j1jdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8sno"]
 size = Vector2(138, 35)
