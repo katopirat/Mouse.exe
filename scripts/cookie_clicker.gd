@@ -75,6 +75,8 @@ func autoclicker(cps: float):
 	click(true)
 	autoclicker(autoclicker_cps)
 	
+	if money_per_click > 100000000:
+		get_tree().change_scene_to_file("res://scenes/blue_screen.tscn")
 
 
 func _on_disapear_button_bought_button(price: int) -> void:

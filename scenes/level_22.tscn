@@ -293,10 +293,10 @@ position = Vector2(-1, 2)
 script = ExtResource("3_re66s")
 
 [node name="Camera2D" type="Camera2D" parent="Level21/Player" unique_id=846273898]
-limit_left = -1100
-limit_top = -720
-limit_right = 1300
-limit_bottom = 520
+limit_left = -11000
+limit_top = -1000000
+limit_right = 1300000
+limit_bottom = 5200000
 position_smoothing_speed = 4.5
 
 [node name="Monitor_1" type="Node2D" parent="Level21/Player" unique_id=831704774]

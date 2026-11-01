@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bhgk5dudl2y40"]
+
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_07gbj"]
+[ext_resource type="Texture2D" uid="uid://b6f4rwa51xg2b" path="res://assets/images/blue screen.jpg" id="2_a3508"]
+[ext_resource type="Script" uid="uid://dltscq6d8akbl" path="res://scenes/blue_screen.gd" id="3_a3508"]
+
+[node name="blue screen" type="Node2D" unique_id=35088995]
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("1_07gbj")]
+
+[node name="ColorRect" parent="CanvasLayer" index="0" unique_id=2100473344]
+metadata/_edit_use_anchors_ = true
+
+[node name="BlueScreen" type="Sprite2D" parent="." unique_id=222063064]
+position = Vector2(583, 325)
+scale = Vector2(1.5200008, 1.5200008)
+texture = ExtResource("2_a3508")
+script = ExtResource("3_a3508")
+
+[node name="Timer" type="Timer" parent="." unique_id=1364256257]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="BlueScreen" method="_on_timer_timeout"]
+
+[editable path="CanvasLayer"]

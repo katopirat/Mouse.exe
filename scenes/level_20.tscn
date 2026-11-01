@@ -25,11 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="19_vnm4r"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="20_rkc6e"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="21_14nu3"]
-[ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="22_25541"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_y0bsh"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="24_vkk42"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="25_tym5q"]
-[ext_resource type="Texture2D" uid="uid://ivnyin1qnwmj" path="res://assets/images/dont_click_cursor.png" id="26_88wjc"]
 [ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="26_qvt24"]
 [ext_resource type="Script" uid="uid://dnsihbw17mhwq" path="res://scripts/button (2).gd" id="27_35bn8"]
 [ext_resource type="Texture2D" uid="uid://d1lncwu7jck4q" path="res://assets/images/button-gr.png" id="28_r2xh0"]
@@ -279,7 +277,7 @@ position = Vector2(-106.99994, 290.00003)
 position = Vector2(324, -249)
 
 [node name="Finish" parent="Node2D" unique_id=1389901689 instance=ExtResource("14_smtl8")]
-z_index = -1
+z_index = -13
 position = Vector2(-958.99994, -71.99999)
 rotation = 1.5695742
 next_scene = ExtResource("15_8okqi")
@@ -334,12 +332,6 @@ position = Vector2(9.076538, 13.064672)
 scale = Vector2(1.7121677, 1.7121677)
 texture = ExtResource("21_14nu3")
 
-[node name="Hand" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=1744459323]
-visible = false
-position = Vector2(2.7229562, 9.044768)
-scale = Vector2(1.5703856, 1.5703856)
-texture = ExtResource("22_25541")
-
 [node name="Hitbox" type="Area2D" parent="Node2D/Player/Computer/Cursor" unique_id=2146866028]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/Cursor/Hitbox" unique_id=1789312344]
@@ -347,12 +339,6 @@ position = Vector2(-0.6380005, -0.20999146)
 rotation = 3.1415927
 scale = Vector2(0.165, 0.16500002)
 shape = SubResource("RectangleShape2D_llqww")
-
-[node name="Dont" type="Sprite2D" parent="Node2D/Player/Computer/Cursor" unique_id=748809889]
-visible = false
-position = Vector2(0, -1.5258789e-05)
-scale = Vector2(1.5703857, 1.5703857)
-texture = ExtResource("26_88wjc")
 
 [node name="Borders" type="StaticBody2D" parent="Node2D/Player/Computer" unique_id=123904590]
 position = Vector2(274, -4011)

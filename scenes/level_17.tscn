@@ -1765,6 +1765,10 @@ sprite_frames = SubResource("SpriteFrames_ia6f3")
 stream = ExtResource("59_1bond")
 volume_db = -16.845
 
+[node name="closable keyboard" parent="Node2D" unique_id=995496471 instance=ExtResource("30_o48br")]
+position = Vector2(-474.99976, 6674.0005)
+rotation = 1.058463
+
 [node name="closable book" type="Node2D" parent="." unique_id=888231878]
 position = Vector2(-4, 1683)
 rotation = -0.73363113
