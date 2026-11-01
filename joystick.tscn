@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4y7324nfkjan"]
+
+[ext_resource type="Script" uid="uid://bfm00t4cogv5i" path="res://scripts/joystick.gd" id="1_nwye7"]
+
+[node name="Joystick" type="Node2D" unique_id=540286818]
+script = ExtResource("1_nwye7")
