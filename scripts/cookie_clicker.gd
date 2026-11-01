@@ -75,7 +75,7 @@ func autoclicker(cps: float):
 	click(true)
 	autoclicker(autoclicker_cps)
 	
-	if money_per_click > 100000000:
+	if money_per_click > 100000000 or cps > 10000000:
 		get_tree().change_scene_to_file("res://scenes/blue_screen.tscn")
 
 

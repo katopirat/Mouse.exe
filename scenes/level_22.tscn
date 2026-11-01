@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cdusmvtbt7ke2"]
 
+[ext_resource type="Script" uid="uid://44x403h5es1f" path="res://scripts/level_22.gd" id="1_ekn6h"]
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_xuqfk"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="2_bdwog"]
 [ext_resource type="Script" uid="uid://gg2ahetw4w2k" path="res://scripts/player_ground.gd" id="3_re66s"]
@@ -283,6 +284,7 @@ radius = 2.7475204
 height = 12.561135
 
 [node name="level22" type="Node2D" unique_id=2030300510]
+script = ExtResource("1_ekn6h")
 
 [node name="Level21" type="Node2D" parent="." unique_id=659635860]
 

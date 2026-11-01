@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_07gbj"]
 [ext_resource type="Texture2D" uid="uid://b6f4rwa51xg2b" path="res://assets/images/blue screen.jpg" id="2_a3508"]
 [ext_resource type="Script" uid="uid://dltscq6d8akbl" path="res://scenes/blue_screen.gd" id="3_a3508"]
+[ext_resource type="AudioStream" uid="uid://ct2pnteb6ytt" path="res://assets/soundeffects/windows-10-error-sound.mp3" id="4_na6if"]
 
 [node name="blue screen" type="Node2D" unique_id=35088995]
 
@@ -18,9 +19,13 @@ texture = ExtResource("2_a3508")
 script = ExtResource("3_a3508")
 
 [node name="Timer" type="Timer" parent="." unique_id=1364256257]
-wait_time = 10.0
+wait_time = 7.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1642144274]
+stream = ExtResource("4_na6if")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="BlueScreen" method="_on_timer_timeout"]
 
