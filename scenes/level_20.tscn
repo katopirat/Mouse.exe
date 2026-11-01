@@ -271,6 +271,7 @@ layer_0/tile_data = PackedInt32Array(-196613, 1, 1, -131077, 196609, 1, -65541, 
 position = Vector2(-347, -233)
 
 [node name="cup" parent="Node2D/Table" unique_id=200577205 instance=ExtResource("4_88wjc")]
+z_index = -5
 position = Vector2(-106.99994, 290.00003)
 
 [node name="note thing" parent="Node2D/Table" unique_id=234277861 instance=ExtResource("5_b6u0r")]
