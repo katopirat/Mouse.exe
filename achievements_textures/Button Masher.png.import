@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chfo0rwam37y6"
-path="res://.godot/imported/The Start Of a Journey.png-3643c0d2602774f74efe070d518f485d.ctex"
+uid="uid://0s8dopf7tdwc"
+path="res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/achievements_textures/The Start Of a Journey.png"
-dest_files=["res://.godot/imported/The Start Of a Journey.png-3643c0d2602774f74efe070d518f485d.ctex"]
+source_file="res://achievements_textures/Button Masher.png"
+dest_files=["res://.godot/imported/Button Masher.png-f0994427e55f37b0a97af8f4b77bd6a2.ctex"]
 
 [params]
 

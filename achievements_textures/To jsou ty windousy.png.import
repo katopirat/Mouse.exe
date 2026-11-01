@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8tpe2mtou8uh"
-path="res://.godot/imported/Stonks!.png-fd2fe9b7ffe7e5e67154c7533bc3eb0d.ctex"
+uid="uid://c87akb8euijhs"
+path="res://.godot/imported/To jsou ty windousy.png-ce29ce00d2a3c07487b7928df8d521e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/achievements_textures/Stonks!.png"
-dest_files=["res://.godot/imported/Stonks!.png-fd2fe9b7ffe7e5e67154c7533bc3eb0d.ctex"]
+source_file="res://achievements_textures/To jsou ty windousy.png"
+dest_files=["res://.godot/imported/To jsou ty windousy.png-ce29ce00d2a3c07487b7928df8d521e8.ctex"]
 
 [params]
 
