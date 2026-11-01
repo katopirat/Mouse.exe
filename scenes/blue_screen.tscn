@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bm4wv377a0jta" path="res://assets/images/blue screen2.png" id="2_na6if"]
 [ext_resource type="Script" uid="uid://dltscq6d8akbl" path="res://scenes/blue_screen.gd" id="3_a3508"]
 [ext_resource type="AudioStream" uid="uid://ct2pnteb6ytt" path="res://assets/soundeffects/windows-10-error-sound.mp3" id="4_na6if"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="5_dsl7a"]
 
-[node name="blue screen" type="Node2D" unique_id=35088995]
+[node name="BlueScreen" type="Node2D" unique_id=35088995]
+script = ExtResource("3_a3508")
 
 [node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("1_07gbj")]
 
@@ -16,7 +18,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(583, 325)
 scale = Vector2(2.320002, 2.320002)
 texture = ExtResource("2_na6if")
-script = ExtResource("3_a3508")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="BlueScreen" unique_id=920315756]
 offset_left = -192.24121
@@ -53,6 +54,8 @@ autostart = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1642144274]
 stream = ExtResource("4_na6if")
 autoplay = true
+
+[node name="Achievements" parent="." unique_id=1807818859 instance=ExtResource("5_dsl7a")]
 
 [connection signal="timeout" from="Timer" to="BlueScreen" method="_on_timer_timeout"]
 
