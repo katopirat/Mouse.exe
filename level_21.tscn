@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bsh3m63esc0ih"]
 
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_c5psd"]
-[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="2_haanl"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="2_haanl"]
 [ext_resource type="Script" uid="uid://gg2ahetw4w2k" path="res://scripts/player_ground.gd" id="3_k3bdf"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="4_jirgc"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="5_2fcfa"]
@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://uott3pkhyso3" path="res://scenes/props/disapearing_props_ground/disapearing_placeholder.tscn" id="31_64fmc"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="31_haanl"]
 [ext_resource type="Script" uid="uid://b2ju237oyi565" path="res://scenes/area_2d.gd" id="35_jirgc"]
-[ext_resource type="Script" uid="uid://bu2ysepnqo70y" path="res://ant_bad_16.gd" id="35_k3bdf"]
+[ext_resource type="Script" uid="uid://bu2ysepnqo70y" path="res://scripts/ant_bad_16.gd" id="35_k3bdf"]
 [ext_resource type="Texture2D" uid="uid://bmumht585ruyk" path="res://assets/images/ant(red).png" id="36_jirgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]

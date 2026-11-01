@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c8dil0tg2q4d4" path="res://scenes/level_title_text.gd" id="2_vwjju"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="3_va6c3"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="4_pc3at"]
-[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://player.tscn" id="5_wdtqu"]
+[ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="5_wdtqu"]
 [ext_resource type="Script" uid="uid://krlrd2anepqg" path="res://scripts/window.gd" id="6_73m23"]
 [ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="7_45kkt"]
 [ext_resource type="PackedScene" uid="uid://b8e3y5osvx8u" path="res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn" id="7_bgibu"]

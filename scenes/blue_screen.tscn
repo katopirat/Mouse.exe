@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhgk5dudl2y40"]
 
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="1_07gbj"]
-[ext_resource type="Texture2D" uid="uid://b6f4rwa51xg2b" path="res://assets/images/blue screen.jpg" id="2_a3508"]
+[ext_resource type="Texture2D" uid="uid://bm4wv377a0jta" path="res://assets/images/blue screen2.png" id="2_na6if"]
 [ext_resource type="Script" uid="uid://dltscq6d8akbl" path="res://scenes/blue_screen.gd" id="3_a3508"]
 [ext_resource type="AudioStream" uid="uid://ct2pnteb6ytt" path="res://assets/soundeffects/windows-10-error-sound.mp3" id="4_na6if"]
 
@@ -14,9 +14,36 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BlueScreen" type="Sprite2D" parent="." unique_id=222063064]
 position = Vector2(583, 325)
-scale = Vector2(1.5200008, 1.5200008)
-texture = ExtResource("2_a3508")
+scale = Vector2(2.320002, 2.320002)
+texture = ExtResource("2_na6if")
 script = ExtResource("3_a3508")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BlueScreen" unique_id=920315756]
+offset_left = -192.24121
+offset_top = 31.896523
+offset_right = -55.17238
+offset_bottom = 71.89652
+text = "67% compleated"
+
+[node name="Label" type="Label" parent="BlueScreen" unique_id=942651622]
+offset_left = -189.655
+offset_top = -31.896519
+offset_right = 337.345
+offset_bottom = 69.103485
+scale = Vector2(0.45384407, 0.45632082)
+text = "ur pc is to bad for biscut clicker 
+we recomand using linux next time 
+and be careful not to turn your pc into nuclear warhead next time 
+you decide to play Fortnite"
+
+[node name="Label" type="Label" parent="BlueScreen/Label" unique_id=1132007693]
+layout_mode = 0
+offset_left = 73.13002
+offset_top = 192.69547
+offset_right = 413.13
+offset_bottom = 215.69547
+scale = Vector2(0.64897263, 0.64897263)
+text = "Everithing told here is a joke pls dont sue us"
 
 [node name="Timer" type="Timer" parent="." unique_id=1364256257]
 wait_time = 7.0

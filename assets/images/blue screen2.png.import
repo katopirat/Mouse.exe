@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6f4rwa51xg2b"
-path="res://.godot/imported/blue screen.jpg-4145b0ab9530e8eaba4b0286ad2a78d6.ctex"
+uid="uid://bm4wv377a0jta"
+path="res://.godot/imported/blue screen2.png-b78d533b07e0cd3bd0734c7868305085.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/blue screen.jpg"
-dest_files=["res://.godot/imported/blue screen.jpg-4145b0ab9530e8eaba4b0286ad2a78d6.ctex"]
+source_file="res://assets/images/blue screen2.png"
+dest_files=["res://.godot/imported/blue screen2.png-b78d533b07e0cd3bd0734c7868305085.ctex"]
 
 [params]
 
