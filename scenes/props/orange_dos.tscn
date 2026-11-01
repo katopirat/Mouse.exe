@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://vtwt12s2ddj7"]
 
 [ext_resource type="Texture2D" uid="uid://y4y804lqq2vf" path="res://assets/images/ophone(orange)Dos.png" id="1_kyaj6"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="2_sxf4s"]
+[ext_resource type="Script" uid="uid://15batbgo2ehg" path="res://scenes/props/phone_label_time.gd" id="3_th8et"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adpup"]
 size = Vector2(180, 129)
@@ -16,3 +18,35 @@ shape = SubResource("RectangleShape2D_adpup")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=148327564]
 scale = Vector2(3, 3)
 texture = ExtResource("1_kyaj6")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=726854590]
+offset_left = -38.0
+offset_top = -48.0
+offset_right = -6.0
+offset_bottom = -13.0
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D" unique_id=219471249]
+offset_left = 6.0
+offset_top = -49.0
+offset_right = 38.0
+offset_bottom = -14.0
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="StaticBody2D" unique_id=99930076]
+offset_left = -3.0
+offset_top = -49.0
+offset_right = 3.0
+offset_bottom = -14.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1687624598]
+offset_left = -51.0
+offset_top = -45.0
+offset_right = 70.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(0.7316578, 0.31749296, 0, 1)
+theme_override_fonts/font = ExtResource("2_sxf4s")
+theme_override_font_sizes/font_size = 42
+text = "10:51"
+script = ExtResource("3_th8et")

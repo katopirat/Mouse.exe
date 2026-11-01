@@ -126,6 +126,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cnh78"]
 texture = ExtResource("30_q7xoe")
 texture_region_size = Vector2i(32, 32)
@@ -505,8 +507,11 @@ offset_right = 131.0
 offset_bottom = 116.99988
 texture = ExtResource("19_501yg")
 
-[node name="Area2D" type="Area2D" parent="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer" unique_id=338519745]
+[node name="Add_to_cart" type="Area2D" parent="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer" unique_id=338519745]
 position = Vector2(175, 15.999876)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Add_to_cart" unique_id=247428771]
+shape = SubResource("RectangleShape2D_3v8a5")
 
 [node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=1281427560]
 layout_mode = 3
