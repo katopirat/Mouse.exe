@@ -11,6 +11,7 @@ extends Node2D
 @onready var fist2 = $Fist2
 
 
+var intro_process = 0
 var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -118,5 +119,14 @@ func _on_area_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.knockback(Vector2(-1, 0))
 
+
 func intro():
-	pass
+	await get_tree().create_timer(1).timeout
+	Global.player_can_move = false
+	$DialogWindow.start = true
+	await intro_process == 1
+	
+	
+
+func _on_dialog_window_window_closed() -> void:
+	intro_process = 1
