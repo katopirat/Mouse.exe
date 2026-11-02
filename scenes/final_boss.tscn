@@ -230,18 +230,20 @@ tile_set = SubResource("TileSet_uwhva")
 format = 2
 layer_0/tile_data = PackedInt32Array(-786446, 65536, 2, -786445, 65536, 2, -786439, 65536, 2, -786438, 65536, 2, -786437, 65536, 2, -786436, 65536, 2, -786433, 65536, 2, -786434, 65536, 2, -786435, 65536, 2, -851959, 65536, 2, -851960, 65536, 2, -851961, 65536, 2, -851962, 65536, 2, -851963, 65536, 2, -851964, 65536, 2, -851965, 65536, 2, -851966, 65536, 2, -851967, 65536, 2, -851968, 65536, 2, -851979, 65536, 1, -851978, 65536, 1, -851977, 65536, 1, -917494, 196608, 1, -851958, 196608, 2, -786422, 131072, 1342177283, -720886, 131072, 1342177283, -655350, 131072, 1342177283, -589814, 131072, 1342177283, -524278, 131072, 1342177283, -458742, 131072, 1342177283, -393206, 131072, 1342177283, -327670, 131072, 1342177283, -262134, 131072, 1342177283, -131062, 131072, 1342177283, -196598, 131072, 1342177283, -65526, 196608, 3, -65527, 131072, 3, -65528, 131072, 3, -65529, 131072, 3, -65530, 131072, 3, -65531, 131072, 3, -65532, 131072, 3, -65533, 131072, 3, -65534, 131072, 3, -65535, 131072, 3, -65536, 131072, 3, -1, 131072, 3, -2, 131072, 3, -3, 131072, 3, -4, 131072, 3, -5, 131072, 3, -6, 131072, 3, -9, 131072, 3, -10, 131072, 3, -11, 131072, 3, -12, 131072, 3, -13, 131072, 3, -14, 131072, 3, -7, 131072, 3, -8, 131072, 3, -15, 0, 3, -65551, 131072, 1342177283, -720911, 131072, 1342177283, -655375, 131072, 1342177283, -589839, 131072, 1342177283, -524303, 131072, 1342177283, -458767, 131072, 1342177283, -393231, 131072, 1342177283, -327695, 131072, 1342177283, -262159, 131072, 1342177283, -196623, 131072, 1342177283, -131087, 131072, 1342177283, -786447, 0, 2, -851983, 0, 1)
 
-[node name="ant_bad16" type="RigidBody2D" parent="." unique_id=80294153]
+[node name="Node" type="Node" parent="." unique_id=725467120]
+
+[node name="ant_bad16" type="RigidBody2D" parent="Node" unique_id=80294153]
 position = Vector2(1122, -530)
 mass = 6.805
 physics_material_override = SubResource("PhysicsMaterial_uwhva")
 gravity_scale = 0.0
 script = ExtResource("29_n26r2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ant_bad16" unique_id=1662952278]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/ant_bad16" unique_id=1662952278]
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_tln78")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ant_bad16" unique_id=441918381]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node/ant_bad16" unique_id=441918381]
 modulate = Color(6.096733, 0, 0, 1)
 self_modulate = Color(1, 0, 0, 1)
 position = Vector2(5, 0)
@@ -252,20 +254,20 @@ animation = &"new_animation"
 autoplay = "new_animation"
 script = ExtResource("31_k2vcy")
 
-[node name="Area2D" type="Area2D" parent="ant_bad16" unique_id=1041451844]
+[node name="Area2D" type="Area2D" parent="Node/ant_bad16" unique_id=1041451844]
 script = ExtResource("32_gov60")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ant_bad16/Area2D" unique_id=292302689]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node/ant_bad16/Area2D" unique_id=292302689]
 rotation = -3.1415925
 scale = Vector2(7.7698135, -1.3127697)
 shape = SubResource("CapsuleShape2D_jtmkt")
 disabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ant_bad16/Area2D" unique_id=190626559]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/ant_bad16/Area2D" unique_id=190626559]
 position = Vector2(1.000001, -2.670288e-05)
 rotation = -4.712389
 scale = Vector2(4.7315087, -4.4581966)
 shape = SubResource("CapsuleShape2D_3at0f")
 
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]
-[connection signal="body_entered" from="ant_bad16/Area2D" to="ant_bad16/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node/ant_bad16/Area2D" to="Node/ant_bad16/Area2D" method="_on_body_entered"]
