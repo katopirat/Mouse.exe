@@ -24,6 +24,7 @@ func _input(event):
 		if is_pressed:
 			pass
 		else:
+			remove_from_group("clickable")
 			open_bridge.emit()
 			sound_player.play()
 			$AnimatedSprite2D.play("pressed")
