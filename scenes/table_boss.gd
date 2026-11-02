@@ -11,8 +11,9 @@ extends Node2D
 @onready var fist2 = $Fist2
 
 @onready var add_button = $Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Add_to_cart
-@onready var shop_list = $Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Label2
+@onready var shop_label = $Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Label2
 
+var punch_time = 1.5
 
 var intro_process = 0
 var player
@@ -21,6 +22,10 @@ var mouse_pads = 1
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	shadow.visible = false
+	$Node2D/Table/TileMap.visible = false
+	$Node2D/Table/TileMapDotted.visible = true
+	$Node2D/Table/TileMapDotted2.visible = false
+	$Node2D/Table/TileMap2.visible = false
 	await intro()
 
 	
@@ -36,13 +41,16 @@ func start():
 	Global.music_style = "boss"
 	await get_tree().create_timer(3)
 	change_button_position()
-	
-	while mouse_pads <= 20:
+	if player.god_mode == true:
+		mouse_pads = 14
+	while mouse_pads < 20:
 		if randi_range(0,1) == 1:
 			await funkce_ktera_dela_to_ze_ruka_placne_mys()
 		else:
 			await punch()
 		await get_tree().create_timer(1.0).timeout
+		if mouse_pads >= 15:
+			punch_time = 1.0 
 
 		
 func funkce_ktera_dela_to_ze_ruka_placne_mys():
@@ -93,9 +101,10 @@ func  punch():
 	warning2.modulate = Color(0.0, 0.0, 0.0, 0.0)
 	warning1.visible = true
 	warning2.visible = true
+	
 	var t = create_tween().set_parallel()
-	t.tween_property(warning1,"modulate",Color(1.0, 0.0, 0.122, 0.784),1)
-	t.tween_property(warning2,"modulate",Color(1.0, 0.0, 0.122, 0.784),1)
+	t.tween_property(warning1,"modulate",Color(1.0, 0.0, 0.122, 0.784),punch_time)
+	t.tween_property(warning2,"modulate",Color(1.0, 0.0, 0.122, 0.784),punch_time)
 	await t.finished
 	await get_tree().create_timer(0.1).timeout
 	
@@ -130,6 +139,8 @@ func _on_area_2_body_entered(body: Node2D) -> void:
 
 func intro():
 	if GameState.boss >= 2:
+		mouse_pads = 1
+		shop_label.text = "1/20"
 		start()
 		return
 	add_button.position = Vector2(10000,1000)
@@ -140,7 +151,8 @@ func intro():
 	add_button.position = Vector2(152.0,104.0)
 	add_button.visible = true
 	await add_button.pressed
-	shop_list.text = "1/20"
+	shop_label.text = "1/20"
+	mouse_pads = 1
 	
 	hand.visible = true
 	hand.position = player.global_position + Vector2(1000, 700)
@@ -160,7 +172,9 @@ func intro():
 	
 	var tw = create_tween()
 	tw.tween_property(hand, "global_position", player.global_position + Vector2(1000, 700), 2)
+	
 	await  tw.finished
+	hand.visible = false
 	GameState.boss = 2
 	start()
 
@@ -170,8 +184,36 @@ func change_button_position():
 			add_button.position = Vector2(randf_range(145.0,321),randf_range(40,157))
 		else:
 			add_button.position = Vector2(randf_range(5.0,65.0),randf_range(142.0,158.0))
-		add_button.reset()
-		await add_button.pressed
-		
-		await get_tree().create_timer(0.1).timeout
-		
+		if mouse_pads < 20:
+			add_button.reset()
+			await add_button.pressed
+			mouse_pads += 1
+			shop_label.text = str(mouse_pads) + "/20"
+			await get_tree().create_timer(0.1).timeout
+		else:
+			break
+	add_button.position = Vector2(randf_range(145.0,321),randf_range(40,157))
+	add_button.reset()
+	add_button.get_child(1).text = "  pay now  "
+	add_button.get_child(2).text = "pay 598$"
+	add_button.scale = Vector2(2.5,2.5)
+	await add_button.pressed
+	
+	var t = create_tween()
+	t.set_trans(Tween.TRANS_SINE)
+	t.set_ease(Tween.EASE_IN_OUT)
+	t.tween_property(hand, "global_position", player.global_position + Vector2(120, 501), 2)
+	$Node2D/CanvasLayer/DialogWindow.text = "nooo why did u do that"
+	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/hand_icon.png")
+	$Node2D/CanvasLayer/DialogWindow.start = true
+	await $Node2D/CanvasLayer/DialogWindow.window_closed
+	
+	$Node2D/CanvasLayer/DialogWindow.text = "I need to find the exit"
+	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/mouse_stacionary_small.png")
+	$Node2D/CanvasLayer/DialogWindow.start = true
+	await $Node2D/CanvasLayer/DialogWindow.window_closed
+	
+	$Node2D/Table/TileMap.visible = false
+	$Node2D/Table/TileMapDotted.visible = false
+	$Node2D/Table/TileMapDotted2.visble = true
+	$Node2D/Table/TileMap2.visible = true
