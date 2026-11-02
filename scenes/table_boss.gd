@@ -22,10 +22,7 @@ var mouse_pads = 1
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	shadow.visible = false
-	$Node2D/Table/TileMap.visible = false
-	$Node2D/Table/TileMapDotted.visible = true
-	$Node2D/Table/TileMapDotted2.visible = false
-	$Node2D/Table/TileMap2.visible = false
+
 	await intro()
 
 	
@@ -138,6 +135,7 @@ func _on_area_2_body_entered(body: Node2D) -> void:
 
 
 func intro():
+
 	if GameState.boss >= 2:
 		mouse_pads = 1
 		shop_label.text = "1/20"
@@ -215,5 +213,5 @@ func change_button_position():
 	
 	$Node2D/Table/TileMap.visible = false
 	$Node2D/Table/TileMapDotted.visible = false
-	$Node2D/Table/TileMapDotted2.visble = true
+	$Node2D/Table/TileMapDotted2.visible = true
 	$Node2D/Table/TileMap2.visible = true
