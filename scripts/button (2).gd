@@ -19,8 +19,8 @@ func _on_body_exited(body: Node2D) -> void:
 		
 
 func _input(event):
-	if cursor_inside and event.is_action_pressed("click"):
-		print("a")
+	if event.is_action_pressed("click") and self == Global.highest_clickable_body:
+		
 		if is_pressed:
 			pass
 		else:
