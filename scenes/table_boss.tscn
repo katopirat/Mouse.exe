@@ -342,10 +342,9 @@ autoplay = &"level namnam"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=745429856]
 
-[node name="Table" type="Node2D" parent="Node2D" unique_id=972001194 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
+[node name="Table" type="Node2D" parent="Node2D" unique_id=972001194 node_paths=PackedStringArray("tilemap_1", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("3_ixmix")
 tilemap_1 = NodePath("TileMap")
-tilemap_2 = NodePath("")
 tilemap_dotted_1 = NodePath("TileMapDotted")
 tilemap_dotted_2 = NodePath("TileMapDotted2")
 
@@ -366,6 +365,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(15, 196609, 2, 16, 327681, 2, 65552, 327681, 1, 131088, 327681, 1, 196623, 196609, 3, 196624, 327681, 3, 65551, 327681, 4, 131087, 327681, 4)
 
 [node name="TileMapDotted2" type="TileMap" parent="Node2D/Table" unique_id=595556592 groups=["table"]]
+visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("4_82jq6")
@@ -373,6 +373,7 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Node2D/Table" unique_id=221289785 groups=["table"]]
+visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("4_82jq6")
