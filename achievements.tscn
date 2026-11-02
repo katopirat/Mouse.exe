@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="4_rvr50"]
 [ext_resource type="Texture2D" uid="uid://chfo0rwam37y6" path="res://achievements_textures/The Start Of a Journey.png" id="4_u4g45"]
 [ext_resource type="Texture2D" uid="uid://kmmhfcsgy4ee" path="res://achievements_textures/Fell For It.png" id="5_l4oqj"]
-[ext_resource type="Texture2D" uid="uid://c87akb8euijhs" path="res://achievements_textures/To jsou ty windousy.png" id="6_12gql"]
+[ext_resource type="Texture2D" uid="uid://c87akb8euijhs" path="res://achievements_textures/To Jsou Ty Windousy.png" id="6_12gql"]
 [ext_resource type="Texture2D" uid="uid://cy5ckk31fedwo" path="res://achievements_textures/Precision Master.png" id="6_tvhj6"]
 [ext_resource type="AudioStream" uid="uid://dg17gnr4gmi4f" path="res://assets/soundeffects/achivment.wav" id="7_2dvwe"]
 

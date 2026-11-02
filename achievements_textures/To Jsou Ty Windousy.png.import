@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c87akb8euijhs"
-path="res://.godot/imported/To jsou ty windousy.png-ce29ce00d2a3c07487b7928df8d521e8.ctex"
+path="res://.godot/imported/To Jsou Ty Windousy.png-c59ac62a7092922a95083e20aaa918fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://achievements_textures/To jsou ty windousy.png"
-dest_files=["res://.godot/imported/To jsou ty windousy.png-ce29ce00d2a3c07487b7928df8d521e8.ctex"]
+source_file="res://achievements_textures/To Jsou Ty Windousy.png"
+dest_files=["res://.godot/imported/To Jsou Ty Windousy.png-c59ac62a7092922a95083e20aaa918fd.ctex"]
 
 [params]
 
