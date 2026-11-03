@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="15_7nq4e"]
 [ext_resource type="Shader" uid="uid://c0cxi72bqvgrl" path="res://scenes/one_color.gdshader" id="16_711e6"]
 [ext_resource type="Texture2D" uid="uid://mipyyb7hhcep" path="res://assets/images/but.png" id="16_gilny"]
+[ext_resource type="Script" uid="uid://chrjylgvc8hyq" path="res://scripts/shadow_maker.gd" id="18_gilny"]
+[ext_resource type="Texture2D" uid="uid://di1wxy8ov6m3b" path="res://assets/images/Hrnicek.png" id="19_1yeru"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="22_sbdfx"]
 [ext_resource type="PackedScene" uid="uid://fp5ooo7afhy7" path="res://scenes/level_23.tscn" id="23_anlus"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_bm0gf"]
@@ -150,6 +152,19 @@ height = 386.0
 shader = ExtResource("16_711e6")
 shader_parameter/color = Color(0, 0, 0, 1)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iw80n"]
+radius = 8.494274
+height = 33.2097
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mlhyi"]
+
+[sub_resource type="Curve" id="Curve_g2e7s"]
+_data = [Vector2(0, 0.0065789223), 0.0, 0.0, 0, 0, Vector2(0.4973822, 0.6644737), 1.2185005, 1.2185005, 0, 0, Vector2(0.97905767, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_c4bb3"]
+colors = PackedColorArray(0.34898522, 0.09899867, 0, 1, 1, 1, 1, 1)
+
 [node name="FinalBoss" type="Node2D" unique_id=1495920735]
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_5kll7")]
@@ -172,7 +187,7 @@ position = Vector2(0, -51)
 
 [node name="Cable" type="Node2D" parent="Player" unique_id=749905384]
 script = ExtResource("5_aml70")
-max_length = 1500
+max_length = 2000
 cursor_exists = false
 
 [node name="Line2D" type="Line2D" parent="Player/Cable" unique_id=1182878078]
@@ -272,5 +287,46 @@ position = Vector2(-853, -172)
 
 [node name="BottomRight" type="Marker2D" parent="Boss" unique_id=1329851558]
 position = Vector2(674, 182)
+
+[node name="cup" type="Node2D" parent="." unique_id=1678283620]
+position = Vector2(-182, -108.000046)
+scale = Vector2(0.66986096, 0.66986096)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cup" unique_id=1321422276]
+position = Vector2(165.70604, -103.00648)
+scale = Vector2(3.6875, 3.6875)
+collision_layer = 5
+script = ExtResource("18_gilny")
+
+[node name="Sprite2D" type="Sprite2D" parent="cup/StaticBody2D" unique_id=1400540376]
+z_index = 4
+texture = ExtResource("19_1yeru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/StaticBody2D" unique_id=1852383511]
+position = Vector2(1.2571993, 15.021744)
+rotation = -1.5794911
+shape = SubResource("CapsuleShape2D_iw80n")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="cup" unique_id=581825917]
+z_index = 10
+position = Vector2(-26.871244, -89.57082)
+scale = Vector2(1.0000001, 1.0000001)
+emitting = false
+amount = 12
+texture = SubResource("CanvasTexture_mlhyi")
+lifetime = 2.0
+speed_scale = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(40, 20)
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+scale_amount_min = 2.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_g2e7s")
+color = Color(0.8295754, 0.7405223, 0.66673946, 1)
+color_ramp = SubResource("Gradient_c4bb3")
 
 [connection signal="get_mouse_to_finish" from="Finish" to="Player" method="_on_finish_get_mouse_to_finish"]

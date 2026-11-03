@@ -8,6 +8,8 @@ extends Node2D
 @export var stressed_color = Color(0.378, 0.0, 0.0, 1.0)
 @export var cursor_exists: bool = true
 @onready var wrapped_foot: bool = false
+@onready var tight: bool = false
+@onready var touch_points = []
 var points = []
 var lenght = 0.0
 
@@ -32,14 +34,28 @@ func _physics_process(delta: float) -> void:
 						shortest = total
 						new_point = corner + (corner - c.global_position).normalized() * 3
 		if points[-1].distance_to(new_point) > 1:
+			
+			if strike.collider == $"../../Boss/Foot" and !wrapped_foot:
+				for point in points:
+					if point.distance_to(new_point) < 5:
+						print("touch")
+						touch_points.append([point, new_point])
+						wrapped_foot = true
 			points.append(new_point)
-			if strike.collider == $"../../Boss/Foot" :
-				for i in points:
-					pass
-	if points.size() > 1:
+			if wrapped_foot:
+				var new_touch_points = []
+				for t in touch_points:
+					if t[0] in points and t[1] in points:
+						new_touch_points.append(t)
+				touch_points = new_touch_points
+				if touch_points.is_empty():
+					wrapped_foot = false
+	while points.size() > 1:
 		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-2], cable_end.global_position, 4))
 		if not strike_before:
 			points.pop_back()
+		else:
+			break
 
 	lenght = 0.0
 	for i in range(points.size() - 1):
@@ -55,11 +71,11 @@ func _physics_process(delta: float) -> void:
 		var extra = lenght - max_length
 		player.global_position = player.global_position.move_toward(points[-1], extra * 0.5)
 		cable.default_color = stressed_color
+		if wrapped_foot:
+			print("kill")
 		if cursor_exists:
 			$"../Monitor_2/Computer/Cursor".speed = 0
 	else:
 		cable.default_color = color
 		if cursor_exists:
 			$"../Monitor_2/Computer/Cursor".speed = 10
-func check_hit(points: Array[Vector2], coliders: Array, body):
-	pass
