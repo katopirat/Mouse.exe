@@ -6,7 +6,7 @@ extends Node2D
 @export var max_length = 600
 @export var color = Color()
 @export var stressed_color = Color(0.378, 0.0, 0.0, 1.0)
-
+@export var cursor_exists: bool = true
 var points = []
 var lenght = 0.0
 
@@ -51,7 +51,9 @@ func _physics_process(delta: float) -> void:
 		var extra = lenght - max_length
 		player.global_position = player.global_position.move_toward(points[-1], extra * 0.5)
 		cable.default_color = stressed_color
-		$"../Monitor_2/Computer/Cursor".speed = 0
+		if cursor_exists:
+			$"../Monitor_2/Computer/Cursor".speed = 0
 	else:
 		cable.default_color = color
-		$"../Monitor_2/Computer/Cursor".speed = 10
+		if cursor_exists:
+			$"../Monitor_2/Computer/Cursor".speed = 10
