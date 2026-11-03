@@ -1,0 +1,540 @@
+[gd_scene format=3 uid="uid://b4mjttd088nfx"]
+
+[ext_resource type="Script" uid="uid://d13ah8mcrd21a" path="res://scenes/cutscene_intro.gd" id="1_wabui"]
+[ext_resource type="PackedScene" uid="uid://byx58bx1bj3pf" path="res://scenes/cut_scene_wakeup.tscn" id="2_ea6qb"]
+[ext_resource type="Texture2D" uid="uid://cw45q6k864h8c" path="res://assets/images/outside(tileset).png" id="3_0xf44"]
+[ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="4_qhmma"]
+[ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="5_ypq80"]
+[ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="6_3gs2s"]
+[ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="7_ner4h"]
+[ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="8_206a3"]
+[ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="9_5qnj6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kds42"]
+texture = ExtResource("3_0xf44")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yhxy7"]
+texture = ExtResource("4_qhmma")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0/custom_data_0 = true
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0/custom_data_0 = true
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/custom_data_0 = true
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/custom_data_0 = true
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+3:1/0/custom_data_0 = true
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+4:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/custom_data_0 = true
+1:3/0 = 0
+1:3/0/custom_data_0 = true
+2:3/0 = 0
+2:3/0/custom_data_0 = true
+0:4/0 = 0
+1:4/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+5:1/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+4:0/0/custom_data_0 = true
+5:3/0 = 0
+5:4/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+2:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ibb0c"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "table0"
+terrain_set_0/terrain_0/color = Color(0.73322654, 0, 0.020315316, 1)
+custom_data_layer_0/name = "on_table"
+custom_data_layer_0/type = 1
+sources/1 = SubResource("TileSetAtlasSource_yhxy7")
+sources/0 = SubResource("TileSetAtlasSource_kds42")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_capye"]
+shader = ExtResource("5_ypq80")
+shader_parameter/scanline_strength = 0.12
+shader_parameter/curvature = 0.0230000010925
+shader_parameter/vignette_strength = 0.0
+shader_parameter/aberration = 0.001
+shader_parameter/noise_strength = 0.03
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_4ikbi"]
+length = 0.001
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.001, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.03, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_yyda8"]
+resource_name = "close_screen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0015, -0.25, 0, 0.25, 0, 0.05, -0.14444445, 0.00025, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.1, 0, 0, 0.14444445, 0.06666667, 1, -0.14444445, 0.005, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 50, -0.3, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667)
+}
+
+[sub_resource type="Animation" id="Animation_m7ht0"]
+resource_name = "glitch_close"
+length = 0.73333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.11111167, 0, 50, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.46666667, 0.66667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.15555556, 0.02, 1, -0.25, 0, 0.25, 0, 0.12, -0.061111107, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.1, -0.25, 0, 0.25, 0, 10, -0.1388889, 0.016666668, 0, 0, 0, -0.02222222, 1.6666667, 0, 0),
+"times": PackedFloat32Array(0.23333333, 0.5, 0.6333333)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.36666667, 0.43333334, 0.56666666, 0.66667, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0015, 0.5, 0.3150000149625, 0.102000004845, 0.1090000051775, 0.162000007695, 0.4750000225625, 0.4750000225625, 0.0150000007125]
+}
+
+[sub_resource type="Animation" id="Animation_wygpf"]
+resource_name = "screen_open"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.05, 0, 0, 0.1388889, 0.00025, 0.0015, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.16666667, 0.005, 0, 0, 0, -0.15, 0.16666669, 0, 0),
+"times": PackedFloat32Array(0, 0.40000004)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0, 0, -0.16111112, 1.6666667, 0, 0),
+"times": PackedFloat32Array(0, 0.40000004)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wygpf"]
+_data = {
+&"RESET": SubResource("Animation_4ikbi"),
+&"close_screen": SubResource("Animation_yyda8"),
+&"glitch_close": SubResource("Animation_m7ht0"),
+&"screen_open": SubResource("Animation_wygpf")
+}
+
+[sub_resource type="Animation" id="Animation_ckgo4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_o86jq"]
+resource_name = "mouse_cutscene"
+length = 4.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lp4q"]
+_data = {
+&"RESET": SubResource("Animation_ckgo4"),
+&"mouse_cutscene": SubResource("Animation_o86jq")
+}
+
+[sub_resource type="Curve" id="Curve_0xf44"]
+_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.9909503, 0.8876405), 2.3911777, 0.0, 0, 0]
+point_count = 2
+
+[node name="end" type="Node2D" unique_id=1093812907]
+
+[node name="cutscene intro" type="Node2D" parent="." unique_id=1500718359]
+script = ExtResource("1_wabui")
+next_animation = ExtResource("2_ea6qb")
+
+[node name="Node2D" type="Node2D" parent="cutscene intro" unique_id=1401827104]
+
+[node name="Ground" type="Node2D" parent="cutscene intro/Node2D" unique_id=1370744653]
+
+[node name="TileMap" type="TileMap" parent="cutscene intro/Node2D/Ground" unique_id=686105550 groups=["table"]]
+z_index = -20
+position = Vector2(0, 1)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ibb0c")
+rendering_quadrant_size = 26
+format = 2
+layer_0/tile_data = PackedInt32Array(-131076, 0, 1, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 131072, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, -262151, 65536, 0, -196615, 65536, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 65536, 0, 262139, 0, 0, 327675, 0, 0, -262148, 0, 0, -196612, 0, 0, 262140, 0, 0, 327676, 0, 0, -262147, 0, 0, -196611, 0, 0, 262141, 0, 0, 327677, 0, 0, -262146, 0, 0, -196610, 0, 0, 262142, 0, 0, 327678, 0, 0, -262145, 0, 0, -196609, 0, 0, 262143, 0, 0, 327679, 0, 0, -327680, 0, 0, -262144, 0, 0, 196608, 0, 0, 262144, 0, 0, -327679, 0, 0, -262143, 0, 0, 196609, 0, 0, 262145, 0, 0, -327678, 0, 0, -262142, 65536, 0, 196610, 0, 0, 262146, 0, 0, -327677, 0, 0, -262141, 0, 0, 196611, 0, 0, 262147, 0, 0, -327676, 0, 0, -262140, 0, 0, 196612, 0, 0, 262148, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 1, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, -327674, 65536, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 65536, 1, 65542, 65536, 2, 196614, 65536, 2, 262150, 65536, 2, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 131072, 1, 65543, 131072, 2, 196615, 131072, 2, 262151, 131072, 2, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 131072, 1, 65544, 131072, 2, 131080, 131072, 2, 196616, 131072, 2, 262152, 131072, 2, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 131072, 1, 65545, 131072, 2, 131081, 131072, 2, 196617, 131072, 2, 262153, 131072, 2, -327693, 0, 0, -262157, 0, 0, -196621, 0, 0, -131085, 0, 0, -65549, 0, 0, -13, 0, 0, 65523, 0, 0, 131059, 0, 0, 196595, 0, 0, 262131, 0, 0, 327667, 0, 0, 393203, 0, 0, 458739, 0, 0, 524275, 0, 0, -327692, 0, 0, -262156, 0, 0, -196620, 0, 0, -131084, 0, 0, -65548, 0, 0, -12, 0, 0, 65524, 0, 0, 131060, 0, 0, 196596, 0, 0, 262132, 0, 0, 327668, 0, 0, 393204, 0, 0, 458740, 0, 0, 524276, 0, 0, -327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, 458741, 0, 0, 524277, 0, 0, -327690, 65536, 0, -262154, 65536, 0, -196618, 65536, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 1, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, 458742, 0, 0, 524278, 0, 0, -327689, 65536, 0, -262153, 65536, 0, -196617, 65536, 0, -131081, 65536, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, 458743, 0, 0, 524279, 0, 0, -327688, 65536, 0, -262152, 65536, 0, -196616, 65536, 0, -131080, 65536, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 1, 393208, 0, 0, 458744, 0, 0, 524280, 0, 0, -327687, 65536, 0, 393209, 0, 0, 458745, 0, 0, 524281, 0, 0, -327686, 0, 0, 393210, 0, 0, 458746, 0, 0, 524282, 0, 0, -327685, 0, 0, 393211, 0, 0, 458747, 0, 0, 524283, 0, 0, -327684, 0, 0, 393212, 0, 0, 458748, 0, 0, 524284, 0, 0, -327683, 0, 0, 393213, 0, 0, 458749, 0, 0, 524285, 0, 0, -327682, 0, 0, 393214, 0, 0, 458750, 0, 0, 524286, 0, 0, -327681, 0, 0, 393215, 0, 0, 458751, 0, 0, 524287, 0, 0, -393216, 0, 1, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, -393215, 0, 0, 327681, 0, 1, 393217, 0, 0, 458753, 0, 0, -393214, 0, 0, 327682, 0, 0, 393218, 0, 0, 458754, 0, 0, -393213, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 0, 0, -393212, 0, 0, 327684, 0, 0, 393220, 0, 0, 458756, 0, 0, -393211, 0, 0, -393210, 0, 0, 327686, 65536, 2, 393222, 65536, 2, 458758, 65536, 2, -393209, 0, 0, 327687, 131072, 2, 393223, 131072, 2, 458759, 131072, 2, -393208, 0, 0, 327688, 131072, 2, 393224, 131072, 2, 458760, 131072, 2, -393207, 0, 0, 327689, 131072, 2, 393225, 131072, 2, 458761, 131072, 2, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 131072, 1, 65546, 131072, 2, 131082, 131072, 2, 196618, 131072, 2, 262154, 131072, 2, 327690, 131072, 2, 393226, 131072, 2, 458762, 131072, 2, -393205, 0, 0, -327669, 0, 0, -262133, 0, 0, -196597, 0, 0, -131061, 0, 0, -65525, 0, 0, 11, 131072, 1, 65547, 131072, 2, 131083, 131072, 2, 196619, 131072, 2, 262155, 131072, 2, 327691, 131072, 2, 393227, 131072, 2, 458763, 131072, 2, -393204, 0, 0, -327668, 0, 0, -262132, 0, 0, -196596, 0, 0, -131060, 0, 0, -65524, 0, 0, 12, 131072, 1, 65548, 131072, 2, 131084, 131072, 2, 196620, 131072, 2, 262156, 131072, 2, 327692, 131072, 2, 393228, 131072, 2, 458764, 131072, 2, 458757, 131072, 0, 393221, 131072, 0, 327685, 131072, 0, 262149, 131072, 0, 196613, 131072, 0, 131077, 131072, 0, 131076, 131072, 0, 131078, 65536, 2, 131079, 131072, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="cutscene intro/Node2D" unique_id=1370691632]
+
+[node name="ColorRect" type="ColorRect" parent="cutscene intro/Node2D/CanvasLayer" unique_id=2100473344]
+material = SubResource("ShaderMaterial_capye")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationTree" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=927830465]
+libraries/ = SubResource("AnimationLibrary_wygpf")
+
+[node name="Myš(stacionary)" type="Sprite2D" parent="cutscene intro" unique_id=1451360831]
+position = Vector2(-1, 2)
+scale = Vector2(3, 3)
+texture = ExtResource("6_3gs2s")
+script = ExtResource("7_ner4h")
+
+[node name="TailStart" type="Node2D" parent="cutscene intro/Myš(stacionary)" unique_id=211265860]
+visible = false
+position = Vector2(0.33333334, 10.333332)
+
+[node name="Tail" type="Line2D" parent="cutscene intro/Myš(stacionary)" unique_id=1997148798]
+visible = false
+z_index = -1
+position = Vector2(0, 20.666668)
+default_color = Color(0.11536538, 0.10558673, 0.098028876, 1)
+
+[node name="Camera2D" type="Camera2D" parent="cutscene intro" unique_id=1852984364]
+position = Vector2(-6, 98)
+rotation = -0.033161256
+scale = Vector2(0.99999994, 0.99999994)
+zoom = Vector2(0.5, 0.5)
+
+[node name="MyšReal" type="Sprite2D" parent="cutscene intro" unique_id=221164530]
+visible = false
+position = Vector2(6.000001, 421)
+rotation = 4.7242217
+scale = Vector2(3, 3)
+texture = ExtResource("8_206a3")
+script = ExtResource("7_ner4h")
+
+[node name="Tail" type="Line2D" parent="cutscene intro/MyšReal" unique_id=1965554870]
+z_index = -1
+position = Vector2(0, 23.666668)
+default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
+
+[node name="TailStart" type="Node2D" parent="cutscene intro/MyšReal" unique_id=738527583]
+position = Vector2(1.0172526e-05, 13.333332)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro" unique_id=2109267178]
+root_node = NodePath("../Node2D/Ground/TileMap")
+libraries/ = SubResource("AnimationLibrary_2lp4q")
+autoplay = &"mouse_cutscene"
+
+[node name="DialogWindow" parent="cutscene intro" unique_id=1276989699 instance=ExtResource("9_5qnj6")]
+offset_left = -1001.0
+offset_top = 494.0
+offset_right = -543.6498
+offset_bottom = 545.0
+scale = Vector2(4.3424053, 4.3424053)
+time_before_start = 10.0
+text = "Finaly i made it i cant belive my eyes"
+click_to_close = true
+wait_time = 5.0
+
+[node name="Left" type="CPUParticles2D" parent="." unique_id=840794239]
+position = Vector2(5, 127)
+rotation = -4.719753
+amount = 2000
+lifetime = 0.74
+randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(700, 1200)
+direction = Vector2(0, 0)
+spread = 90.0
+gravity = Vector2(-400, 5000)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 7.0
+scale_amount_max = 7.0
+scale_amount_curve = SubResource("Curve_0xf44")
+color = Color(0.35378626, 0.53171813, 1, 1)
+
+[node name="Left2" type="CPUParticles2D" parent="." unique_id=175888563]
+position = Vector2(40, -1313.9999)
+rotation = -4.719753
+amount = 2000
+lifetime = 0.54
+randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(700, 1200)
+direction = Vector2(0, 0)
+spread = 90.0
+gravity = Vector2(-400, 5000)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 7.0
+scale_amount_max = 7.0
+scale_amount_curve = SubResource("Curve_0xf44")
+color = Color(0.35378626, 0.53171813, 1, 1)
+
+[connection signal="window_closed" from="cutscene intro/DialogWindow" to="cutscene intro" method="_on_dialog_window_window_closed"]
