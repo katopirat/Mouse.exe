@@ -1026,8 +1026,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tjk2"]
-radius = 7.333332
-height = 14.666664
+radius = 10.852783
+height = 21.705566
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ia6f3"]
 animations = [{
@@ -1744,6 +1744,7 @@ offset = Vector2(0.275, -0.19)
 z_index = 1
 position = Vector2(141, 101.999985)
 scale = Vector2(2.9599993, 2.9599993)
+collision_layer = 111
 collision_mask = 2
 script = ExtResource("58_kcc0r")
 

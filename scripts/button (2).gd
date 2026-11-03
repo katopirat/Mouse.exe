@@ -9,6 +9,8 @@ func _ready() -> void:
 	$AnimatedSprite2D.play('default')
 func _on_body_entered(body: Node2D) -> void:
 	print(body.name)
+	print("clickable : " + str(is_in_group("clickable")))
+	print(Global.highest_clickable_body)
 	if body.name == "Cursor":
 		cursor_inside = true
 		
@@ -19,7 +21,7 @@ func _on_body_exited(body: Node2D) -> void:
 		
 
 func _input(event):
-	if event.is_action_pressed("click") and self == Global.highest_clickable_body:
+	if event.is_action_pressed("click") and self == Global.highest_clickable_body and cursor_inside:
 		
 		if is_pressed:
 			pass

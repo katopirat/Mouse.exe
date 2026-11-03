@@ -33,11 +33,10 @@ var done = []
 var best_times = {}
 var game_pausable = true
 
-
 func _ready() -> void:
 	for i in levels.size():
 		best_times[i] = null
-		
+
 func go_to_level(i):
 	var path = levels[i]["scene"]
 	if ResourceLoader.exists(path):

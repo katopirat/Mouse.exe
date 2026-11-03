@@ -11,6 +11,7 @@ func _ready() -> void:
 	
 	if Global.music_style != "boss":
 		Global.music_style = "boss"
+		
 	
 	
 

@@ -36,6 +36,7 @@ func _process(delta: float) -> void:
 func start():
 	
 	Global.music_style = "boss"
+	Music.play_track(0)
 	await get_tree().create_timer(3)
 	change_button_position()
 	if player.god_mode == true:
