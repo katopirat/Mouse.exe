@@ -24,7 +24,8 @@ var levels = [
 	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn"},
 	
 	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
-	{"name": "Just ONE ant", "scene": "res://scenes/level_22.tscn"},
+	{"name": "Out of Hand", "scene": "res://scenes/table_boss.tscn"},
+	{"name": "What is this place?", "scene": "res://scenes/level_22.tscn"},
 	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn"},
 	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn"}
 	

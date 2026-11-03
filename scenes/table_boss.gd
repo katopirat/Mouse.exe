@@ -132,7 +132,7 @@ func _on_area_1_body_entered(body: Node2D) -> void:
 func _on_area_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.knockback(Vector2(-1, 0))
-
+		
 
 func intro():
 
@@ -196,22 +196,21 @@ func change_button_position():
 	add_button.get_child(2).text = "pay 598$"
 	add_button.scale = Vector2(2.5,2.5)
 	await add_button.pressed
-	
+	hand.visible = true
 	var t = create_tween()
+	
 	t.set_trans(Tween.TRANS_SINE)
 	t.set_ease(Tween.EASE_IN_OUT)
 	t.tween_property(hand, "global_position", player.global_position + Vector2(120, 501), 2)
+	
 	$Node2D/CanvasLayer/DialogWindow.text = "nooo why did u do that"
 	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/hand_icon.png")
 	$Node2D/CanvasLayer/DialogWindow.start = true
 	await $Node2D/CanvasLayer/DialogWindow.window_closed
-	
+
 	$Node2D/CanvasLayer/DialogWindow.text = "I need to find the exit"
 	$Node2D/CanvasLayer/DialogWindow.icon = load("res://assets/images/mouse_stacionary_small.png")
 	$Node2D/CanvasLayer/DialogWindow.start = true
 	await $Node2D/CanvasLayer/DialogWindow.window_closed
 	
-	$Node2D/Table/TileMap.visible = false
-	$Node2D/Table/TileMapDotted.visible = false
-	$Node2D/Table/TileMapDotted2.visible = true
-	$Node2D/Table/TileMap2.visible = true
+	$Node2D/Table._on_bridge_button_open_bridge()

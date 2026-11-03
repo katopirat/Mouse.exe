@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_6w2cs"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_tc4gl"]
 [ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="7_83o4n"]
-[ext_resource type="Script" uid="uid://dpfdbaxli8mdl" path="res://scripts/table_boss_finish.gd" id="7_n24ig"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_tc4gl"]
 [ext_resource type="PackedScene" uid="uid://dpmx7gf5ekwo8" path="res://scenes/cut scene fall.tscn" id="8_7so0a"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_n24ig"]
@@ -342,9 +341,10 @@ autoplay = &"level namnam"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=745429856]
 
-[node name="Table" type="Node2D" parent="Node2D" unique_id=972001194 node_paths=PackedStringArray("tilemap_1", "tilemap_dotted_1", "tilemap_dotted_2")]
+[node name="Table" type="Node2D" parent="Node2D" unique_id=972001194 node_paths=PackedStringArray("tilemap_1", "tilemap_2", "tilemap_dotted_1", "tilemap_dotted_2")]
 script = ExtResource("3_ixmix")
 tilemap_1 = NodePath("TileMap")
+tilemap_2 = NodePath("TileMap2")
 tilemap_dotted_1 = NodePath("TileMapDotted")
 tilemap_dotted_2 = NodePath("TileMapDotted2")
 
@@ -365,7 +365,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(15, 196609, 2, 16, 327681, 2, 65552, 327681, 1, 131088, 327681, 1, 196623, 196609, 3, 196624, 327681, 3, 65551, 327681, 4, 131087, 327681, 4)
 
 [node name="TileMapDotted2" type="TileMap" parent="Node2D/Table" unique_id=595556592 groups=["table"]]
-visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("4_82jq6")
@@ -373,7 +372,6 @@ rendering_quadrant_size = 26
 format = 2
 
 [node name="TileMap2" type="TileMap" parent="Node2D/Table" unique_id=221289785 groups=["table"]]
-visible = false
 z_index = -20
 scale = Vector2(3, 3)
 tile_set = ExtResource("4_82jq6")
@@ -383,7 +381,6 @@ layer_0/tile_data = PackedInt32Array(-131075, 196609, 1, -131074, 196609, 0, -13
 
 [node name="finish" parent="Node2D/Table" unique_id=1389901689 instance=ExtResource("6_tc4gl")]
 position = Vector2(1887, 148)
-script = ExtResource("7_n24ig")
 next_scene = ExtResource("8_7so0a")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_cbu0x")]
