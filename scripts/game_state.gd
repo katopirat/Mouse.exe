@@ -28,6 +28,37 @@ var levels = [
 	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn"},
 	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn"}
 ]
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
+# sigma if your looking here
 var unlocked = 1
 var done = [] 
 var best_times = {}
