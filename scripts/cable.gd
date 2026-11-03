@@ -13,6 +13,7 @@ var lenght = 0.0
 func _physics_process(delta: float) -> void:
 	if points.is_empty():
 		points.append(cable_start.global_position)
+	
 	var space = get_world_2d().direct_space_state
 	var strike = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-1], cable_end.global_position, 4))
 
@@ -31,6 +32,7 @@ func _physics_process(delta: float) -> void:
 						new_point = corner + (corner - c.global_position).normalized() * 3
 		if points[-1].distance_to(new_point) > 1:
 			points.append(new_point)
+		
 
 	if points.size() > 1:
 		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-2], cable_end.global_position, 4))

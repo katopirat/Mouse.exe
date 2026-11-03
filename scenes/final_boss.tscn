@@ -3,11 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_5kll7"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="2_vew3s"]
 [ext_resource type="Script" uid="uid://gg2ahetw4w2k" path="res://scripts/player_ground.gd" id="3_jvhes"]
-[ext_resource type="Script" uid="uid://wd860liu53a8" path="res://scripts/cable.gd" id="4_711e6"]
+[ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="4_d3kp8"]
+[ext_resource type="Script" uid="uid://c6u1uf782qip0" path="res://scripts/cable_boss.gd" id="5_aml70"]
 [ext_resource type="Texture2D" uid="uid://cqwftiofmvwve" path="res://assets/images/Pc black(1).png" id="5_d3kp8"]
 [ext_resource type="Script" uid="uid://clx6qmr5l0elc" path="res://scripts/final_boss.gd" id="14_7nq4e"]
 [ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="15_7nq4e"]
-[ext_resource type="Texture2D" uid="uid://w7wq4xy5tiw3" path="res://docs/index.icon.png" id="15_711e6"]
+[ext_resource type="Shader" uid="uid://c0cxi72bqvgrl" path="res://scenes/one_color.gdshader" id="16_711e6"]
+[ext_resource type="Texture2D" uid="uid://mipyyb7hhcep" path="res://assets/images/but.png" id="16_gilny"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="22_sbdfx"]
 [ext_resource type="PackedScene" uid="uid://fp5ooo7afhy7" path="res://scenes/level_23.tscn" id="23_anlus"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="24_bm0gf"]
@@ -141,8 +143,12 @@ sources/0 = SubResource("TileSetAtlasSource_4j5uc")
 size = Vector2(16, 42)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
-radius = 113.0
+radius = 99.0
 height = 386.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d3kp8"]
+shader = ExtResource("16_711e6")
+shader_parameter/color = Color(0, 0, 0, 1)
 
 [node name="FinalBoss" type="Node2D" unique_id=1495920735]
 
@@ -158,14 +164,15 @@ limit_top = -1000000
 limit_right = 1300000
 limit_bottom = 5200000
 position_smoothing_speed = 4.5
+script = ExtResource("4_d3kp8")
 
 [node name="CableEnd" type="Node2D" parent="Player" unique_id=749190471]
 unique_name_in_owner = true
 position = Vector2(0, -51)
 
 [node name="Cable" type="Node2D" parent="Player" unique_id=749905384]
-script = ExtResource("4_711e6")
-max_length = 2000
+script = ExtResource("5_aml70")
+max_length = 1500
 cursor_exists = false
 
 [node name="Line2D" type="Line2D" parent="Player/Cable" unique_id=1182878078]
@@ -239,14 +246,25 @@ position = Vector2(0, -21)
 script = ExtResource("14_7nq4e")
 
 [node name="Foot" type="StaticBody2D" parent="Boss" unique_id=1331564484]
-position = Vector2(-840, 603)
+position = Vector2(-1128, 759)
 collision_layer = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Boss/Foot" unique_id=999300815]
-scale = Vector2(1.7968751, 3.0312498)
-texture = ExtResource("15_711e6")
+[node name="FootTexture" type="Sprite2D" parent="Boss/Foot" unique_id=999300815]
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("16_gilny")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Foot" unique_id=1953346517]
+shape = SubResource("CapsuleShape2D_iopsf")
+
+[node name="ShadowTexture" type="Sprite2D" parent="Boss/Foot" unique_id=1646813725]
+modulate = Color(1, 0, 0, 0.58400005)
+material = SubResource("ShaderMaterial_d3kp8")
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("16_gilny")
+
+[node name="Area2D" type="Area2D" parent="Boss/Foot" unique_id=2044481514]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Foot/Area2D" unique_id=800225854]
 shape = SubResource("CapsuleShape2D_iopsf")
 
 [node name="TopLeft" type="Marker2D" parent="Boss" unique_id=1590341311]
