@@ -146,7 +146,7 @@ size = Vector2(16, 42)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iopsf"]
 radius = 99.0
-height = 386.0
+height = 388.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d3kp8"]
 shader = ExtResource("16_711e6")

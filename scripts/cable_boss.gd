@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 			
 			if strike.collider == $"../../Boss/Foot" and !wrapped_foot:
 				for point in points:
-					if point.distance_to(new_point) < 5:
+					if point.distance_to(new_point) < 10:
 						print("touch")
 						touch_points.append([point, new_point])
 						wrapped_foot = true
@@ -56,6 +56,7 @@ func _physics_process(delta: float) -> void:
 			points.pop_back()
 		else:
 			break
+
 
 	lenght = 0.0
 	for i in range(points.size() - 1):
