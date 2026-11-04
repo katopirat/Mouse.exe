@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="4_qhmma"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="5_0xf44"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="5_ypq80"]
-[ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="6_3gs2s"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="6_qhmma"]
 [ext_resource type="Script" uid="uid://bllecctdwlf00" path="res://scenes/mouse_tail.gd" id="7_ner4h"]
+[ext_resource type="Texture2D" uid="uid://sdcxl280ex6" path="res://assets/images/aam_lightin_before_the_tunde_tunde_tunde.png" id="8_0xf44"]
 [ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="8_206a3"]
 [ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="9_5qnj6"]
 
@@ -424,6 +424,120 @@ _data = {
 &"screen_open": SubResource("Animation_wygpf")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx5yu"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 416, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhmma"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(0, 0, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypq80"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 0, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gs2s"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(408, 0, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ner4h"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(0, 104, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_206a3"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 104, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qnj6"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(408, 104, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kds42"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(0, 208, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhxy7"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 208, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibb0c"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(408, 208, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlww3"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(0, 312, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol4y7"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 312, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhkgd"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(408, 312, 204, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvgpo"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(0, 416, 204, 104)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_adpup"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx5yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhmma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypq80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gs2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ner4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_206a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qnj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kds42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhxy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibb0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlww3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol4y7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhkgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvgpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx5yu")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [sub_resource type="Curve" id="Curve_0xf44"]
 _data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.5701358, 0.92134833), 0.0, 0.0, 0, 0, Vector2(0.9909503, 0.8876405), 2.3911777, 0.0, 0, 0]
 point_count = 3
@@ -437,78 +551,78 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../../Myš(stacionary):position")
+tracks/0/path = NodePath("../../../AnimatedSprite2D/Left3:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1, 3266)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../../Myš(stacionary)/Left:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../../Myš(stacionary)/Camera2D/DialogWindow:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(209, 3204)]
+}
 
 [sub_resource type="Animation" id="Animation_o86jq"]
 resource_name = "mouse_cutscene"
-length = 8.066667
+length = 7.766667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../../Myš(stacionary):position")
+tracks/0/path = NodePath("../../../AnimatedSprite2D/Left3:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 6.266667, 7.1666665),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1, 3266), Vector2(-1, 937), Vector2(-1, 937), Vector2(-1, 545)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../../Myš(stacionary)/Left:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(7.1666665),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../../Myš(stacionary)/Camera2D/DialogWindow:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(6.266667),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.4666667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.43333334, 5.1, 6.4666667, 7.1666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(209, 3204), Vector2(209.00002, 876), Vector2(209.00002, 876), Vector2(209.00002, 579)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2lp4q"]
@@ -550,41 +664,17 @@ mouse_filter = 2
 [node name="AnimationTree" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=927830465]
 libraries/ = SubResource("AnimationLibrary_wygpf")
 
-[node name="Myš(stacionary)" type="Sprite2D" parent="cutscene intro" unique_id=1451360831]
-position = Vector2(-1, 3266)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cutscene intro" unique_id=876689739]
+position = Vector2(209, 3204)
 scale = Vector2(3, 3)
-texture = ExtResource("6_3gs2s")
-script = ExtResource("7_ner4h")
+sprite_frames = SubResource("SpriteFrames_adpup")
+animation = &"new_animation"
 
-[node name="Camera2D" type="Camera2D" parent="cutscene intro/Myš(stacionary)" unique_id=1852984364]
-position = Vector2(0.3333332, -2.666748)
-scale = Vector2(0.3333333, 0.3333333)
-zoom = Vector2(0.9, 0.9)
-
-[node name="DialogWindow" parent="cutscene intro/Myš(stacionary)/Camera2D" unique_id=1276989699 instance=ExtResource("9_5qnj6")]
-offset_left = -472.00003
-offset_top = 205.00024
-offset_right = -14.649811
-offset_bottom = 256.00024
-scale = Vector2(2.1424003, 2.1424003)
-time_before_start = 4.0
-text = "Finaly i made it i cant belive my eyes"
-wait_time = 1.0
-
-[node name="TailStart" type="Node2D" parent="cutscene intro/Myš(stacionary)" unique_id=211265860]
-visible = false
-position = Vector2(0.33333334, 10.333332)
-
-[node name="Tail" type="Line2D" parent="cutscene intro/Myš(stacionary)" unique_id=1997148798]
-visible = false
+[node name="Left3" type="CPUParticles2D" parent="cutscene intro/AnimatedSprite2D" unique_id=203517008]
 z_index = -1
-position = Vector2(0, 20.666668)
-default_color = Color(0.11536538, 0.10558673, 0.098028876, 1)
-
-[node name="Left" type="CPUParticles2D" parent="cutscene intro/Myš(stacionary)" unique_id=203517008]
-z_index = -1
-position = Vector2(-1.1368684e-13, -1.6666598)
-rotation = -4.719753
+position = Vector2(-70.66667, 19)
+rotation = 1.5634326
+scale = Vector2(3.0000002, 3.0000002)
 emitting = false
 amount = 2000
 lifetime = 0.59
@@ -602,6 +692,21 @@ scale_amount_min = 7.0
 scale_amount_max = 7.0
 scale_amount_curve = SubResource("Curve_0xf44")
 color_ramp = SubResource("Gradient_ypq80")
+
+[node name="Camera2D" type="Camera2D" parent="cutscene intro/AnimatedSprite2D" unique_id=1852984364]
+position = Vector2(-69.66667, 15.999756)
+scale = Vector2(0.99999994, 0.99999994)
+zoom = Vector2(0.9, 0.9)
+
+[node name="DialogWindow" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=1276989699 instance=ExtResource("9_5qnj6")]
+offset_left = -472.00003
+offset_top = 205.00024
+offset_right = -14.649811
+offset_bottom = 256.00024
+scale = Vector2(2.1424003, 2.1424003)
+time_before_start = 4.0
+text = "Finaly i made it i cant belive my eyes"
+wait_time = 1.0
 
 [node name="MyšReal" type="Sprite2D" parent="cutscene intro" unique_id=221164530]
 visible = false
@@ -661,4 +766,4 @@ scale_amount_max = 7.0
 scale_amount_curve = SubResource("Curve_0xf44")
 color = Color(0.35378626, 0.53171813, 1, 1)
 
-[connection signal="window_closed" from="cutscene intro/Myš(stacionary)/Camera2D/DialogWindow" to="cutscene intro" method="_on_dialog_window_window_closed"]
+[connection signal="window_closed" from="cutscene intro/AnimatedSprite2D/Camera2D/DialogWindow" to="cutscene intro" method="_on_dialog_window_window_closed"]
