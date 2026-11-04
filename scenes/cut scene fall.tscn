@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dpmx7gf5ekwo8"]
 
+[ext_resource type="Script" uid="uid://bfodfuvxagu3y" path="res://scenes/cut_scene_fall.gd" id="1_3lvau"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="1_vf67j"]
 [ext_resource type="Texture2D" uid="uid://cw45q6k864h8c" path="res://assets/images/outside(tileset).png" id="2_0tqac"]
+[ext_resource type="PackedScene" uid="uid://c1540ljr0mnwd" path="res://scenes/level_24.tscn" id="2_siuqh"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="3_4uj5c"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_queo0"]
 [ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="5_40qg6"]
@@ -1321,6 +1323,8 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=353121046]
+script = ExtResource("1_3lvau")
+scene = ExtResource("2_siuqh")
 
 [node name="cutscene intro" type="Node2D" parent="." unique_id=3156044]
 
@@ -14195,7 +14199,7 @@ animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="AnimatedSprite2D2111" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=741813636]
-position = Vector2(22.727276, 383.72742)
+position = Vector2(24.090912, 385.4546)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -14213,7 +14217,7 @@ animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="AnimatedSprite2D2114" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1167188202]
-position = Vector2(50, 383.72742)
+position = Vector2(48.636364, 384.09097)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -14585,7 +14589,7 @@ animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="AnimatedSprite2D2176" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1869757274]
-position = Vector2(-33.136368, 425.59106)
+position = Vector2(-31.818188, 424.54547)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -14921,7 +14925,8 @@ animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="AnimatedSprite2D2232" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=2016878472]
-position = Vector2(-33.136368, 469.22754)
+position = Vector2(-93.63637, 1026.3636)
+scale = Vector2(2.426407, 2.426407)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -18754,20 +18759,8 @@ sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
 
-[node name="AnimatedSprite2D2871" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=721022491]
-position = Vector2(-75.86363, 998.773)
-sprite_frames = SubResource("SpriteFrames_2gsog")
-animation = &"new_animation"
-autoplay = "new_animation"
-
 [node name="AnimatedSprite2D2872" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1887365793]
 position = Vector2(-66.772736, 998.773)
-sprite_frames = SubResource("SpriteFrames_2gsog")
-animation = &"new_animation"
-autoplay = "new_animation"
-
-[node name="AnimatedSprite2D2873" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=415652198]
-position = Vector2(-58.136368, 998.773)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -18828,12 +18821,6 @@ autoplay = "new_animation"
 
 [node name="AnimatedSprite2D2883" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1487276941]
 position = Vector2(-93.590904, 999.2276)
-sprite_frames = SubResource("SpriteFrames_2gsog")
-animation = &"new_animation"
-autoplay = "new_animation"
-
-[node name="AnimatedSprite2D2884" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1798561461]
-position = Vector2(-84.954544, 999.2276)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
@@ -20694,6 +20681,12 @@ autoplay = "new_animation"
 
 [node name="AnimatedSprite2D3194" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1868880984]
 position = Vector2(-13.136359, -134.9089)
+sprite_frames = SubResource("SpriteFrames_2gsog")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D3759" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1441006288]
+position = Vector2(-4.54545, -135.00015)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
