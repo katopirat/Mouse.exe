@@ -488,7 +488,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 100.0,
 "texture": SubResource("AtlasTexture_tx5yu")
 }, {
 "duration": 1.0,
@@ -533,18 +533,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tx5yu")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="Curve" id="Curve_0xf44"]
-_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.5701358, 0.92134833), 0.0, 0.0, 0, 0, Vector2(0.9909503, 0.8876405), 2.3911777, 0.0, 0, 0]
+_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.5520362, 1), 0.0, 0.0, 0, 0, Vector2(0.9683258, 0.6741574), 2.3911777, 0.0, 0, 0]
 point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_ypq80"]
-offsets = PackedFloat32Array(0, 0.08717949, 0.15897436, 0.47692308, 0.64615387)
-colors = PackedColorArray(0.88235295, 0, 0, 1, 0.6966735, 0.19382723, 0.19382721, 1, 0.6509804, 0.42352942, 0, 1, 0.4506483, 0.4506483, 0.45064825, 1, 0.19434926, 0.19434929, 0.19434911, 1)
 
 [sub_resource type="Animation" id="Animation_ckgo4"]
 length = 0.001
@@ -587,7 +583,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_o86jq"]
 resource_name = "mouse_cutscene"
-length = 7.766667
+length = 9.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -595,7 +591,7 @@ tracks/0/path = NodePath("../../../AnimatedSprite2D/Left3:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(7.1666665),
+"times": PackedFloat32Array(9.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -669,29 +665,30 @@ position = Vector2(209, 3204)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_adpup")
 animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="Left3" type="CPUParticles2D" parent="cutscene intro/AnimatedSprite2D" unique_id=203517008]
-z_index = -1
-position = Vector2(-70.66667, 19)
+z_index = 1
+position = Vector2(-67.00001, 15.666667)
 rotation = 1.5634326
 scale = Vector2(3.0000002, 3.0000002)
 emitting = false
-amount = 2000
-lifetime = 0.59
+amount = 100
+lifetime = 0.03
 one_shot = true
-explosiveness = 0.87
+speed_scale = 0.15
 randomness = 1.0
 emission_shape = 1
-emission_sphere_radius = 35.52
+emission_sphere_radius = 6.52
 direction = Vector2(0, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
-scale_amount_min = 7.0
-scale_amount_max = 7.0
+scale_amount_min = 3.0
+scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_0xf44")
-color_ramp = SubResource("Gradient_ypq80")
+color = Color(1, 1, 0.16470589, 1)
 
 [node name="Camera2D" type="Camera2D" parent="cutscene intro/AnimatedSprite2D" unique_id=1852984364]
 position = Vector2(-69.66667, 15.999756)
@@ -749,6 +746,7 @@ scale_amount_curve = SubResource("Curve_0xf44")
 color = Color(0.35378626, 0.53171813, 1, 1)
 
 [node name="Left2" type="CPUParticles2D" parent="." unique_id=175888563]
+z_index = 2
 position = Vector2(4.000122, -1571)
 rotation = -4.719753
 amount = 2000
