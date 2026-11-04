@@ -1,6 +1,6 @@
 extends Node
 @onready var menu: PackedScene = preload("res://scenes/menu_2.tscn")
-var boss = 0
+var boss = []
 var levels = [ 
 	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
 	{"name": "The Button", "scene": "res://scenes/level_1.tscn"},

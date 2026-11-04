@@ -786,6 +786,7 @@ position = Vector2(-2, -161.83334)
 shape = SubResource("RectangleShape2D_w8sno")
 
 [connection signal="table_changed" from="Node2D/Table" to="Node2D/Player" method="_on_table_table_changed"]
+[connection signal="get_mouse_to_finish" from="Node2D/Table/finish" to="Node2D/Player" method="_on_finish_get_mouse_to_finish"]
 [connection signal="moved_mouse" from="Node2D/Player" to="Node2D/Player/Monitor_2/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/HBoxContainer/XButton" to="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/HBoxContainer/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/HBoxContainer/XButton" to="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/HBoxContainer/XButton" method="_on_body_exited"]

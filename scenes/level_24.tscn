@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1540ljr0mnwd"]
 
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_5puht"]
+[ext_resource type="Script" uid="uid://u87u1hg1j36j" path="res://scenes/level_24_after_boss.gd" id="1_j4kn2"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="2_b3uhy"]
 [ext_resource type="Script" uid="uid://gg2ahetw4w2k" path="res://scripts/player_ground.gd" id="3_4valo"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="10_28tps"]
@@ -208,6 +209,7 @@ height = 12.561135
 height = 50.0
 
 [node name="level_24" type="Node2D" unique_id=1684036684]
+script = ExtResource("1_j4kn2")
 
 [node name="Level21" type="Node2D" parent="." unique_id=850625046]
 
