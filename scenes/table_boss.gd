@@ -37,7 +37,6 @@ func start():
 	
 	Global.music_style = "boss"
 	Music.play_track(0)
-	await get_tree().create_timer(3)
 	change_button_position()
 	if player.god_mode == true:
 		mouse_pads = 14
@@ -137,7 +136,7 @@ func _on_area_2_body_entered(body: Node2D) -> void:
 
 func intro():
 
-	if GameState.boss >= 2:
+	if "table" in GameState.boss:
 		mouse_pads = 1
 		shop_label.text = "1/20"
 		start()
@@ -174,7 +173,7 @@ func intro():
 	
 	await  tw.finished
 	hand.visible = false
-	GameState.boss = 2
+	GameState.boss.append("table")
 	start()
 
 func change_button_position():
