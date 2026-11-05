@@ -1,13 +1,11 @@
 extends Node2D
-var change_scene = false
-@export var scene :PackedScene
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	wait()
-	
 
-func wait()
-	while change_scene == false:
-		pass
+@export var scene: PackedScene
+@onready var dialog = $"cutscene intro/Node2D/AnimatedSprite2D/DialogWindow"
+@onready var ants_anim: AnimationPlayer = $AnimationPlayer2
+
+func _ready() -> void:
+	await dialog.window_closed
+	ants_anim.play("new_animation")
+	await ants_anim.animation_finished
 	get_tree().change_scene_to_packed(scene)
-	
