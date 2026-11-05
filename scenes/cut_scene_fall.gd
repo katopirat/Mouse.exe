@@ -3,10 +3,11 @@ var change_scene = false
 @export var scene :PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	wait()
+	
 
-func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		change_scene = true
+func wait()
+	while change_scene == false:
+		pass
 	get_tree().change_scene_to_packed(scene)
 	
