@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bfn2fpehqrgh" path="res://mouse_os/ui/window_orange.png" id="21_d6yad"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="21_mv33c"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="22_d6yad"]
+[ext_resource type="Script" uid="uid://bvikdvqdy44g1" path="res://scripts/settings_window.gd" id="25_ofhq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -818,6 +819,64 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Settings" type="CanvasLayer" parent="." unique_id=964853323]
+layer = 0
+
+[node name="Settings_window" type="Control" parent="Settings" unique_id=1920176410]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_b7gx1")
+script = ExtResource("25_ofhq2")
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings/Settings_window" unique_id=460754258]
+z_index = 100
+layout_mode = 0
+offset_left = 78.0
+offset_top = 80.0
+offset_right = 1070.0
+offset_bottom = 551.0
+theme_type_variation = &"PanelSunken"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Settings_window/PanelContainer" unique_id=1444544969]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer" unique_id=940382395]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer" unique_id=548518431]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_w8sno")
+
+[node name="Label" type="Label" parent="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=2051414899]
+layout_mode = 2
+offset_transform_enabled = true
+theme_type_variation = &"LabelDesktop"
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+
+[node name="TextureButton" type="TextureButton" parent="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=426172438]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+toggle_mode = true
+texture_normal = ExtResource("21_mv33c")
+texture_pressed = ExtResource("21_mv33c")
+texture_hover = ExtResource("22_d6yad")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer" unique_id=1626871414]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer/ScrollContainer" unique_id=383694950]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start" to="Monitor_1/Computer/Os_menu/StartMenu" method="_on_start_pressed"]
@@ -829,5 +888,7 @@ size_flags_vertical = 3
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="button_down" from="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Achivements/Achievements_window" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Achivements/Achievements_window" method="_on_button_pressed"]
+[connection signal="button_down" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_texture_button_button_down"]
+[connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_button_pressed"]
 
 [editable path="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
