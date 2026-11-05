@@ -11,9 +11,7 @@
 [ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="8_nvylm"]
 [ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="9_pyw4p"]
 [ext_resource type="Script" uid="uid://fwyc0ue8l2fa" path="res://scenes/camera_2d.gd" id="9_vwg1a"]
-[ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="12_nvylm"]
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="13_cr2r5"]
-[ext_resource type="Script" uid="uid://cgki16ngukcta" path="res://scenes/animation_player.gd" id="13_nvylm"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="14_nvylm"]
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="16_g8puj"]
 [ext_resource type="Script" uid="uid://cspp3k6pprp8g" path="res://scenes/animation_player_2.gd" id="17_3lvau"]
@@ -256,472 +254,6 @@ _data = {
 
 [sub_resource type="Gradient" id="Gradient_vh4c0"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pyw4p"]
-shader = ExtResource("12_nvylm")
-shader_parameter/scanline_strength = 0.12
-shader_parameter/curvature = 0.04
-shader_parameter/vignette_strength = 0.0
-shader_parameter/aberration = 0.001
-shader_parameter/noise_strength = 0.03
-shader_parameter/tint = Color(1, 1, 1, 1)
-
-[sub_resource type="Animation" id="Animation_4ikbi"]
-length = 0.001
-step = 0.1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.12, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/tint")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/aberration")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.001, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.03, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_yyda8"]
-resource_name = "close_screen"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.46666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.0015, -0.25, 0, 0.25, 0, 0.05, -0.14444445, 0.00025, 0, 0),
-"times": PackedFloat32Array(0, 0.46666667)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.1, 0, 0, 0.14444445, 0.06666667, 1, -0.14444445, 0.005, 0, 0),
-"times": PackedFloat32Array(0, 0.46666667)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 50, -0.3, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.46666667)
-}
-
-[sub_resource type="Animation" id="Animation_cr2r5"]
-resource_name = "fall"
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_m7ht0"]
-resource_name = "glitch_close"
-length = 0.8333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.03333336, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, 0, 0, 0.11111167, 0, 50, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.46666667, 0.66667)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/scanline_strength")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, 0, 0, 0.15555556, 0.02, 1, -0.25, 0, 0.25, 0, 0.12, -0.061111107, 0.16666667, 0, 0),
-"times": PackedFloat32Array(0, 0.33333334, 0.7)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.1, -0.25, 0, 0.25, 0, 10, -0.1388889, 0.016666668, 0, 0, 0, -0.02222222, 1.6666667, 0, 0),
-"times": PackedFloat32Array(0.23333333, 0.5, 0.6333333)
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:material:shader_parameter/aberration")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.36666667, 0.43333334, 0.56666666, 0.66667, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0015, 0.5, 0.3150000149625, 0.102000004845, 0.1090000051775, 0.162000007695, 0.4750000225625, 0.4750000225625, 0.0150000007125]
-}
-
-[sub_resource type="Animation" id="Animation_wygpf"]
-resource_name = "screen_open"
-length = 0.43333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/tint")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.43333334),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/aberration")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.05, 0, 0, 0.1388889, 0.00025, 0.0015, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.4)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:material:shader_parameter/noise_strength")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.16666667, 0.005, 0, 0, 0, -0.15, 0.16666669, 0, 0),
-"times": PackedFloat32Array(0, 0.40000004)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect:material:shader_parameter/vignette_strength")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0, 0, -0.16111112, 1.6666667, 0, 0),
-"times": PackedFloat32Array(0, 0.40000004)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wygpf"]
-_data = {
-&"RESET": SubResource("Animation_4ikbi"),
-&"close_screen": SubResource("Animation_yyda8"),
-&"fall": SubResource("Animation_cr2r5"),
-&"glitch_close": SubResource("Animation_m7ht0"),
-&"screen_open": SubResource("Animation_wygpf")
-}
-
-[sub_resource type="Animation" id="Animation_sixpf"]
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:shader_parameter/curvature")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:material:shader_parameter/aberration")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../../CanvasLayer:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_agtwc"]
-resource_name = "fade_in"
-length = 1.9
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:material:shader_parameter/scanline_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.60000014, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:shader_parameter/curvature")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.60000014),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:material:shader_parameter/vignette_strength")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.60000014, 0.8000002),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.9350000444125]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:material:shader_parameter/aberration")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.60000014, 0.63333344, 0.76666665, 0.8666668, 1.3000002),
-"transitions": PackedFloat32Array(1, 4.1410527, 36.758354, 0.4204478, 1.4640859),
-"update": 0,
-"values": [0.0, 0.1970000093575, 0.0070000003325, 0.0550000026125, 0.3450000163875]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath(".:material:shader_parameter/noise_strength")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.60000014, 0.8000002),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.40400001919]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../../CanvasLayer:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(-1.2889999, 0),
-"transitions": PackedFloat32Array(1, 15.454959),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvylm"]
-_data = {
-&"RESET": SubResource("Animation_sixpf"),
-&"fade_in": SubResource("Animation_agtwc")
-}
-
-[sub_resource type="Shader" id="Shader_5hs24"]
-code = "shader_type canvas_item;
-
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
-
-uniform float scanline_strength : hint_range(0.0, 1.0) = 0.12;
-uniform float curvature : hint_range(0.0, 0.5) = 0.04;
-uniform float vignette_strength : hint_range(0.0, 50.0) = 0.25;
-uniform float aberration : hint_range(0.0, 0.5) = 0.0015;
-uniform float noise_strength : hint_range(0.0, 10.0) = 0.1;
-uniform vec4 tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
-
-float rand(vec2 co) {
-	return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
-}
-
-void fragment() {
-	// lokální souřadnice v rámci obdélníku monitoru (0-1)
-	vec2 centered = UV * 2.0 - 1.0;
-	float r2 = dot(centered, centered);
-	vec2 warp_offset = centered * curvature * r2 * 0.5;
-
-	if (UV.x + warp_offset.x < 0.0 || UV.x + warp_offset.x > 1.0 || UV.y + warp_offset.y < 0.0 || UV.y + warp_offset.y > 1.0) {
-		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
-	} else {
-		// vzorkuje se ze skutečné obrazovkové pozice, ne z lokálního UV
-		vec2 screen_uv = SCREEN_UV + warp_offset;
-
-		float r = texture(SCREEN_TEXTURE, screen_uv + vec2(aberration, 0.0)).r;
-		float g = texture(SCREEN_TEXTURE, screen_uv).g;
-		float b = texture(SCREEN_TEXTURE, screen_uv - vec2(aberration, 0.0)).b;
-		vec3 col = vec3(r, g, b);
-
-		float scanline = sin(UV.y * 800.0 - TIME * 5.0) * 0.5 + 0.5;
-		col *= 1.0 - scanline_strength * scanline;
-
-		float vignette = 1.0 - vignette_strength * r2;
-		col *= vignette;
-
-		float n = rand(UV + vec2(TIME * 0.001, 0.0));
-		col += (n - 0.5) * noise_strength;
-
-		col *= tint.rgb;
-
-		COLOR = vec4(col, 1.0);
-	}
-}"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vh4c0"]
-shader = SubResource("Shader_5hs24")
-shader_parameter/scanline_strength = 0.0
-shader_parameter/curvature = 0.0
-shader_parameter/vignette_strength = 0.0
-shader_parameter/aberration = 0.0
-shader_parameter/noise_strength = 0.0
-shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o28wv"]
 texture = ExtResource("3_4uj5c")
@@ -998,58 +530,22 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/scanline_strength")
+tracks/8/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Camera2D:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.12]
+"values": [Vector2(1.9073486e-06, -0.45458984)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/noise_strength")
+tracks/9/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.03]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/curvature")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.04]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Camera2D:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.9073486e-06, -0.45458984)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -1158,58 +654,22 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/scanline_strength")
+tracks/8/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Camera2D:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.12]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/noise_strength")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 1.7666667, 2.0666666),
-"transitions": PackedFloat32Array(1499.2229, 1, 1),
-"update": 0,
-"values": [0.03, 1.410000066975, 0.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("cutscene intro/Node2D/CanvasLayer/ColorRect:material:shader_parameter/curvature")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.9, 4, 4.4333334, 4.5666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.04, 0.04, 0.2000000095, 0.30000001425, 0.0400000019]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Camera2D:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
 "times": PackedFloat32Array(),
 "transitions": PackedFloat32Array(),
 "update": 0,
 "values": []
 }
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cutscene intro/Node2D/AnimatedSprite2D/Right:emitting")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
 "times": PackedFloat32Array(4.633333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -1346,7 +806,7 @@ scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_liowi")
 rendering_quadrant_size = 26
 format = 2
-layer_0/tile_data = PackedInt32Array(-65541, 65537, 1, -5, 1, 0, 65531, 1, 0, 131067, 1, 0, -65540, 65537, 1, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, -65539, 65537, 1, -3, 1, 0, 65533, 1, 0, 131069, 1, 0, -65538, 65537, 1, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, -65537, 65537, 1, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, -131072, 65537, 1, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, -131071, 65537, 1, -65535, 1, 0, 1, 1, 0, 65537, 1, 0, -131070, 65537, 1, -65534, 1, 0, 2, 1, 0, 65538, 1, 0, 131066, 196609, 0, 65530, 1, 0, -6, 1, 0, -65542, 65537, 1, -65544, 65537, 1, -8, 1, 0, 65528, 1, 0, 131064, 1, 0, -65543, 65537, 1, -7, 1, 0, 65529, 1, 0, 131065, 1, 0, 131074, 65537, 2, 131073, 65537, 2, 131072, 65537, 2, 196607, 65537, 2, 196606, 65537, 2, 196605, 65537, 2, 196604, 65537, 2, 196603, 65537, 2, 196602, 65537, 2, 196601, 65537, 2, 196600, 65537, 2, 196599, 65537, 2, 196598, 65537, 2, 196597, 65537, 2, 196596, 65537, 2, 196595, 65537, 2, 196594, 65537, 2, 196593, 65537, 2, 196592, 65537, 2, 196591, 1, 2, -65553, 1, 1, -65552, 65537, 1, -65551, 65537, 1, -65550, 65537, 1, -65549, 65537, 1, -65548, 65537, 1, -65547, 65537, 1, -65546, 65537, 1, -65545, 65537, 1, 131055, 196609, 1, 65519, 196609, 1, -17, 196609, 1, -9, 1, 0, -10, 1, 0, -11, 1, 0, -12, 1, 0, -13, 1, 0, -14, 1, 0, -15, 1, 0, -16, 1, 0, 65520, 1, 0, 65521, 1, 0, 131056, 1, 0, 131057, 1, 0, 65522, 1, 0, 65523, 1, 0, 131058, 1, 0, 131059, 1, 0, 131060, 1, 0, 131061, 1, 0, 65525, 1, 0, 131062, 1, 0, 65526, 1, 0, 65527, 1, 0, 131063, 1, 0, 65524, 1, 0, -131069, 131073, 1, -65533, 262145, 1, 3, 262145, 1, 65539, 262145, 1, 131075, 131073, 2)
+layer_0/tile_data = PackedInt32Array(-65541, 65537, 1, -5, 1, 0, 65531, 1, 0, 131067, 1, 0, -65540, 65537, 1, -4, 1, 0, 65532, 1, 0, 131068, 1, 0, -65539, 65537, 1, -3, 1, 0, 65533, 1, 0, 131069, 1, 0, -65538, 65537, 1, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, -65537, 65537, 1, -1, 1, 0, 65535, 1, 0, 131071, 1, 0, -131072, 65537, 1, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, -131071, 65537, 1, -65535, 1, 0, 1, 1, 0, 65537, 1, 0, -131070, 65537, 1, -65534, 1, 0, 2, 1, 0, 65538, 1, 0, 131066, 196609, 0, 65530, 1, 0, -6, 1, 0, -65542, 65537, 1, -65544, 65537, 1, -8, 1, 0, 65528, 1, 0, 131064, 1, 0, -65543, 65537, 1, -7, 1, 0, 65529, 1, 0, 131065, 1, 0, 131074, 65537, 2, 131073, 65537, 2, 131072, 65537, 2, 196607, 65537, 2, 196606, 65537, 2, 196605, 65537, 2, 196604, 65537, 2, 196603, 65537, 2, 196601, 65537, 2, 196600, 65537, 2, 196599, 65537, 2, 196598, 65537, 2, 196597, 65537, 2, 196596, 65537, 2, 196595, 65537, 2, 196594, 65537, 2, 196593, 65537, 2, 196592, 65537, 2, 196591, 1, 2, -65553, 1, 1, -65552, 65537, 1, -65551, 65537, 1, -65550, 65537, 1, -65549, 65537, 1, -65548, 65537, 1, -65547, 65537, 1, -65546, 65537, 1, -65545, 65537, 1, 131055, 196609, 1, 65519, 196609, 1, -17, 196609, 1, -9, 1, 0, -10, 1, 0, -11, 1, 0, -12, 1, 0, -13, 1, 0, -14, 1, 0, -15, 1, 0, -16, 1, 0, 65520, 1, 0, 65521, 1, 0, 131056, 1, 0, 131057, 1, 0, 65522, 1, 0, 65523, 1, 0, 131058, 1, 0, 131059, 1, 0, 131060, 1, 0, 131061, 1, 0, 65525, 1, 0, 131062, 1, 0, 65526, 1, 0, 65527, 1, 0, 131063, 1, 0, 65524, 1, 0, -131069, 131073, 1, -65533, 262145, 1, 3, 262145, 1, 65539, 262145, 1, 131075, 131073, 2, 196602, 65537, 2)
 
 [node name="TileMapDotted" type="TileMap" parent="cutscene intro/Node2D/Table" unique_id=133169600 groups=["table"]]
 visible = false
@@ -1473,39 +933,6 @@ scale_amount_min = 10.0
 scale_amount_max = 10.0
 color = Color(0.4392157, 0.49019608, 0.52156866, 1)
 color_ramp = SubResource("Gradient_vh4c0")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="cutscene intro/Node2D" unique_id=1370691632]
-
-[node name="ColorRect" type="ColorRect" parent="cutscene intro/Node2D/CanvasLayer" unique_id=2100473344]
-material = SubResource("ShaderMaterial_pyw4p")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="AnimationTree" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=927830465]
-libraries/ = SubResource("AnimationLibrary_wygpf")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene intro/Node2D/CanvasLayer" unique_id=1526712368]
-root_node = NodePath("ColorRect")
-libraries/ = SubResource("AnimationLibrary_nvylm")
-playback_auto_capture = false
-speed_scale = 1.5
-script = ExtResource("13_nvylm")
-
-[node name="ColorRect" type="ColorRect" parent="cutscene intro/Node2D/CanvasLayer/AnimationPlayer" unique_id=189335927]
-material = SubResource("ShaderMaterial_vh4c0")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.18039216)
-metadata/_edit_use_anchors_ = true
 
 [node name="Ground" type="TileMap" parent="cutscene intro" unique_id=1368855412]
 z_index = -30
@@ -24078,5 +23505,3 @@ position = Vector2(-137.22728, -155.31805)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
-
-[connection signal="timeout" from="Timer" to="cutscene intro/Node2D/CanvasLayer/AnimationPlayer" method="_on_timer_timeout"]
