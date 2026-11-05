@@ -72,7 +72,7 @@ func save_game():
 	config.set_value("data", "done", done)
 	config.set_value("data", "achievements", AchievementState.completed)
 	config.set_value("data", "best_times", best_times)
-	config.set_value("data:","unlocked",unlocked)
+	config.set_value("data","unlocked",unlocked)
 	var a = config.save("user://maus_goddots")
 	if a == OK:
 		print("game_saved")
