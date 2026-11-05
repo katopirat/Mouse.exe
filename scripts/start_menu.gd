@@ -32,14 +32,17 @@ func _on_settings_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	visible = !visible
+	 
 	for c in $VBoxContainer.get_children():
 		if visible == true:
 			c.get_child(0).add_to_group("clickable")
 		elif visible == false: 
 			c.get_child(0).remove_from_group("clickable")
-		
-		
+
 
 
 func _on_button_x_button_down() -> void:
 	pass # Replace with function body.
+
+func show_red_dot():
+	pass

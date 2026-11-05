@@ -359,7 +359,19 @@ content_margin_bottom = 9.0
 texture = ExtResource("21_d6yad")
 region_rect = Rect2(1.9278374, 2.0963697, 26.132679, 7.929146)
 
-[node name="Menu" type="Node2D" unique_id=659635860]
+[sub_resource type="Gradient" id="Gradient_d6yad"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.7, 1)
+colors = PackedColorArray(0.89827543, 2.5268644e-06, 1.6364455e-06, 1, 1, 1, 1, 0, 0.61960787, 0, 0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w8sno"]
+gradient = SubResource("Gradient_d6yad")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5347826, 0.47391304)
+
+[node name="Menu_2" type="Node2D" unique_id=659635860]
 script = ExtResource("1_d6yad")
 
 [node name="Monitor_1" type="Node2D" parent="." unique_id=831704774]
@@ -752,6 +764,16 @@ size_flags_horizontal = 3
 [node name="AchievementPanel" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="RedDot" type="TextureRect" parent="." unique_id=429666157]
+z_index = 100
+offset_left = -697.99994
+offset_top = -251.0
+offset_right = -632.414
+offset_bottom = -185.41403
+scale = Vector2(2.5767698, 2.5767698)
+texture = SubResource("GradientTexture2D_w8sno")
+expand_mode = 1
 
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]

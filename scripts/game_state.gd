@@ -37,6 +37,7 @@ var game_pausable = true
 func _ready() -> void:
 	for i in levels.size():
 		best_times[i] = null
+	load_game()
 
 func go_to_level(i):
 	var path = levels[i]["scene"]
@@ -60,8 +61,37 @@ func finish_level(final_time):
 			if best_times[i] == null or final_time < best_times[i]:
 				best_times[i] = final_time
 				print("new record "+str(best_times[i]))
+	save_game()
 
 
 func get_best_time(level):
 	return best_times[level]
+	
+func save_game():
+	var config = ConfigFile.new()
+	config.set_value("data", "done", done)
+	config.set_value("data", "achievements", AchievementState.completed)
+	config.set_value("data", "best_times", best_times)
+	config.set_value("data:","unlocked",unlocked)
+	var a = config.save("user://maus_goddots")
+	if a == OK:
+		print("game_saved")
+	else:
+		print("Something is wrong cannot save : ",a)
+
+func load_game():
+	
+	var config = ConfigFile.new()
+	var a = config.load("user://maus_goddots")
+	print(config)
+	if a == OK:
+		print("game_loaded")
+	else:
+		print("no save : ",a)
+		return
+	done = config.get_value("data","done",[])
+	unlocked = config.get_value("data", "unlocked", 1)
+	AchievementState.completed = config.get_value("data","achievements",[])
+	for key in config.get_value("data","unlocked",{}):
+		best_times[int(key)] =  config.get_value("data","unlocked",{})[key]
 	
