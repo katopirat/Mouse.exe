@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="9_5qnj6"]
 [ext_resource type="Texture2D" uid="uid://bb2iyt1xr5u1i" path="res://assets/images/Chocolate_DarkDark.png" id="10_qhmma"]
 [ext_resource type="Texture2D" uid="uid://db7226o3lf5kq" path="res://logo-god-dots.png" id="10_ypq80"]
-[ext_resource type="AudioStream" uid="uid://qel2ewsq76wc" path="res://assets/soundeffects/fall.wav" id="14_3gs2s"]
+[ext_resource type="AudioStream" uid="uid://blm3oybct47ea" path="res://assets/soundeffects/patricksilvey-weather-lightning-2-464187.mp3" id="13_ner4h"]
+[ext_resource type="AudioStream" uid="uid://bkmtguwyfcw4l" path="res://assets/soundeffects/boons_freak-rain-sound-188158.mp3" id="15_206a3"]
 [ext_resource type="AudioStream" uid="uid://fmdh6f6g88oj" path="res://assets/soundtracks/end_soundtrack.mp3" id="15_ner4h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kds42"]
@@ -919,7 +920,7 @@ tracks/7/path = NodePath("../../../../AudioStreamPlayer:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(27.566666),
+"times": PackedFloat32Array(27.033333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -1142,12 +1143,17 @@ scale_amount_curve = SubResource("Curve_0xf44")
 color = Color(0.35378626, 0.53171813, 1, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=906225156]
-stream = ExtResource("14_3gs2s")
-volume_db = 13.148
-pitch_scale = 0.12
+stream = ExtResource("13_ner4h")
+volume_db = 24.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=909342981]
 stream = ExtResource("15_ner4h")
+volume_db = -15.947
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1486156046]
+position = Vector2(-8, -8)
+stream = ExtResource("15_206a3")
 autoplay = true
 
 [connection signal="window_closed" from="cutscene intro/AnimatedSprite2D/Camera2D/DialogWindow" to="cutscene intro" method="_on_dialog_window_window_closed"]
