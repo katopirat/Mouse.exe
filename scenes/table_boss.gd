@@ -215,3 +215,4 @@ func change_button_position():
 	await $Node2D/CanvasLayer/DialogWindow.window_closed
 	
 	$Node2D/Table._on_bridge_button_open_bridge()
+func _on_dialog_window_window_closed() -> void: pass
