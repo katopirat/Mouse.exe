@@ -93,5 +93,5 @@ func load_game():
 	unlocked = config.get_value("data", "unlocked", 1)
 	AchievementState.completed = config.get_value("data","achievements",[])
 	for key in config.get_value("data","unlocked",{}):
-		best_times[int(key)] =  config.get_value("data","unlocked",{})[key]
+		best_times[int(key)] =  config.get_value("data","best_time",{})[key]
 	
