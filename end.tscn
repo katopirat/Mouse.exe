@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b4mjttd088nfx"]
 
 [ext_resource type="Script" uid="uid://d13ah8mcrd21a" path="res://scenes/cutscene_intro.gd" id="1_wabui"]
-[ext_resource type="PackedScene" uid="uid://byx58bx1bj3pf" path="res://scenes/cut_scene_wakeup.tscn" id="2_ea6qb"]
 [ext_resource type="Texture2D" uid="uid://cw45q6k864h8c" path="res://assets/images/outside(tileset).png" id="3_0xf44"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="4_qhmma"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="5_0xf44"]
@@ -14,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bb2iyt1xr5u1i" path="res://assets/images/Chocolate_DarkDark.png" id="10_qhmma"]
 [ext_resource type="Texture2D" uid="uid://db7226o3lf5kq" path="res://logo-god-dots.png" id="10_ypq80"]
 [ext_resource type="AudioStream" uid="uid://qel2ewsq76wc" path="res://assets/soundeffects/fall.wav" id="14_3gs2s"]
+[ext_resource type="AudioStream" uid="uid://fmdh6f6g88oj" path="res://assets/soundtracks/end_soundtrack.mp3" id="15_ner4h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kds42"]
 texture = ExtResource("3_0xf44")
@@ -577,6 +577,10 @@ _data = {
 &"screen_open": SubResource("Animation_wygpf")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_46nwd"]
+atlas = ExtResource("8_0xf44")
+region = Rect2(204, 416, 204, 104)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx5yu"]
 atlas = ExtResource("8_0xf44")
 region = Rect2(204, 416, 204, 104)
@@ -635,13 +639,16 @@ region = Rect2(0, 416, 204, 104)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_adpup"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46nwd")
+}],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 100.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tx5yu")
 }, {
 "duration": 1.0,
@@ -793,10 +800,34 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../AnimatedSprite2D:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_o86jq"]
 resource_name = "mouse_cutscene"
-length = 25.4
+length = 45.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -804,7 +835,7 @@ tracks/0/path = NodePath("../../../AnimatedSprite2D/Left3:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(9.1),
+"times": PackedFloat32Array(29.133333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -816,7 +847,7 @@ tracks/1/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow:visibl
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(6.4666667),
+"times": PackedFloat32Array(22.9),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -828,10 +859,10 @@ tracks/2/path = NodePath("../../../AnimatedSprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.43333334, 5.1, 6.4666667, 7.1666665, 10.5, 14.599998),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 13, 22.733334, 25.666666, 26.666666, 31.166666, 33.933334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(209, 3204), Vector2(209.00002, 876), Vector2(209.00002, 876), Vector2(209.00002, 579), Vector2(209.00002, 579), Vector2(-8891, -847)]
+"values": [Vector2(209, 3204), Vector2(209, 3204), Vector2(209.00002, 876), Vector2(209.00002, 876), Vector2(209.00002, 579), Vector2(209.00002, 579), Vector2(-8891, -847)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -840,10 +871,10 @@ tracks/3/path = NodePath("../../../AnimatedSprite2D/Camera2D/ChocolateDarkDark:m
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(9, 10.133333, 14.933332, 16.4, 23.199999, 24.599998),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 5.3458853, 8.8, 29.866665, 31.233334, 34.63333, 35.8, 43.9, 45.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -852,7 +883,7 @@ tracks/4/path = NodePath("../../../MyšReal:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.033333335, 16.266665, 17.733332),
+"times": PackedFloat32Array(12.6, 35.23333, 37),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-7868, 203), Vector2(-7868, 203), Vector2(-8498, -559.9995)]
@@ -864,7 +895,7 @@ tracks/5/path = NodePath("../../../MyšReal:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 16.266665, 17.999998),
+"times": PackedFloat32Array(12.566667, 35.199997, 36.933334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [5.35022, 5.35022, 5.35022]
@@ -876,7 +907,7 @@ tracks/6/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow2:visib
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(20.3),
+"times": PackedFloat32Array(39.966667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -888,10 +919,34 @@ tracks/7/path = NodePath("../../../../AudioStreamPlayer:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(8.966666),
+"times": PackedFloat32Array(27.566666),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../../AnimatedSprite2D:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(26.833334),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"new_animation"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(43.166668),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2lp4q"]
@@ -904,7 +959,6 @@ _data = {
 
 [node name="cutscene intro" type="Node2D" parent="." unique_id=1500718359]
 script = ExtResource("1_wabui")
-next_animation = ExtResource("2_ea6qb")
 
 [node name="Node2D" type="Node2D" parent="cutscene intro" unique_id=1401827104]
 
@@ -946,8 +1000,7 @@ libraries/ = SubResource("AnimationLibrary_wygpf")
 position = Vector2(209, 3204)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_adpup")
-animation = &"new_animation"
-autoplay = "new_animation"
+autoplay = "default"
 
 [node name="Left3" type="CPUParticles2D" parent="cutscene intro/AnimatedSprite2D" unique_id=203517008]
 z_index = 1
@@ -983,8 +1036,8 @@ offset_top = 71.333565
 offset_right = 295.0169
 offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 4.0
-text = "Finaly i made it i cant belive my eyes"
+time_before_start = 23.0
+text = "I finaly made it!"
 wait_time = 1.0
 
 [node name="DialogWindow3" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=964998569 instance=ExtResource("9_5qnj6")]
@@ -994,19 +1047,18 @@ offset_top = 71.333565
 offset_right = 295.0169
 offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 21.0
+time_before_start = 42.0
 text = "yes it was just a bad dream"
 wait_time = 1.0
 
 [node name="DialogWindow4" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=434814653 instance=ExtResource("9_5qnj6")]
-visible = false
 z_index = 100
 offset_left = -162.33333
 offset_top = 18.333557
 offset_right = 295.0169
 offset_bottom = 69.33356
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 25.0
+time_before_start = 45.0
 text = "Thank you for playing            the Mouse game                       by god Dots"
 icon = ExtResource("10_ypq80")
 wait_time = 1.0
@@ -1018,7 +1070,7 @@ offset_top = 71.333565
 offset_right = 295.0169
 offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 17.5
+time_before_start = 37.0
 text = "Are you okay?"
 icon = ExtResource("8_206a3")
 wait_time = 1.0
@@ -1093,5 +1145,9 @@ color = Color(0.35378626, 0.53171813, 1, 1)
 stream = ExtResource("14_3gs2s")
 volume_db = 13.148
 pitch_scale = 0.12
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=909342981]
+stream = ExtResource("15_ner4h")
+autoplay = true
 
 [connection signal="window_closed" from="cutscene intro/AnimatedSprite2D/Camera2D/DialogWindow" to="cutscene intro" method="_on_dialog_window_window_closed"]
