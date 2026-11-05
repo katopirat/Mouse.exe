@@ -384,6 +384,7 @@ position = Vector2(1887, 148)
 next_scene = ExtResource("7_6w2cs")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_cbu0x")]
+visible = false
 position = Vector2(171, 110)
 table_tilemap = NodePath("../Table/TileMap")
 
@@ -679,7 +680,6 @@ offset = Vector2(0, 165)
 
 [node name="Hand" type="Sprite2D" parent="." unique_id=2042481966]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-3, 500)
 scale = Vector2(3, 3)
 texture = ExtResource("28_t0uad")
@@ -697,6 +697,7 @@ position = Vector2(4, 1081.9998)
 emitting = false
 amount = 50
 one_shot = true
+speed_scale = 3.26
 explosiveness = 1.0
 direction = Vector2(0, 0)
 spread = 180.0
