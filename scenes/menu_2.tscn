@@ -49,6 +49,56 @@ size = Vector2(11.984121, 10.894657)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so6io"]
 size = Vector2(32.320816, 10.094757)
 
+[sub_resource type="Gradient" id="Gradient_d6yad"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.7, 1)
+colors = PackedColorArray(0.89827543, 2.5268644e-06, 1.6364455e-06, 1, 1, 1, 1, 0, 0.61960787, 0, 0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w8sno"]
+gradient = SubResource("Gradient_d6yad")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.56956524, 0.4347826)
+
+[sub_resource type="Animation" id="Animation_d6yad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture:fill_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.56956524, 0.4347826)]
+}
+
+[sub_resource type="Animation" id="Animation_ofhq2"]
+resource_name = "puls"
+length = 1.9666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture:fill_to")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.100000024, 1, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5217391, 0.46086955), Vector2(0.56956524, 0.4347826), Vector2(0.5173913, 0.45652175)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_decbu"]
+_data = {
+&"RESET": SubResource("Animation_d6yad"),
+&"puls": SubResource("Animation_ofhq2")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
 size = Vector2(58.104824, 11.257809)
 
@@ -359,18 +409,6 @@ content_margin_bottom = 9.0
 texture = ExtResource("21_d6yad")
 region_rect = Rect2(1.9278374, 2.0963697, 26.132679, 7.929146)
 
-[sub_resource type="Gradient" id="Gradient_d6yad"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.7, 1)
-colors = PackedColorArray(0.89827543, 2.5268644e-06, 1.6364455e-06, 1, 1, 1, 1, 0, 0.61960787, 0, 0, 0)
-metadata/_snap_enabled = true
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_w8sno"]
-gradient = SubResource("Gradient_d6yad")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5347826, 0.47391304)
-
 [node name="Menu_2" type="Node2D" unique_id=659635860]
 script = ExtResource("1_d6yad")
 
@@ -563,6 +601,21 @@ stretch_mode = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start/Area2D" unique_id=1024700497 groups=["clickable"]]
 position = Vector2(15.339371, 4.9526215)
 shape = SubResource("RectangleShape2D_so6io")
+
+[node name="RedDot" type="TextureRect" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start" unique_id=429666157]
+layout_mode = 0
+offset_left = 5.7157598
+offset_top = -24.789303
+offset_right = 25.446556
+offset_bottom = -5.0584984
+scale = Vector2(2.5767698, 2.5767698)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_w8sno")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer/Start/RedDot" unique_id=495323103]
+libraries/ = SubResource("AnimationLibrary_decbu")
+autoplay = &"puls"
 
 [node name="Panel" type="PanelContainer" parent="Monitor_1/Computer/Os_menu/Taskbar/HBoxContainer" unique_id=331787499]
 layout_mode = 2
@@ -764,17 +817,6 @@ size_flags_horizontal = 3
 [node name="AchievementPanel" parent="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=296331006 instance=ExtResource("21_b7gx1")]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="RedDot" type="TextureRect" parent="." unique_id=429666157]
-z_index = 100
-offset_left = -697.99994
-offset_top = -251.0
-offset_right = -632.414
-offset_bottom = -185.41403
-scale = Vector2(2.5767698, 2.5767698)
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_w8sno")
-expand_mode = 1
 
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
