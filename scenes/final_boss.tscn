@@ -203,7 +203,6 @@ position = Vector2(-140.00002, -875.00006)
 scale = Vector2(0.9376096, 0.9376096)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="pc" unique_id=1066311250]
-collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pc/StaticBody2D" unique_id=473523748]
 position = Vector2(2.6663418, 86.39026)
