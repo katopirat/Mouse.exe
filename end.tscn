@@ -847,7 +847,7 @@ tracks/1/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow:visibl
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(22.9),
+"times": PackedFloat32Array(26.566668),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -943,7 +943,7 @@ tracks/9/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow3:visib
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(43.166668),
+"times": PackedFloat32Array(44.333332),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -1058,7 +1058,7 @@ offset_top = 18.333557
 offset_right = 295.0169
 offset_bottom = 69.33356
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 45.0
+time_before_start = 47.0
 text = "Thank you for playing            the Mouse game                       by god Dots"
 icon = ExtResource("10_ypq80")
 wait_time = 1.0
