@@ -13,6 +13,18 @@ extends Node2D
 var points = []
 var lenght = 0.0
 
+func calculate_intersect(a: Vector2, b: Vector2, c: Vector2) -> Vector2:
+	var ac: Vector2 = c - a
+
+	if ac.length_squared() == 0.0:
+		return a
+
+	var t: float = (b - a).dot(ac) / ac.length_squared()
+
+	t = clampf(t, 0.0, 1.0)
+
+	return a + t * ac
+
 func _physics_process(delta: float) -> void:
 	if points.is_empty():
 		points.append(cable_start.global_position)
@@ -50,12 +62,36 @@ func _physics_process(delta: float) -> void:
 				touch_points = new_touch_points
 				if touch_points.is_empty():
 					wrapped_foot = false
-	while points.size() > 1:
-		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-2], cable_end.global_position, 4))
-		if not strike_before:
-			points.pop_back()
+
+	var start_point: int = 0
+	while start_point < points.size() - 1:
+		var start = points[start_point]
+		var end
+		if start_point == points.size() -2:
+			end = cable_end.global_position
 		else:
-			break
+			end = points[start_point+2]
+		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(start, end, 4))
+		if strike_before:
+			start_point+=1
+		else:
+			var triangle := ConvexPolygonShape2D.new()
+			triangle.points = PackedVector2Array([
+			start,
+			points[start_point + 1],
+			end
+			])
+
+			var query := PhysicsShapeQueryParameters2D.new()
+			query.shape = triangle
+			query.collision_mask = 4
+
+			var hits = space.intersect_shape(query)
+			print(hits)
+			if hits.is_empty():
+				points.pop_at(start_point + 1)
+			else:
+				start_point += 1
 
 
 	lenght = 0.0
