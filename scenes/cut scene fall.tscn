@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cg8a6ip86x555" path="res://assets/animations/Ant/antblackanimationplaceholdernumber1.png" id="17_vh4c0"]
 [ext_resource type="Script" uid="uid://ctu0k2oi8uvan" path="res://scenes/!danger!.gd" id="21_h61o4"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="22_pstul"]
+[ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_htqdr"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="24_kn7t3"]
+[ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="24_yhhye"]
 [ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="25_y8l5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tj3kt"]
@@ -23505,3 +23507,17 @@ position = Vector2(-137.22728, -155.31805)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
+
+[node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("23_htqdr")]
+
+[node name="DialogWindow" parent="CanvasLayer" unique_id=929762473 instance=ExtResource("24_yhhye")]
+z_index = -1
+offset_left = 58.0
+offset_top = 563.0
+offset_right = 1106.0
+offset_bottom = 630.0144
+text = "This mouse pad is garbage. I want the RGB one"
+start = false
+click_to_close = true
+
+[editable path="CanvasLayer"]
