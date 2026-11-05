@@ -772,6 +772,7 @@ offset_top = -251.0
 offset_right = -632.414
 offset_bottom = -185.41403
 scale = Vector2(2.5767698, 2.5767698)
+mouse_filter = 2
 texture = SubResource("GradientTexture2D_w8sno")
 expand_mode = 1
 
