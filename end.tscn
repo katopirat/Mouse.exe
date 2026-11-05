@@ -796,7 +796,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_o86jq"]
 resource_name = "mouse_cutscene"
-length = 20.866667
+length = 25.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -828,7 +828,7 @@ tracks/2/path = NodePath("../../../AnimatedSprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.43333334, 5.1, 6.4666667, 7.1666665, 10.5, 10.866667),
+"times": PackedFloat32Array(0.43333334, 5.1, 6.4666667, 7.1666665, 10.5, 14.599998),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(209, 3204), Vector2(209.00002, 876), Vector2(209.00002, 876), Vector2(209.00002, 579), Vector2(209.00002, 579), Vector2(-8891, -847)]
@@ -840,7 +840,7 @@ tracks/3/path = NodePath("../../../AnimatedSprite2D/Camera2D/ChocolateDarkDark:m
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(9, 10.133333, 11.2, 12.666667, 19.466667, 20.866667),
+"times": PackedFloat32Array(9, 10.133333, 14.933332, 16.4, 23.199999, 24.599998),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
@@ -852,7 +852,7 @@ tracks/4/path = NodePath("../../../MyšReal:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.033333335, 12.533334, 14),
+"times": PackedFloat32Array(0.033333335, 16.266665, 17.733332),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-7868, 203), Vector2(-7868, 203), Vector2(-8498, -559.9995)]
@@ -864,7 +864,7 @@ tracks/5/path = NodePath("../../../MyšReal:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 12.533334, 14.266666),
+"times": PackedFloat32Array(0, 16.266665, 17.999998),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [5.35022, 5.35022, 5.35022]
@@ -876,7 +876,7 @@ tracks/6/path = NodePath("../../../AnimatedSprite2D/Camera2D/DialogWindow2:visib
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(16.566668),
+"times": PackedFloat32Array(20.3),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -994,7 +994,7 @@ offset_top = 71.333565
 offset_right = 295.0169
 offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 17.0
+time_before_start = 21.0
 text = "yes it was just a bad dream"
 wait_time = 1.0
 
@@ -1018,7 +1018,7 @@ offset_top = 71.333565
 offset_right = 295.0169
 offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 14.0
+time_before_start = 17.5
 text = "Are you okay?"
 icon = ExtResource("8_206a3")
 wait_time = 1.0

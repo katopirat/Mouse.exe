@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="5_cbu0x"]
 [ext_resource type="Texture2D" uid="uid://cwtic3dikdb6" path="res://assets/images/os2.png" id="6_6w2cs"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="6_tc4gl"]
+[ext_resource type="PackedScene" uid="uid://c1540ljr0mnwd" path="res://scenes/level_24.tscn" id="7_6w2cs"]
 [ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="7_83o4n"]
 [ext_resource type="Texture2D" uid="uid://b6msaxght8v2g" path="res://assets/images/computer frame.png" id="7_tc4gl"]
-[ext_resource type="PackedScene" uid="uid://dpmx7gf5ekwo8" path="res://scenes/cut scene fall.tscn" id="8_7so0a"]
 [ext_resource type="Script" uid="uid://b3xcn2m4hi3iv" path="res://scripts/cursor_movement.gd" id="8_n24ig"]
 [ext_resource type="Texture2D" uid="uid://cjxjlybtvn6yy" path="res://mouse_os/cursors/cursor_arrow.png" id="9_7so0a"]
 [ext_resource type="Texture2D" uid="uid://ddc2updjx18di" path="res://mouse_os/cursors/cursor_hand.png" id="10_uexas"]
@@ -381,7 +381,7 @@ layer_0/tile_data = PackedInt32Array(-131075, 196609, 1, -131074, 196609, 0, -13
 
 [node name="finish" parent="Node2D/Table" unique_id=1389901689 instance=ExtResource("6_tc4gl")]
 position = Vector2(1887, 148)
-next_scene = ExtResource("8_7so0a")
+next_scene = ExtResource("7_6w2cs")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_cbu0x")]
 position = Vector2(171, 110)

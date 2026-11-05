@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://foy5jw2oawis" path="res://assets/images/mouse(talking)2.png" id="7_cr2r5"]
 [ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="8_nvylm"]
 [ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="9_pyw4p"]
+[ext_resource type="Script" uid="uid://fwyc0ue8l2fa" path="res://scenes/camera_2d.gd" id="9_vwg1a"]
 [ext_resource type="Shader" uid="uid://b05mnf3whc7nx" path="res://scenes/level_1.gdshader" id="12_nvylm"]
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="13_cr2r5"]
 [ext_resource type="Script" uid="uid://cgki16ngukcta" path="res://scenes/animation_player.gd" id="13_nvylm"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="16_g8puj"]
 [ext_resource type="Script" uid="uid://cspp3k6pprp8g" path="res://scenes/animation_player_2.gd" id="17_3lvau"]
 [ext_resource type="Texture2D" uid="uid://cg8a6ip86x555" path="res://assets/animations/Ant/antblackanimationplaceholdernumber1.png" id="17_vh4c0"]
+[ext_resource type="Script" uid="uid://ctu0k2oi8uvan" path="res://scenes/!danger!.gd" id="21_h61o4"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="22_pstul"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="24_kn7t3"]
 [ext_resource type="AudioStream" uid="uid://cuqoplgqe8wkd" path="res://assets/soundeffects/creatorshome-video-game-speak-358238.mp3" id="25_y8l5y"]
@@ -1385,6 +1387,7 @@ rotation = 2.6437871
 scale = Vector2(0.45454544, 0.45454544)
 limit_left = -100000
 limit_top = -1500
+script = ExtResource("9_vwg1a")
 
 [node name="Left" type="CPUParticles2D" parent="cutscene intro/Node2D/AnimatedSprite2D" unique_id=383265886]
 visible = false
@@ -1543,6 +1546,7 @@ scale = Vector2(2.1999998, 2.1999998)
 sprite_frames = SubResource("SpriteFrames_2gsog")
 animation = &"new_animation"
 autoplay = "new_animation"
+script = ExtResource("21_h61o4")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D/!Danger!" unique_id=1649275776]
 position = Vector2(8.636364, 5.500045)
