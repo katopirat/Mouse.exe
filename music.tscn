@@ -22,7 +22,8 @@ dramatic_playlist = Array[AudioStream]([ExtResource("5_3hkwp"), ExtResource("5_b
 other_playlist = Array[AudioStream]([ExtResource("7_u43pr")])
 ending_playlist = Array[AudioStream]([ExtResource("8_3hkwp"), ExtResource("7_eh16a")])
 menu_playlist = Array[AudioStream]([ExtResource("9_3hkwp")])
-boss_playlist = Array[AudioStream]([ExtResource("11_fhd0f"), ExtResource("12_7lvvx"), ExtResource("8_eh16a")])
+boss_playlist = Array[AudioStream]([ExtResource("12_7lvvx"), ExtResource("8_eh16a")])
+bosshand_playlist = Array[AudioStream]([ExtResource("11_fhd0f")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=338838359]
 volume_db = -15.746

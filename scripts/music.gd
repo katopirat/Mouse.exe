@@ -9,6 +9,8 @@ extends Node2D
 @export var ending_playlist: Array[AudioStream] = []
 @export var menu_playlist: Array[AudioStream] = []
 @export var boss_playlist: Array[AudioStream] = []
+@export var bosshand_playlist: Array[AudioStream] = []
+
 
 
 @export_enum("chill", "dramatic", "menu", "boss", "stop") var current_style: String = 'menu'
@@ -29,6 +31,8 @@ func get_playlist(style: String):
 		return menu_playlist
 	elif style == 'boss':
 		return boss_playlist
+	elif style == "bosshand":
+		return bosshand_playlist
 	elif style == "stop":
 		return [] as Array[AudioStream]
 	else:

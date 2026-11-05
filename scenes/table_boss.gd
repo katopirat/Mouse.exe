@@ -34,9 +34,7 @@ func _process(delta: float) -> void:
 	pass
 
 func start():
-	
-	Global.music_style = "boss"
-	Music.play_track(0)
+	Global.music_style = "bosshand"
 	change_button_position()
 	if player.god_mode == true:
 		mouse_pads = 14
