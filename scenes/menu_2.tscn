@@ -825,6 +825,7 @@ layer = 0
 
 [node name="Settings_window" type="Control" parent="Settings" unique_id=1920176410]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -874,19 +875,24 @@ stretch_mode = 0
 layout_mode = 2
 offset_transform_enabled = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer" unique_id=673812396]
+[node name="Volume" type="HBoxContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer" unique_id=673812396]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1980959950]
+[node name="Label" type="Label" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume" unique_id=1980959950]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Volume"
 
-[node name="HSlider" type="HSlider" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=824594333]
+[node name="HSlider" type="HSlider" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume" unique_id=824594333]
+custom_maximum_size = Vector2(181.93, -1)
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
-scrollable = false
+
+[node name="Label2" type="Label" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume" unique_id=1299016799]
+layout_mode = 2
+text = "0
+"
 
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
@@ -901,5 +907,6 @@ scrollable = false
 [connection signal="pressed" from="Achivements/Achievements_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Achivements/Achievements_window" method="_on_button_pressed"]
 [connection signal="button_down" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_texture_button_button_down"]
 [connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_button_pressed"]
+[connection signal="value_changed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume/HSlider" to="Settings/Settings_window" method="_on_h_slider_value_changed"]
 
 [editable path="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
