@@ -48,7 +48,8 @@ func _on_button_x_button_down() -> void:
 func show_red_dot():
 	while !visible:
 		$"../Taskbar/HBoxContainer/Start/RedDot".visible = true
-		await get_tree().process_frame
+		if get_tree():
+			await get_tree().process_frame
 	$"../Taskbar/HBoxContainer/Start/RedDot".visible = false
 
 	
