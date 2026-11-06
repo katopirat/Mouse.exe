@@ -23,8 +23,10 @@
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="20_u3q0p"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="21_umiso"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="24_w8y76"]
+[ext_resource type="Shader" uid="uid://g8fapfdy8ydc" path="res://scenes/rainbow.gdshader" id="25_4j5uc"]
 [ext_resource type="PackedScene" uid="uid://fp5ooo7afhy7" path="res://scenes/level_23.tscn" id="25_y20oa"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="26_ty1vi"]
+[ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="26_uwhva"]
 [ext_resource type="PackedScene" uid="uid://cjp28pxbkutmv" path="res://scenes/props/book_open.tscn" id="27_4p80b"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="28_xi1q3"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="29_t2c71"]
@@ -105,6 +107,13 @@ animations = [{
 "name": &"pressed",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tln78"]
+shader = ExtResource("25_4j5uc")
+shader_parameter/speed = 0.3
+shader_parameter/frequency = 1.0
+shader_parameter/angle = 10.0
+shader_parameter/rainbow_strength = 0.5
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y20oa"]
 texture = ExtResource("30_6qwin")
@@ -557,6 +566,15 @@ z_index = -1
 position = Vector2(822, 36)
 scale = Vector2(0.52, 0.52)
 next_scene = ExtResource("25_y20oa")
+
+[node name="TextureRect" type="TextureRect" parent="Level21/Finish" unique_id=1513053184]
+material = SubResource("ShaderMaterial_tln78")
+offset_left = -228.12495
+offset_top = -150.0
+offset_right = -90.31851
+offset_bottom = -54.0
+scale = Vector2(3.041668, 3.041668)
+texture = ExtResource("26_uwhva")
 
 [node name="cup2" parent="Level21" unique_id=428504929 instance=ExtResource("26_ty1vi")]
 position = Vector2(696, -242)
