@@ -44,9 +44,11 @@ func _input(event:InputEvent):
 		if get_tree().current_scene.name == "Menu":
 			$VBoxContainer/Button.visible = false
 			$VBoxContainer/Button3.visible = true
+			$VBoxContainer/PanelContainer/Label.text = "More settings and credits are in the Start menu."
 		else:
 			$VBoxContainer/Button.visible = true
 			$VBoxContainer/Button3.visible = false
+			$VBoxContainer/PanelContainer/Label.text = "More settings and credits are in the Start menu in the main menu."
 			
 		pouse()
 		

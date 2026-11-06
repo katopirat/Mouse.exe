@@ -308,9 +308,8 @@ shape = SubResource("CapsuleShape2D_iw80n")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="cup" unique_id=581825917]
 z_index = 10
-position = Vector2(-26.871244, -89.57082)
+position = Vector2(174.66312, -159.73456)
 scale = Vector2(1.0000001, 1.0000001)
-emitting = false
 amount = 12
 texture = SubResource("CanvasTexture_mlhyi")
 lifetime = 2.0
