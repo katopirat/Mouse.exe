@@ -105,3 +105,4 @@ func reset_game():
 		print("game_saved")
 	else:
 		print("Something is wrong cannot save : ",a)
+	load_game()

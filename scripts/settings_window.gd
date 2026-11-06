@@ -33,18 +33,18 @@ func _on_h_slider_value_changed(value: float) -> void:
 
 func _on_button_pressed() -> void:
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Label.visible = true
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.visible = true
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.disabled = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.visible = true
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.disabled = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.visible = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.disabled = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.visible = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.disabled = false
 
 
 func _on_yes_pressed() -> void:
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Label.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.disabled = true
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.disabled = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.visible = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.disabled = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.visible = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.disabled = true
 	await GameState.reset_game()
 	$"../../Player".die()
 
@@ -52,7 +52,7 @@ func _on_yes_pressed() -> void:
 
 func _on_no_pressed() -> void:
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Label.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes.disabled = true
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.visible = false
-	$PanelContainer/VBoxContainer/VBoxContainer/Reset/No.disabled = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.visible = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.disabled = true
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.visible = false
+	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.disabled = true

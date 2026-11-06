@@ -914,21 +914,32 @@ text = "RESET GAME"
 visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 31
-text = "Are you sure you 
-want to reset?"
+text = "Are you sure you want
+to reset?
+This will reset all
+ your progress."
 
-[node name="Yes" type="Button" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset" unique_id=447865643]
-visible = false
-custom_maximum_size = Vector2(70.515, -1)
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset" unique_id=991167100]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Yes" type="Button" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer" unique_id=447865643]
+visible = false
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(212.505, -1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Yes"
 
-[node name="No" type="Button" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset" unique_id=1375025179]
+[node name="No" type="Button" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer" unique_id=1375025179]
 visible = false
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(212.505, -1)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
 disabled = true
 text = "No"
 
@@ -947,7 +958,7 @@ text = "No"
 [connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_button_pressed"]
 [connection signal="value_changed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume/HSlider" to="Settings/Settings_window" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/Button" to="Settings/Settings_window" method="_on_button_pressed"]
-[connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/Yes" to="Settings/Settings_window" method="_on_yes_pressed"]
-[connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/No" to="Settings/Settings_window" method="_on_no_pressed"]
+[connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes" to="Settings/Settings_window" method="_on_yes_pressed"]
+[connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No" to="Settings/Settings_window" method="_on_no_pressed"]
 
 [editable path="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]
