@@ -76,3 +76,9 @@ func _process(delta: float) -> void:
 			play_track(current_track_index)
 		else:
 			audio_player.stop()
+func set_master_volume(percentage: float) -> void:
+	percentage = clamp(percentage, 0.0, 100.0)
+	var linear_value: float = percentage / 100.0
+	var volume_db: float = linear_to_db(linear_value)
+	var master_bus_idx = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(master_bus_idx, volume_db)
