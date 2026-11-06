@@ -26,7 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="22_cusfm"]
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="23_hy7fl"]
 [ext_resource type="Script" uid="uid://wd860liu53a8" path="res://scripts/cable.gd" id="24_c137b"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="26_lry44"]
 [ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="27_4uoi6"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="27_rxyfj"]
 [ext_resource type="PackedScene" uid="uid://bl7vji8cusp7n" path="res://scenes/props/pencil.tscn" id="28_2jv7e"]
 [ext_resource type="Texture2D" uid="uid://dxpknr328en3c" path="res://assets/images/book.png" id="28_4uoi6"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="28_lvqnx"]
@@ -548,6 +550,44 @@ stream = ExtResource("23_hy7fl")
 volume_db = -16.845
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Monitor_2" unique_id=101923228]
+
+[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=372665286]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("26_lry44")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=566669899]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("27_rxyfj")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=449162395]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1540939513]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=161089659]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="CableEnd" type="Node2D" parent="Node2D/Player" unique_id=1752776108]
 unique_name_in_owner = true

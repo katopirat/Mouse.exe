@@ -28,7 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="20_wjk4y"]
 [ext_resource type="PackedScene" uid="uid://bwpr4j8cclbfq" path="res://scenes/ad_1.tscn" id="23_k8idr"]
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="23_oggk4"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="28_ga27j"]
 [ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="28_tbml5"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="29_sqh6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7360d"]
 size = Vector2(68, 107)
@@ -748,6 +750,44 @@ volume_db = -16.845
 [node name="ad" parent="Node2D/Player/Monitor_2" unique_id=1511771645 instance=ExtResource("23_k8idr")]
 position = Vector2(-0.99999607, -18)
 scale = Vector2(1.4775579, 1.5641149)
+
+[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=267326388]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("28_ga27j")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=396997710]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("29_sqh6y")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=228345018]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=2143024354]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=667407502]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Achievements" parent="Node2D/Player" unique_id=1807818859 instance=ExtResource("28_tbml5")]
 position = Vector2(-585, -315)
