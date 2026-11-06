@@ -94,4 +94,14 @@ func load_game():
 	AchievementState.completed = config.get_value("data","achievements",[])
 	for key in config.get_value("data","best_times",{}):
 		best_times[int(key)] =  config.get_value("data","best_times",{})[key]
-	
+func reset_game():
+	var config = ConfigFile.new()
+	config.set_value("data", "done", [])
+	config.set_value("data", "achievements", [])
+	config.set_value("data", "best_times", {}) #slovnik
+	config.set_value("data","unlocked",1)
+	var a = config.save("user://maus_goddots")
+	if a == OK:
+		print("game_saved")
+	else:
+		print("Something is wrong cannot save : ",a)
