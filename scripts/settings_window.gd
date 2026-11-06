@@ -12,7 +12,8 @@ func show_window():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	
-
+func _ready() -> void:
+	visible = false
 	
 
 
@@ -24,4 +25,5 @@ func _on_texture_button_button_down() -> void:
 
 
 func _on_h_slider_value_changed(value: float) -> void:
-	$PanelContainer/VBoxContainer/VBoxContainer/Volume/Label2.text = str(value)
+	$PanelContainer/VBoxContainer/VBoxContainer/Volume/Label2.text = str(int(value))
+	print($PanelContainer/VBoxContainer/VBoxContainer/Volume/Label2.text)

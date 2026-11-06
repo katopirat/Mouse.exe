@@ -34,16 +34,17 @@ func _on_player_moved_mouse(dir: Variant) -> void:
 
 
 func _physics_process(delta):
-	if position != last_pos:
-		var event = InputEventMouseMotion.new()
-		event.position = get_global_transform_with_canvas().origin
-		get_viewport().push_input(event, true)
-		last_pos = position
+	if Global.player_can_move:
+		if position != last_pos:
+			var event = InputEventMouseMotion.new()
+			event.position = get_global_transform_with_canvas().origin
+			get_viewport().push_input(event, true)
+			last_pos = position
 
-	if Input.is_action_just_pressed("click"):
-		click(true)
-	if Input.is_action_just_released("click"):
-		click(false)
+		if Input.is_action_just_pressed("click"):
+			click(true)
+		if Input.is_action_just_released("click"):
+			click(false)
 
 func click(pressed):
 	

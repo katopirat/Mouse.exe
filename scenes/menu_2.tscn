@@ -696,6 +696,9 @@ position = Vector2(961, 45)
 rotation = -1.5644786
 table_tilemap = NodePath("../Table/TileMap")
 
+[node name="ESC" parent="Player" index="6" unique_id=210250306]
+visible = false
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=1986040399]
 libraries/ = SubResource("AnimationLibrary_gatg3")
 autoplay = &"new_animation"
@@ -826,7 +829,6 @@ layer = 0
 
 [node name="Settings_window" type="Control" parent="Settings" unique_id=1920176410]
 unique_name_in_owner = true
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -885,15 +887,21 @@ theme_override_font_sizes/font_size = 64
 text = "Volume"
 
 [node name="HSlider" type="HSlider" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume" unique_id=824594333]
-custom_maximum_size = Vector2(181.93, -1)
+custom_maximum_size = Vector2(162.205, -1)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
 offset_transform_enabled = true
+offset_transform_position = Vector2(0, -8.64)
+offset_transform_visual_only = false
+value = 70.0
+rounded = true
 
 [node name="Label2" type="Label" parent="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume" unique_id=1299016799]
 layout_mode = 2
-text = "0
-"
+theme_override_font_sizes/font_size = 31
+text = "0"
+vertical_alignment = 1
 
 [node name="Checkgnuscarlson" type="Sprite2D" parent="." unique_id=519115810]
 position = Vector2(893, 151)
@@ -914,4 +922,5 @@ texture = ExtResource("26_decbu")
 [connection signal="pressed" from="Settings/Settings_window/PanelContainer/VBoxContainer/HBoxContainer/PanelContainer/TextureButton" to="Settings/Settings_window" method="_on_button_pressed"]
 [connection signal="value_changed" from="Settings/Settings_window/PanelContainer/VBoxContainer/VBoxContainer/Volume/HSlider" to="Settings/Settings_window" method="_on_h_slider_value_changed"]
 
+[editable path="Player"]
 [editable path="Achivements/Achievements_window/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/AchievementPanel"]

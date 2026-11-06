@@ -91,6 +91,7 @@ func _physics_process(delta: float) -> void:
 					shader_animation.play("close_screen")
 					await shader_animation.animation_finished
 				emit_signal("animation_finished")
+		update_texture()
 		return
 
 	var target_tilt = 0.0
