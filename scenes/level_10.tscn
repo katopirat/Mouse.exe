@@ -409,6 +409,7 @@ scale = Vector2(1.5703857, 1.5703857)
 texture = ExtResource("12_fgiyy")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=2061124831]
+z_index = 2
 position = Vector2(207.00002, 203)
 scale = Vector2(0.36247355, 0.36247358)
 script = ExtResource("12_5sae1")

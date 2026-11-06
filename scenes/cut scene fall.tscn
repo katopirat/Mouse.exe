@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bae3xki58phli" path="res://scripts/dialog_window.gd" id="8_nvylm"]
 [ext_resource type="Texture2D" uid="uid://45n1c50wwxh0" path="res://assets/images/mouse_stacionary_small.png" id="9_pyw4p"]
 [ext_resource type="Script" uid="uid://fwyc0ue8l2fa" path="res://scenes/camera_2d.gd" id="9_vwg1a"]
+[ext_resource type="Texture2D" uid="uid://dd8d13oneg01u" path="res://assets/images/Myš(scrol).png" id="10_htqdr"]
 [ext_resource type="Texture2D" uid="uid://cmp8n4ir2ugm7" path="res://assets/images/Floorclose.png" id="13_cr2r5"]
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="14_nvylm"]
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="16_g8puj"]
@@ -190,6 +191,14 @@ animations = [{
 "loop": 0,
 "name": &"default",
 "speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_htqdr")
+}],
+"loop": 0,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="Curve" id="Curve_adpup"]
@@ -1093,9 +1102,9 @@ texture = ExtResource("5_40qg6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cutscene intro/Node2D" unique_id=195410509]
 position = Vector2(507, -1122)
-scale = Vector2(2.2, 2.2)
+scale = Vector2(2.06, 2.257)
 sprite_frames = SubResource("SpriteFrames_adpup")
-frame_progress = 1.0
+animation = &"new_animation"
 
 [node name="Camera2D" type="Camera2D" parent="cutscene intro/Node2D/AnimatedSprite2D" unique_id=1620374617]
 position = Vector2(1.9073486e-06, -0.45458984)

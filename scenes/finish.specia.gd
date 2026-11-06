@@ -31,7 +31,6 @@ func level_completed():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print ("you are in finish")
 		Global.player_can_move = false
 		GameState.finish_level((Time.get_ticks_msec() - timer_start) / 1000.0)
 

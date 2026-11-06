@@ -352,7 +352,6 @@ sprite_frames = SubResource("SpriteFrames_ps1uf")
 offset = Vector2(0.275, -0.19)
 
 [node name="BridgeButton" type="Area2D" parent="Player/monitor_3/Computer/Window" unique_id=1773590027]
-z_index = 1
 position = Vector2(141, 101.999985)
 scale = Vector2(3, 3)
 collision_mask = 2
