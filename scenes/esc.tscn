@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="1_sixpf"]
 [ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="2_htsag"]
 [ext_resource type="Script" uid="uid://pv8naiwco46a" path="res://scenes/button.gd" id="3_j52a2"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="5_sixpf"]
 
 [sub_resource type="Animation" id="Animation_sixpf"]
 tracks/0/type = "value"
@@ -276,6 +277,19 @@ text = "RESUME"
 [node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1922220845]
 layout_mode = 2
 text = "Quit Game"
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer" unique_id=1717896111]
+layout_mode = 2
+theme_type_variation = &"Toast"
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PanelContainer" unique_id=1463164421]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_sixpf")
+theme_override_font_sizes/font_size = 2
+text = "More settings and credits are in the Start menu in the main menu."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="CanvasLayer" method="_on_button_2_pressed"]

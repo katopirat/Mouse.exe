@@ -411,7 +411,7 @@ content_margin_bottom = 9.0
 texture = ExtResource("21_d6yad")
 region_rect = Rect2(1.9278374, 2.0963697, 26.132679, 7.929146)
 
-[node name="Menu_2" type="Node2D" unique_id=659635860]
+[node name="Menu" type="Node2D" unique_id=659635860]
 script = ExtResource("1_d6yad")
 
 [node name="Monitor_1" type="Node2D" parent="." unique_id=831704774]

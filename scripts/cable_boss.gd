@@ -9,7 +9,7 @@ extends Node2D
 @export var cursor_exists: bool = true
 @onready var wrapped_foot: bool = false
 @onready var tight: bool = false
-@onready var touch_points = []
+@onready var touch_points = []  
 var points = []
 var lenght = 0.0
 
