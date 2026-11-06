@@ -44,7 +44,9 @@ offset_top = 192.69547
 offset_right = 413.13
 offset_bottom = 215.69547
 scale = Vector2(0.64897263, 0.64897263)
-text = "Everithing told here is a joke pls dont sue us"
+text = "At least you don´t have to fear Sam
+because your ram is running at 201%
+Everithing told here is a joke pls dont sue us"
 
 [node name="Timer" type="Timer" parent="." unique_id=1364256257]
 wait_time = 7.0
