@@ -29,8 +29,8 @@ func _on_info_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
-
+	%Settings_window.show_window()
+	visible = false
 
 func _on_start_pressed() -> void:
 	visible = !visible
