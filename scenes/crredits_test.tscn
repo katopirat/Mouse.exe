@@ -206,25 +206,8 @@ to GO BACK
 GO ON MOUSE 
 PAD"
 
-[node name="book_open2" parent="level_10/Node2D/Table" unique_id=313195016 instance=ExtResource("4_8k36b")]
-position = Vector2(321, -1345)
-
-[node name="Label" type="Label" parent="level_10/Node2D/Table/book_open2" unique_id=1102190845]
-modulate = Color(0.22702056, 0.45847368, 2.6522467, 1)
-z_index = 1
-offset_left = -191.0
-offset_top = -144.0
-offset_right = -111.0
-offset_bottom = -119.0
-scale = Vector2(2.6399987, 2.6399987)
-offset_transform_enabled = true
-theme = ExtResource("5_6oqru")
-text = "Mouse Game
-Made by
-God Dots"
-
 [node name="book_open3" parent="level_10/Node2D/Table" unique_id=1900286991 instance=ExtResource("4_8k36b")]
-position = Vector2(321, -396)
+position = Vector2(111, -396)
 
 [node name="Label" type="Label" parent="level_10/Node2D/Table/book_open3" unique_id=1244169151]
 modulate = Color(0.22702056, 0.45847368, 2.6522467, 1)
@@ -236,44 +219,10 @@ offset_bottom = -121.0
 scale = Vector2(2.6399987, 2.6399987)
 offset_transform_enabled = true
 theme = ExtResource("5_6oqru")
-text = "tHE MOUSE GAME 
-IS OUR FIRST
-GoDot
-GROUP PROJECT       "
-
-[node name="book_open4" parent="level_10/Node2D/Table" unique_id=1899269142 instance=ExtResource("4_8k36b")]
-position = Vector2(321, -707)
-
-[node name="Label" type="Label" parent="level_10/Node2D/Table/book_open4" unique_id=1977084522]
-modulate = Color(0.22702056, 0.45847368, 2.6522467, 1)
-z_index = 1
-offset_left = -192.0
-offset_top = -459.0
-offset_right = -112.0
-offset_bottom = -434.0
-scale = Vector2(2.6399987, 2.6399987)
-offset_transform_enabled = true
-theme = ExtResource("5_6oqru")
-text = "Mouse Game
-Made by
-God Dots"
-
-[node name="book_open5" parent="level_10/Node2D/Table" unique_id=518280250 instance=ExtResource("4_8k36b")]
-position = Vector2(321, -1022)
-
-[node name="Label" type="Label" parent="level_10/Node2D/Table/book_open5" unique_id=972913609]
-modulate = Color(0.22702056, 0.45847368, 2.6522467, 1)
-z_index = 1
-offset_left = -189.0
-offset_top = 171.0
-offset_right = -109.0
-offset_bottom = 196.0
-scale = Vector2(2.6399987, 2.6399987)
-offset_transform_enabled = true
-theme = ExtResource("5_6oqru")
-text = "Mouse Game
-Made by
-God Dots"
+text = "tHE MOUSE GAME            Programers:
+IS OUR FIRST                   Vacias
+GoDot                            skaut
+GROUP PROJECT                 Tobias"
 
 [node name="Finish" parent="level_10/Node2D" unique_id=1389901689 instance=ExtResource("4_omeyd")]
 z_index = -1
