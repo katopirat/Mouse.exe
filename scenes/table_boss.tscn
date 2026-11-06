@@ -98,6 +98,13 @@ _data = {
 &"level namnam": SubResource("Animation_bndlm")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0uad"]
+shader = ExtResource("19_q57ll")
+shader_parameter/speed = 0.3
+shader_parameter/frequency = 1.0
+shader_parameter/angle = 10.0
+shader_parameter/rainbow_strength = 0.5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ulx"]
 size = Vector2(420, 22.25)
 
@@ -134,13 +141,6 @@ animations = [{
 "name": &"hovered",
 "speed": 5.0
 }]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0uad"]
-shader = ExtResource("19_q57ll")
-shader_parameter/speed = 0.3
-shader_parameter/frequency = 1.0
-shader_parameter/angle = 10.0
-shader_parameter/rainbow_strength = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
 size = Vector2(48, 13.542175)
@@ -383,6 +383,15 @@ layer_0/tile_data = PackedInt32Array(-131075, 196609, 1, -131074, 196609, 0, -13
 position = Vector2(2228, 101)
 scale = Vector2(0.96, 0.96)
 script = ExtResource("7_6w2cs")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/Table/finish" unique_id=1134641788]
+material = SubResource("ShaderMaterial_t0uad")
+offset_left = -228.12495
+offset_top = -150.0
+offset_right = -90.31851
+offset_bottom = -54.0
+scale = Vector2(3.041668, 3.041668)
+texture = ExtResource("19_501yg")
 
 [node name="Player" parent="Node2D" unique_id=1646158579 node_paths=PackedStringArray("table_tilemap") groups=["player"] instance=ExtResource("5_cbu0x")]
 position = Vector2(171, 110)
