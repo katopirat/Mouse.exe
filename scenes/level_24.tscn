@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://u87u1hg1j36j" path="res://scenes/level_24_after_boss.gd" id="1_j4kn2"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="2_b3uhy"]
 [ext_resource type="Script" uid="uid://gg2ahetw4w2k" path="res://scripts/player_ground.gd" id="3_4valo"]
+[ext_resource type="Shader" uid="uid://g8fapfdy8ydc" path="res://scenes/rainbow.gdshader" id="7_nnos0"]
+[ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="8_i6wq7"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="10_28tps"]
 [ext_resource type="Script" uid="uid://dr8mrp5v0ot8c" path="res://scenes/ant_bad_16.gd" id="11_dlja2"]
 [ext_resource type="PackedScene" uid="uid://fkc6a31x4ybv" path="res://scenes/props/big_book.tscn" id="11_v7hvt"]
@@ -30,6 +32,13 @@
 [ext_resource type="Texture2D" uid="uid://dcuxqcejcesnv" path="res://assets/images/floor2.png" id="31_tpck6"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="32_hg4mp"]
 [ext_resource type="Script" uid="uid://b2ju237oyi565" path="res://scenes/area_2d.gd" id="38_ym738"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vicqt"]
+shader = ExtResource("7_nnos0")
+shader_parameter/speed = 0.3
+shader_parameter/frequency = 1.0
+shader_parameter/angle = 10.0
+shader_parameter/rainbow_strength = 0.5
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbhvf"]
 texture = ExtResource("30_j1v8l")
@@ -230,6 +239,15 @@ position_smoothing_speed = 4.5
 z_index = -15
 position = Vector2(-633, -6573)
 next_scene = ExtResource("25_ibv1l")
+
+[node name="TextureRect" type="TextureRect" parent="Level21/Finish" unique_id=852797046]
+material = SubResource("ShaderMaterial_vicqt")
+offset_left = -228.12495
+offset_top = -150.0
+offset_right = -90.31851
+offset_bottom = -54.0
+scale = Vector2(3.041668, 3.041668)
+texture = ExtResource("8_i6wq7")
 
 [node name="CanvasLayer" parent="Level21" unique_id=1370691632 instance=ExtResource("29_lr7w8")]
 
