@@ -571,7 +571,7 @@ position = Vector2(0, 23.666668)
 default_color = Color(0.4556045, 0.25523007, 0.21969101, 1)
 
 [node name="TailStart" type="Node2D" parent="MyšReal" unique_id=738527583]
-position = Vector2(1.0172526e-05, 13.333332)
+position = Vector2(1.0172526e-05, 13)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2109267178]
 root_node = NodePath("../Node2D/Ground/TileMap")

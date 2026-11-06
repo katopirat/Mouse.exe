@@ -3,8 +3,8 @@ extends Sprite2D
 @onready var line = $Tail
 @onready var start_node = $TailStart  
 
-@export var max_length = 170
-@export var spacing = 6.0
+@export var max_length = 150
+@export var spacing = 5.0
 
 func _ready() -> void:
 	line.top_level = true
