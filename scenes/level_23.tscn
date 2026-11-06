@@ -36,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="29_3lk6p"]
 [ext_resource type="PackedScene" uid="uid://uott3pkhyso3" path="res://scenes/props/disapearing_props_ground/disapearing_placeholder.tscn" id="30_chljo"]
 [ext_resource type="Script" uid="uid://c2b8x1uk0iv1u" path="res://scripts/cookie.gd" id="31_kiae0"]
+[ext_resource type="Shader" uid="uid://g8fapfdy8ydc" path="res://scenes/rainbow.gdshader" id="33_mdvuu"]
+[ext_resource type="Texture2D" uid="uid://cx1nrlakqohdn" path="res://assets/images/prop_mousepad_128x96.png" id="34_w3d0a"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="35_2hg7u"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="36_akowo"]
 [ext_resource type="PackedScene" uid="uid://vtwt12s2ddj7" path="res://scenes/props/orange_dos.tscn" id="39_usum5"]
@@ -226,6 +228,13 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_jmik4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8fccs"]
+shader = ExtResource("33_mdvuu")
+shader_parameter/speed = 0.3
+shader_parameter/frequency = 1.0
+shader_parameter/angle = 10.0
+shader_parameter/rainbow_strength = 0.5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdvuu"]
 radius = 7.6688004
@@ -572,6 +581,15 @@ layer_0/tile_data = PackedInt32Array(-393221, 65536, 2, -458757, 196608, 3, -524
 z_index = -1
 position = Vector2(-179, -1048)
 next_scene = ExtResource("26_x7fx0")
+
+[node name="TextureRect" type="TextureRect" parent="Finish" unique_id=99603302]
+material = SubResource("ShaderMaterial_8fccs")
+offset_left = -228.12495
+offset_top = -150.0
+offset_right = -90.31851
+offset_bottom = -54.0
+scale = Vector2(3.041668, 3.041668)
+texture = ExtResource("34_w3d0a")
 
 [node name="DisapearingPlaceholder" parent="." unique_id=1135296595 instance=ExtResource("30_chljo")]
 position = Vector2(-183, -745)
