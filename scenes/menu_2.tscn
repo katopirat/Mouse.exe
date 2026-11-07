@@ -722,7 +722,7 @@ script = null
 position = Vector2(1962.0002, 44.000015)
 
 [node name="cup2" parent="." unique_id=428504929 instance=ExtResource("19_osjw0")]
-position = Vector2(10.000004, -136.99998)
+position = Vector2(602, -163)
 
 [node name="Table" type="Node2D" parent="." unique_id=500556616]
 
