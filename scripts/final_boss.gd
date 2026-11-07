@@ -100,3 +100,11 @@ func fast_dup(feet):
 	await get_tree().create_timer(foot_on_ground_time).timeout
 	foot_texture.visible = false
 	$Foot/CollisionShape2D.disabled = true
+
+func intro():
+	var t = create_tween()
+	
+	t.set_trans(Tween.TRANS_SINE)
+	t.set_ease(Tween.EASE_IN_OUT)
+	t.tween_property(foot, "global_position", player.global_position + Vector2(120, 501), 2)
+	$"../CanvasLayer/DialogWindow".text = ""

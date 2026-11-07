@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="4_d3kp8"]
 [ext_resource type="Script" uid="uid://c6u1uf782qip0" path="res://scripts/cable_boss.gd" id="5_aml70"]
 [ext_resource type="Texture2D" uid="uid://cqwftiofmvwve" path="res://assets/images/Pc black(1).png" id="5_d3kp8"]
+[ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="10_1yeru"]
 [ext_resource type="Script" uid="uid://clx6qmr5l0elc" path="res://scripts/final_boss.gd" id="14_7nq4e"]
 [ext_resource type="Texture2D" uid="uid://b2t8anm0e4m4t" path="res://assets/images/flashdisk.png" id="15_7nq4e"]
 [ext_resource type="Shader" uid="uid://c0cxi72bqvgrl" path="res://scenes/one_color.gdshader" id="16_711e6"]
@@ -222,6 +223,14 @@ position = Vector2(22, -2612)
 next_scene = ExtResource("23_anlus")
 
 [node name="CanvasLayer" parent="." unique_id=1370691632 instance=ExtResource("24_bm0gf")]
+
+[node name="DialogWindow" parent="CanvasLayer" unique_id=1276989699 instance=ExtResource("10_1yeru")]
+z_index = -1
+offset_left = 161.0
+offset_top = 517.0
+offset_right = 1033.0
+offset_bottom = 600.0144
+click_to_close = true
 
 [node name="Ground" type="TileMap" parent="." unique_id=2094813463 groups=["table"]]
 z_index = -20
