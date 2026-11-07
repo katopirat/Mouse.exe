@@ -15,19 +15,28 @@ extends Node2D
 @onready var dialog = $"../CanvasLayer/DialogWindow"
 var foot_hp = 3
 var hit_cooldown = false
+@onready var hp_bar = $"../CanvasLayer/ProgressBar"
 
 func _ready() -> void:
+	Global.music_style = "boss"
 	remove_child(foot)
 	await intro()
+	hp_bar.max_value = foot_hp
+	hp_bar.value = foot_hp
+	hp_bar.modulate.a = 0.0
+	hp_bar.visible = true
+	create_tween().tween_property(hp_bar, "modulate:a", 1.0, 0.5)
 	main_loop()
 	
 func wait(time: float):
 	await get_tree().create_timer(time).timeout
 func main_loop():
-	while true:
+	while foot_hp > 0:
 		add_child(foot)
 		for s in range(randi_range(2, 4)):
 			await funkce_ktera_dela_to_ze_noha_dupne_na_mys()
+			if foot_hp <= 0:
+				return
 			await wait(1)
 		remove_child(foot)
 func random_pos():
@@ -130,9 +139,10 @@ func intro():
 	await t.finished
 	camera.shake_intensity = 5
 
-	await say("res://assets/images/hand_icon.png","20 MOUSEPADS? ON MY CARD!")
+	await say("res://assets/images/hand_icon.png", "20 MOUSEPADS? ON MY CARD!")
 	await say("res://assets/images/mouse_stacionary_small.png", "They were on sale.")
-	await say("res://assets/images/foot_icon.png", "HOLD STILL.")
+	await say("res://assets/images/hand_icon.png", "HOLD STILL.")
+	await say("res://assets/images/mouse_stacionary_small.png", "Ok i need to get rid of him i need to run around his foot, wrap the cable and pull it tight.")
 	
 	var t2 = create_tween()
 	t2.tween_property(shadow_texture,"scale",default_size*1.5,0.4)
@@ -149,6 +159,7 @@ func tied():
 		return
 	hit_cooldown = true
 	foot_hp -= 1
+	create_tween().tween_property(hp_bar, "value", foot_hp, 0.3)
 	camera.shake_intensity = 25
 	blood(foot.global_position, 80, 1.0)
 	if foot_hp <= 0:
@@ -158,12 +169,19 @@ func tied():
 	hit_cooldown = false
 	
 func die_foot():
+	
 	$Foot/CollisionShape2D.disabled = true
 	for i in 8:
 		blood(foot.global_position + Vector2(randf_range(-200, 200), randf_range(-200, 200)), 150, 1.5)
 		camera.shake_intensity = 40
 		await  wait(0.15)
 	foot.visible = false
+	hp_bar.visible = false
+	Global.player_can_move = false
+	await say("res://assets/images/hand_icon.png", "...FINE. KEEP THEM.")
+	Global.player_can_move = true
+	$"../Niceson".visible = true
+	
 
 func blood(pos: Vector2, amount: int, size: float):
 	var p = CPUParticles2D.new()

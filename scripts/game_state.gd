@@ -23,10 +23,11 @@ var levels = [
 	{"name": "Micerix", "scene": "res://scenes/level_18.tscn", "music": "chill"},
 	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn", "music": "chill"},
 	{"name": "Chess?", "scene": "res://scenes/level_20.tscn", "music": "chill"},
-	{"name": "Out of Hand", "scene": "res://scenes/table_boss.tscn", "music": "handboss"},
+	{"name": "The Hand...", "scene": "res://scenes/table_boss.tscn", "music": "handboss"},
 	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn", "music": "dramatic"},
 	{"name": "Just ONE this time", "scene": "res://scenes/level_22.tscn", "music": "dramatic"},
-	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn", "music": "dramatic"}
+	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn", "music": "dramatic"},
+	{"name": "The Foot...","scene:":"res://scenes/final_boss.tscn","music":"boss"}
 ]
 
 var unlocked = 1
