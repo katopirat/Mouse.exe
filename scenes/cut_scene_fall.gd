@@ -5,6 +5,7 @@ extends Node2D
 @onready var ants_anim: AnimationPlayer = $AnimationPlayer2
 
 func _ready() -> void:
+	Global.music_style = "dramatic"
 	await dialog.window_closed
 	ants_anim.play("new_animation")
 	await ants_anim.animation_finished
