@@ -619,7 +619,7 @@ sprite_frames = SubResource("SpriteFrames_37vw7")
 offset = Vector2(0.275, -0.19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/Computer/chess1/XButtonAd" unique_id=640433370]
-position = Vector2(-22.473473, -10.448867)
+position = Vector2(-22.656633, -10.222223)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_jry1k")
 

@@ -700,8 +700,16 @@ animations = [{
 }]
 
 [sub_resource type="Curve" id="Curve_0xf44"]
-_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.5520362, 1), 0.0, 0.0, 0, 0, Vector2(0.9683258, 0.6741574), 2.3911777, 0.0, 0, 0]
+_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.53333336, 0.6344086), 0.0, 0.0, 0, 0, Vector2(0.9683258, 0.6741574), 2.3911777, 0.0, 0, 0]
 point_count = 3
+
+[sub_resource type="Curve" id="Curve_206a3"]
+_limits = [0.0, 2.0, 0.0, 2.0]
+_data = [Vector2(0.011764713, 0.56989247), 0.0, 0.0, 0, 0, Vector2(0.14901963, 0.61290324), 0.0, 0.0, 0, 0, Vector2(0.5176471, 1.4193548), 2.3911777, 0.0, 0, 0, Vector2(0.71372557, 2), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_ner4h"]
+colors = PackedColorArray(0.556953, 0.556953, 0.556953, 1, 0.4509804, 0.4509804, 0.4509804, 0.10980392)
 
 [sub_resource type="Animation" id="Animation_ckgo4"]
 length = 0.001
@@ -825,6 +833,18 @@ tracks/9/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../../AnimatedSprite2D/Left4:emitting")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_o86jq"]
 resource_name = "mouse_cutscene"
@@ -836,7 +856,7 @@ tracks/0/path = NodePath("../../../AnimatedSprite2D/Left3:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(29.133333),
+"times": PackedFloat32Array(27.3),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -949,12 +969,28 @@ tracks/9/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../../AnimatedSprite2D/Left4:emitting")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.26666668, 26.9, 28.2, 33.366665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2lp4q"]
 _data = {
 &"RESET": SubResource("Animation_ckgo4"),
 &"mouse_cutscene": SubResource("Animation_o86jq")
 }
+
+[sub_resource type="Curve" id="Curve_ner4h"]
+_data = [Vector2(0, 0.97752815), 0.0, 0.0, 0, 0, Vector2(0.40000004, 1), 0.0, 0.0, 0, 0, Vector2(0.6745099, 1), -1.5920917, -1.5920917, 0, 0, Vector2(0.97647065, 0.58064514), 0.6327542, 0.0, 0, 0]
+point_count = 4
 
 [node name="end" type="Node2D" unique_id=1093812907]
 
@@ -1025,6 +1061,27 @@ scale_amount_min = 3.0
 scale_amount_max = 4.0
 scale_amount_curve = SubResource("Curve_0xf44")
 color = Color(1, 1, 0.16470589, 1)
+
+[node name="Left4" type="CPUParticles2D" parent="cutscene intro/AnimatedSprite2D" unique_id=1352321510]
+position = Vector2(-63.33334, 24)
+rotation = -2.3202083
+scale = Vector2(0.33333334, 0.33333334)
+amount = 250
+lifetime = 0.65
+speed_scale = 0.3
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, 0)
+spread = 63.13
+gravity = Vector2(-300, -500)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 7.0
+scale_amount_max = 7.0
+scale_amount_curve = SubResource("Curve_206a3")
+color = Color(0.52355444, 0.52355444, 0.52355444, 1)
+color_ramp = SubResource("Gradient_ner4h")
 
 [node name="Camera2D" type="Camera2D" parent="cutscene intro/AnimatedSprite2D" unique_id=1852984364]
 position = Vector2(-69.66667, 15.999756)
@@ -1125,21 +1182,21 @@ color = Color(0.35378626, 0.53171813, 1, 1)
 
 [node name="Left2" type="CPUParticles2D" parent="." unique_id=175888563]
 z_index = 2
-position = Vector2(69, -1329)
+position = Vector2(206, -739)
 rotation = -4.719753
 amount = 2000
-lifetime = 0.74
+lifetime = 0.58
 randomness = 1.0
 emission_shape = 3
 emission_rect_extents = Vector2(700, 1200)
 direction = Vector2(0, 0)
 spread = 90.0
-gravity = Vector2(-400, 5000)
+gravity = Vector2(-800, 5000)
 initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 scale_amount_min = 7.0
 scale_amount_max = 7.0
-scale_amount_curve = SubResource("Curve_0xf44")
+scale_amount_curve = SubResource("Curve_ner4h")
 color = Color(0.35378626, 0.53171813, 1, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=906225156]
