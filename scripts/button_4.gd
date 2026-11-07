@@ -3,8 +3,8 @@ extends Area2D
 var cursor_inside = false
 var is_pressed = false
 
-@onready var sound_player: AudioStreamPlayer = $AudioStreamPlayer
-@onready var button: Button = $Button
+@onready var sound_player = $AudioStreamPlayer
+@onready var button = $Button
 
 signal pressed()
 

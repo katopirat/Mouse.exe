@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://jlwsmyuaumdh" path="res://assets/images/small_mousepad.png" id="25_82jq6"]
 [ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="26_wnpjk"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="27_daeha"]
+[ext_resource type="Script" uid="uid://bk2s8pg8tei3y" path="res://scenes/add_to_cart_button.gd" id="27_tc4gl"]
 [ext_resource type="Texture2D" uid="uid://21nmrltuh32v" path="res://mouse_os/ui/start_button_normal.png" id="28_kr72n"]
 [ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="28_q57ll"]
 [ext_resource type="Texture2D" uid="uid://coa7aby4snajp" path="res://assets/images/hand long.png" id="28_t0uad"]
@@ -98,13 +99,6 @@ _data = {
 &"level namnam": SubResource("Animation_bndlm")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0uad"]
-shader = ExtResource("19_q57ll")
-shader_parameter/speed = 0.3
-shader_parameter/frequency = 1.0
-shader_parameter/angle = 10.0
-shader_parameter/rainbow_strength = 0.5
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ulx"]
 size = Vector2(420, 22.25)
 
@@ -142,6 +136,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0uad"]
+shader = ExtResource("19_q57ll")
+shader_parameter/speed = 0.3
+shader_parameter/frequency = 1.0
+shader_parameter/angle = 10.0
+shader_parameter/rainbow_strength = 0.5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v8a5"]
 size = Vector2(48, 13.542175)
 
@@ -165,6 +166,15 @@ texture_margin_left = 3.0
 texture_margin_top = 3.0
 texture_margin_right = 3.0
 texture_margin_bottom = 3.0
+
+[sub_resource type="Curve" id="Curve_w8sno"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0.19270833, 0.8089888), 0.0, 0.0, 0, 0, Vector2(0.375, 0.51685405), 0.3081861, 0.3081861, 0, 0, Vector2(0.5833333, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_3v8a5"]
+offsets = PackedFloat32Array(0.40361446, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cnh78"]
 texture = ExtResource("30_q7xoe")
@@ -385,7 +395,6 @@ scale = Vector2(0.96, 0.96)
 script = ExtResource("7_6w2cs")
 
 [node name="TextureRect" type="TextureRect" parent="Node2D/Table/finish" unique_id=1134641788]
-material = SubResource("ShaderMaterial_t0uad")
 offset_left = -228.12495
 offset_top = -150.0
 offset_right = -90.31851
@@ -586,6 +595,26 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_q57ll")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_q57ll")
 theme_override_styles/focus = SubResource("StyleBoxTexture_q57ll")
 text = "ADD TO CART"
+script = ExtResource("27_tc4gl")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Add_to_cart/Button" unique_id=2110318445]
+position = Vector2(24.00663, 6.7710996)
+scale = Vector2(1.35422, 1.3542198)
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(18.1, 6.53)
+direction = Vector2(0, -1)
+initial_velocity_min = 10.0
+initial_velocity_max = 100.0
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_w8sno")
+color = Color(0.10641036, 0.53160715, 0, 1)
+color_ramp = SubResource("Gradient_3v8a5")
 
 [node name="Label2" type="Label" parent="Node2D/Player/Monitor_2/Computer/Window/Control/PanelContainer/VBoxContainer/PanelContainer/Add_to_cart" unique_id=835461668]
 offset_top = -8.617758

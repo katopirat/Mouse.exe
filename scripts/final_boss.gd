@@ -61,7 +61,7 @@ func funkce_ktera_dela_to_ze_noha_dupne_na_mys():
 			a.die()
 		print(a.name)
 	$Foot/CollisionShape2D.disabled = false
-					
+		
 	await get_tree().create_timer(foot_on_ground_time).timeout
 	foot_texture.visible = false
 	$Foot/CollisionShape2D.disabled = true
