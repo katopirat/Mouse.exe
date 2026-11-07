@@ -187,6 +187,7 @@ func die():
 		shader_animation.play("close_screen")
 		await shader_animation.animation_finished
 	if is_inside_tree() and get_tree():
+		print("r")
 		get_tree().reload_current_scene()
 
 func knockback(i):

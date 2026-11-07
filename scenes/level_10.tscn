@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://bsdgui2n38mw4" path="res://assets/images/button-re.png" id="20_jhdh4"]
 [ext_resource type="Texture2D" uid="uid://ctu28rcac6ocy" path="res://assets/images/desk_tileset_32 (1).png" id="21_cronh"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="21_rap3s"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="23_jgarw"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="24_guwt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6cb"]
 size = Vector2(68, 107)
@@ -407,6 +409,7 @@ scale = Vector2(1.5703857, 1.5703857)
 texture = ExtResource("12_fgiyy")
 
 [node name="Window2" type="Node2D" parent="Node2D/Player/Monitor_2/Computer" unique_id=2061124831]
+z_index = 2
 position = Vector2(207.00002, 203)
 scale = Vector2(0.36247355, 0.36247358)
 script = ExtResource("12_5sae1")
@@ -468,6 +471,45 @@ stream = ExtResource("19_uv3yh")
 volume_db = -16.845
 
 [node name="level namnam" type="CanvasLayer" parent="Node2D/Player/Monitor_2/Computer" unique_id=139958229]
+
+[node name="Os" type="Control" parent="Node2D/Player/Monitor_2" unique_id=1593272672]
+z_index = 21
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 22.0
+offset_right = 241.54546
+offset_bottom = 135.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("23_jgarw")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os" unique_id=256235866]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("24_guwt3")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer" unique_id=1486281209]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2" unique_id=1083504604]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Monitor_2/Os/PanelContainer/HBoxContainer2/Panel" unique_id=1555217993]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=69661235]
 scroll_scale = Vector2(0.7, 0.7)

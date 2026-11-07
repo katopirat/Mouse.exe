@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://2njusuk01tr1" path="res://assets/images/chess/king white.png" id="9_r370t"]
 [ext_resource type="Texture2D" uid="uid://c2hkp3s7oj8xw" path="res://assets/images/chess/horse white.png" id="10_e7iwr"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="11_s2tdk"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="12_b6u0r"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="12_e063c"]
 [ext_resource type="AudioStream" uid="uid://ditkvkn3hftsa" path="res://assets/soundeffects/ad_sound2.wav" id="13_jwm2x"]
+[ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="13_wavj1"]
 [ext_resource type="PackedScene" uid="uid://c4q3wkp472773" path="res://scenes/finish.tscn" id="14_smtl8"]
 [ext_resource type="PackedScene" uid="uid://drqa4hynqm7te" path="res://scenes/level_11.tscn" id="15_8okqi"]
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="16_il00u"]
@@ -314,6 +316,43 @@ offset_right = 729.2136
 offset_bottom = -3715.0
 texture = ExtResource("18_2q6vw")
 metadata/_edit_use_anchors_ = true
+
+[node name="Os" type="Control" parent="Node2D/Player/Computer/MonitorBorder" unique_id=1483809877]
+anchors_preset = 0
+offset_left = 37.0
+offset_top = 27.0
+offset_right = 231.54546
+offset_bottom = 140.18182
+scale = Vector2(2.2, 2.2)
+theme = ExtResource("12_b6u0r")
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D/Player/Computer/MonitorBorder/Os" unique_id=378278594]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.272736
+offset_top = -14.545464
+offset_right = 95.45454
+offset_bottom = 0.45453644
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("13_wavj1")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/Player/Computer/MonitorBorder/Os/PanelContainer" unique_id=1014179892]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="Node2D/Player/Computer/MonitorBorder/Os/PanelContainer/HBoxContainer2" unique_id=996960965]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"PanelSunken"
+
+[node name="Time" type="Label" parent="Node2D/Player/Computer/MonitorBorder/Os/PanelContainer/HBoxContainer2/Panel" unique_id=1740021339]
+unique_name_in_owner = true
+layout_mode = 2
+text = "19:33"
 
 [node name="Cursor" type="CharacterBody2D" parent="Node2D/Player/Computer" unique_id=42973594]
 z_index = 10
