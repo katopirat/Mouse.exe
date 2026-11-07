@@ -33,6 +33,8 @@ func _process(delta: float) -> void:
 
 
 func _on_level_pressed(i):
+	$"../../../CanvasLayer/AnimationTree".play("close_screen")
+	await $"../../../CanvasLayer/AnimationTree".animation_finished
 	if not GameState.go_to_level(i):
 		info.text = "LEVEL " + str(i + 1) + " NOT BUILT YET"
 func _on_button_hover(i):

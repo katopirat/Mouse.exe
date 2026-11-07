@@ -45,6 +45,7 @@ func _on_yes_pressed() -> void:
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/Yes.disabled = true
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.visible = false
 	$PanelContainer/VBoxContainer/VBoxContainer/Reset/VBoxContainer/No.disabled = true
+	GameState.game_pausable = true
 	await GameState.reset_game()
 	$"../../Player".die()
 
