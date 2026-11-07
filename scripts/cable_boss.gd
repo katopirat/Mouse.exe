@@ -48,6 +48,7 @@ func _physics_process(_delta: float) -> void:
 			points[i] = point_nodes[i].to_global(point_locals[i])
 	
 	
+	
 	var space = get_world_2d().direct_space_state
 	var strike = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-1], cable_end.global_position, 4))
 
@@ -150,6 +151,7 @@ func _physics_process(_delta: float) -> void:
 		cable.default_color = stressed_color
 		if wrapped_foot:
 			print("kill")
+			$"../../Boss".tied()
 		if cursor_exists:
 			$"../Monitor_2/Computer/Cursor".speed = 0
 	else:

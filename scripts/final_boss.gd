@@ -12,11 +12,15 @@ extends Node2D
 @onready var foot_drop_time: float = 0.6
 @onready var foot_on_ground_time: float = 7.0
 @onready var folow_player_frames: int = 120
-
+@onready var dialog = $"../CanvasLayer/DialogWindow"
+var foot_hp = 3
+var hit_cooldown = false
 
 func _ready() -> void:
 	remove_child(foot)
+	await intro()
 	main_loop()
+	
 func wait(time: float):
 	await get_tree().create_timer(time).timeout
 func main_loop():
@@ -96,15 +100,89 @@ func fast_dup(feet):
 			a.die()
 		print(a.name)
 	$Foot/CollisionShape2D.disabled = false
-					
+
 	await get_tree().create_timer(foot_on_ground_time).timeout
 	foot_texture.visible = false
 	$Foot/CollisionShape2D.disabled = true
 
-func intro():
-	var t = create_tween()
+func say(icon,line):
+	dialog.text = line
+	dialog.icon = load(icon)
+	dialog.start = true
+	await  dialog.window_closed
 	
-	t.set_trans(Tween.TRANS_SINE)
-	t.set_ease(Tween.EASE_IN_OUT)
-	t.tween_property(foot, "global_position", player.global_position + Vector2(120, 501), 2)
-	$"../CanvasLayer/DialogWindow".text = ""
+func intro():
+	if "foot" in GameState.boss:
+		return
+	Global.player_can_move = false
+	
+	add_child(foot)
+	$Foot/CollisionShape2D.disabled = true
+	foot_texture.visible = false
+	shadow_texture.visible = true
+	shadow_texture.modulate = Color(0.0,0.0,0.0,0.588)
+	shadow_texture.material.set_shader_parameter("color", Color(0.0, 0.0, 0.0, 1.0))
+	shadow_texture.scale = default_size * 0.2
+	foot.global_position = player.global_position
+	
+	var t = create_tween()
+	t.tween_property(shadow_texture,"scale",default_size * 1.2,1.5)
+	await t.finished
+	camera.shake_intensity = 5
+
+	await say("res://assets/images/hand_icon.png","20 MOUSEPADS? ON MY CARD!")
+	await say("res://assets/images/mouse_stacionary_small.png", "They were on sale.")
+	await say("res://assets/images/foot_icon.png", "HOLD STILL.")
+	
+	var t2 = create_tween()
+	t2.tween_property(shadow_texture,"scale",default_size*1.5,0.4)
+	await t2.finished
+	camera.shake_intensity = 10
+	
+	
+	remove_child(foot)
+	GameState.boss.append("foot")
+	Global.player_can_move = true
+
+func tied():
+	if hit_cooldown or foot_hp <= 0 or $Foot/CollisionShape2D.disabled:
+		return
+	hit_cooldown = true
+	foot_hp -= 1
+	camera.shake_intensity = 25
+	blood(foot.global_position, 80, 1.0)
+	if foot_hp <= 0:
+		die_foot()
+		return
+	await wait(1.5)
+	hit_cooldown = false
+	
+func die_foot():
+	$Foot/CollisionShape2D.disabled = true
+	for i in 8:
+		blood(foot.global_position + Vector2(randf_range(-200, 200), randf_range(-200, 200)), 150, 1.5)
+		camera.shake_intensity = 40
+		await  wait(0.15)
+	foot.visible = false
+
+func blood(pos: Vector2, amount: int, size: float):
+	var p = CPUParticles2D.new()
+	add_child(p)
+	p.global_position = pos
+	p.z_index = 20
+	p.one_shot = true
+	p.explosiveness = 1.0
+	p.amount = amount
+	p.lifetime = 1.5
+	p.direction = Vector2(0, -1)
+	p.spread = 180
+	p.initial_velocity_min = 300 * size
+	p.initial_velocity_max = 1200 * size
+	p.gravity = Vector2(0, 1500)
+	p.scale_amount_min = 4 * size
+	p.scale_amount_max = 14 * size
+	p.color = Color(0.7, 0.0, 0.0)
+	p.emitting = true
+	get_tree().create_timer(3.0).timeout.connect(p.queue_free)
+	
+	

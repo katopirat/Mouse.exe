@@ -1175,6 +1175,7 @@ script = ExtResource("6_6ucdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Table/emo" unique_id=1202584594]
 z_index = 39
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_caqqn")
 autoplay = "default"
 speed_scale = 100.0

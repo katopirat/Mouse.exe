@@ -230,6 +230,7 @@ offset_left = 161.0
 offset_top = 517.0
 offset_right = 1033.0
 offset_bottom = 600.0144
+start = false
 click_to_close = true
 
 [node name="Ground" type="TileMap" parent="." unique_id=2094813463 groups=["table"]]
@@ -296,6 +297,14 @@ position = Vector2(-853, -172)
 
 [node name="BottomRight" type="Marker2D" parent="Boss" unique_id=1329851558]
 position = Vector2(674, 182)
+
+[node name="Blood" type="CPUParticles2D" parent="Boss" unique_id=381132170]
+emitting = false
+amount = 80
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
 
 [node name="cup" type="Node2D" parent="." unique_id=1678283620]
 position = Vector2(-182, -108.000046)
