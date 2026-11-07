@@ -1177,6 +1177,7 @@ script = ExtResource("6_6ucdd")
 z_index = 39
 sprite_frames = SubResource("SpriteFrames_caqqn")
 autoplay = "default"
+speed_scale = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Table/emo" unique_id=1765292427]
 position = Vector2(-0.25, -2)
