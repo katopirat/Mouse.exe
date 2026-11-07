@@ -156,19 +156,19 @@ bounce = 0.05
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qqvdv"]
 height = 50.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j4kn2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8rv1"]
 atlas = ExtResource("15_dlja2")
 region = Rect2(0, 0, 21, 21)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tu6qq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw8mm"]
 atlas = ExtResource("15_dlja2")
 region = Rect2(22, 0, 21, 21)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnos0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hm4vw"]
 atlas = ExtResource("15_dlja2")
 region = Rect2(0, 22, 21, 21)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6wq7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjcvt"]
 atlas = ExtResource("15_dlja2")
 region = Rect2(22, 22, 21, 21)
 
@@ -181,16 +181,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j4kn2")
+"texture": SubResource("AtlasTexture_x8rv1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tu6qq")
+"texture": SubResource("AtlasTexture_qw8mm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nnos0")
+"texture": SubResource("AtlasTexture_hm4vw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i6wq7")
+"texture": SubResource("AtlasTexture_hjcvt")
 }],
 "loop": 1,
 "name": &"new_animation",
