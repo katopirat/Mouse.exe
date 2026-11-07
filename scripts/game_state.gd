@@ -2,31 +2,31 @@ extends Node
 @onready var menu: PackedScene = preload("res://scenes/menu_2.tscn")
 var boss = []
 var levels = [ 
-	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn"},
-	{"name": "The Button", "scene": "res://scenes/level_1.tscn"},
-	{"name": "Ads", "scene": "res://scenes/level_2.tscn"},
-	{"name": "Tutorial 2.0", "scene": "res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn"},
-	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn"},
-	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn"},
-	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn"},
-	{"name": "Second button", "scene": "res://scenes/level_8.tscn"},
-	{"name": "Sensitivity too high", "scene": "res://scenes/level_9.tscn"},
-	{"name": "Magic table", "scene": "res://scenes/level_10.tscn"},
-	{"name": "Magic mice", "scene": "res://scenes/level_11.tscn"},
-	{"name": "Cursor on the run", "scene": "res://scenes/level_13.tscn"},
-	{"name": "The ads are getting real", "scene": "res://scenes/level_14.tscn"},
-	{"name": "The button again?", "scene": "res://scenes/level_15.tscn"},
-	{"name": "Glass on the table?", "scene": "res://scenes/level_16.tscn"},
-	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn"},
-	{"name": "Mice coin", "scene": "res://scenes/level_12.tscn"},
-	{"name": "Who would buy this table?", "scene": "res://scenes/level_5.tscn"},
-	{"name": "Micerix", "scene": "res://scenes/level_18.tscn"},
-	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn"},
-	{"name": "Chess?", "scene": "res://scenes/level_20.tscn"},
-	{"name": "Out of Hand", "scene": "res://scenes/table_boss.tscn"},
-	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn"},
-	{"name": "Just ONE this time", "scene": "res://scenes/level_22.tscn"},
-	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn"}
+	{"name": "Tutorial", "scene": "res://scenes/tutorial.tscn", "music": "chill"},
+	{"name": "The Button", "scene": "res://scenes/level_1.tscn", "music": "chill"},
+	{"name": "Ads", "scene": "res://scenes/level_2.tscn", "music": "chill"},
+	{"name": "Tutorial 2.0", "scene": "res://scenes/tutorial_how_to_move_cursor_but_not_mouse.tscn", "music": "chill"},
+	{"name": "Spaghetti", "scene": "res://scenes/level_3.tscn", "music": "chill"},
+	{"name": "ALT+TAB", "scene": "res://scenes/level_4.tscn", "music": "chill"},
+	{"name": "Dino.exe", "scene": "res://scenes/level_7.tscn", "music": "chill"},
+	{"name": "Second button", "scene": "res://scenes/level_8.tscn", "music": "chill"},
+	{"name": "Sensitivity too high", "scene": "res://scenes/level_9.tscn", "music": "chill"},
+	{"name": "Magic table", "scene": "res://scenes/level_10.tscn", "music": "chill"},
+	{"name": "Magic mice", "scene": "res://scenes/level_11.tscn", "music": "chill"},
+	{"name": "Cursor on the run", "scene": "res://scenes/level_13.tscn", "music": "chill"},
+	{"name": "The ads are getting real", "scene": "res://scenes/level_14.tscn", "music": "chill"},
+	{"name": "The button again?", "scene": "res://scenes/level_15.tscn", "music": "chill"},
+	{"name": "Glass on the table?", "scene": "res://scenes/level_16.tscn", "music": "chill"},
+	{"name": "E.M.O. The Boss", "scene": "res://scenes/level_17.tscn", "music": "boss"},
+	{"name": "Mice coin", "scene": "res://scenes/level_12.tscn", "music": "chill"},
+	{"name": "Who would buy this table?", "scene": "res://scenes/level_5.tscn", "music": "chill"},
+	{"name": "Micerix", "scene": "res://scenes/level_18.tscn", "music": "chill"},
+	{"name": "Buetooth OFF", "scene": "res://scenes/level_19.tscn", "music": "chill"},
+	{"name": "Chess?", "scene": "res://scenes/level_20.tscn", "music": "chill"},
+	{"name": "Out of Hand", "scene": "res://scenes/table_boss.tscn", "music": "handboss"},
+	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn", "music": "dramatic"},
+	{"name": "Just ONE this time", "scene": "res://scenes/level_22.tscn", "music": "dramatic"},
+	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn", "music": "dramatic"}
 ]
 
 var unlocked = 1
@@ -41,12 +41,14 @@ func _ready() -> void:
 
 func go_to_level(i):
 	var path = levels[i]["scene"]
+	Global.music_style = levels[i]["music"]
 	if ResourceLoader.exists(path):
 		get_tree().call_deferred("change_scene_to_file", path)
 		return true
 	return false
 
 func go_to_menu():
+	Global.music_style = "menu"
 	get_tree().call_deferred("change_scene_to_packed", menu)
 
 
