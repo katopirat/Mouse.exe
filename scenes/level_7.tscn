@@ -26,9 +26,12 @@
 [ext_resource type="AudioStream" uid="uid://qbt04f305gmx" path="res://assets/soundeffects/button.wav" id="19_1lha2"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="20_rug4m"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="22_o1v5b"]
+[ext_resource type="Texture2D" uid="uid://dvw3oldu8ub3u" path="res://mouse_os/icons/icon_dino.png" id="22_uthiy"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="23_8c7da"]
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="23_rprl1"]
+[ext_resource type="Texture2D" uid="uid://pnrygrphfr3b" path="res://mouse_os/icons/icon_trash.png" id="24_6pum2"]
 [ext_resource type="PackedScene" uid="uid://b6ptev6bt0603" path="res://scenes/physical_button.tscn" id="25_xkbpl"]
+[ext_resource type="Texture2D" uid="uid://01errnbhqowb" path="res://mouse_os/icons/icon_folder.png" id="31_ykoec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfkaw"]
 size = Vector2(420, 22.25)
@@ -444,6 +447,24 @@ shape = SubResource("RectangleShape2D_3v8a5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Monitor/Computer/Window/DinoGame" unique_id=74548225]
 stream = ExtResource("19_1lha2")
+
+[node name="IconDino" type="Sprite2D" parent="Player/Monitor" unique_id=1543438215]
+z_index = -1
+position = Vector2(63.68559, 77.97141)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("22_uthiy")
+
+[node name="IconFolder" type="Sprite2D" parent="Player/Monitor" unique_id=722288494]
+z_index = -1
+position = Vector2(63.68559, 82.257126)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("31_ykoec")
+
+[node name="IconTrash" type="Sprite2D" parent="Player/Monitor" unique_id=1978532820]
+z_index = -1
+position = Vector2(63.57139, 40.714268)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("24_6pum2")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1427951560]
 scale = Vector2(3, 3)
