@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var completed = []
+@onready var completed 
 
 @onready var achievements: Dictionary[String, String] = {
 	"Button Masher": "Click a button 20 times in one level.",

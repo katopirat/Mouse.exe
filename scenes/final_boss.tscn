@@ -166,6 +166,7 @@ point_count = 3
 colors = PackedColorArray(0.34898522, 0.09899867, 0, 1, 1, 1, 1, 1)
 
 [node name="FinalBoss" type="Node2D" unique_id=1495920735]
+position = Vector2(500, 381)
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_5kll7")]
 

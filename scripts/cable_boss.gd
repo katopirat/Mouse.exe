@@ -84,29 +84,44 @@ func _physics_process(_delta: float) -> void:
 				touch_points = new_touch_points
 				if touch_points.is_empty():
 					wrapped_foot = false
+					
 	#var start_node = point_nodes[0]
 	var start_point: int = 0
 	while start_point < points.size() - 1:
 		var start = points[start_point]
 		var end
-		if start_point == points.size() -2:
+		var is_last = false
+		if start_point == points.size() - 2:
 			end = cable_end.global_position
+			is_last = true
 		else:
-			end = points[start_point+2]
+			end = points[start_point + 2]
 		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(start, end, 4))
-		if strike_before:
+		if strike_before and !is_last:
 			if Input.is_key_pressed(KEY_P):
-				print("point ",start_point+1," " ,strike_before.collider.name)
-			start_point+=1
+				print("bod: ", start_point + 1, " drzi paprsek: ", strike_before.collider.name)
+			start_point += 1
 		else:
 			var triangle := ConvexPolygonShape2D.new()
-			triangle.points = PackedVector2Array([start,points[start_point + 1],end])
+			triangle.points = PackedVector2Array([start, points[start_point + 1], end])
 
 			var query := PhysicsShapeQueryParameters2D.new()
 			query.shape = triangle
 			query.collision_mask = 4
 
 			var hits = space.intersect_shape(query)
+			var own_hit = false
+			for j in hits:
+				if j.collider == point_nodes[start_point + 1]:
+					own_hit = true
+			if !own_hit:
+				points.pop_at(start_point + 1)
+				point_nodes.pop_at(start_point + 1)
+				point_locals.pop_at(start_point + 1)
+			else:
+				if Input.is_key_pressed(KEY_P):
+					print("bod ", start_point + 1, " drzi vlastni teleso: ", point_nodes[start_point + 1].name)
+				start_point += 1
 			
 			#print(hits)
 			#if hits.is_empty():
@@ -116,18 +131,8 @@ func _physics_process(_delta: float) -> void:
 			#else:
 			#	start_point += 1
 		
-			var own_hit = false
-			for j in hits:
-				if j.collider == point_nodes[start_point+1]:
-					own_hit = true
-			if !own_hit:
-				points.pop_at(start_point+1)
-				point_nodes.pop_at(start_point+1)
-				point_locals.pop_at(start_point+1)
-			else:
-				if Input.is_key_pressed(KEY_P):
-					print("point ",start_point + 1 , " ", point_nodes[start_point + 1].name)
-				start_point +=1
+			#var own_hit = false
+
 				
 	lenght = 0.0
 	for i in range(points.size() - 1):
@@ -155,4 +160,4 @@ func _physics_process(_delta: float) -> void:
 	for n in point_nodes:
 		names.append(n.name if n != null else "start")
 	print(names)
-		
+	

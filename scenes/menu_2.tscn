@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="21_mv33c"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="22_d6yad"]
 [ext_resource type="Script" uid="uid://bvikdvqdy44g1" path="res://scripts/settings_window.gd" id="25_ofhq2"]
+[ext_resource type="Texture2D" uid="uid://75or2m8cxlcp" path="res://assets/Logo.png" id="26_decbu"]
+[ext_resource type="Script" uid="uid://cgsvv78cx253h" path="res://scenes/menu_logo.gd" id="27_c4mk8"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="27_mna33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
 size = Vector2(420, 22.25)
@@ -942,6 +945,22 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "No"
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1795092960]
+position = Vector2(292, -300)
+scale = Vector2(6, 6)
+texture = ExtResource("26_decbu")
+script = ExtResource("27_c4mk8")
+
+[node name="Label" type="Label" parent="Logo" unique_id=414447947]
+offset_left = -31.5
+offset_top = 12.5
+offset_right = 58.5
+offset_bottom = 28.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("27_mna33")
+theme_override_font_sizes/font_size = 3
+text = "By Goddots"
 
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_previous" to="Monitor_1/Computer/Os_menu" method="_on_button_previous_pressed"]
 [connection signal="pressed" from="Monitor_1/Computer/Os_menu/Window/VBoxContainer/HBoxContainer2/Button_next" to="Monitor_1/Computer/Os_menu" method="_on_button_next_pressed"]
