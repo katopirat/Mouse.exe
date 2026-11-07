@@ -28,7 +28,7 @@ func calculate_intersect(a: Vector2, b: Vector2, c: Vector2) -> Vector2:
 func _physics_process(delta: float) -> void:
 	if points.is_empty():
 		points.append(cable_start.global_position)
-	
+
 	var space = get_world_2d().direct_space_state
 	var strike = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-1], cable_end.global_position, 4))
 
