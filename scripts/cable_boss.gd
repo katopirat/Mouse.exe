@@ -33,9 +33,20 @@ func _physics_process(_delta: float) -> void:
 		point_nodes.append(null)
 		point_locals.append(points[0])
 	
+	var k = points.size() - 1
+	while k > 0:
+		if !is_instance_valid(point_nodes[k]) or !point_nodes[k].is_visible_in_tree():
+			points.pop_at(k)
+			point_nodes.pop_at(k)
+			point_locals.pop_at(k)
+			wrapped_foot = false
+			touch_points = []
+		k -= 1
+	
 	for i in points.size():
-		if point_nodes[i] != null and is_instance_valid(point_nodes[i]):
+		if point_nodes[i] != null:
 			points[i] = point_nodes[i].to_global(point_locals[i])
+	
 	
 	var space = get_world_2d().direct_space_state
 	var strike = space.intersect_ray(PhysicsRayQueryParameters2D.create(points[-1], cable_end.global_position, 4))
@@ -85,7 +96,7 @@ func _physics_process(_delta: float) -> void:
 		var strike_before = space.intersect_ray(PhysicsRayQueryParameters2D.create(start, end, 4))
 		if strike_before:
 			if Input.is_key_pressed(KEY_P):
-				print("bod: ",start_point+1," drzi paprsek:" ,strike_before.collider.name)
+				print("point ",start_point+1," " ,strike_before.collider.name)
 			start_point+=1
 		else:
 			var triangle := ConvexPolygonShape2D.new()
@@ -115,7 +126,7 @@ func _physics_process(_delta: float) -> void:
 				point_locals.pop_at(start_point+1)
 			else:
 				if Input.is_key_pressed(KEY_P):
-					print("bod",start_point + 1 , "drzi vlastni teleso: ", point_nodes[start_point + 1].name)
+					print("point ",start_point + 1 , " ", point_nodes[start_point + 1].name)
 				start_point +=1
 				
 	lenght = 0.0
