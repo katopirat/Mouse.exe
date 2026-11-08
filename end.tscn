@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="8_206a3"]
 [ext_resource type="PackedScene" uid="uid://c6sptarvgqvxy" path="res://scenes/dialog_window.tscn" id="9_5qnj6"]
 [ext_resource type="Texture2D" uid="uid://bb2iyt1xr5u1i" path="res://assets/images/Chocolate_DarkDark.png" id="10_qhmma"]
-[ext_resource type="Texture2D" uid="uid://db7226o3lf5kq" path="res://logo-god-dots.png" id="10_ypq80"]
 [ext_resource type="AudioStream" uid="uid://blm3oybct47ea" path="res://assets/soundeffects/patricksilvey-weather-lightning-2-464187.mp3" id="13_ner4h"]
 [ext_resource type="AudioStream" uid="uid://bkmtguwyfcw4l" path="res://assets/soundeffects/boons_freak-rain-sound-188158.mp3" id="15_206a3"]
 
@@ -1108,18 +1107,6 @@ offset_bottom = 122.333565
 scale = Vector2(0.7024001, 0.7024001)
 time_before_start = 42.0
 text = "yes it was just a bad dream"
-wait_time = 1.0
-
-[node name="DialogWindow4" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=434814653 instance=ExtResource("9_5qnj6")]
-z_index = 100
-offset_left = -162.33333
-offset_top = 18.333557
-offset_right = 295.0169
-offset_bottom = 69.33356
-scale = Vector2(0.7024001, 0.7024001)
-time_before_start = 47.0
-text = "Thank you for playing MAUS - by god dots"
-icon = ExtResource("10_ypq80")
 wait_time = 1.0
 
 [node name="DialogWindow2" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=1523793949 instance=ExtResource("9_5qnj6")]
