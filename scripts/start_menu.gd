@@ -21,6 +21,8 @@ func _on_restart_pressed() -> void:
 	
 
 func _on_achievements_pressed() -> void:
+	for c in $VBoxContainer.get_children():
+		c.get_child(0).remove_from_group("clickable")
 	%Achievements_window.show_window()
 	visible = false
 
@@ -33,6 +35,8 @@ func _on_info_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
+	for c in $VBoxContainer.get_children():
+		c.get_child(0).remove_from_group("clickable")
 	%Settings_window.show_window()
 	visible = false
 
