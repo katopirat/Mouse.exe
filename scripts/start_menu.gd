@@ -31,7 +31,7 @@ func _on_info_pressed() -> void:
 	$"../../../../CanvasLayer/AnimationTree".play("close_screen")
 	Global.player_can_move = false
 	await $"../../../../CanvasLayer/AnimationTree".animation_finished
-	get_tree().change_scene_to_file("res://scenes/crredits_test.tscn")
+	get_tree().change_scene_to_file("res://end_cut.tscn")
 
 
 func _on_settings_pressed() -> void:

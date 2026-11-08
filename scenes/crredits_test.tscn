@@ -221,10 +221,10 @@ scale = Vector2(2.6399987, 2.6399987)
 offset_transform_enabled = true
 theme = ExtResource("5_6oqru")
 text = "
-tHE MOUSE GAME            Programers:
-IS OUR FIRST                   Vacias
-GoDot                            skaut
-GROUP PROJECT                 Tobias"
+tHE MOUSE GAME            
+IS OUR FIRST                   
+GoDot                       
+GROUP PROJECT              "
 
 [node name="Finish" parent="level_10/Node2D" unique_id=1389901689 instance=ExtResource("4_omeyd")]
 z_index = -1
