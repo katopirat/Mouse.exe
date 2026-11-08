@@ -1,13 +1,11 @@
 extends Node2D
 
 @export var nxt_scn: PackedScene
+@export var finished: bool = false
 func _ready() -> void:
 	Global.music_style = "ending"
 
 
-
-
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	get_tree().change_scene_to_packed(nxt_scn)
-	
+func _process(delta: float) -> void:
+	if finished:
+		get_tree().change_scene_to_packed(nxt_scn)

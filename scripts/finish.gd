@@ -6,7 +6,6 @@ extends Area2D
 @onready var player: CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 
 
-
 signal get_mouse_to_finish(pos: Vector2)
 var level_time = 0
 var timer_start = 0
@@ -24,6 +23,9 @@ func level_completed():
 	print(GameState.levels.size())
 	if level != null and level + 1 < GameState.levels.size():
 		GameState.go_to_level(level + 1)
+	elif level + 1 == GameState.levels.size():
+		get_tree().change_scene_to_file("res://end.tscn")
+		
 	else:
 		print("menu")
 		GameState.go_to_menu()

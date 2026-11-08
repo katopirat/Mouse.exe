@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="21_mv33c"]
 [ext_resource type="Texture2D" uid="uid://d0o66rmy0htt5" path="res://assets/images/red_x.png" id="22_d6yad"]
 [ext_resource type="Script" uid="uid://bvikdvqdy44g1" path="res://scripts/settings_window.gd" id="25_ofhq2"]
+[ext_resource type="Texture2D" uid="uid://gw8mxrpnx4jf" path="res://assets/images/myš real.png" id="26_7lf2g"]
 [ext_resource type="Texture2D" uid="uid://75or2m8cxlcp" path="res://assets/Logo.png" id="26_decbu"]
 [ext_resource type="Script" uid="uid://cgsvv78cx253h" path="res://scenes/menu_logo.gd" id="27_c4mk8"]
 [ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="27_mna33"]
@@ -945,6 +946,18 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "No"
+
+[node name="Mys" type="StaticBody2D" parent="." unique_id=402313298]
+visible = false
+position = Vector2(80, -373)
+rotation = -2.6743953
+
+[node name="Sprite2D" type="Sprite2D" parent="Mys" unique_id=1000259259]
+scale = Vector2(3, 3)
+texture = ExtResource("26_7lf2g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mys" unique_id=629922360]
+polygon = PackedVector2Array(0, -90, 32, -56, 49, -23, 57, 18, 48, 53, 27, 66, 15, 72, -22, 71, -35, 64, -52, 48, -57, 18, -50, -17, -38, -54, -21, -69)
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1795092960]
 position = Vector2(292, -300)
