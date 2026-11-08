@@ -1117,7 +1117,7 @@ offset_right = 295.0169
 offset_bottom = 69.33356
 scale = Vector2(0.7024001, 0.7024001)
 time_before_start = 47.0
-text = "Thank you for playing            MAUS                       by god Dots"
+text = "Thank you for playing MAUS - by god dots"
 icon = ExtResource("10_ypq80")
 wait_time = 1.0
 

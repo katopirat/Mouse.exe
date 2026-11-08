@@ -27,7 +27,8 @@ var levels = [
 	{"name": "Just ONE thousand ants", "scene": "res://scenes/level_24.tscn", "music": "dramatic"},
 	{"name": "Just ONE this time", "scene": "res://scenes/level_22.tscn", "music": "dramatic"},
 	{"name": "Biscuit clicker", "scene": "res://scenes/level_23.tscn", "music": "dramatic"},
-	{"name": "The Foot...", "scene": "res://scenes/final_boss.tscn", "music": "boss"}
+	{"name": "The Foot...", "scene": "res://scenes/final_boss.tscn", "music": "boss"},
+	{"name": "The END", "scene": "res://end.tscn", "music": "chill"}
 ]
 
 var unlocked = 1
