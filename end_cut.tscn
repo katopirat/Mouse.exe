@@ -325,10 +325,22 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../EndCreditsWindow:to_menu")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_o6bq7"]
 resource_name = "cut1"
-length = 7.0
+length = 7.4666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -420,10 +432,22 @@ tracks/7/path = NodePath("../../EndCreditsWindow:start")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1.05),
+"times": PackedFloat32Array(0, 0.76666665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../EndCreditsWindow:to_menu")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.1522503),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_emt62"]
@@ -717,7 +741,7 @@ bbcode_enabled = true
 text = "[color=#a8957d]made by god dots[/color]
 
 [color=#fcfcfc][font_size=20]KATOPIRAT[/font_size][/color]
-[color=#a8957d]code,game design, sound effects[/color]
+[color=#a8957d]code,game design, textures[/color]
 
 [color=#78ff9c][font_size=20]VamaT2[/font_size][/color]
 [color=#a8957d]textures, code, [wave amp=20 freq=4]animation player[/wave][/color]

@@ -378,7 +378,9 @@ position = Vector2(1278, 402)
 scale = Vector2(3, 3)
 texture = ExtResource("22_mlhyi")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Niceson" unique_id=1768104806]
+[node name="StaticBody2D" type="StaticBody2D" parent="Niceson" unique_id=1352237443]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Niceson/StaticBody2D" unique_id=1768104806]
 scale = Vector2(0.33333334, 0.33333334)
 shape = SubResource("CapsuleShape2D_3v8a5")
 
