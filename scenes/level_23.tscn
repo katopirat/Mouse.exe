@@ -623,6 +623,14 @@ shape = SubResource("CapsuleShape2D_iopsf")
 position = Vector2(468.00003, -475.99997)
 rotation = 0.34642518
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=322508031]
+z_index = -999
+offset_left = -2324.0
+offset_top = -1918.0
+offset_right = 1885.0
+offset_bottom = 1782.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="cookie_clicked" from="Cookie" to="Player/Monitor_1/Computer/Window/CookieClicker" method="_on_cookie_cookie_clicked"]
 [connection signal="moved_mouse" from="Player" to="Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Player/Monitor_1/Computer/Window/XButton" to="Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]

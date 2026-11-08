@@ -679,6 +679,14 @@ position = Vector2(440, -453)
 [node name="note thing" parent="." unique_id=234277861 instance=ExtResource("41_ekn6h")]
 position = Vector2(-86, 144)
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1880023648]
+z_index = -999
+offset_left = -2324.0
+offset_top = -1918.0
+offset_right = 2458.0
+offset_bottom = 1782.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="moved_mouse" from="Level21/Player" to="Level21/Player/Monitor_1/Computer/Cursor" method="_on_player_moved_mouse"]
 [connection signal="body_entered" from="Level21/Player/Monitor_1/Computer/Window/XButton" to="Level21/Player/Monitor_1/Computer/Window/XButton" method="_on_body_entered"]
 [connection signal="body_exited" from="Level21/Player/Monitor_1/Computer/Window/XButton" to="Level21/Player/Monitor_1/Computer/Window/XButton" method="_on_body_exited"]
