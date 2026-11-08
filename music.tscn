@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://nx8vs4vpxnrq" path="res://assets/soundtracks/soundtrack10.1.mp3" id="6_hsyie"]
 [ext_resource type="AudioStream" uid="uid://dctss47jyxmui" path="res://assets/soundtracks/soundtrack11.1.mp3" id="7_hsyie"]
 [ext_resource type="AudioStream" uid="uid://bqw6gkutxn1su" path="res://assets/soundtracks/soundtrack9.1.mp3" id="7_u43pr"]
+[ext_resource type="AudioStream" uid="uid://blkrcjnwof2ui" path="res://assets/soundtracks/soundtrack7.1.mp3" id="8_3hkwp"]
 [ext_resource type="AudioStream" uid="uid://ynd6wanwij65" path="res://assets/soundtracks/soundtrack5.1.mp3" id="8_eh16a"]
 [ext_resource type="AudioStream" uid="uid://cny78jgx2i5lq" path="res://assets/soundtracks/menu_loop1.1.mp3" id="9_3hkwp"]
 [ext_resource type="AudioStream" uid="uid://fmdh6f6g88oj" path="res://assets/soundtracks/end_soundtrack.mp3" id="10_hsyie"]
@@ -18,7 +19,7 @@
 [node name="Music" type="Node2D" unique_id=555201196]
 script = ExtResource("1_khlsn")
 chill_playlist = Array[AudioStream]([ExtResource("2_boywh"), ExtResource("4_eh16a"), ExtResource("4_u43pr")])
-dramatic_playlist = Array[AudioStream]([ExtResource("5_3hkwp"), ExtResource("5_bow10"), ExtResource("6_hsyie"), ExtResource("7_hsyie")])
+dramatic_playlist = Array[AudioStream]([ExtResource("5_3hkwp"), ExtResource("5_bow10"), ExtResource("6_hsyie"), ExtResource("7_hsyie"), ExtResource("8_3hkwp")])
 other_playlist = Array[AudioStream]([ExtResource("7_u43pr")])
 ending_playlist = Array[AudioStream]([ExtResource("10_hsyie")])
 menu_playlist = Array[AudioStream]([ExtResource("9_3hkwp")])
