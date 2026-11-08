@@ -707,14 +707,30 @@ texture = ExtResource("22_fqd5x")
 [node name="Label" type="RichTextLabel" parent="Node2D/Node2D/EndCreditsWindow" unique_id=1796932983]
 modulate = Color(0.8784314, 0.58431375, 0.18039216, 1)
 self_modulate = Color(0.7202103, 0.7202103, 0.7202103, 1)
-offset_left = -265.0
+offset_left = -293.0
 offset_top = -24.0
-offset_right = 124.0
-offset_bottom = 7.0
+offset_right = 172.0
+offset_bottom = 612.0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("22_ohsbd")
 bbcode_enabled = true
-text = "By GODDOTS"
+text = "[color=#a8957d]made by god dots[/color]
+
+[color=#fcfcfc][font_size=20]KATOPIRAT[/font_size][/color]
+[color=#a8957d]code,game design, sound effects[/color]
+
+[color=#78ff9c][font_size=20]VamaT2[/font_size][/color]
+[color=#a8957d]textures, code, [wave amp=20 freq=4]animation player[/wave][/color]
+
+[color=#ff9cfc][font_size=20]koukhub[/font_size][/color]
+[color=#a8957d]music, sound effects, code[/color]
+
+[color=#a8957d]Special thanks[/color]
+[color=#78ff9c]Hack Club Third Space[/color]
+
+[shake rate=20 level=8][color=#ff4d3b]No mice were harmed![/color][/shake]
+
+[font_size=40][rainbow freq=0.3 sat=0.6 val=1]Thanks for playing![/rainbow][/font_size]"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
