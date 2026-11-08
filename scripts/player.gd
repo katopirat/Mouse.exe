@@ -43,12 +43,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("godmode") and god_mode and Global.player_can_move:
 		god_mode = false
 		
-	elif Input.is_action_just_pressed("godmode") and not god_mode:
-		god_mode = true
-		Global.player_can_move = false
-		$Node2D.visible = true
-		$Node2D/AnimationPlayer.play("god_mode")
-		
 	elif Input.is_action_just_pressed("godmode") and god_mode and $Node2D/AnimationPlayer.is_playing() and $Node2D/AnimationPlayer.current_animation == "god_mode":
 		$Node2D/AnimationPlayer.play("RESET") 
 		Global.player_can_move = true
