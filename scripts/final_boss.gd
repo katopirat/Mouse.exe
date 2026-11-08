@@ -180,7 +180,8 @@ func die_foot():
 	Global.player_can_move = false
 	await say("res://assets/images/hand_icon.png", "...FINE. KEEP THEM.")
 	Global.player_can_move = true
-	$"../Niceson".visible = true
+	$"../Niceson".visible = false
+	$"../Niceson".queue_free()
 	
 
 func blood(pos: Vector2, amount: int, size: float):
