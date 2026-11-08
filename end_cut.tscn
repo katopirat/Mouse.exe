@@ -328,7 +328,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_o6bq7"]
 resource_name = "cut1"
-length = 3.3
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -375,7 +375,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0.9, 1.0333333, 1.5323334, 1.5666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [1.0, 0.019999999999999574, 0.09999999999999964, 1.0]
+"values": [1.0, 0.004999999999999893, 0.09999999999999964, 1.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -387,7 +387,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0.9, 1.0333333, 1.5323334, 1.5756667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [1.0, 0.02, 0.1, 1.0]
+"values": [1.0, 0.005, 0.1, 1.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -396,10 +396,10 @@ tracks/5/path = NodePath("../../EndCreditsWindow:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.7, 1, 1.5333333, 1.8),
+"times": PackedFloat32Array(0, 0.7, 1, 6.6333337, 6.8333335),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-1804, 4787), Vector2(-1804, 4787), Vector2(-1327, 4787), Vector2(-1327, 4787), Vector2(-1804, 4787)]
+"values": [Vector2(-1804, 4787), Vector2(-1804, 4787), Vector2(-1327, 4787), Vector2(-1327, 4787), Vector2(-1900, 4787)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
