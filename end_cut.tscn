@@ -4,20 +4,20 @@
 [ext_resource type="TileSet" uid="uid://bcyd1mfyjytwc" path="res://tileset.tres" id="4_0q7ap"]
 [ext_resource type="Script" uid="uid://broidns6lqcm1" path="res://emospecial.gd" id="4_o6bq7"]
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="5_2wgm3"]
+[ext_resource type="Script" uid="uid://bilb7h3clon17" path="res://end_credits_window.gd" id="17_fqd5x"]
+[ext_resource type="Theme" uid="uid://dvjq5v2siqfxc" path="res://mouse_os_theme.tres" id="17_fych1"]
 [ext_resource type="Texture2D" uid="uid://75or2m8cxlcp" path="res://assets/Logo.png" id="17_o6e73"]
 [ext_resource type="Texture2D" uid="uid://d3syi8sm0d8b2" path="res://assets/images/myš(stacionary).png" id="18_o6e73"]
 [ext_resource type="Texture2D" uid="uid://db7226o3lf5kq" path="res://logo-god-dots.png" id="18_v6c3n"]
 [ext_resource type="Texture2D" uid="uid://dcr7gfif585wq" path="res://assets/animations/EMO/Emo(walk)2.png" id="21_1mkof"]
-[ext_resource type="Texture2D" uid="uid://drcvosa4tk685" path="res://assets/images/top_bar.png" id="21_fych1"]
 [ext_resource type="Texture2D" uid="uid://dsrhsvsa756k7" path="res://mouse_os/icons/icon_error.png" id="22_fqd5x"]
+[ext_resource type="FontFile" uid="uid://dxctdbs68cp8a" path="res://mouse_os/font/mouse_os_font.fnt" id="22_ohsbd"]
 [ext_resource type="Texture2D" uid="uid://dkeq6l4aauawu" path="res://assets/animations/EMO/Emo(walk)1.png" id="22_pytj1"]
 [ext_resource type="Texture2D" uid="uid://nxt0i7c8338a" path="res://assets/animations/EMO/Emo(fall)1.png" id="23_7xi7k"]
 [ext_resource type="Texture2D" uid="uid://dqm600pq8w4m7" path="res://assets/animations/EMO/Emo(fall)2.png" id="24_wkwnv"]
 [ext_resource type="Texture2D" uid="uid://48o86e5a1838" path="res://assets/animations/EMO/Emo(fall)3.png" id="25_tnqfy"]
-[ext_resource type="Texture2D" uid="uid://c73nwgbx56i85" path="res://assets/images/window.png" id="26_1cupr"]
 [ext_resource type="Texture2D" uid="uid://pa547ew0utev" path="res://assets/animations/EMO/Emo(fall)5.png" id="26_tfmep"]
 [ext_resource type="Texture2D" uid="uid://bdctfvfwrm8fw" path="res://assets/animations/EMO/Emo(fall)6.png" id="27_lpcr8"]
-[ext_resource type="FontFile" uid="uid://c0x4lvh4cdfb2" path="res://os/fonts/MouseOS.ttf" id="27_y6faa"]
 [ext_resource type="Texture2D" uid="uid://bouj6rxq8vott" path="res://assets/animations/EMO/Emo(fall)7.png" id="28_v7mqs"]
 [ext_resource type="Texture2D" uid="uid://c073wrr8xwreb" path="res://assets/animations/mys(breaking)/Myš8.png" id="29_h4c03"]
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="30_e65p7"]
@@ -292,7 +292,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../../Node2D:position")
+tracks/5/path = NodePath("../../EndCreditsWindow:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -312,6 +312,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0.012617188, 0.012617188, 0.012617188, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../EndCreditsWindow:start")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_o6bq7"]
@@ -380,7 +392,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../../Node2D:position")
+tracks/5/path = NodePath("../../EndCreditsWindow:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -400,6 +412,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0.012617188, 0.012617188, 0.012617188, 1), Color(0.011764706, 0.011764706, 0.011764706, 0), Color(0.011764706, 0.011764706, 0.011764706, 0), Color(0.012617188, 0.012617188, 0.012617188, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../EndCreditsWindow:start")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_emt62"]
@@ -651,46 +675,49 @@ sprite_frames = SubResource("SpriteFrames_iopsf")
 [node name="Camera2D" type="Camera2D" parent="Node2D/Node2D" unique_id=1119095295]
 position = Vector2(-1066, 4835)
 
-[node name="Node2D" type="Node2D" parent="Node2D/Node2D" unique_id=1360656147]
+[node name="EndCreditsWindow" type="Node2D" parent="Node2D/Node2D" unique_id=1360656147]
 z_index = 20
 position = Vector2(-1769, 5089)
+script = ExtResource("17_fqd5x")
 
-[node name="Window" type="Sprite2D" parent="Node2D/Node2D/Node2D" unique_id=2057380285]
-position = Vector2(-84, -65.88636)
+[node name="Window" type="PanelContainer" parent="Node2D/Node2D/EndCreditsWindow" unique_id=1374760493]
+offset_left = -310.00006
+offset_top = -264.00024
+offset_right = -236.14938
+offset_bottom = -179.8999
 scale = Vector2(6.9735317, 7.086773)
-texture = ExtResource("26_1cupr")
+theme = ExtResource("17_fych1")
+theme_type_variation = &"WindowBlue"
 
-[node name="Label" type="Label" parent="Node2D/Node2D/Node2D/Window" unique_id=816335790]
-modulate = Color(0.8784314, 0.58431375, 0.18039216, 1)
-self_modulate = Color(0.7202103, 0.7202103, 0.7202103, 1)
-offset_left = -14.196538
-offset_top = 1.1472648
-offset_right = 174.80347
-offset_bottom = 24.147264
-scale = Vector2(0.30554625, 0.30554625)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("27_y6faa")
-text = "By GODDOTS"
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D/Node2D" unique_id=856475381]
-position = Vector2(-84, -143)
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D/EndCreditsWindow" unique_id=856475381]
+position = Vector2(-71, -107)
 scale = Vector2(6, 6)
 texture = ExtResource("17_o6e73")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Node2D/Node2D" unique_id=1036034605]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Node2D/EndCreditsWindow" unique_id=1036034605]
 position = Vector2(-666.99994, -95.00001)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("18_v6c3n")
 
-[node name="TopBar" type="Sprite2D" parent="Node2D/Node2D/Node2D" unique_id=1850134381]
-position = Vector2(-83.74988, -250.86989)
-scale = Vector2(8.136358, 2.4733088)
-texture = ExtResource("21_fych1")
-
-[node name="IconError" type="Sprite2D" parent="Node2D/Node2D/Node2D" unique_id=1286312477]
-position = Vector2(113, -233)
+[node name="IconError" type="Sprite2D" parent="Node2D/Node2D/EndCreditsWindow" unique_id=1286312477]
+position = Vector2(148, -216)
 scale = Vector2(5.3333335, 5.3333335)
 texture = ExtResource("22_fqd5x")
+
+[node name="Label" type="RichTextLabel" parent="Node2D/Node2D/EndCreditsWindow" unique_id=1796932983]
+modulate = Color(0.8784314, 0.58431375, 0.18039216, 1)
+self_modulate = Color(0.7202103, 0.7202103, 0.7202103, 1)
+offset_left = -265.0
+offset_top = -24.0
+offset_right = 124.0
+offset_bottom = 7.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("22_ohsbd")
+bbcode_enabled = true
+text = "By GODDOTS"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
 
 [node name="cup4" parent="Node2D" unique_id=1030015170 instance=ExtResource("5_2wgm3")]
 position = Vector2(-1160, 4842)
