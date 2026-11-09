@@ -34,6 +34,8 @@ func _on_cookie_cookie_clicked() -> void:
 func _process(delta: float) -> void:
 	money_label.text = "$" + str(player_money)
 	update_money.emit(player_money)
+	if player_money >= 100 and money_per_click == 0.05 and autoclicker_cps == 0:
+		$"../../../../Achievements".completed_achievement("Ouch, my finger!")
 func start_cps_counter():
 	clicks = 0
 	await get_tree().create_timer(1).timeout

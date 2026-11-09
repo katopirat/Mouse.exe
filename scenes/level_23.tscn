@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="35_2hg7u"]
 [ext_resource type="Texture2D" uid="uid://cvq511ukrctbn" path="res://assets/images/wall_tile.png" id="36_akowo"]
 [ext_resource type="PackedScene" uid="uid://vtwt12s2ddj7" path="res://scenes/props/orange_dos.tscn" id="39_usum5"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="40_akowo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nu3i"]
 radius = 147.085
@@ -548,6 +549,9 @@ theme_type_variation = &"PanelSunken"
 unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
+
+[node name="Achievements" parent="Player" unique_id=1807818859 instance=ExtResource("40_akowo")]
+position = Vector2(-579, -322)
 
 [node name="CanvasLayer" parent="." unique_id=1262815348 instance=ExtResource("26_m71ky")]
 

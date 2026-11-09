@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dsoryhxhpprv5"]
 
 [ext_resource type="PackedScene" uid="uid://c6co7ev10r666" path="res://scenes/player.tscn" id="1_b7mf4"]
+[ext_resource type="Script" uid="uid://c7xco4xkwso45" path="res://scripts/level_18.gd" id="1_jjfjx"]
 [ext_resource type="PackedScene" uid="uid://kywdslc2lkl4" path="res://scenes/title_level_text.tscn" id="1_o6m6h"]
 [ext_resource type="Script" uid="uid://ccpkxkf1u6wdf" path="res://scripts/x_button.gd" id="5_jjfjx"]
 [ext_resource type="Texture2D" uid="uid://do36p284nx41d" path="res://assets/images/normal_x.png" id="6_ope0y"]
@@ -33,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://jlb10ujlqvvk" path="res://scenes/props/cup.tscn" id="27_x5ea0"]
 [ext_resource type="Script" uid="uid://yq2v56lkkxq0" path="res://scripts/taskbar.gd" id="27_yryjc"]
 [ext_resource type="Script" uid="uid://bmba7q262k8uw" path="res://scripts/table.gd" id="28_yw3uf"]
+[ext_resource type="PackedScene" uid="uid://slff405mhfwr" path="res://achievements.tscn" id="29_ope0y"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="31_84sml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyjbk"]
@@ -101,6 +103,7 @@ animations = [{
 }]
 
 [node name="Level18" type="Node2D" unique_id=659635860]
+script = ExtResource("1_jjfjx")
 
 [node name="TitleLevelText" parent="." unique_id=1017485206 instance=ExtResource("1_o6m6h")]
 
@@ -390,6 +393,9 @@ theme_type_variation = &"PanelSunken"
 unique_name_in_owner = true
 layout_mode = 2
 text = "19:33"
+
+[node name="Achievements" parent="Player" unique_id=1807818859 instance=ExtResource("29_ope0y")]
+position = Vector2(-680, -447)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=375070903]
 scale = Vector2(3, 3)

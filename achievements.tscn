@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://chfo0rwam37y6" path="res://achievements_textures/The Start Of a Journey.png" id="4_u4g45"]
 [ext_resource type="Texture2D" uid="uid://kmmhfcsgy4ee" path="res://achievements_textures/Fell For It.png" id="5_l4oqj"]
 [ext_resource type="Texture2D" uid="uid://c87akb8euijhs" path="res://achievements_textures/To Jsou Ty Windousy.png" id="6_12gql"]
+[ext_resource type="Texture2D" uid="uid://b3argp2jwsha3" path="res://achievements_textures/Ouch, my finger!.png" id="6_d4ny6"]
+[ext_resource type="Texture2D" uid="uid://c8ftx4y3nexew" path="res://achievements_textures/Gotta Go Fast.png" id="6_if2hd"]
+[ext_resource type="Texture2D" uid="uid://dh3eprrrmgamb" path="res://achievements_textures/I Love the X Button.png" id="6_ofubr"]
 [ext_resource type="Texture2D" uid="uid://cy5ckk31fedwo" path="res://achievements_textures/Precision Master.png" id="6_tvhj6"]
 [ext_resource type="AudioStream" uid="uid://dg17gnr4gmi4f" path="res://assets/soundeffects/achivment.wav" id="7_2dvwe"]
 
@@ -36,6 +39,30 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Fell For It",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_if2hd")
+}],
+"loop": 1,
+"name": &"Gotta Go Fast",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ofubr")
+}],
+"loop": 1,
+"name": &"I Love the X Button",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d4ny6")
+}],
+"loop": 1,
+"name": &"Ouch  my finger!",
 "speed": 5.0
 }, {
 "frames": [{
@@ -120,7 +147,7 @@ script = ExtResource("1_e00ml")
 position = Vector2(-26.118149, -5.8749866)
 scale = Vector2(2.9499996, 2.9499996)
 sprite_frames = SubResource("SpriteFrames_iopsf")
-animation = &"Precision Master"
+animation = &"Gotta Go Fast"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PopUp" unique_id=1454502647]
 libraries/ = SubResource("AnimationLibrary_u4g45")
