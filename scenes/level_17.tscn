@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://b4ie2klnddscy" path="res://scenes/props/closables/closable_keyboard.tscn" id="30_o48br"]
 [ext_resource type="PackedScene" uid="uid://bflv184f16auf" path="res://scenes/props/closables/closable_book_open.tscn" id="32_7lnr8"]
 [ext_resource type="PackedScene" uid="uid://c1uiqnmv3dpvj" path="res://scenes/props/phone.tscn" id="33_qbq2j"]
+[ext_resource type="AudioStream" uid="uid://cm4i1wyd5plp4" path="res://assets/soundeffects/emo_walking.mp3" id="33_xk5mv"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="34_o4dak"]
 [ext_resource type="PackedScene" uid="uid://dsoryhxhpprv5" path="res://scenes/level_18.tscn" id="36_su7v7"]
 [ext_resource type="Script" uid="uid://b0ail7c88madb" path="res://scripts/sceen_shake.gd" id="38_8ibj7"]
@@ -490,6 +491,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_mx5ul"]
 resource_name = "movee"
@@ -529,6 +542,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.7049999, 14.864192),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwnst"]
@@ -1238,6 +1263,11 @@ scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo" unique_id=362441845]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+max_distance = 1014.0
+
 [node name="emo2" type="AnimatableBody2D" parent="Node2D/Table" unique_id=1513822343]
 position = Vector2(-770, 3836)
 scale = Vector2(4, 4)
@@ -1300,6 +1330,12 @@ scale_amount_min = 10.0
 scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo2" unique_id=1219822445]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+autoplay = true
+max_distance = 1014.0
 
 [node name="emo3" type="AnimatableBody2D" parent="Node2D/Table" unique_id=2058644778]
 position = Vector2(-1340, 3841)
@@ -1364,6 +1400,12 @@ scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo3" unique_id=589944664]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+autoplay = true
+max_distance = 1014.0
+
 [node name="emo4" type="AnimatableBody2D" parent="Node2D/Table" unique_id=781743926]
 position = Vector2(-1919, 3836)
 scale = Vector2(4, 4)
@@ -1427,6 +1469,12 @@ scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo4" unique_id=143360997]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+autoplay = true
+max_distance = 1014.0
+
 [node name="emo5" type="AnimatableBody2D" parent="Node2D/Table" unique_id=762810207]
 position = Vector2(-2496, 3853)
 scale = Vector2(4, 4)
@@ -1489,6 +1537,12 @@ scale_amount_min = 10.0
 scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo5" unique_id=787133522]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+autoplay = true
+max_distance = 1014.0
 
 [node name="emo6" type="AnimatableBody2D" parent="Node2D/Table" unique_id=1872783224]
 position = Vector2(-3072, 3860)
@@ -1557,6 +1611,12 @@ scale_amount_min = 10.0
 scale_amount_max = 10.0
 color = Color(0.74063677, 0.5073742, 0.29239395, 1)
 color_ramp = SubResource("Gradient_w8sno")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Table/emo6" unique_id=1355683731]
+stream = ExtResource("33_xk5mv")
+volume_db = -5.999
+autoplay = true
+max_distance = 1014.0
 
 [node name="cup2" parent="Node2D/Table" unique_id=662713352 instance=ExtResource("26_668xn")]
 position = Vector2(328, 4450)
