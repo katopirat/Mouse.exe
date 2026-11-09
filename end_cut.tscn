@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://bouj6rxq8vott" path="res://assets/animations/EMO/Emo(fall)7.png" id="28_v7mqs"]
 [ext_resource type="Texture2D" uid="uid://c073wrr8xwreb" path="res://assets/animations/mys(breaking)/Myš8.png" id="29_h4c03"]
 [ext_resource type="Texture2D" uid="uid://dt21gvnp6jypn" path="res://assets/animations/mys(breaking)/myš09.png" id="30_e65p7"]
-[ext_resource type="Texture2D" uid="uid://bb2iyt1xr5u1i" path="res://assets/images/Chocolate_DarkDark.png" id="30_fqd5x"]
 [ext_resource type="Texture2D" uid="uid://fhbfcrarl8mb" path="res://assets/animations/mys(breaking)/Myš9.png" id="31_soo4f"]
 [ext_resource type="PackedScene" uid="uid://b8iq5y16xp5x1" path="res://scenes/props/book.tscn" id="36_42olj"]
 [ext_resource type="PackedScene" uid="uid://04hohuhcukpy" path="res://scenes/shader_visuals.tscn" id="37_i0aej"]
@@ -304,19 +303,19 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../../../../ChocolateDarkDark:modulate")
+tracks/6/path = NodePath("../../EndCreditsWindow:start")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.012617188, 0.012617188, 0.012617188, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../../EndCreditsWindow:start")
+tracks/7/path = NodePath("../../EndCreditsWindow:to_menu")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -328,14 +327,14 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../../EndCreditsWindow:to_menu")
+tracks/8/path = NodePath("../../CanvasLayer/AnimationTree:current_animation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [&""]
 }
 
 [sub_resource type="Animation" id="Animation_o6bq7"]
@@ -387,7 +386,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0.9, 1.0333333, 1.5323334, 1.5666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [1.0, 0.004999999999999893, 0.09999999999999964, 1.0]
+"values": [1.0, 0.00499999999999989, 0.09999999999999964, 1.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -416,38 +415,38 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../../../../ChocolateDarkDark:modulate")
-tracks/6/interp = 2
+tracks/6/path = NodePath("../../EndCreditsWindow:start")
+tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.5, 0.73333335, 1.6333333, 1.8666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.012617188, 0.012617188, 0.012617188, 1), Color(0.011764706, 0.011764706, 0.011764706, 0), Color(0.011764706, 0.011764706, 0.011764706, 0), Color(0.012617188, 0.012617188, 0.012617188, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../../EndCreditsWindow:start")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.76666665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../../EndCreditsWindow:to_menu")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../EndCreditsWindow:to_menu")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(7.1522503),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../CanvasLayer/AnimationTree:current_animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6.6580873),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"close_screen"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_emt62"]
@@ -691,6 +690,9 @@ autoplay = &"cut1"
 [node name="ColorRect" parent="Node2D/Node2D/CanvasLayer" index="0" unique_id=2100473344]
 metadata/_edit_use_anchors_ = true
 
+[node name="AnimationTree" parent="Node2D/Node2D/CanvasLayer" index="1" unique_id=927830465]
+autoplay = &"screen_open"
+
 [node name="Player" type="AnimatedSprite2D" parent="Node2D/Node2D" unique_id=51983151]
 position = Vector2(-803, 4902)
 scale = Vector2(2.2, 2.2)
@@ -801,14 +803,6 @@ z_index = -30
 tile_set = SubResource("TileSet_so4ds")
 rendering_quadrant_size = 26
 format = 2
-
-[node name="ChocolateDarkDark" type="Sprite2D" parent="." unique_id=1701611289]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-z_index = 40
-position = Vector2(-1437, 4688)
-scale = Vector2(70.333336, 70.333336)
-texture = ExtResource("30_fqd5x")
 
 [connection signal="table_changed" from="Node2D/Node2D/Table" to="Node2D/Node2D/Player" method="_on_table_table_changed"]
 

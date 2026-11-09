@@ -751,7 +751,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../../../AnimatedSprite2D/Camera2D/ChocolateDarkDark:modulate")
+tracks/3/path = NodePath("../../../AnimatedSprite2D/ChocolateDarkDark:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -899,7 +899,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../../../AnimatedSprite2D/Camera2D/ChocolateDarkDark:modulate")
+tracks/3/path = NodePath("../../../AnimatedSprite2D/ChocolateDarkDark:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1145,11 +1145,11 @@ text = "Are you okay?"
 icon = ExtResource("8_206a3")
 wait_time = 1.0
 
-[node name="ChocolateDarkDark" type="Sprite2D" parent="cutscene intro/AnimatedSprite2D/Camera2D" unique_id=502294794]
+[node name="ChocolateDarkDark" type="Sprite2D" parent="cutscene intro/AnimatedSprite2D" unique_id=502294794]
 modulate = Color(0, 0, 0, 0)
 z_index = 9
-position = Vector2(6.333313, 1.000267)
-scale = Vector2(15.364105, 15.364105)
+position = Vector2(-63.333366, 17)
+scale = Vector2(15.364104, 15.364104)
 texture = ExtResource("10_qhmma")
 
 [node name="MyšReal" type="Sprite2D" parent="cutscene intro" unique_id=221164530]

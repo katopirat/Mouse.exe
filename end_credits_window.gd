@@ -4,6 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(get_tree().current_scene)
 	$Label.visible_ratio = 0
 	to_menu = false
 	start = false
