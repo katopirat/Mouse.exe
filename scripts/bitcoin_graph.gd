@@ -9,7 +9,7 @@ extends Node2D
 @onready var bitcoin_price: int = starting_price
 @onready var bitcoin_bought:float = 0.25
 @onready var player_money: float = 500.0
-@onready var max_change: float = 0.12
+@onready var max_change: float = 0.15
 @onready var min_change: float = -0.1
 @onready var how_much_multi: float = 0.50
 @onready var stara = starting_price
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	money_to_spend.emit(player_money)
 	bitcoin_label.text = str(snapped(bitcoin_bought, 0.01)) + "B"
 	time_accumulated += delta
-	if player_money >= 5000:
+	if player_money >= 10000:
 		$"../../../../Achievements".completed_achievement("Stonks!")
 	if time_accumulated >= time_between_change:
 		bitcoin_price = max(10, int(randf_range(1+min_change, 1+max_change) * bitcoin_price)) # toto taky - ok
